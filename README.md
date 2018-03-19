@@ -6,8 +6,10 @@ Copyright © Spyder Project Contributors.
 
 ## Spyder IDE Documentation
 
-This repo contains the up to date sources for the Spyder scientific development
-environment's documentation. For more information about Spyder itself,
+This repository contains the source of the documentation for Spyder,
+the Scientific Python Development Environment.
+
+For more information about Spyder itself,
 please see the [website](https://spyder-ide.github.io/) and the
 [main repo](https://github.com/spyder-ide/spyder)
 
