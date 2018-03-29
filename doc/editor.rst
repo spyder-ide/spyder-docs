@@ -13,6 +13,7 @@ Function/class/method browser:
 
 .. image:: images/editor1.png
    :align: center
+
 |
 
 Code analysis with `pyflakes`:
@@ -21,6 +22,7 @@ Code analysis with `pyflakes`:
 
 .. image:: images/editor2.png
    :align: center
+
 |
 
 Horizontal/vertical splitting feature:
@@ -29,6 +31,7 @@ Horizontal/vertical splitting feature:
 
 .. image:: images/editor3.png
    :align: center
+
 |
 
 How to define a code cell
