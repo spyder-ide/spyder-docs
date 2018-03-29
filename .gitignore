@@ -10,6 +10,9 @@ nppBackup/
 # Pytest dirs/files
 .pytest_cache/
 
+# Sphinx doc build dir
+_build/
+
 # Special dirs and files
 build/
 dist/
