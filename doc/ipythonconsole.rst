@@ -11,6 +11,7 @@ IPython's many features.
 
 .. image:: images/ipythonconsole.png
    :align: center
+
 |
 
 From the Consoles menu, Spyder can launch **IPython Console**
@@ -32,6 +33,7 @@ kernel connection file details:
 
 .. image:: images/ipythonkernelconnect.png
    :align: center
+
 |
 
 **IPython Consoles** that are attached to kernels that were created by
