@@ -1,4 +1,4 @@
-# Spyder - The Scientific PYthon Development EnviRonment
+# Spyder - The Scientific Python Development Environment
 
 Copyright © Spyder Project Contributors.
 
