@@ -70,7 +70,7 @@ Key features:
   * documentation may be displayed as an html page thanks to the rich text mode (powered by `sphinx`)
 
 * :doc:`onlinehelp`: automatically generated html documentation on installed Python modules
-* :doc:`findinfiles`: find string occurrences in a directory, a mercurial repository or directly in PYTHONPATH (support for regular expressions and  included/excluded string lists)
+* :doc:`findinfiles`: find string occurrences in a directory, a git repository or directly in PYTHONPATH (support for regular expressions and included/excluded string lists)
 * :doc:`fileexplorer`
 * :doc:`projects`
 
