@@ -21,7 +21,7 @@ script:
   - "cd doc"
   - "make html"
   - "cd .."
-  - "doctr deploy . --no-require-master --built-docs doc/_build/html --branch-whitelist 3.x"
+  - "doctr deploy . --built-docs doc/_build/html --branch-whitelist 3.x"
 
 notifications:
   email: false
