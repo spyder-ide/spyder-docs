@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Projects &#8212; Spyder 3 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Static code analysis" href="pylint.html" />
+    <link rel="prev" title="Help" href="help.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pylint.html" title="Static code analysis"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="Help"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Spyder 3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/spyder_bbg.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Projects</a><ul>
+<li><a class="reference internal" href="#version-control-integration">Version Control Integration</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="help.html"
+                        title="previous chapter">Help</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pylint.html"
+                        title="next chapter">Static code analysis</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/projects.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="projects">
+<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
+<p>Spyder allows users to associate a given directory with a project. This has two
+main advantages:</p>
+<ol class="arabic simple">
+<li>Projects remember the list of open files in Editor. This permits to easily
+work on several coding efforts at the same time.</li>
+<li>The project’s path is added to the list of paths Python looks modules for, so
+that modules developed as part of a project can be easily imported in any
+console.</li>
+</ol>
+<p>To create a project, it is necessary to select the <em>New Project</em> entry from the
+<em>Projects</em> menu:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/new_project.png" class="align-center" src="_images/new_project.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When a project is activated, the <em>Project explorer</em> pane is shown, which
+presents a tree view structure of the current project</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/projectexplorer.png" class="align-center" src="_images/projectexplorer.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Through this pane it is possible to make several operations on the files that
+belong to project</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/projectexplorer2.png" class="align-center" src="_images/projectexplorer2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Projects are completely optional and not imposed on users, i.e. users
+can work without creating any project.</p>
+</div>
+<div class="section" id="version-control-integration">
+<h2>Version Control Integration<a class="headerlink" href="#version-control-integration" title="Permalink to this headline">¶</a></h2>
+<p>Spyder has limited integration with <a class="reference external" href="http://git-scm.com/">Git</a> and <a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a>. Commit and browse
+commands are available by right-clicking on relevant files that reside within
+an already initialized repository. This menu assume that certain commands are
+available on the system path.</p>
+<ul class="simple">
+<li>For Mercurial repositories, <a class="reference external" href="http://tortoisehg.bitbucket.org/">TortoiseHG</a> must be installed, and either <code class="docutils literal notranslate"><span class="pre">thg</span></code>
+or <code class="docutils literal notranslate"><span class="pre">hgtk</span></code> must be on the system path.</li>
+<li>For git repositories, the commands <code class="docutils literal notranslate"><span class="pre">git</span></code> and <code class="docutils literal notranslate"><span class="pre">gitk</span></code> must be on the
+system path. For Windows systems, the <a class="reference external" href="https://git-for-windows.github.io/">Git for Windows</a> package provides a
+convenient installer and the option to place common git commands on the
+system path without creating conflicts with Windows system tools.
+The second option in the dialog below is generally a safe approach.</li>
+</ul>
+<img alt="_images/git_install_dialog.png" class="align-center" src="_images/git_install_dialog.png" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pylint.html" title="Static code analysis"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="Help"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Spyder 3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright The Spyder Project Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+    </div>
+  </body>
+</html>

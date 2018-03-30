@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IPython Console &#8212; Spyder 3 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Debugging" href="debugging.html" />
+    <link rel="prev" title="Editor" href="editor.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="debugging.html" title="Debugging"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="editor.html" title="Editor"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Spyder 3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/spyder_bbg.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">IPython Console</a><ul>
+<li><a class="reference internal" href="#reloading-modules-the-user-module-reloader-umr">Reloading modules: the User Module Reloader (UMR)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="editor.html"
+                        title="previous chapter">Editor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="debugging.html"
+                        title="next chapter">Debugging</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ipythonconsole.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ipython-console">
+<h1>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h1>
+<p>Spyder’s <strong>IPython Console</strong> implements a full two-process
+<a class="reference external" href="http://ipython.org/">IPython</a> session where
+a lightweight front-end interface connects to a full IPython kernel on the
+back end. Visit the IPython project website for full documentation of
+IPython’s many features.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/ipythonconsole.png" class="align-center" src="_images/ipythonconsole.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>From the Consoles menu, Spyder can launch <strong>IPython Console</strong>
+instances that attach to kernels that are managed
+by Spyder itself or it can connect to external kernels that are managed
+by IPython Qt Console sessions or the IPython Notebook.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/ipythonconsolemenu.png" class="align-center" src="_images/ipythonconsolemenu.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When “Connect to an existing kernel” is selected, Spyder prompts for the
+kernel connection file details:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/ipythonkernelconnect.png" class="align-center" src="_images/ipythonkernelconnect.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>IPython Consoles</strong> that are attached to kernels that were created by
+Spyder support the following features:</p>
+<ul class="simple">
+<li>Code completion</li>
+<li>Variable explorer with GUI-based editors for arrays, lists,
+dictionaries, strings, etc.</li>
+<li>Debugging with standard Python debugger (<cite>pdb</cite>): at each breakpoint
+the corresponding script is opened in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> at the breakpoint
+line number</li>
+<li>User Module Deleter (see <a class="reference internal" href="console.html"><span class="doc">Console</span></a> for more details)</li>
+</ul>
+<p><strong>IPython Consoles</strong> attached to external kernels support a smaller feature
+set:</p>
+<ul class="simple">
+<li>Code completion</li>
+<li>Debugging toolbar integration for launching the debugger and sending
+debugging step commands to the kernel. Breakpoints must be set manually
+from the console command line.</li>
+</ul>
+<div class="section" id="reloading-modules-the-user-module-reloader-umr">
+<h2>Reloading modules: the User Module Reloader (UMR)<a class="headerlink" href="#reloading-modules-the-user-module-reloader-umr" title="Permalink to this headline">¶</a></h2>
+<p>When working with Python scripts interactively, one must keep in mind that
+Python import a module from its source code (on disk) only when parsing the
+first corresponding import statement. During this first import, the byte code
+is generated (.pyc file) if necessary and the imported module code object is
+cached in <cite>sys.modules</cite>. Then, when re-importing the same module, this cached
+code object will be directly used even if the source code file (.py[w] file)
+has changed meanwhile.</p>
+<p>This behavior is sometimes unexpected when working with the Python interpreter
+in interactive mode, because one must either always restart the interpreter
+or remove manually the .pyc files to be sure that changes made in imported
+modules were taken into account.</p>
+<p>The User Module Reloader (UMR) is a Spyder console’s exclusive feature that
+forces the Python interpreter to reload modules completely when executing
+a Python script.</p>
+<p>For example, when UMR is turned on, one may test complex applications
+within the same Python interpreter without having to restart it every time
+(restart time may be relatively long when testing GUI-based applications).</p>
+<p>Related plugins:</p>
+<ul class="simple">
+<li><a class="reference internal" href="help.html"><span class="doc">Help</span></a></li>
+<li><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></li>
+<li><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="debugging.html" title="Debugging"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="editor.html" title="Editor"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Spyder 3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright The Spyder Project Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+    </div>
+  </body>
+</html>
