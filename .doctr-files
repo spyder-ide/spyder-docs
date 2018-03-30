@@ -38,6 +38,7 @@
 ./_sources/installation.rst.txt
 ./_sources/internalconsole.rst.txt
 ./_sources/ipythonconsole.rst.txt
+./_sources/manpage.rst.txt
 ./_sources/onlinehelp.rst.txt
 ./_sources/options.rst.txt
 ./_sources/overview.rst.txt
@@ -82,6 +83,7 @@
 ./installation.html
 ./internalconsole.html
 ./ipythonconsole.html
+./manpage.html
 ./objects.inv
 ./onlinehelp.html
 ./options.html
