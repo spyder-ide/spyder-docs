@@ -7,14 +7,22 @@ sudo: false
 python:
   - 3.6
 
+# Give doctr our deploy key
+env:
+  global:
+    secure:  "Y6M2IQsxo/rc2+uAwf9DRxwRFXrkqd/aBlDgBcXFj6LHU0FZF5uIVhHh0SiVrG95jCe2/cnZat9YvGPxN/nxkEbRUJxt2rgX+O+zGD9PHkiEnWMFWQQ5goQNf9LGj9SDhdX7aQ7MRGXB+gqJHS91D+YA6a+59wyW2ktV4TG1Ee8VGWvraNTbt6xLBRRlJOQ3QGAnhwrdCNpld/HhFp23zXQarzqoZ66ReHTln3H+SrgBQMv6tXwgLZWc9SUQKT1MvwxdqOCzWRBbi/TkEdlytytNf60JQ4MiygbG6dWYCpm4m6/iahUZOwkyP2Zw/cCkoF23Nxl8V9x1Wr6HiqLqxshw7iMjd8jt42nLFzJqKIvpI/uPB/8Yd7K/IgmwiVy0gm5jO51q6UVZZQiPvGt8+0O0PR/oAj2FlnHuIMuxtrPN9yedMSx+BUmgXMZOI0Aqij2R9H+uu2eTs43wIxFSGKSulB9R3bRzQaWAeLeUUyGoR/FZ3d/ynIiDRxLl7BnIx0whYkOP23ikQiEMjiTT7MHF54f8S//y7IfGo52Nyyb9JRL0ZTVk/O7OEETpMbuT6f3sgC4Wt9JM2s726xMmbbbYwrCI8SRXn3pcs7CgXXO2E3Z1qhkKZiU7DDu2VBf2kCTLs6YnKXnPf5n9D14c27cSjqoOsmXpoGGHM4V6qiA="
+
 install:
   - "pip install -U pip"
   - "pip install sphinx"
+  - "pip install doctr"
 
 script:
+  - "set -e"
   - "cd doc"
   - "make html"
   - "cd .."
+  - doctr deploy . --no-require-master --built-docs doc/_build/html
 
 notifications:
   email: false
