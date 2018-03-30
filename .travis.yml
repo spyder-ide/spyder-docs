@@ -7,14 +7,21 @@ sudo: false
 python:
   - 3.6
 
+# Give doctr our deploy key
+env:
+  global:
+    secure: "nrXxbftS1qwU9Ka9tyAg6GscQIquaEFnfBjn0AvdwjZLAk465yz68sSI7DrtTevzS5hKkiETjR18E4qRS+q/lf86dIbBj+H37bKhVEA1slf/ku0QzwOJS2exDveUMlGzqjRZ/Y7DFiSh2pJ2u5UYfQzLnBNrXnU3GqM3lJiq4n+wWyXRUf72o1vWKOR1Q/ITADS0nNihiBE8zhCZh1EUf3GPih6FBvvcT9JNyhVqAu3vViVHcOxD1MbkGuucurjgLUAtRpWMbrnDBXbiTSxNZkNYVR96nhArE0bEaE4YGXI/G6JO6AXkZ6wb3PhyWk3mw3dkLbTcz81zxf3n+HMrlLOlwJmTQ6XA+2ITJVWkOvqMm14QAqPYcB6VVUjNdBYqPeZcGwRah8ltvhnkUxO0FoefM4gKDBlIPwowFsuFoTNIuKLACIpZ8P4Qu1bNa4K0wKAvFIBCcHcH0scvPhovvGSIn1IYyY+4eoamNhtBGsSswcCbdssZR15TqFeOpVeZhgX43FoLS+c7EpM3NQcyI8wTNAOyLlAFTzGStfojYRPJMPpHGmtdsxfwGNQWrdqK8vKm45yRMgzSkBsAD5hgSLfcb3nsCy7IHxj895w/4k0YMvwqIGQx4fTdlY/9aEdmzjh6WuEfldA4TgPNoFBoSXXtiUJEZ1DWPq+oWWH1XpY="
+
 install:
   - "pip install -U pip"
-  - "pip install sphinx"
+  - "pip install sphinx doctr"
 
 script:
+  - "set -e"
   - "cd doc"
   - "make html"
   - "cd .."
+  - "doctr deploy . --no-require-master --built-docs doc/_build/html --branch-whitelist 3.x"
 
 notifications:
   email: false
