@@ -11,7 +11,10 @@ install:
   - "pip install -U pip"
   - "pip install sphinx"
 
-script: 
+script:
   - "cd doc"
   - "make html"
   - "cd .."
+
+notifications:
+  email: false
