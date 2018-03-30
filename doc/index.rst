@@ -1,7 +1,7 @@
 Spyder - Documentation
 ======================
 
-Spyder is the Scientific PYthon Development EnviRonment:
+Spyder is the Scientific Python Development Environment:
 
 * A powerful interactive development environment for the Python language with
   advanced editing, interactive testing, debugging and introspection features

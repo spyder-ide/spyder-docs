@@ -1,0 +1,16 @@
+# https://travis-ci.org/spyder-ide/spyder-docs
+
+language: python
+dist: trusty
+sudo: false
+
+python:
+  - 3.6
+
+install:
+  - pip install sphinx
+
+script: 
+  - cd doc
+  - make html
+  - cd ..
