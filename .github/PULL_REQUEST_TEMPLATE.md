@@ -1,13 +1,32 @@
-Before submitting your pull request be sure that:
+<!--- Before submitting your pull request, --->
+<!--- please complete as much as possible of the following checklist: --->
 
-1. You followed the guidelines in the contributing document, CONTRIBUTING.md.
-2. Your pull request is based on the latest version of the correct branch.
-3. You haven't eliminated unnecessary blank lines or spaces during your work.
-   That makes our reviewing work harder and it could introduce unnecessary
-   conflicts with other pull requests.
+### Pull Request Checklist
 
-----
+* [ ] Read and followed this repo's [Contributing Guidelines](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md)
+* [ ] Based your PR on the latest version of the correct branch (master or 3.x)
+* [ ] Haven't eliminated unnecessary blank lines or spaces during your work
+* [ ] Checked your writing carefully for correct English spelling, grammar, etc
+* [ ] Described your changes and the motivation for them below
+* [ ] Noted what issue(s) this pull request resolves, creating one if needed
 
-Thanks for your help making Spyder and its documentation better for everyone!
 
-*Note*: Please remove this text before submitting.
+
+## Description of Changes
+
+<!--- Describe what you've changed and why. --->
+
+
+
+
+### Issue(s) Resolved
+
+<!--- Pull requests should typically resolve at least one—preferably only one—
+<!--- outstanding issue; create a new one if no relevant issue exists.
+<!--- List the issue(s) below, in the form "Fixes #1234" . One per line.--->
+
+Fixes #
+
+
+<!--- Thanks for your help making Spyder --->
+<!--- and its documentation better for everyone! --->
