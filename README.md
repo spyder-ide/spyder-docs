@@ -1,6 +1,6 @@
 # Spyder - The Scientific Python Development Environment
 
-Copyright © Spyder Project Contributors.
+Copyright © 2009–2018 Spyder Project Contributors
 
 ----
 
