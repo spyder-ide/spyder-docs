@@ -37,17 +37,6 @@ will be closed.
 
 
 
-## Submitting Pull Requests
-
-We welcome contributions from the community, and will do our best to
-review all of them in a timely fashion. To do so, please submit a
-pull request (PR) to this repo against the appropriate branch with your
-changes, and create a corresponding issue as well if your change is
-substantive, so that we can keep track of everything and give you
-credit for closing it.
-
-
-
 ## Documentation Branches
 
 * Submit PRs against ``3.x`` for changes to documentation relevant to the
@@ -57,7 +46,63 @@ credit for closing it.
 
 
 
+## Submitting Pull Requests
+
+We welcome contributions from the community, and will do our best to
+review all of them in a timely fashion. To do so, please submit a
+pull request (PR) to this repo against the appropriate branch with your
+changes, and create a corresponding issue as well if your change is
+substantive, so that we can keep track of everything and give you
+credit for closing it.
+
+Please make sure your PR titles are brief but descriptive, and include ``PR: ``
+as a prefix (if a work in progress, also prefix ``[WiP]``); most importantly,
+make sure you follow and fill out the template provided, which should guide
+you through the process and make sure everything runs smoothly.
+
+
+
+## Building the Docs Locally
+
+To build the docs locally with Sphinx, you can easily do so with our makefile
+from the Terminal/command line (or the Anaconda prompt on Windows).
+
+Make sure you have ``sphinx`` installed in your active Python environment
+for the script to work; if you have Anaconda you should have it already,
+at least in your base env or any one with Spyder installed. If you need it,
+you can install it into your present environemnt with
+
+```bash
+conda install sphinx
+```
+
+Or, if using ``pip``, you can grab it with
+
+```bash
+pip install sphinx
+```
+
+Now, ``cd`` into the ``doc`` directory in your clone of this repo, and run
+
+```bash
+make html
+```
+
+or, if on Windows
+
+```cmd
+makefile.bat html
+```
+
+to run the build. You should be able to view the html output inside the
+resulting ``_build`` directory it produces; ``index.html`` is the main page.
+
+
+
 ## Standards and Conventions
+
+Make sure you follow these to ensure clarity, consistency and correctness
+throughout our documentation and its repo.
 
 * **reStructuredText** (rst) for documentation format
 * **PEP8** style for any Python code
