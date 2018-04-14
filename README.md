@@ -1,4 +1,5 @@
-# Spyder - The Scientific Python Development Environment
+![Spyder Docs — Documentation for the Scientific Python Development Environment](
+./doc/images/spyder_readme_banner.png)
 
 *Copyright © 2009–2018 Spyder Project Contributors*
 
