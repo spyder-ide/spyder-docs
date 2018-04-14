@@ -25,9 +25,10 @@ please see the [website](https://spyder-ide.github.io/) and the
 We welcome your contributions of corrections, additions and enhancements to
 these docs, as they are very much a work in progress and we appreciate getting
 our broad community involved wherever possible. To do so, simply submit a
-PR with your changes and we'll be happy to review it; make sure you keep our
-contributing guidelines in mind to ensure the process of getting your
-revisions integrated is smooth and successful (see CONTRIBUTING.md for more).
+PR with your changes and we'll be happy to review it; make sure to read our
+[Contributing Guide](
+https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md) in mind
+to ensure the process of getting your revisions integrated goes smoothly.
 
 The docs are built with
 [Sphinx](http://www.sphinx-doc.org/en/stable/index.html)
@@ -48,7 +49,7 @@ your support of the project!
 [Spyder Github](https://github.com/spyder-ide/spyder)
 
 [Troubleshooting Guide and FAQ](
-https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ')
+https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ)
 
 [Development Wiki](https://github.com/spyder-ide/spyder/wiki/Dev:-Index)
 
