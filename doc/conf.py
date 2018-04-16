@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Spyder'
-copyright = 'The Spyder Project Contributors'
+copyright = '2009–2018 The Spyder Project Contributors'
 author = 'The Spyder Project Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -115,13 +115,46 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinxdoc'
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-## html_theme_options = {'sidebarbgcolor': '#227A2B',
-##                       'sidebarlinkcolor': '#98ff99'}
+html_theme_options = {
+    'logo': 'spyder_logo_text_light_trans_160px_left.png',
+    'logo_text_align': 'left',
+    'body_text_align': 'left',
+    'description': 'The Scientific Python<br>Development Environment',
+    'description_font_style': 'italic',
+    'github_user': 'spyder-ide',
+    'github_repo': 'spyder',
+    'github_type': 'star',
+    'github_banner': True,
+    'travis_button': True,
+    'codecov_button': False,
+    'extra_nav_links': {
+        'Main Website': 'https://spyder-ide.github.io/',
+        'Download (Anaconda)': 'https://www.anaconda.com/download/',
+        'Spyder Github': 'https://github.com/spyder-ide/spyder',
+        'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
+                            + 'Troubleshooting-Guide-and-FAQ'),
+        'Dev Wiki': 'https://github.com/spyder-ide/spyder/wiki/Dev:-Index',
+        'Gitter Chatroom': 'https://gitter.im/spyder-ide/public',
+        'Google Group': 'http://groups.google.com/group/spyderlib',
+        'Donate': 'https://opencollective.com/spyder/'
+        },
+    'sidebar_collapse': True,
+    'show_related': True,
+    'page_width': '960px',
+    'sidebar_width': '240px',
+    'fixed_sidebar': False,
+    'gray_1': '#303030',
+    'gray_2': '#EBEBEB',
+    'gray_3': '#FF0000',
+    'font_family': "'Open Sans', Arial, sans-serif",
+    'head_font_family': "'Open Sans', Arial, sans-serif",
+    'font_size': '14px'
+    }
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -135,7 +168,7 @@ html_theme = 'sphinxdoc'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = 'spyder_bbg.png'
+#html_logo = 'spyder_bbg.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -163,7 +196,15 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-#html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
