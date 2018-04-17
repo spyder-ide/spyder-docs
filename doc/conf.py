@@ -133,7 +133,7 @@ html_theme_options = {
     'travis_button': True,
     'codecov_button': False,
     'extra_nav_links': {
-        'Main Website': 'https://spyder-ide.github.io/',
+        'Main Website': 'https://www.spyder-ide.org/',
         'Download (Anaconda)': 'https://www.anaconda.com/download/',
         'Spyder Github': 'https://github.com/spyder-ide/spyder',
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'

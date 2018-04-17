@@ -22,7 +22,7 @@ This repository contains the source for the
 for Spyder, the Scientific Python Development Environment.
 
 For more information about Spyder itself,
-please see the [website](https://spyder-ide.github.io/) and the
+please see the [website](https://www.spyder-ide.org/) and the
 [main repo](https://github.com/spyder-ide/spyder)
 
 We welcome your contributions of corrections, additions and enhancements to
@@ -46,6 +46,8 @@ your support of the project!
 
 
 ## More information
+
+[Main Website](https://www.spyder-ide.org/)
 
 [Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
 
