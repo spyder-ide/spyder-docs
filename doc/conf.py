@@ -121,7 +121,7 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo': 'spyder_logo_text_light_trans_160px_left.png',
+    'logo': 'spyder_logo_lightbg_text_left.png',
     'logo_text_align': 'left',
     'body_text_align': 'left',
     'description': 'The Scientific Python<br>Development Environment',
