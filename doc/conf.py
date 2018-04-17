@@ -150,7 +150,7 @@ html_theme_options = {
     'fixed_sidebar': False,
     'gray_1': '#303030',
     'gray_2': '#EBEBEB',
-    'gray_3': '#FF0000',
+    'gray_3': '#EE1C24',
     'font_family': "'Open Sans', Arial, sans-serif",
     'head_font_family': "'Open Sans', Arial, sans-serif",
     'font_size': '14px'
