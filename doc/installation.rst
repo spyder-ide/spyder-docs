@@ -311,14 +311,16 @@ To do so:
 Help and support
 ----------------
 
-Spyder websites:
-
 * For a comprehensive guide to spyder troubleshooting, including
   installation issues, read our `Troubleshooting Guide and FAQ
   <https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ>`_.
-* For bug reports and feature requests you can go to our
-  `website <https://github.com/spyder-ide/spyder/issues>`_.
-* For general and development-oriented information, visit
-  `our Github wiki <https://github.com/spyder-ide/spyder/wiki>`_.
+* For general information about Spyder and its ecosystem, see our
+  `main website <https://www.spyder-ide.org/>`_.
+* For bug reports and feature requests, check out our
+  `Github repository <https://github.com/spyder-ide/spyder/>`_.
+* For development-oriented help and information, consult our
+  `Github wiki <https://github.com/spyder-ide/spyder/wiki>`_.
 * For discussions and help requests, you can subscribe to our
   `Google Group <http://groups.google.com/group/spyderlib>`_.
+* For quick questions and to chat with the dev team, stop by our
+  `Gitter chatroom <https://gitter.im/spyder-ide/public>`_.

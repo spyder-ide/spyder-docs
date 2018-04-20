@@ -14,12 +14,8 @@ Spyder may also be used as a library providing powerful console-related widgets
 for your PyQt-based applications -- for example, it may be used to integrate a
 debugging console directly in the layout of your graphical user interface.
 
-Spyder websites:
-
-* Downloads, bug reports and feature requests: https://github.com/spyder-ide/spyder
-* Discussions: http://groups.google.com/group/spyderlib
-* Troubleshooting Guide and FAQ
-  https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
+For more information about Spyder and to download the latest version, please
+see the relevant links in the sidebar.
 
 
 Contents:
