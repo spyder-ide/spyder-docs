@@ -121,7 +121,7 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo': 'spyder_logo_text_light_trans_160px_left.png',
+    'logo': 'spyder_logo_lightbg_text_left.png',
     'logo_text_align': 'left',
     'body_text_align': 'left',
     'description': 'The Scientific Python<br>Development Environment',
@@ -133,7 +133,7 @@ html_theme_options = {
     'travis_button': True,
     'codecov_button': False,
     'extra_nav_links': {
-        'Main Website': 'https://spyder-ide.github.io/',
+        'Main Website': 'https://www.spyder-ide.org/',
         'Download (Anaconda)': 'https://www.anaconda.com/download/',
         'Spyder Github': 'https://github.com/spyder-ide/spyder',
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
@@ -150,7 +150,7 @@ html_theme_options = {
     'fixed_sidebar': False,
     'gray_1': '#303030',
     'gray_2': '#EBEBEB',
-    'gray_3': '#FF0000',
+    'gray_3': '#EE1C24',
     'font_family': "'Open Sans', Arial, sans-serif",
     'head_font_family': "'Open Sans', Arial, sans-serif",
     'font_size': '14px'

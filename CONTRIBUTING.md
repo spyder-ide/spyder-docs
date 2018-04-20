@@ -4,9 +4,9 @@ First off, thanks for your interest in helping out with the documentation
 for Spyder, the Scientific Python Development Environment!
 
 **Important Note:** This is the repository for Spyder's documentation sources
-used to build the [Spyder docs site](https://spyder-ide.github.io/spyder-docs/)
+used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)
 —not the IDE itself. For more information about Spyder, please see the
-[website](https://spyder-ide.github.io/), and for the core Spyder codebase,
+[website](https://www.spyder-ide.org/), and for the core Spyder codebase,
 visit the [main repo](https://github.com/spyder-ide/spyder) . Thanks!
 
 For more guidance on the basics of using ``git`` and Github to contribute
