@@ -17,9 +17,10 @@
 
 ## Spyder IDE Documentation
 
-This repository contains the source for the
-[documentation](https://spyder-ide.github.io/spyder-docs/)
+This repository contains the source for the documentation
 for Spyder, the Scientific Python Development Environment.
+They can be viewed online at
+[docs.Spyder-IDE.org](https://docs.spyder-ide.org/).
 
 For more information about Spyder itself,
 please see the [website](https://www.spyder-ide.org/) and the
@@ -36,10 +37,10 @@ to ensure the process of getting your revisions integrated goes smoothly.
 The docs are built with
 [Sphinx](http://www.sphinx-doc.org/en/stable/index.html)
 and deployed with [Doctr](https://drdoctr.github.io/doctr/)
-to our Github Pages docs site (coming soon). The ``master`` branch contains
-the docs for the forthcoming release of Spyder 4, currently planned for
-Q1 2019 if funding is secured, while the ``3.x`` branch has the docs for
-the current version, Spyder 3.
+to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
+The ``master`` branch contains the docs for the forthcoming release of
+Spyder 4, currently planned for Q1 2019 if funding is secured,
+while the ``3.x`` branch has the docs for the current version, Spyder 3.
 
 Thanks for your interest in Spyder and its documentation, and we appreciate
 your support of the project!
