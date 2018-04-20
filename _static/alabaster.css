@@ -206,8 +206,8 @@ div.sphinxsidebar input {
 div.sphinxsidebar hr {
     border: none;
     height: 1px;
-    color: #FF0000;
-    background: #FF0000;
+    color: #EE1C24;
+    background: #EE1C24;
 
     text-align: left;
     margin-left: 0;
@@ -618,7 +618,7 @@ a:hover tt, a:hover code {
     }
 
     div.sphinxsidebar a {
-        color: #FF0000;
+        color: #EE1C24;
     }
 
     div.sphinxsidebar p.logo {
