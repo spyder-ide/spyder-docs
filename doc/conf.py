@@ -151,9 +151,11 @@ html_theme_options = {
     'gray_1': '#303030',
     'gray_2': '#EBEBEB',
     'gray_3': '#EE1C24',
-    'font_family': "'Open Sans', Arial, sans-serif",
-    'head_font_family': "'Open Sans', Arial, sans-serif",
-    'font_size': '14px'
+    'font_family': "Raleway, 'Open Sans', Arial, sans-serif",
+    'head_font_family': "Amiri, 'Open Sans', Arial, sans-serif",
+    'font_size': '14px',
+    'link': '#EE1C24',
+    'link_hover': '#EE1C24'
     }
 
 # Add any paths that contain custom themes here, relative to this directory.
