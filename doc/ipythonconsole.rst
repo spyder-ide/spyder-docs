@@ -41,6 +41,11 @@ kernel connection file details:
 **IPython Consoles** that are attached to kernels that were created by
 Spyder support the following features:
 
+.. image:: images/console/console_completion.png
+   :align: right
+   :width: 50%
+   :alt: Spyder IPython Console, with a popup list of code completion guesses
+
 * Code completion and calltips
 * Variable explorer with GUI-based editors for arrays, lists,
   dictionaries, strings, etc.
