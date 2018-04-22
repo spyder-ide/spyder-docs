@@ -48,7 +48,7 @@ Spyder support the following features:
 * Debugging with standard Python debugger (`pdb`): at each breakpoint
   the corresponding script is opened in the :doc:`editor` at the breakpoint
   line number
-* User Module Deleter (see :doc:`console` for more details)
+* User Module Reloader (see below)
 
 **IPython Consoles** attached to external kernels support a smaller feature
 set:

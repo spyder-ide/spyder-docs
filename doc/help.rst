@@ -1,7 +1,7 @@
 Help
 ====
 
-The help plugin works together with the :doc:`console` and the
+The help plugin works together with the :doc:`ipythonconsole` and the
 :doc:`editor`: it shows automatically documentation available when the
 user is instantiating a class or calling a function (pressing the left
 parenthesis key after a valid function or class name triggers a call
@@ -30,5 +30,5 @@ if the object is pure Python):
 
 Related plugins:
 
-* :doc:`console`
+* :doc:`ipythonconsole`
 * :doc:`editor`

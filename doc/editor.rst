@@ -51,6 +51,6 @@ Cells are separated by lines starting with:
 
 Related plugins:
 
-* :doc:`console`
+* :doc:`ipythonconsole`
 * :doc:`fileexplorer`
 * :doc:`findinfiles`
