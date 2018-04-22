@@ -7,6 +7,11 @@ advanced code analysis using `pylint`), introspection capabilities such as
 code completion, calltips and go-to-definition features (powered by `rope`),
 function/class browser, horizontal/vertical splitting features, etc.
 
+.. image:: images/editor/editor_split_horizontal.png
+   :align: center
+   :alt: Spyder's Editor panel, split horizontally and with style analysis
+
+|
 
 Function/class/method browser and horizontal/vertical splitting feature:
 

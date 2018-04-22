@@ -9,6 +9,10 @@ Debugging in Spyder is supported thanks to the following Python modules:
   (in the :doc:`editor`, press F7 to run `winpdb` on the currently edited
   script).
 
+.. image:: images/debugging/debugging_console.png
+   :align: center
+   :alt: A Spyder IPython console window, showing the ipdb debugger in action
+
 Debugging with pdb
 ------------------
 
@@ -22,6 +26,10 @@ The Python debugger is partly integrated in Spyder:
   * Conditional breakpoints can also be set from the Run menu, by
     keyboard shortcut (Shift+F12 by default), or by Shift+double-click
     to the left of line numbers in the :doc:`editor`.
+
+.. image:: images/debugging/debugging_condbreakpoint.png
+   :align: center
+   :alt: Inset of Spyder Editor, with breakpoint set and condition dialog open
 
 * The current frame (debugging step) is highlighted in the :doc:`editor`.
 * At each breakpoint, globals may be accessed through
