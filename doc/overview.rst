@@ -50,7 +50,7 @@ Key features:
   * integrated static code analysis (using `pylint`)
   * direct link to `winpdb` external debugger
 
-* :doc:`console`:
+* :doc:`ipythonconsole`:
 
   * *all consoles are executed in a separate process*
   * *code completion*/calltips and automatic link to help (see below)

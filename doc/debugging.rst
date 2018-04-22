@@ -34,4 +34,4 @@ http://pythonconquerstheuniverse.wordpress.com/category/python-debugger/
 Related plugins:
 
 * :doc:`editor`
-* :doc:`console`
+* :doc:`ipythonconsole`

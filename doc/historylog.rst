@@ -8,4 +8,4 @@ or command windows.
 
 Related plugins:
 
-* :doc:`console`
+* :doc:`ipythonconsole`

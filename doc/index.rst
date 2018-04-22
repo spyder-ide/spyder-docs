@@ -30,7 +30,6 @@ Contents:
     editor
     ipythonconsole
     debugging
-    console
     variableexplorer
     help
     projects
