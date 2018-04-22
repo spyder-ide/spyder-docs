@@ -7,32 +7,29 @@ advanced code analysis using `pylint`), introspection capabilities such as
 code completion, calltips and go-to-definition features (powered by `rope`),
 function/class browser, horizontal/vertical splitting features, etc.
 
-Function/class/method browser:
 
-|
+Function/class/method browser and horizontal/vertical splitting feature:
 
-.. image:: images/editor1.png
-   :align: center
+|outline| |split|
+
+.. |outline| image:: images/editor/outline_standard.png
+   :width: 209px
+   :alt: Spyder outline panel, showing the functions/classes/methods in a file
+
+
+.. |split| image:: images/editor/editor_split_vertical.png
+   :width: 422px
+   :alt: A Spyder editor window, split vertically into two independent panes
 
 |
 
 Code analysis with `pyflakes`:
 
-|
-
-.. image:: images/editor2.png
+.. image:: images/editor/editor_inset_code_analysis.png
    :align: center
+   :alt: A snippit of code in the Spyder Editor, showing code style warnings
 
-|
 
-Horizontal/vertical splitting feature:
-
-|
-
-.. image:: images/editor3.png
-   :align: center
-
-|
 
 How to define a code cell
 --------------------------

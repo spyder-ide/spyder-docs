@@ -10,10 +10,10 @@ a lightweight front-end interface connects to a full IPython kernel on the
 back end. Visit the IPython project website for full documentation of
 IPython's many features.
 
-|
-
-.. image:: images/ipythonconsole.png
+.. image:: images/console/console_standard.png
    :align: center
+   :alt: Spyder IPython Console with code, inline plots, and the In prompt
+
 
 |
 
@@ -22,20 +22,19 @@ instances that attach to kernels that are managed
 by Spyder itself or it can connect to external kernels that are managed
 by IPython Qt Console sessions or the IPython Notebook.
 
-|
-
-.. image:: images/ipythonconsolemenu.png
+.. image:: images/console/console_menu.png
    :align: center
+   :alt: Spyder IPython Console as above, except with the options menu open
+
 
 |
 
 When "Connect to an existing kernel" is selected, Spyder prompts for the
 kernel connection file details:
 
-|
-
-.. image:: images/ipythonkernelconnect.png
+.. image:: images/console/console_dialog_connect.png
    :align: center
+   :alt: Connect to kernel dialog requesting path and connection details
 
 |
 
