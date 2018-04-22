@@ -1,7 +1,10 @@
 IPython Console
 ===============
 
-Spyder's **IPython Console** implements a full two-process
+The **IPython Console** is where you may enter, interact with and visualize
+data inside a command interpreter. All the commands entered in the console are
+executed in a separate process, thus allowing the user to interrupt any
+process at any time. Each console implements a full two-process
 `IPython <http://ipython.org/>`_ session where
 a lightweight front-end interface connects to a full IPython kernel on the
 back end. Visit the IPython project website for full documentation of
@@ -39,7 +42,7 @@ kernel connection file details:
 **IPython Consoles** that are attached to kernels that were created by
 Spyder support the following features:
 
-* Code completion
+* Code completion and calltips
 * Variable explorer with GUI-based editors for arrays, lists,
   dictionaries, strings, etc.
 * Debugging with standard Python debugger (`pdb`): at each breakpoint
