@@ -1,5 +1,11 @@
 Overview
 ========
+|
+
+.. image:: images/mainwindow/mainwindow_custom_1610.png
+   :align: center
+   :alt: The Spyder main window, with numerous panels open in a custom layout
+
 
 Spyder is a Python development environment with the following key features:
 
@@ -19,6 +25,12 @@ Key features:
   * syntax coloring schemes (source editor, history log, help)
   * console: background color (black/white), automatic code completion, etc.
   * and a lot more...
+
+.. image:: images/mainwindow/mainwindow_dark_1610.png
+   :align: right
+   :width: 60%
+   :alt: The Spyder main window, with a dark syntax highlighting theme applied
+
 
 * :doc:`editor`:
 
@@ -49,6 +61,12 @@ Key features:
   * errors/warnings (real-time *code analysis* provided by `pyflakes`)
   * integrated static code analysis (using `pylint`)
   * direct link to `winpdb` external debugger
+
+.. image:: images/mainwindow/mainwindow_matlab_1610.png
+   :align: right
+   :width: 60%
+   :alt: The Spyder main window, with a panel layout mirroring that of MATLAB
+
 
 * :doc:`ipythonconsole`:
 
