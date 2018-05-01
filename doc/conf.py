@@ -122,11 +122,8 @@ html_theme = 'alabaster'
 # documentation.
 html_theme_options = {
     'body_text_align': 'left',
-    'github_user': 'spyder-ide',
-    'github_repo': 'spyder',
-    'github_type': 'star',
-    'github_banner': True,
-    'travis_button': True,
+    'github_banner': False,
+    'travis_button': False,
     'codecov_button': False,
     'extra_nav_links': {
         'Main Website': 'https://www.spyder-ide.org/',
