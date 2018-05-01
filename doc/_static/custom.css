@@ -16,3 +16,7 @@ cite {
     z-index: 1;
     position: fixed !important;
 }
+
+.logo{
+    display: none;
+}

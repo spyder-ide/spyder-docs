@@ -121,11 +121,7 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo': 'spyder_logo_lightbg_text_left.png',
-    'logo_text_align': 'left',
     'body_text_align': 'left',
-    'description': '',
-    'description_font_style': 'italic',
     'github_user': 'spyder-ide',
     'github_repo': 'spyder',
     'github_type': 'star',
