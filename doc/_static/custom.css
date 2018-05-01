@@ -11,3 +11,8 @@ cite {
 #doc-content{
     font-size: 14px;
 }
+
+.github {
+    z-index: 1;
+    position: fixed !important;
+}
