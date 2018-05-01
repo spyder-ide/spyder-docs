@@ -124,7 +124,7 @@ html_theme_options = {
     'logo': 'spyder_logo_lightbg_text_left.png',
     'logo_text_align': 'left',
     'body_text_align': 'left',
-    'description': 'The Scientific Python<br>Development Environment',
+    'description': '',
     'description_font_style': 'italic',
     'github_user': 'spyder-ide',
     'github_repo': 'spyder',

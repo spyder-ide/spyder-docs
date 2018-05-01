@@ -1,0 +1,13 @@
+cite::before {
+    content: "";
+}
+
+cite {
+    display: inline;
+    font-size: 14px;
+    color: black;
+}
+
+#doc-content{
+    font-size: 14px;
+}
