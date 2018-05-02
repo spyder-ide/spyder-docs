@@ -121,16 +121,9 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'logo': 'spyder_logo_lightbg_text_left.png',
-    'logo_text_align': 'left',
     'body_text_align': 'left',
-    'description': 'The Scientific Python<br>Development Environment',
-    'description_font_style': 'italic',
-    'github_user': 'spyder-ide',
-    'github_repo': 'spyder',
-    'github_type': 'star',
-    'github_banner': True,
-    'travis_button': True,
+    'github_banner': False,
+    'travis_button': False,
     'codecov_button': False,
     'extra_nav_links': {
         'Main Website': 'https://www.spyder-ide.org/',
@@ -151,9 +144,11 @@ html_theme_options = {
     'gray_1': '#303030',
     'gray_2': '#EBEBEB',
     'gray_3': '#EE1C24',
-    'font_family': "'Open Sans', Arial, sans-serif",
-    'head_font_family': "'Open Sans', Arial, sans-serif",
-    'font_size': '14px'
+    'font_family': "Raleway, 'Open Sans', Arial, sans-serif",
+    'head_font_family': "Amiri, 'Open Sans', Arial, sans-serif",
+    'font_size': '15.4px',
+    'link': '#EE1C24',
+    'link_hover': '#EE1C24'
     }
 
 # Add any paths that contain custom themes here, relative to this directory.
