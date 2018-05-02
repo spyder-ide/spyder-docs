@@ -7,10 +7,8 @@ All the commands entered in the internal console are executed in the same
 process as Spyder's, but the Internal Console may be executed in a separate
 thread (this is optional and for example this is not the case in Spyder itself).
 
-|
-
-.. image:: images/internalconsole.png
-   :align: center
+.. image:: images/internal_console/internal_console_standard.png
+   :alt: Spyder Internal Console, with error messages and command output shown
 
 |
 

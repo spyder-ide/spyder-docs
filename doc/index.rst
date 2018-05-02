@@ -1,6 +1,13 @@
 Spyder - Documentation
 ======================
 
+
+.. image:: images/mainwindow/mainwindow_default_1610.png
+   :align: center
+   :alt: Screenshot of the Spyder main window, with the default panel layout
+
+|
+
 Spyder is the Scientific Python Development Environment:
 
 * A powerful interactive development environment for the Python language with
@@ -30,7 +37,6 @@ Contents:
     editor
     ipythonconsole
     debugging
-    console
     variableexplorer
     help
     projects
