@@ -24,3 +24,8 @@ div .sphinxsidebarwrapper h3{
     padding: 0px;
     font-size: 240%;
 }
+
+kbd {
+    background-color: transparent;
+    box-shadow: none;
+}
