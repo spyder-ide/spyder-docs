@@ -1,11 +1,11 @@
 Overview
 ========
-|
 
 .. image:: images/mainwindow/mainwindow_custom_1610.png
    :align: center
    :alt: The Spyder main window, with numerous panels open in a custom layout
 
+|
 
 Spyder is a Python development environment with the following key features:
 

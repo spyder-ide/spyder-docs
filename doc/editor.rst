@@ -44,12 +44,17 @@ no "cell mode" in Spyder), i.e. a block of lines to be executed at once in the
 current interpreter (Python or IPython). Every script may be divided in as
 many cells as needed.
 
+.. image:: images/editor/editor_standard.png
+   :align: center
+   :alt: Spyder's Editor panel, showing an example of a code cell
+
+|
+
 Cells are separated by lines starting with:
 
 * `#%%` (standard cell separator)
 * `# %%` (standard cell separator, when file has been edited with Eclipse)
 * `# <codecell>` (IPython notebook cell separator)
-
 
 Related plugins:
 

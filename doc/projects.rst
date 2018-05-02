@@ -60,6 +60,8 @@ available on the system path.
    :align: center
    :alt: Git for Windows installer on the PATH options page; 2nd option chosen
 
+|
+
 .. _Git: http://git-scm.com/
 .. _Mercurial: http://mercurial.selenic.com/
 .. _TortoiseHg: http://tortoisehg.bitbucket.org/
