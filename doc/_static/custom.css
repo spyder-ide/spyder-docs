@@ -4,14 +4,23 @@ cite::before {
 
 cite {
     display: inline;
-    font-size: 14px;
+    font-size: 15.4px;
     color: black;
 }
 
 #doc-content{
-    font-size: 14px;
+    font-size: 15.4px;
 }
 
 .logo{
     display: none;
+}
+
+div .sphinxsidebarwrapper {
+    padding: 0px;
+}
+
+div .sphinxsidebarwrapper h3{
+    padding: 0px;
+    font-size: 240%;
 }
