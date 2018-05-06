@@ -29,3 +29,12 @@ kbd {
     background-color: transparent;
     box-shadow: none;
 }
+
+div .line-block {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ul.simple {
+    margin-bottom: 24px;
+}
