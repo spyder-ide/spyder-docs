@@ -266,16 +266,6 @@ latex_documents = [
 #latex_use_modindex = True
 
 
-# -- Options for manual page output ---------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-        ('manpage', 'spyder', 'The Scientific Python Development Environment',
-            [author], 1)
-        ]
-
-
 # -- Options for Texinfo output ----------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
