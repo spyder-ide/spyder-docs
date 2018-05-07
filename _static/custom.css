@@ -22,10 +22,19 @@ div .sphinxsidebarwrapper {
 
 div .sphinxsidebarwrapper h3{
     padding: 0px;
-    font-size: 240%;
+    font-size: 200%;
 }
 
 kbd {
     background-color: transparent;
     box-shadow: none;
+}
+
+div .line-block {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ul.simple {
+    margin-bottom: 24px;
 }
