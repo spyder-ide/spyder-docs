@@ -13,32 +13,28 @@ main advantages:
 To create a project, it is necessary to select the *New Project* entry from the
 *Projects* menu:
 
-|
-
-.. image:: images/new_project.png
+.. image:: images/menu/menu_projects.png
    :align: center
+   :alt: Closeup of Spyder's Projects menu, containing project-related commands
 
 |
 
 When a project is activated, the *Project explorer* pane is shown, which
-presents a tree view structure of the current project
+presents a tree view structure of the current project. Through this pane,
+it is possible to make several operations on the files that belong to project:
+
+|explorer| |contextmenu|
+
+.. |explorer| image:: images/projects/project_explorer_standard.png
+   :width: 30%
+   :alt: Spyder Project Explorer, displaying a directory tree of project files
+
+.. |contextmenu| image:: images/projects/project_explorer_inset_contextmenu.png
+   :width: 50%
+   :alt: Inset of the context-menu for a directory in project explorer
 
 |
 
-.. image:: images/projectexplorer.png
-   :align: center
-
-|
-
-Through this pane it is possible to make several operations on the files that
-belong to project
-
-|
-
-.. image:: images/projectexplorer2.png
-   :align: center
-
-|
 
 .. note:: Projects are completely optional and not imposed on users, i.e. users
    can work without creating any project.
@@ -60,8 +56,11 @@ available on the system path.
   system path without creating conflicts with Windows system tools.
   The second option in the dialog below is generally a safe approach.
 
-.. image:: images/git_install_dialog.png
+.. image:: images/other/git_for_windows_install_path.png
    :align: center
+   :alt: Git for Windows installer on the PATH options page; 2nd option chosen
+
+|
 
 .. _Git: http://git-scm.com/
 .. _Mercurial: http://mercurial.selenic.com/

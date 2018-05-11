@@ -78,15 +78,15 @@
             
   <div class="section" id="ipython-console">
 <h1>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h1>
-<p>Spyder’s <strong>IPython Console</strong> implements a full two-process
+<p>The <strong>IPython Console</strong> is where you may enter, interact with and visualize
+data inside a command interpreter. All the commands entered in the console are
+executed in a separate process, thus allowing the user to interrupt any
+process at any time. Each console implements a full two-process
 <a class="reference external" href="http://ipython.org/">IPython</a> session where
 a lightweight front-end interface connects to a full IPython kernel on the
 back end. Visit the IPython project website for full documentation of
 IPython’s many features.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="_images/ipythonconsole.png" class="align-center" src="_images/ipythonconsole.png" />
+<img alt="Spyder IPython Console with code, inline plots, and the In prompt" class="align-center" src="_images/console_standard.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -94,32 +94,27 @@ IPython’s many features.</p>
 instances that attach to kernels that are managed
 by Spyder itself or it can connect to external kernels that are managed
 by IPython Qt Console sessions or the IPython Notebook.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="_images/ipythonconsolemenu.png" class="align-center" src="_images/ipythonconsolemenu.png" />
+<img alt="Spyder IPython Console as above, except with the options menu open" class="align-center" src="_images/console_menu.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>When “Connect to an existing kernel” is selected, Spyder prompts for the
 kernel connection file details:</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<img alt="_images/ipythonkernelconnect.png" class="align-center" src="_images/ipythonkernelconnect.png" />
+<img alt="Connect to kernel dialog requesting path and connection details" class="align-center" src="_images/console_dialog_connect.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p><strong>IPython Consoles</strong> that are attached to kernels that were created by
 Spyder support the following features:</p>
+<a class="reference internal image-reference" href="_images/console_completion.png"><img alt="Spyder IPython Console, with a popup list of code completion guesses" class="align-right" src="_images/console_completion.png" style="width: 50%;" /></a>
 <ul class="simple">
-<li>Code completion</li>
+<li>Code completion and calltips</li>
 <li>Variable explorer with GUI-based editors for arrays, lists,
 dictionaries, strings, etc.</li>
 <li>Debugging with standard Python debugger (<cite>pdb</cite>): at each breakpoint
 the corresponding script is opened in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> at the breakpoint
 line number</li>
-<li>User Module Deleter (see <a class="reference internal" href="console.html"><span class="doc">Console</span></a> for more details)</li>
+<li>User Module Reloader (see below)</li>
 </ul>
 <p><strong>IPython Consoles</strong> attached to external kernels support a smaller feature
 set:</p>
@@ -183,7 +178,6 @@ within the same Python interpreter without having to restart it every time
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
-<li class="toctree-l1"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
