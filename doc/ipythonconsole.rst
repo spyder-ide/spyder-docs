@@ -1,16 +1,19 @@
 IPython Console
 ===============
 
-Spyder's **IPython Console** implements a full two-process
+The **IPython Console** is where you may enter, interact with and visualize
+data inside a command interpreter. All the commands entered in the console are
+executed in a separate process, thus allowing the user to interrupt any
+process at any time. Each console implements a full two-process
 `IPython <http://ipython.org/>`_ session where
 a lightweight front-end interface connects to a full IPython kernel on the
 back end. Visit the IPython project website for full documentation of
 IPython's many features.
 
-|
-
-.. image:: images/ipythonconsole.png
+.. image:: images/console/console_standard.png
    :align: center
+   :alt: Spyder IPython Console with code, inline plots, and the In prompt
+
 
 |
 
@@ -19,33 +22,37 @@ instances that attach to kernels that are managed
 by Spyder itself or it can connect to external kernels that are managed
 by IPython Qt Console sessions or the IPython Notebook.
 
-|
-
-.. image:: images/ipythonconsolemenu.png
+.. image:: images/console/console_menu.png
    :align: center
+   :alt: Spyder IPython Console as above, except with the options menu open
+
 
 |
 
 When "Connect to an existing kernel" is selected, Spyder prompts for the
 kernel connection file details:
 
-|
-
-.. image:: images/ipythonkernelconnect.png
+.. image:: images/console/console_dialog_connect.png
    :align: center
+   :alt: Connect to kernel dialog requesting path and connection details
 
 |
 
 **IPython Consoles** that are attached to kernels that were created by
 Spyder support the following features:
 
-* Code completion
+.. image:: images/console/console_completion.png
+   :align: right
+   :width: 50%
+   :alt: Spyder IPython Console, with a popup list of code completion guesses
+
+* Code completion and calltips
 * Variable explorer with GUI-based editors for arrays, lists,
   dictionaries, strings, etc.
 * Debugging with standard Python debugger (`pdb`): at each breakpoint
   the corresponding script is opened in the :doc:`editor` at the breakpoint
   line number
-* User Module Deleter (see :doc:`console` for more details)
+* User Module Reloader (see below)
 
 **IPython Consoles** attached to external kernels support a smaller feature
 set:
