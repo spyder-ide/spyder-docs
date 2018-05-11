@@ -81,6 +81,9 @@ supported are:
 #. Tuples
 #. Strings
 
-Related plugins:
 
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`debugging`
 * :doc:`ipythonconsole`

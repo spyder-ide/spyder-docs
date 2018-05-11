@@ -11,6 +11,8 @@ generated Python documentation on installed module, including your own modules
 
 |
 
-Related plugins:
+
+Related components
+~~~~~~~~~~~~~~~~~~
 
 * :doc:`help`

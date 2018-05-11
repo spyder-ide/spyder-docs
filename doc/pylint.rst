@@ -11,6 +11,8 @@ with `.py` (or `.pyw`) Python scripts or with whole Python packages
 
 |
 
-Related plugins:
+
+Related components
+~~~~~~~~~~~~~~~~~~
 
 * :doc:`editor`

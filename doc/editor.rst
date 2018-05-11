@@ -56,8 +56,12 @@ Cells are separated by lines starting with:
 * `# %%` (standard cell separator, when file has been edited with Eclipse)
 * `# <codecell>` (IPython notebook cell separator)
 
-Related plugins:
 
-* :doc:`ipythonconsole`
+Related components
+~~~~~~~~~~~~~~~~~~
+
 * :doc:`fileexplorer`
 * :doc:`findinfiles`
+* :doc:`ipythonconsole`
+* :doc:`projects`
+* :doc:`pylint`

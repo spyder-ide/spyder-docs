@@ -88,8 +88,11 @@ within the same Python interpreter without having to restart it every time
 (restart time may be relatively long when testing GUI-based applications).
 
 
-Related plugins:
+Related components
+~~~~~~~~~~~~~~~~~~
 
-* :doc:`help`
+* :doc:`debugging`
 * :doc:`editor`
-* :doc:`fileexplorer`
+* :doc:`help`
+* :doc:`historylog`
+* :doc:`variableexplorer`

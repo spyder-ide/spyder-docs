@@ -20,7 +20,10 @@ Windows explorer window (Windows only):
 
 |
 
-Related plugins:
 
-* :doc:`ipythonconsole`
+Related components
+~~~~~~~~~~~~~~~~~~
+
 * :doc:`editor`
+* :doc:`findinfiles`
+* :doc:`projects`

@@ -10,6 +10,9 @@ support for maximum search customization.
 
 |
 
-Related plugins:
+
+Related components
+~~~~~~~~~~~~~~~~~~
 
 * :doc:`editor`
+* :doc:`fileexplorer`

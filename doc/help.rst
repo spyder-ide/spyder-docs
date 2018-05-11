@@ -37,7 +37,10 @@ if the object is pure Python):
 
 |
 
-Related plugins:
 
-* :doc:`ipythonconsole`
+Related components
+~~~~~~~~~~~~~~~~~~
+
 * :doc:`editor`
+* :doc:`ipythonconsole`
+* :doc:`onlinehelp`

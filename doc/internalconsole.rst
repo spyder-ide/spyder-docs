@@ -15,3 +15,9 @@ thread (this is optional and for example this is not the case in Spyder itself).
 The internal console support the following features:
 
 * Code completion and calltips
+
+
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`ipythonconsole`

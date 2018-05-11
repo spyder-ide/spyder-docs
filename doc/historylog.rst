@@ -9,6 +9,8 @@ or command windows.
 
 |
 
-Related plugins:
+
+Related components
+~~~~~~~~~~~~~~~~~~
 
 * :doc:`ipythonconsole`

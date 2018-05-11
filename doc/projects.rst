@@ -66,3 +66,10 @@ available on the system path.
 .. _Mercurial: http://mercurial.selenic.com/
 .. _TortoiseHg: http://tortoisehg.bitbucket.org/
 .. _Git for Windows: https://git-for-windows.github.io/
+
+
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`editor`
+* :doc:`fileexplorer`

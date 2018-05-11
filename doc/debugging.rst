@@ -39,7 +39,9 @@ For a simple, yet quite complete introduction to `pdb`, you may read this:
 http://pythonconquerstheuniverse.wordpress.com/category/python-debugger/
 
 
-Related plugins:
+Related components
+~~~~~~~~~~~~~~~~~~
 
 * :doc:`editor`
 * :doc:`ipythonconsole`
+* :doc:`variableexplorer`
