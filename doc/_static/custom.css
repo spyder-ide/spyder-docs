@@ -42,3 +42,7 @@ ul.simple {
 div .toctree-wrapper {
     margin-bottom: 24px;
 }
+
+ol.arabic {
+    margin-bottom: 24px;
+}
