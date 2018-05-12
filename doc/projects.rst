@@ -1,7 +1,7 @@
 Projects
 ========
 
-Spyder allows users to associate a given directory with a project. This has two
+Spyder allows users to associate a given directory with a **Project**. This has two
 main advantages:
 
 1. Projects remember the list of open files in Editor. This permits to easily

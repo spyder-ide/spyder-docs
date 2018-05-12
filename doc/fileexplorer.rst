@@ -1,7 +1,7 @@
 File Explorer
 =============
 
-The file explorer pane is a file/directory browser allowing the user to open
+The **File Explorer** pane is a file/directory browser allowing the user to open
 files with the internal editor or with the appropriate application (Windows
 only).
 

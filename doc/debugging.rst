@@ -1,7 +1,7 @@
 Debugging
 =========
 
-Debugging in Spyder is supported thanks to the following Python modules:
+**Debugging** in Spyder is supported thanks to the following Python modules:
 
 * `pdb`: the Python debugger, which is included in Python standard library.
 

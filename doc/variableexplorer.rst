@@ -1,7 +1,7 @@
 Variable Explorer
 =================
 
-The variable explorer shows the namespace contents (i.e. all global object
+The **Variable Explorer** shows the namespace contents (i.e. all global object
 references) of the current console
 
 .. image:: images/variable_explorer/variable_explorer_standard.png

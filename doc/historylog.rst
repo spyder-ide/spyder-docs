@@ -1,7 +1,7 @@
 History log
 ===========
 
-The history log plugin collects command histories of Python/IPython interpreters
+The **History Log** plugin collects command histories of Python/IPython interpreters
 or command windows.
 
 .. image:: images/history_log/history_log_menu.png
