@@ -10,21 +10,20 @@ Spyder: The Scientific Python Development Environment
 
 |
 
-Spyder is the Scientific Python Development Environment:
+Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
+It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
+Furthermore, Spyper offers built-in integration with many popular scientific packages, including `NumPy`_, `SciPy`_, `Pandas`_, `IPython`_, `QtConsole`_, `Matplotlib`_, `SymPy`_, and more.
 
-* A powerful interactive development environment for the Python language with
-  advanced editing, interactive testing, debugging and introspection features
-* A numerical computing environment thanks to the support of `IPython`
-  (an enhanced interactive Python interpreter) and popular Python libraries
-  such as `NumPy` (linear algebra), `SciPy` (signal and image processing)
-  and `matplotlib` (interactive 2D/3D plotting).
+.. _NumPy: https://www.numpy.org/
+.. _SciPy: https://www.scipy.org/
+.. _Pandas: https://pandas.pydata.org/
+.. _IPython: https://ipython.org/
+.. _QtConsole: https://qtconsole.readthedocs.io/en/stable/
+.. _Matplotlib: https://matplotlib.org/
+.. _SymPy: http://www.sympy.org/en/index.html
 
-Spyder may also be used as a library providing powerful console-related widgets
-for your PyQt-based applications -- for example, it may be used to integrate a
-debugging console directly in the layout of your graphical user interface.
-
-For more information about Spyder and to download the latest version, please
-see the relevant links in the sidebar.
+Beyond its many built-in features, Spyder's abilities can be extended even further via its plugin system and API.
+Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.
 
 
 Contents:
