@@ -1,5 +1,6 @@
+#################
 Variable Explorer
-=================
+#################
 
 The **Variable Explorer** shows the namespace contents (i.e. all global object
 references) of the current console
@@ -9,6 +10,10 @@ references) of the current console
    :alt: Spyder Variable Explorer, with a list of variables and their contents
 
 |
+
+
+Features and editors
+====================
 
 The following screenshots show some interesting features such as editing
 lists, strings, dictionaries, NumPy arrays, or plotting/showing NumPy arrays
@@ -64,7 +69,7 @@ data.
 
 
 Supported types
----------------
+===============
 
 The variable explorer can't show all types of objects. The ones currently
 supported are:

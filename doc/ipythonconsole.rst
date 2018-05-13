@@ -1,5 +1,6 @@
+###############
 IPython Console
-===============
+###############
 
 The **IPython Console** is where you may enter, interact with and visualize
 data inside a command interpreter. All the commands entered in the console are
@@ -16,6 +17,10 @@ IPython's many features.
 
 
 |
+
+
+Connecting a console
+====================
 
 From the Consoles menu, Spyder can launch **IPython Console**
 instances that attach to kernels that are managed
@@ -37,6 +42,10 @@ kernel connection file details:
    :alt: Connect to kernel dialog requesting path and connection details
 
 |
+
+
+Supported features
+==================
 
 **IPython Consoles** that are attached to kernels that were created by
 Spyder support the following features:
@@ -63,8 +72,8 @@ set:
   from the console command line.
 
 
-Reloading modules: the User Module Reloader (UMR)
--------------------------------------------------
+Using UMR to reload modules
+===========================
 
 When working with Python scripts interactively, one must keep in mind that
 Python import a module from its source code (on disk) only when parsing the

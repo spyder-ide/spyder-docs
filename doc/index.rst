@@ -1,5 +1,6 @@
-Spyder - Documentation
-======================
+#####################################################
+Spyder: The Scientific Python Development Environment
+#####################################################
 
 |
 

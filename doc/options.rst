@@ -1,5 +1,6 @@
-Command line options
-====================
+####################
+Command Line Options
+####################
 
 Spyder's command line options are the following:
 

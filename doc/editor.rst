@@ -1,5 +1,6 @@
+######
 Editor
-======
+######
 
 Spyder's text **Editor** is a multi-language editor with features such as syntax
 coloring, code analysis (real-time code analysis powered by `pyflakes` and
@@ -34,10 +35,11 @@ Code analysis with `pyflakes`:
    :align: center
    :alt: A snippit of code in the Spyder Editor, showing code style warnings
 
+|
 
 
-How to define a code cell
---------------------------
+Defining code cells
+===================
 
 A "code cell" is a concept similar to MATLAB's "cell" (except that there is
 no "cell mode" in Spyder), i.e. a block of lines to be executed at once in the

@@ -1,5 +1,6 @@
+####
 Help
-====
+####
 
 The **Help** plugin works together with the :doc:`ipythonconsole` and the
 :doc:`editor`: it shows automatically documentation available when the
@@ -13,6 +14,10 @@ Note that this automatic link may be disabled by pressing the "Lock" button
 Of course, one can use the documentation viewer directly by entering an object
 name in the editable combo box field, or by selecting old documentation requests
 in the combo box.
+
+
+Help modes
+==========
 
 Rich text mode:
 

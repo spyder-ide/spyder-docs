@@ -1,5 +1,6 @@
-Static code analysis
-====================
+####################
+Static Code Analysis
+####################
 
 The **Static Code Analysis** tool may be used directly from the :doc:`editor`, or
 by entering manually the Python module or package path - i.e. it works either

@@ -1,5 +1,6 @@
+########
 Projects
-========
+########
 
 Spyder allows users to associate a given directory with a **Project**. This has two
 main advantages:
@@ -10,6 +11,10 @@ main advantages:
    that modules developed as part of a project can be easily imported in any
    console.
 
+
+Creating a project
+==================
+
 To create a project, it is necessary to select the *New Project* entry from the
 *Projects* menu:
 
@@ -18,6 +23,10 @@ To create a project, it is necessary to select the *New Project* entry from the
    :alt: Closeup of Spyder's Projects menu, containing project-related commands
 
 |
+
+
+Using the project explorer
+==========================
 
 When a project is activated, the *Project explorer* pane is shown, which
 presents a tree view structure of the current project. Through this pane,
@@ -40,8 +49,8 @@ it is possible to make several operations on the files that belong to project:
    can work without creating any project.
 
 
-Version Control Integration
----------------------------
+Working with version control
+============================
 
 Spyder has limited integration with Git_ and Mercurial_. Commit and browse
 commands are available by right-clicking on relevant files that reside within

@@ -1,5 +1,6 @@
+########
 Overview
-========
+########
 
 .. image:: images/mainwindow/mainwindow_custom_1610.png
    :align: center

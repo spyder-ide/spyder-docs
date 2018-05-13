@@ -1,5 +1,6 @@
-History log
-===========
+###########
+History Log
+###########
 
 The **History Log** plugin collects command histories of Python/IPython interpreters
 or command windows.

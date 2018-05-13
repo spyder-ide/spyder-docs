@@ -1,5 +1,6 @@
+#########
 Debugging
-=========
+#########
 
 **Debugging** in Spyder is supported thanks to the following Python modules:
 
@@ -13,8 +14,11 @@ Debugging
    :align: center
    :alt: A Spyder IPython console window, showing the ipdb debugger in action
 
+|
+
+
 Debugging with pdb
-------------------
+==================
 
 The Python debugger is partly integrated in Spyder:
 

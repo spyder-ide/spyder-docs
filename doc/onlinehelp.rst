@@ -1,5 +1,6 @@
-Online help
-===========
+###########
+Online Help
+###########
 
 The **Online Help** plugin provides an internal web browser to explore dynamically
 generated Python documentation on installed module, including your own modules
