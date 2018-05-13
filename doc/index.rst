@@ -26,7 +26,8 @@ Beyond its many built-in features, Spyder's abilities can be extended even furth
 Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.
 
 
-Contents:
+Contents
+========
 
 .. toctree::
     :maxdepth: 2
@@ -37,18 +38,13 @@ Contents:
     options
     editor
     ipythonconsole
-    debugging
     variableexplorer
     help
-    projects
+    debugging
     pylint
+    projects
     fileexplorer
-    historylog
     findinfiles
     onlinehelp
+    historylog
     internalconsole
-
-Indices and tables:
-
-* :ref:`genindex`
-* :ref:`search`
