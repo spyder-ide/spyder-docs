@@ -46,3 +46,15 @@ div .toctree-wrapper {
 ol.arabic {
     margin-bottom: 24px;
 }
+
+div.footer {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-left: 200px;
+}
+
+div.footer#bottomlinks {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}

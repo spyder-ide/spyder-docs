@@ -131,11 +131,7 @@ html_theme_options = {
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
                             + 'Troubleshooting-Guide-and-FAQ'),
         'Dev Wiki': 'https://github.com/spyder-ide/spyder/wiki/Dev:-Index',
-        'Gitter Chatroom': 'https://gitter.im/spyder-ide/public',
-        'Google Group': 'https://groups.google.com/group/spyderlib',
-        'Twitter Updates': 'https://twitter.com/spyder_ide',
-        'Facebook Page': 'https://www.facebook.com/SpyderIDE/)',
-        'Donate (OpenCollective)': 'https://opencollective.com/spyder/'
+        'Donate': 'https://opencollective.com/spyder/'
         },
     'sidebar_collapse': True,
     'show_related': True,
