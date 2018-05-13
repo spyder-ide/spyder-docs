@@ -1,6 +1,6 @@
-The Spyder Project Contributors are composed of:
+The Spyder Doc Contributors are composed of:
 
 * Pierre Raybaut <pierre.raybaut@gmail.com> (Original Spyder author).
-* Carlos Cordoba <ccordoba12@gmail.com> (Current maintainer).
+* Carlos Cordoba <ccordoba12@gmail.com> (Current Spyder maintainer).
 * All other developers who have contributed to this repository
   and/or the original documentation on the main spyder-ide/spyder repository.
