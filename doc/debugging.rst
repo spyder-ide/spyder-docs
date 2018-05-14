@@ -2,13 +2,8 @@
 Debugging
 #########
 
-**Debugging** in Spyder is supported thanks to the following Python modules:
-
-* `pdb`: the Python debugger, which is included in Python standard library.
-
-* `winpdb`: a graphical frontend to `pdb`, which is an external package
-  (in the :doc:`editor`, press F7 to run `winpdb` on the currently edited
-  script).
+**Debugging** in Spyder is supported through integration with the enhanced ``ipdb`` debugger in the :doc:`ipythonconsole`.
+This allows breakpoints and the execution flow to be viewed and controlled right from the Spyder GUI, as well as with all the familiar IPython console commands.
 
 .. image:: images/debugging/debugging_console.png
    :align: center
@@ -17,30 +12,28 @@ Debugging
 |
 
 
-Debugging with pdb
-==================
+Debugging with ipdb
+===================
 
-The Python debugger is partly integrated in Spyder:
-
-* Breakpoints may be defined in the :doc:`editor`.
-
-  * Simple breakpoints can be set from the Run menu, by keyboard shortcut
-    (F12 by default), or by double-click to the left of line numbers
-    in the :doc:`editor`.
-  * Conditional breakpoints can also be set from the Run menu, by
-    keyboard shortcut (Shift+F12 by default), or by Shift+double-click
-    to the left of line numbers in the :doc:`editor`.
+Spyder offers the following debugging features integrated into the native GUI:
 
 .. image:: images/debugging/debugging_condbreakpoint.png
-   :align: center
+   :align: right
+   :width: 50%
    :alt: Inset of Spyder Editor, with breakpoint set and condition dialog open
 
-* The current frame (debugging step) is highlighted in the :doc:`editor`.
-* At each breakpoint, globals may be accessed through
-  the :doc:`variableexplorer`.
+* Multiple means of setting and clearing normal and conditional breakpoints for any line in a file opened in the :doc:`editor`.
 
-For a simple, yet quite complete introduction to `pdb`, you may read this:
-http://pythonconquerstheuniverse.wordpress.com/category/python-debugger/
+  * By selecting the respective option from the Debug menu.
+  * Through pressing a configurable keyboard shortcut (F12 for normal, or Shift-F12 for conditional by default).
+  * By double-clicking to the left of the line number in an open file.
+
+* Highlighting of the current frame (debugging step) in the :doc:`editor`.
+* The ability to accessed and edit local and global variables at each breakpoint through the :doc:`variableexplorer`, and run many commands in the :doc:`ipythonconsole`.
+
+For a comprehensive but accessible introduction to ``pdb``/``ipdb``, consult Steve Ferg's excellent online guide, `Debugging in Python`_.
+
+.. _Debugging in Python: https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
 
 
 Related components
