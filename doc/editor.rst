@@ -2,11 +2,8 @@
 Editor
 ######
 
-Spyder's text **Editor** is a multi-language editor with features such as syntax
-coloring, code analysis (real-time code analysis powered by `pyflakes` and
-advanced code analysis using `pylint`), introspection capabilities such as
-code completion, calltips and go-to-definition features (powered by `rope`),
-function/class browser, horizontal/vertical splitting features, etc.
+Spyder's multi-language **Editor** integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
+The Editor's key features include syntax highlighting (``pygments``); real-time code and style analysis (``pyflakes`` and ``pycodestyle``); on-demand completion, calltips and go-to-definition features (``rope`` and ``jedi``); a function/class browser, horizontal and vertical splitting, and much more.
 
 .. image:: images/editor/editor_split_horizontal.png
    :align: center
@@ -14,7 +11,7 @@ function/class browser, horizontal/vertical splitting features, etc.
 
 |
 
-Function/class/method browser and horizontal/vertical splitting feature:
+Function/class/method browser, and horizontal/vertical splitting capabilities:
 
 |outline| |split|
 
@@ -29,7 +26,7 @@ Function/class/method browser and horizontal/vertical splitting feature:
 
 |
 
-Code analysis with `pyflakes`:
+Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 
 .. image:: images/editor/editor_inset_code_analysis.png
    :align: center
@@ -41,10 +38,9 @@ Code analysis with `pyflakes`:
 Defining code cells
 ===================
 
-A "code cell" is a concept similar to MATLAB's "cell" (except that there is
-no "cell mode" in Spyder), i.e. a block of lines to be executed at once in the
-current interpreter (Python or IPython). Every script may be divided in as
-many cells as needed.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current doc:`ipythonconsole`.
+This is much like a "cell" in MATLAB (except without any need to enable a "cell mode", since in Spyder, cells are detected automatically).
+You can separate your scripts may be divided into as many cells as needed, or none at all—the choice is yours.
 
 .. image:: images/editor/editor_standard.png
    :align: center
@@ -52,11 +48,13 @@ many cells as needed.
 
 |
 
-Cells are separated by lines starting with:
+You can separate cells by lines starting with either:
 
 * `#%%` (standard cell separator)
 * `# %%` (standard cell separator, when file has been edited with Eclipse)
 * `# <codecell>` (IPython notebook cell separator)
+
+Providing a description to the right of the separator will give that cell its own name in the previously shown Outline viewer.
 
 
 Related components
