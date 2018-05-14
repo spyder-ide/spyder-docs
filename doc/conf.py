@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Spyder'
-copyright = '2009–2018 The Spyder Project Contributors'
-author = 'The Spyder Project Contributors'
+copyright = '2009–2018 The Spyder Doc Contributors'
+author = 'The Spyder Doc Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -245,7 +245,7 @@ htmlhelp_basename = 'Spyderdoc'
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'Spyder.tex', 'Spyder Documentation',
-   'The Spyder Project Contributors', 'manual'),
+   author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

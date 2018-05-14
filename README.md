@@ -1,7 +1,7 @@
 ![Spyder Docs — Documentation for the Scientific Python Development Environment](
 ./doc/_static/spyder_readme_banner.png)
 
-*Copyright © 2009–2018 Spyder Project Contributors*
+*Copyright © 2009–2018 The Spyder Doc Contributors*
 
 
 [![license](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE)
