@@ -17,10 +17,10 @@ Debugging with ipdb
 
 Spyder offers the following debugging features integrated into the native GUI:
 
-.. image:: images/debugging/debugging_condbreakpoint.png
+.. image:: images/menu/menu_debug.png
    :align: right
    :width: 50%
-   :alt: Inset of Spyder Editor, with breakpoint set and condition dialog open
+   :alt: Spyder's debug menu, showing options to set, show and clear breakpoints, and control debugger execution flow
 
 * Multiple means of setting and clearing normal and conditional breakpoints for any line in a file opened in the :doc:`editor`.
 
@@ -30,10 +30,23 @@ Spyder offers the following debugging features integrated into the native GUI:
   * With a ``ipdb.set_trace()`` statement in your code.
   * Interactively, using the ``b`` magic command in an ``ipdb`` session.
 
+.. image:: images/debugging/breakpoints_standard.png
+   :align: right
+   :width: 50%
+   :alt: Spyder's Breakpoints panel, with a number of examples showing file, line number and an optional condition
+
 * A breakpoints pane, listing the file, line, and condition (if any) of every breakpoint defined (Debug > List Breakpoints, or Ctrl-Shift-B by default).
+
 * Full GUI control over debugger execution from the Debug menu, Debug toolbar and via configurable keyboard shortcuts, along with the standard ``ipdb`` console commands.
+
+.. image:: images/debugging/debugging_condbreakpoint.png
+   :align: right
+   :width: 50%
+   :alt: Inset of Spyder's Editor, with a breakpoint set and the condition dialog open
+
 * Highlighting of the current frame (debugging step) in the :doc:`editor`.
-* The ability to accessed and edit local and global variables at each breakpoint through the :doc:`variableexplorer`, and run many commands in the :doc:`ipythonconsole`.
+
+* The ability to access and edit local and global variables at each breakpoint through the :doc:`variableexplorer`, and run many commands in the :doc:`ipythonconsole`.
 
 For a comprehensive but accessible introduction to ``pdb``/``ipdb``, consult Steve Ferg's excellent online guide, `Debugging in Python`_.
 
