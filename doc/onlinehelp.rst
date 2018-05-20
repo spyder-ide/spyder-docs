@@ -2,9 +2,7 @@
 Online Help
 ###########
 
-The **Online Help** plugin provides an internal web browser to explore dynamically
-generated Python documentation on installed module, including your own modules
-(this documentation is provided by a pydoc server running in background).
+The **Online Help** pane provides a built-in web browser to explore dynamically generated Python documentation on installed modules—including your own—rendered by a ``pydoc`` server running in the background.
 
 .. image:: images/online_help/online_help_standard.png
    :width: 570px
