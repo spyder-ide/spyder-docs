@@ -2,21 +2,22 @@
 Projects
 ########
 
-Spyder allows users to associate a given directory with a **Project**. This has two
-main advantages:
+Spyder allows users to associate a given directory with a **Project**, which offers several main advantages:
 
-1. Projects remember the list of open files in Editor. This permits to easily
-   work on several coding efforts at the same time.
-2. The project's path is added to the list of paths Python looks modules for, so
-   that modules developed as part of a project can be easily imported in any
-   console.
+* Opening, closing or switching to a Project automatically saves and restores your Editor panes and open files to exactly how you left off.
+  This allows you to easily switch between many different development tasks without having to manually re-create your session for each one.
+* Your project's root directory is automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create with zero setup.
+
+.. note::
+
+   Projects are completely optional and not imposed on users.
+   All of Spyder' functionality (session saving, File Explorer, working directory, etc) is available without creating a project, just on a global rather than project-specific basis.
 
 
 Creating a project
 ==================
 
-To create a project, it is necessary to select the *New Project* entry from the
-*Projects* menu:
+To create a project, click the New Project entry in the Projects menu, choose whether you'd like to associate a Project with an existing directory or make a new one, and enter the project's name and path:
 
 .. image:: images/menu/menu_projects.png
    :align: center
@@ -25,12 +26,13 @@ To create a project, it is necessary to select the *New Project* entry from the
 |
 
 
-Using the project explorer
+.. _project-explorer:
+
+Using the Project Explorer
 ==========================
 
-When a project is activated, the *Project explorer* pane is shown, which
-presents a tree view structure of the current project. Through this pane,
-it is possible to make several operations on the files that belong to project:
+Once a Project is opened, the Project Explorer pane is shown, presenting a tree view of the current project's files and directories.
+This pane allows you to perform all the same operations as a normal Spyder :doc:`fileexplorer`.
 
 |explorer| |contextmenu|
 
@@ -45,36 +47,27 @@ it is possible to make several operations on the files that belong to project:
 |
 
 
-.. note:: Projects are completely optional and not imposed on users, i.e. users
-   can work without creating any project.
-
+.. _vcs-section:
 
 Working with version control
 ============================
 
-Spyder has limited integration with Git_ and Mercurial_. Commit and browse
-commands are available by right-clicking on relevant files that reside within
-an already initialized repository. This menu assume that certain commands are
-available on the system path.
+Spyder has basic integration with the `Git`_ distributed version control system.
+You can commit or browse (in the ``gitk`` GUI) a file, directory or the entire repository via the commands in the context menu for the relevant object (right-click).
 
-* For Mercurial repositories, TortoiseHG_ must be installed, and either ``thg``
-  or ``hgtk`` must be on the system path.
-* For git repositories, the commands ``git`` and ``gitk`` must be on the
-  system path. For Windows systems, the `Git for Windows`_ package provides a
-  convenient installer and the option to place common git commands on the
-  system path without creating conflicts with Windows system tools.
-  The second option in the dialog below is generally a safe approach.
+.. _Git: http://git-scm.com/
+
+To use this functionality, the project must be located in a ``git`` repository and the ``git`` and ``gitk`` commands must be on the system path.
+For Windows systems, the `Git for Windows`_ package provides a convenient installer and the option to place common git commands on the system path without creating conflicts with Windows system tools.
+The second option in the dialog below is generally a safe approach.
+
+.. _Git for Windows: https://git-for-windows.github.io/
 
 .. image:: images/other/git_for_windows_install_path.png
    :align: center
    :alt: Git for Windows installer on the PATH options page; 2nd option chosen
 
 |
-
-.. _Git: http://git-scm.com/
-.. _Mercurial: http://mercurial.selenic.com/
-.. _TortoiseHg: http://tortoisehg.bitbucket.org/
-.. _Git for Windows: https://git-for-windows.github.io/
 
 
 Related components
