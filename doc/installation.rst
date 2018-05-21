@@ -133,9 +133,7 @@ The requirements to run Spyder are:
 
 * `Python <http://www.python.org/>`_ 2.7 or >=3.3
 
-* `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download5>`_ >=5.2 or
-  `PyQt4 <https://www.riverbankcomputing.com/software/pyqt/download>`_ >=4.6.0
-  (PyQt5 is recommended).
+* `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download5>`_ >=5.5
 
 * `Qtconsole <http://jupyter.org/qtconsole/stable/>`_ >=4.2.0 -- for an
   enhanced Python interpreter.
@@ -171,8 +169,8 @@ The requirements to run Spyder are:
 * `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- To run introspection services on the
   Editor asynchronously.
 
-* `QtPy <https://github.com/spyder-ide/qtpy>`_ >=1.2.0 -- To run Spyder with PyQt4 or
-  PyQt5 seamlessly.
+* `QtPy <https://github.com/spyder-ide/qtpy>`_ >=1.2.0 -- To run Spyder with different
+  Qt bindings seamlessly.
 
 * `Chardet <https://github.com/chardet/chardet>`_ >=2.0.0-- Character encoding auto-detection
   in Python.
@@ -215,8 +213,7 @@ Before installing Spyder itself by this method, you need to acquire the
 `Python programming language <http://www.python.org/>`_
 
 Then, to install Spyder and its other dependencies, run ``pip install spyder``.
-You may need to separately install a Qt binding with ``pip`` if running Python 2;
-PyQt5 is strongly recommended though the legacy PyQt4 is also still supported.
+You may need to separately install PyQt5 with ``pip`` if running Python 2.
 
 
 Run without installing
