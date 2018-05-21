@@ -7,6 +7,9 @@ Spyder allows users to associate a given directory with a **Project**, which off
 * Opening, closing or switching to a Project automatically saves and restores your Editor panes and open files to exactly how you left off.
   This allows you to easily switch between many different development tasks without having to manually re-create your session for each one.
 * Your project's root directory is automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create with zero setup.
+* The project path is also used to automatically set your working directory, and can be used as an automatic preset for several modules, such as the :doc:`findinfiles` search location.
+* You can browse all your Project files from the :ref:`Project Explorer <project-explorer>`, regardless of your current working directory or :doc:`fileexplorer` location.
+* Projects are :ref:`integrated <vcs-section>` with the ``git`` version control system, allowing you to commit files and open them or your repository in the ``gitk`` GUI right from within Spyder.
 
 .. note::
 
