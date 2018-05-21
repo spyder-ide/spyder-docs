@@ -2,8 +2,7 @@
 Variable Explorer
 #################
 
-The **Variable Explorer** shows the namespace contents (i.e. all global object
-references) of the current console
+The **Variable Explorer** shows the namespace contents (all global object references, such as variables, functions, modules, etc.) of the currently selected :doc:`ipythonconsole` session, and allows you to interact with them through a variety of GUI-based editors.
 
 .. image:: images/variable_explorer/variable_explorer_standard.png
    :align: center
@@ -15,9 +14,8 @@ references) of the current console
 Features and editors
 ====================
 
-The following screenshots show some interesting features such as editing
-lists, strings, dictionaries, NumPy arrays, or plotting/showing NumPy arrays
-data.
+Spyder's Variable Explorer offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, and more, and can also histogram, plot, or even display some of them as an RGB image.
+Several examples of this functionality follow:
 
 |
 
@@ -71,20 +69,21 @@ data.
 Supported types
 ===============
 
-The variable explorer can't show all types of objects. The ones currently
-supported are:
+The Variable Explorer has specialized editors for a range of common built-in and third-party Python objects, and can view, edit, and deeply introspect most arbitrary objects via a more general object editor.
+Types with specialized editing support include:
 
-#. `Pandas` DataFrame, TimeSeries and DatetimeIndex objects
-#. `NumPy` arrays and matrices
-#. `PIL/Pillow` images
-#. `datetime` dates
-#. Integers
-#. Floats
-#. Complex numbers
-#. Lists
-#. Dictionaries
-#. Tuples
-#. Strings
+* Integers
+* Floats
+* Complex numbers
+* Strings
+* ``datetime`` dates and timedeltas
+* Lists
+* Tuples
+* Dictionaries
+* NumPy arrays and matrices
+* Pandas ``DataFrame``, ``TimeSeries`` and ``DatetimeIndex`` objects
+* ``PIL``/``Pillow`` images
+* Namespaces
 
 
 Related components
