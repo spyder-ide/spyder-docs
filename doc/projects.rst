@@ -22,9 +22,15 @@ Creating a project
 
 To create a project, click the New Project entry in the Projects menu, choose whether you'd like to associate a Project with an existing directory or make a new one, and enter the project's name and path:
 
-.. image:: images/menu/menu_projects.png
-   :align: center
+|projectsmenu| |newprojectdialog|
+
+.. |projectsmenu| image:: images/menu/menu_projects.png
+   :width: 37%
    :alt: Closeup of Spyder's Projects menu, containing project-related commands
+
+.. |newprojectdialog| image:: images/dialog/dialog_new_project.png
+   :width: 62%
+   :alt: New project dialog, with options to set the name, type and location
 
 |
 
@@ -37,9 +43,9 @@ Using the Project Explorer
 Once a Project is opened, the Project Explorer pane is shown, presenting a tree view of the current project's files and directories.
 This pane allows you to perform all the same operations as a normal Spyder :doc:`fileexplorer`.
 
-|explorer| |contextmenu|
+|projectexplorer| |contextmenu|
 
-.. |explorer| image:: images/projects/project_explorer_standard.png
+.. |projectexplorer| image:: images/projects/project_explorer_standard.png
    :width: 30%
    :alt: Spyder Project Explorer, displaying a directory tree of project files
 
