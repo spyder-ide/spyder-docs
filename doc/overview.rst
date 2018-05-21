@@ -8,92 +8,99 @@ Overview
 
 |
 
-Spyder is a Python development environment with the following key features:
+Spyder, the Scientific Python Development Environment, includes the following key features:
 
-Key features:
+* :doc:`editor`:
 
-* general features:
+  * Customizable syntax highlighting themes (Python, C/C++, Fortran)
+  * :doc:`debugging` breakpoints and conditional breakpoints (through ``ipdb`` integration)
+  * Interactive execution: Run line/selection, run cell, run file, re-run and debug
+  * Run configuration settings:
 
-  * MATLAB-like PYTHONPATH management dialog box (works with all consoles)
-  * Windows only: current user environment variables editor
-  * direct links to documentation (Python, Matplotlib, !NumPy, !Scipy, etc.)
-  * direct link to Python(x,y) launcher
-  * direct links to !QtDesigner, !QtLinguist and !QtAssistant (Qt documentation)
+    * Working directory selection
+    * Command line options
+    * Run in Current/dedicated/external console choice
+    * Automatically clear variables or enter debugging
 
-* *preferences* dialog box:
+  * Outline Explorer: Navigate cells, functions, classes, blocks, and more
+  * Code introspection (powered by ``rope`` and ``jedi``):
 
-  * keyboard shortcuts
-  * syntax coloring schemes (source editor, history log, help)
-  * console: background color (black/white), automatic code completion, etc.
-  * and a lot more...
+    * On-demand (TAB) and "dot" automatic code completion
+    * Automatic popup calltips showing function signatures
+    * Go-to-definition for any symbol: Functions, classes, attributes, etc. (Ctrl-Click or ``Ctrl-G`` by default)
+
+  * Occurrence highlighting: Select or double-click any word to show all other instances throughout the current document
+  * Real-time automatic formatters (optional):
+
+    * Automatic insertion of closing quotes parentheses, braces and brackets
+    * Automatic indentation after 'else', 'elif', 'finally', etc.
+    * Smart auto-indentation based on code structure
+    * Automatic insertion of colons after for, if, def, etc.
+    * Automatically fix mixed indentation, EoL characters and trailing spaces
+
+  * Real-time code analysis:
+    * Errors/warnings/problems (powered by ``pyflakes``)
+    * PEP 8 and code style (powered by ``pycodestyle``)
+    * Code annotation parsing and "Todo lists" (``TODO``, ``FIXME``, ``XXX``, etc.)
 
 .. image:: images/mainwindow/mainwindow_dark_1610.png
    :align: right
    :width: 60%
    :alt: The Spyder main window, with a dark syntax highlighting theme applied
 
+* :doc:`ipythonconsole`:
 
-* :doc:`editor`:
+  * Any number of individual consoles, each executed in a separate, isolated processes
+  * Each console uses the full IPython kernel as a back-end with a light GUI front-end
+  * Supports all of the powerful IPython magic commands and functionality
+  * Automatic code completion and calltips, and automatic link to doc:`help`
+  * Range of code run options and interactivity
+  * :doc:`debugging` integration with enhanced ``ipdb`` debugger and the :doc:`editor`
+  * Inline display of Matplotlib graphics (optional)
+  * The User Module Reloader, automatically re-importing modified source files
 
-  * syntax coloring (Python, C/C++, Fortran)
-  * *breakpoints* and *conditional breakpoints* (debugger: `pdb`)
-  * run or debug Python scripts (see console features)
-  * *run configuration* dialog box:
+* :doc:`variableexplorer`:
 
-    * working directory
-    * command line options
-    * run in a new Python interpreter or in an existing Python interpreter or IPython client
-    * Python interpreter command line options
+  * Lists all global variables, functions, classes, and their content
+  * GUI-based editors for numerous data types (numeric, strings, collections, NumPy arrays, Pandas DataFrames, dates/times, images, and more)
+  * Import/export data or an entire session from/to many formats (text, csv, NumPy files, MATLAB files)
+  * Interactive data visualization options (plot, histogram, image...) using Matplotlib
 
-  * *code outline explorer*: functions, classes, if/else/try/... statements
-  * *powerful code introspection features* (powered by `rope`):
+* :doc:`help`:
 
-    * *code completion*
-    * *calltips*
-    * *go-to-definition*: go to object (any symbol: function, class, attribute, etc.) definition by pressing Ctrl+Left mouse click on word or Ctrl+G (default shortcut)
+  * Provides documentation or source code for any Python object (class, function, module...)
+  * Can be triggered manually, on demand (``Ctrl-I`` by default) or automatically on typing a left parenthesis after a function name (optional)
+  * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
 
-  * *occurrence highlighting*
-  * typing helpers (optional):
-
-    * automatically insert closing parentheses, braces and brackets
-    * automatically unindent after 'else', 'elif', 'finally', etc.
-
-  * *to-do* lists (TODO, FIXME, XXX)
-  * errors/warnings (real-time *code analysis* provided by `pyflakes`)
-  * integrated static code analysis (using `pylint`)
-  * direct link to `winpdb` external debugger
+* :doc:`pylint`: Integrated code checker (powered by ``pylint``)
+* Profiler
+* :doc:`projects`
+* :doc:`fileexplorer`
+* :doc:`findinfiles`: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations
+* :doc:`onlinehelp`: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own
+* :doc:`historylog`
+* :doc:`internalconsole`
 
 .. image:: images/mainwindow/mainwindow_matlab_1610.png
    :align: right
    :width: 60%
    :alt: The Spyder main window, with a panel layout mirroring that of MATLAB
 
+* Preferences:
 
-* :doc:`ipythonconsole`:
+  * Fully customizable keyboard shortcuts editor
+  * Selection of a custom Python interpreter to use for consoles
+  * Choice of around a dozen built-in syntax coloring theme, or create your own
+  * Toggle automatic editor and console introspection, analysis and helper features
+  * Options to use a variety of graphics back-ends and display preferences
+  * Much more...
 
-  * *all consoles are executed in a separate process*
-  * *code completion*/calltips and automatic link to help (see below)
-  * open Python interpreters or basic terminal command windows
-  * run Python scripts (see source editor features)
-  * *variable explorer*:
+* General:
 
-    * *GUI-based editors* for a lot of data types (numbers, strings, lists, arrays, dictionaries, ...)
-    * *import/export data* from/to a lot of file types (text files, !NumPy files, MATLAB files)
-    * multiple array/list/dict editor instances at once, thus allowing to compare variable contents
-    * data visualization
+  * MATLAB-like ``PYTHONPATH`` management dialog
+  * User environment variables viewer/editor (Windows-only)
+  * Handy links to useful resources and documentation (Python, Matplotlib, NumPy, Scipy, Qt, IPython, etc.)
+  * Interactive tour, tutorial and shortcut cheat sheet for new users
 
-* :doc:`historylog`
-* :doc:`help`:
-
-  * provide documentation or source code on any Python object (class, function, module, ...)
-  * documentation may be displayed as an html page thanks to the rich text mode (powered by `sphinx`)
-
-* :doc:`onlinehelp`: automatically generated html documentation on installed Python modules
-* :doc:`findinfiles`: find string occurrences in a directory, a git repository or directly in PYTHONPATH (support for regular expressions and included/excluded string lists)
-* :doc:`fileexplorer`
-* :doc:`projects`
-
-
-Spyder may also be used as a PyQt5 or PyQt4 extension library
-(module 'spyder'). For example, the Python interactive shell widget
-used in Spyder may be embedded in your own PyQt5 or PyQt4 application.
+Beyond its many built-in features, Spyder's abilities can be extended even further via its plugin system and API.
+Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.
