@@ -72,14 +72,14 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Can be triggered manually, on demand (``Ctrl-I`` by default) or automatically on typing a left parenthesis after a function name (optional)
   * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
 
-* :doc:`pylint`: Integrated code checker (powered by ``pylint``)
-* Profiler
-* :doc:`projects`
-* :doc:`fileexplorer`
+* :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)
+* Profiler: Measures the performance impact of every function in a script to idetify bottlenecks and aid optimization
+* :doc:`projects`: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously
+* :doc:`fileexplorer`: Integrated filesystem viewing supporting many common operations
 * :doc:`findinfiles`: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations
 * :doc:`onlinehelp`: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own
-* :doc:`historylog`
-* :doc:`internalconsole`
+* :doc:`historylog`: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication
+* :doc:`internalconsole`: Provides access to viewing, exploring and controlling Spyder's own operation
 
 .. image:: images/mainwindow/mainwindow_matlab_1610.png
    :align: right
@@ -95,7 +95,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Options to use a variety of graphics back-ends and display preferences
   * Much more...
 
-* General:
+* General Features:
 
   * MATLAB-like ``PYTHONPATH`` management dialog
   * User environment variables viewer/editor (Windows-only)
