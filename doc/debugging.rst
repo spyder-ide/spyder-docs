@@ -36,7 +36,7 @@ Spyder offers the following debugging features integrated into the native GUI:
    :width: 50%
    :alt: Spyder's Breakpoints panel, with a number of examples showing file, line number and an optional condition
 
-* A breakpoints pane, listing the file, line, and condition (if any) of every breakpoint defined (Debug > List Breakpoints, or :kbd:`Ctrl-Shift-B` by default).
+* A breakpoints pane, listing the file, line, and condition (if any) of every breakpoint defined (:menuselection:`Debug --> List Breakpoints`, or :kbd:`Ctrl-Shift-B` by default).
 
 * Full GUI control over debugger execution from the Debug menu, Debug toolbar and via configurable keyboard shortcuts, along with the standard ``ipdb`` console commands.
 

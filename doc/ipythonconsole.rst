@@ -56,7 +56,7 @@ Spyder-created consoles support even more advanced capabilities, such as:
 * The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects
 * Full GUI integration with the enhanced IPython debugger, ``ipdb``, including viewing and setting normal and conditional breakpoints interactively in any file, a Breakpoints pane, and following along with execution flow in the in the :doc:`editor` (see the :doc:`debugging` documentation for more details)
 * The :ref:`User Module Reloader <umr-section>`, which can automatically re-import modified packages and files
-* Inline display of ``Matplotlib`` graphics, if the ``Inline`` backend is selected under ``Preferences > IPython console > Graphics > Graphics backend``
+* Inline display of ``Matplotlib`` graphics, if the ``Inline`` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`
 
 For information on the features, commands and capabilities built in to the IPython console itself, see the `IPython documentation`_.
 
@@ -79,7 +79,7 @@ Fortunately, in Spyder, there's an easy solution: the User Module Reloader (UMR)
 When UMR is turned on, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
 
-UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under ``Preferences > Python interpreter > User Module Reloader (UMR)``.
+UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
 
 
 Related components
