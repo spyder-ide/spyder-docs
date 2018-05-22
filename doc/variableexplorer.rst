@@ -48,7 +48,7 @@ Several examples of this functionality follow:
 
 .. |contextmenu| image:: images/variable_explorer/variable_explorer_inset_contextmenu_array.png
    :width: 45%
-   :alt: Variable Explorer with a contextmenu, including plot/histogram options
+   :alt: Variable Explorer with a context menu, including plot/histogram options
 
 .. |histogram| image:: images/variable_explorer/variable_explorer_histogram.png
    :width: 50%
@@ -58,7 +58,7 @@ Several examples of this functionality follow:
 
 .. image:: images/variable_explorer/variable_explorer_contextmenu_array.png
    :align: center
-   :alt: Contextmenu for an int array, with the Show image option selected
+   :alt: Context menu for an int array, with the Show image option selected
 
 .. image:: images/plot_window/plot_window_show_image.png
    :align: center
@@ -78,7 +78,7 @@ Types with specialized editing support include:
 * Floats
 * Complex numbers
 * Strings
-* ``datetime`` dates and timedeltas
+* ``datetime`` dates and ``Timedelta`` s
 * Lists
 * Tuples
 * Dictionaries

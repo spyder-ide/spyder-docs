@@ -23,14 +23,14 @@ Spyder, the Scientific Python Development Environment, includes the following ke
     * Automatically clear variables or enter debugging
 
   * :guilabel:`Outline Explorer`: Navigate cells, functions, classes, blocks, and more
-  * Code introspection (powered by ``rope`` and ``jedi``):
+  * Real-time code introspection features (powered by ``rope`` and ``jedi``):
 
-    * On-demand (TAB) and "dot" automatic code completion
+    * On-demand (:kbd:`Tab`) and "dot" automatic code completion
     * Automatic popup calltips showing function signatures
     * Go-to-definition for any symbol: Functions, classes, attributes, etc. (:kbd:`Ctrl`-Click or :kbd:`Ctrl-G` by default)
 
   * Occurrence highlighting: Select or double-click any word to show all other instances throughout the current document
-  * Real-time automatic formatters (optional):
+  * On-the-fly automatic formatters (optional):
 
     * Automatic insertion of closing quotes parentheses, braces and brackets
     * Automatic indentation after 'else', 'elif', 'finally', etc.
@@ -53,7 +53,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Any number of individual consoles, each executed in a separate, isolated processes
   * Each console uses the full IPython kernel as a back-end with a light GUI front-end
   * Supports all of the powerful IPython magic commands and functionality
-  * Automatic code completion and calltips, and automatic link to doc:`help`
+  * Automatic code completion and calltips, and automatic link to :doc:`help`
   * Range of code run options and interactivity
   * :doc:`debugging` integration with enhanced ``ipdb`` debugger and the :doc:`editor`
   * Inline display of Matplotlib graphics (optional)
@@ -73,7 +73,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
 
 * :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)
-* :guilabel:`Profiler`: Measures the performance impact of every function in a script to idetify bottlenecks and aid optimization
+* :guilabel:`Profiler`: Measures the performance impact of every function in a script to identify bottlenecks and aid optimization
 * :doc:`projects`: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously
 * :doc:`fileexplorer`: Integrated filesystem viewing supporting many common operations
 * :doc:`findinfiles`: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations
@@ -90,7 +90,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 
   * Fully customizable keyboard shortcuts editor
   * Selection of a custom Python interpreter to use for consoles
-  * Choice of around a dozen built-in syntax coloring theme, or create your own
+  * Choice of 10 built-in syntax coloring theme, or create your own
   * Toggle automatic editor and console introspection, analysis and helper features
   * Options to use a variety of graphics back-ends and display preferences
   * Much more...

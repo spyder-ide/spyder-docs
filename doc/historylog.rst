@@ -11,7 +11,7 @@ With the **History Log** pane, you can view an automatically de-duplicated, time
 
 
 =====================
-Using the history log
+Using the History Log
 =====================
 
 Navigating the :guilabel:`History Log` is very straightforward.

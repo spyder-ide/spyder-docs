@@ -2,7 +2,7 @@
 Find in Files
 #############
 
-The **Find in Files** pane allows to you perform full-text, recursive content search in a user-defined scope, with advanced features to customize your searches.
+The **Find in Files** pane allows to you perform full-text, recursive content search in a user-defined scope, with advanced features to filter your results.
 
 .. image:: images/find_in_files/find_in_files_inprogress.png
    :alt: Spyder Find in Files panel, with search results shown per-file

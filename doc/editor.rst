@@ -51,9 +51,9 @@ You can separate your scripts may be divided into as many cells as needed, or no
 
 You can separate cells by lines starting with either:
 
-* `#%%` (standard cell separator)
-* `# %%` (standard cell separator, when file has been edited with Eclipse)
-* `# <codecell>` (IPython notebook cell separator)
+* ``#%%`` (standard cell separator)
+* ``# %%`` (standard cell separator, when file has been edited with Eclipse)
+* ``# <codecell>`` (IPython notebook cell separator)
 
 Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
 

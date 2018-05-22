@@ -78,7 +78,11 @@ Please refer to the `Requirements`_ to see what other packages you might need.
 Ubuntu
 ------
 
-Using the official package manager: ``sudo apt-get install spyder``.
+Using the official package manager:
+
+.. code-block:: bash
+
+   sudo apt-get install spyder
 
 .. note::
 
@@ -88,7 +92,11 @@ Using the official package manager: ``sudo apt-get install spyder``.
 Debian Unstable
 ---------------
 
-Using the package manager: ``sudo apt-get install spyder``
+Using the package manager:
+
+.. code-block:: bash
+
+   sudo apt-get install spyder
 
 Spyder's official Debian package is available on the `Debian package repository`_.
 
@@ -238,8 +246,9 @@ Installing a development build
 
 If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
-For more information, please see the CONTRIBUTING.md document included with the Spyder source or on Github, and for further detail consult the `Spyder development wiki`_ .
+For more information, please see the `CONTRIBUTING.md document`_ included with the Spyder source or on Github, and for further detail consult the `Spyder development wiki`_.
 
+.. _CONTRIBUTING.md document: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
 .. _Spyder development wiki: https://github.com/spyder-ide/spyder/wiki
 
 In summary:

@@ -2,7 +2,7 @@
 File Explorer
 #############
 
-The **File Explorer** pane is a built-in filesystem and directory browser allowing you to view and filter files and their properties, open them with the Editor or an external tool, and perform common management tasks (varies by platform).
+The **File Explorer** pane is a built-in filesystem and directory browser allowing you to view and filter files and their properties, open them with the :doc:`editor` or an external tool, and perform common management tasks (varies by platform).
 
 .. image:: images/file_explorer/file_explorer_standard.png
    :align: center

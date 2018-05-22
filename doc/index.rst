@@ -12,7 +12,7 @@ Spyder: The Scientific Python Development Environment
 
 Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
-Furthermore, Spyper offers built-in integration with many popular scientific packages, including `NumPy`_, `SciPy`_, `Pandas`_, `IPython`_, `QtConsole`_, `Matplotlib`_, `SymPy`_, and more.
+Furthermore, Spyder offers built-in integration with many popular scientific packages, including `NumPy`_, `SciPy`_, `Pandas`_, `IPython`_, `QtConsole`_, `Matplotlib`_, `SymPy`_, and more.
 
 .. _NumPy: https://www.numpy.org/
 .. _SciPy: https://www.scipy.org/
