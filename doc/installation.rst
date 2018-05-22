@@ -61,7 +61,7 @@ There are `several versions`_ available from which you can choose.
 .. attention::
 
    The MacPorts version of Spyder may currently be raising ``ValueError: unknown locale: UTF-8``, which doesn't let it start correctly.
-   To fix it you will have to set these environment variables in your ``~/.profile`` (or ``~/.bashrc``) manually::
+   To fix it you will have to set these environment variables in your :file:`~/.profile` (or :file:`~/.bashrc`) file manually::
 
         export LANG=en_US.UTF-8
         export LC_ALL=en_US.UTF-8
@@ -248,7 +248,7 @@ In summary:
 
        git clone https://github.com/spyder-ide/spyder.git
 
-#. Run Spyder with the ``bootstrap.py`` script from within the cloned directory::
+#. Run Spyder with the :file:`bootstrap.py` script from within the cloned :file:`spyder/` directory::
 
        python bootstrap.py
 
