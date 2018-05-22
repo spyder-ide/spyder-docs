@@ -10,6 +10,7 @@ You can use the **Internal Console** to control and debug Spyder itself, or as a
 |
 
 
+==================
 Supported features
 ==================
 

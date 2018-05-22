@@ -12,6 +12,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 |
 
 
+===================
 Debugging with ipdb
 ===================
 

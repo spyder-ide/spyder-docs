@@ -10,6 +10,7 @@ The **Find in Files** pane allows to you perform full-text, recursive content se
 |
 
 
+=======================
 Choosing search options
 =======================
 

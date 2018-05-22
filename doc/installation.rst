@@ -15,6 +15,7 @@ Thanks!
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
 
+======================================
 Installing with Anaconda (recommended)
 ======================================
 
@@ -27,6 +28,7 @@ This is the easiest way to install Spyder for any of our supported platforms, an
 If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
 
 
+===========================================
 Installing with an alternative distribution
 ===========================================
 
@@ -35,6 +37,7 @@ Installing with an alternative distribution
    While we offer alternative Spyder installation options for users who desire them, we currently lack the resources to offer individual assistance for problems specific to installing via these alternative distributions.
    Therefore, we recommend you switch to Anaconda if you encounter installation issues you are unable to solve on your own.
 
+
 Install on Windows
 ~~~~~~~~~~~~~~~~~~
 
@@ -42,6 +45,7 @@ Spyder is also included in the `WinPython`_ scientific Python distribution, alth
 You can use it immediately after installing, just like with Anaconda.
 
 .. _WinPython: https://winpython.github.io/
+
 
 Install on macOS
 ~~~~~~~~~~~~~~~~
@@ -62,10 +66,12 @@ There are `several versions`_ available from which you can choose.
         export LANG=en_US.UTF-8
         export LC_ALL=en_US.UTF-8
 
+
 Install on GNU/Linux
 ~~~~~~~~~~~~~~~~~~~~
 
 Please refer to the `Requirements`_ to see what other packages you might need.
+
 
 Ubuntu
 ------
@@ -76,6 +82,7 @@ Using the official package manager: ``sudo apt-get install spyder``.
 
    This package could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.
 
+
 Debian Unstable
 ---------------
 
@@ -84,6 +91,7 @@ Using the package manager: ``sudo apt-get install spyder``
 Spyder's official Debian package is available on the `Debian package repository`_.
 
 .. _Debian package repository: https://packages.debian.org/en/sid/spyder
+
 
 Other Distributions
 -------------------
@@ -105,6 +113,7 @@ Spyder is also available in other GNU/Linux distributions, like
 Please refer to your distribution's documentation to learn how to install Spyder.
 
 
+==================================
 Installing with pip (experts only)
 ==================================
 
@@ -112,6 +121,7 @@ Installing with pip (experts only)
 
    While this installation method is a viable option for experienced users, installing Spyder (and other SciPy stack packages) with ``pip`` can lead to a number of tricky issues.
    While you are welcome to try this on your own, we unfortunately do not have the resources to help you if you do run into problems, except to recommend you use Anaconda instead.
+
 
 Requirements
 ~~~~~~~~~~~~
@@ -154,6 +164,7 @@ The requirements to run Spyder are:
 
 * `Cloudpickle <https://github.com/cloudpipe/cloudpickle>`_ Serialize variables in the IPython kernel to send them to Spyder.
 
+
 Optional modules
 ~~~~~~~~~~~~~~~~
 
@@ -169,6 +180,7 @@ Optional modules
 
 * `Cython <http://cython.org/>`_ >=0.21 -- to run Cython files or Python files that depend on Cython libraries in the IPython console.
 
+
 Installation procedure
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -179,6 +191,7 @@ Before installing Spyder itself by this method, you need to acquire the `Python`
 
 Then, to install Spyder and its other dependencies, run ``pip install spyder``.
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
+
 
 Run without installing
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -194,6 +207,8 @@ You can execute Spyder from source without installing it first by the following 
 
 This is especially useful for beta-testing, troubleshooting and helping develop Spyder itself.
 
+
+===============
 Updating Spyder
 ===============
 
@@ -206,6 +221,7 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 .. _install-from-source:
 
+==============================
 Installing a development build
 ==============================
 
@@ -241,6 +257,7 @@ In summary:
 .. _Git: https://git-scm.com/downloads
 
 
+===============
 Additional help
 ===============
 

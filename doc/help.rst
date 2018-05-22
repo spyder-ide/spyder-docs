@@ -9,6 +9,7 @@ You can trigger help by manually entering the object's name into the help box, p
 Automatic help can be individually enabled for both the Editor and the Console under ``Preferences > Help > Automatic Connections``, and turned on and off dynamically via the "lock" icon in the top right corner of the Help pane.
 
 
+========================
 Understanding help modes
 ========================
 

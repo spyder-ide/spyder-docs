@@ -10,6 +10,8 @@ The **Online Help** pane provides a built-in web browser to explore dynamically 
 
 |
 
+
+=====================
 Using the Online Help
 =====================
 

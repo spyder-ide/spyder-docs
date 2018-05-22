@@ -11,6 +11,7 @@ The **File Explorer** pane is a built-in filesystem and directory browser allowi
 |
 
 
+==========================
 Performing file operations
 ==========================
 

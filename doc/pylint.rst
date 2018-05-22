@@ -13,6 +13,7 @@ Spyder's static analyzer is powered by the best in class `Pylint`_ backend, whic
 |
 
 
+=========================
 Using the static analyzer
 =========================
 

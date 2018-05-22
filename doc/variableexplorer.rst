@@ -11,6 +11,7 @@ The **Variable Explorer** shows the namespace contents (all global object refere
 |
 
 
+====================
 Features and editors
 ====================
 
@@ -66,6 +67,7 @@ Several examples of this functionality follow:
 |
 
 
+===============
 Supported types
 ===============
 

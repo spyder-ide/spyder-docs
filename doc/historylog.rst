@@ -10,6 +10,7 @@ With the **History Log** pane, you can view an automatically de-duplicated, time
 |
 
 
+=====================
 Using the history log
 =====================
 

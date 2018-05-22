@@ -35,6 +35,7 @@ Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 |
 
 
+===================
 Defining code cells
 ===================
 

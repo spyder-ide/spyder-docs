@@ -13,6 +13,7 @@ Each console is executed in a separate process, allowing you to run scripts, int
 |
 
 
+=======================
 Connecting to a console
 =======================
 
@@ -35,6 +36,7 @@ When "Connect to an existing kernel" is selected, Spyder prompts for the connect
 |
 
 
+==================
 Supported features
 ==================
 
@@ -63,6 +65,7 @@ For information on the features, commands and capabilities built in to the IPyth
 
 .. _umr-section:
 
+===================================
 Using UMR to reload changed modules
 ===================================
 

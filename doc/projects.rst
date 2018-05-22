@@ -17,6 +17,7 @@ Spyder allows users to associate a given directory with a **Project**, which off
    All of Spyder' functionality (session saving, File Explorer, working directory, etc) is available without creating a project, just on a global rather than project-specific basis.
 
 
+==================
 Creating a project
 ==================
 
@@ -37,6 +38,7 @@ To create a project, click the New Project entry in the Projects menu, choose wh
 
 .. _project-explorer:
 
+==========================
 Using the Project Explorer
 ==========================
 
@@ -58,6 +60,7 @@ This pane allows you to perform all the same operations as a normal Spyder :doc:
 
 .. _vcs-section:
 
+============================
 Working with version control
 ============================
 
