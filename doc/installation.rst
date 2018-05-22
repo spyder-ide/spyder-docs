@@ -61,10 +61,12 @@ There are `several versions`_ available from which you can choose.
 .. attention::
 
    The MacPorts version of Spyder may currently be raising ``ValueError: unknown locale: UTF-8``, which doesn't let it start correctly.
-   To fix it you will have to set these environment variables in your :file:`~/.profile` (or :file:`~/.bashrc`) file manually::
+   To fix it you will have to set these environment variables in your :file:`~/.profile` (or :file:`~/.bashrc`) file manually:
 
-        export LANG=en_US.UTF-8
-        export LC_ALL=en_US.UTF-8
+   .. code-block:: bash
+
+      export LANG=en_US.UTF-8
+      export LC_ALL=en_US.UTF-8
 
 
 Install on GNU/Linux
@@ -200,8 +202,17 @@ You can execute Spyder from source without installing it first by the following 
 
 #. Unzip the source package available for download on the `Spyder Github repository`_ (or :ref:`clone it from Github<install-from-source>`)
 #. Change current directory to the unzipped directory
-#. Install Spyder's requirements with ``pip install -r requirements/requirements.txt``
-#. Run Spyder with the command ``python bootstrap.py``
+#. Install Spyder's requirements with:
+
+   .. code-block:: bash
+
+      pip install -r requirements/requirements.txt
+
+#. Run Spyder with the command:
+
+   .. code-block:: bash
+
+      python bootstrap.py
 
 .. _Spyder Github repository: https://github.com/spyder-ide/spyder
 
@@ -235,22 +246,28 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda``::
+   The recommended and easiest way to do this is with ``conda``:
 
-       conda install spyder
-       conda remove spyder
+   .. code-block:: bash
+
+      conda install spyder
+      conda remove spyder
 
    This installs all of Spyder's dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.
 
 #. Install `Git`_, a powerful source control management tool.
 
-#. Clone the Spyder source code repository with the command::
+#. Clone the Spyder source code repository with the command:
 
-       git clone https://github.com/spyder-ide/spyder.git
+   .. code-block:: bash
 
-#. Run Spyder with the :file:`bootstrap.py` script from within the cloned :file:`spyder/` directory::
+      git clone https://github.com/spyder-ide/spyder.git
 
-       python bootstrap.py
+#. Run Spyder with the :file:`bootstrap.py` script from within the cloned :file:`spyder/` directory:
+
+   .. code-block:: bash
+
+      python bootstrap.py
 
 #. To keep your repository up-to-date, run ``git pull`` inside the cloned directory.
 
