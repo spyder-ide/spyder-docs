@@ -17,11 +17,11 @@ Spyder's static analyzer is powered by the best in class `Pylint`_ backend, whic
 Using the static analyzer
 =========================
 
-You can run Spyder's Static Code Analysis directly from the :doc:`editor`, or you can manually enter the Python module or package path you'd like it to check.
+You can run Spyder's :guilabel:`Static Code Analysis` directly from the :doc:`editor`, or you can manually enter the Python module or package path you'd like it to check.
 The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Python packages (directories containing an :file:`__init__.py` file).
 To go directly to the file and line in the :doc:`editor` highlighted by a failed check, just click its name.
-Start and cancel analyzing a file with the Analyze and Stop buttons respectively, and if analysis fails, click the Output button to find out why.
-You click the dropdown or press the down arrow in the filename field to view results of previous analyses; the number of recent runs Spyder should remember can be customized in the History dialog from the Static Code Analysis context menu.
+Start and cancel analyzing a file with the :guilabel:`Analyze` and :guilabel:`Stop` buttons respectively, and if analysis fails, click the :guilabel:`Output` button to find out why.
+You click the dropdown or press the down arrow in the filename field to view results of previous analyses; the number of recent runs Spyder should remember can be customized in the :guilabel:`History` dialog from the :guilabel:`Static Code Analysis` context menu.
 All standard checks are run by default.
 You can turn certain messages off at the line, block or file/module level by adding a ``# pylinet: disable=insert, message-names, here`` comment at the respective level, or by editing the :file:`.pylintrc` configuration file in your user home directory (for more details on configuring Pylint, see the `Pylint documentation`_).
 

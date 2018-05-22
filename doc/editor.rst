@@ -11,7 +11,7 @@ The Editor's key features include syntax highlighting (``pygments``); real-time 
 
 |
 
-Function/class/method browser, and horizontal/vertical splitting capabilities:
+:guilabel:`Outline Explorer` (function/class/method browser) and horizontal/vertical splitting capabilities:
 
 |outline| |split|
 
@@ -55,7 +55,7 @@ You can separate cells by lines starting with either:
 * `# %%` (standard cell separator, when file has been edited with Eclipse)
 * `# <codecell>` (IPython notebook cell separator)
 
-Providing a description to the right of the separator will give that cell its own name in the previously shown Outline viewer.
+Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
 
 
 Related components

@@ -15,7 +15,7 @@ The **Variable Explorer** shows the namespace contents (all global object refere
 Features and editors
 ====================
 
-Spyder's Variable Explorer offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, and more, and can also histogram, plot, or even display some of them as an RGB image.
+Spyder's :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, and more, and can also histogram, plot, or even display some of them as an RGB image.
 Several examples of this functionality follow:
 
 |
@@ -71,7 +71,7 @@ Several examples of this functionality follow:
 Supported types
 ===============
 
-The Variable Explorer has specialized editors for a range of common built-in and third-party Python objects, and can view, edit, and deeply introspect most arbitrary objects via a more general object editor.
+The Variable Explorer has specialized editors for a range of common built-in and third-party Python objects, and can view, edit, and deeply introspect most arbitrary objects via a more general :guilabel:`Object explorer`.
 Types with specialized editing support include:
 
 * Integers

@@ -22,7 +22,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
     * Run in Current/dedicated/external console choice
     * Automatically clear variables or enter debugging
 
-  * Outline Explorer: Navigate cells, functions, classes, blocks, and more
+  * :guilabel:`Outline Explorer`: Navigate cells, functions, classes, blocks, and more
   * Code introspection (powered by ``rope`` and ``jedi``):
 
     * On-demand (TAB) and "dot" automatic code completion
@@ -57,7 +57,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Range of code run options and interactivity
   * :doc:`debugging` integration with enhanced ``ipdb`` debugger and the :doc:`editor`
   * Inline display of Matplotlib graphics (optional)
-  * The User Module Reloader, automatically re-importing modified source files
+  * The :guilabel:`User Module Reloader`, automatically re-importing modified source files
 
 * :doc:`variableexplorer`:
 
@@ -73,7 +73,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
 
 * :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)
-* Profiler: Measures the performance impact of every function in a script to idetify bottlenecks and aid optimization
+* :guilabel:`Profiler`: Measures the performance impact of every function in a script to idetify bottlenecks and aid optimization
 * :doc:`projects`: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously
 * :doc:`fileexplorer`: Integrated filesystem viewing supporting many common operations
 * :doc:`findinfiles`: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations
