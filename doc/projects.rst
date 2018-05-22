@@ -64,13 +64,13 @@ Working with version control
 Spyder has basic integration with the `Git`_ distributed version control system.
 You can commit or browse (in the ``gitk`` GUI) a file, directory or the entire repository via the commands in the context menu for the relevant object (right-click).
 
-.. _Git: http://git-scm.com/
+.. _Git: https://git-scm.com/
 
 To use this functionality, the project must be located in a ``git`` repository and the ``git`` and ``gitk`` commands must be on the system path.
 For Windows systems, the `Git for Windows`_ package provides a convenient installer and the option to place common git commands on the system path without creating conflicts with Windows system tools.
 The second option in the dialog below is generally a safe approach.
 
-.. _Git for Windows: https://git-for-windows.github.io/
+.. _Git for Windows: https://gitforwindows.org/
 
 .. image:: images/other/git_for_windows_install_path.png
    :align: center

@@ -20,7 +20,7 @@ Furthermore, Spyper offers built-in integration with many popular scientific pac
 .. _IPython: https://ipython.org/
 .. _QtConsole: https://qtconsole.readthedocs.io/en/stable/
 .. _Matplotlib: https://matplotlib.org/
-.. _SymPy: http://www.sympy.org/en/index.html
+.. _SymPy: https://www.sympy.org/en/index.html
 
 Beyond its many built-in features, Spyder's abilities can be extended even further via its plugin system and API.
 Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.

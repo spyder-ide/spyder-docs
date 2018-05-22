@@ -48,11 +48,11 @@ Install on macOS
 
 Thanks to the `MacPorts project`_, Spyder can be installed using its ``port`` package manager; however, the included Spyder version may be out of date or have MacPorts-specific issues outside of Spyder's control.
 
-.. _MacPorts project: http://www.macports.org/
+.. _MacPorts project: https://www.macports.org/
 
 There are `several versions`_ available from which you can choose.
 
-.. _several versions: http://www.macports.org/ports.php?by=name&substr=spyder
+.. _several versions: https://www.macports.org/ports.php?by=name&substr=spyder
 
 .. attention::
 
@@ -98,9 +98,9 @@ Spyder is also available in other GNU/Linux distributions, like
 
 .. _Arch Linux: https://aur.archlinux.org/packages/?K=spyder
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
-.. _Gentoo: http://packages.gentoo.org/package/dev-python/spyder
+.. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
 .. _openSUSE: https://software.opensuse.org/package/spyder3
-.. _Mageia: http://mageia.madb.org/package/show/name/spyder
+.. _Mageia: https://madb.mageia.org/package/show/name/spyder
 
 Please refer to your distribution's documentation to learn how to install Spyder.
 
@@ -118,37 +118,37 @@ Requirements
 
 The requirements to run Spyder are:
 
-* `Python <http://www.python.org/>`_ 2.7 or >=3.3
+* `Python <https://www.python.org/>`_ 2.7 or >=3.3
 
 * `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download5>`_ >=5.5
 
-* `Qtconsole <http://jupyter.org/qtconsole/stable/>`_ >=4.2.0 -- for an enhanced Python interpreter.
+* `Qtconsole <https://github.com/jupyter/qtconsole>`_ >=4.2.0 -- for an enhanced Python interpreter.
 
-* `Rope <http://rope.sourceforge.net/>`_ >=0.9.4 and `Jedi <http://jedi.jedidjah.ch/en/latest/>`_ >=0.9.0 -- for code completion, go-to-definition and calltips on the Editor.
+* `Rope <https://github.com/python-rope/rope>`_ >=0.9.4 and `Jedi <https://github.com/davidhalter/jedi>`_ >=0.9.0 -- for code completion, go-to-definition and calltips in the Editor.
 
-* `Pyflakes <http://pypi.python.org/pypi/pyflakes>`_  -- for real-time code analysis.
+* `Pyflakes <https://github.com/PyCQA/pyflakes>`_  -- for real-time code analysis.
 
-* `Sphinx <http://sphinx.pocoo.org>`_ -- for the Help pane rich text mode and to get our documentation.
+* `Sphinx <http://www.sphinx-doc.org/en/master/>`_ -- for the Help pane rich text mode and to get our documentation.
 
 * `Pygments <http://pygments.org/>`_ >=2.0 -- for syntax highlighting and code completion in the Editor of all file types it supports.
 
-* `Pylint <http://www.logilab.org/project/pylint>`_  -- for static code analysis.
+* `Pylint <https://www.pylint.org/>`_  -- for static code analysis.
 
-* `Pycodestyle <https://pypi.python.org/pypi/pycodestyle>`_ -- for style analysis.
+* `Pycodestyle <https://github.com/PyCQA/pycodestyle>`_ -- for style analysis.
 
-* `Psutil <http://code.google.com/p/psutil/>`_  -- for memory/CPU usage in the status bar.
+* `Psutil <https://github.com/giampaolo/psutil>`_  -- for memory/CPU usage in the status bar.
 
-* `Nbconvert <http://nbconvert.readthedocs.org/>`_ -- to manipulate Jupyter notebooks on the Editor.
+* `Nbconvert <https://github.com/jupyter/nbconvert>`_ -- to manipulate Jupyter notebooks on the Editor.
 
 * `Qtawesome <https://github.com/spyder-ide/qtawesome>`_ >=0.4.1 -- for an icon theme based on FontAwesome.
 
-* `Pickleshare <https://github.com/pickleshare/pickleshare>`_ -- To show import completions on the Editor and Consoles.
+* `Pickleshare <https://github.com/pickleshare/pickleshare>`_ -- To show import completions in the Editor and Consoles.
 
-* `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- To run introspection services on the Editor asynchronously.
+* `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- To run introspection services in the Editor asynchronously.
 
 * `QtPy <https://github.com/spyder-ide/qtpy>`_ >=1.2.0 -- To run Spyder with different Qt bindings seamlessly.
 
-* `Chardet <https://github.com/chardet/chardet>`_ >=2.0.0-- Character encoding auto-detection in Python.
+* `Chardet <https://github.com/chardet/chardet>`_ >=2.0.0-- Character encoding auto-detection in the Editor.
 
 * `Numpydoc <https://github.com/numpy/numpydoc>`_ Used by Jedi to get return types for functions with Numpydoc docstrings.
 
@@ -159,15 +159,15 @@ Optional modules
 
 * `Matplotlib <https://matplotlib.org/>`_ >=1.0 -- for 2D and 3D plotting in the consoles.
 
-* `Pandas <http://pandas.pydata.org/>`_ >=0.13.1 -- for view and editing Series and DataFrames in the Variable Explorer.
+* `Pandas <https://pandas.pydata.org/>`_ >=0.13.1 -- for viewing and editing Series and DataFrames in the Variable Explorer.
 
-* `Numpy <http://numpy.scipy.org/>`_ -- for view and editing two or three dimensional arrays in the Variable Explorer.
+* `Numpy <https://www.numpy.org/>`_ -- for viewing and editing two or three dimensional arrays in the Variable Explorer.
 
-* `Sympy <http://www.sympy.org/es/>`_ >=0.7.3 -- for working with symbolic mathematics in the IPython console.
+* `Sympy <https://www.sympy.org/en/index.html>`_ >=0.7.3 -- for working with symbolic mathematics in the IPython console.
 
-* `Scipy <http://www.scipy.org/>`_ -- for importing Matlab workspace files in the Variable Explorer.
+* `Scipy <https://www.scipy.org/>`_ -- for importing Matlab workspace files in the Variable Explorer.
 
-* `Cython <http://cython.org/>`_ >=0.21 -- Run Cython files or Python files that depend on Cython libraries in the IPython console.
+* `Cython <http://cython.org/>`_ >=0.21 -- to run Cython files or Python files that depend on Cython libraries in the IPython console.
 
 Installation procedure
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -175,7 +175,7 @@ Installation procedure
 You can install Spyder with the ``pip`` package manager, which comes by default with most Python installations.
 Before installing Spyder itself by this method, you need to acquire the `Python`_ programming language.
 
-.. _Python: http://www.python.org/
+.. _Python: https://www.python.org/
 
 Then, to install Spyder and its other dependencies, run ``pip install spyder``.
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
@@ -226,7 +226,7 @@ In summary:
 
    This installs all of Spyder's dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.
 
-#. Install `Git`_ <http://git-scm.com/downloads>`_, a powerful source control management tool.
+#. Install `Git`_, a powerful source control management tool.
 
 #. Clone the Spyder source code repository with the command::
 
@@ -238,7 +238,7 @@ In summary:
 
 #. To keep your repository up-to-date, run ``git pull`` inside the cloned directory.
 
-.. _Git: http://git-scm.com/downloads
+.. _Git: https://git-scm.com/downloads
 
 
 Additional help
@@ -255,5 +255,5 @@ Additional help
 .. _main website: https://www.spyder-ide.org/
 .. _Github repository: https://github.com/spyder-ide/spyder/
 .. _Github wiki: https://github.com/spyder-ide/spyder/wiki
-.. _Google Group: http://groups.google.com/group/spyderlib
+.. _Google Group: https://groups.google.com/group/spyderlib
 .. _Gitter chatroom: https://gitter.im/spyder-ide/public
