@@ -27,7 +27,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 
     * On-demand (TAB) and "dot" automatic code completion
     * Automatic popup calltips showing function signatures
-    * Go-to-definition for any symbol: Functions, classes, attributes, etc. (Ctrl-Click or ``Ctrl-G`` by default)
+    * Go-to-definition for any symbol: Functions, classes, attributes, etc. (:kbd:`Ctrl`-Click or :kbd:`Ctrl-G` by default)
 
   * Occurrence highlighting: Select or double-click any word to show all other instances throughout the current document
   * Real-time automatic formatters (optional):
@@ -69,7 +69,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 * :doc:`help`:
 
   * Provides documentation or source code for any Python object (class, function, module...)
-  * Can be triggered manually, on demand (``Ctrl-I`` by default) or automatically on typing a left parenthesis after a function name (optional)
+  * Can be triggered manually, on demand (:kbd:`Ctrl-I` by default) or automatically on typing a left parenthesis after a function name (optional)
   * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
 
 * :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)

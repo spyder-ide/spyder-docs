@@ -5,7 +5,7 @@ Help
 You can use the **Help** pane to find, render and display rich documentation for any object with a docstring, including modules, classes, functions and methods.
 Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
 
-You can trigger help by manually entering the object's name into the help box, pressing the configurable help shortcut (Ctrl-I by default), or even automatically if desired when on typing a left parenthesis (``(``) after a function or method name.
+You can trigger help by manually entering the object's name into the help box, pressing the configurable help shortcut (:kbd:`Ctrl-I` by default), or even automatically if desired when on typing a left parenthesis (``(``) after a function or method name.
 Automatic help can be individually enabled for both the Editor and the Console under ``Preferences > Help > Automatic Connections``, and turned on and off dynamically via the "lock" icon in the top right corner of the Help pane.
 
 

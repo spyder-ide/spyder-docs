@@ -17,7 +17,7 @@ Each console is executed in a separate process, allowing you to run scripts, int
 Connecting to a console
 =======================
 
-Spyder can launch new IPython instances itself, through "Open an IPython console" under the Consoles menu, the IPython Console pane menu or its context menu (``Ctrl-T`` by default), to take advantage of the full suite of Spyder's features.
+Spyder can launch new IPython instances itself, through "Open an IPython console" under the Consoles menu, the IPython Console pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
 Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
 Additionally, you can connect to external kernels managed by QtConsole sessions or the Jupyter Notebook, through the "Connect to an existing kernel" dialog under the same menus, which support many of Spdyer's advanced capabilities.
 
