@@ -28,8 +28,8 @@ Spyder offers the following debugging features integrated into the native GUI:
   * By selecting the respective option from the Debug menu.
   * Through pressing a configurable keyboard shortcut (:kbd:`F12` for normal, or :kbd:`Shift-F12` for conditional breakpoints by default).
   * By double-clicking to the left of the line number in an open file.
-  * With an ``ipdb.set_trace()`` statement in your code.
-  * Interactively, using the ``b`` magic command in an ``ipdb`` session.
+  * With an ``ipdb.set_trace()`` statement in your code (after ``import`` ing ``pdb``).
+  * Interactively, using the ``b`` command in an ``ipdb`` session.
 
 .. image:: images/debugging/breakpoints_standard.png
    :align: right
