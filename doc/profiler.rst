@@ -5,6 +5,11 @@ Profiler
 The **Profiler** module recursively determines the run time and number of calls for every function and method called in a script, whether directly or indirectly, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.
 
+.. image:: images/profiler/profiler_standard.png
+   :alt: Spyder Profiler pane, displaying a list of functions and their execution time
+
+|
+
 
 ==================
 Using the Profiler
@@ -24,6 +29,11 @@ For example, suppose you ran the :guilabel:`Profiler` on a script calling a func
 Therefore, if ``print()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 2 ms.
 Meanwhile, :guilabel:`Total Time` for ``print_wrapper()`` would be 3 ms, but :guilabel:`Local Time` only 1 ms as the rest of that time was spend inside the ``print()`` function it called.
 Finally, the :guilabel:`Calls` column displays the total number of times the specified object was called at that level inside its parent calling function (or within the ``__main__`` scope, if a top-level object).
+
+.. image:: images/profiler/profiler_comparison.png
+   :alt: Profiler with a comparison loaded, displaying the time deltas between two runs
+
+|
 
 To open and go directly to the file and line in the :doc:`editor` where an item is the profiler was called, just double-click it.
 Increase the number of hierarchical levels displayed for a particular object by clicking the dropdown arrows to the left of the name, or increase/decrease the depth shown for all levels with the buttons in the top left, to the left of the timestamp.
