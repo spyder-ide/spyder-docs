@@ -15,12 +15,14 @@ The Editor's key features include syntax highlighting (``pygments``); real-time 
 
 |outline| |split|
 
-.. |outline| image:: images/editor/outline_standard.png
+.. |outline|
+   image:: images/editor/outline_standard.png
    :width: 209px
    :alt: Spyder outline panel, showing the functions/classes/methods in a file
 
 
-.. |split| image:: images/editor/editor_split_vertical.png
+.. |split|
+   image:: images/editor/editor_split_vertical.png
    :width: 422px
    :alt: A Spyder editor window, split vertically into two independent panes
 
@@ -29,7 +31,6 @@ The Editor's key features include syntax highlighting (``pygments``); real-time 
 Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 
 .. image:: images/editor/editor_inset_code_analysis.png
-   :align: center
    :alt: A snippit of code in the Spyder Editor, showing code style warnings
 
 |

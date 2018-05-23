@@ -19,7 +19,7 @@ Using the static analyzer
 
 You can select the desired file to analyze directly in the :doc:`editor` by clicking anywhere within it, or you can manually enter the Python module or package path you'd like it to check in the path entry textbox in the :guilabel:`Static Code Analysis` pane.
 The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Python packages (directories containing an :file:`__init__.py` file).
-Then, to run it, select :menuselection:`Source --> Run static code analysis` from the menubar, click the :guilabel:`Analyze` button in the pane, or press the configurable static analysis shortcut (:kbd:`F8` by default).
+Then, to run it, select :menuselection:`Sour&ce --> Run static code analysis` from the menubar, click the :guilabel:`Analyze` button in the pane, or press the configurable static analysis shortcut (:kbd:`F8` by default).
 Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why.
 
 To go directly to the file and line in the :doc:`editor` highlighted by a failed check, just click its name.

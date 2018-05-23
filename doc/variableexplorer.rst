@@ -44,13 +44,15 @@ Several examples of this functionality follow:
 
 |
 
-|contextmenu| |histogram|
+|varexpcontextmenu| |histogram|
 
-.. |contextmenu| image:: images/variable_explorer/variable_explorer_inset_contextmenu_array.png
+.. |varexpcontextmenu|
+   image:: images/variable_explorer/variable_explorer_inset_contextmenu_array.png
    :width: 45%
    :alt: Variable Explorer with a context menu, including plot/histogram options
 
-.. |histogram| image:: images/variable_explorer/variable_explorer_histogram.png
+.. |histogram|
+   image:: images/variable_explorer/variable_explorer_histogram.png
    :width: 50%
    :alt: Plot window showing a histogram, generated via the previous options
 

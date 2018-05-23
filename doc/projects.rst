@@ -25,11 +25,13 @@ To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the 
 
 |projectsmenu| |newprojectdialog|
 
-.. |projectsmenu| image:: images/menu/menu_projects.png
+.. |projectsmenu|
+   image:: images/menu/menu_projects.png
    :width: 37%
    :alt: Closeup of Spyder's Projects menu, containing project-related commands
 
-.. |newprojectdialog| image:: images/dialog/dialog_new_project.png
+.. |newprojectdialog|
+   image:: images/dialog/dialog_new_project.png
    :width: 62%
    :alt: New project dialog, with options to set the name, type and location
 
@@ -45,13 +47,15 @@ Using the Project Explorer
 Once a :guilabel:`Project` is opened, the :guilabel:`Project Explorer` pane is shown, presenting a tree view of the current :guilabel:`Project` 's files and directories.
 This pane allows you to perform all the same operations as a normal Spyder :doc:`fileexplorer`.
 
-|projectexplorer| |contextmenu|
+|projectexplorer| |projectcontextmenu|
 
-.. |projectexplorer| image:: images/projects/project_explorer_standard.png
-   :width: 30%
+.. |projectexplorer|
+   image:: images/projects/project_explorer_standard.png
+   :width: 40%
    :alt: Spyder Project Explorer, displaying a directory tree of project files
 
-.. |contextmenu| image:: images/projects/project_explorer_inset_contextmenu.png
+.. |projectcontextmenu|
+   image:: images/projects/project_explorer_inset_contextmenu.png
    :width: 50%
    :alt: Inset of the context-menu for a directory in project explorer
 
