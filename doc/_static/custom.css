@@ -48,13 +48,8 @@ ol.arabic {
 }
 
 div.footer {
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
     padding-left: 200px;
-}
-
-div.footer#bottomlinks {
-    margin-top: 20px;
-    margin-bottom: 0px;
 }
