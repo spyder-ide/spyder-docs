@@ -93,7 +93,7 @@ Using the package manager: ``sudo apt-get install spyder``
 
 The Spyder's official Debian package is available `here`__
 
-__ http://packages.debian.org/fr/sid/spyder.
+__ https://packages.debian.org/unstable/spyder 
 
 
 **Other Distributions**
