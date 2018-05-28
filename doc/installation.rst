@@ -96,11 +96,11 @@ Using the package manager:
 
 .. code-block:: bash
 
-   sudo apt-get install spyder
+   sudo apt-get install spyder3
 
 Spyder's official Debian package is available on the `Debian package repository`_.
 
-.. _Debian package repository: https://packages.debian.org/en/sid/spyder
+.. _Debian package repository: https://packages.debian.org/unstable/spyder3
 
 
 Other Distributions
