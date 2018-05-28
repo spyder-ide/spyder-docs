@@ -4,12 +4,20 @@ cite::before {
 
 cite {
     display: inline;
-    font-size: 15.4px;
+    font-size: 16px;
     color: black;
 }
 
 #doc-content{
-    font-size: 15.4px;
+    font-size: 16px;
+}
+
+div .sphinxsidebar ul li.toctree-l1 > a {
+    font-size: 16px;
+}
+
+div .sphinxsidebar ul li.toctree-l2 > a {
+    font-size: 14.5px;
 }
 
 .logo{
@@ -22,7 +30,7 @@ div .sphinxsidebarwrapper {
 
 div .sphinxsidebarwrapper h3{
     padding: 0px;
-    font-size: 200%;
+    font-size: 28.8px;
 }
 
 kbd {
