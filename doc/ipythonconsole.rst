@@ -1,14 +1,9 @@
+###############
 IPython Console
-===============
+###############
 
-The **IPython Console** is where you may enter, interact with and visualize
-data inside a command interpreter. All the commands entered in the console are
-executed in a separate process, thus allowing the user to interrupt any
-process at any time. Each console implements a full two-process
-`IPython <http://ipython.org/>`_ session where
-a lightweight front-end interface connects to a full IPython kernel on the
-back end. Visit the IPython project website for full documentation of
-IPython's many features.
+The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython <https://ipython.org/>`_ interpreters.
+Each console is executed in a separate process, allowing you to run scripts, interrupt execution and restart or terminate a shell without affecting the others or Spyder itself, and easily test your code in a clean environment without disrupting your primary session.
 
 .. image:: images/console/console_standard.png
    :align: center
@@ -17,79 +12,82 @@ IPython's many features.
 
 |
 
-From the Consoles menu, Spyder can launch **IPython Console**
-instances that attach to kernels that are managed
-by Spyder itself or it can connect to external kernels that are managed
-by IPython Qt Console sessions or the IPython Notebook.
+
+=======================
+Connecting to a console
+=======================
+
+Spyder can launch new ``IPython`` instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
+Each console implements a robust two-process ``IPython`` session, with a lightweight front-end interface connected to a full kernel back end.
+Additionally, you can connect to external kernels managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus, which support many of Spyder's advanced capabilities.
 
 .. image:: images/console/console_menu.png
    :align: center
-   :alt: Spyder IPython Console as above, except with the options menu open
-
+   :alt: Spyder IPython Console as above, with the options menu open
 
 |
 
-When "Connect to an existing kernel" is selected, Spyder prompts for the
-kernel connection file details:
+When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection details:
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
-   :alt: Connect to kernel dialog requesting path and connection details
+   :alt: Connect to kernel dialog, requesting path and connection details
 
 |
 
-**IPython Consoles** that are attached to kernels that were created by
-Spyder support the following features:
+
+==================
+Supported features
+==================
+
+Any :guilabel:`IPython Console` in Spyder, internally or externally created, supports additional features including:
 
 .. image:: images/console/console_completion.png
    :align: right
    :width: 50%
    :alt: Spyder IPython Console, with a popup list of code completion guesses
 
-* Code completion and calltips
-* Variable explorer with GUI-based editors for arrays, lists,
-  dictionaries, strings, etc.
-* Debugging with standard Python debugger (`pdb`): at each breakpoint
-  the corresponding script is opened in the :doc:`editor` at the breakpoint
-  line number
-* User Module Reloader (see below)
+* Automatic code completion
+* Real-time function calltips
+* Debugging toolbar integration for launching the debugger and controlling execution flow
 
-**IPython Consoles** attached to external kernels support a smaller feature
-set:
+Spyder-created consoles support even more advanced capabilities, such as:
 
-* Code completion
-* Debugging toolbar integration for launching the debugger and sending
-  debugging step commands to the kernel. Breakpoints must be set manually
-  from the console command line.
+* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects
+* Full GUI integration with the enhanced ``IPython`` debugger, ``ipdb``, including viewing and setting normal and conditional breakpoints interactively in any file, a :guilabel:`Breakpoints` pane, and following along with execution flow in the in the :doc:`editor` (see the :doc:`debugging` documentation for more details)
+* The :ref:`User Module Reloader <umr-section>`, which can automatically re-import modified packages and files
+* Inline display of ``Matplotlib`` graphics, if the ``Inline`` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`
 
+For information on the features, commands and capabilities built into ``IPython`` itself, see the `IPython documentation`_.
 
-Reloading modules: the User Module Reloader (UMR)
--------------------------------------------------
-
-When working with Python scripts interactively, one must keep in mind that
-Python import a module from its source code (on disk) only when parsing the
-first corresponding import statement. During this first import, the byte code
-is generated (.pyc file) if necessary and the imported module code object is
-cached in `sys.modules`. Then, when re-importing the same module, this cached
-code object will be directly used even if the source code file (.py[w] file)
-has changed meanwhile.
-
-This behavior is sometimes unexpected when working with the Python interpreter
-in interactive mode, because one must either always restart the interpreter
-or remove manually the .pyc files to be sure that changes made in imported
-modules were taken into account.
-
-The User Module Reloader (UMR) is a Spyder console's exclusive feature that
-forces the Python interpreter to reload modules completely when executing
-a Python script.
-
-For example, when UMR is turned on, one may test complex applications
-within the same Python interpreter without having to restart it every time
-(restart time may be relatively long when testing GUI-based applications).
+.. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
 
 
-Related plugins:
+.. _umr-section:
 
-* :doc:`help`
+===================================
+Using UMR to reload changed modules
+===================================
+
+When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is ``import``ed.
+During this first ``import``, the bytecode (``.pyc`` file) is generated if necessary and the imported module object is cached in ``sys.modules``.
+If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (``.py{w}`` file) has changed in the meantime.
+While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
+In effect, you're left with no way to update or modify any already-imported modules, aside from manually removing the relevant ``.pyc`` files, or restarting the console entirely.
+
+Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing ``IPython`` shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
+Even better, Spyder also loads the ``%autoreload`` magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
+With UMR enabled, you can test complex applications within the same ``IPython`` interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
+Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
+
+UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
+
+
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`debugging`
 * :doc:`editor`
-* :doc:`fileexplorer`
+* :doc:`help`
+* :doc:`historylog`
+* :doc:`variableexplorer`

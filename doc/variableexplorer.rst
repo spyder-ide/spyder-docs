@@ -1,8 +1,8 @@
+#################
 Variable Explorer
-=================
+#################
 
-The variable explorer shows the namespace contents (i.e. all global object
-references) of the current console
+The **Variable Explorer** shows the namespace contents (all global object references, such as variables, functions, modules, etc.) of the currently selected :doc:`ipythonconsole` session, and allows you to interact with them through a variety of GUI-based editors.
 
 .. image:: images/variable_explorer/variable_explorer_standard.png
    :align: center
@@ -10,9 +10,13 @@ references) of the current console
 
 |
 
-The following screenshots show some interesting features such as editing
-lists, strings, dictionaries, NumPy arrays, or plotting/showing NumPy arrays
-data.
+
+====================
+Features and editors
+====================
+
+Spyder's :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, and more, and can also histogram, plot, or even display some of them as an RGB image.
+Several examples of this functionality follow:
 
 |
 
@@ -40,13 +44,15 @@ data.
 
 |
 
-|contextmenu| |histogram|
+|varexpcontextmenu| |histogram|
 
-.. |contextmenu| image:: images/variable_explorer/variable_explorer_inset_contextmenu_array.png
+.. |varexpcontextmenu|
+   image:: images/variable_explorer/variable_explorer_inset_contextmenu_array.png
    :width: 45%
-   :alt: Variable Explorer with a contextmenu, including plot/histogram options
+   :alt: Variable Explorer with a context menu, including plot/histogram options
 
-.. |histogram| image:: images/variable_explorer/variable_explorer_histogram.png
+.. |histogram|
+   image:: images/variable_explorer/variable_explorer_histogram.png
    :width: 50%
    :alt: Plot window showing a histogram, generated via the previous options
 
@@ -54,7 +60,7 @@ data.
 
 .. image:: images/variable_explorer/variable_explorer_contextmenu_array.png
    :align: center
-   :alt: Contextmenu for an int array, with the Show image option selected
+   :alt: Context menu for an int array, with the Show image option selected
 
 .. image:: images/plot_window/plot_window_show_image.png
    :align: center
@@ -63,25 +69,30 @@ data.
 |
 
 
+===============
 Supported types
----------------
+===============
 
-The variable explorer can't show all types of objects. The ones currently
-supported are:
+The Variable Explorer has specialized editors for a range of common built-in and third-party Python objects, and can view, edit, and deeply introspect most arbitrary objects via a more general :guilabel:`Object explorer`.
+Types with specialized editing support include:
 
-#. `Pandas` DataFrame, TimeSeries and Index objects
-#. `NumPy` arrays and matrices
-#. `PIL/Pillow` images
-#. `datetime` dates
-#. Integers
-#. Floats
-#. Complex numbers
-#. Lists
-#. Sets
-#. Dictionaries
-#. Tuples
-#. Strings
+* Integers
+* Floats
+* Complex numbers
+* Strings
+* ``datetime`` dates and ``Timedelta`` s
+* Lists
+* Tuples
+* Sets
+* Dictionaries
+* NumPy arrays and matrices
+* Pandas ``DataFrame``, ``TimeSeries`` and ``Index`` (any type) objects
+* ``PIL``/``Pillow`` images
+* Namespaces
 
-Related plugins:
 
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`debugging`
 * :doc:`ipythonconsole`
