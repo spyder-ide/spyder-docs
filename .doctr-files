@@ -1,9 +1,11 @@
+./_images/breakpoints_standard.png
 ./_images/console_completion.png
 ./_images/console_dialog_connect.png
 ./_images/console_menu.png
 ./_images/console_standard.png
 ./_images/debugging_condbreakpoint.png
 ./_images/debugging_console.png
+./_images/dialog_new_project.png
 ./_images/dialog_user_env_variables_edit.png
 ./_images/editor_inset_code_analysis.png
 ./_images/editor_split_horizontal.png
@@ -17,11 +19,13 @@
 ./_images/help_source_code.png
 ./_images/help_standard.png
 ./_images/history_log_menu.png
+./_images/internal_console_contextmenu_settings.png
 ./_images/internal_console_standard.png
 ./_images/mainwindow_custom_1610.png
 ./_images/mainwindow_dark_1610.png
 ./_images/mainwindow_default_1610.png
 ./_images/mainwindow_matlab_1610.png
+./_images/menu_debug.png
 ./_images/menu_projects.png
 ./_images/online_help_standard.png
 ./_images/outline_standard.png

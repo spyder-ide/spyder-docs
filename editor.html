@@ -9,7 +9,7 @@
     <title>Editor &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="IPython Console" href="ipythonconsole.html" />
-    <link rel="prev" title="Command line options" href="options.html" />
+    <link rel="prev" title="Command Line Options" href="options.html" />
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
 <!-- Icomoon Icon Fonts-->
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/icomoon.css">
@@ -78,44 +78,48 @@
             
   <div class="section" id="editor">
 <h1>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h1>
-<p>Spyder’s text editor is a multi-language editor with features such as syntax
-coloring, code analysis (real-time code analysis powered by <cite>pyflakes</cite> and
-advanced code analysis using <cite>pylint</cite>), introspection capabilities such as
-code completion, calltips and go-to-definition features (powered by <cite>rope</cite>),
-function/class browser, horizontal/vertical splitting features, etc.</p>
+<p>Spyder’s multi-language <strong>Editor</strong> integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
+The Editor’s key features include syntax highlighting (<code class="docutils literal notranslate"><span class="pre">pygments</span></code>); real-time code and style analysis (<code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>); on-demand completion, calltips and go-to-definition features (<code class="docutils literal notranslate"><span class="pre">rope</span></code> and <code class="docutils literal notranslate"><span class="pre">jedi</span></code>); a function/class browser, horizontal and vertical splitting, and much more.</p>
 <img alt="Spyder's Editor panel, split horizontally and with style analysis" class="align-center" src="_images/editor_split_horizontal.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Function/class/method browser and horizontal/vertical splitting feature:</p>
+<p><span class="guilabel">Outline Explorer</span> (function/class/method browser) and horizontal/vertical splitting capabilities:</p>
 <p><a class="reference internal" href="_images/outline_standard.png"><img alt="Spyder outline panel, showing the functions/classes/methods in a file" src="_images/outline_standard.png" style="width: 209px;" /></a> <a class="reference internal" href="_images/editor_split_vertical.png"><img alt="A Spyder editor window, split vertically into two independent panes" src="_images/editor_split_vertical.png" style="width: 422px;" /></a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Code analysis with <cite>pyflakes</cite>:</p>
-<img alt="A snippit of code in the Spyder Editor, showing code style warnings" class="align-center" src="_images/editor_inset_code_analysis.png" />
-<div class="section" id="how-to-define-a-code-cell">
-<h2>How to define a code cell<a class="headerlink" href="#how-to-define-a-code-cell" title="Permalink to this headline">¶</a></h2>
-<p>A “code cell” is a concept similar to MATLAB’s “cell” (except that there is
-no “cell mode” in Spyder), i.e. a block of lines to be executed at once in the
-current interpreter (Python or IPython). Every script may be divided in as
-many cells as needed.</p>
+<p>Real-time code and style analysis with <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>:</p>
+<img alt="A snippit of code in the Spyder Editor, showing code style warnings" src="_images/editor_inset_code_analysis.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="defining-code-cells">
+<h2>Defining code cells<a class="headerlink" href="#defining-code-cells" title="Permalink to this headline">¶</a></h2>
+<p>A “code cell” in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current doc:<cite>ipythonconsole</cite>.
+This is much like a “cell” in MATLAB (except without any need to enable a “cell mode”, since in Spyder, cells are detected automatically).
+You can divide your scripts into as many cells as needed, or none at all—the choice is yours.</p>
 <img alt="Spyder's Editor panel, showing an example of a code cell" class="align-center" src="_images/editor_standard.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Cells are separated by lines starting with:</p>
+<p>You can separate cells by lines starting with either:</p>
 <ul class="simple">
-<li><cite>#%%</cite> (standard cell separator)</li>
-<li><cite># %%</cite> (standard cell separator, when file has been edited with Eclipse)</li>
-<li><cite># &lt;codecell&gt;</cite> (IPython notebook cell separator)</li>
+<li><code class="docutils literal notranslate"><span class="pre">#%%</span></code> (standard cell separator)</li>
+<li><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (standard cell separator, when file has been edited with Eclipse)</li>
+<li><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;codecell&gt;</span></code> (IPython notebook cell separator)</li>
 </ul>
-<p>Related plugins:</p>
+<p>Providing a description to the right of the separator will give that cell its own name in the <span class="guilabel">Outline Explorer</span>.</p>
+<div class="section" id="related-components">
+<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></li>
 <li><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a></li>
-<li><a class="reference internal" href="findinfiles.html"><span class="doc">Find in files</span></a></li>
+<li><a class="reference internal" href="findinfiles.html"><span class="doc">Find in Files</span></a></li>
+<li><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></li>
+<li><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a></li>
+<li><a class="reference internal" href="pylint.html"><span class="doc">Static Code Analysis</span></a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -138,21 +142,21 @@ many cells as needed.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command Line Options</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Editor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-define-a-code-cell">How to define a code cell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-code-cells">Defining code cells</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">IPython Console</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static Code Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static code analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">File Explorer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="historylog.html">History log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">History Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internalconsole.html">Internal Console</a></li>
 </ul>
 
@@ -181,7 +185,7 @@ many cells as needed.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="options.html" title="previous chapter">Command line options</a></li>
+      <li>Previous: <a href="options.html" title="previous chapter">Command Line Options</a></li>
       <li>Next: <a href="ipythonconsole.html" title="next chapter">IPython Console</a></li>
   </ul></li>
 </ul>
@@ -211,7 +215,7 @@ many cells as needed.</p>
       &copy;2009–2018 The Spyder Doc Contributors.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

@@ -9,7 +9,7 @@
     <title>Overview &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Installation" href="installation.html" />
-    <link rel="prev" title="Spyder - Documentation" href="index.html" />
+    <link rel="prev" title="Spyder: The Scientific Python Development Environment" href="index.html" />
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
 <!-- Icomoon Icon Fonts-->
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/icomoon.css">
@@ -82,88 +82,98 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Spyder is a Python development environment with the following key features:</p>
-<p>Key features:</p>
+<p>Spyder, the Scientific Python Development Environment, includes the following key features:</p>
 <ul class="simple">
-<li>general features:<ul>
-<li>MATLAB-like PYTHONPATH management dialog box (works with all consoles)</li>
-<li>Windows only: current user environment variables editor</li>
-<li>direct links to documentation (Python, Matplotlib, !NumPy, !Scipy, etc.)</li>
-<li>direct link to Python(x,y) launcher</li>
-<li>direct links to !QtDesigner, !QtLinguist and !QtAssistant (Qt documentation)</li>
+<li><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>:<ul>
+<li>Customizable syntax highlighting themes</li>
+<li><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> breakpoints and conditional breakpoints (through <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> integration)</li>
+<li>Interactive execution: Run line/selection, run cell, run file, re-run and debug</li>
+<li>Run configuration settings:<ul>
+<li>Working directory selection</li>
+<li>Command line options</li>
+<li>Run in Current/dedicated/external console choice</li>
+<li>Automatically clear variables or enter debugging</li>
 </ul>
 </li>
-<li><em>preferences</em> dialog box:<ul>
-<li>keyboard shortcuts</li>
-<li>syntax coloring schemes (source editor, history log, help)</li>
-<li>console: background color (black/white), automatic code completion, etc.</li>
-<li>and a lot more…</li>
+<li><span class="guilabel">Outline Explorer</span>: Navigate cells, functions, classes, blocks, and more</li>
+<li>Real-time code introspection features (powered by <code class="docutils literal notranslate"><span class="pre">rope</span></code> and <code class="docutils literal notranslate"><span class="pre">jedi</span></code>):<ul>
+<li>On-demand (<kbd class="kbd docutils literal notranslate">Tab</kbd>) and “dot” automatic code completion</li>
+<li>Automatic popup calltips showing function signatures</li>
+<li>Go-to-definition for any symbol: Functions, classes, attributes, etc. (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-Click or <kbd class="kbd docutils literal notranslate">Ctrl-G</kbd> by default)</li>
+</ul>
+</li>
+<li>Occurrence highlighting: Select or double-click any word to show all other instances throughout the current document</li>
+<li>On-the-fly automatic formatters (optional):<ul>
+<li>Automatic insertion of closing quotes parentheses, braces and brackets</li>
+<li>Automatic indentation after ‘else’, ‘elif’, ‘finally’, etc.</li>
+<li>Smart auto-indentation based on code structure</li>
+<li>Automatic insertion of colons after for, if, def, etc.</li>
+<li>Automatically fix mixed indentation, EOL characters and trailing spaces</li>
+</ul>
+</li>
+<li>Real-time code analysis:
+* Errors/warnings/problems (powered by <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code>)
+* PEP 8 and code style (powered by <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>)
+* Code annotation parsing and “Todo lists” (<code class="docutils literal notranslate"><span class="pre">TODO</span></code>, <code class="docutils literal notranslate"><span class="pre">FIXME</span></code>, <code class="docutils literal notranslate"><span class="pre">XXX</span></code>, etc.)</li>
 </ul>
 </li>
 </ul>
 <a class="reference internal image-reference" href="_images/mainwindow_dark_1610.png"><img alt="The Spyder main window, with a dark syntax highlighting theme applied" class="align-right" src="_images/mainwindow_dark_1610.png" style="width: 60%;" /></a>
 <ul class="simple">
-<li><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>:<ul>
-<li>syntax coloring (Python, C/C++, Fortran)</li>
-<li><em>breakpoints</em> and <em>conditional breakpoints</em> (debugger: <cite>pdb</cite>)</li>
-<li>run or debug Python scripts (see console features)</li>
-<li><em>run configuration</em> dialog box:<ul>
-<li>working directory</li>
-<li>command line options</li>
-<li>run in a new Python interpreter or in an existing Python interpreter or IPython client</li>
-<li>Python interpreter command line options</li>
+<li><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>:<ul>
+<li>Any number of individual consoles, each executed in a separate, isolated processes</li>
+<li>Each console uses the full IPython kernel as a backend with a light GUI frontend</li>
+<li>Supports all of the powerful IPython magic commands and functionality</li>
+<li>Automatic code completion and calltips, and automatic link to <a class="reference internal" href="help.html"><span class="doc">Help</span></a></li>
+<li>Range of code run options and interactivity</li>
+<li><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> integration with enhanced <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> debugger and the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></li>
+<li>Inline display of Matplotlib graphics (optional)</li>
+<li>The <span class="guilabel">User Module Reloader</span>, automatically re-importing modified source files</li>
 </ul>
 </li>
-<li><em>code outline explorer</em>: functions, classes, if/else/try/… statements</li>
-<li><em>powerful code introspection features</em> (powered by <cite>rope</cite>):<ul>
-<li><em>code completion</em></li>
-<li><em>calltips</em></li>
-<li><em>go-to-definition</em>: go to object (any symbol: function, class, attribute, etc.) definition by pressing Ctrl+Left mouse click on word or Ctrl+G (default shortcut)</li>
+<li><a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a>:<ul>
+<li>Can list all global variables, functions, classes, and other objects, or filter them by several criteria</li>
+<li>GUI-based editors for numerous data types (numeric, strings, collections, NumPy arrays, Pandas DataFrames, dates/times, images, and more)</li>
+<li>Import/export data or an entire session from/to many formats (text, csv, NumPy files, MATLAB files)</li>
+<li>Interactive data visualization options (plot, histogram, image…) using Matplotlib</li>
 </ul>
 </li>
-<li><em>occurrence highlighting</em></li>
-<li>typing helpers (optional):<ul>
-<li>automatically insert closing parentheses, braces and brackets</li>
-<li>automatically unindent after ‘else’, ‘elif’, ‘finally’, etc.</li>
+<li><a class="reference internal" href="help.html"><span class="doc">Help</span></a>:<ul>
+<li>Provides documentation or source code for any Python object (class, function, module…)</li>
+<li>Can be triggered manually, on demand (<kbd class="kbd docutils literal notranslate">Ctrl-I</kbd> by default) or automatically on typing a left parenthesis after a function name (optional)</li>
+<li>Real-time rendering and rich HTML display of the popular <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> docstring format (powered by <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>)</li>
 </ul>
 </li>
-<li><em>to-do</em> lists (TODO, FIXME, XXX)</li>
-<li>errors/warnings (real-time <em>code analysis</em> provided by <cite>pyflakes</cite>)</li>
-<li>integrated static code analysis (using <cite>pylint</cite>)</li>
-<li>direct link to <cite>winpdb</cite> external debugger</li>
-</ul>
-</li>
+<li><a class="reference internal" href="pylint.html"><span class="doc">Static Code Analysis</span></a>: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by <code class="docutils literal notranslate"><span class="pre">pylint</span></code>)</li>
+<li><span class="guilabel">Profiler</span>: Measures the performance impact of every function in a script to identify bottlenecks and aid optimization</li>
+<li><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a>: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously</li>
+<li><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a>: Integrated filesystem viewing supporting many common operations</li>
+<li><a class="reference internal" href="findinfiles.html"><span class="doc">Find in Files</span></a>: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations</li>
+<li><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a>: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own</li>
+<li><a class="reference internal" href="historylog.html"><span class="doc">History Log</span></a>: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication</li>
+<li><a class="reference internal" href="internalconsole.html"><span class="doc">Internal Console</span></a>: Provides access to viewing, exploring and controlling Spyder’s own operation</li>
 </ul>
 <a class="reference internal image-reference" href="_images/mainwindow_matlab_1610.png"><img alt="The Spyder main window, with a panel layout mirroring that of MATLAB" class="align-right" src="_images/mainwindow_matlab_1610.png" style="width: 60%;" /></a>
 <ul class="simple">
-<li><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>:<ul>
-<li><em>all consoles are executed in a separate process</em></li>
-<li><em>code completion</em>/calltips and automatic link to help (see below)</li>
-<li>open Python interpreters or basic terminal command windows</li>
-<li>run Python scripts (see source editor features)</li>
-<li><em>variable explorer</em>:<ul>
-<li><em>GUI-based editors</em> for a lot of data types (numbers, strings, lists, arrays, dictionaries, …)</li>
-<li><em>import/export data</em> from/to a lot of file types (text files, !NumPy files, MATLAB files)</li>
-<li>multiple array/list/dict editor instances at once, thus allowing to compare variable contents</li>
-<li>data visualization</li>
+<li>Preferences:<ul>
+<li>Fully customizable keyboard shortcuts editor</li>
+<li>Selection of a custom Python interpreter to use for consoles</li>
+<li>Choice of 10 built-in syntax coloring theme, or create your own</li>
+<li>Toggle automatic editor and console introspection, analysis and helper features</li>
+<li>Options to use a variety of graphics backends and display preferences</li>
+<li>Much more…</li>
+</ul>
+</li>
+<li>General Features:<ul>
+<li>MATLAB-like <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> management dialog</li>
+<li>User environment variables viewer/editor (Windows-only)</li>
+<li>Handy links to useful resources and documentation (Python, Matplotlib, NumPy, Scipy, Qt, IPython, etc.)</li>
+<li>Interactive tour, tutorial and shortcut cheat sheet for new users</li>
 </ul>
 </li>
 </ul>
-</li>
-<li><a class="reference internal" href="historylog.html"><span class="doc">History log</span></a></li>
-<li><a class="reference internal" href="help.html"><span class="doc">Help</span></a>:<ul>
-<li>provide documentation or source code on any Python object (class, function, module, …)</li>
-<li>documentation may be displayed as an html page thanks to the rich text mode (powered by <cite>sphinx</cite>)</li>
-</ul>
-</li>
-<li><a class="reference internal" href="onlinehelp.html"><span class="doc">Online help</span></a>: automatically generated html documentation on installed Python modules</li>
-<li><a class="reference internal" href="findinfiles.html"><span class="doc">Find in files</span></a>: find string occurrences in a directory, a git repository or directly in PYTHONPATH (support for regular expressions and included/excluded string lists)</li>
-<li><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a></li>
-<li><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a></li>
-</ul>
-<p>Spyder may also be used as a PyQt5 or PyQt4 extension library
-(module ‘spyder’). For example, the Python interactive shell widget
-used in Spyder may be embedded in your own PyQt5 or PyQt4 application.</p>
+<p>Beyond its many built-in features, Spyder’s abilities can be extended even further via its plugin system and API.
+Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.</p>
 </div>
 
 
@@ -185,18 +195,18 @@ used in Spyder may be embedded in your own PyQt5 or PyQt4 application.</p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command Line Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editor.html">Editor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">IPython Console</a></li>
-<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static Code Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static code analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">File Explorer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="historylog.html">History log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">History Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internalconsole.html">Internal Console</a></li>
 </ul>
 
@@ -225,7 +235,7 @@ used in Spyder may be embedded in your own PyQt5 or PyQt4 application.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Spyder - Documentation</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">Spyder: The Scientific Python Development Environment</a></li>
       <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
   </ul></li>
 </ul>
@@ -255,7 +265,7 @@ used in Spyder may be embedded in your own PyQt5 or PyQt4 application.</p>
       &copy;2009–2018 The Spyder Doc Contributors.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
