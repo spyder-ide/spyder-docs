@@ -1,18 +1,20 @@
+#############
 File Explorer
-=============
+#############
 
-The file explorer pane is a file/directory browser allowing the user to open
-files with the internal editor or with the appropriate application (Windows
-only).
+The **File Explorer** pane is a built-in filesystem and directory browser allowing you to view and filter files and their properties, open them with the :doc:`editor` or an external tool, and perform common management tasks (varies by platform).
 
 .. image:: images/file_explorer/file_explorer_standard.png
-   :align: center
    :alt: Spyder File Explorer panel, showing a tree view of files and metadata
 
 |
 
-Context menus may be used to run a script, open a terminal window or run a
-Windows explorer window (Windows only):
+
+==========================
+Performing file operations
+==========================
+
+You can use context menus to access a number of functions on a per-file and per-directory basis, including running scripts, creating, renaming, moving, editing or deleting files, performing basic operations with ``git``, and (on Windows) opening an external file explorer.
 
 .. image:: images/file_explorer/file_explorer_contextmenu_new.png
    :align: center
@@ -20,7 +22,10 @@ Windows explorer window (Windows only):
 
 |
 
-Related plugins:
 
-* :doc:`ipythonconsole`
+Related components
+~~~~~~~~~~~~~~~~~~
+
 * :doc:`editor`
+* :doc:`findinfiles`
+* :doc:`projects`
