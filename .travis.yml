@@ -20,6 +20,7 @@ script:
   - "set -e"
   - "cd doc"
   - "make html"
+  - "make linkcheck"
   - "cd .."
   - "doctr deploy . --built-docs doc/_build/html --branch-whitelist 3.x"
 
