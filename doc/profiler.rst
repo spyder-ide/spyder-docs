@@ -2,7 +2,7 @@
 Profiler
 ########
 
-The **Profiler** module recursively determines the run time and number of calls for every function and method called in a script, whether directly or indirectly, breaking down each procedure into its smallest individual units.
+The **Profiler** pane recursively determines the run time and number of calls for every function and method called in a script, whether directly or indirectly, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.
 
 .. image:: images/profiler/profiler_standard.png
