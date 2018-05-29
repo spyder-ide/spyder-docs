@@ -12,7 +12,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 
 * :doc:`editor`:
 
-  * Customizable syntax highlighting themes (Python, C/C++, Fortran)
+  * Customizable syntax highlighting themes
   * :doc:`debugging` breakpoints and conditional breakpoints (through ``ipdb`` integration)
   * Interactive execution: Run line/selection, run cell, run file, re-run and debug
   * Run configuration settings:
@@ -36,7 +36,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
     * Automatic indentation after 'else', 'elif', 'finally', etc.
     * Smart auto-indentation based on code structure
     * Automatic insertion of colons after for, if, def, etc.
-    * Automatically fix mixed indentation, EoL characters and trailing spaces
+    * Automatically fix mixed indentation, EOL characters and trailing spaces
 
   * Real-time code analysis:
     * Errors/warnings/problems (powered by ``pyflakes``)
@@ -51,7 +51,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 * :doc:`ipythonconsole`:
 
   * Any number of individual consoles, each executed in a separate, isolated processes
-  * Each console uses the full IPython kernel as a back-end with a light GUI front-end
+  * Each console uses the full IPython kernel as a backend with a light GUI frontend
   * Supports all of the powerful IPython magic commands and functionality
   * Automatic code completion and calltips, and automatic link to :doc:`help`
   * Range of code run options and interactivity
@@ -61,7 +61,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 
 * :doc:`variableexplorer`:
 
-  * Lists all global variables, functions, classes, and their content
+  * Can list all global variables, functions, classes, and other objects, or filter them by several criteria
   * GUI-based editors for numerous data types (numeric, strings, collections, NumPy arrays, Pandas DataFrames, dates/times, images, and more)
   * Import/export data or an entire session from/to many formats (text, csv, NumPy files, MATLAB files)
   * Interactive data visualization options (plot, histogram, image...) using Matplotlib
@@ -70,7 +70,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 
   * Provides documentation or source code for any Python object (class, function, module...)
   * Can be triggered manually, on demand (:kbd:`Ctrl-I` by default) or automatically on typing a left parenthesis after a function name (optional)
-  * Real-time rendering and rich HTML display of many common docstring formats (powered by ``Sphinx``)
+  * Real-time rendering and rich HTML display of the popular ``numpydoc`` docstring format (powered by ``Sphinx``)
 
 * :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)
 * :guilabel:`Profiler`: Measures the performance impact of every function in a script to identify bottlenecks and aid optimization
@@ -92,7 +92,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Selection of a custom Python interpreter to use for consoles
   * Choice of 10 built-in syntax coloring theme, or create your own
   * Toggle automatic editor and console introspection, analysis and helper features
-  * Options to use a variety of graphics back-ends and display preferences
+  * Options to use a variety of graphics backends and display preferences
   * Much more...
 
 * General Features:
