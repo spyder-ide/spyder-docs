@@ -2,7 +2,7 @@
 Command Line Options
 ####################
 
-Spyder's command line options including the following:
+Spyder's command line options include the following:
 
 Options:
   -h, --help            Show this help message and exit
@@ -18,3 +18,5 @@ Options:
   --profile             Profile mode (internal test, not related to Python profiling)
   --window-title=WINDOW_TITLE
                         String to show in the window title, to identify the Spyder instance
+  -p OPEN_PROJECT, --project=OPEN_PROJECT
+                        Path that contains an Spyder project to open on startup
