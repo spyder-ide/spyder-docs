@@ -71,12 +71,13 @@ Using UMR to reload changed modules
 
 When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is ``import``ed.
 During this first ``import``, the bytecode (``.pyc`` file) is generated if necessary and the imported module object is cached in ``sys.modules``.
-If you subsequently re-import the module anytime in the same session, this cached code object will be used even if its source code (``.py{w}`` file) has changed in the meantime.
+If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (``.py{w}`` file) has changed in the meantime.
 While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
 In effect, you're left with no way to update or modify any already-imported modules, aside from manually removing the relevant ``.pyc`` files, or restarting the console entirely.
 
-Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing ``IPython`` shell whenever they are modified, without any of the downsides of the above workarounds.
-When UMR is turned on, you can test complex applications within the same ``IPython`` interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
+Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing ``IPython`` shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
+Even better, Spyder also loads the ``%autoreload`` magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
+With UMR enabled, you can test complex applications within the same ``IPython`` interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
 
 UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
