@@ -7,6 +7,10 @@
 *.py text
 *.txt text
 *.md text
+*.html text
+*.css text
+*.js text
+*.yml text
 
 # Declare files that will always have CRLF line endings on checkout.
 *.bat text eol=crlf
@@ -17,3 +21,4 @@
 *.png binary
 *.ico binary
 *.svg binary
+*.enc binary
