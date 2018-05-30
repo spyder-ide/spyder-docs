@@ -19,7 +19,9 @@ install:
 script:
   - "set -e"
   - "cd doc"
+  - "touch *.rst"
   - "make html"
+  - "make linkcheck"
   - "cd .."
   - "doctr deploy . --built-docs doc/_build/html --branch-whitelist 3.x"
 
