@@ -22,3 +22,7 @@
 *.ico binary
 *.svg binary
 *.enc binary
+
+# Since the project itself *is* documentation, have linguist not ignore it
+doc/* linguist-documentation=false
+*.rst linguist-detectable=true
