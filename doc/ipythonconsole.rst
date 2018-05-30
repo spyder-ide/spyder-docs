@@ -2,8 +2,10 @@
 IPython Console
 ###############
 
-The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython <https://ipython.org/>`_ interpreters.
+The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython`_ interpreters.
 Each console is executed in a separate process, allowing you to run scripts, interrupt execution and restart or terminate a shell without affecting the others or Spyder itself, and easily test your code in a clean environment without disrupting your primary session.
+
+.. _IPython: https://ipython.org/
 
 .. image:: images/console/console_standard.png
    :align: center
