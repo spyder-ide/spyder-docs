@@ -27,13 +27,17 @@ Additionally, you can connect to external kernels managed by QtConsole sessions 
 
 |
 
-When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection details:
+When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection information. If connecting to a remote kernel over ``ssh``, make sure to check the appropriate box and enter the required credentials in the listed fields.
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
    :alt: Connect to kernel dialog, requesting path and connection details
 
 |
+
+For more technical details about connecting to remote ``IPython`` kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
+
+.. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
 
 
 ==================
