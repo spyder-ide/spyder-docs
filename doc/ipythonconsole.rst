@@ -30,9 +30,20 @@ External kernels still support :ref:`many <console-features>` (though not all) o
 
 |
 
-To connect to an external kernel, first launch it as you normally would on the local or remote host, e.g. with ``ipython kernel``, and make sure to copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on.
-When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection file.
-If connecting to a remote kernel over ``ssh``, make sure to check the appropriate box and enter the ``ssh`` credentials to the remote host running the kernel in the listed fields.
+
+Connect to an external kernel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   If on Windows and connecting to a remote machine over ``ssh``, you'll need to install the ``paramiko`` python package first, *e.g.* with ``conda install paramiko`` if using Anaconda.
+
+To connect to an external kernel,
+
+#. Launch an IPython kernel on the local or remote host if one is not already running, e.g. with ``ipython kernel``.
+#. Make sure to copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
+#. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
+#. Browse for or enter the path to the connection file from the previous step.
+   If connecting to a remote kernel over ``ssh``, check the appropriate box and enter the ``ssh`` credentials to the remote host running the kernel in the listed fields.
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
