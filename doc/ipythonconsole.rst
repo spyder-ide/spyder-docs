@@ -21,7 +21,8 @@ Connecting to a console
 
 Spyder can launch new ``IPython`` instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
 Each console implements a robust two-process ``IPython`` session, with a lightweight front-end interface connected to a full kernel back end.
-Additionally, you can connect to external kernels managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus, which support many of Spyder's advanced capabilities.
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus
+External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
 .. image:: images/console/console_menu.png
    :align: center
@@ -29,7 +30,9 @@ Additionally, you can connect to external kernels managed by QtConsole sessions 
 
 |
 
-When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection information. If connecting to a remote kernel over ``ssh``, make sure to check the appropriate box and enter the required credentials in the listed fields.
+To connect to an external kernel, first launch it as you normally would on the local or remote host, e.g. with ``ipython kernel``, and make sure to copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on.
+When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection file.
+If connecting to a remote kernel over ``ssh``, make sure to check the appropriate box and enter the ``ssh`` credentials to the remote host running the kernel in the listed fields.
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
@@ -38,9 +41,12 @@ When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for t
 |
 
 For more technical details about connecting to remote ``IPython`` kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
+Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
 
 .. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
 
+
+.. _console-features:
 
 ==================
 Supported features
