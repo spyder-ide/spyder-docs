@@ -14,6 +14,9 @@
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
 
 
+![Screenshot of documentation index page](./doc/_static/index_screenshot.png)
+
+
 ## Overview
 
 This repository contains the source for the documentation
