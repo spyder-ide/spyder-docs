@@ -2,8 +2,10 @@
 IPython Console
 ###############
 
-The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython <https://ipython.org/>`_ interpreters.
+The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython`_ interpreters.
 Each console is executed in a separate process, allowing you to run scripts, interrupt execution and restart or terminate a shell without affecting the others or Spyder itself, and easily test your code in a clean environment without disrupting your primary session.
+
+.. _IPython: https://ipython.org/
 
 .. image:: images/console/console_standard.png
    :align: center
@@ -17,9 +19,10 @@ Each console is executed in a separate process, allowing you to run scripts, int
 Connecting to a console
 =======================
 
-Spyder can launch new ``IPython`` instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
-Each console implements a robust two-process ``IPython`` session, with a lightweight front-end interface connected to a full kernel back end.
-Additionally, you can connect to external kernels managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus, which support many of Spyder's advanced capabilities.
+Spyder can launch new IPython instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
+Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus
+External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
 .. image:: images/console/console_menu.png
    :align: center
@@ -27,7 +30,20 @@ Additionally, you can connect to external kernels managed by QtConsole sessions 
 
 |
 
-When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for the connection details:
+
+Connect to an external kernel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   If on Windows and connecting to a remote machine over ``ssh``, you'll need to install the ``paramiko`` python package first, *e.g.* with ``conda install paramiko`` if using Anaconda.
+
+To connect to an external kernel,
+
+#. Launch an IPython kernel on the local or remote host if one is not already running, e.g. with ``ipython kernel``.
+#. Make sure to copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
+#. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
+#. Browse for or enter the path to the connection file from the previous step.
+   If connecting to a remote kernel over ``ssh``, check the appropriate box and enter the ``ssh`` credentials to the remote host running the kernel in the listed fields.
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
@@ -35,6 +51,13 @@ When :guilabel:`Connect to an existing kernel` is selected, Spyder prompts for t
 
 |
 
+For more technical details about connecting to remote IPython kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
+Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
+
+.. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
+
+
+.. _console-features:
 
 ==================
 Supported features
@@ -54,11 +77,11 @@ Any :guilabel:`IPython Console` in Spyder, internally or externally created, sup
 Spyder-created consoles support even more advanced capabilities, such as:
 
 * The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects
-* Full GUI integration with the enhanced ``IPython`` debugger, ``ipdb``, including viewing and setting normal and conditional breakpoints interactively in any file, a :guilabel:`Breakpoints` pane, and following along with execution flow in the in the :doc:`editor` (see the :doc:`debugging` documentation for more details)
+* Full GUI integration with the enhanced IPython debugger, ``ipdb``, including viewing and setting normal and conditional breakpoints interactively in any file, a :guilabel:`Breakpoints` pane, and following along with execution flow in the in the :doc:`editor` (see the :doc:`debugging` documentation for more details)
 * The :ref:`User Module Reloader <umr-section>`, which can automatically re-import modified packages and files
-* Inline display of ``Matplotlib`` graphics, if the ``Inline`` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`
+* Inline display of Matplotlib graphics, if the ``Inline`` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`
 
-For information on the features, commands and capabilities built into ``IPython`` itself, see the `IPython documentation`_.
+For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_.
 
 .. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
 
@@ -75,9 +98,9 @@ If you subsequently re-import the module anytime in the same session without Spy
 While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
 In effect, you're left with no way to update or modify any already-imported modules, aside from manually removing the relevant ``.pyc`` files, or restarting the console entirely.
 
-Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing ``IPython`` shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
+Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing IPython shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
 Even better, Spyder also loads the ``%autoreload`` magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
-With UMR enabled, you can test complex applications within the same ``IPython`` interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
+With UMR enabled, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
 
 UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
