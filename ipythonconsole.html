@@ -86,21 +86,38 @@ Each console is executed in a separate process, allowing you to run scripts, int
 </div>
 <div class="section" id="connecting-to-a-console">
 <h2>Connecting to a console<a class="headerlink" href="#connecting-to-a-console" title="Permalink to this headline">¶</a></h2>
-<p>Spyder can launch new <code class="docutils literal notranslate"><span class="pre">IPython</span></code> instances itself, through “Open an IPython console” under the <span class="guilabel">Consoles</span> menu, the <span class="guilabel">IPython Console</span> pane menu or its context menu (<kbd class="kbd docutils literal notranslate">Ctrl-T</kbd> by default), to take advantage of the full suite of Spyder’s features.
-Each console implements a robust two-process <code class="docutils literal notranslate"><span class="pre">IPython</span></code> session, with a lightweight front-end interface connected to a full kernel back end.
-Additionally, you can connect to external kernels managed by QtConsole sessions or the Jupyter Notebook, through the <span class="guilabel">Connect to an existing kernel</span> dialog under the same menus, which support many of Spyder’s advanced capabilities.</p>
+<p>Spyder can launch new IPython instances itself, through “Open an IPython console” under the <span class="guilabel">Consoles</span> menu, the <span class="guilabel">IPython Console</span> pane menu or its context menu (<kbd class="kbd docutils literal notranslate">Ctrl-T</kbd> by default), to take advantage of the full suite of Spyder’s features.
+Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the <span class="guilabel">Connect to an existing kernel</span> dialog under the same menus
+External kernels still support <a class="reference internal" href="#console-features"><span class="std std-ref">many</span></a> (though not all) of Spyder’s advanced capabilities.</p>
 <img alt="Spyder IPython Console as above, with the options menu open" class="align-center" src="_images/console_menu.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>When <span class="guilabel">Connect to an existing kernel</span> is selected, Spyder prompts for the connection details:</p>
+<div class="section" id="connect-to-an-external-kernel">
+<h3>Connect to an external kernel<a class="headerlink" href="#connect-to-an-external-kernel" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If on Windows and connecting to a remote machine over <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, you’ll need to install the <code class="docutils literal notranslate"><span class="pre">paramiko</span></code> python package first, <em>e.g.</em> with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">paramiko</span></code> if using Anaconda.</p>
+</div>
+<p>To connect to an external kernel,</p>
+<ol class="arabic simple">
+<li>Launch an IPython kernel on the local or remote host if one is not already running, e.g. with <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code>.</li>
+<li>Make sure to copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</li>
+<li>Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Console</span> menu or the <span class="guilabel">IPython Console</span> pane’s “Gear” menu.</li>
+<li>Browse for or enter the path to the connection file from the previous step.
+If connecting to a remote kernel over <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, check the appropriate box and enter the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> credentials to the remote host running the kernel in the listed fields.</li>
+</ol>
 <img alt="Connect to kernel dialog, requesting path and connection details" class="align-center" src="_images/console_dialog_connect.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<p>For more technical details about connecting to remote IPython kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.
+Just remember to enter the appropriate details into Spyder’s <span class="guilabel">Connect to an existing kernel</span> dialog instead of launching a new frontend on the client with <code class="docutils literal notranslate"><span class="pre">--existing</span></code>.</p>
+</div>
 </div>
 <div class="section" id="supported-features">
-<h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
+<span id="console-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
 <p>Any <span class="guilabel">IPython Console</span> in Spyder, internally or externally created, supports additional features including:</p>
 <a class="reference internal image-reference" href="_images/console_completion.png"><img alt="Spyder IPython Console, with a popup list of code completion guesses" class="align-right" src="_images/console_completion.png" style="width: 50%;" /></a>
 <ul class="simple">
@@ -111,11 +128,11 @@ Additionally, you can connect to external kernels managed by QtConsole sessions 
 <p>Spyder-created consoles support even more advanced capabilities, such as:</p>
 <ul class="simple">
 <li>The <a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a>, with GUI-based editors for many built-in and third-party Python objects</li>
-<li>Full GUI integration with the enhanced <code class="docutils literal notranslate"><span class="pre">IPython</span></code> debugger, <code class="docutils literal notranslate"><span class="pre">ipdb</span></code>, including viewing and setting normal and conditional breakpoints interactively in any file, a <span class="guilabel">Breakpoints</span> pane, and following along with execution flow in the in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> (see the <a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> documentation for more details)</li>
+<li>Full GUI integration with the enhanced IPython debugger, <code class="docutils literal notranslate"><span class="pre">ipdb</span></code>, including viewing and setting normal and conditional breakpoints interactively in any file, a <span class="guilabel">Breakpoints</span> pane, and following along with execution flow in the in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> (see the <a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> documentation for more details)</li>
 <li>The <a class="reference internal" href="#umr-section"><span class="std std-ref">User Module Reloader</span></a>, which can automatically re-import modified packages and files</li>
-<li>Inline display of <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> graphics, if the <code class="docutils literal notranslate"><span class="pre">Inline</span></code> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span></li>
+<li>Inline display of Matplotlib graphics, if the <code class="docutils literal notranslate"><span class="pre">Inline</span></code> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span></li>
 </ul>
-<p>For information on the features, commands and capabilities built into <code class="docutils literal notranslate"><span class="pre">IPython</span></code> itself, see the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
+<p>For information on the features, commands and capabilities built into IPython itself, see the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
 </div>
 <div class="section" id="using-umr-to-reload-changed-modules">
 <span id="umr-section"></span><h2>Using UMR to reload changed modules<a class="headerlink" href="#using-umr-to-reload-changed-modules" title="Permalink to this headline">¶</a></h2>
@@ -124,9 +141,9 @@ Additionally, you can connect to external kernels managed by QtConsole sessions 
 If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (<code class="docutils literal notranslate"><span class="pre">.py{w}</span></code> file) has changed in the meantime.
 While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
 In effect, you’re left with no way to update or modify any already-imported modules, aside from manually removing the relevant <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files, or restarting the console entirely.</p>
-<p>Fortunately, in Spyder, there’s an easy solution: the <span class="guilabel">User Module Reloader</span> (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing <code class="docutils literal notranslate"><span class="pre">IPython</span></code> shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
+<p>Fortunately, in Spyder, there’s an easy solution: the <span class="guilabel">User Module Reloader</span> (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing IPython shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
 Even better, Spyder also loads the <code class="docutils literal notranslate"><span class="pre">%autoreload</span></code> magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
-With UMR enabled, you can test complex applications within the same <code class="docutils literal notranslate"><span class="pre">IPython</span></code> interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
+With UMR enabled, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you’re analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.</p>
 <p>UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
 <div class="section" id="related-components">
