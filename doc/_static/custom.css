@@ -63,3 +63,7 @@ div.body h3 {
 div.body h4 {
     font-size: 110%;
 }
+
+#doc-content{
+    padding-bottom: 2em;
+}
