@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Spyder'
-copyright = "<p>&copy; 2009-2018 The Spyder Doc Contributors <br> Icons by <a href='http://www.freepik.com' target='_blank' title='Freepik'>Freepik</a> from <a href='https://www.flaticon.com/' target='_blank' title='Flaticon'>Flaticon.com</a> | <a href='https://freehtml5.co/icon-free-website-template-using-bootstrap/' target='_blank'>Template</a> designed by <a href='http://freehtml5.co/' target='_blank'>FreeHTML5.co</a> <br>Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a> | Lektor port by <a href='https://github.com/dalthviz/' target='_blank'>Dalthviz</a></p>"
+copyright = " 2009-2018 The Spyder Doc Contributors"
 author = 'The Spyder Doc Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
