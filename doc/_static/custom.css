@@ -2,11 +2,11 @@ cite::before {
     content: "";
 }
 
-/*cite {
+cite {
     display: inline;
     font-size: 17px;
     color: black;
-}*/
+}
 
 #doc-content{
     font-size: 17px;
