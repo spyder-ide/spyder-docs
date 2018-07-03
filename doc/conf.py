@@ -128,7 +128,7 @@ html_theme_options = {
     'extra_nav_links': {
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
                             + 'Troubleshooting-Guide-and-FAQ'),
-        'Dev Wiki': 'https://github.com/spyder-ide/spyder/wiki/Dev:-Index',
+        'Wiki': 'https://github.com/spyder-ide/spyder/wiki',
         'Gitter Chatroom': 'https://gitter.im/spyder-ide/public',
         'Google Group': 'http://groups.google.com/group/spyderlib',
         },
