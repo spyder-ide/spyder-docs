@@ -138,7 +138,7 @@ html_theme_options = {
         },
     'sidebar_collapse': True,
     'show_related': True,
-    'page_width': '1100px',
+    'page_width': '1000px',
     'sidebar_width': '250px',
     'fixed_sidebar': False,
     'gray_1': '#303030',
@@ -146,7 +146,7 @@ html_theme_options = {
     'gray_3': '#EE1C24',
     'font_family': "Raleway, 'Open Sans', Arial, sans-serif",
     'head_font_family': "Raleway, 'Open Sans', Arial, sans-serif",
-    'font_size': '17px',
+    'font_size': '16.8px',
     'link': '#EE1C24',
     'link_hover': '#EE1C24'
     }
