@@ -1,62 +1,10 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @import url("basic.css");
 
 /* -- page layout ----------------------------------------------------------- */
 
 body {
     font-family: Raleway, 'Open Sans', Arial, sans-serif;
-    font-size: 15.4px;
+    font-size: 17px;
     background-color: #fff;
     color: #000;
     margin: 0;
@@ -65,7 +13,7 @@ body {
 
 
 div.document {
-    width: 920px;
+    width: 1100px;
     margin: 30px auto 0 auto;
 }
 
@@ -75,11 +23,11 @@ div.documentwrapper {
 }
 
 div.bodywrapper {
-    margin: 0 0 0 200px;
+    margin: 0 0 0 250px;
 }
 
 div.sphinxsidebar {
-    width: 200px;
+    width: 250px;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -99,7 +47,7 @@ div.body > .section {
 }
 
 div.footer {
-    width: 920px;
+    width: 1100px;
     margin: 20px auto 30px auto;
     font-size: 14px;
     color: #888;
@@ -155,7 +103,7 @@ div.sphinxsidebarwrapper p.blurb {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: Amiri, 'Open Sans', Arial, sans-serif;
+    font-family: Raleway, 'Open Sans', Arial, sans-serif;
     color: #303030;
     font-size: 24px;
     font-weight: normal;
@@ -232,7 +180,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: Amiri, 'Open Sans', Arial, sans-serif;
+    font-family: Raleway, 'Open Sans', Arial, sans-serif;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
@@ -273,7 +221,7 @@ div.admonition tt.xref, div.admonition code.xref, div.admonition a tt {
 }
 
 div.admonition p.admonition-title {
-    font-family: Amiri, 'Open Sans', Arial, sans-serif;
+    font-family: Raleway, 'Open Sans', Arial, sans-serif;
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
@@ -686,4 +634,51 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+
+/* relbar */
+
+.related {
+    line-height: 30px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.related.top {
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 20px;
+}
+
+.related.bottom {
+    border-top: 1px solid #EBEBEB;
+}
+
+.related ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.related li {
+    display: inline;
+}
+
+nav#rellinks {
+    float: right;
+}
+
+nav#rellinks li+li:before {
+    content: "|";
+}
+
+nav#breadcrumbs li+li:before {
+    content: "\00BB";
+}
+
+/* Hide certain items when printing */
+@media print {
+    div.related {
+        display: none;
+    }
 }
