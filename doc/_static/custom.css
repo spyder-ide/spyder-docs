@@ -4,12 +4,12 @@ cite::before {
 
 cite {
     display: inline;
-    font-size: 17px;
+    font-size: 18px;
     color: black;
 }
 
 #doc-content{
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .logo {
@@ -39,5 +39,5 @@ ul.simple {
 }
 
 div.body p, div.body dd, div.body li {
-    line-height: 1.7em;
+    line-height: 1.57em;
 }
