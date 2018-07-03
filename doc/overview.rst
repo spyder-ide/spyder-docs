@@ -2,12 +2,6 @@
 Overview
 ########
 
-.. image:: images/mainwindow/mainwindow_custom_1610.png
-   :align: center
-   :alt: The Spyder main window, with numerous panels open in a custom layout
-
-|
-
 Spyder, the Scientific Python Development Environment, includes the following key features:
 
 * :doc:`editor`:
@@ -43,11 +37,6 @@ Spyder, the Scientific Python Development Environment, includes the following ke
     * PEP 8 and code style (powered by ``pycodestyle``)
     * Code annotation parsing and "Todo lists" (``TODO``, ``FIXME``, ``XXX``, etc.)
 
-.. image:: images/mainwindow/mainwindow_dark_1610.png
-   :align: right
-   :width: 60%
-   :alt: The Spyder main window, with a dark syntax highlighting theme applied
-
 * :doc:`ipythonconsole`:
 
   * Any number of individual consoles, each executed in a separate, isolated processes
@@ -80,11 +69,6 @@ Spyder, the Scientific Python Development Environment, includes the following ke
 * :doc:`onlinehelp`: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own
 * :doc:`historylog`: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication
 * :doc:`internalconsole`: Provides access to viewing, exploring and controlling Spyder's own operation
-
-.. image:: images/mainwindow/mainwindow_matlab_1610.png
-   :align: right
-   :width: 60%
-   :alt: The Spyder main window, with a panel layout mirroring that of MATLAB
 
 * Preferences:
 
