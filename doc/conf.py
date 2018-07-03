@@ -126,15 +126,11 @@ html_theme_options = {
     'travis_button': False,
     'codecov_button': False,
     'extra_nav_links': {
-        'Main Website': 'https://www.spyder-ide.org/',
-        'Download (Anaconda)': 'https://www.anaconda.com/download/',
-        'Spyder Github': 'https://github.com/spyder-ide/spyder',
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
                             + 'Troubleshooting-Guide-and-FAQ'),
         'Dev Wiki': 'https://github.com/spyder-ide/spyder/wiki/Dev:-Index',
         'Gitter Chatroom': 'https://gitter.im/spyder-ide/public',
         'Google Group': 'http://groups.google.com/group/spyderlib',
-        'Donate': 'https://opencollective.com/spyder/'
         },
     'sidebar_collapse': True,
     'show_related': True,
