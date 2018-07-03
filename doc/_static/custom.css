@@ -2,27 +2,26 @@ cite::before {
     content: "";
 }
 
-cite {
+/*cite {
     display: inline;
-    font-size: 15.4px;
+    font-size: 17px;
     color: black;
-}
+}*/
 
 #doc-content{
-    font-size: 15.4px;
+    font-size: 17px;
 }
 
-.logo{
+.logo {
     display: none;
 }
 
 div .sphinxsidebarwrapper {
-    padding: 0px;
+    padding-top: 10px;
 }
 
-div .sphinxsidebarwrapper h3{
-    padding: 0px;
-    font-size: 200%;
+div .sphinxsidebarwrapper h3 {
+    margin: 0px;
 }
 
 kbd {
@@ -37,4 +36,8 @@ div .line-block {
 
 ul.simple {
     margin-bottom: 24px;
+}
+
+div.body p, div.body dd, div.body li {
+    line-height: 1.9em;
 }
