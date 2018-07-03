@@ -138,7 +138,7 @@ html_theme_options = {
         },
     'sidebar_collapse': True,
     'show_related': True,
-    'page_width': '1100px',
+    'page_width': '1000px',
     'sidebar_width': '250px',
     'fixed_sidebar': False,
     'gray_1': '#303030',
