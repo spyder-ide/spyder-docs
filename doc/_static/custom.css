@@ -41,3 +41,7 @@ ul.simple {
 div.body p, div.body dd, div.body li {
     line-height: 1.57em;
 }
+
+a:hover {
+    text-decoration: none;
+}
