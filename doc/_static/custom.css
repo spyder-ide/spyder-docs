@@ -4,12 +4,12 @@ cite::before {
 
 cite {
     display: inline;
-    font-size: 18px;
+    font-size: 17px;
     color: black;
 }
 
 #doc-content{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .logo {

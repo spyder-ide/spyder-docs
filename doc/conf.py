@@ -146,7 +146,7 @@ html_theme_options = {
     'gray_3': '#EE1C24',
     'font_family': "Raleway, 'Open Sans', Arial, sans-serif",
     'head_font_family': "Raleway, 'Open Sans', Arial, sans-serif",
-    'font_size': '18px',
+    'font_size': '17px',
     'link': '#EE1C24',
     'link_hover': '#EE1C24'
     }
