@@ -67,3 +67,7 @@ div.body h4 {
 #doc-content{
     padding-bottom: 2em;
 }
+
+.pipe-red{
+    color: red;
+}

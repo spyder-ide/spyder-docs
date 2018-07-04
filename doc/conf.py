@@ -52,7 +52,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Spyder'
-copyright = " 2009-2018 The Spyder Doc Contributors"
+copyright = " 2018 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>"
 author = 'The Spyder Doc Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
