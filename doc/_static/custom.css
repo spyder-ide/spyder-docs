@@ -72,3 +72,17 @@ div.body h4 {
     color: red;
     font-weight: bold;
 }
+
+#fh5co-footer {
+    font-size: 15px;
+}
+
+#fh5co-footer .container .row .text-center p small{
+    font-size: 16px;
+    line-height: 2.8em;
+}
+
+#fh5co-footer .container .row .text-center p {
+    font-size: 12px;
+    line-height: 0;
+}
