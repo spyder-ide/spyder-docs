@@ -126,12 +126,9 @@ html_theme_options = {
     'travis_button': False,
     'codecov_button': False,
     'extra_nav_links': {
-        'Download (Anaconda)': 'https://www.anaconda.com/download/',
-        'Spyder Github': 'https://github.com/spyder-ide/spyder',
         'Troubleshooting': ('https://github.com/spyder-ide/spyder/wiki/'
                             + 'Troubleshooting-Guide-and-FAQ'),
-        'Dev Wiki': 'https://github.com/spyder-ide/spyder/wiki/Dev:-Index',
-        'Donate': 'https://opencollective.com/spyder/'
+        'Spyder Wiki': 'https://github.com/spyder-ide/spyder/wiki',
         },
     'sidebar_collapse': True,
     'show_related': True,
@@ -192,7 +189,7 @@ html_sidebars = {
     '**': [
         'about.html',
         'navigation.html',
-        'relations.html',
+        #'relations.html',
         'searchbox.html',
         'donate.html',
     ]
