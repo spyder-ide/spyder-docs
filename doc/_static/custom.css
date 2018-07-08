@@ -18,10 +18,21 @@ cite {
 
 div .sphinxsidebarwrapper {
     padding-top: 10px;
+    font-size: 16px;
+    line-height: 1.57em;
 }
 
 div .sphinxsidebarwrapper h3 {
     margin: 0px;
+    padding: 0px;
+}
+
+div .sphinxsidebar ul li.toctree-l1 > a {
+    font-size: 100%;
+}
+
+div .sphinxsidebar ul li.toctree-l2 > a {
+    font-size: 95%;
 }
 
 kbd {
@@ -52,7 +63,7 @@ div.body h1 {
     font-size: 220%;
 }
 
-div.body h2 {
+div.body h2, div .sphinxsidebarwrapper h3 {
     font-size: 160%;
 }
 
