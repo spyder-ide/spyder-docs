@@ -8,8 +8,9 @@ cite {
     color: black;
 }
 
-#doc-content{
+#doc-content {
     font-size: 16px;
+    padding-bottom: 2em;
 }
 
 .logo {
@@ -75,11 +76,7 @@ div.body h4 {
     font-size: 110%;
 }
 
-#doc-content{
-    padding-bottom: 2em;
-}
-
-.pipe-red{
+.pipe-red {
     color: red;
     font-weight: bold;
 }
@@ -88,7 +85,7 @@ div.body h4 {
     font-size: 15px;
 }
 
-#fh5co-footer .container .row .text-center p small{
+#fh5co-footer .container .row .text-center p small {
     font-size: 16px;
     line-height: 2.8em;
 }
