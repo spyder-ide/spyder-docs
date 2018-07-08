@@ -34,8 +34,8 @@ div .line-block {
     margin-bottom: 0px;
 }
 
-ul.simple {
-    margin-bottom: 24px;
+ul.simple, div .toctree-wrapper, ol.arabic {
+    margin-bottom: 1.57em;
 }
 
 div.body p, div.body dd, div.body li {
@@ -85,12 +85,4 @@ div.body h4 {
 #fh5co-footer .container .row .text-center p {
     font-size: 12px;
     line-height: 0;
-}
-
-div .toctree-wrapper {
-    margin-bottom: 24px;
-}
-
-ol.arabic {
-    margin-bottom: 24px;
 }
