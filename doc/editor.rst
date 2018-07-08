@@ -1,11 +1,9 @@
+######
 Editor
-======
+######
 
-Spyder's text editor is a multi-language editor with features such as syntax
-coloring, code analysis (real-time code analysis powered by `pyflakes` and
-advanced code analysis using `pylint`), introspection capabilities such as
-code completion, calltips and go-to-definition features (powered by `rope`),
-function/class browser, horizontal/vertical splitting features, etc.
+Spyder's multi-language **Editor** integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
+The Editor's key features include syntax highlighting (``pygments``); real-time code and style analysis (``pyflakes`` and ``pycodestyle``); on-demand completion, calltips and go-to-definition features (``rope`` and ``jedi``); a function/class browser, horizontal and vertical splitting, and much more.
 
 .. image:: images/editor/editor_split_horizontal.png
    :align: center
@@ -13,36 +11,38 @@ function/class browser, horizontal/vertical splitting features, etc.
 
 |
 
-Function/class/method browser and horizontal/vertical splitting feature:
+:guilabel:`Outline Explorer` (function/class/method browser) and horizontal/vertical splitting capabilities:
 
 |outline| |split|
 
-.. |outline| image:: images/editor/outline_standard.png
+.. |outline|
+   image:: images/editor/outline_standard.png
    :width: 209px
    :alt: Spyder outline panel, showing the functions/classes/methods in a file
 
 
-.. |split| image:: images/editor/editor_split_vertical.png
+.. |split|
+   image:: images/editor/editor_split_vertical.png
    :width: 422px
    :alt: A Spyder editor window, split vertically into two independent panes
 
 |
 
-Code analysis with `pyflakes`:
+Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 
 .. image:: images/editor/editor_inset_code_analysis.png
-   :align: center
    :alt: A snippit of code in the Spyder Editor, showing code style warnings
 
+|
 
 
-How to define a code cell
---------------------------
+===================
+Defining code cells
+===================
 
-A "code cell" is a concept similar to MATLAB's "cell" (except that there is
-no "cell mode" in Spyder), i.e. a block of lines to be executed at once in the
-current interpreter (Python or IPython). Every script may be divided in as
-many cells as needed.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current doc:`ipythonconsole`.
+This is much like a "cell" in MATLAB (except without any need to enable a "cell mode", since in Spyder, cells are detected automatically).
+You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
 .. image:: images/editor/editor_standard.png
    :align: center
@@ -50,14 +50,20 @@ many cells as needed.
 
 |
 
-Cells are separated by lines starting with:
+You can separate cells by lines starting with either:
 
-* `#%%` (standard cell separator)
-* `# %%` (standard cell separator, when file has been edited with Eclipse)
-* `# <codecell>` (IPython notebook cell separator)
+* ``#%%`` (standard cell separator)
+* ``# %%`` (standard cell separator, when file has been edited with Eclipse)
+* ``# <codecell>`` (IPython notebook cell separator)
 
-Related plugins:
+Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
 
-* :doc:`ipythonconsole`
+
+Related components
+~~~~~~~~~~~~~~~~~~
+
 * :doc:`fileexplorer`
 * :doc:`findinfiles`
+* :doc:`ipythonconsole`
+* :doc:`projects`
+* :doc:`pylint`

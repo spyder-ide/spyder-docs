@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Spyder'
-copyright = '2009–2018 The Spyder Project Contributors'
-author = 'The Spyder Project Contributors'
+copyright = " 2018 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>"
+author = 'The Spyder Doc Contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -132,15 +132,15 @@ html_theme_options = {
         },
     'sidebar_collapse': True,
     'show_related': True,
-    'page_width': '920px',
-    'sidebar_width': '200px',
+    'page_width': '1000px',
+    'sidebar_width': '250px',
     'fixed_sidebar': False,
     'gray_1': '#303030',
     'gray_2': '#EBEBEB',
     'gray_3': '#EE1C24',
     'font_family': "Raleway, 'Open Sans', Arial, sans-serif",
-    'head_font_family': "Amiri, 'Open Sans', Arial, sans-serif",
-    'font_size': '15.4px',
+    'head_font_family': "Raleway, 'Open Sans', Arial, sans-serif",
+    'font_size': '16px',
     'link': '#EE1C24',
     'link_hover': '#EE1C24'
     }
@@ -239,7 +239,7 @@ htmlhelp_basename = 'Spyderdoc'
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'Spyder.tex', 'Spyder Documentation',
-   'The Spyder Project Contributors', 'manual'),
+   author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

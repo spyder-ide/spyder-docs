@@ -1,60 +1,83 @@
+########
 Projects
-========
+########
 
-Spyder allows users to associate a given directory with a project. This has two
-main advantages:
+Spyder allows users to associate a given directory with a **Project**, which offers several main advantages:
 
-1. Projects remember the list of open files in Editor. This permits to easily
-   work on several coding efforts at the same time.
-2. The project's path is added to the list of paths Python looks modules for, so
-   that modules developed as part of a project can be easily imported in any
-   console.
+* Opening, closing or switching to a :guilabel:`Project` automatically saves and restores your :doc:`editor` panes and open files to exactly how you left off.
+  This allows you to easily switch between many different development tasks without having to manually re-create your session for each one.
+* Your project's root directory is automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create with zero setup.
+* The project path is also used to automatically set your working directory, and can be used as an automatic preset for several modules, such as the :doc:`findinfiles` search location.
+* You can browse all your :guilabel:`Project` files from the :ref:`Project Explorer <project-explorer>`, regardless of your current working directory or :doc:`fileexplorer` location.
+* :guilabel:`Projects` are :ref:`integrated <vcs-section>` with the ``git`` version control system, allowing you to commit files and open them or your repository in the ``gitk`` GUI right from within Spyder.
 
-To create a project, it is necessary to select the *New Project* entry from the
-*Projects* menu:
+.. note::
 
-.. image:: images/menu/menu_projects.png
-   :align: center
+   :guilabel:`Projects` are completely optional and not imposed on users.
+   All of Spyder' functionality (session saving, File Explorer, working directory, etc) is available without creating a :guilabel:`Project`, just on a global rather than :guilabel:`Project`-specific basis.
+
+
+==================
+Creating a Project
+==================
+
+To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a :guilabel:`Project` with an existing directory or make a new one, and enter the :guilabel:`Project` 's name and path:
+
+|projectsmenu| |newprojectdialog|
+
+.. |projectsmenu|
+   image:: images/menu/menu_projects.png
+   :width: 37%
    :alt: Closeup of Spyder's Projects menu, containing project-related commands
+
+.. |newprojectdialog|
+   image:: images/dialog/dialog_new_project.png
+   :width: 62%
+   :alt: New project dialog, with options to set the name, type and location
 
 |
 
-When a project is activated, the *Project explorer* pane is shown, which
-presents a tree view structure of the current project. Through this pane,
-it is possible to make several operations on the files that belong to project:
 
-|explorer| |contextmenu|
+.. _project-explorer:
 
-.. |explorer| image:: images/projects/project_explorer_standard.png
-   :width: 30%
+==========================
+Using the Project Explorer
+==========================
+
+Once a :guilabel:`Project` is opened, the :guilabel:`Project Explorer` pane is shown, presenting a tree view of the current :guilabel:`Project` 's files and directories.
+This pane allows you to perform all the same operations as a normal Spyder :doc:`fileexplorer`.
+
+|projectexplorer| |projectcontextmenu|
+
+.. |projectexplorer|
+   image:: images/projects/project_explorer_standard.png
+   :width: 40%
    :alt: Spyder Project Explorer, displaying a directory tree of project files
 
-.. |contextmenu| image:: images/projects/project_explorer_inset_contextmenu.png
+.. |projectcontextmenu|
+   image:: images/projects/project_explorer_inset_contextmenu.png
    :width: 50%
    :alt: Inset of the context-menu for a directory in project explorer
 
 |
 
 
-.. note:: Projects are completely optional and not imposed on users, i.e. users
-   can work without creating any project.
+.. _vcs-section:
 
+============================
+Working with version control
+============================
 
-Version Control Integration
----------------------------
+Spyder has basic integration with the `Git`_ distributed version control system.
+You can commit or browse (in the ``gitk`` GUI) a file, directory or the entire repository via the commands in the context menu for the relevant object (right-click).
 
-Spyder has limited integration with Git_ and Mercurial_. Commit and browse
-commands are available by right-clicking on relevant files that reside within
-an already initialized repository. This menu assume that certain commands are
-available on the system path.
+.. _Git: https://git-scm.com/
 
-* For Mercurial repositories, TortoiseHG_ must be installed, and either ``thg``
-  or ``hgtk`` must be on the system path.
-* For git repositories, the commands ``git`` and ``gitk`` must be on the
-  system path. For Windows systems, the `Git for Windows`_ package provides a
-  convenient installer and the option to place common git commands on the
-  system path without creating conflicts with Windows system tools.
-  The second option in the dialog below is generally a safe approach.
+To use this functionality, the :guilabel:`Project` must be located in a ``git`` repository and the ``git`` and ``gitk`` commands must be on the system path.
+For Windows systems, the `Git for Windows`_ package provides a convenient installer and the option to place common git commands on the system path without creating conflicts with Windows system tools.
+The second option in the dialog below is generally a safe approach.
+
+.. _Git for Windows: https://gitforwindows.org/
 
 .. image:: images/other/git_for_windows_install_path.png
    :align: center
@@ -62,7 +85,9 @@ available on the system path.
 
 |
 
-.. _Git: http://git-scm.com/
-.. _Mercurial: http://mercurial.selenic.com/
-.. _TortoiseHg: http://tortoisehg.bitbucket.org/
-.. _Git for Windows: https://git-for-windows.github.io/
+
+Related components
+~~~~~~~~~~~~~~~~~~
+
+* :doc:`editor`
+* :doc:`fileexplorer`

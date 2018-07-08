@@ -4,25 +4,24 @@ cite::before {
 
 cite {
     display: inline;
-    font-size: 15.4px;
+    font-size: 16px;
     color: black;
 }
 
 #doc-content{
-    font-size: 15.4px;
+    font-size: 16px;
 }
 
-.logo{
+.logo {
     display: none;
 }
 
 div .sphinxsidebarwrapper {
-    padding: 0px;
+    padding-top: 10px;
 }
 
-div .sphinxsidebarwrapper h3{
-    padding: 0px;
-    font-size: 200%;
+div .sphinxsidebarwrapper h3 {
+    margin: 0px;
 }
 
 kbd {
@@ -37,6 +36,55 @@ div .line-block {
 
 ul.simple {
     margin-bottom: 24px;
+}
+
+div.body p, div.body dd, div.body li {
+    line-height: 1.57em;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+div.body h1 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 220%;
+}
+
+div.body h2 {
+    font-size: 160%;
+}
+
+div.body h3 {
+    font-size: 130%;
+}
+
+div.body h4 {
+    font-size: 110%;
+}
+
+#doc-content{
+    padding-bottom: 2em;
+}
+
+.pipe-red{
+    color: red;
+    font-weight: bold;
+}
+
+#fh5co-footer {
+    font-size: 15px;
+}
+
+#fh5co-footer .container .row .text-center p small{
+    font-size: 16px;
+    line-height: 2.8em;
+}
+
+#fh5co-footer .container .row .text-center p {
+    font-size: 12px;
+    line-height: 0;
 }
 
 div .toctree-wrapper {
