@@ -68,7 +68,7 @@ div.body h2, div .sphinxsidebarwrapper h3 {
     font-size: 160%;
 }
 
-div.body h3 {
+div.body h3, div.admonition p.admonition-title {
     font-size: 130%;
 }
 
