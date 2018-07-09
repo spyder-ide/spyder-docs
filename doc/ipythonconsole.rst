@@ -11,7 +11,6 @@ Each console is executed in a separate process, allowing you to run scripts, int
    :align: center
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
-
 |
 
 
@@ -40,7 +39,7 @@ Connect to an external kernel
 To connect to an external kernel,
 
 #. Launch an IPython kernel on the local or remote host if one is not already running.
-   If using Spyder 3.3.0 or later or Spyder 4, you'll want to do so with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
+   If using Spyder 3.3.0 or later, you'll need to do so with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
    If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
 #. Make sure to copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
