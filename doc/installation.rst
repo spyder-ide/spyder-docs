@@ -82,7 +82,7 @@ Using the official package manager:
 
 .. code-block:: bash
 
-   sudo apt-get install spyder
+   sudo apt-get install spyder3
 
 .. note::
 
@@ -114,7 +114,7 @@ Spyder is also available in other GNU/Linux distributions, like
 * `openSUSE`_
 * `Mageia`_
 
-.. _Arch Linux: https://aur.archlinux.org/packages/?K=spyder
+.. _Arch Linux: https://aur.archlinux.org/packages/spyder3-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
 .. _openSUSE: https://software.opensuse.org/package/spyder3
@@ -240,6 +240,7 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 .. _install-from-source:
 
+
 ==============================
 Installing a development build
 ==============================
@@ -255,7 +256,7 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda``:
+   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``):
 
    .. code-block:: bash
 
