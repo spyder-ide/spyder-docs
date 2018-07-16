@@ -36,3 +36,4 @@ Related components
 ~~~~~~~~~~~~~~~~~~
 
 * :doc:`editor`
+* :doc:`profiler`
