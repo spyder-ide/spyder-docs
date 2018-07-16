@@ -27,6 +27,8 @@
 ./_images/online_help_standard.png
 ./_images/outline_standard.png
 ./_images/plot_window_show_image.png
+./_images/profiler_comparison.png
+./_images/profiler_standard.png
 ./_images/project_explorer_inset_contextmenu.png
 ./_images/project_explorer_standard.png
 ./_images/static_analysis_standard.png
@@ -50,6 +52,7 @@
 ./_sources/onlinehelp.rst.txt
 ./_sources/options.rst.txt
 ./_sources/overview.rst.txt
+./_sources/profiler.rst.txt
 ./_sources/projects.rst.txt
 ./_sources/pylint.rst.txt
 ./_sources/variableexplorer.rst.txt
@@ -95,6 +98,7 @@
 ./onlinehelp.html
 ./options.html
 ./overview.html
+./profiler.html
 ./projects.html
 ./pylint.html
 ./search.html
