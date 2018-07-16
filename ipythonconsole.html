@@ -103,7 +103,9 @@ External kernels still support <a class="reference internal" href="#console-feat
 </div>
 <p>To connect to an external kernel,</p>
 <ol class="arabic simple">
-<li>Launch an IPython kernel on the local or remote host if one is not already running, e.g. with <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code>.</li>
+<li>Launch an IPython kernel on the local or remote host if one is not already running.
+If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).
+If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</li>
 <li>Make sure to copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</li>
 <li>Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Console</span> menu or the <span class="guilabel">IPython Console</span> pane’s “Gear” menu.</li>
 <li>Browse for or enter the path to the connection file from the previous step.
