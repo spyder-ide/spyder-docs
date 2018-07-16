@@ -62,7 +62,7 @@ Spyder, the Scientific Python Development Environment, includes the following ke
   * Real-time rendering and rich HTML display of the popular ``numpydoc`` docstring format (powered by ``Sphinx``)
 
 * :doc:`pylint`: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by ``pylint``)
-* :guilabel:`Profiler`: Measures the performance impact of every function in a script to identify bottlenecks and aid optimization
+* :doc:`profiler`: Measures the performance impact of every function in a file to identify bottlenecks and aid optimization
 * :doc:`projects`: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously
 * :doc:`fileexplorer`: Integrated filesystem viewing supporting many common operations
 * :doc:`findinfiles`: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations

@@ -43,6 +43,7 @@ Contents
     help
     debugging
     pylint
+    profiler
     projects
     fileexplorer
     findinfiles
