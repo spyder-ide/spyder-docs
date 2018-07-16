@@ -60,6 +60,8 @@ your support of the project!
 
 [Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
 
+[Online Documentation](http://docs.spyder-ide.org/)
+
 [Spyder Github](https://github.com/spyder-ide/spyder)
 
 [Troubleshooting Guide and FAQ](
@@ -69,6 +71,10 @@ https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ)
 
 [Gitter Chatroom](https://gitter.im/spyder-ide/public)
 
-[Google Group](http://groups.google.com/group/spyderlib)
+[Google Group](https://groups.google.com/group/spyderlib)
+
+[@Spyder_IDE on Twitter](https://twitter.com/spyder_ide)
+
+[@SpyderIDE on Facebook](https://www.facebook.com/SpyderIDE/)
 
 [Support Spyder on OpenCollective](https://opencollective.com/spyder/)
