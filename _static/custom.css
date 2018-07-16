@@ -34,8 +34,8 @@ div .line-block {
     margin-bottom: 0px;
 }
 
-ul.simple {
-    margin-bottom: 24px;
+ul.simple, div .toctree-wrapper, ol.arabic {
+    margin-bottom: 1.57em;
 }
 
 div.body p, div.body dd, div.body li {
