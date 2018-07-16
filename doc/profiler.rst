@@ -2,7 +2,7 @@
 Profiler
 ########
 
-The **Profiler** pane recursively determines the run time and number of calls for every function and method called in a script, whether directly or indirectly, breaking down each procedure into its smallest individual units.
+The **Profiler** pane recursively determines the run time and number of calls for every function and method called in a file, whether directly or indirectly, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.
 
 .. image:: images/profiler/profiler_standard.png
@@ -21,7 +21,7 @@ If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in
 
 .. important::
 
-   Currently, the :guilabel:`Profiler` only runs scripts with their working directory set to that of their file location on disk. Therefore, relative paths assuming a different working directly won't work as intended, and should be replaced with absolute ones or should assume the working directory is that of the file. This limitation is planned to be resolved in a future version of Spyder.
+   Currently, the :guilabel:`Profiler` only runs files with their working directory set to that of their file location on disk. Therefore, relative paths assuming a different working directly won't work as intended, and should be replaced with absolute ones or should assume the working directory is that of the file. This limitation is planned to be resolved in a future version of Spyder.
 
 To open and go directly to the file and line in the :doc:`editor` where an item is the profiler was called, just double-click it.
 Increase the number of hierarchical levels displayed for a particular object by clicking the dropdown arrows to the left of the name, or increase/decrease the depth shown for all levels with the buttons in the top left, to the left of the timestamp.
@@ -44,7 +44,7 @@ Finally, the numbers in the :guilabel:`Diff` columns for each of the three appea
 
 |
 
-For example, suppose you ran the :guilabel:`Profiler` on a script calling a function ``print_wrapper()`` that in turn called the ``print()`` function, and the ``print_wrapper()`` function took a total of 3 ms to run, with 2 ms of that spent executing the ``print()`` function inside it.
+For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``print_wrapper()`` that in turn called the ``print()`` function, and the ``print_wrapper()`` function took a total of 3 ms to run, with 2 ms of that spent executing the ``print()`` function inside it.
 Therefore, if ``print()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 2 ms.
 Meanwhile, :guilabel:`Total Time` for ``print_wrapper()`` would be 3 ms, but :guilabel:`Local Time` only 1 ms as the rest of that time was spend inside the ``print()`` function it called.
 
