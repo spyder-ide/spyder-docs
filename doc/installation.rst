@@ -267,15 +267,21 @@ In summary:
 
    .. note::
 
-      Following the separation of ``spyder-kernels`` into its own modular package in Spyder 3.3.0, you'll need to have the corresponding version of that package available—``0.x`` for Spyder 3 (``3.x`` branch), and ``1.x`` for Spyder 4 (``master`` branch).
+      Following the separation in v3.3 of Spyder's console code into its own package, ``spyder-kernels``, you'll need to have the corresponding version of it available—``0.x`` for Spyder 3 (``3.x`` branch), and ``1.x`` for Spyder 4 (``master`` branch).
       The above procedure will install the ``0.x`` version; to test the ``master`` branch (Spyder 4), you'll need to install the corresponding ``1.x`` version of ``spyder-kernels``.
-      This can be done via two methods: installing the correct version via ``conda`` (or ``pip``):
+      This can be done via two methods: installing the ``1.x`` version via ``conda``:
 
       .. code-block:: bash
 
-         conda install spyder-kernels=1.*
+         conda install -c conda-forge spyder-kernels=1
 
-      (and using ``conda install spyder-kernels=0.*`` to switch back to the Spyder 3 version), or by ``clone``-ing the `spyder-kernels git repository`_ to somewhere on your path and checking out the appropriate branch (``0.x`` or ``master``) corresponding to the version of Spyder (3 or 4) you would like to run.
+      or ``pip``:
+
+      .. code-block:: bash
+
+         pip install --no-deps -U spyder-kernels==1.*
+
+      (and using the same respective command, replacing ``1`` with ``0``, to switch back to the Spyder 3 version), or by ``clone``-ing the `spyder-kernels git repository`_ to somewhere on your path and checking out the appropriate branch (``0.x`` or ``master``) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend ``pip install -e`` at the root.
       For any non-trivial development work, keeping two separate virtual environments (with ``conda-env`` or ``venv``) for Spyder 3 and 4 makes this process much quicker and less tedious.
 
 #. Install `Git`_, a powerful source control management tool.
