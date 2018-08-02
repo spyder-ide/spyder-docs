@@ -273,13 +273,13 @@ In summary:
 
       .. code-block:: bash
 
-         conda install -c conda-forge spyder-kernels=1
+         conda install -c spyder-ide spyder-kernels=1.*
 
       or ``pip``:
 
       .. code-block:: bash
 
-         pip install --no-deps -U spyder-kernels==1.*
+         pip install spyder-kernels==1.*
 
       (and using the same respective command, replacing ``1`` with ``0``, to switch back to the Spyder 3 version), or by ``clone``-ing the `spyder-kernels git repository`_ to somewhere on your path and checking out the appropriate branch (``0.x`` or ``master``) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend ``pip install -e`` at the root.
       For any non-trivial development work, keeping two separate virtual environments (with ``conda-env`` or ``venv``) for Spyder 3 and 4 makes this process much quicker and less tedious.
