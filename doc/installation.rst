@@ -86,7 +86,9 @@ Using the official package manager:
 
 .. note::
 
-   This package could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.
+   The `Ubuntu package`_ could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.
+
+.. _Ubuntu package: https://packages.ubuntu.com/search?keywords=spyder3
 
 
 Debian Unstable
@@ -112,13 +114,11 @@ Spyder is also available in other GNU/Linux distributions, like
 * `Fedora`_
 * `Gentoo`_
 * `openSUSE`_
-* `Mageia`_
 
 .. _Arch Linux: https://aur.archlinux.org/packages/spyder3-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
 .. _openSUSE: https://software.opensuse.org/package/spyder3
-.. _Mageia: https://madb.mageia.org/package/show/name/spyder
 
 Please refer to your distribution's documentation to learn how to install Spyder.
 
