@@ -124,12 +124,12 @@ To fix it you will have to set these environment variables in your <code class="
 <div class="section" id="ubuntu">
 <h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
 <p>Using the official package manager:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install spyder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install spyder3
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This package could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.</p>
+<p class="last">The <a class="reference external" href="https://packages.ubuntu.com/search?keywords=spyder3">Ubuntu package</a> could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.</p>
 </div>
 </div>
 <div class="section" id="debian-unstable">
@@ -144,11 +144,10 @@ To fix it you will have to set these environment variables in your <code class="
 <h4>Other Distributions<a class="headerlink" href="#other-distributions" title="Permalink to this headline">¶</a></h4>
 <p>Spyder is also available in other GNU/Linux distributions, like</p>
 <ul class="simple">
-<li><a class="reference external" href="https://aur.archlinux.org/packages/?K=spyder">Arch Linux</a></li>
+<li><a class="reference external" href="https://aur.archlinux.org/packages/spyder3-git/">Arch Linux</a></li>
 <li><a class="reference external" href="https://fedoraproject.org/wiki/Spyder">Fedora</a></li>
 <li><a class="reference external" href="https://packages.gentoo.org/packages/dev-python/spyder">Gentoo</a></li>
 <li><a class="reference external" href="https://software.opensuse.org/package/spyder3">openSUSE</a></li>
-<li><a class="reference external" href="https://madb.mageia.org/package/show/name/spyder">Mageia</a></li>
 </ul>
 <p>Please refer to your distribution’s documentation to learn how to install Spyder.</p>
 </div>
@@ -240,12 +239,27 @@ For more information, please see the <a class="reference external" href="https:/
 <p>In summary:</p>
 <ol class="arabic">
 <li><p class="first">Install the Spyder <a class="reference internal" href="#requirements">requirements</a>.</p>
-<p>The recommended and easiest way to do this is with <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
+<p>The recommended and easiest way to do this is with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (although experts may prefer <code class="docutils literal notranslate"><span class="pre">pip</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install spyder
 conda remove spyder
 </pre></div>
 </div>
 <p>This installs all of Spyder’s dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Following the separation in v3.3 of Spyder’s console code into its own package, <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>, you’ll need to have the corresponding version of it available—<code class="docutils literal notranslate"><span class="pre">0.x</span></code> for Spyder 3 (<code class="docutils literal notranslate"><span class="pre">3.x</span></code> branch), and <code class="docutils literal notranslate"><span class="pre">1.x</span></code> for Spyder 4 (<code class="docutils literal notranslate"><span class="pre">master</span></code> branch).
+The above procedure will install the <code class="docutils literal notranslate"><span class="pre">0.x</span></code> version; to test the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch (Spyder 4), you’ll need to install the corresponding <code class="docutils literal notranslate"><span class="pre">1.x</span></code> version of <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>.
+This can be done via two methods: installing the <code class="docutils literal notranslate"><span class="pre">1.x</span></code> version via <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c spyder-ide spyder-kernels<span class="o">=</span><span class="m">1</span>.*
+</pre></div>
+</div>
+<p>or <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install spyder-kernels<span class="o">==</span><span class="m">1</span>.*
+</pre></div>
+</div>
+<p class="last">(and using the same respective command, replacing <code class="docutils literal notranslate"><span class="pre">1</span></code> with <code class="docutils literal notranslate"><span class="pre">0</span></code>, to switch back to the Spyder 3 version), or by <code class="docutils literal notranslate"><span class="pre">clone</span></code>-ing the <a class="reference external" href="https://github.com/spyder-ide/spyder-kernels">spyder-kernels git repository</a> to somewhere on your path and checking out the appropriate branch (<code class="docutils literal notranslate"><span class="pre">0.x</span></code> or <code class="docutils literal notranslate"><span class="pre">master</span></code>) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span></code> at the root.
+For any non-trivial development work, keeping two separate virtual environments (with <code class="docutils literal notranslate"><span class="pre">conda-env</span></code> or <code class="docutils literal notranslate"><span class="pre">venv</span></code>) for Spyder 3 and 4 makes this process much quicker and less tedious.</p>
+</div>
 </li>
 <li><p class="first">Install <a class="reference external" href="https://git-scm.com/downloads">Git</a>, a powerful source control management tool.</p>
 </li>
