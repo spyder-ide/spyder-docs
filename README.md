@@ -60,7 +60,7 @@ your support of the project!
 
 [Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
 
-[Online Documentation](http://docs.spyder-ide.org/)
+[Online Documentation](https://docs.spyder-ide.org/)
 
 [Spyder Github](https://github.com/spyder-ide/spyder)
 
