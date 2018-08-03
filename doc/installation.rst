@@ -82,11 +82,13 @@ Using the official package manager:
 
 .. code-block:: bash
 
-   sudo apt-get install spyder
+   sudo apt-get install spyder3
 
 .. note::
 
-   This package could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.
+   The `Ubuntu package`_ could be slightly outdated. If you find that is the case, please use the Debian package mentioned below.
+
+.. _Ubuntu package: https://packages.ubuntu.com/search?keywords=spyder3
 
 
 Debian Unstable
@@ -112,13 +114,11 @@ Spyder is also available in other GNU/Linux distributions, like
 * `Fedora`_
 * `Gentoo`_
 * `openSUSE`_
-* `Mageia`_
 
-.. _Arch Linux: https://aur.archlinux.org/packages/?K=spyder
+.. _Arch Linux: https://aur.archlinux.org/packages/spyder3-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
 .. _openSUSE: https://software.opensuse.org/package/spyder3
-.. _Mageia: https://madb.mageia.org/package/show/name/spyder
 
 Please refer to your distribution's documentation to learn how to install Spyder.
 
@@ -240,6 +240,7 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 .. _install-from-source:
 
+
 ==============================
 Installing a development build
 ==============================
@@ -255,7 +256,7 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda``:
+   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``):
 
    .. code-block:: bash
 
@@ -263,6 +264,25 @@ In summary:
       conda remove spyder
 
    This installs all of Spyder's dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.
+
+   .. note::
+
+      Following the separation in v3.3 of Spyder's console code into its own package, ``spyder-kernels``, you'll need to have the corresponding version of it available—``0.x`` for Spyder 3 (``3.x`` branch), and ``1.x`` for Spyder 4 (``master`` branch).
+      The above procedure will install the ``0.x`` version; to test the ``master`` branch (Spyder 4), you'll need to install the corresponding ``1.x`` version of ``spyder-kernels``.
+      This can be done via two methods: installing the ``1.x`` version via ``conda``:
+
+      .. code-block:: bash
+
+         conda install -c spyder-ide spyder-kernels=1.*
+
+      or ``pip``:
+
+      .. code-block:: bash
+
+         pip install spyder-kernels==1.*
+
+      (and using the same respective command, replacing ``1`` with ``0``, to switch back to the Spyder 3 version), or by ``clone``-ing the `spyder-kernels git repository`_ to somewhere on your path and checking out the appropriate branch (``0.x`` or ``master``) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend ``pip install -e`` at the root.
+      For any non-trivial development work, keeping two separate virtual environments (with ``conda-env`` or ``venv``) for Spyder 3 and 4 makes this process much quicker and less tedious.
 
 #. Install `Git`_, a powerful source control management tool.
 
@@ -280,6 +300,7 @@ In summary:
 
 #. To keep your repository up-to-date, run ``git pull`` inside the cloned directory.
 
+.. _spyder-kernels git repository: https://github.com/spyder-ide/spyder-kernels
 .. _Git: https://git-scm.com/downloads
 
 
