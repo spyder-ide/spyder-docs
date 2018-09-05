@@ -144,17 +144,13 @@ The requirements to run Spyder are:
 
 * `Qtconsole <https://github.com/jupyter/qtconsole>`_ >=4.2.0 -- for an enhanced Python interpreter.
 
-* `Rope <https://github.com/python-rope/rope>`_ >=0.9.4 and `Jedi <https://github.com/davidhalter/jedi>`_ >=0.11.0 -- for code completion, go-to-definition and calltips in the Editor.
-
-* `Pyflakes <https://github.com/PyCQA/pyflakes>`_  -- for real-time code analysis.
+* `Python-Language-Server <https://github.com/palantir/python-language-server>`_  -- Editor code completion, calltips, go-to-definition and real-time code/style analysis.
 
 * `Sphinx <http://www.sphinx-doc.org/en/master/>`_ -- for the Help pane rich text mode and to get our documentation.
 
 * `Pygments <http://pygments.org/>`_ >=2.0 -- for syntax highlighting and code completion in the Editor of all file types it supports.
 
 * `Pylint <https://www.pylint.org/>`_  -- for static code analysis.
-
-* `Pycodestyle <https://github.com/PyCQA/pycodestyle>`_ -- for style analysis.
 
 * `Psutil <https://github.com/giampaolo/psutil>`_  -- for memory/CPU usage in the status bar.
 
@@ -164,7 +160,7 @@ The requirements to run Spyder are:
 
 * `Pickleshare <https://github.com/pickleshare/pickleshare>`_ -- To show import completions in the Editor and Consoles.
 
-* `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- To run introspection services in the Editor asynchronously.
+* `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- CLient for the Language Server Protocol.
 
 * `QtPy <https://github.com/spyder-ide/qtpy>`_ >=1.2.0 -- To run Spyder with different Qt bindings seamlessly.
 
