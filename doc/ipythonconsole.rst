@@ -42,13 +42,13 @@ To connect to an external kernel,
    If using Spyder 3.3.0 or later, you'll need to do so with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
    If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
 #. Copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
-   You can get the location of :file:`{runtime-dir}` by running the command ``jupyter_core.paths.jupyter_runtime_dir()`` (make sure you ``import jupyter_core`` first) in the same Python environment as the kernel you launched.
+   You can get the location of :file:`{runtime-dir}` by running the command ``import jupyter_core; jupyter_core.paths.jupyter_runtime_dir()`` in an IPython interpreter launched in the same Python environment as the kernel you launched.
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
 #. Browse for or enter the path to the connection file from the previous step.
    If you're connecting to a local kernel, click :guilabel:`Ok` and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.
 #. If connecting to a remote kernel over ``ssh``, check the appropriate box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
-   The port number is that which ``sshd`` is running on, typically 22 unless you or your administrator has configured it otherwise.
-   Then, enter *either* :file:`{username}` 's password on the remote machine, or an SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
+   The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
+   Then, enter *either* :file:`{username}` 's password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
 
 
 .. image:: images/console/console_dialog_connect.png
