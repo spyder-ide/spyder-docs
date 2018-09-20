@@ -104,8 +104,8 @@ External kernels still support <a class="reference internal" href="#console-feat
 </div>
 <p>To connect to an external kernel,</p>
 <ol class="arabic">
-<li><p class="first">Launch an IPython kernel on the local or remote host if one is not already running.
-If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).
+<li><p class="first">Launch an IPython kernel on the local or remote host if one is not already running.</p>
+<p>If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).
 If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</p>
 </li>
 <li><p class="first">Copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</p>
@@ -115,10 +115,11 @@ If using a version of Spyder before 3.3.0, <code class="docutils literal notrans
 </li>
 <li><p class="first">Browse for or enter the path to the connection file from the previous step.
 If you’re connecting to a local kernel, click <span class="guilabel">Ok</span> and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.</p>
+<p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">20345</span></code>) entered in the connection file path field will be expanded to <code class="file docutils literal notranslate"><em><span class="pre">jupter_runtime_dir</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> on your local machine.</p>
 </li>
 <li><p class="first">If connecting to a remote kernel over <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, check the appropriate box and type the full hostname you’re connecting to (in the form <code class="file docutils literal notranslate"><em><span class="pre">username</span></em><span class="pre">&#64;</span><em><span class="pre">hostname</span></em><span class="pre">:</span><em><span class="pre">port-number</span></em></code>).
-The port number is the one on which the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is running, typically 22 unless you or your administrator has configured it otherwise.
 Then, enter <em>either</em> <code class="file docutils literal notranslate"><em><span class="pre">username</span></em></code> ‘s password on the remote machine, or your user SSH keyfile (typically <code class="file docutils literal notranslate"><span class="pre">.perm</span></code>) (only one is needed to connect), and press <span class="guilabel">Ok</span>.</p>
+<p>The port number is the one on which the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is running, typically 22 unless you or your administrator has configured it otherwise.</p>
 </li>
 </ol>
 <img alt="Connect to kernel dialog, requesting path and connection details" class="align-center" src="_images/console_dialog_connect.png" />
