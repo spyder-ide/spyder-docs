@@ -109,11 +109,7 @@ If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutil
 If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</p>
 </li>
 <li><p class="first">Copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</p>
-<p>You can get the location of <code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em></code> by starting an IPython interpreter in the same Python environment as the kernel and running:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jupyter_core</span>
-<span class="n">jupyter_core</span><span class="o">.</span><span class="n">paths</span><span class="o">.</span><span class="n">jupyter_runtime_dir</span><span class="p">()</span>
-</pre></div>
-</div>
+<p>You can get the <code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em></code> path by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.</p>
 </li>
 <li><p class="first">Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Console</span> menu or the <span class="guilabel">IPython Console</span> pane’s “Gear” menu.</p>
 </li>
