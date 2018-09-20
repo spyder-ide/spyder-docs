@@ -44,12 +44,7 @@ To connect to an external kernel,
 
 #. Copy the connection file (:file:`{runtime-dir}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
 
-   You can get the location of :file:`{runtime-dir}` by starting an IPython interpreter in the same Python environment as the kernel and running:
-
-   .. code-block:: python
-
-      import jupyter_core
-      jupyter_core.paths.jupyter_runtime_dir()
+   You can get the :file:`{runtime-dir}` path by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
 
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
 
