@@ -51,6 +51,8 @@ To connect to an external kernel,
 #. Browse for or enter the path to the connection file from the previous step.
    If you're connecting to a local kernel, click :guilabel:`Ok` and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.
 
+   As a convenience, kernel ID numbers (e.g. ``20345``) entered in the connection file path field will be expanded to :file:`{jupter_runtime_dir}/kernal-{id}.json` on your local machine.
+
 #. If connecting to a remote kernel over ``ssh``, check the appropriate box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
    The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
    Then, enter *either* :file:`{username}` 's password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
