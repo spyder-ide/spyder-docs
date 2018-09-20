@@ -39,6 +39,7 @@ Connect to an external kernel
 To connect to an external kernel,
 
 #. Launch an IPython kernel on the local or remote host if one is not already running.
+
    If using Spyder 3.3.0 or later, you'll need to do so with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
    If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
 
@@ -54,9 +55,9 @@ To connect to an external kernel,
    As a convenience, kernel ID numbers (e.g. ``20345``) entered in the connection file path field will be expanded to :file:`{jupter_runtime_dir}/kernal-{id}.json` on your local machine.
 
 #. If connecting to a remote kernel over ``ssh``, check the appropriate box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
-   The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
    Then, enter *either* :file:`{username}` 's password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
 
+   The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
 
 .. image:: images/console/console_dialog_connect.png
    :align: center
