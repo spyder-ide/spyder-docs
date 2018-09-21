@@ -256,11 +256,12 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``):
+   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``). In a fresh environment (``conda create -n your-name-here -c conda-forge python=3``, then ``activate`` it), run the following:
 
    .. code-block:: bash
 
-      conda install spyder
+      conda install -c conda-forge/label/beta spyder=4.0.0b1
+      conda install -c conda-forge python-language-server
       conda remove spyder
 
    This installs all of Spyder's dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.
