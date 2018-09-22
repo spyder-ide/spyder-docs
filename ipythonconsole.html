@@ -108,14 +108,14 @@ External kernels still support <a class="reference internal" href="#console-feat
 <p>If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).
 If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</p>
 </li>
-<li><p class="first">Copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</p>
-<p>You can get the <code class="file docutils literal notranslate"><em><span class="pre">runtime-dir</span></em></code> path by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.</p>
+<li><p class="first">Copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</p>
+<p>You can get <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.</p>
 </li>
 <li><p class="first">Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Console</span> menu or the <span class="guilabel">IPython Console</span> pane’s “Gear” menu.</p>
 </li>
 <li><p class="first">Browse for or enter the path to the connection file from the previous step.
 If you’re connecting to a local kernel, click <span class="guilabel">Ok</span> and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.</p>
-<p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">20345</span></code>) entered in the connection file path field will be expanded to <code class="file docutils literal notranslate"><em><span class="pre">jupter_runtime_dir</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> on your local machine.</p>
+<p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">1234</span></code>) entered in the connection file path field will be expanded to <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> on your local machine.</p>
 </li>
 <li><p class="first">If connecting to a remote kernel over <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, check the appropriate box and type the full hostname you’re connecting to (in the form <code class="file docutils literal notranslate"><em><span class="pre">username</span></em><span class="pre">&#64;</span><em><span class="pre">hostname</span></em><span class="pre">:</span><em><span class="pre">port-number</span></em></code>).
 Then, enter <em>either</em> <code class="file docutils literal notranslate"><em><span class="pre">username</span></em></code> ‘s password on the remote machine, or your user SSH keyfile (typically <code class="file docutils literal notranslate"><span class="pre">.perm</span></code>) (only one is needed to connect), and press <span class="guilabel">Ok</span>.</p>
@@ -278,7 +278,7 @@ Or, if you’re analyzing data step by step using your own custom libraries, you
                 </p>
                 <p>
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.0</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
                     &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
                     
                     <span class="pipe-red">|</span>
