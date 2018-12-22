@@ -91,7 +91,7 @@ make html
 or, if on Windows
 
 ```cmd
-makefile.bat html
+make.bat html
 ```
 
 to run the build. You should be able to view the html output inside the
