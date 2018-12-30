@@ -13,6 +13,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -104,8 +105,10 @@ External kernels still support <a class="reference internal" href="#console-feat
 <p>To connect to an external kernel,</p>
 <ol class="arabic">
 <li><p class="first">Launch an IPython kernel on the local or remote host if one is not already running.</p>
-<p>If using Spyder 3.3.0 or later, you’ll need to do so with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).
-If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</p>
+<ul class="simple">
+<li>If using Spyder 3.3.0 or later, you’ll need to launch the kernel with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code> (after you’ve first installed <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> on the host with <code class="docutils literal notranslate"><span class="pre">&lt;conda/pip&gt;</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>).</li>
+<li>If using a version of Spyder before 3.3.0, <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">kernel</span></code> should work to launch the kernel, albeit without certain Spyder-specific features.</li>
+</ul>
 </li>
 <li><p class="first">Copy the connection file (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on (if remote) or note its location (if local).</p>
 <p>You can get <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.</p>
@@ -149,8 +152,8 @@ Just remember to enter the appropriate details into Spyder’s <span class="guil
 </div>
 <div class="section" id="using-umr-to-reload-changed-modules">
 <span id="umr-section"></span><h2>Using UMR to reload changed modules<a class="headerlink" href="#using-umr-to-reload-changed-modules" title="Permalink to this headline">¶</a></h2>
-<p>When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is <code class="docutils literal notranslate"><span class="pre">import``ed.</span>
-<span class="pre">During</span> <span class="pre">this</span> <span class="pre">first</span> <span class="pre">``import</span></code>, the bytecode (<code class="docutils literal notranslate"><span class="pre">.pyc</span></code> file) is generated if necessary and the imported module object is cached in <code class="docutils literal notranslate"><span class="pre">sys.modules</span></code>.
+<p>When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is <code class="docutils literal notranslate"><span class="pre">import</span></code>-ed.
+During this first <code class="docutils literal notranslate"><span class="pre">import</span></code>, the bytecode (<code class="docutils literal notranslate"><span class="pre">.pyc</span></code> file) is generated if necessary and the imported module object is cached in <code class="docutils literal notranslate"><span class="pre">sys.modules</span></code>.
 If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (<code class="docutils literal notranslate"><span class="pre">.py{w}</span></code> file) has changed in the meantime.
 While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
 In effect, you’re left with no way to update or modify any already-imported modules, aside from manually removing the relevant <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files, or restarting the console entirely.</p>
@@ -158,7 +161,8 @@ In effect, you’re left with no way to update or modify any already-imported mo
 Even better, Spyder also loads the <code class="docutils literal notranslate"><span class="pre">%autoreload</span></code> magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
 With UMR enabled, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you’re analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.</p>
-<p>UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
+<p>UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it activates.
+If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
 <div class="section" id="related-components">
 <h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -285,7 +289,7 @@ Or, if you’re analyzing data step by step using your own custom libraries, you
                 </p>
                 <p>
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
                     &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
                     
                     <span class="pipe-red">|</span>

@@ -40,8 +40,8 @@ To connect to an external kernel,
 
 #. Launch an IPython kernel on the local or remote host if one is not already running.
 
-   If using Spyder 3.3.0 or later, you'll need to do so with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
-   If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
+   * If using Spyder 3.3.0 or later, you'll need to launch the kernel with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
+   * If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
 
 #. Copy the connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
 
@@ -106,7 +106,7 @@ For information on the features, commands and capabilities built into IPython it
 Using UMR to reload changed modules
 ===================================
 
-When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is ``import``ed.
+When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is ``import``-ed.
 During this first ``import``, the bytecode (``.pyc`` file) is generated if necessary and the imported module object is cached in ``sys.modules``.
 If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (``.py{w}`` file) has changed in the meantime.
 While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
@@ -117,7 +117,8 @@ Even better, Spyder also loads the ``%autoreload`` magic by default into any ker
 With UMR enabled, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
 Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
 
-UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates. If desired, you can turned it and the message on and off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
+UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates.
+If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
 
 
 Related components
