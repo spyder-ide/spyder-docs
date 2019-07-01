@@ -50,3 +50,4 @@ Contents
     onlinehelp
     historylog
     internalconsole
+    plugin
