@@ -252,34 +252,16 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``). In a fresh environment (``conda create -n your-name-here -c conda-forge python=3``, then ``activate`` it), run the following:
+   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``). Create a fresh environment, run the following:
 
    .. code-block:: bash
 
-      conda install -c conda-forge/label/beta spyder=4.0.0b1
-      conda install -c conda-forge python-language-server
+      conda create -n spyder-dev python=3
+      conda activate spyder-dev
+      conda install spyder
       conda remove spyder
 
    This installs all of Spyder's dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.
-
-   .. note::
-
-      Following the separation in v3.3 of Spyder's console code into its own package, ``spyder-kernels``, you'll need to have the corresponding version of it available—``0.x`` for Spyder 3 (``3.x`` branch), and ``1.x`` for Spyder 4 (``master`` branch).
-      The above procedure will install the ``0.x`` version; to test the ``master`` branch (Spyder 4), you'll need to install the corresponding ``1.x`` version of ``spyder-kernels``.
-      This can be done via two methods: installing the ``1.x`` version via ``conda``:
-
-      .. code-block:: bash
-
-         conda install -c spyder-ide spyder-kernels=1.*
-
-      or ``pip``:
-
-      .. code-block:: bash
-
-         pip install spyder-kernels==1.*
-
-      (and using the same respective command, replacing ``1`` with ``0``, to switch back to the Spyder 3 version), or by ``clone``-ing the `spyder-kernels git repository`_ to somewhere on your path and checking out the appropriate branch (``0.x`` or ``master``) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend ``pip install -e`` at the root.
-      For any non-trivial development work, keeping two separate virtual environments (with ``conda-env`` or ``venv``) for Spyder 3 and 4 makes this process much quicker and less tedious.
 
 #. Install `Git`_, a powerful source control management tool.
 
