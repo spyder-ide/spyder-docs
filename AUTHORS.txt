@@ -2,7 +2,7 @@ The Spyder Doc Contributors are composed of:
 
 * Pierre Raybaut <pierre.raybaut@gmail.com> (Original Spyder author).
 * Carlos Cordoba <ccordoba12@gmail.com> (Current Spyder maintainer).
-* C.A.M. Gerlach <CAM.Gerlach@Gerlach.CAM> (Current docs maintainer).
+* C.A.M. Gerlach <CAM.Gerlach@Gerlach.CAM> (Former docs maintainer).
 * All other developers who have committed to the spyder-docs repository:
   <https://github.com/spyder-ide/spyder-docs/graphs/contributors>
   and contributors to the original documentation in the main spyder repository:
