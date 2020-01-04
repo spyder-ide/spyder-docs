@@ -252,7 +252,7 @@ In summary:
 
 #. Install the Spyder `requirements`_.
 
-   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``). Create a fresh environment, run the following:
+   The recommended and easiest way to do this is with ``conda`` (although experts may prefer ``pip``). To install Spyder in a fresh environment, run the following (omitting the first two commands if you'd like to use an existing one):
 
    .. code-block:: bash
 
