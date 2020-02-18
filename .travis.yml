@@ -1,11 +1,10 @@
 # https://travis-ci.org/spyder-ide/spyder-docs
 
 language: python
-dist: trusty
-sudo: false
+dist: xenial
 
 python:
-  - 3.6
+  - 3.7
 
 # Give doctr our deploy key
 env:
