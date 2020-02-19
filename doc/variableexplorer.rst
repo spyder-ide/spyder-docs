@@ -63,7 +63,7 @@ When the type of a variable is a dictionary, double clicking it will show a view
 Lists
 ~~~~~
 
-For variables that are of type list, the window pane only displays the first ten values of the list. If you want to see them all, double click the variable in the pane to open a viewer that will display the index, type, size and value of each element of the list. You can also modify any value by double clicking it in the viewer and writing the new one.
+For variables that are of type list, the Variable Explorer only displays the first ten values of the list. If you want to see them all, double click the variable to open a viewer that will display the index, type, size and value of each element of the list. You can also modify any value by double clicking it in the viewer and writing the new one.
 
 .. image:: images/variable_explorer/variable-explorer-list.png
    :align: center
@@ -75,7 +75,7 @@ For variables that are of type list, the window pane only displays the first ten
 Numpy Arrays
 ~~~~~~~~~~~~
 
-For Numpy Arrays, the window pane only shows some of the values of the array. You can open a viewer that shows you graphically in a "heat map" the values of the array, displaying each value in a colored box, depending on the size of the value. You can deactivate the background color by unchecking the option in the window. If the array is too large, background color will be automatically deactivated.
+For Numpy Arrays, the Variable Explorer only shows some of their values. By double-clicking them, a viewer will be shown graphically displaying the array values in a "heat map", i.e. it displays each value in a colored box, depending on the size of the value. You can deactivate the background color by unchecking the option in the viewer. If the array is too large, the background color will be automatically deactivated.
 
 .. image:: images/variable_explorer/variable-explorer-array-2D-resize.png
    :align: center
