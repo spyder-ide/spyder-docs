@@ -108,6 +108,14 @@ DataFrames, like Numpy arrays, display in a viewer where you can show or hide "h
 
 |
 
+Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices. 
+
+
+.. image:: images/variable_explorer/variable-explorer-multi-index.png
+   :align: center
+   :alt: Dataframe editor showing multi-index support
+
+|
 
 ============
 Options Menu
@@ -154,9 +162,9 @@ Finally, there is a button to refresh the Variable Explorer's contents, which wi
 
 (MISSING GIF)
 
-================
+======================
 Advanced Functionality
-================
+======================
 
 The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types. These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy of one of them under a new name you enter in the resulting dialog box.
 
@@ -211,6 +219,14 @@ For two-dimensional arrays, you can also display them as images, treating their 
 .. image:: images/plot-window/plot-window-show-image.png
    :align: center
    :alt: Plot window showing an interactive image based on the array's data
+
+|
+
+Finally, we added a context-menu action to open any object using the new Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these datatypes.
+
+.. image:: images/variable_explorer/variable-explorer-object-explorer.png
+   :align: center
+   :alt: Object explorer showing dataframe
 
 |
 
