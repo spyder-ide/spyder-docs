@@ -158,7 +158,7 @@ Finally, there is a button to refresh the Variable Explorer's contents, which wi
 Advanced Functionality
 ================
 
-The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types. These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy one of under a new name you enter in the resulting dialog box.
+The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types. These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy of one of them under a new name you enter in the resulting dialog box.
 
 .. image:: images/variable_explorer/variable-explorer-duplicate.gif
    :align: center
@@ -166,7 +166,7 @@ The context menu, available by right-clicking any variable, provides numerous ad
 
 | 
 
-Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose. This allows you to change the type of the variable that you are pasting which can be very useful, allowing to to, for example, easily copy the elements of a list into an array.
+Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose. This allows you to change the type of the variable that you are pasting which can be very useful, allowing to, for example, easily copy the elements of a list into an array.
 
 .. image:: images/variable_explorer/variable-explorer-copy-paste.gif
    :align: center
