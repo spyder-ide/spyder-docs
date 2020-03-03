@@ -4,17 +4,17 @@ Variable Explorer
 
 The **Variable Explorer** allows you to interactively browse and manage the variables and objects generated running your code.
 
-.. image:: images/variable_explorer/variable-explorer-standard.png
+.. image:: images/variable_explorer/variable-explorer-execution.gif
    :align: center
-   :alt: Spyder Variable Explorer, with a list of variables and their contents
+   :alt: Spyder Variable Explorer execution with a variable of type list
 
 |
 
 It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected :doc:`ipythonconsole` session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.
 
-.. image:: images/variable_explorer/variable-explorer-execution.gif
+.. image:: images/variable_explorer/variable-explorer-standard.png
    :align: center
-   :alt: Spyder Variable Explorer execution with a variable of type list
+   :alt: Spyder Variable Explorer, with a list of variables and their contents
 
 |
 
