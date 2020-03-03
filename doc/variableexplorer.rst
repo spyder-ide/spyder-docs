@@ -78,9 +78,9 @@ Numpy Arrays
 
 Like lists, for Numpy arrays the Variable Explorer shows a preview of their values. Double-clicking them will open a viewer displaying the array values in a "heat map", with each value in a grid cell colored based on its numeric quantity. You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.
 
-.. image:: images/variable_explorer/variable-explorer-array-2D-resize.png
+.. image:: images/variable_explorer/variable-explorer-heat-map.png
    :align: center
-   :alt: Array editor with a 2D int array, displaying a "heatmap" of its values
+   :alt: Array editor array, displaying a "heatmap" of its values
 
 |
 
