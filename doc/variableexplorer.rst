@@ -162,6 +162,7 @@ Finally, there is a button to refresh the Variable Explorer's contents, which wi
 
 (MISSING GIF)
 
+
 ======================
 Advanced Functionality
 ======================
