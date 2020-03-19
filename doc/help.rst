@@ -6,9 +6,10 @@ You can use the **Help** pane to find, render and display rich documentation for
 
 |
 
-.. raw:: html
-
-	<p align= "center"><iframe src="https://giphy.com/embed/H1quFSJ3LSwmVwvIhU" width="600" height="375" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H1quFSJ3LSwmVwvIhU">via GIPHY</a></p></p>
+.. image:: images/help/help-execution.gif
+   :width: 600
+   :align: center
+   :alt: Spyder main window showing getting help for numpy arrays from editor
 
 |
 
@@ -28,12 +29,20 @@ Getting help
 ============
 
 Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
-You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default), or automatically if enabled when typing a left parenthesis (``(``) after a function or method name.
 
 .. image:: images/help/help-command.png
    :width: 600
    :align: center
    :alt: Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former.
+
+|
+
+You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default), or automatically if enabled when typing a left parenthesis (``(``) after a function or method name.
+
+.. image:: images/help/help-automatic-connections.gif
+   :width: 600
+   :align: center
+   :alt: Spyder console and help pane showing automatic help with parenthesis
 
 |
 
@@ -56,20 +65,13 @@ Understanding help modes
 
 You can use the options menu (:guilabel:`Gear` icon) in the top right of the :guilabel:`Help` pane to toggle the help display mode.
 
-.. image:: images/help/help-options-menu.png
-   :width: 600
-   :align: center
-   :alt: Spyder Help pane, displaying the options menu
-
-|
-
 :guilabel:`Rich Text` mode renders the object's docstrings with ``Sphinx``, :guilabel:`Plain Text` mode displays the docstring without formatting while :guilabel:`Show Source` displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python). The latter can be useful when docstrings are not available or insufficient to document the object.
 
-.. raw:: html
+.. image:: images/help/help-modes.gif
+   :width: 600
+   :align: center
+   :alt: Spyder help pane showing different modes
 
-	<p align= "center"><img src="https://vokkowei.sirv.com/ezgif.com-crop.gif" width="600" height="385" alt="" /></p>
-
-|
 
 
 
@@ -98,6 +100,7 @@ Control automatic import
 
 When you get help in the :guilabel:`IPython Console` for an object that has not been previously imported, it is automatically loaded in the :doc:`internalconsole` so that documentation can be shown when available.
 This can be disabled in the :guilabel:`Help` pane's top-right options menu so that only documentation from imported objects is displayed.
+
 
 
 
