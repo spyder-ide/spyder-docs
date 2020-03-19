@@ -85,7 +85,7 @@ Numpy Arrays
 Like lists, for Numpy arrays the Variable Explorer shows a preview of their values. Double-clicking them will open a viewer displaying the array values in a "heat map", with each value in a grid cell colored based on its numeric quantity. You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.
 
 .. image:: images/variable_explorer/variable-explorer-heat-map.png
-   :width: 600
+   :width: 800
    :align: center
    :alt: Array editor array, displaying a "heatmap" of its values
 
@@ -97,8 +97,8 @@ If supported by the datatype, you can also change the format of the array's valu
 
 Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers. Clicking the :guilabel:`Resize` will set it automatically.
 
-.. image:: images/variable_explorer/variable-explorer-array-resize.gif
-   :width: 600
+.. image:: images/variable_explorer/variable-explorer-resize.gif
+   :width: 800
    :align: center
    :alt: Array editor with a 2D int array, showing resizing of columns
  
@@ -111,7 +111,7 @@ DataFrames
 DataFrames, like Numpy arrays, display in a viewer where you can show or hide "heatmap" colors, change the format and resize the rows and columns either manually or automatically.
 
 .. image:: images/variable_explorer/variable-explorer-dataframe.png
-   :width: 600
+   :width: 800
    :align: center
    :alt: Dataframe editor showing data frame "heatmap"
 
@@ -142,7 +142,7 @@ The options menu in the top right of the Variable Explorer pane allows you filte
 
 It also allows you to display the min and max of Numpy arrays instead of a preview of their values.
 
-.. image:: images/variable_explorer/variable-explorer-array-min&max.png
+.. image:: images/variable_explorer/variable-explorer-array-min-max.png
    :width: 600
    :align: center
    :alt: Variable Explorer showing max and min values of numpy array
@@ -173,8 +173,6 @@ There is also a button to remove all displayed variables, and a search box to fi
 |
 
 Finally, there is a button to refresh the Variable Explorer's contents, which will update it to show the current state of the code running in the IPython console.
-
-(MISSING GIF)
 
 
 ======================
@@ -237,7 +235,7 @@ For two-dimensional arrays, you can also display them as images, treating their 
 
 .. _easily changed to match your preferences: https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 
-.. image:: images/plot-window/plot-window-show-image.png
+.. image:: images/plot_window/plot-window-show-image.png
    :width: 600
    :align: center
    :alt: Plot window showing an interactive image based on the array's data
