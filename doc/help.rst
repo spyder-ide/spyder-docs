@@ -7,7 +7,6 @@ You can use the **Help** pane to find, render and display rich documentation for
 |
 
 .. image:: images/help/help-execution.gif
-   :width: 600
    :align: center
    :alt: Spyder main window showing getting help for numpy arrays from editor
 
@@ -16,7 +15,7 @@ You can use the **Help** pane to find, render and display rich documentation for
 You can also access Spyder's tutorial from here, which will guide you through some basic steps for using its key features.
 
 .. image:: images/help/help-tutorial.png
-   :width: 600
+   :width: 500
    :align: center
    :alt: Spyder Help pane showing the link for the Spyder's tutorial
 
@@ -31,7 +30,6 @@ Getting help
 Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
 
 .. image:: images/help/help-command.png
-   :width: 600
    :align: center
    :alt: Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former.
 
@@ -40,7 +38,6 @@ Help can be retrieved both by static analysis of open files in the :doc:`editor`
 You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default), or automatically if enabled when typing a left parenthesis (``(``) after a function or method name.
 
 .. image:: images/help/help-automatic-connections.gif
-   :width: 600
    :align: center
    :alt: Spyder console and help pane showing automatic help with parenthesis
 
@@ -49,7 +46,7 @@ You can trigger help manually by pressing the configurable help shortcut (:kbd:`
 You can also manually enter the object's name into the :guilabel:`Object` textbox at the top of the pane, if :guilabel:`Console` is selected as the :guilabel:`Source`.
 
 .. image:: images/help/help-object-box.png
-   :width: 600
+   :width: 500
    :align: center
    :alt: Spyder Help pane, displaying documentation for an object whose name was written in the object text box
 
@@ -68,7 +65,6 @@ You can use the options menu (:guilabel:`Gear` icon) in the top right of the :gu
 :guilabel:`Rich Text` mode renders the object's docstrings with ``Sphinx``, :guilabel:`Plain Text` mode displays the docstring without formatting while :guilabel:`Show Source` displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python). The latter can be useful when docstrings are not available or insufficient to document the object.
 
 .. image:: images/help/help-modes.gif
-   :width: 600
    :align: center
    :alt: Spyder help pane showing different modes
 
@@ -84,7 +80,7 @@ You can also get summary help for objects by hovering over them in the :guilabel
 Clicking the hover popup will open the full documentation in the :guilabel:`Help` pane.
 
 .. image:: images/help/help-hover.png
-   :width: 600
+   :width: 500
    :align: center
    :alt: Editor pane showing help of an object from hover
 
