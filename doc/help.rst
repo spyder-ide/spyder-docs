@@ -45,8 +45,7 @@ You can trigger help manually by pressing the configurable help shortcut (:kbd:`
 
 You can also manually enter the object's name into the :guilabel:`Object` textbox at the top of the pane, if :guilabel:`Console` is selected as the :guilabel:`Source`.
 
-.. image:: images/help/help-object-box.png
-   :width: 500
+.. image:: images/help/help-console.gif
    :align: center
    :alt: Spyder Help pane, displaying documentation for an object whose name was written in the object text box
 
@@ -80,7 +79,6 @@ You can also get summary help for objects by hovering over them in the :guilabel
 Clicking the hover popup will open the full documentation in the :guilabel:`Help` pane.
 
 .. image:: images/help/help-hover.png
-   :width: 500
    :align: center
    :alt: Editor pane showing help of an object from hover
 
