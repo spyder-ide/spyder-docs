@@ -27,19 +27,11 @@ You can also access Spyder's tutorial from here, which will guide you through so
 Getting help
 ============
 
-Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
+Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`. You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default).
 
 .. image:: images/help/help-command.png
    :align: center
    :alt: Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former.
-
-|
-
-You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default), or automatically if enabled when typing a left parenthesis (``(``) after a function or method name.
-
-.. image:: images/help/help-automatic-connections.gif
-   :align: center
-   :alt: Spyder console and help pane showing automatic help with parenthesis
 
 |
 
@@ -51,7 +43,14 @@ You can also manually enter the object's name into the :guilabel:`Object` textbo
 
 |
 
-Automatic help can be individually enabled for both the :guilabel:`Editor` and the :guilabel:`Console` under :menuselection:`Preferences --> Help --> Automatic Connections`, and turned on and off dynamically via the :guilabel:`lock` icon in the top right corner of the :guilabel:`Help` pane.
+Automatic help can be individually enabled for both the :guilabel:`Editor` and the :guilabel:`Console` under :menuselection:`Preferences --> Help --> Automatic Connections`, and turned on and off dynamically via the lock icon in the top right corner of the :guilabel:`Help` pane. If enabled, simply typing a left parenthesis (``(``) after a function or method name will show its associated help.
+
+.. image:: images/help/help-automatic-connections.gif
+   :align: center
+   :alt: Spyder console and help pane showing automatic help with parenthesis
+
+|
+
 
 
 
