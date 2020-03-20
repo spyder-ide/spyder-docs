@@ -40,6 +40,7 @@ Contents
     editor
     ipythonconsole
     variableexplorer
+    plots
     help
     debugging
     pylint
