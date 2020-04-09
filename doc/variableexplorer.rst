@@ -2,10 +2,9 @@
 Variable Explorer
 #################
 
-The **Variable Explorer** allows you to interactively browse and manage the variables and objects generated running your code.
+The **Variable Explorer** allows you to interactively browse and manage the objects generated running your code.
 
 .. image:: images/variable_explorer/variable-explorer-execution.gif
-   :width: 500
    :align: center
    :alt: Spyder Variable Explorer execution with a variable of type list
 
@@ -19,7 +18,8 @@ It shows the namespace contents (including all global objects, variables, class 
 
 |
 
-The Variable Explorer gives you information on the name, size, type and value of each object. To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.
+The Variable Explorer gives you information on the name, size, type and value of each object.
+To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.
 
 .. image:: images/variable_explorer/variable-explorer-modifying.gif
    :align: center
@@ -27,12 +27,13 @@ The Variable Explorer gives you information on the name, size, type and value of
 
 |
 
+
+
 ==============
 Object Viewers
 ==============
 
 Spyder's :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.
-
 
 
 ~~~~~~~
@@ -53,7 +54,8 @@ When a string variable is longer than forty characters, you can double click it 
 Dictionaries
 ~~~~~~~~~~~~
 
-Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value. You can double click any of the values to modify them, which will open a new viewer if the value is itself an object.
+Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value.
+You can double click any of the values to modify them, which will open a new viewer if the value is itself an object.
 
 .. image:: images/variable_explorer/variable-explorer-dictionary.png
    :width: 500
@@ -62,11 +64,14 @@ Double-clicking on dictionaries will show a viewer displaying each of its keys w
 
 |
 
+
 ~~~~~
 Lists
 ~~~~~
 
-For lists, the main Variable Explorer displays a preview of the first ten values. To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list. Just like dictionaries, you can double-click values to edit them.
+For lists, the main Variable Explorer displays a preview of the first ten values.
+To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
+Just like dictionaries, you can double-click values to edit them.
 
 .. image:: images/variable_explorer/variable-explorer-list.png
    :width: 500
@@ -80,7 +85,9 @@ For lists, the main Variable Explorer displays a preview of the first ten values
 Numpy Arrays
 ~~~~~~~~~~~~
 
-Like lists, for Numpy arrays the Variable Explorer shows a preview of their values. Double-clicking them will open a viewer displaying the array values in a "heat map", with each value in a grid cell colored based on its numeric quantity. You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.
+Like lists, for Numpy arrays the Variable Explorer shows a preview of their values.
+Double-clicking them will open a viewer displaying the array values in a "heat map", with each value in a grid cell colored based on its numeric quantity.
+You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.
 
 .. image:: images/variable_explorer/variable-explorer-heat-map.png
    :align: center
@@ -88,17 +95,20 @@ Like lists, for Numpy arrays the Variable Explorer shows a preview of their valu
 
 |
 
-If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display. For this, click the :guilabel:`Format` button and and set the desired formatting in the dialog that appears, using standard `Printf-style syntax`_.
+If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display.
+For this, click the :guilabel:`Format` button and and set the desired formatting in the dialog that appears, using standard `Printf-style syntax`_.
 
 .. _Printf-style syntax: https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting
 
-Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers. Clicking the :guilabel:`Resize` will set it automatically.
+Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers.
+Clicking the :guilabel:`Resize` button will set it automatically.
 
 .. image:: images/variable_explorer/variable-explorer-resize.gif
    :align: center
    :alt: Array editor with a 2D int array, showing resizing of columns
  
 |
+
 
 ~~~~~~~~~~
 DataFrames
@@ -121,11 +131,13 @@ Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its Da
 
 |
 
+
+
 ============
 Options Menu
 ============
 
-The options menu in the top right of the Variable Explorer pane allows you filter the variables shown using several criteria. 
+The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria. 
 
 .. image:: images/variable_explorer/variable-explorer-menu.png
    :align: center
@@ -144,10 +156,11 @@ It also allows you to display the min and max of Numpy arrays instead of a previ
 
 
 ===============
-Toolbar Options
+Toolbar Buttons
 ===============
 
-The Variable Explorer's toolbar includes several useful features that affect the entire namespace. For example, you can save the current session's data as a `.spydata` file, which can be loaded later to recover all the variables stored.
+The Variable Explorer's toolbar includes several useful features that affect the entire namespace.
+For example, you can save the current session's data as a ``.spydata`` file, which can be loaded later to recover all the variables stored.
 
 .. image:: images/variable_explorer/variable-explorer-import-data.gif
    :align: center
@@ -166,11 +179,13 @@ There is also a button to remove all displayed variables, and a search box to fi
 Finally, there is a button to refresh the Variable Explorer's contents, which will update it to show the current state of the code running in the IPython console.
 
 
+
 ======================
 Advanced Functionality
 ======================
 
-The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types. These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy of one of them under a new name you enter in the resulting dialog box.
+The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.
+These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy of one of them under a new name you enter in the resulting dialog box.
 
 .. image:: images/variable_explorer/variable-explorer-duplicate.gif
    :align: center
@@ -178,7 +193,8 @@ The context menu, available by right-clicking any variable, provides numerous ad
 
 | 
 
-Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose. This allows you to change the type of the variable that you are pasting which can be very useful, allowing to, for example, easily copy the elements of a list into an array.
+Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose.
+This allows you to change the type of the variable that you are pasting which can be very useful, allowing you to, for example, easily copy the elements of a list into an array.
 
 .. image:: images/variable_explorer/variable-explorer-copy-paste.gif
    :align: center
@@ -186,7 +202,8 @@ Furthermore, you can copy and paste the value of a variable, saving it in the Va
 
 | 
 
-Additionally, you can create a variable from scratch directly in the Variable Explorer with the :guilabel:`Insert` option, which allows you to type the key (which should be in quotation marks) and the value for the item that you want to insert. In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more.
+Additionally, you can create an object from scratch directly in the Variable Explorer with the :guilabel:`Insert` option, which allows you to type the key (which should be in quotation marks) and the value for the item that you want to insert.
+In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more.
 
 .. image:: images/variable_explorer/variable-explorer-insert.gif
    :align: center
