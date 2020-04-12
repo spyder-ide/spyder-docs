@@ -155,6 +155,7 @@ It also allows you to display the min and max of Numpy arrays instead of a previ
 |
 
 
+
 ===============
 Toolbar Buttons
 ===============
