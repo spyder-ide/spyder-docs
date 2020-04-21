@@ -40,8 +40,8 @@ Contents
     editor
     ipythonconsole
     variableexplorer
-    plots
     help
+    plots
     debugging
     pylint
     profiler

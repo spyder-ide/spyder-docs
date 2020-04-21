@@ -11,8 +11,7 @@ It will show you plots from the :doc:`ipythonconsole`, produced by your code in 
 
 |
 
-The plots in the Plots pane depend on the Console you are working on. 
-This means that when switching to another console, the plots from your previous one will disappear, showing you a blank pane.
+The figures shown in the Plots pane are those associated with the currently active :guilabel:`Console` tab; if you switch consoles, the list of plots displayed (or none at all, if a new console) will change accordingly.
 
 .. image:: images/plots/plots-switch.gif
    :align: center
@@ -26,15 +25,15 @@ This means that when switching to another console, the plots from your previous 
 Options Menu
 ============
 
-The options menu in the top right of the :guilabel:`Plots` pane offers several options to customize your plots visualization.
+The options menu in the top right of the :guilabel:`Plots` pane offers several ways to customize how your plots are displayed.
 
 
 ~~~~~~~~~~~~~~~~~~~~
 Mute inline plotting
 ~~~~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Mute inline plotting` option is enabled by default, preventing the figures from also appearing in the Console. 
-If you deactivate this option, the plots are generated will appear in the Console every time you run your code.
+The :guilabel:`Mute inline plotting` option is enabled by default, preventing your plots from appearing in the Console.
+If you deactivate this option, figures will display in both the Plots pane and the Console.
 
 .. image:: images/plots/plots-inline-plotting.gif
    :align: center
@@ -47,7 +46,7 @@ If you deactivate this option, the plots are generated will appear in the Consol
 Show plot outline
 ~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Show plot outline` option shows an outline box surrounding the area of the plot, with which you can export the plots.
+The :guilabel:`Show plot outline` option, off by default, shows a thin stroke surrounding the area of the figure area, which will also appear in the exported images.
 
 .. image:: images/plots/plots-outline.gif
    :align: center
@@ -60,8 +59,8 @@ The :guilabel:`Show plot outline` option shows an outline box surrounding the ar
 Fit plots to window
 ~~~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Fit plots to Window` option is also enabled by default making the figures' size to match the size of the pane's window. 
-Disabling it will allow you to zoom the plots in or out using the Zoom buttons at the top of the pane.
+The :guilabel:`Fit plots to Window` option, also enabled by default, sizes the figures to match the pane. 
+Disabling it will display plots at their native size, and allow you use the zoom buttons at the top of the pane to scale them manually.
 
 .. image:: images/plots/plots-zoom.gif
    :align: center
@@ -75,8 +74,8 @@ Disabling it will allow you to zoom the plots in or out using the Zoom buttons a
 Toolbar Options
 ===============
 
-On top of the Plots pane you will find the toolbar, which provides several useful features that allow you to interact with the plots. 
-For example, you can navigate through the plots in the pane visible in the thumbnails by using the arrows.
+The toolbar at the top of the Plots pane provides several useful features that allow you to interact with your figures.
+For example, you can cycle sequentially through the plot list with the forward and back arrows.
 
 .. image:: images/plots/plots-arrows.gif
    :align: center
@@ -84,7 +83,7 @@ For example, you can navigate through the plots in the pane visible in the thumb
 
 |
 
-You can also save one or all the plots in the pane as PNGs by clicking the "Save" icon in the toolbar.
+You can also save one or all the plots in the pane as PNGs by clicking the respective icons in the toolbar.
 
 .. image:: images/plots/plots-save.gif
    :align: center
@@ -92,7 +91,7 @@ You can also save one or all the plots in the pane as PNGs by clicking the "Save
 
 |
 
-Additionally, if you want to use a plot in another document, you can click the “Copy to Clipboard” button and paste your plot wherever you want, such as a word processor.
+Additionally, if you want to use a figure in another document, you can click the "copy to clipboard" button and paste your plot wherever you want, such as a word processor.
 
 .. image:: images/plots/plots-copy.gif
    :align: center
@@ -100,7 +99,7 @@ Additionally, if you want to use a plot in another document, you can click the �
 
 |
 
-Finally, you can use the "Remove" buttons in the Toolbar to delete one or all the plots in the pane.
+Finally, you can use the "remove" and "remove all" buttons in the toolbar to clear plots from the list.
 
 .. image:: images/plots/plots-remove.gif
    :align: center
@@ -113,4 +112,5 @@ Finally, you can use the "Remove" buttons in the Toolbar to delete one or all th
 Related components
 ~~~~~~~~~~~~~~~~~~
 
+* :doc:`ipythonconsole`
 * :doc:`variableexplorer`
