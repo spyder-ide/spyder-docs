@@ -41,6 +41,7 @@ Contents
     ipythonconsole
     variableexplorer
     help
+    plots
     debugging
     pylint
     profiler
