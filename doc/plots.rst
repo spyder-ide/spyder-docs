@@ -83,7 +83,8 @@ For example, you can cycle sequentially through the plot list with the forward a
 
 |
 
-You can also save one or all the plots in the pane as PNGs by clicking the respective icons in the toolbar.
+You can also save one or all the plots in the pane to file(s) by clicking the respective "save"/"save all" icons in the toolbar.
+Plots are rendered and saved as PNG by default, but SVG can be selected as an option under :menuselection:`Preferences --> IPython console --> Graphics --> Inline backend --> Format`.
 
 .. image:: images/plots/plots-save.gif
    :align: center
