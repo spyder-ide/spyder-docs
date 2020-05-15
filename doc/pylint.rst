@@ -2,8 +2,9 @@
 Code Analysis
 #############
 
-The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it. Based on this, it gives you a global evaluation of your code reflected on a score from 0 to 10.
-Spyder's code analyzer is powered by the best in class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of problem signatures.
+The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
+Based on this, it gives you a global evaluation of your code reflected on a score from 0 to 10.
+Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of problem signatures.
 
 .. _Pylint: https://www.pylint.org/
 
@@ -20,14 +21,14 @@ Using the code analyzer
 =======================
 
 You can select the desired file to analyze directly in the :doc:`editor` by clicking anywhere within it.
-To run it, click the :guilabel:`Analyze` button in the pane, press the configurable code analysis shortcut (:kbd:`F8` by default) or select :menuselection:`Sour&ce --> Run code analysis` from the menubar. All standard checks are run by default.
+To run it, click the :guilabel:`Analyze` button in the pane, press the configurable code analysis shortcut (:kbd:`F8` by default) or select :menuselection:`Source --> Run code analysis` from the menu bar.
+All standard checks are run by default.
 To go directly to line in the :doc:`editor` highlighted by a failed check, just click its name.
 
 .. image:: images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
 
 |
-
 
 You can manually enter the Python module or package path you'd like it to check in the path entry textbox in the :guilabel:`Code Analysis` pane. 
 The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Python packages (directories containing an :file:`__init__.py` file).
@@ -36,7 +37,6 @@ The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Pyth
    :alt: Spyder Pylint pane, showing running analysis browsing file
 
 |
-
 
 Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. 
 If Pylint does succeed, the :guilabel:`Output` will show the full plain text of the same messages displayed in the pane.
