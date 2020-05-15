@@ -3,8 +3,8 @@ Code Analysis
 #############
 
 The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
-Based on this, it gives you a global evaluation of your code reflected on a score from 0 to 10.
-Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of problem signatures.
+Based on these results, it also gives your code an overall quality score.
+Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
 
 .. _Pylint: https://www.pylint.org/
 
@@ -21,17 +21,18 @@ Using the code analyzer
 =======================
 
 You can select the desired file to analyze directly in the :doc:`editor` by clicking anywhere within it.
-To run it, click the :guilabel:`Analyze` button in the pane, press the configurable code analysis shortcut (:kbd:`F8` by default) or select :menuselection:`Source --> Run code analysis` from the menu bar.
+To run the analysis, press the configurable shortcut (:kbd:`F8` by default), select :menuselection:`Source --> Run code analysis` from the menu bar or click the :guilabel:`Analyze` button in the Code Analysis pane.
+If the Code Analysis pane is not visible, you can open it under :menuselection:`View --> Panes --> Code Analysis`.
 All standard checks are run by default.
-To go directly to line in the :doc:`editor` highlighted by a failed check, just click its name.
+To go directly to a line in the :doc:`editor` highlighted by a failed check, just click its name.
 
 .. image:: images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
 
 |
 
-You can manually enter the Python module or package path you'd like it to check in the path entry textbox in the :guilabel:`Code Analysis` pane. 
-The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Python packages (directories containing an :file:`__init__.py` file).
+You can also manually enter the path of a file you'd like it to check in the path entry box in the pane's toolbar.
+The analyzer works with both individual scripts and whole Python packages (directories containing an :file:`__init__.py` file).
 
 .. image:: images/pylint/code-analysis-file.gif
    :alt: Spyder Pylint pane, showing running analysis browsing file
@@ -39,7 +40,7 @@ The analyzer works with both ``.py`` (or ``.pyw``) Python scripts and whole Pyth
 |
 
 Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. 
-If Pylint does succeed, the :guilabel:`Output` will show the full plain text of the same messages displayed in the pane.
+If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.
 
 .. image:: images/pylint/code-analysis-output.png
    :align: center
@@ -55,6 +56,8 @@ You can click the dropdown or press the dropdown arrow in the filename field to 
 
 |
 
+You can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
+
 
 
 ============
@@ -68,7 +71,7 @@ The number of recent runs Spyder should remember can be customized in the :guila
 
 |
 
-You can also expand or collapse one or all the sections in the pane by using the corresopnding options in the context menu.
+You can also expand or collapse one or all the sections in the pane by using the corresponding options in the context menu.
 
 .. image:: images/pylint/code-analysis-expand-collapse.gif
    :alt: Spyder Pylint pane, expanding and collapsing sections
@@ -81,9 +84,10 @@ You can also expand or collapse one or all the sections in the pane by using the
 Advanced options
 ================
 
-You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=<list of message names>`` comment at the respective `level`_, (LINK) where the ``<...>`` portion should be replaced with a comma-separated list (or single value) without the ``<``/``>`` of Pylint message names (*e.g.* ``multiple-statements``, or ``fixme, line-too-long``; you can also use `error codes`_ like ``C0321`` although names are preferred for clarity).  
+You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_.
+For example, a directive might look like ``# pylint: disable=multiple-statements``, or ``# pylint: disable=fixme, line-too-long``. 
 
-.. _scope: http://pylint.pycqa.org/en/latest/user_guide/message-control.html
+.. _scope: http://pylint.pycqa.org/en/stable/user_guide/message-control.html
 
 .. _Pylint message names: http://pylint.pycqa.org/en/latest/technical_reference/features.html#pylint-checkers-options-and-switches
 
@@ -92,10 +96,11 @@ You can turn certain messages off at the line, block or file/module level by add
 
 |
 
-Or, you can globally suppress certain messages by editing the :file:`.pylintrc` configuration file in your user home directory.
+Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user folder.
+If it doesn't exist, you can generate it by running `pylint --generate-rcfile > .pylintrc` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the `Pylint documentation`_.
 
-.. _Pylint documentation: https://pylint.readthedocs.io/en/latest/faq.html#message-control
+.. _Pylint documentation:  http://pylint.pycqa.org/en/stable/index.html
 
 .. image:: images/pylint/code-analysis-pylint-file.gif
    :alt: Spyder Pylint pane, disabling a message globally in the .pylintrc
