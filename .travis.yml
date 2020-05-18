@@ -22,7 +22,11 @@ script:
   - "make html"
   - "make linkcheck"
   - "cd .."
-  - "doctr deploy . --built-docs doc/_build/html --branch-whitelist 3.x"
+  - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
+      doctr deploy develop --built-docs doc/_build/html;
+    else
+      doctr deploy . --built-docs doc/_build/html --branch-whitelist 3.x;
+    fi
 
 notifications:
   email: false
