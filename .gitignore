@@ -32,3 +32,10 @@ spyder_crash.log
 *.tmp
 *.temp
 *.bak
+
+spyder/
+spyder-repo/
+
+doc/modules.rst
+doc/spyder*
+doc/api*

@@ -51,3 +51,4 @@ Contents
     onlinehelp
     historylog
     internalconsole
+    modules.rst

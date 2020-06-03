@@ -1,27 +1,55 @@
 # https://travis-ci.org/spyder-ide/spyder-docs
 
 language: python
+
 dist: bionic
 
-python:
-  - 3.7
+services:
+  - xvfb
 
 # Give doctr our deploy key
 env:
   global:
-    secure: "Kyk5NrwAnxbQoanhqkI/XGMXLzJKaxUiN3j0w1j63r1qJUAntKf9lY7iRupmdc6ZxgoJhtNYFAw+wVGaWQ6aoqWLZOGJ03GX+UVfWNtB+kKhsSWzVxdjxoup/jsRJquIZ2TxSKTNcXSrqIPMQbtTPDFWkmpn8pZR7ply3OBFRQY2ZVAIVkE2pl16rNw/vChfs3QA/duNWFwhRVNr/O5u/Af0Lmm7gjPPfjZOObg/hPLklH7KOMSf0Br0pwBatG1Ld60DQp49piMSsEty0xlGVBs1Dh5y8hd4HIzWOPW9cdd4klSljH37sxyInlOC2crmC3ey64oPwMqgdfGRDz/CCnTOwW0J/UTJLekNx9cN8Sp2RfKk1qcLaVuODUJiKzFQPZw6dC+cypyVtTS6gmS1D1yDaYXNdtTtYjZc9IY4MH6Z2alzJLq0WLyJJcyyG6bG449KVC523kJY/r/klVwq5zyyaP/pXol0zc8rVh6jN9XLJb8N308ZvN6/5bTIY0qUqICT2vZEmPwjpIpJCrpnrLQ6TQWCsk+htEAYHXNUKm1bA+I1gpCGQVfK6YUGF9SERnao71H2/nB9SPgAdK+TmMGApUAHjQGL6e46SQhHC7Ct+TE52nFlM/tzHxMsPFdgyqNKJVsNwwtMcaA5YvpAan+cDi9h++3+CO3hV4ysUgI="
+    - CI="True"
+    - secure: "Kyk5NrwAnxbQoanhqkI/XGMXLzJKaxUiN3j0w1j63r1qJUAntKf9lY7iRupmdc6ZxgoJhtNYFAw+wVGaWQ6aoqWLZOGJ03GX+UVfWNtB+kKhsSWzVxdjxoup/jsRJquIZ2TxSKTNcXSrqIPMQbtTPDFWkmpn8pZR7ply3OBFRQY2ZVAIVkE2pl16rNw/vChfs3QA/duNWFwhRVNr/O5u/Af0Lmm7gjPPfjZOObg/hPLklH7KOMSf0Br0pwBatG1Ld60DQp49piMSsEty0xlGVBs1Dh5y8hd4HIzWOPW9cdd4klSljH37sxyInlOC2crmC3ey64oPwMqgdfGRDz/CCnTOwW0J/UTJLekNx9cN8Sp2RfKk1qcLaVuODUJiKzFQPZw6dC+cypyVtTS6gmS1D1yDaYXNdtTtYjZc9IY4MH6Z2alzJLq0WLyJJcyyG6bG449KVC523kJY/r/klVwq5zyyaP/pXol0zc8rVh6jN9XLJb8N308ZvN6/5bTIY0qUqICT2vZEmPwjpIpJCrpnrLQ6TQWCsk+htEAYHXNUKm1bA+I1gpCGQVfK6YUGF9SERnao71H2/nB9SPgAdK+TmMGApUAHjQGL6e46SQhHC7Ct+TE52nFlM/tzHxMsPFdgyqNKJVsNwwtMcaA5YvpAan+cDi9h++3+CO3hV4ysUgI="
+
+before_install:
+  - sudo apt-get install -y libdbus-1-3 libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xfixes0 libegl1-mesa libgl1-mesa-dri
+  # Here we just install Miniconda, which you shouldn't have to change.
+  - wget http://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=/home/travis/miniconda3/bin:$PATH
+  - conda update conda -q -y
+  - eval "$(conda shell.bash hook)"
+  - conda activate base
+  - conda info
+  - conda list
 
 install:
-  - pip install -U pip
-  - pip install sphinx doctr
+  # Clone Spyder repo
+  # - git clone https://github.com/spyder-ide/spyder.git spyder-repo
+  - git clone https://github.com/goanpeca/spyder.git spyder-repo
+  - cd spyder-repo
+  - git checkout enh/updates-for-sphinx-parsing
+  - cd ..
+  # Install spyder requirements
+  - conda create -n spyder python=3.6 --file spyder-repo/requirements/conda.txt -q -y -c spyder-ide/label/alpha
+  - conda install -n spyder --file spyder-repo/requirements/tests.txt -q -y -c spyder-ide
+  - conda activate spyder
+  - conda remove spyder-kernels --force -q -y
+  - conda remove python-language-server --force -q -y
+  - xvfb-run --server-args="-screen 0 1024x768x24" -e /dev/stdout --auto-servernum --server-num=1 python spyder-repo/bootstrap.py -- --reset
+  - pip install git+https://github.com/spyder-ide/spyder-kernels.git 
+  - pip install git+https://github.com/palantir/python-language-server.git 
+  - pip install doctr
+  - conda info
+  - conda list
 
 script:
   - set -e
-  - cd doc
-  - touch *.rst
-  - make html
-  - make linkcheck
-  - cd ..
+  - make autodocs
+  - make docs
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;
     else
