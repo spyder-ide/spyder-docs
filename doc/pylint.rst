@@ -5,7 +5,7 @@ Static Code Analysis
 The **Static Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
 Spyder's static analyzer is powered by the best in class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of problem signatures.
 
-.. _Pylint: https://www.pylint.org/
+.. _Pylint: http://pylint.pycqa.org/
 
 .. image:: images/pylint/static_analysis_standard.png
    :alt: Spyder Pylint pane, showing numerous issues discovered in a file

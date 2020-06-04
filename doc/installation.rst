@@ -150,7 +150,7 @@ The requirements to run Spyder are:
 
 * `Pygments <http://pygments.org/>`_ >=2.0 -- for syntax highlighting and code completion in the Editor of all file types it supports.
 
-* `Pylint <https://www.pylint.org/>`_  -- for static code analysis.
+* `Pylint <http://pylint.pycqa.org/>`_  -- for static code analysis.
 
 * `Psutil <https://github.com/giampaolo/psutil>`_  -- for memory/CPU usage in the status bar.
 
