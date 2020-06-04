@@ -1,7 +1,7 @@
 # https://travis-ci.org/spyder-ide/spyder-docs
 
 language: python
-dist: xenial
+dist: bionic
 
 python:
   - 3.7
@@ -9,19 +9,19 @@ python:
 # Give doctr our deploy key
 env:
   global:
-    secure: "nrXxbftS1qwU9Ka9tyAg6GscQIquaEFnfBjn0AvdwjZLAk465yz68sSI7DrtTevzS5hKkiETjR18E4qRS+q/lf86dIbBj+H37bKhVEA1slf/ku0QzwOJS2exDveUMlGzqjRZ/Y7DFiSh2pJ2u5UYfQzLnBNrXnU3GqM3lJiq4n+wWyXRUf72o1vWKOR1Q/ITADS0nNihiBE8zhCZh1EUf3GPih6FBvvcT9JNyhVqAu3vViVHcOxD1MbkGuucurjgLUAtRpWMbrnDBXbiTSxNZkNYVR96nhArE0bEaE4YGXI/G6JO6AXkZ6wb3PhyWk3mw3dkLbTcz81zxf3n+HMrlLOlwJmTQ6XA+2ITJVWkOvqMm14QAqPYcB6VVUjNdBYqPeZcGwRah8ltvhnkUxO0FoefM4gKDBlIPwowFsuFoTNIuKLACIpZ8P4Qu1bNa4K0wKAvFIBCcHcH0scvPhovvGSIn1IYyY+4eoamNhtBGsSswcCbdssZR15TqFeOpVeZhgX43FoLS+c7EpM3NQcyI8wTNAOyLlAFTzGStfojYRPJMPpHGmtdsxfwGNQWrdqK8vKm45yRMgzSkBsAD5hgSLfcb3nsCy7IHxj895w/4k0YMvwqIGQx4fTdlY/9aEdmzjh6WuEfldA4TgPNoFBoSXXtiUJEZ1DWPq+oWWH1XpY="
+    secure: "Kyk5NrwAnxbQoanhqkI/XGMXLzJKaxUiN3j0w1j63r1qJUAntKf9lY7iRupmdc6ZxgoJhtNYFAw+wVGaWQ6aoqWLZOGJ03GX+UVfWNtB+kKhsSWzVxdjxoup/jsRJquIZ2TxSKTNcXSrqIPMQbtTPDFWkmpn8pZR7ply3OBFRQY2ZVAIVkE2pl16rNw/vChfs3QA/duNWFwhRVNr/O5u/Af0Lmm7gjPPfjZOObg/hPLklH7KOMSf0Br0pwBatG1Ld60DQp49piMSsEty0xlGVBs1Dh5y8hd4HIzWOPW9cdd4klSljH37sxyInlOC2crmC3ey64oPwMqgdfGRDz/CCnTOwW0J/UTJLekNx9cN8Sp2RfKk1qcLaVuODUJiKzFQPZw6dC+cypyVtTS6gmS1D1yDaYXNdtTtYjZc9IY4MH6Z2alzJLq0WLyJJcyyG6bG449KVC523kJY/r/klVwq5zyyaP/pXol0zc8rVh6jN9XLJb8N308ZvN6/5bTIY0qUqICT2vZEmPwjpIpJCrpnrLQ6TQWCsk+htEAYHXNUKm1bA+I1gpCGQVfK6YUGF9SERnao71H2/nB9SPgAdK+TmMGApUAHjQGL6e46SQhHC7Ct+TE52nFlM/tzHxMsPFdgyqNKJVsNwwtMcaA5YvpAan+cDi9h++3+CO3hV4ysUgI="
 
 install:
-  - "pip install -U pip"
-  - "pip install sphinx doctr"
+  - pip install -U pip
+  - pip install sphinx doctr
 
 script:
-  - "set -e"
-  - "cd doc"
-  - "touch *.rst"
-  - "make html"
-  - "make linkcheck"
-  - "cd .."
+  - set -e
+  - cd doc
+  - touch *.rst
+  - make html
+  - make linkcheck
+  - cd ..
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;
     else
