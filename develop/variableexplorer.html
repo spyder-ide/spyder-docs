@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Variable Explorer &#8212; Spyder 3 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/bootstrap.css">
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/style.css">
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/styles.css">
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Help" href="help.html" />
+    <link rel="prev" title="IPython Console" href="ipythonconsole.html" />
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/icomoon.css">
+<!-- Simple Line Icons -->
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/simple-line-icons.css">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="https://www.spyder-ide.org/static/css/magnific-popup.css">
+
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+<div class="fh5co-page">
+    <div id="fh5co-container">
+        <div class="js-sticky">
+            <div class="fh5co-main-nav navbar fixed-top">
+                <div class="container">
+                    <div class="fh5co-menu-1">
+                        <div class="pull-left">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li id="menu-logo">
+                                    <p></p>
+                                    <a href="./index.html">
+                                        <img src="https://www.spyder-ide.org/static/images/spyder-logo.svg">
+                                        <span>
+                                            <span id="logo-text"><big>S</big>pyder | Docs</span>
+                                        </span>
+                                    </a>
+                                    <p></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="pull-right" href="https://www.spyder-ide.org/blog">Blog</a>
+                        <a class="pull-right" href="https://www.spyder-ide.org">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div id="doc-content" data-section="Docs">
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="variable-explorer">
+<h1>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Variable Explorer</strong> allows you to interactively browse and manage the objects generated running your code.</p>
+<img alt="Spyder Variable Explorer execution with a variable of type list" class="align-center" src="_images/variable-explorer-execution.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a> session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.</p>
+<img alt="Spyder Variable Explorer, with a list of variables and their contents" class="align-center" src="_images/variable-explorer-standard.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The Variable Explorer gives you information on the name, size, type and value of each object.
+To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.</p>
+<img alt="Spyder Variable Explorer modifying value of a variable" class="align-center" src="_images/variable-explorer-modifying.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="object-viewers">
+<h2>Object Viewers<a class="headerlink" href="#object-viewers" title="Permalink to this headline">¶</a></h2>
+<p>Spyder’s <span class="guilabel">Variable Explorer</span> offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.</p>
+<div class="section" id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
+<p>When a string variable is longer than forty characters, you can double click it to see its value in a text editor to more easily modify it.</p>
+<a class="reference internal image-reference" href="_images/variable-explorer-text-long.png"><img alt="Variable Explorer text editor, displaying a long string in a window" class="align-center" src="_images/variable-explorer-text-long.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value.
+You can double click any of the values to modify them, which will open a new viewer if the value is itself an object.</p>
+<a class="reference internal image-reference" href="_images/variable-explorer-dictionary.png"><img alt="Dictionary editor displaying keys and their types, sizes, and values" class="align-center" src="_images/variable-explorer-dictionary.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>For lists, the main Variable Explorer displays a preview of the first ten values.
+To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
+Just like dictionaries, you can double-click values to edit them.</p>
+<a class="reference internal image-reference" href="_images/variable-explorer-list.png"><img alt="List editor displaying a list, showing one being edited" class="align-center" src="_images/variable-explorer-list.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="numpy-arrays">
+<h3>Numpy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>Like lists, for Numpy arrays the Variable Explorer shows a preview of their values.
+Double-clicking them will open a viewer displaying the array values in a “heat map”, with each value in a grid cell colored based on its numeric quantity.
+You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.</p>
+<img alt="Array editor array, displaying a &quot;heatmap&quot; of its values" class="align-center" src="_images/variable-explorer-heat-map.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If supported by the datatype, you can also change the format of the array’s values, choosing the number of decimals that you want the array to display.
+For this, click the <span class="guilabel">Format</span> button and and set the desired formatting in the dialog that appears, using standard <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting">Printf-style syntax</a>.</p>
+<p>Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers.
+Clicking the <span class="guilabel">Resize</span> button will set it automatically.</p>
+<img alt="Array editor with a 2D int array, showing resizing of columns" class="align-center" src="_images/variable-explorer-resize.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="dataframes">
+<h3>DataFrames<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
+<p>DataFrames, like Numpy arrays, display in a viewer where you can show or hide “heatmap” colors, change the format and resize the rows and columns either manually or automatically.</p>
+<img alt="Dataframe editor showing data frame &quot;heatmap&quot;" class="align-center" src="_images/variable-explorer-dataframe.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
+<img alt="Dataframe editor showing multi-index support" class="align-center" src="_images/variable-explorer-multi-index.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="options-menu">
+<h2>Options Menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
+<p>The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria.</p>
+<img alt="Spyder Variable Explorer, with options menu" class="align-center" src="_images/variable-explorer-menu.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>It also allows you to display the min and max of Numpy arrays instead of a preview of their values.</p>
+<a class="reference internal image-reference" href="_images/variable-explorer-array-min-max.png"><img alt="Variable Explorer showing max and min values of numpy array" class="align-center" src="_images/variable-explorer-array-min-max.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="toolbar-buttons">
+<h2>Toolbar Buttons<a class="headerlink" href="#toolbar-buttons" title="Permalink to this headline">¶</a></h2>
+<p>The Variable Explorer’s toolbar includes several useful features that affect the entire namespace.
+For example, you can save the current session’s data as a <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file, which can be loaded later to recover all the variables stored.</p>
+<img alt="Variable Explorer showing how to save and import data" class="align-center" src="_images/variable-explorer-import-data.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>There is also a button to remove all displayed variables, and a search box to find objects by  name or type.</p>
+<img alt="Variable Explorer showing how to search variables" class="align-center" src="_images/variable-explorer-search.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Finally, there is a button to refresh the Variable Explorer’s contents, which will update it to show the current state of the code running in the IPython console.</p>
+</div>
+<div class="section" id="advanced-functionality">
+<h2>Advanced Functionality<a class="headerlink" href="#advanced-functionality" title="Permalink to this headline">¶</a></h2>
+<p>The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.
+These include renaming, removing or editing existing variables, as well as the <span class="guilabel">duplicate</span> option to create a new copy of one of them under a new name you enter in the resulting dialog box.</p>
+<img alt="Variable Explorer showing duplicating a variable" class="align-center" src="_images/variable-explorer-duplicate.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose.
+This allows you to change the type of the variable that you are pasting which can be very useful, allowing you to, for example, easily copy the elements of a list into an array.</p>
+<img alt="Variable Explorer showing copying list into array" class="align-center" src="_images/variable-explorer-copy-paste.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Additionally, you can create an object from scratch directly in the Variable Explorer with the <span class="guilabel">Insert</span> option, which allows you to type the key (which should be in quotation marks) and the value for the item that you want to insert.
+In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more.</p>
+<img alt="Variable Explorer showing insertion of a new variable" class="align-center" src="_images/variable-explorer-insert.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For lists and Numpy arrays, more advanced options are available, including generating plots and histograms of their values appropriate to their type and dimensions.</p>
+<img alt="Plot window showing a plot, generated via the previous options" class="align-center" src="_images/variable-explorer-histogram-plot.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You can even save an array to a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> file by simply clicking the appropriate option, which can later be loaded by Spyder or in your code via <cite>numpy.load()</cite>.</p>
+<a class="reference internal image-reference" href="_images/variable-explorer-contextmenu-array.png"><img alt="Context menu for an int array, with the Show image option selected" class="align-center" src="_images/variable-explorer-contextmenu-array.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib’s colormaps, which can be <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">easily changed to match your preferences</a>.</p>
+<img alt="Interactive image based on the array's data" class="align-center" src="_images/variable-explorer-show-image.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Finally, we added a context-menu action to open any object using the new Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these datatypes.</p>
+<img alt="Object explorer showing dataframe" class="align-center" src="_images/variable-explorer-object-explorer.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="related-components">
+<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Spyder</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command Line Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">IPython Console</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variable Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#object-viewers">Object Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-menu">Options Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar-buttons">Toolbar Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-functionality">Advanced Functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static Code Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiler.html">Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">History Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internalconsole.html">Internal Console</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ">Troubleshooting</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/spyder-ide/spyder/wiki">Spyder Wiki</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'spyder-ide/public',
+        activationElement: '#open_chat',
+    };
+</script>
+<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
+
+<div id="fh5co-footer">
+    <div class="container">
+        <div class="row">
+                    <a href="https://opencollective.com/spyder/donate" target="_blank">
+                      <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
+                    </a>
+        </div>
+        <br>
+        <div class="row">
+            <div class="text-center">
+              <p><small>
+                Connect with us on: 
+                <a href="https://github.com/spyder-ide/spyder">Github</a>
+                <span class="pipe-red">|</span> <a href="https://twitter.com/spyder_ide">Twitter</a>
+                <span class="pipe-red">|</span> <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
+                <span class="pipe-red">|</span> <a href="https://groups.google.com/group/spyderlib">Google Groups</a>           
+              </small></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <p>
+                    &copy; 2018 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>
+                </p>
+                <p>
+                    
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+                    &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+                    
+                    <span class="pipe-red">|</span>
+                    <a href="_sources/variableexplorer.rst.txt"
+                        rel="nofollow">Page source</a>
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>        
+</div>
+</div>
+
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<!-- jQuery Easing -->
+<script src="https://www.spyder-ide.org/static/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://www.spyder-ide.org/static/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://www.spyder-ide.org/static/js/jquery.waypoints.min.js"></script>
+<!-- Stellar Parallax -->
+<script src="https://www.spyder-ide.org/static/js/jquery.stellar.min.js"></script>
+<!-- Magnific Popup -->
+<script src="https://www.spyder-ide.org/static/js/jquery.magnific-popup.min.js"></script>
+<script src="https://www.spyder-ide.org/static/js/magnific-popup-options.js"></script>
+<!-- Main JS -->
+<script src="https://www.spyder-ide.org/static/js/main.js"></script>
+
+  </body>
+</html>
