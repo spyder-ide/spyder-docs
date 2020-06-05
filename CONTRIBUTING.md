@@ -79,19 +79,21 @@ conda install sphinx
 Or, if using ``pip``, you can grab it with
 
 ```bash
+python -m pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git
 pip install sphinx
 ```
 
-Now, ``cd`` into the ``doc`` directory in your clone of this repo, and run
-
 ```bash
-make html
+make docs
+make serve
 ```
 
-or, if on Windows
+or, if on Windows:
 
 ```cmd
+cd doc
 make.bat html
+cd ..
 ```
 
 to run the build. You should be able to view the html output inside the

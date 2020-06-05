@@ -4,24 +4,22 @@ language: python
 dist: bionic
 
 python:
-  - 3.7
+  - 3.6
 
 # Give doctr our deploy key
 env:
   global:
-    secure: "Kyk5NrwAnxbQoanhqkI/XGMXLzJKaxUiN3j0w1j63r1qJUAntKf9lY7iRupmdc6ZxgoJhtNYFAw+wVGaWQ6aoqWLZOGJ03GX+UVfWNtB+kKhsSWzVxdjxoup/jsRJquIZ2TxSKTNcXSrqIPMQbtTPDFWkmpn8pZR7ply3OBFRQY2ZVAIVkE2pl16rNw/vChfs3QA/duNWFwhRVNr/O5u/Af0Lmm7gjPPfjZOObg/hPLklH7KOMSf0Br0pwBatG1Ld60DQp49piMSsEty0xlGVBs1Dh5y8hd4HIzWOPW9cdd4klSljH37sxyInlOC2crmC3ey64oPwMqgdfGRDz/CCnTOwW0J/UTJLekNx9cN8Sp2RfKk1qcLaVuODUJiKzFQPZw6dC+cypyVtTS6gmS1D1yDaYXNdtTtYjZc9IY4MH6Z2alzJLq0WLyJJcyyG6bG449KVC523kJY/r/klVwq5zyyaP/pXol0zc8rVh6jN9XLJb8N308ZvN6/5bTIY0qUqICT2vZEmPwjpIpJCrpnrLQ6TQWCsk+htEAYHXNUKm1bA+I1gpCGQVfK6YUGF9SERnao71H2/nB9SPgAdK+TmMGApUAHjQGL6e46SQhHC7Ct+TE52nFlM/tzHxMsPFdgyqNKJVsNwwtMcaA5YvpAan+cDi9h++3+CO3hV4ysUgI="
+    - CI="true"
+    - secure: "Kyk5NrwAnxbQoanhqkI/XGMXLzJKaxUiN3j0w1j63r1qJUAntKf9lY7iRupmdc6ZxgoJhtNYFAw+wVGaWQ6aoqWLZOGJ03GX+UVfWNtB+kKhsSWzVxdjxoup/jsRJquIZ2TxSKTNcXSrqIPMQbtTPDFWkmpn8pZR7ply3OBFRQY2ZVAIVkE2pl16rNw/vChfs3QA/duNWFwhRVNr/O5u/Af0Lmm7gjPPfjZOObg/hPLklH7KOMSf0Br0pwBatG1Ld60DQp49piMSsEty0xlGVBs1Dh5y8hd4HIzWOPW9cdd4klSljH37sxyInlOC2crmC3ey64oPwMqgdfGRDz/CCnTOwW0J/UTJLekNx9cN8Sp2RfKk1qcLaVuODUJiKzFQPZw6dC+cypyVtTS6gmS1D1yDaYXNdtTtYjZc9IY4MH6Z2alzJLq0WLyJJcyyG6bG449KVC523kJY/r/klVwq5zyyaP/pXol0zc8rVh6jN9XLJb8N308ZvN6/5bTIY0qUqICT2vZEmPwjpIpJCrpnrLQ6TQWCsk+htEAYHXNUKm1bA+I1gpCGQVfK6YUGF9SERnao71H2/nB9SPgAdK+TmMGApUAHjQGL6e46SQhHC7Ct+TE52nFlM/tzHxMsPFdgyqNKJVsNwwtMcaA5YvpAan+cDi9h++3+CO3hV4ysUgI="
 
 install:
   - pip install -U pip
   - pip install sphinx doctr
+  - pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git
+  - make docs
 
 script:
   - set -e
-  - cd doc
-  - touch *.rst
-  - make html
-  - make linkcheck
-  - cd ..
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;
     else
