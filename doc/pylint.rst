@@ -48,7 +48,7 @@ If Pylint does succeed, the :guilabel:`Output` will show the raw plain text anal
 
 |
 
-You can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
+Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
 
 .. image:: images/pylint/code-analysis-history.png
    :align: center
@@ -64,14 +64,14 @@ You can click the dropdown or press the dropdown arrow in the filename field to 
 Options menu
 ============
 
-The number of recent runs Spyder should remember can be customized in the :guilabel:`History` dialog, available from the :guilabel:`Code Analysis` options menu.
+The number of recent runs Spyder should remember can be customized in the :guilabel:`History` dialog, available from the Code Analysis options menu.
 
 .. image:: images/pylint/code-analysis-history-custom.gif
    :alt: Spyder Pylint pane, customizing history dialog
 
 |
 
-You can also expand or collapse one or all the sections in the pane by using the corresponding options in the context menu.
+You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu.
 
 .. image:: images/pylint/code-analysis-expand-collapse.gif
    :alt: Spyder Pylint pane, expanding and collapsing sections
@@ -85,7 +85,7 @@ Advanced options
 ================
 
 You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_.
-For example, a directive might look like ``# pylint: disable=multiple-statements``, or ``# pylint: disable=fixme, line-too-long``. 
+For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``. 
 
 .. _scope: http://pylint.pycqa.org/en/stable/user_guide/message-control.html
 
@@ -97,7 +97,7 @@ For example, a directive might look like ``# pylint: disable=multiple-statements
 |
 
 Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user folder.
-If it doesn't exist, you can generate it by running `pylint --generate-rcfile > .pylintrc` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
+If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the `Pylint documentation`_.
 
 .. _Pylint documentation:  http://pylint.pycqa.org/en/stable/index.html
