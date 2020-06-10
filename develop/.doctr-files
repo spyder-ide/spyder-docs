@@ -1,4 +1,13 @@
 develop/_images/breakpoints_standard.png
+develop/_images/code-analysis-editor.gif
+develop/_images/code-analysis-expand-collapse.gif
+develop/_images/code-analysis-file.gif
+develop/_images/code-analysis-history-custom.gif
+develop/_images/code-analysis-history.png
+develop/_images/code-analysis-output.png
+develop/_images/code-analysis-pylint-disable.gif
+develop/_images/code-analysis-pylint-file.gif
+develop/_images/code-analysis-standard.png
 develop/_images/console_completion.png
 develop/_images/console_dialog_connect.png
 develop/_images/console_menu.png
@@ -42,7 +51,6 @@ develop/_images/profiler_comparison.png
 develop/_images/profiler_standard.png
 develop/_images/project_explorer_inset_contextmenu.png
 develop/_images/project_explorer_standard.png
-develop/_images/static_analysis_standard.png
 develop/_images/variable-explorer-array-min-max.png
 develop/_images/variable-explorer-contextmenu-array.png
 develop/_images/variable-explorer-copy-paste.gif

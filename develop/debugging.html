@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debugging &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -22,7 +23,7 @@
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Static Code Analysis" href="pylint.html" />
+    <link rel="next" title="Code Analysis" href="pylint.html" />
     <link rel="prev" title="Plots" href="plots.html" />
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
 <!-- Icomoon Icon Fonts-->
@@ -92,7 +93,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 <li><p>Multiple means of setting and clearing normal and conditional breakpoints for any line in a file opened in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>.</p>
 <ul>
 <li><p>By selecting the respective option from the Debug menu.</p></li>
-<li><p>Through pressing a configurable keyboard shortcut (<kbd class="kbd docutils literal notranslate">F12</kbd> for normal, or <kbd class="kbd docutils literal notranslate">Shift-F12</kbd> for conditional breakpoints by default).</p></li>
+<li><p>Through pressing a configurable keyboard shortcut (<kbd class="kbd docutils literal notranslate">F12</kbd> for normal, or <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">F12</kbd></kbd> for conditional breakpoints by default).</p></li>
 <li><p>By double-clicking to the left of the line number in an open file.</p></li>
 <li><p>With an <code class="docutils literal notranslate"><span class="pre">ipdb.set_trace()</span></code> statement in your code (after <code class="docutils literal notranslate"><span class="pre">import</span></code> ing <code class="docutils literal notranslate"><span class="pre">pdb</span></code>).</p></li>
 <li><p>Interactively, using the <code class="docutils literal notranslate"><span class="pre">b</span></code> command in an <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> session.</p></li>
@@ -101,7 +102,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 </ul>
 <a class="reference internal image-reference" href="_images/breakpoints_standard.png"><img alt="Spyder's Breakpoints panel, with a number of examples showing file, line number and an optional condition" class="align-right" src="_images/breakpoints_standard.png" style="width: 50%;" /></a>
 <ul class="simple">
-<li><p>A <span class="guilabel">Breakpoints</span> pane, listing the file, line, and condition (if any) of every breakpoint defined (<span class="menuselection"><span class="accelerator">D</span>ebug ‣ List breakpoints</span>, or <kbd class="kbd docutils literal notranslate">Ctrl-Shift-B</kbd> by default).</p></li>
+<li><p>A <span class="guilabel">Breakpoints</span> pane, listing the file, line, and condition (if any) of every breakpoint defined (<span class="menuselection"><span class="accelerator">D</span>ebug ‣ List breakpoints</span>, or <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd></kbd> by default).</p></li>
 <li><p>Full GUI control over debugger execution from the <span class="guilabel">Debug</span> menu, <span class="guilabel">Debug toolbar</span> and via configurable keyboard shortcuts, along with the standard <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> console commands.</p></li>
 </ul>
 <a class="reference internal image-reference" href="_images/debugging_condbreakpoint.png"><img alt="Inset of Spyder's Editor, with a breakpoint set and the condition dialog open" class="align-right" src="_images/debugging_condbreakpoint.png" style="width: 50%;" /></a>
@@ -151,7 +152,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 <li class="toctree-l2"><a class="reference internal" href="#debugging-with-ipdb">Debugging with ipdb</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static Code Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Code Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profiler.html">Profiler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">File Explorer</a></li>
@@ -231,7 +232,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
                 </p>
                 <p>
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.0</a>
                     &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
                     
                     <span class="pipe-red">|</span>
