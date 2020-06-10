@@ -33,17 +33,18 @@ Contents
 .. toctree::
     :maxdepth: 2
     :glob:
-
+    
+    variableexplorer
+    help
+    plots
+    pylint
+..
     overview
     installation
     options
     editor
     ipythonconsole
-    variableexplorer
-    help
-    plots
     debugging
-    pylint
     profiler
     projects
     fileexplorer
