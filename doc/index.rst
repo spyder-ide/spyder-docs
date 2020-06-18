@@ -38,6 +38,7 @@ Contents
     help
     plots
     pylint
+    profiler
 ..
     overview
     installation
@@ -45,7 +46,6 @@ Contents
     editor
     ipythonconsole
     debugging
-    profiler
     projects
     fileexplorer
     findinfiles
