@@ -1,5 +1,4 @@
 
-from __future__ import absolute_import
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 # -*- coding: utf-8 -*-
@@ -324,10 +323,10 @@ class IframeVideo(Directive):
 
 
 class Youtube(IframeVideo):
-    html = '<iframe src="http://www.youtube.com/embed/%(video_id)s" \
-    width="%(width)u" height="%(height)u" frameborder="0" \
-    webkitAllowFullScreen mozallowfullscreen allowfullscreen \
-    class="align-%(align)s"></iframe>'
+    html = ('<iframe src="http://www.youtube.com/embed/%(video_id)s'
+            'width="%(width)u" height="%(height)u" frameborder="0"'
+            'webkitAllowFullScreen mozallowfullscreen allowfullscreen'
+            'class="align-%(align)s"></iframe>')
 
 
 def setup(builder):
