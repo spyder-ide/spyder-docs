@@ -76,9 +76,11 @@ develop/_sources/debugging.rst.txt
 develop/_sources/editor.rst.txt
 develop/_sources/fileexplorer.rst.txt
 develop/_sources/findinfiles.rst.txt
+develop/_sources/first-steps-with-spyder.rst.txt
 develop/_sources/help.rst.txt
 develop/_sources/historylog.rst.txt
 develop/_sources/index.rst.txt
+develop/_sources/indexvideos.rst.txt
 develop/_sources/installation.rst.txt
 develop/_sources/internalconsole.rst.txt
 develop/_sources/ipythonconsole.rst.txt
@@ -90,6 +92,7 @@ develop/_sources/profiler.rst.txt
 develop/_sources/projects.rst.txt
 develop/_sources/pylint.rst.txt
 develop/_sources/variableexplorer.rst.txt
+develop/_sources/working-with-spyder.rst.txt
 develop/_static/alabaster.css
 develop/_static/basic.css
 develop/_static/custom.css
@@ -113,10 +116,12 @@ develop/debugging.html
 develop/editor.html
 develop/fileexplorer.html
 develop/findinfiles.html
+develop/first-steps-with-spyder.html
 develop/genindex.html
 develop/help.html
 develop/historylog.html
 develop/index.html
+develop/indexvideos.html
 develop/installation.html
 develop/internalconsole.html
 develop/ipythonconsole.html
@@ -131,3 +136,4 @@ develop/pylint.html
 develop/search.html
 develop/searchindex.js
 develop/variableexplorer.html
+develop/working-with-spyder.html
