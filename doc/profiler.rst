@@ -34,7 +34,7 @@ clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a config
 
 If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in the top right, and if profiling fails for any reason, the :guilabel:`Output` dialog will be displayed, indicating the error that occurred. 
 
-You can double-click an item in the profiler to go directly to the file and line in the :doc:`editor` where it was called.
+By double-clicking an item in the Profiler, you'll be taken to the file and line in the :doc:`editor` where it was called.
 
 .. image:: images/profiler/profiler-open-file.gif
    :alt: Spyder Profiler pane, showing opening a file when clicking on its analysis
@@ -49,14 +49,14 @@ You can increase the number of levels displayed for a particular object by click
 
 |
 
-You can click the dropdown or press the :kbd:`Down Arrow` key in the filename field to recall paths of previous profiled files.
+By clicking the dropdown or press the :kbd:`Down Arrow` key in the filename field, you can recall paths of previous profiled files.
 
 .. image:: images/profiler/profiler-previous-paths.png
    :alt: Spyder Profiler pane, showing dropdown of previous profiled files
 
 |
 
-You can save the data for a given run to disk as a file with the ``.Result`` extension using the :guilabel:`Save data` button, and it can be loaded to compare with another run using the :guilabel:`Load data` button.
+Finally, you can save the data for a given run to disk as a file with the ``.Result`` extension using the :guilabel:`Save data` button. This can be loaded to compare with a previous run of the same file using the :guilabel:`Load data` button.
 To remove the loaded data, click the :guilabel:`Clear comparison` button.
 
 .. image:: images/profiler/profiler-save-load.gif
@@ -90,14 +90,14 @@ Meanwhile, :guilabel:`Total Time` for ``print_wrapper()`` would be 3 ms, but :gu
 Profiler Plugins
 ================
 
-There are two additional components that you can install to enable different types of profiling in Spyder. 
+There are two additional third-party plugins that you can install to enable other types of profiling in Spyder. 
 First, Spyder Line Profiler allows you to benchmark each line of your code individually. 
 To learn more, visit the `spyder-line-profiler git repository`_.
 
 .. _spyder-line-profiler git repository: https://github.com/spyder-ide/spyder-line-profiler
 
 Second, Spyder Memory Profiler measures the memory usage of your code. 
-For more information, see the `spyder-memory-profiler git repository`_.
+For more information, go to the `spyder-memory-profiler git repository`_.
 
 .. _spyder-memory-profiler git repository: https://github.com/spyder-ide/spyder-memory-profiler
 
