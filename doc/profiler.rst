@@ -16,7 +16,8 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 Running the Profiler
 ====================
 
-You can browse for a file using the open button or manually enter the path in the :guilabel:`Profiler`'s path box (top left of the pane). You can then run the analysis on the file by pressing :guilabel:`Profile` in the :guilabel:`Profiler` pane.
+You can browse for a file using the open button or manually enter the path in the :guilabel:`Profiler`'s path box (top left of the pane). 
+You can then run the analysis on the file by pressing :guilabel:`Profile` in the :guilabel:`Profiler` pane.
 
 .. image:: images/profiler/profiler-execution-browse.gif
    :alt: Spyder Profiler pane, showing browsing a file and running profiler
@@ -99,7 +100,6 @@ Second, Spyder Memory Profiler measures the memory usage of your code.
 For more information, see the `spyder-memory-profiler git repository`_.
 
 .. _spyder-memory-profiler git repository: https://github.com/spyder-ide/spyder-memory-profiler
-
 
 
 Related components
