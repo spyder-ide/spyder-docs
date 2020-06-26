@@ -38,6 +38,7 @@ Contents
     help
     plots
     pylint
+    indexvideos
 ..
     overview
     installation
