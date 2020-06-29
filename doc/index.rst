@@ -34,11 +34,8 @@ Contents
     :maxdepth: 2
     :glob:
     
-    variableexplorer
-    help
-    plots
-    pylint
     indexvideos
+    indexpanes
 ..
     overview
     installation
