@@ -1,5 +1,5 @@
 ==============
-Panes in depth
+Panes in Depth
 ==============
 
 .. toctree::
