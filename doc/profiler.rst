@@ -80,9 +80,9 @@ Finally, the numbers in the :guilabel:`Diff` columns for each of the three appea
 
 |
 
-For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``print_wrapper()`` that in turn called the ``print()`` function, and the ``print_wrapper()`` function took a total of 3 ms to run, with 2 ms of that spent executing the ``print()`` function inside it.
-Therefore, if ``print()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 2 ms.
-Meanwhile, :guilabel:`Total Time` for ``print_wrapper()`` would be 3 ms, but :guilabel:`Local Time` only 1 ms as the rest of that time was spend inside the ``print()`` function it called.
+For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``sleep_wrapper()`` that in turn called the ``sleep()`` function, and the ``sleep_wrapper()`` function took a total of 3.66 ms to run, with 3.64 ms of that spent executing the ``sleep()`` function inside it.
+Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 3.64 ms.
+Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.66 ms, but :guilabel:`Local Time` only 0.02 ms as the rest of that time was spend inside the ``sleep()`` function it called.
 
 
 
@@ -96,10 +96,20 @@ To learn more, visit the `spyder-line-profiler git repository`_.
 
 .. _spyder-line-profiler git repository: https://github.com/spyder-ide/spyder-line-profiler
 
+.. image:: images/profiler/profiler-line-profiler.png
+   :alt: Spyder Profiler pane, displaying a list of functions and their execution time
+
+|
+
 Second, Spyder Memory Profiler measures the memory usage of your code. 
 For more information, go to the `spyder-memory-profiler git repository`_.
 
 .. _spyder-memory-profiler git repository: https://github.com/spyder-ide/spyder-memory-profiler
+
+.. image:: images/profiler/profiler-memory-profiler.png
+   :alt: Spyder Profiler pane, displaying a list of functions and their execution time
+
+|
 
 
 Related components
