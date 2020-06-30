@@ -23,6 +23,7 @@
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Code Analysis" href="pylint.html" />
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
 <!-- Icomoon Icon Fonts-->
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/icomoon.css">
@@ -77,40 +78,79 @@
             
   <div class="section" id="profiler">
 <h1>Profiler<a class="headerlink" href="#profiler" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>Profiler</strong> pane recursively determines the run time and number of calls for every function and method called in a file, whether directly or indirectly, breaking down each procedure into its smallest individual units.
+<p>The <strong>Profiler</strong> pane recursively determines the run time and number of calls for every function and method called in a file, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.</p>
-<img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="_images/profiler_standard.png" />
+<img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="_images/profiler-standard.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <div class="section" id="running-the-profiler">
 <h2>Running the Profiler<a class="headerlink" href="#running-the-profiler" title="Permalink to this headline">¶</a></h2>
-<p>You can select the file to run in Spyder’s <span class="guilabel">Profiler</span> by simply clicking within it in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, or you can manually enter the name/path in the <span class="guilabel">Profiler</span>’s path box (top left of the pane).
-Either way, you can then run it on the file by clicking <span class="menuselection"><span class="accelerator">R</span>un ‣ Profile</span>, clicking <span class="guilabel">Profile</span> in the <span class="guilabel">Profiler</span> pane, or by using a configurable shortcut (<kbd class="kbd docutils literal notranslate">F10</kbd> by default).
-If you’d like to cancel an in-progress run, click the <span class="guilabel">Stop</span> button in the top right, and if profiling fails for any reason, click the <span class="guilabel">Output</span> button to consult the log as to why.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Currently, the <span class="guilabel">Profiler</span> only runs files with their working directory set to that of their file location on disk. Therefore, relative paths assuming a different working directly won’t work as intended, and should be replaced with absolute ones or should assume the working directory is that of the file. This limitation is planned to be resolved in a future version of Spyder.</p>
-</div>
-<p>To open and go directly to the file and line in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> where an item is the profiler was called, just double-click it.
-Increase the number of hierarchical levels displayed for a particular object by clicking the dropdown arrows to the left of the name, or increase/decrease the depth shown for all levels with the buttons in the top left, to the left of the timestamp.
-You can click the dropdown or press the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> key in the filename field to recall paths of previous profiled files.
-You can save the data for a given run to disk with the <span class="guilabel">Save data</span> button, and it can be loaded to compare with another run with the <span class="guilabel">Load data</span> button.
-To remove the loaded data, click the <span class="guilabel">Clear comparison</span> button.</p>
-</div>
-<div class="section" id="interpreting-the-results">
-<h2>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h2>
-<p>Results are broken down by top-level function/method/statement, with each sub-element listed hierarchically under the top-level item that called them.
-<span class="guilabel">Total Time</span> is that taken by the specified item and every function “underneath” (<em>i.e.</em> called by) it, while <span class="guilabel">Local Time</span> only counts the time spent in the particular callable object’s own scope.
-The <span class="guilabel">Calls</span> column displays the total number of times the specified object was called at that level inside its parent calling function (or within the <code class="docutils literal notranslate"><span class="pre">__main__</span></code> scope, if a top-level object).
-Finally, the numbers in the <span class="guilabel">Diff</span> columns for each of the three appear if a comparison is loaded, and indicate the deltas between each measurement.</p>
-<img alt="Profiler with a comparison loaded, displaying the time deltas between two runs" src="_images/profiler_comparison.png" />
+<p>You can browse for a file using the open button to the right of the <cite>Profiler</cite>’s path box (top left of the pane), which will run profiling over this file automatically.</p>
+<img alt="Spyder Profiler pane, showing browsing a file and running profiler" src="_images/profiler-execution-browse.gif" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>For example, suppose you ran the <span class="guilabel">Profiler</span> on a file calling a function <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> that in turn called the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, and the <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> function took a total of 3 ms to run, with 2 ms of that spent executing the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function inside it.
-Therefore, if <code class="docutils literal notranslate"><span class="pre">print()</span></code> called nothing else itself, its <span class="guilabel">Total Time</span> and <span class="guilabel">Local Time</span> would both be identical, at 2 ms.
-Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> would be 3 ms, but <span class="guilabel">Local Time</span> only 1 ms as the rest of that time was spend inside the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function it called.</p>
+<p>You can manually enter the path in the pane’s path box and then run the analysis on the file by pressing <span class="guilabel">Profile</span> in the Profiler pane.</p>
+<p>You can also run profiling for the file that is currently open in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> by
+clicking <span class="menuselection"><span class="accelerator">R</span>un ‣ Profile</span> in the menu bar, or by using a configurable shortcut (<kbd class="kbd docutils literal notranslate">F10</kbd> by default).</p>
+<img alt="Spyder Profiler pane, showing running profiler from menu bar" src="_images/profiler-execution-menu.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you’d like to cancel an in-progress run, click the <span class="guilabel">Stop</span> button in the top right, and if profiling fails for any reason, the <span class="guilabel">Output</span> dialog will be displayed, indicating the error that occurred.</p>
+<p>By double-clicking an item in the Profiler, you will be taken to the file and line in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> where it was called.</p>
+<img alt="Spyder Profiler pane, showing opening a file when clicking on its analysis" src="_images/profiler-open-file.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You can increase the number of levels displayed for a particular object by clicking the dropdown arrows to the left of the name, and expand/collapse all the items with the buttons in the top left.</p>
+<img alt="Spyder Profiler pane, showing dropdown arrows and buttons for expanding and collapsing" class="align-center" src="_images/profiler-dropdown.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>By clicking the dropdown or press the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> key in the filename field, you can recall paths of previous profiled files.</p>
+<img alt="Spyder Profiler pane, showing dropdown of previous profiled files" src="_images/profiler-previous-paths.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Finally, you can save the data for a given run to disk as a file with the <code class="docutils literal notranslate"><span class="pre">.Result</span></code> extension using the <span class="guilabel">Save data</span> button.
+This can be loaded to compare with a previous run of the same file using the <span class="guilabel">Load data</span> button.
+To remove the loaded data, click the <span class="guilabel">Clear comparison</span> button.</p>
+<img alt="Spyder Profiler pane, showing running profiler from menu bar" src="_images/profiler-save-load.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="interpreting-the-results">
+<h2>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h2>
+<p>Results are broken down by function/method/statement, with each sub-element listed hierarchically under the top-level item that called them.
+<span class="guilabel">Total Time</span> is that taken by the specified item and every function “underneath” (<em>i.e.</em> called by) it, while <span class="guilabel">Local Time</span> only counts the time spent in the particular callable object’s own scope.
+The <span class="guilabel">Calls</span> column displays the total number of times the specified object was called at that level inside its parent calling function (or within the <code class="docutils literal notranslate"><span class="pre">__main__</span></code> scope, if a top-level object).
+Finally, the numbers in the <span class="guilabel">Diff</span> columns for each of the three appear if a comparison is loaded, and indicate the deltas between each measurement.</p>
+<img alt="Profiler with a comparison loaded, displaying the time deltas between two runs" src="_images/profiler-comparison.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For example, suppose you ran the <span class="guilabel">Profiler</span> on a file calling a function <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> that in turn called the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function, and the <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> function took a total of 3.66 ms to run, with 3.64 ms of that spent executing the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function inside it.
+Therefore, if <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> called nothing else itself, its <span class="guilabel">Total Time</span> and <span class="guilabel">Local Time</span> would both be identical, at 3.64 ms.
+Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> would be 3.66 ms, but <span class="guilabel">Local Time</span> only 0.02 ms as the rest was spent inside the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function it called.</p>
+</div>
+<div class="section" id="profiler-plugins">
+<h2>Profiler Plugins<a class="headerlink" href="#profiler-plugins" title="Permalink to this headline">¶</a></h2>
+<p>There are two additional plugins that you can install to enable other types of profiling in Spyder.
+First, Spyder Line Profiler allows you to benchmark each line of your code individually.
+To learn more, visit the <a class="reference external" href="https://github.com/spyder-ide/spyder-line-profiler">spyder-line-profiler git repository</a>.</p>
+<img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="_images/profiler-line-profiler.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Second, Spyder Memory Profiler measures the memory usage of your code.
+For more information, go to the <a class="reference external" href="https://github.com/spyder-ide/spyder-memory-profiler">spyder-memory-profiler git repository</a>.</p>
+<img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="_images/profiler-memory-profiler.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="related-components">
 <h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -138,9 +178,16 @@ Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils li
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="indexvideos.html">Intro Videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="indexpanes.html">Panes in Depth</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="indexpanes.html">Panes in Depth</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plots.html">Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html">Code Analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profiler</a></li>
+</ul>
+</li>
 </ul>
 
 
