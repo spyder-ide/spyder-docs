@@ -16,13 +16,14 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 Running the Profiler
 ====================
 
-You can browse for a file using the open button or manually enter the path in the :guilabel:`Profiler`'s path box (top left of the pane). 
-You can then run the analysis on the file by pressing :guilabel:`Profile` in the :guilabel:`Profiler` pane.
+You can browse for a file using the open button to the right of the `Profiler`'s path box (top left of the pane), which will run profiling over this file automatically. 
 
 .. image:: images/profiler/profiler-execution-browse.gif
    :alt: Spyder Profiler pane, showing browsing a file and running profiler
 
 |
+
+You can manually enter the path in the pane's path box and then run the analysis on the file by pressing :guilabel:`Profile` in the :guilabel:`Profiler` pane.
 
 You can also run profiling for the file that is currently open in the :doc:`editor` by
 clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a configurable shortcut (:kbd:`F10` by default).
