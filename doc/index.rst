@@ -43,7 +43,6 @@ Contents
     editor
     ipythonconsole
     debugging
-    profiler
     projects
     fileexplorer
     findinfiles

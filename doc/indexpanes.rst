@@ -10,6 +10,7 @@ Panes in Depth
     help
     plots
     pylint
+    profiler
 ..
     editor
     ipythonconsole
