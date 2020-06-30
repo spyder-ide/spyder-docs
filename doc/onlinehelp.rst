@@ -55,7 +55,7 @@ If you're not sure of the name of the object you want help on, or are looking fo
 
 |
 
-Links above the search bar provide an index of topics with general help and a list of Python keywords linked to their corresponding docs.
+Links above the search field provide an index of topics with general help and a list of Python keywords linked to their corresponding docs.
 
 .. image:: images/online_help/online-help-topics.png
    :alt: Spyder Online Help pane on the topics page
@@ -68,7 +68,7 @@ Links above the search bar provide an index of topics with general help and a li
 Toolbar items
 =============
 
-Just like in a web browser, the forward and back buttons (top left, left and right arrows) move through the pages you have visited, and the home button (house icon, top left) returns you to the module index.
+Just like in a web browser, the forward and back buttons move through the pages you have visited, and the home button (house icon) returns you to the module index.
 
 .. image:: images/online_help/online-help-navigation.gif
    :alt: Spyder Online Help pane showing navigation with arrows
@@ -82,21 +82,21 @@ Perform a realtime search within a page's content with the :guilabel:`Find` butt
 
 |
 
-You can view and re-run previous searches from the drop-down menu in the :guilabel:`Package field`.
+You can view and re-run previous searches from the drop-down menu in the :guilabel:`Package` field.
 
 .. image:: images/online_help/online-help-history.png
    :alt: Spyder Online Help pane showing previous searches
 
 |
 
-You can use the zoom in/out buttons (:guilabel:`-` and :guilabel:`+`, top right) to change the font size to suit your preferences.
+You can also use the zoom in/out buttons (:guilabel:`-` and :guilabel:`+`, top right) to change the font size to suit your preferences.
 
 .. image:: images/online_help/online-help-zoom.gif
    :alt: Spyder Online Help pane showing changing the font
 
 |
 
-To cancel searching or page loading, click the stop button (red :guilabel:`X`, top right), and to reload the page (such as when you change your own package's documentation), press the refresh button (circular arrow, top right).
+To cancel searching or page loading, click the stop button (red square), and to reload the page (such as when you change your own package's documentation), press the refresh button (circular arrow).
 
 .. image:: images/online_help/online-help-refresh.gif
    :alt: Spyder Online Help pane showing refreshing pane when updating docs
