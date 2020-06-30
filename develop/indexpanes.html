@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor &#8212; Spyder 3 documentation</title>
+    <title>Panes in Depth &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -23,6 +23,8 @@
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variable Explorer" href="variableexplorer.html" />
+    <link rel="prev" title="Working with Spyder" href="working-with-spyder.html" />
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/animate.css">
 <!-- Icomoon Icon Fonts-->
 <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/icomoon.css">
@@ -75,50 +77,36 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="editor">
-<h1>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h1>
-<p>Spyder’s multi-language <strong>Editor</strong> integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
-The Editor’s key features include syntax highlighting (<code class="docutils literal notranslate"><span class="pre">pygments</span></code>); real-time code and style analysis (<code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>); on-demand completion, calltips and go-to-definition features (<code class="docutils literal notranslate"><span class="pre">rope</span></code> and <code class="docutils literal notranslate"><span class="pre">jedi</span></code>); a function/class browser, horizontal and vertical splitting, and much more.</p>
-<img alt="Spyder's Editor panel, split horizontally and with style analysis" class="align-center" src="_images/editor_split_horizontal.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><span class="guilabel">Outline Explorer</span> (function/class/method browser) and horizontal/vertical splitting capabilities:</p>
-<p><a class="reference internal" href="_images/outline_standard.png"><img alt="Spyder outline panel, showing the functions/classes/methods in a file" src="_images/outline_standard.png" style="width: 209px;" /></a> <a class="reference internal" href="_images/editor_split_vertical.png"><img alt="A Spyder editor window, split vertically into two independent panes" src="_images/editor_split_vertical.png" style="width: 422px;" /></a></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Real-time code and style analysis with <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>:</p>
-<img alt="A snippit of code in the Spyder Editor, showing code style warnings" src="_images/editor_inset_code_analysis.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="section" id="defining-code-cells">
-<h2>Defining code cells<a class="headerlink" href="#defining-code-cells" title="Permalink to this headline">¶</a></h2>
-<p>A “code cell” in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current doc:<cite>ipythonconsole</cite>.
-This is much like a “cell” in MATLAB (except without any need to enable a “cell mode”, since in Spyder, cells are detected automatically).
-You can divide your scripts into as many cells as needed, or none at all—the choice is yours.</p>
-<img alt="Spyder's Editor panel, showing an example of a code cell" class="align-center" src="_images/editor_standard.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>You can separate cells by lines starting with either:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#%%</span></code> (standard cell separator)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (standard cell separator, when file has been edited with Eclipse)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;codecell&gt;</span></code> (IPython notebook cell separator)</p></li>
+  <div class="section" id="panes-in-depth">
+<h1>Panes in Depth<a class="headerlink" href="#panes-in-depth" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#object-viewers">Object Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#options-menu">Options Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#toolbar-buttons">Toolbar Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#advanced-functionality">Advanced Functionality</a></li>
 </ul>
-<p>Providing a description to the right of the separator will give that cell its own name in the <span class="guilabel">Outline Explorer</span>.</p>
-<div class="section" id="related-components">
-<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a></p></li>
-<li><p><a class="reference internal" href="findinfiles.html"><span class="doc">Find in Files</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
-<li><p><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a></p></li>
-<li><p><a class="reference internal" href="pylint.html"><span class="doc">Code Analysis</span></a></p></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help.html#getting-help">Getting help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html#understanding-help-modes">Understanding help modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html#getting-help-by-hovering">Getting help by hovering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html#control-automatic-import">Control automatic import</a></li>
 </ul>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">Plots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plots.html#options-menu">Options Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plots.html#toolbar-options">Toolbar Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Code Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html#using-the-code-analyzer">Using the code analyzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html#options-menu">Options menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html#advanced-options">Advanced options</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -139,9 +127,15 @@ You can divide your scripts into as many cells as needed, or none at all—the c
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="indexvideos.html">Intro Videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="indexpanes.html">Panes in Depth</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Panes in Depth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plots.html">Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html">Code Analysis</a></li>
+</ul>
+</li>
 </ul>
 
 
@@ -218,7 +212,7 @@ You can divide your scripts into as many cells as needed, or none at all—the c
                     &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
                     
                     <span class="pipe-red">|</span>
-                    <a href="_sources/editor.rst.txt"
+                    <a href="_sources/indexpanes.rst.txt"
                         rel="nofollow">Page source</a>
                 </p>
             </div>

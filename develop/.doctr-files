@@ -80,6 +80,7 @@ develop/_sources/first-steps-with-spyder.rst.txt
 develop/_sources/help.rst.txt
 develop/_sources/historylog.rst.txt
 develop/_sources/index.rst.txt
+develop/_sources/indexpanes.rst.txt
 develop/_sources/indexvideos.rst.txt
 develop/_sources/installation.rst.txt
 develop/_sources/internalconsole.rst.txt
@@ -121,6 +122,7 @@ develop/genindex.html
 develop/help.html
 develop/historylog.html
 develop/index.html
+develop/indexpanes.html
 develop/indexvideos.html
 develop/installation.html
 develop/internalconsole.html
