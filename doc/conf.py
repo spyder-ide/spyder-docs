@@ -129,15 +129,17 @@ pygments_style = "sphinx"
 if CI and TRAVIS_BRANCH == "master":
     html_theme = "pandas_sphinx_theme"
     html_theme_options = {
-        "github_url": "https://github.com/spyder-ide/spyder",
-        "twitter_url": "https://twitter.com/spyder_ide",
         "external_links": [
-            {"name": "link-one-name", "url": "https://<link-one>"},
-            {"name": "link-two-name", "url": "https://<link-two>"},
+            {
+                "url": "https://www.spyder-ide.org/",
+                "name": "HOME"
+            },
+            {
+                "url": "https://www.spyder-ide.org/blog",
+                "name": "BLOG"
+            }
         ],
-        "show_prev_next": False,
-        "google_analytics_id": "UA-XXXXXXX",
-        "navigation_with_keys": False,
+        "use_edit_page_button": True
     }
     html_context = {
         "github_user": "spyder-ide",
