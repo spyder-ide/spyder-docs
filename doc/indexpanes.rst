@@ -11,6 +11,7 @@ Panes in Depth
     plots
     pylint
     profiler
+    onlinehelp
 ..
     editor
     ipythonconsole
@@ -19,6 +20,5 @@ Panes in Depth
     projects
     fileexplorer
     findinfiles
-    onlinehelp
     historylog
     internalconsole
