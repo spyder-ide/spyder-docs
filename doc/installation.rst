@@ -74,9 +74,6 @@ There are `several versions`_ available from which you can choose.
 Install on GNU/Linux
 ~~~~~~~~~~~~~~~~~~~~
 
-Please refer to the `Requirements`_ to see what other packages you might need.
-
-
 Ubuntu
 ------
 
@@ -134,60 +131,6 @@ Installing with pip (experts only)
 
    While this installation method is a viable option for experienced users, installing Spyder (and other SciPy stack packages) with ``pip`` can lead to a number of tricky issues.
    While you are welcome to try this on your own, we unfortunately do not have the resources to help you if you do run into problems, except to recommend you use Anaconda instead.
-
-
-Requirements
-~~~~~~~~~~~~
-
-The requirements to run Spyder are:
-
-* `Python <https://www.python.org/>`_ 2.7 or >=3.3
-
-* `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download5>`_ >=5.5
-
-* `Qtconsole <https://github.com/jupyter/qtconsole>`_ >=4.2.0 -- for an enhanced Python interpreter.
-
-* `Python-Language-Server <https://github.com/palantir/python-language-server>`_  -- Editor code completion, calltips, go-to-definition and real-time code/style analysis.
-
-* `Sphinx <http://www.sphinx-doc.org/en/master/>`_ -- for the Help pane rich text mode and to get our documentation.
-
-* `Pygments <http://pygments.org/>`_ >=2.0 -- for syntax highlighting and code completion in the Editor of all file types it supports.
-
-* `Pylint <http://pylint.pycqa.org/>`_  -- for static code analysis.
-
-* `Psutil <https://github.com/giampaolo/psutil>`_  -- for memory/CPU usage in the status bar.
-
-* `Nbconvert <https://github.com/jupyter/nbconvert>`_ -- to manipulate Jupyter notebooks on the Editor.
-
-* `Qtawesome <https://github.com/spyder-ide/qtawesome>`_ >=0.4.1 -- for an icon theme based on FontAwesome.
-
-* `Pickleshare <https://github.com/pickleshare/pickleshare>`_ -- To show import completions in the Editor and Consoles.
-
-* `PyZMQ <https://github.com/zeromq/pyzmq>`_ -- CLient for the Language Server Protocol.
-
-* `QtPy <https://github.com/spyder-ide/qtpy>`_ >=1.2.0 -- To run Spyder with different Qt bindings seamlessly.
-
-* `Chardet <https://github.com/chardet/chardet>`_ >=2.0.0-- Character encoding auto-detection in the Editor.
-
-* `Numpydoc <https://github.com/numpy/numpydoc>`_ Used by Jedi to get return types for functions with Numpydoc docstrings.
-
-* `Cloudpickle <https://github.com/cloudpipe/cloudpickle>`_ Serialize variables in the IPython kernel to send them to Spyder.
-
-
-Optional modules
-~~~~~~~~~~~~~~~~
-
-* `Matplotlib <https://matplotlib.org/>`_ >=1.0 -- for 2D and 3D plotting in the consoles.
-
-* `Pandas <https://pandas.pydata.org/>`_ >=0.13.1 -- for viewing and editing Series and DataFrames in the Variable Explorer.
-
-* `Numpy <https://www.numpy.org/>`_ -- for viewing and editing two or three dimensional arrays in the Variable Explorer.
-
-* `Sympy <https://www.sympy.org/en/index.html>`_ >=0.7.3 -- for working with symbolic mathematics in the IPython console.
-
-* `Scipy <https://www.scipy.org/>`_ -- for importing Matlab workspace files in the Variable Explorer.
-
-* `Cython <http://cython.org/>`_ >=0.21 -- to run Cython files or Python files that depend on Cython libraries in the IPython console.
 
 
 Installation procedure
