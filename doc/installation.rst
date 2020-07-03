@@ -12,6 +12,18 @@ Thanks!
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
 
+=============================
+Try Spyder Online with Binder
+=============================
+
+Want to try out Spyder without installing it?
+With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
+Just visit the `Spyder page on Binder`_ to get started using Spyder now.
+
+.. _Binder: https://mybinder.org/
+.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/master?urlpath=/desktop
+
+
 
 ======================================
 Installing with Anaconda (recommended)
