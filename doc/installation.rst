@@ -1,8 +1,6 @@
-:orphan:
-
-############
-Installation
-############
+##################
+Installation Guide
+##################
 
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.
@@ -17,6 +15,7 @@ Thanks!
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
 
+
 ======================================
 Installing with Anaconda (recommended)
 ======================================
@@ -28,6 +27,7 @@ Python distribution, which comes with everything you need to get started in an a
 
 This is the easiest way to install Spyder for any of our supported platforms, and the way we recommend to avoid unexpected issues we aren't able to help you with.
 If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
+
 
 
 ===========================================
@@ -123,6 +123,7 @@ Spyder is also available in other GNU/Linux distributions, like
 .. _openSUSE: https://software.opensuse.org/package/spyder3
 
 Please refer to your distribution's documentation to learn how to install Spyder.
+
 
 
 ==================================
@@ -225,6 +226,7 @@ You can execute Spyder from source without installing it first by the following 
 This is especially useful for beta-testing, troubleshooting and helping develop Spyder itself.
 
 
+
 ===============
 Updating Spyder
 ===============
@@ -237,6 +239,7 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 
 .. _install-from-source:
+
 
 
 ==============================
@@ -301,6 +304,7 @@ In summary:
 
 .. _spyder-kernels git repository: https://github.com/spyder-ide/spyder-kernels
 .. _Git: https://git-scm.com/downloads
+
 
 
 ===============
