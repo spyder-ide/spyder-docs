@@ -25,6 +25,10 @@ Python distribution, which comes with everything you need to get started in an a
 This is the easiest way to install Spyder for any of our supported platforms, and the way we recommend to avoid unexpected issues we aren't able to help you with.
 If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
 
+To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
+On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
+If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``.
+
 
 
 ===========================================
@@ -120,6 +124,13 @@ Spyder is also available in other GNU/Linux distributions, like
 Please refer to your distribution's documentation for how to install Spyder.
 
 
+Running Spyder
+--------------
+
+How to launch Spyder after installation varies depending on your OS and install method, but with those featured here, it will generally be the same as for any other installed application.
+Alternately, you should be able to launch it from the terminal/command line with `spyder`.
+
+
 
 ==================================
 Installing with pip (experts only)
@@ -130,17 +141,16 @@ Installing with pip (experts only)
    While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with ``pip`` can lead to a number of tricky issues.
    While you are welcome to try this on your own, we unfortunately do not have the resources to help you if you do run into problems, except to recommend you use Anaconda instead.
 
-
-Installation procedure
-~~~~~~~~~~~~~~~~~~~~~~
-
 You can install Spyder with the ``pip`` package manager, which comes by default with most Python installations.
 Before installing Spyder itself by this method, you need to acquire the `Python`_ programming language.
 
 .. _Python: https://www.python.org/
 
-Then, to install Spyder and its other dependencies, run ``pip install spyder``.
+You'll want to create a virtual environment in which to install Spyder with `mkvirtualenv spyder-env` or `python3 -m venv spyder-env` then activate it with `workon spyder-env` or `source spyder-env/bin/activate`.
+To install Spyder and its other dependencies, run ``pip install spyder``.
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
+
+To launch Spyder after installing, ensure your environment is activated and run the `spyder` command.
 
 
 
