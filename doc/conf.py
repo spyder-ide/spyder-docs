@@ -61,7 +61,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Spyder"
-copyright = " 2018 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>"
+copyright = " 2020 Spyder Doc Contributors "
 author = "The Spyder Doc Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -126,14 +126,11 @@ pygments_style = "sphinx"
 #
 # CI = True
 # TRAVIS_BRANCH = 'master'
-if CI and TRAVIS_BRANCH == "master":
+if CI and TRAVIS_BRANCH == 'master':
     html_theme = "pandas_sphinx_theme"
+    html_logo = '_static/spyder_logo_lightbg_text_left.png'
     html_theme_options = {
         "external_links": [
-            {
-                "url": "https://www.spyder-ide.org/",
-                "name": "HOME"
-            },
             {
                 "url": "https://www.spyder-ide.org/blog",
                 "name": "BLOG"
