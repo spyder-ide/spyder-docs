@@ -73,16 +73,6 @@ There are `several versions`_ available from which you can choose.
 
 .. _several versions: https://ports.macports.org/?search=spyder&search_by=name
 
-.. attention::
-
-   The MacPorts version of Spyder may currently be raising ``ValueError: unknown locale: UTF-8``, which doesn't let it start correctly.
-   To fix it you will have to set these environment variables in your :file:`~/.profile` (or :file:`~/.bashrc`) file manually:
-
-   .. code-block:: bash
-
-      export LANG=en_US.UTF-8
-      export LC_ALL=en_US.UTF-8
-
 
 Install on GNU/Linux
 ~~~~~~~~~~~~~~~~~~~~
@@ -158,11 +148,33 @@ Before installing Spyder itself by this method, you need to acquire the `Python`
 
 .. _Python: https://www.python.org/
 
-You'll want to create a virtual environment in which to install Spyder with `mkvirtualenv spyder-env` or `python3 -m venv spyder-env` then activate it with `workon spyder-env` or `source spyder-env/bin/activate`.
-To install Spyder and its other dependencies, run ``pip install spyder``.
+You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.
+
+With `virtualenvwrapper`:
+
+```bash
+mkvirtualenv spyder-env
+workon spyder-env
+```
+
+Otherwise, on macOS/Linux/Unix:
+
+```bash
+python3 -m venv spyder-env
+source spyder-env/bin/activate
+```
+
+or on Windows:
+
+```bash
+python -m venv spyder-env
+spyder-env/Scripts/activate.bat
+```
+
+After activating your environment, to install Spyder and its other dependencies, run ``pip install spyder``.
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
 
-To launch Spyder after installing, ensure your environment is activated and run the `spyder` command.
+To launch Spyder after installing, ensure your environment is activated and run the `spyder3` command.
 
 
 
@@ -171,7 +183,12 @@ Updating Spyder
 ===============
 
 If you installed Spyder through Anaconda (recommended), WinPython, MacPorts, or your system package manager, update using those same methods.
-With Anaconda, just run (in Anaconda Prompt if on Windows) ``conda update anaconda`` to update the distribution as a whole and ``conda update spyder`` to update Spyder specifically.
+With Anaconda, just run (in Anaconda Prompt if on Windows, otherwise in your system terminal):
+
+```
+conda activate base
+conda update spyder
+```
 
 If you installed Spyder via the advanced/cross-platform method, ``pip``, run ``pip install --upgrade spyder``.
 This command will also update all Spyder dependencies, so we recommend you use an isolated ``venv`` environment to avoid any potential unintended effects on other installed packages.
