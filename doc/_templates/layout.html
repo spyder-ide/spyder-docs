@@ -1,4 +1,11 @@
 {% extends "!layout.html" %}
+
+{% block css %}
+    {{super()}}
+    <link href="{{ pathto('_static/custom.css', 1) }}" rel="stylesheet">
+{% endblock %}
+
+
 {% block footer %}
 <script>
     ((window.gitter = {}).chat = {}).options = {
@@ -9,4 +16,7 @@
 <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
 
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+{{super()}}
+
 {% endblock %}

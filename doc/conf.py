@@ -126,14 +126,14 @@ pygments_style = "sphinx"
 #
 # CI = True
 # TRAVIS_BRANCH = 'master'
-if CI and TRAVIS_BRANCH == 'master':
+if True or CI and TRAVIS_BRANCH == 'master':
     html_theme = "pandas_sphinx_theme"
-    html_logo = '_static/spyder_logo_lightbg_text_left.png'
+    html_logo = '_static/spyder_logo.png'
     html_theme_options = {
         "external_links": [
             {
                 "url": "https://www.spyder-ide.org/blog",
-                "name": "BLOG"
+                "name": "Blog"
             }
         ],
         "use_edit_page_button": True
