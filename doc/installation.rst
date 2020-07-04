@@ -212,12 +212,12 @@ For more information, please see the `CONTRIBUTING.md document`_ included with t
 Additional help
 ===============
 
-* For a comprehensive guide to Spyder troubleshooting, including installation issues, read our `Troubleshooting Guide and FAQ`_.
-* For general information about Spyder and its ecosystem, see our `main website`_.
-* For bug reports and feature requests, check out our `Github repository`_.
-* For development-oriented help and information, consult our `Github wiki`_.
-* For discussions and help requests, you can subscribe to our `Google Group`_.
-* For quick questions and to chat with the dev team, stop by our `Gitter chatroom`_.
+* *Run in to a problem installing or running Spyder?* Read our `Troubleshooting Guide and FAQ`_.
+* *Looking for general information about Spyder and its ecosystem?* See our `main website`_.
+* *Need to submit a bug report or feature request?* Check out our `Github repository`_.
+* *Want development-oriented help and information?* Consult our `Github wiki`_.
+* *Have a help request or discussion topic?* Subscribe to our `Google Group`_.
+* *Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
 
 .. _Troubleshooting Guide and FAQ: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _main website: https://www.spyder-ide.org/
