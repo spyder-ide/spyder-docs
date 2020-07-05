@@ -34,6 +34,7 @@ Contents
     :maxdepth: 2
     :glob:
     
+    installation
     indexvideos
     indexpanes
 ..
