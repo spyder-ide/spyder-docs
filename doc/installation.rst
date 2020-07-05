@@ -5,11 +5,13 @@ Installation Guide
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.
 
-If you run into problems, before posting a report, *please* consult our comprehensive `Troubleshooting Guide`_ and search the `issue tracker`_ for your error message and problem description, as these methods generally fix or isolate the great majority of install-related complaints.
+If you run into problems, before posting a report, *please* consult our comprehensive `Troubleshooting Guide`_ and search the `issue tracker`_ for your error message and problem description.
+These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
 .. _Troubleshooting Guide: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
+
 
 
 =============================
@@ -29,17 +31,43 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 Installing with Anaconda (recommended)
 ======================================
 
-Spyder is included by default in the `Anaconda`_
-Python distribution, which comes with everything you need to get started in an all-in-one package.
+Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
 
 .. _Anaconda: https://www.anaconda.com/products/individual
 
 This is the easiest way to install Spyder for any of our supported platforms, and the way we recommend to avoid unexpected issues we aren't able to help you with.
 If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
 
+
+Running the pre-installed Spyder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
 On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
 If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``.
+
+
+Installing Spyder in a new Conda environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.
+Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called ``spyder-env``:
+
+.. code-block:: bash
+
+   conda create -n spyder-env spyder=4
+
+To install Spyder's optional dependencies as well for full functionality, use the following command instead:
+
+.. code-block:: bash
+
+   conda create -n spyder-env spyder=4 numpy scipy pandas matplotlib sympy cython
+
+You can then run Spyder by the same methods as above, except make sure to select the start menu shortcut with ``(spyder-env)`` in the name, select the ``spyder-env`` environment on the left before launching it with Navigator, or type ``conda activate spyder-env`` before launching it on the command line.
+
+For more information on this approach, and using Spyder with your existing Python environments and packages, please see our `Guide to working with packages and environments in Spyder`_.
+
+.. _Guide to working with packages and environments in Spyder: https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder
 
 
 
@@ -127,10 +155,10 @@ Please refer to your distribution's documentation for how to install Spyder.
 
 
 Running Spyder
---------------
+~~~~~~~~~~~~~~
 
 How to launch Spyder after installation varies depending on your OS and install method, but with those featured here, it will generally be the same as for any other installed application.
-Alternately, you should be able to launch it from the terminal/command line with `spyder`.
+Alternately, you should be able to launch it from the terminal/command line with ``spyder`` or ``spyder3``.
 
 
 
@@ -150,31 +178,31 @@ Before installing Spyder itself by this method, you need to acquire the `Python`
 
 You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.
 
-With `virtualenvwrapper`:
+With ``virtualenvwrapper``:
 
-```bash
-mkvirtualenv spyder-env
-workon spyder-env
-```
+.. code-block:: bash
+
+   mkvirtualenv spyder-env
+   workon spyder-env
 
 Otherwise, on macOS/Linux/Unix:
 
-```bash
-python3 -m venv spyder-env
-source spyder-env/bin/activate
-```
+.. code-block:: bash
+
+   python3 -m venv spyder-env
+   source spyder-env/bin/activate
 
 or on Windows:
 
-```bash
-python -m venv spyder-env
-spyder-env/Scripts/activate.bat
-```
+.. code-block:: bash
+
+   python -m venv spyder-env
+   spyder-env/Scripts/activate.bat
 
 After activating your environment, to install Spyder and its other dependencies, run ``pip install spyder``.
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
 
-To launch Spyder after installing, ensure your environment is activated and run the `spyder3` command.
+To launch Spyder after installing, ensure your environment is activated and run the ``spyder3`` command.
 
 
 
@@ -185,13 +213,13 @@ Updating Spyder
 If you installed Spyder through Anaconda (recommended), WinPython, MacPorts, or your system package manager, update using those same methods.
 With Anaconda, just run (in Anaconda Prompt if on Windows, otherwise in your system terminal):
 
-```
-conda activate base
-conda update spyder
-```
+.. code-block:: bash
+
+   conda update anaconda
+   conda update spyder
 
 If you installed Spyder via the advanced/cross-platform method, ``pip``, run ``pip install --upgrade spyder``.
-This command will also update all Spyder dependencies, so we recommend you use an isolated ``venv`` environment to avoid any potential unintended effects on other installed packages.
+This command will also update all Spyder dependencies, so we recommend you use an isolated virtual environment to avoid any potential unintended effects on other installed packages.
 
 
 
@@ -201,9 +229,9 @@ Installing a development build
 
 If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
-For more information, please see the `CONTRIBUTING.md document`_ included with the Spyder source or on Github, and for further detail consult the `Spyder development wiki`_.
+For more information, please see the `Contributing Guide`_ included with the Spyder source or on Github, and for further detail consult the `Spyder development wiki`_.
 
-.. _CONTRIBUTING.md document: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
+.. _Contributing Guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
 .. _Spyder development wiki: https://github.com/spyder-ide/spyder/wiki
 
 
