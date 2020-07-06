@@ -12,27 +12,123 @@ Spyder: The Scientific Python Development Environment — Documentation
 
 Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
-Furthermore, Spyder offers built-in integration with many popular scientific packages, including `NumPy`_, `SciPy`_, `Pandas`_, `IPython`_, `QtConsole`_, `Matplotlib`_, `SymPy`_, and more.
-
-.. _NumPy: https://www.numpy.org/
-.. _SciPy: https://www.scipy.org/
-.. _Pandas: https://pandas.pydata.org/
-.. _IPython: https://ipython.org/
-.. _QtConsole: https://qtconsole.readthedocs.io/en/stable/
-.. _Matplotlib: https://matplotlib.org/
-.. _SymPy: https://www.sympy.org/en/index.html
-
-Beyond its many built-in features, Spyder's abilities can be extended even further via its plugin system and API.
-Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.
 
 
-========
-Contents
-========
+
+================
+Where to go now?
+================
+
+Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
+These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
+
+.. image:: _static/book-open-solid.png
+   :align: left
+   :width: 4.1%
+
+If you are looking for a summary of its features and interface, check out the :doc:`overview`.
+
+.. image:: _static/download-solid.png
+   :align: left
+   :width: 4.1%
+
+If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
+
+.. image:: _static/walking-solid.png
+   :align: left
+   :width: 3.8%
+
+If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
+
+.. image:: _static/columns-solid.png
+   :align: left
+   :width: 5%
+
+If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
+
+.. image:: _static/first-aid-solid.png
+   :align: left
+   :width: 5%
+
+If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
+
+.. image:: _static/question-circle-solid.png
+   :align: left
+   :width: 5%
+
+If you have a question about Spyder, visit the frequently asked questions section.
+
+
+
+=========================
+Join the Spyder community
+=========================
+
+Spyder is open source software, which means that is free for everyone to use and anyone can contribute to it.
+We encourage everyone to become a part of our community and help develop Spyder!
+
+
+.. image:: _static/laptop-code-solid.png
+   :align: left
+   :width: 4.2%
+
+Looking to contribute your code?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it.
+You can follow our `contributing guide`_ to set up a development environment, and you can get involved with the project through our `Github repository`_.
+The easiest way to get started is helping us resolve items on our `issue tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
+
+.. _contributing guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
+
+.. _Github repository: https://github.com/spyder-ide
+
+.. _issue tracker: https://github.com/spyder-ide/spyder/issues
+
+
+.. image:: _static/book-solid.png
+   :align: left
+   :width: 3.7%
+
+Want to help writing docs?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We welcome your contributions of corrections, additions and enhancements to these docs.
+Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_.
+
+.. _docs contributing guide: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
+
+.. _docs repo: https://github.com/spyder-ide/spyder-docs
+
+
+.. image:: _static/globe-americas-solid.png
+   :align: left
+   :width: 4%
+
+Interested in translating Spyder?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages.
+
+For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
+
+.. _Crowdin: https://crowdin.com/project/spyder
+
+
+.. image:: _static/user-friends-solid.png
+   :align: left
+   :width: 4%
+
+Want to be part of our social media?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Connect with Spyder through our social media channels to stay up to date with our current developments!
+
+
 
 .. toctree::
     :maxdepth: 2
-    :glob:
+    :hidden:
     
     installation
     indexvideos
