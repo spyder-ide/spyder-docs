@@ -15,72 +15,73 @@ It features a unique combination of the advanced editing, analysis, debugging, a
 
 
 
-============
-Where to go?
-============
+================
+Where to go now?
+================
 
-Spyder's documentation provides tools that will help you learn how to use Spyder and explore each one of its panes.
-It contains videos in form of tutorials, pane descriptions and troubleshooting guides that will be helpful according to your needs and previous experience with Spyder.
+Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
+These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
 .. image:: _static/book-open-solid.png
    :align: left
    :width: 4.1%
 
-If want to know the basics of Spyder's interface go to :doc:`overview`.
+If you are looking for a summary of its features and interface, check out the :doc:`overview`.
 
 .. image:: _static/download-solid.png
    :align: left
    :width: 4.1%
 
-If you don't have Spyder installed and want to get started go to :doc:`installation`.
+If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
 
 .. image:: _static/walking-solid.png
    :align: left
    :width: 3.8%
 
-If your are completely new to Spyder go to :doc:`first-steps-with-spyder` to watch some basic tutorials.
+If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
 
 .. image:: _static/columns-solid.png
    :align: left
    :width: 5%
 
-If you are familiar with Spyder and want to explore the functionality of its panes go to :doc:`indexpanes`.
+If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
 
 .. image:: _static/first-aid-solid.png
    :align: left
    :width: 5%
 
-If you have an issue and need help to solve it, take a look at our troubleshooting guide.
+If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
 
 .. image:: _static/question-circle-solid.png
    :align: left
    :width: 5%
 
-If you have a particular question about Spyder visit the frequently asked questions section.
+If you have a question about Spyder, visit the frequently asked questions section.
 
 
 
-================
-Spyder Community
-================
+=========================
+Join the Spyder community
+=========================
 
 Spyder is open source software, which means that is free for everyone to use and anyone can contribute to it.
-We encourage everyone to make part of our community and do your own contributions.
+We encourage everyone to become a part of our community and help develop Spyder!
 
 
 .. image:: _static/laptop-code-solid.png
    :align: left
    :width: 4.2%
 
-Want to contribute with code?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Looking to contribute your code?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can find our `contributing guide`_ to set up a development environment and start doing your own contributions to the project through our `github repository`_.
-The easiest way to get started is helpping us solve issues on our `issue tracker`_ which if you don't want to write code will also allow you to help Spyder's community by responding some of the issues that users might have with Spyder.
+Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it.
+You can follow our `contributing guide`_ to set up a development environment, and you can get involved with the project through our `Github repository`_.
+The easiest way to get started is helping us resolve items on our `issue tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
 
 .. _contributing guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
 
-.. _github repository: https://github.com/spyder-ide
+.. _Github repository: https://github.com/spyder-ide
 
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
@@ -93,7 +94,7 @@ Want to help writing docs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We welcome your contributions of corrections, additions and enhancements to these docs.
-Go to the `contributing guide of the documentation`_ to learn how to submit a PR with your changes on our `docs repo`_.
+Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_.
 
 .. _contributing guide of the documentation: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
 
@@ -104,27 +105,24 @@ Go to the `contributing guide of the documentation`_ to learn how to submit a PR
    :align: left
    :width: 4%
 
-Want to help translate spyder?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interested in translating Spyder?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Spyder's code and documentation are written in English and will continue this way for its (hopefully long) lifetime.
-However, in order to reach more users in need of a powerful python development environment there is opportunity to translate the documentation and the interface into different languages.
+In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages.
 
-For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proof readers and managers where everyone can help us translate Spyder into any language.
+For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
 
 .. _Crowdin: https://crowdin.com/project/spyder
+
 
 .. image:: _static/user-friends-solid.png
    :align: left
    :width: 4%
 
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Want to be part of our social media?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Connect with Spyder through our social media channels and stay up to date with current developments.
+Connect with Spyder through our social media channels to stay up to date with our current developments!
 
 
 
