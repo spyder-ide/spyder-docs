@@ -89,6 +89,10 @@ Thanks!</p>
 <p>Want to try out Spyder without installing it?
 With <a class="reference external" href="https://mybinder.org/">Binder</a> you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
 Just visit the <a class="reference external" href="https://mybinder.org/v2/gh/spyder-ide/spyder/master?urlpath=/desktop">Spyder page on Binder</a> to get started using Spyder now.</p>
+<img alt="Spyder running on Binder" src="_images/installation-spyder-binder.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="installing-with-anaconda-recommended">
 <h2>Installing with Anaconda (recommended)<a class="headerlink" href="#installing-with-anaconda-recommended" title="Permalink to this headline">¶</a></h2>
@@ -98,8 +102,12 @@ If in doubt, you should install via this method; it generally has the least like
 <div class="section" id="running-the-pre-installed-spyder">
 <h3>Running the pre-installed Spyder<a class="headerlink" href="#running-the-pre-installed-spyder" title="Permalink to this headline">¶</a></h3>
 <p>To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
-On other platforms, open Anaconda Navigator, scroll to Spyder under <code class="docutils literal notranslate"><span class="pre">Home</span></code>, and click <code class="docutils literal notranslate"><span class="pre">Launch</span></code>.
-If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> then <code class="docutils literal notranslate"><span class="pre">spyder</span></code>.</p>
+On other platforms, open Anaconda Navigator, scroll to Spyder under <code class="docutils literal notranslate"><span class="pre">Home</span></code>, and click <code class="docutils literal notranslate"><span class="pre">Launch</span></code>.</p>
+<img alt="Anaconda Navigator showing Spyder" src="_images/installation-anaconda-navigator.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> then <code class="docutils literal notranslate"><span class="pre">spyder</span></code>.</p>
 </div>
 <div class="section" id="installing-spyder-in-a-new-conda-environment">
 <h3>Installing Spyder in a new Conda environment<a class="headerlink" href="#installing-spyder-in-a-new-conda-environment" title="Permalink to this headline">¶</a></h3>
@@ -112,7 +120,12 @@ Just run the following command in your Anaconda Prompt (Windows) or terminal (ot
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env <span class="nv">spyder</span><span class="o">=</span><span class="m">4</span> numpy scipy pandas matplotlib sympy cython
 </pre></div>
 </div>
+<p>To install Spyder from Conda-Forge instead of the default Anaconda channel, add <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">conda-forge</span></code> at the end of either of the previous commands.</p>
 <p>You can then run Spyder by the same methods as above, except make sure to select the start menu shortcut with <code class="docutils literal notranslate"><span class="pre">(spyder-env)</span></code> in the name, select the <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code> environment on the left before launching it with Navigator, or type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">spyder-env</span></code> before launching it on the command line.</p>
+<img alt="Running Spyder installation with conda" class="align-center" src="_images/installation-conda-install.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>For more information on this approach, and using Spyder with your existing Python environments and packages, please see our <a class="reference external" href="https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder">Guide to working with packages and environments in Spyder</a>.</p>
 </div>
 </div>
@@ -198,8 +211,12 @@ workon spyder-env
 spyder-env/Scripts/activate.bat
 </pre></div>
 </div>
-<p>After activating your environment, to install Spyder and its other dependencies, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spyder</span></code>.
-You may need to install a Qt binding (PyQt5) separately with <code class="docutils literal notranslate"><span class="pre">pip</span></code> if running under Python 2.</p>
+<p>After activating your environment, to install Spyder and its other dependencies, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spyder</span></code>.</p>
+<img alt="Running Spyder installation with pip" class="align-center" src="_images/installation-pip-install.gif" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You may need to install a Qt binding (PyQt5) separately with <code class="docutils literal notranslate"><span class="pre">pip</span></code> if running under Python 2.</p>
 <p>To launch Spyder after installing, ensure your environment is activated and run the <code class="docutils literal notranslate"><span class="pre">spyder3</span></code> command.</p>
 </div>
 <div class="section" id="updating-spyder">

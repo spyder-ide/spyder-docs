@@ -25,6 +25,11 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 .. _Binder: https://mybinder.org/
 .. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/master?urlpath=/desktop
 
+.. image:: images/installation/installation-spyder-binder.png
+   :alt: Spyder running on Binder
+
+|
+
 
 
 ======================================
@@ -44,6 +49,12 @@ Running the pre-installed Spyder
 
 To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
 On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
+
+.. image:: images/installation/installation-anaconda-navigator.png
+   :alt: Anaconda Navigator showing Spyder
+
+|
+
 If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``.
 
 
@@ -63,7 +74,15 @@ To install Spyder's optional dependencies as well for full functionality, use th
 
    conda create -n spyder-env spyder=4 numpy scipy pandas matplotlib sympy cython
 
+To install Spyder from Conda-Forge instead of the default Anaconda channel, add ``-c conda-forge`` at the end of either of the previous commands.
+
 You can then run Spyder by the same methods as above, except make sure to select the start menu shortcut with ``(spyder-env)`` in the name, select the ``spyder-env`` environment on the left before launching it with Navigator, or type ``conda activate spyder-env`` before launching it on the command line.
+
+.. image:: images/installation/installation-conda-install.gif
+   :alt: Running Spyder installation with conda
+   :align: center
+
+|
 
 For more information on this approach, and using Spyder with your existing Python environments and packages, please see our `Guide to working with packages and environments in Spyder`_.
 
@@ -200,6 +219,13 @@ or on Windows:
    spyder-env/Scripts/activate.bat
 
 After activating your environment, to install Spyder and its other dependencies, run ``pip install spyder``.
+
+.. image:: images/installation/installation-pip-install.gif
+   :alt: Running Spyder installation with pip
+   :align: center
+
+|
+
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
 
 To launch Spyder after installing, ensure your environment is activated and run the ``spyder3`` command.
