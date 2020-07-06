@@ -96,7 +96,7 @@ Want to help writing docs?
 We welcome your contributions of corrections, additions and enhancements to these docs.
 Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_.
 
-.. _contributing guide of the documentation: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
+.. _docs contributing guide: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
 
 .. _docs repo: https://github.com/spyder-ide/spyder-docs
 
