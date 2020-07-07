@@ -138,7 +138,7 @@ if CI and TRAVIS_BRANCH == 'master':
         ],
         "use_edit_page_button": True,
         "gitter_room": "spyder-ide/public",
-        "alert_message": "This documentation is still a work in progress!"
+        "alert_message": "This documentation is still a work in progress. Check out the <a href="https://docs.spyder-ide.org" target="_blank">Spyder 3 docs</a> for the stable version"
     }
     html_context = {
         "github_user": "spyder-ide",
