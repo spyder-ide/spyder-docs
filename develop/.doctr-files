@@ -128,12 +128,12 @@ develop/_sources/pylint.rst.txt
 develop/_sources/variableexplorer.rst.txt
 develop/_sources/working-with-spyder.rst.txt
 develop/_static/Ipython.png
-develop/_static/alabaster.css
 develop/_static/basic.css
 develop/_static/book-open-solid.png
 develop/_static/book-solid.png
 develop/_static/columns-solid.png
-develop/_static/custom.css
+develop/_static/css/spyder.css
+develop/_static/css/theme.css
 develop/_static/cython-logo-C.svg
 develop/_static/doctools.js
 develop/_static/documentation_options.js
@@ -146,6 +146,7 @@ develop/_static/index_screenshot.png
 develop/_static/ipython_trans.png
 develop/_static/jquery-3.5.1.js
 develop/_static/jquery.js
+develop/_static/js/theme.js
 develop/_static/language_data.js
 develop/_static/laptop-code-solid.png
 develop/_static/matplotlib_logo.svg
@@ -158,6 +159,8 @@ develop/_static/question-circle-solid.png
 develop/_static/scipy.png
 develop/_static/scipy_trans.png
 develop/_static/searchtools.js
+develop/_static/sphinx-bootstrap.css
+develop/_static/spyder_logo.png
 develop/_static/spyder_logo_lightbg_text_left.png
 develop/_static/spyder_readme_banner.png
 develop/_static/sympy.png
