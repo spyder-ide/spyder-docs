@@ -23,7 +23,7 @@ With `Binder`_ you can work with a fully functional copy of Spyder online that r
 Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 
 .. _Binder: https://mybinder.org/
-.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/master?urlpath=/desktop
+.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop
 
 .. image:: images/installation/installation-spyder-binder.png
    :alt: Spyder running on Binder
