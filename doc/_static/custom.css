@@ -1,9 +1,0 @@
-.gitter-chat-embed{
-    z-index: 1031;
-}
-
-@media screen and (max-width: 1200px) {
-    .gitter-open-chat-button{
-        transform: rotate(-90deg) translate(100%, 100%);
-    }
-}

@@ -16,9 +16,11 @@ the main Spyder repository mentioned above, and check out the
 (https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder)
 for detailed instructions.
 
-To view the rendered and deployed documentation itself, please visit
-our Github pages documentation site (coming soon!).
+To view the rendered and deployed documentation itself, please visit:
 
+* Develop (4.x): https://docs.spyder-ide.org/develop
+
+* Stable (3.x): https://docs.spyder-ide.org/
 
 
 ## Reporting Issues
@@ -74,14 +76,17 @@ you can install it into your present environemnt with
 
 ```bash
 conda install sphinx
+pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
 Or, if using ``pip``, you can grab it with
 
 ```bash
-python -m pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git
 pip install sphinx
+pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
+
+Now, run the following if on macOS/Linux:
 
 ```bash
 make docs
@@ -99,6 +104,7 @@ cd ..
 to run the build. You should be able to view the html output inside the
 resulting ``_build`` directory it produces; ``index.html`` is the main page.
 
+**NOTE:** You can try to use the `make` commands on Windows if you have `make` installed and something like `Cygwin`, `MSYS2` or `MYSYS`, or by using Windows Subsystem for Linux (`WSL`).
 
 
 ## Standards and Conventions

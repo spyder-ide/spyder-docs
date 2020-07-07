@@ -4,7 +4,7 @@ language: python
 dist: bionic
 
 python:
-  - 3.6
+  - 3.7
 
 # Give doctr our deploy key
 env:
@@ -16,9 +16,9 @@ install:
   - pip install -U pip
   - pip install sphinx doctr
   - pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
-  - make docs
 
 script:
+  - make docs
   - set -e
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;

@@ -36,13 +36,10 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 docs: ## generate Sphinx HTML documentation, including API docs
 	$(MAKE) -C doc clean
 	$(MAKE) -C doc html
-	# $(MAKE) -C doc linkcheck
+	$(MAKE) -C doc linkcheck
 
 servedocs: doc ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C doc html' -R -D .
-
-install: clean ## install the package to the active Python's site-packages
-	python setup.py install
 
 serve: clean ## install the package to the active Python's site-packages
 	$(BROWSER) doc/_build/html/index.html
