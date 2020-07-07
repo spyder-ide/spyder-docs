@@ -137,7 +137,8 @@ if CI and TRAVIS_BRANCH == 'master':
             }
         ],
         "use_edit_page_button": True,
-        "gitter_room": "spyder-ide/public"
+        "gitter_room": "spyder-ide/public",
+        "alert_message": "This documentation is still a work in progress!"
     }
     html_context = {
         "github_user": "spyder-ide",
