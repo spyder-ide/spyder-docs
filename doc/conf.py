@@ -126,58 +126,25 @@ pygments_style = "sphinx"
 #
 # CI = True
 # TRAVIS_BRANCH = 'master'
-if CI and TRAVIS_BRANCH == 'master':
-    html_theme = "pandas_sphinx_theme"
-    html_logo = '_static/spyder_logo.png'
-    html_theme_options = {
-        "external_links": [
-            {
-                "url": "https://www.spyder-ide.org/blog",
-                "name": "Blog"
-            }
-        ],
-        "use_edit_page_button": True,
-        "gitter_room": "spyder-ide/public",
-        "alert_message": "This documentation is still a work in progress. Check out the <a href="https://docs.spyder-ide.org" target="_blank">Spyder 3 docs</a> for the stable version"
-    }
-    html_context = {
-        "github_user": "spyder-ide",
-        "github_repo": "spyder-docs",
-        "github_version": "master",
-        "doc_path": "doc",
-    }
-else:
-    html_theme = "alabaster"
-
-    # Theme options are theme-specific and customize the look and feel of a theme
-    # further.  For a list of options available for each theme, see the
-    # documentation.
-    html_theme_options = {
-        "body_text_align": "left",
-        "github_banner": False,
-        "travis_button": False,
-        "codecov_button": False,
-        "extra_nav_links": {
-            "Troubleshooting": (
-                "https://github.com/spyder-ide/spyder/wiki/"
-                + "Troubleshooting-Guide-and-FAQ"
-            ),
-            "Spyder Wiki": "https://github.com/spyder-ide/spyder/wiki",
-        },
-        "sidebar_collapse": True,
-        "show_related": True,
-        "page_width": "1000px",
-        "sidebar_width": "250px",
-        "fixed_sidebar": False,
-        "gray_1": "#303030",
-        "gray_2": "#EBEBEB",
-        "gray_3": "#EE1C24",
-        "font_family": "Raleway, 'Open Sans', Arial, sans-serif",
-        "head_font_family": "Raleway, 'Open Sans', Arial, sans-serif",
-        "font_size": "16px",
-        "link": "#EE1C24",
-        "link_hover": "#EE1C24",
-    }
+html_theme = "pandas_sphinx_theme"
+html_logo = '_static/spyder_logo.png'
+html_theme_options = {
+    "external_links": [
+        {
+            "url": "https://www.spyder-ide.org/blog",
+            "name": "Blog"
+        }
+    ],
+    "use_edit_page_button": True,
+    "gitter_room": "spyder-ide/public",
+    "alert_message": "This documentation is still a work in progress. Check out the <a href="https://docs.spyder-ide.org" target="_blank">Spyder 3 docs</a> for the stable version"
+}
+html_context = {
+    "github_user": "spyder-ide",
+    "github_repo": "spyder-docs",
+    "github_version": "master",
+    "doc_path": "doc",
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
