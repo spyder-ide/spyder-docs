@@ -1,6 +1,6 @@
-#####################################################################
-Spyder: The Scientific Python Development Environment — Documentation
-#####################################################################
+####################
+Spyder Documentation
+####################
 
 .. image:: images/mainwindow/mainwindow_default_1610.png
    :align: center
@@ -44,9 +44,9 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
 
 
-=========================
-Join the Spyder community
-=========================
+==================
+Join our community
+==================
 
 Spyder is open source software, which means that is free for everyone to use and anyone can contribute to it.
 We encourage everyone to become a part of our community and help develop Spyder!
