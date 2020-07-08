@@ -1,0 +1,16 @@
+/* Style for Font Awesome that only styles the icons before elements */
+.fasb::before {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  font-size: 26px;
+  margin-right: 5px;
+}
+
+/* Ensure FA icons applied to section divs display inline */
+div.fasb h3 {
+  display: inline-block;
+}

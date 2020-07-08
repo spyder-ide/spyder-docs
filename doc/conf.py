@@ -1,6 +1,3 @@
-
-from docutils import nodes
-from docutils.parsers.rst import Directive, directives
 # -*- coding: utf-8 -*-
 #
 # Spyder documentation build configuration file, created by
@@ -14,6 +11,9 @@ from docutils.parsers.rst import Directive, directives
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
+
+from docutils import nodes
+from docutils.parsers.rst import Directive, directives
 
 # -- Path setup --------------------------------------------------------------
 
@@ -169,6 +169,9 @@ html_favicon = "_static/favicon.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+# Custom CSS for the site
+html_css_files = ["custom_styles.css"]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
