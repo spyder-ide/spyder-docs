@@ -29,15 +29,11 @@ To go directly to a line in the :doc:`editor` highlighted by a failed check, jus
 .. image:: images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
 
-|
-
 You can also manually enter the path of a file you'd like it to check in the path entry box in the pane's toolbar.
 The analyzer works with both individual scripts and whole Python packages (directories containing an :file:`__init__.py` file).
 
 .. image:: images/pylint/code-analysis-file.gif
    :alt: Spyder Pylint pane, showing running analysis browsing file
-
-|
 
 Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. 
 If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.
@@ -46,8 +42,6 @@ If Pylint does succeed, the :guilabel:`Output` will show the raw plain text anal
    :align: center
    :alt: Spyder Pylint pane, showing output
 
-|
-
 Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
 
 .. image:: images/pylint/code-analysis-history.png
@@ -55,8 +49,6 @@ Finally, you can click the dropdown or press the dropdown arrow in the filename 
    :alt: Spyder Pylint pane, showing history
 
 |
-
-You can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
 
 
 
@@ -68,8 +60,6 @@ The number of recent runs Spyder should remember can be customized in the :guila
 
 .. image:: images/pylint/code-analysis-history-custom.gif
    :alt: Spyder Pylint pane, customizing history dialog
-
-|
 
 You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu.
 
@@ -94,8 +84,6 @@ For example, a directive might look like ``# pylint: disable=invalid-name``, or 
 .. image:: images/pylint/code-analysis-pylint-disable.gif
    :alt: Spyder Pylint pane, showing disabling a message locally
 
-|
-
 Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user folder.
 If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the `Pylint documentation`_.
@@ -108,8 +96,10 @@ For more details on configuring Pylint, see the `Pylint documentation`_.
 |
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`profiler`
