@@ -17,8 +17,9 @@ install:
   - pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 
 script:
-  - make docs
   - set -e
+  - make docs
+  - make linkcheck
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;
     fi
