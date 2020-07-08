@@ -14,3 +14,23 @@
 div.fasb h3 {
   display: inline-block;
 }
+
+/* Custom color for FA icons in the Where to go now section */
+div p.fasb::before {
+  color: #36557c;
+  width: 32px;
+}
+
+/* Custom colors for specific FA icons in the index page */
+
+div.fa-book::before {
+  color: #6a3514;
+}
+
+div.fa-globe-americas::before {
+  color: #1c4489;
+}
+
+div.fa-user-friends::before {
+  color: #f6951f;
+}

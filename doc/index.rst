@@ -22,41 +22,29 @@ Where to go now?
 Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
 These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
-.. image:: _static/book-open-solid.png
-   :align: left
-   :width: 4.1%
+.. rst-class:: fasb fa-book-open
 
-If you are looking for a summary of its features and interface, check out the :doc:`overview`.
+   If you are looking for a summary of its features and interface, check out the :doc:`overview`.
 
-.. image:: _static/download-solid.png
-   :align: left
-   :width: 4.1%
+.. rst-class:: fasb fa-download
 
-If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
+   If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
 
-.. image:: _static/walking-solid.png
-   :align: left
-   :width: 3.8%
+.. rst-class:: fasb fa-walking
 
-If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
+   If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
 
-.. image:: _static/columns-solid.png
-   :align: left
-   :width: 5%
+.. rst-class:: fasb fa-columns
 
-If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
+   If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
 
-.. image:: _static/first-aid-solid.png
-   :align: left
-   :width: 5%
+.. rst-class:: fasb fa-first-aid
 
-If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
+   If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
 
-.. image:: _static/question-circle-solid.png
-   :align: left
-   :width: 5%
+.. rst-class:: fasb fa-question-circle
 
-If you have a question about Spyder, visit the frequently asked questions section.
+   If you have a question about Spyder, visit the frequently asked questions section.
 
 
 
@@ -68,9 +56,7 @@ Spyder is open source software, which means that is free for everyone to use and
 We encourage everyone to become a part of our community and help develop Spyder!
 
 
-.. image:: _static/laptop-code-solid.png
-   :align: left
-   :width: 4.2%
+.. rst-class:: fasb fa-laptop-code
 
 Looking to contribute your code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,9 +72,7 @@ The easiest way to get started is helping us resolve items on our `issue tracker
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
 
-.. image:: _static/book-solid.png
-   :align: left
-   :width: 3.7%
+.. rst-class:: fasb fa-book
 
 Want to help writing docs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,9 +85,7 @@ Check out the `docs contributing guide`_ to learn how to submit a PR with your c
 .. _docs repo: https://github.com/spyder-ide/spyder-docs
 
 
-.. image:: _static/globe-americas-solid.png
-   :align: left
-   :width: 4%
+.. rst-class:: fasb fa-globe-americas
 
 Interested in translating Spyder?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,9 +97,7 @@ For this purpose we use `Crowdin`_, which provides a simple web based interface 
 .. _Crowdin: https://crowdin.com/project/spyder
 
 
-.. image:: _static/user-friends-solid.png
-   :align: left
-   :width: 4%
+.. rst-class:: fasb fa-user-friends
 
 Want to be part of our social media?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,7 +109,7 @@ Connect with Spyder through our social media channels to stay up to date with ou
 .. toctree::
     :maxdepth: 2
     :hidden:
-    
+
     installation
     indexvideos
     indexpanes
