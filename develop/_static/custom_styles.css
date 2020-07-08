@@ -1,0 +1,36 @@
+/* Style for Font Awesome that only styles the icons before elements */
+.fasb::before {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  font-size: 26px;
+  margin-right: 5px;
+}
+
+/* Ensure FA icons applied to section divs display inline */
+div.fasb h3 {
+  display: inline-block;
+}
+
+/* Custom color for FA icons in the Where to go now section */
+div p.fasb::before {
+  color: #36557c;
+  width: 32px;
+}
+
+/* Custom colors for specific FA icons in the index page */
+
+div.fa-book::before {
+  color: #6a3514;
+}
+
+div.fa-globe-americas::before {
+  color: #1c4489;
+}
+
+div.fa-user-friends::before {
+  color: #f6951f;
+}
