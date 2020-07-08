@@ -2,13 +2,9 @@
 Spyder: The Scientific Python Development Environment — Documentation
 #####################################################################
 
-|
-
 .. image:: images/mainwindow/mainwindow_default_1610.png
    :align: center
    :alt: Screenshot of the Spyder main window, with the default panel layout
-
-|
 
 Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
