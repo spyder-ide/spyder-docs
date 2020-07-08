@@ -249,14 +249,8 @@
 <h1>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>Variable Explorer</strong> allows you to interactively browse and manage the objects generated running your code.</p>
 <img alt="Spyder Variable Explorer execution with a variable of type list" class="align-center" src="_images/variable-explorer-execution.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a> session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.</p>
 <img alt="Spyder Variable Explorer, with a list of variables and their contents" class="align-center" src="_images/variable-explorer-standard.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>The Variable Explorer gives you information on the name, size, type and value of each object.
 To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.</p>
 <img alt="Spyder Variable Explorer modifying value of a variable" class="align-center" src="_images/variable-explorer-modifying.gif" />
@@ -270,18 +264,12 @@ To modify a scalar variable, like an number, string or boolean, simply double cl
 <h3>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
 <p>When a string variable is longer than forty characters, you can double click it to see its value in a text editor to more easily modify it.</p>
 <a class="reference internal image-reference" href="_images/variable-explorer-text-long.png"><img alt="Variable Explorer text editor, displaying a long string in a window" class="align-center" src="_images/variable-explorer-text-long.png" style="width: 500px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="dictionaries">
 <h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
 <p>Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value.
 You can double click any of the values to modify them, which will open a new viewer if the value is itself an object.</p>
 <a class="reference internal image-reference" href="_images/variable-explorer-dictionary.png"><img alt="Dictionary editor displaying keys and their types, sizes, and values" class="align-center" src="_images/variable-explorer-dictionary.png" style="width: 500px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="lists">
 <h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
@@ -289,9 +277,6 @@ You can double click any of the values to modify them, which will open a new vie
 To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
 Just like dictionaries, you can double-click values to edit them.</p>
 <a class="reference internal image-reference" href="_images/variable-explorer-list.png"><img alt="List editor displaying a list, showing one being edited" class="align-center" src="_images/variable-explorer-list.png" style="width: 500px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="numpy-arrays">
 <h3>Numpy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h3>
@@ -299,25 +284,16 @@ Just like dictionaries, you can double-click values to edit them.</p>
 Double-clicking them will open a viewer displaying the array values in a “heat map”, with each value in a grid cell colored based on its numeric quantity.
 You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.</p>
 <img alt="Array editor array, displaying a &quot;heatmap&quot; of its values" class="align-center" src="_images/variable-explorer-heat-map.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>If supported by the datatype, you can also change the format of the array’s values, choosing the number of decimals that you want the array to display.
 For this, click the <span class="guilabel">Format</span> button and and set the desired formatting in the dialog that appears, using standard <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting">Printf-style syntax</a>.</p>
 <p>Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers.
 Clicking the <span class="guilabel">Resize</span> button will set it automatically.</p>
 <img alt="Array editor with a 2D int array, showing resizing of columns" class="align-center" src="_images/variable-explorer-resize.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </div>
 <div class="section" id="dataframes">
 <h3>DataFrames<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
 <p>DataFrames, like Numpy arrays, display in a viewer where you can show or hide “heatmap” colors, change the format and resize the rows and columns either manually or automatically.</p>
 <img alt="Dataframe editor showing data frame &quot;heatmap&quot;" class="align-center" src="_images/variable-explorer-dataframe.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
 <img alt="Dataframe editor showing multi-index support" class="align-center" src="_images/variable-explorer-multi-index.png" />
 <div class="line-block">
@@ -329,9 +305,6 @@ Clicking the <span class="guilabel">Resize</span> button will set it automatical
 <h2>Options Menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
 <p>The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria.</p>
 <img alt="Spyder Variable Explorer, with options menu" class="align-center" src="_images/variable-explorer-menu.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>It also allows you to display the min and max of Numpy arrays instead of a preview of their values.</p>
 <a class="reference internal image-reference" href="_images/variable-explorer-array-min-max.png"><img alt="Variable Explorer showing max and min values of numpy array" class="align-center" src="_images/variable-explorer-array-min-max.png" style="width: 500px;" /></a>
 <div class="line-block">
@@ -343,14 +316,8 @@ Clicking the <span class="guilabel">Resize</span> button will set it automatical
 <p>The Variable Explorer’s toolbar includes several useful features that affect the entire namespace.
 For example, you can save the current session’s data as a <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file, which can be loaded later to recover all the variables stored.</p>
 <img alt="Variable Explorer showing how to save and import data" class="align-center" src="_images/variable-explorer-import-data.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>There is also a button to remove all displayed variables, and a search box to find objects by  name or type.</p>
 <img alt="Variable Explorer showing how to search variables" class="align-center" src="_images/variable-explorer-search.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Finally, there is a button to refresh the Variable Explorer’s contents, which will update it to show the current state of the code running in the IPython console.</p>
 </div>
 <div class="section" id="advanced-functionality">
@@ -358,48 +325,30 @@ For example, you can save the current session’s data as a <code class="docutil
 <p>The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.
 These include renaming, removing or editing existing variables, as well as the <span class="guilabel">duplicate</span> option to create a new copy of one of them under a new name you enter in the resulting dialog box.</p>
 <img alt="Variable Explorer showing duplicating a variable" class="align-center" src="_images/variable-explorer-duplicate.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose.
 This allows you to change the type of the variable that you are pasting which can be very useful, allowing you to, for example, easily copy the elements of a list into an array.</p>
 <img alt="Variable Explorer showing copying list into array" class="align-center" src="_images/variable-explorer-copy-paste.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Additionally, you can create an object from scratch directly in the Variable Explorer with the <span class="guilabel">Insert</span> option, which allows you to type the key (which should be in quotation marks) and the value for the item that you want to insert.
 In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more.</p>
 <img alt="Variable Explorer showing insertion of a new variable" class="align-center" src="_images/variable-explorer-insert.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>For lists and Numpy arrays, more advanced options are available, including generating plots and histograms of their values appropriate to their type and dimensions.</p>
 <img alt="Plot window showing a plot, generated via the previous options" class="align-center" src="_images/variable-explorer-histogram-plot.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>You can even save an array to a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> file by simply clicking the appropriate option, which can later be loaded by Spyder or in your code via <cite>numpy.load()</cite>.</p>
 <a class="reference internal image-reference" href="_images/variable-explorer-contextmenu-array.png"><img alt="Context menu for an int array, with the Show image option selected" class="align-center" src="_images/variable-explorer-contextmenu-array.png" style="width: 500px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib’s colormaps, which can be <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">easily changed to match your preferences</a>.</p>
 <img alt="Interactive image based on the array's data" class="align-center" src="_images/variable-explorer-show-image.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Finally, we added a context-menu action to open any object using the new Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these datatypes.</p>
 <img alt="Object explorer showing dataframe" class="align-center" src="_images/variable-explorer-object-explorer.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
 <div class="section" id="related-components">
-<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a></p></li>
 <li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -466,13 +415,11 @@ In addition to adding a new top-level variable, this feature also allows you to 
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#advanced-functionality" class="nav-link">Advanced Functionality</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#related-components" class="nav-link">Related components</a>
+                <a href="#advanced-functionality" class="nav-link">Advanced Functionality</a>
             </li>
         
-                </ul>
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#related-components" class="nav-link">Related components</a>
             </li>
         
         </ul>
@@ -532,13 +479,11 @@ In addition to adding a new top-level variable, this feature also allows you to 
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#advanced-functionality" class="nav-link">Advanced Functionality</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#related-components" class="nav-link">Related components</a>
+                    <a href="#advanced-functionality" class="nav-link">Advanced Functionality</a>
                 </li>
             
-                    </ul>
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#related-components" class="nav-link">Related components</a>
                 </li>
             
             </ul>

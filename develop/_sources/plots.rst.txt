@@ -9,8 +9,6 @@ It will show you plots from the :doc:`ipythonconsole`, produced by your code in 
    :align: center
    :alt: Spyder main window showing execution for the Plots pane
 
-|
-
 The figures shown in the Plots pane are those associated with the currently active :guilabel:`Console` tab; if you switch consoles, the list of plots displayed (or none at all, if a new console) will change accordingly.
 
 .. image:: images/plots/plots-switch.gif
@@ -39,8 +37,6 @@ If you deactivate this option, figures will display in both the Plots pane and t
    :align: center
    :alt: Spyder's plots pane and console showing plots in the console
 
-|
-
 
 ~~~~~~~~~~~~~~~~~
 Show plot outline
@@ -51,8 +47,6 @@ The :guilabel:`Show plot outline` option, off by default, shows a thin stroke su
 .. image:: images/plots/plots-outline.gif
    :align: center
    :alt: Spyder's plots pane showing a plot's outline
-
-|
 
 
 ~~~~~~~~~~~~~~~~~~~
@@ -81,8 +75,6 @@ For example, you can cycle sequentially through the plot list with the forward a
    :align: center
    :alt: Spyder main window showing plot navigation using arrows.
 
-|
-
 You can also save one or all the plots in the pane to file(s) by clicking the respective "save"/"save all" icons in the toolbar.
 Plots are rendered and saved as PNG by default, but SVG can be selected as an option under :menuselection:`Preferences --> IPython console --> Graphics --> Inline backend --> Format`.
 
@@ -90,15 +82,11 @@ Plots are rendered and saved as PNG by default, but SVG can be selected as an op
    :align: center
    :alt: Spyder plots pane showing saving a plot.
 
-|
-
 Additionally, if you want to use a figure in another document, you can click the "copy to clipboard" button and paste your plot wherever you want, such as a word processor.
 
 .. image:: images/plots/plots-copy.gif
    :align: center
    :alt: Spyder Plots pane showing pasting plot in LibreOffice.
-
-|
 
 Finally, you can use the "remove" and "remove all" buttons in the toolbar to clear plots from the list.
 
@@ -109,9 +97,10 @@ Finally, you can use the "remove" and "remove all" buttons in the toolbar to cle
 |
 
 
-~~~~~~~~~~~~~~~~~~
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`ipythonconsole`
 * :doc:`variableexplorer`

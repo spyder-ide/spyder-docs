@@ -16,8 +16,6 @@ Discover the basics of using the Spyder interface and get an introduction to its
             :width: 640
             :align: left
 
-|
-
 * Find out different ways to open Spyder
 * Understand the key elements of Spyder’s interface
 * Learn more about Spyder’s four core panes
@@ -35,8 +33,6 @@ Learn the basics of using Spyder’s four main panes.
             :height: 360
             :width: 640
             :align: left
-
-|
 
 * Open and edit a file in Spyder’s Editor
 * Run a script in the Editor and see the output in Spyder’s IPython Console
@@ -57,8 +53,6 @@ Learn how to customize Spyder’s interface to match your workflow and developme
             :height: 360
             :width: 640
             :align: left
-
-|
 
 * Choose your preferred fonts 
 * Switch between different interface, icon and syntax themes 

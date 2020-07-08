@@ -262,35 +262,22 @@ If the Code Analysis pane is not visible, you can open it under <span class="men
 All standard checks are run by default.
 To go directly to a line in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> highlighted by a failed check, just click its name.</p>
 <img alt="Spyder Pylint pane, showing running analysis and clicking failed check" src="_images/code-analysis-editor.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>You can also manually enter the path of a file you’d like it to check in the path entry box in the pane’s toolbar.
 The analyzer works with both individual scripts and whole Python packages (directories containing an <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file).</p>
 <img alt="Spyder Pylint pane, showing running analysis browsing file" src="_images/code-analysis-file.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Cancel analyzing a file with the <span class="guilabel">Stop</span> button, and if analysis fails, click the <span class="guilabel">Output</span> button to find out why.
 If Pylint does succeed, the <span class="guilabel">Output</span> will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.</p>
 <img alt="Spyder Pylint pane, showing output" class="align-center" src="_images/code-analysis-output.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.</p>
 <img alt="Spyder Pylint pane, showing history" class="align-center" src="_images/code-analysis-history.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>You can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.</p>
 </div>
 <div class="section" id="options-menu">
 <h2>Options menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
 <p>The number of recent runs Spyder should remember can be customized in the <span class="guilabel">History</span> dialog, available from the Code Analysis options menu.</p>
 <img alt="Spyder Pylint pane, customizing history dialog" src="_images/code-analysis-history-custom.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu.</p>
 <img alt="Spyder Pylint pane, expanding and collapsing sections" src="_images/code-analysis-expand-collapse.gif" />
 <div class="line-block">
@@ -302,9 +289,6 @@ If Pylint does succeed, the <span class="guilabel">Output</span> will show the r
 <p>You can turn certain messages off at the line, block or file/module level by adding a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=MESSAGE-NAMES</span></code> comment at the respective <a class="reference external" href="http://pylint.pycqa.org/en/stable/user_guide/message-control.html">scope</a>, where <code class="docutils literal notranslate"><span class="pre">MESSAGE_NAMES</span></code> should be replaced with a comma-separated list (or single value) of <a class="reference external" href="http://pylint.pycqa.org/en/latest/technical_reference/features.html#pylint-checkers-options-and-switches">Pylint message names</a>.
 For example, a directive might look like <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=invalid-name</span></code>, or <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=fixme,</span> <span class="pre">line-too-long</span></code>.</p>
 <img alt="Spyder Pylint pane, showing disabling a message locally" src="_images/code-analysis-pylint-disable.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Or, you can globally suppress specific messages and adjust other Pylint settings by editing the <code class="file docutils literal notranslate"><span class="pre">.pylintrc</span></code> configuration file in your user folder.
 If it doesn’t exist, you can generate it by running <code class="docutils literal notranslate"><span class="pre">pylint</span> <span class="pre">--generate-rcfile</span> <span class="pre">&gt;</span> <span class="pre">.pylintrc</span></code> in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the <a class="reference external" href="http://pylint.pycqa.org/en/stable/index.html">Pylint documentation</a>.</p>
@@ -312,13 +296,13 @@ For more details on configuring Pylint, see the <a class="reference external" hr
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
 <div class="section" id="related-components">
-<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
 <li><p><a class="reference internal" href="profiler.html"><span class="doc">Profiler</span></a></p></li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -359,13 +343,11 @@ For more details on configuring Pylint, see the <a class="reference external" hr
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#advanced-options" class="nav-link">Advanced options</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#related-components" class="nav-link">Related components</a>
+                <a href="#advanced-options" class="nav-link">Advanced options</a>
             </li>
         
-                </ul>
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#related-components" class="nav-link">Related components</a>
             </li>
         
         </ul>
@@ -399,13 +381,11 @@ For more details on configuring Pylint, see the <a class="reference external" hr
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#advanced-options" class="nav-link">Advanced options</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#related-components" class="nav-link">Related components</a>
+                    <a href="#advanced-options" class="nav-link">Advanced options</a>
                 </li>
             
-                    </ul>
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#related-components" class="nav-link">Related components</a>
                 </li>
             
             </ul>
