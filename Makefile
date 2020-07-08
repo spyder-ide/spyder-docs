@@ -36,6 +36,8 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 docs: ## generate Sphinx HTML documentation, including API docs
 	$(MAKE) -C doc clean
 	$(MAKE) -C doc html
+
+linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
 
 servedocs: doc ## compile the docs watching for changes
