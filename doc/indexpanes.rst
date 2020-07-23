@@ -12,6 +12,7 @@ Panes in Depth
     pylint
     profiler
     onlinehelp
+    findinfiles
 ..
     editor
     ipythonconsole
@@ -19,6 +20,5 @@ Panes in Depth
     profiler
     projects
     fileexplorer
-    findinfiles
     historylog
     internalconsole
