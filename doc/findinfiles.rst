@@ -11,18 +11,26 @@ The **Find** pane allows you to search the content of files in a user-defined lo
 
 |
 
+
+
 ===================
 Using the Find pane
 ===================
 
 To search for text in the Find pane, write it in the top bar of the pane and press the search button.
-This will allow you to view and navigate through all the occurances of your search text in your working directory. You can expand or contract the search results to view the results on each file. Clicking on any of these matches, will automatically open the file showing where the text was found.
+This will allow you to view and navigate through all the occurrences of your search text in your working directory.
+You can expand or contract the search results to view the results on each file.
+Clicking on any of these matches, will automatically open the file showing where the text was found.
 
 [GIF showing search and cliking file]
 
-If you want to change the scope of your search, select another directory, project or file in the :guilabel: 'Search in' menu. The locations that you select for your search will be stored in the list so you can access them easily. To erase all of these locations, select the "clear the list" option from the dropdown menu in the "Search in" field.
+If you want to change the scope of your search, select another directory, project or file in the :guilabel: 'Search in' menu.
+The locations that you select for your search will be stored in the list so you can access them easily.
+To erase all of these locations, select the "clear the list" option from the dropdown menu in the "Search in" field.
 
 [GIF showing chosing new directory and directory stored in the list]
+
+
 
 =======================
 Choosing search options
