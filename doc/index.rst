@@ -9,8 +9,6 @@ Spyder Documentation
 Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
 
-
-
 ================
 Where to go now?
 ================
@@ -18,29 +16,57 @@ Where to go now?
 Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
 These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
-.. rst-class:: fasb fa-book-open
+.. panels::
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
+    
+    .. div:: align-center
 
-   If you are looking for a summary of its features and interface, check out the :doc:`overview`.
+       .. rst-class:: fasb fa-book-open
+   
+    .. div:: align-center
 
-.. rst-class:: fasb fa-download
+       If you are looking for a summary of its features and interface, check out the :doc:`overview`.
+    ---
+    .. div:: align-center
 
-   If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
+       .. rst-class:: fasb fa-download
+   
+    .. div:: align-center
+    
+       If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
+    ---
+    .. div:: align-center
 
-.. rst-class:: fasb fa-walking
+       .. rst-class:: fasb fa-walking
+   
+    .. div:: align-center
+    
+       If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
+    ---
+    .. div:: align-center
 
-   If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
+       .. rst-class:: fasb fa-columns
+   
+    .. div:: align-center
+    
+       If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
+    ---
+    .. div:: align-center
 
-.. rst-class:: fasb fa-columns
+       .. rst-class:: fasb fa-first-aid
+   
+    .. div:: align-center
+    
+       If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
+    ---
+    .. div:: align-center
 
-   If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
-
-.. rst-class:: fasb fa-first-aid
-
-   If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
-
-.. rst-class:: fasb fa-question-circle
-
-   If you have a question about Spyder, visit the frequently asked questions section.
+       .. rst-class:: fasb fa-question-circle
+   
+    .. div:: align-center
+    
+       If you have a question about Spyder, visit the frequently asked questions section.
 
 
 
