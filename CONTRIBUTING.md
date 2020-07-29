@@ -83,8 +83,7 @@ pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@devel
 Or, if using ``pip``, you can grab it with
 
 ```bash
-pip install sphinx
-pip install sphinx-panels
+pip install sphinx sphinx-panels
 pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
