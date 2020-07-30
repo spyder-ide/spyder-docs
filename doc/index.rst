@@ -19,7 +19,7 @@ Spyder's documentation provides a variety of resources that will help you learn 
 These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
 .. panels::
-    :container: container pb-3 px-5
+    :container: container-lg pb-3 px-md-0 px-5
     :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
     
     .. div:: align-center
