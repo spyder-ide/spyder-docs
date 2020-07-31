@@ -139,8 +139,13 @@ html_theme_options = {
         }
     ],
     "use_edit_page_button": True,
+    "show_powered_by": True,
     "gitter_room": "spyder-ide/public",
-    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version"
+    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version",
+    "github_url": "https://github.com/pandas-dev/pandas",
+    "twitter_url": "https://twitter.com/pandas_dev",
+    "facebook_url": "https://www.facebook.com/SpyderIDE/",
+    "google_groups_url": "https://groups.google.com/group/spyderlib"
 }
 html_context = {
     "github_user": "spyder-ide",
