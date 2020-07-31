@@ -137,12 +137,14 @@ develop/_static/matplotlib_logo.svg
 develop/_static/minus.png
 develop/_static/numpylogo.svg
 develop/_static/pandas.png
+develop/_static/panels-bootstrap.min.css
 develop/_static/plus.png
 develop/_static/pygments.css
 develop/_static/scipy.png
 develop/_static/scipy_trans.png
 develop/_static/searchtools.js
 develop/_static/sphinx-bootstrap.css
+develop/_static/sphinx-dropdown.css
 develop/_static/spyder_logo.png
 develop/_static/spyder_logo_lightbg_text_left.png
 develop/_static/spyder_readme_banner.png
