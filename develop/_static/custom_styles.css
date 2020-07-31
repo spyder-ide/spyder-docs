@@ -16,7 +16,7 @@ div.fasb h3 {
 }
 
 /* Custom color for FA icons in the Where to go now section */
-div div.fasb::before {
+#where-to-go-now div.fasb::before {
   color: #36557c;
   width: 32px;
 }
