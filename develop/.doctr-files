@@ -21,7 +21,13 @@ develop/_images/editor_split_vertical.png
 develop/_images/editor_standard.png
 develop/_images/file_explorer_contextmenu_new.png
 develop/_images/file_explorer_standard.png
-develop/_images/find_in_files_inprogress.png
+develop/_images/find-in-files-case.gif
+develop/_images/find-in-files-directory.gif
+develop/_images/find-in-files-extensions.gif
+develop/_images/find-in-files-inprogress.png
+develop/_images/find-in-files-max-results.png
+develop/_images/find-in-files-regex.gif
+develop/_images/find-in-files-search.gif
 develop/_images/git_for_windows_install_path.png
 develop/_images/help-automatic-connections.gif
 develop/_images/help-command.png
