@@ -11,6 +11,8 @@ It features a unique combination of the advanced editing, analysis, debugging, a
 
 
 
+.. rst-class:: blue-32px
+
 ================
 Where to go now?
 ================
