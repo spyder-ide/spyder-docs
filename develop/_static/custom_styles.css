@@ -15,13 +15,18 @@ div.fasb h3 {
   display: inline-block;
 }
 
+/* Custom bottom margin for the Where to go now section */
+.section .sphinx-bs {
+  margin-bottom: 18px;
+}
+
 /* Custom color for FA icons in the Where to go now section */
 #where-to-go-now div.fasb::before {
   color: #36557c;
   width: 32px;
 }
 
-/* Custom colors for specific FA icons in the index page */
+/*** Custom colors for specific FA icons in the index page ***/
 
 div.fa-book::before {
   color: #6a3514;
