@@ -10,7 +10,6 @@ Each console is executed in a separate process, allowing you to run scripts, int
 .. _IPython: https://ipython.org/
 
 .. image:: images/console/console_standard.png
-   :align: center
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
 |
@@ -26,7 +25,6 @@ You can also connect to external local and remote kernels, including those manag
 External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
 .. image:: images/console/console_menu.png
-   :align: center
    :alt: Spyder IPython Console as above, with the options menu open
 
 |
@@ -62,7 +60,6 @@ To connect to an external kernel,
    The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
 
 .. image:: images/console/console_dialog_connect.png
-   :align: center
    :alt: Connect to kernel dialog, requesting path and connection details
 
 |

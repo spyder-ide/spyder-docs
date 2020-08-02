@@ -8,7 +8,6 @@ Debugging
 This allows breakpoints and the execution flow to be viewed and controlled right from the Spyder GUI, as well as with all the familiar IPython console commands.
 
 .. image:: images/debugging/debugging_console.png
-   :align: center
    :alt: A Spyder IPython console window, showing the ipdb debugger in action
 
 |

@@ -8,7 +8,6 @@ Spyder's multi-language **Editor** integrates a number of powerful tools right o
 The Editor's key features include syntax highlighting (``pygments``); real-time code and style analysis (``pyflakes`` and ``pycodestyle``); on-demand completion, calltips and go-to-definition features (``rope`` and ``jedi``); a function/class browser, horizontal and vertical splitting, and much more.
 
 .. image:: images/editor/editor_split_horizontal.png
-   :align: center
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
 |
@@ -47,7 +46,6 @@ This is much like a "cell" in MATLAB (except without any need to enable a "cell 
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
 .. image:: images/editor/editor_standard.png
-   :align: center
    :alt: Spyder's Editor panel, showing an example of a code cell
 
 |
