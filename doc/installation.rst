@@ -14,9 +14,9 @@ Thanks!
 
 
 
-=============================
-Try Spyder Online with Binder
-=============================
+=================
+Try Spyder Online
+=================
 
 Want to try out Spyder without installing it?
 With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
@@ -32,9 +32,9 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 
 
 
-======================================
-Installing with Anaconda (recommended)
-======================================
+==============
+Using Anaconda
+==============
 
 Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
 
@@ -44,8 +44,8 @@ This is the easiest way to install Spyder for any of our supported platforms, an
 If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
 
 
-Running the pre-installed Spyder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running Spyder
+~~~~~~~~~~~~~~
 
 To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
 On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
@@ -56,8 +56,8 @@ On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, an
 If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``.
 
 
-Installing Spyder in a new Conda environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New Conda environment
+~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.
 Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called ``spyder-env``:
@@ -86,9 +86,9 @@ For more information on this approach, and using Spyder with your existing Pytho
 
 
 
-===========================================
-Installing with an alternative distribution
-===========================================
+===================
+Alternative methods
+===================
 
 .. caution::
 
@@ -96,8 +96,8 @@ Installing with an alternative distribution
    Therefore, we recommend you switch to Anaconda if you encounter installation issues you are unable to solve on your own.
 
 
-Install on Windows
-~~~~~~~~~~~~~~~~~~
+Windows
+~~~~~~~
 
 Spyder is also included in the `WinPython`_ scientific Python distribution, although it doesn't include Anaconda's convenient ``conda`` package and environment manager like Anaconda.
 You can use it immediately after installing, just like with Anaconda.
@@ -105,8 +105,8 @@ You can use it immediately after installing, just like with Anaconda.
 .. _WinPython: https://winpython.github.io/
 
 
-Install on macOS
-~~~~~~~~~~~~~~~~
+macOS
+~~~~~
 
 Thanks to the `MacPorts project`_, Spyder can be installed using its ``port`` package manager; however, the included Spyder version may be out of date or have MacPorts-specific issues outside of Spyder's control.
 
@@ -117,8 +117,8 @@ There are `several versions`_ available from which you can choose.
 .. _several versions: https://ports.macports.org/?search=spyder&search_by=name
 
 
-Install on GNU/Linux
-~~~~~~~~~~~~~~~~~~~~
+Linux
+~~~~~
 
 Ubuntu
 ------
@@ -177,9 +177,9 @@ Alternately, you should be able to launch it from the terminal/command line with
 
 
 
-==================================
-Installing with pip (experts only)
-==================================
+=========
+Using pip
+=========
 
 .. warning::
 
@@ -243,9 +243,9 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 
 
-==============================
-Installing a development build
-==============================
+=================
+Development build
+=================
 
 If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
