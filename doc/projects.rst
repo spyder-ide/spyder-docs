@@ -82,7 +82,6 @@ The second option in the dialog below is generally a safe approach.
 .. _Git for Windows: https://gitforwindows.org/
 
 .. image:: images/other/git_for_windows_install_path.png
-   :align: center
    :alt: Git for Windows installer on the PATH options page; 2nd option chosen
 
 |

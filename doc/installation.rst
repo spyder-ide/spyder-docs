@@ -78,7 +78,6 @@ You can then run Spyder by the same methods as above, except make sure to select
 
 .. image:: images/installation/installation-conda-install.gif
    :alt: Running Spyder installation with conda
-   :align: center
 
 For more information on this approach, and using Spyder with your existing Python environments and packages, please see our `Guide to working with packages and environments in Spyder`_.
 
@@ -218,7 +217,6 @@ After activating your environment, to install Spyder and its other dependencies,
 
 .. image:: images/installation/installation-pip-install.gif
    :alt: Running Spyder installation with pip
-   :align: center
 
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
 
