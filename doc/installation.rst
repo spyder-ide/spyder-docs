@@ -15,7 +15,7 @@ Thanks!
 
 
 =================
-Try Spyder Online
+Try Spyder online
 =================
 
 Want to try out Spyder without installing it?
@@ -36,12 +36,15 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 Using Anaconda
 ==============
 
+.. important::
+
+   If in doubt, you should install Spyder via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
+
 Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
 
 .. _Anaconda: https://www.anaconda.com/products/individual
 
 This is the easiest way to install Spyder for any of our supported platforms, and the way we recommend to avoid unexpected issues we aren't able to help you with.
-If in doubt, you should install via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
 
 
 Running Spyder
@@ -151,7 +154,7 @@ Spyder's official Debian package is available on the `Debian package repository`
 .. _Debian package repository: https://packages.debian.org/unstable/spyder3
 
 
-Other Distributions
+Other distributions
 -------------------
 
 Spyder is also available in other GNU/Linux distributions, like
@@ -243,9 +246,9 @@ This command will also update all Spyder dependencies, so we recommend you use a
 
 
 
-=================
-Development build
-=================
+==================
+Development builds
+==================
 
 If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
