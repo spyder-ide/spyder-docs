@@ -39,7 +39,6 @@ By double-clicking an item in the Profiler, you will be taken to the file and li
 You can increase the number of levels displayed for a particular object by clicking the dropdown arrows to the left of the name, and expand/collapse all the items with the buttons in the top left.
 
 .. image:: images/profiler/profiler-dropdown.gif
-   :align: center
    :alt: Spyder Profiler pane, showing dropdown arrows and buttons for expanding and collapsing
 
 By clicking the dropdown or press the :kbd:`Down Arrow` key in the filename field, you can recall paths of previous profiled files.

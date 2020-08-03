@@ -26,6 +26,13 @@ div.fasb h3 {
   width: 32px;
 }
 
+/* Center all images by default */
+.section > img:not([class]) {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 /*** Custom colors for specific FA icons in the index page ***/
 
 div.fa-book::before {

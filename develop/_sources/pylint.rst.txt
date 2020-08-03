@@ -9,7 +9,6 @@ Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which
 .. _Pylint: http://pylint.pycqa.org/
 
 .. image:: images/pylint/code-analysis-standard.png
-   :align: center
    :alt: Spyder Pylint pane, showing numerous issues discovered in a file
 
 |
@@ -39,13 +38,11 @@ Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails,
 If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.
 
 .. image:: images/pylint/code-analysis-output.png
-   :align: center
    :alt: Spyder Pylint pane, showing output
 
 Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
 
 .. image:: images/pylint/code-analysis-history.png
-   :align: center
    :alt: Spyder Pylint pane, showing history
 
 |
