@@ -146,19 +146,23 @@ html_theme_options = {
     "footer_links": [
         {
             "url": "https://github.com/pandas-dev/pandas",
-            "name": "GitHub"
+            "name": "GitHub",
         },
         {
             "url": "https://twitter.com/pandas_dev",
-            "name": "Twitter"
+            "name": "Twitter",
         },
         {
             "url": "https://www.facebook.com/SpyderIDE/",
-            "name": "Facebook"
+            "name": "Facebook",
+        },
+        {
+            "url": "https://instagram.com/spyderide",
+            "name": "Instagram",
         },
         {
             "url": "https://groups.google.com/group/spyderlib",
-            "name": "Google Groups"
+            "name": "Google Groups",
         },
     ],
 }
