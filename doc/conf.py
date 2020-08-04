@@ -142,6 +142,7 @@ html_theme_options = {
     "show_powered_by": True,
     "gitter_room": "spyder-ide/public",
     "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version",
+    "open_collective": "spyder",
     "footer_links": [
         {
             "url": "https://github.com/pandas-dev/pandas",
