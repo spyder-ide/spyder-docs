@@ -16,20 +16,19 @@ The Variable Explorer gives you information on the name, size, type and value of
 To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.
 
 .. image:: images/variable_explorer/variable-explorer-modifying.gif
-   :alt: Spyder Variable Explorer modifying value of a variable 
+   :alt: Spyder Variable Explorer modifying value of a variable
 
 |
 
 
 
 ==============
-Object Viewers
+Object viewers
 ==============
 
 Spyder's :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.
 
 
-~~~~~~~
 Strings
 ~~~~~~~
 
@@ -40,7 +39,6 @@ When a string variable is longer than forty characters, you can double click it 
    :alt: Variable Explorer text editor, displaying a long string in a window
 
 
-~~~~~~~~~~~~
 Dictionaries
 ~~~~~~~~~~~~
 
@@ -52,7 +50,6 @@ You can double click any of the values to modify them, which will open a new vie
    :alt: Dictionary editor displaying keys and their types, sizes, and values
 
 
-~~~~~
 Lists
 ~~~~~
 
@@ -65,8 +62,7 @@ Just like dictionaries, you can double-click values to edit them.
    :alt: List editor displaying a list, showing one being edited
 
 
-~~~~~~~~~~~~
-Numpy Arrays
+Numpy arrays
 ~~~~~~~~~~~~
 
 Like lists, for Numpy arrays the Variable Explorer shows a preview of their values.
@@ -88,7 +84,6 @@ Clicking the :guilabel:`Resize` button will set it automatically.
    :alt: Array editor with a 2D int array, showing resizing of columns
 
 
-~~~~~~~~~~
 DataFrames
 ~~~~~~~~~~
 
@@ -97,7 +92,7 @@ DataFrames, like Numpy arrays, display in a viewer where you can show or hide "h
 .. image:: images/variable_explorer/variable-explorer-dataframe.png
    :alt: Dataframe editor showing data frame "heatmap"
 
-Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices. 
+Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.
 
 
 .. image:: images/variable_explorer/variable-explorer-multi-index.png
@@ -108,10 +103,10 @@ Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its Da
 
 
 ============
-Options Menu
+Options menu
 ============
 
-The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria. 
+The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria.
 
 .. image:: images/variable_explorer/variable-explorer-menu.png
    :alt: Spyder Variable Explorer, with options menu
@@ -127,7 +122,7 @@ It also allows you to display the min and max of Numpy arrays instead of a previ
 
 
 ===============
-Toolbar Buttons
+Toolbar buttons
 ===============
 
 The Variable Explorer's toolbar includes several useful features that affect the entire namespace.
@@ -146,7 +141,7 @@ Finally, there is a button to refresh the Variable Explorer's contents, which wi
 
 
 ======================
-Advanced Functionality
+Advanced functionality
 ======================
 
 The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.

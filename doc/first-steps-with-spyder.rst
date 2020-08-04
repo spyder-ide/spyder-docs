@@ -5,8 +5,10 @@ First Steps with Spyder
 The videos in this section provide a starting point for new users who have never opened Spyder before.
 You'll get familiar with opening Spyder in different ways, working with the four main panes and customizing the Spyder to your heart's content.
 
+
+
 ===============
-Getting Started
+Getting started
 ===============
 
 Discover the basics of using the Spyder interface and get an introduction to its four main panes, along with a quick look at the others.

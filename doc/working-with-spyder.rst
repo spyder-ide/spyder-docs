@@ -4,6 +4,8 @@ Working with Spyder
 
 In this section, you will learn about Spyder's more advanced functionality, and explore most of the panes. 
 
+
+
 =====================
 Beyond the main panes
 =====================
@@ -20,5 +22,3 @@ Explore how to take advantage of Spyder’s functionality beyond just the four c
 * Quickly navigate within and between files with the Outline pane
 * Search for text or regular expressions across your entire project with the Find pane
 * Discover and explore structured documentation in the Online Help pane
-
-

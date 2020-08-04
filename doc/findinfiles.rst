@@ -51,7 +51,7 @@ To parse your search string as a `regular expression`_, enable the :guilabel:`.*
 .. image:: images/find_in_files/find-in-files-regex.gif
    :alt: Spyder Find pane showing regular expression search
 
-To exclude certain filenames, extensions or directories from your search, click the :guilabel:`Plus` button to display the advanced options for the pane, and then enter them in the :guilabel:`Exclude` text box. 
+To exclude certain filenames, extensions or directories from your search, click the :guilabel:`Plus` button to display the advanced options for the pane, and then enter them in the :guilabel:`Exclude` text box.
 
 .. image:: images/find_in_files/find-in-files-extensions.gif
    :alt: Spyder Find pane showing search excluding several file-types
@@ -61,9 +61,13 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
 .. image:: images/find_in_files/find-in-files-max-results.png
    :alt: Spyder Find pane showing window with maximum results dialog open
 
+|
 
+
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`fileexplorer`
