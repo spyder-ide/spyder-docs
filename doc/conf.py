@@ -139,8 +139,36 @@ html_theme_options = {
         }
     ],
     "use_edit_page_button": True,
+    "show_powered_by": True,
     "gitter_room": "spyder-ide/public",
-    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version"
+    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version",
+    "open_collective": "spyder",
+    "footer_links": [
+        {
+            "url": "https://github.com/spyder-ide/spyder",
+            "name": "GitHub",
+        },
+        {
+            "url": "https://twitter.com/Spyder_IDE",
+            "name": "Twitter",
+        },
+        {
+            "url": "https://www.facebook.com/SpyderIDE/",
+            "name": "Facebook",
+        },
+        {
+            "url": "https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg",
+            "name": "YouTube",
+        },
+        {
+            "url": "https://instagram.com/spyderide",
+            "name": "Instagram",
+        },
+        {
+            "url": "https://groups.google.com/group/spyderlib",
+            "name": "Google Groups",
+        },
+    ],
 }
 html_context = {
     "github_user": "spyder-ide",
