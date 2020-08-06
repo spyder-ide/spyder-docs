@@ -1,6 +1,6 @@
 ![Spyder Docs — Documentation for the Scientific Python Development Environment](./doc/_static/spyder_readme_banner.png)
 
-*Copyright © 2009–2018 The Spyder Doc Contributors*
+*Copyright © 2009–2020 The Spyder Doc Contributors*
 
 
 [![license](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
@@ -18,16 +18,16 @@
 
 ## Overview
 
-This repository contains the source for the documentation for Spyder, the Scientific Python Development Environment.
-They can be viewed online at [docs.Spyder-IDE.org](https://docs.spyder-ide.org/).
+This repository contains the documentation for Spyder, the Scientific Python Development Environment.
+The Spyder 3 docs can be viewed at [docs.Spyder-IDE.org](https://docs.spyder-ide.org/), and the in-development Spyder 4 docs can be previewed at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
 
-For more information about Spyder itself, please see the [website](https://www.spyder-ide.org/) and the [main repo](https://github.com/spyder-ide/spyder).
+For more information about Spyder itself, please see our [website](https://www.spyder-ide.org/) and the [main repo](https://github.com/spyder-ide/spyder).
 
 
 ## Building and Deploying
 
 The docs are built with [Sphinx](http://www.sphinx-doc.org/en/stable/index.html) and deployed with [Doctr](https://drdoctr.github.io/doctr/) to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
-The ``master`` branch contains the docs for the forthcoming release of Spyder 4, currently planned for Q1 2019 if funding is secured, while the ``3.x`` branch has the docs for the current version, Spyder 3.
+The ``master`` branch contains the in-development docs for Spyder 4, which should be ready for release soon, while the ``3.x`` branch has the docs for the previous major version, Spyder 3.
 
 
 ## Contributing
