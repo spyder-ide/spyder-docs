@@ -145,11 +145,11 @@ html_theme_options = {
     "open_collective": "spyder",
     "footer_links": [
         {
-            "url": "https://github.com/pandas-dev/pandas",
+            "url": "https://github.com/spyder-ide/spyder",
             "name": "GitHub",
         },
         {
-            "url": "https://twitter.com/pandas_dev",
+            "url": "https://twitter.com/Spyder_IDE",
             "name": "Twitter",
         },
         {
