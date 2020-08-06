@@ -46,3 +46,13 @@ div.fa-globe-americas::before {
 div.fa-user-friends::before {
   color: #f6951f;
 }
+
+.navbar-menu {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.navbar-light {
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.589);
+}
