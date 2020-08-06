@@ -38,7 +38,7 @@ Using Anaconda
 
 .. important::
 
-   If in doubt, you should install Spyder via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we may be able to provide limited assistance if you do run into trouble.
+   If in doubt, you should install Spyder via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we will be able to provide assistance if you do run into trouble.
 
 Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
 
