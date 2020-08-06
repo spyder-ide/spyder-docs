@@ -21,7 +21,7 @@ div.fasb h3 {
 }
 
 /* Custom color and size for FA icons */
-.blue-32px fasb::before {
+.blue-32px .fasb::before {
   color: #36557c;
   width: 32px;
 }
