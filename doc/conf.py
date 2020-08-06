@@ -157,6 +157,10 @@ html_theme_options = {
             "name": "Facebook",
         },
         {
+            "url": "https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg",
+            "name": "YouTube",
+        },
+        {
             "url": "https://instagram.com/spyderide",
             "name": "Instagram",
         },
