@@ -32,7 +32,7 @@ The ``master`` branch contains the in-development docs for Spyder 4, which shoul
 
 ## Contributing
 
-We welcome your contributions of corrections, additions and enhancements to these docs, as they are very much a work in progress and we appreciate getting our broad community involved wherever possible.
+We welcome your contributions of corrections, additions and enhancements to these docs, as they are very much a work in progress, and we appreciate getting our broad community involved wherever possible.
 To do so, simply submit a PR with your changes and we'll be happy to review it; make sure to read our [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md) in mind to ensure the process of getting your revisions integrated goes smoothly.
 
 Thanks for your interest in Spyder and its documentation, and we appreciate your support of the project!
