@@ -257,16 +257,35 @@ For more information, please see the `Contributing Guide`_ included with the Spy
 
 
 
+.. rst-class:: blue-32px
+
 ===============
 Additional help
 ===============
 
-* *Run in to a problem installing or running Spyder?* Read our `Troubleshooting Guide and FAQ`_.
-* *Looking for general information about Spyder and its ecosystem?* See our `main website`_.
-* *Need to submit a bug report or feature request?* Check out our `Github repository`_.
-* *Want development-oriented help and information?* Consult our `Github wiki`_.
-* *Have a help request or discussion topic?* Subscribe to our `Google Group`_.
-* *Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
+.. rst-class:: fasb fa-first-aid
+
+*Run in to a problem installing or running Spyder?* Read our `Troubleshooting Guide and FAQ`_.
+
+.. rst-class:: fasb fa-globe
+
+*Looking for general information about Spyder and its ecosystem?* See our `main website`_.
+
+.. rst-class:: fasb fa-bug
+
+*Need to submit a bug report or feature request?* Check out our `Github repository`_.
+
+.. rst-class:: fasb fa-code
+
+*Want development-oriented help and information?* Consult our `Github wiki`_.
+
+.. rst-class:: fasb fa-mail-bulk
+
+*Have a help request or discussion topic?* Subscribe to our `Google Group`_.
+
+.. rst-class:: fasb fa-comments
+
+*Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
 
 .. _Troubleshooting Guide and FAQ: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _main website: https://www.spyder-ide.org/
