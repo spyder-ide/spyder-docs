@@ -18,13 +18,12 @@ The figures shown in the Plots pane are those associated with the currently acti
 
 
 ============
-Options Menu
+Options menu
 ============
 
 The options menu in the top right of the :guilabel:`Plots` pane offers several ways to customize how your plots are displayed.
 
 
-~~~~~~~~~~~~~~~~~~~~
 Mute inline plotting
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -35,7 +34,6 @@ If you deactivate this option, figures will display in both the Plots pane and t
    :alt: Spyder's plots pane and console showing plots in the console
 
 
-~~~~~~~~~~~~~~~~~
 Show plot outline
 ~~~~~~~~~~~~~~~~~
 
@@ -45,7 +43,6 @@ The :guilabel:`Show plot outline` option, off by default, shows a thin stroke su
    :alt: Spyder's plots pane showing a plot's outline
 
 
-~~~~~~~~~~~~~~~~~~~
 Fit plots to window
 ~~~~~~~~~~~~~~~~~~~
 
@@ -60,7 +57,7 @@ Disabling it will display plots at their native size, and allow you use the zoom
 
 
 ===============
-Toolbar Options
+Toolbar options
 ===============
 
 The toolbar at the top of the Plots pane provides several useful features that allow you to interact with your figures.
