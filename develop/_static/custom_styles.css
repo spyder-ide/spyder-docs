@@ -27,7 +27,7 @@ div.fasb h3 {
 }
 
 /* Center all images by default */
-.section > img:not([class]) {
+.section > img:not([class]), .section > a > img:not([class]) {
     margin-left: auto;
     margin-right: auto;
     display: block;

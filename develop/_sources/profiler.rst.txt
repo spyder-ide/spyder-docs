@@ -76,7 +76,7 @@ Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.66 ms, but 
 
 
 ================
-Profiler Plugins
+Profiler plugins
 ================
 
 There are two additional plugins that you can install to enable other types of profiling in Spyder. 
