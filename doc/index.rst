@@ -74,6 +74,8 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
 
 
+.. rst-class:: fa-offset-h3
+
 ==================
 Join our community
 ==================

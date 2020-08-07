@@ -1,23 +1,31 @@
-/* Style for Font Awesome that only styles the icons before elements */
-.fasb::before {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  line-height: 1;
-  font-size: 26px;
-  margin-right: 5px;
-}
-
-/* Ensure FA icons applied to section divs display inline */
-div.fasb h3 {
-  display: inline-block;
+/* Center all images by default */
+.section > img:not([class]), .section > a > img:not([class]) {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /* Custom bottom margin for the cards section */
 .section .sphinx-bs {
   margin-bottom: 18px;
+}
+
+/* Style for Font Awesome that only styles the icons before elements */
+.fasb::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 26px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Ensure FA icons applied to section divs display inline */
+div.fasb h3 {
+  display: inline-block;
 }
 
 /* Custom color and size for FA icons */
@@ -26,11 +34,9 @@ div.fasb h3 {
   width: 32px;
 }
 
-/* Center all images by default */
-.section > img:not([class]), .section > a > img:not([class]) {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+/* Adjust vertical positioning of FA icons to be centered */
+.fa-offset-h3 .fasb::before {
+  padding-bottom: 0.3em;
 }
 
 /*** Custom colors for specific FA icons in the index page ***/
