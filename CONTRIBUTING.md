@@ -2,17 +2,13 @@
 
 First off, thanks for your interest in helping out with the documentation for Spyder, the Scientific Python Development Environment!
 
-**Important Note:** This is the repository for Spyder's documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself. 
+**Important Note:** This is the repository for the documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself.
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
 Thanks!
 
-For more guidance on the basics of using ``git`` and Github to contribute to Spyder and its documentation, please see the contributing guidelines in the main Spyder repository mentioned above, and check out the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed instructions.
+For more guidance on the basics of using ``git`` and Github to contribute to Spyder and its documentation, please see the [contributing guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) in the main Spyder repository mentioned above, and check out the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed information.
 
-To view the rendered and deployed documentation itself, please visit:
-
-* Develop (4.x): https://docs.spyder-ide.org/develop
-
-* Stable (3.x): https://docs.spyder-ide.org/
+You can view the live Spyder 3 documentation at [docs.Spyder-IDE.org](https://docs.spyder-ide.org) and the in-development Spyder 4 docs at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
 
 
 ## Reporting Issues
@@ -26,8 +22,10 @@ Issue reports that don't contain enough information to allow us to do something 
 
 ## Documentation Branches
 
-* Submit PRs against ``3.x`` for changes to documentation relevant to the current stable Spyder 3 release
-* Base against ``master`` for fixes or additions that only apply to the future Spyder 4 feature release.
+* Currently, all PRs should be based against ``master``, which contains the in-development documentation for the current Spyder 4 release.
+* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version
+
+In the near future, once the Spyder 4 docs are substantially complete, the ``4.x`` branch will be contain the docs for the stable version, while ``master`` will be dedicated to the changes necessary for the forthcoming Spyder 5.
 
 
 
@@ -44,8 +42,8 @@ Please make sure your PR titles are brief but descriptive, and include ``PR: `` 
 
 To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line (or the Anaconda prompt on Windows).
 
-Make sure you have ``sphinx`` installed in your active Python environment for the script to work; if you have Anaconda you should have it already, at least in your base env or any one with Spyder installed.
-If you need it, you can install it into your present environment with
+Make sure you have the appropriate dependencies (Sphinx, Sphinx-Panels and the Spyder-Docs-Sphinx-Theme) installed in your active Python environment for the script to work.
+You can install them into your current Anaconda environment with
 
 ```bash
 conda install sphinx
@@ -53,14 +51,14 @@ pip install sphinx-panels
 pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
-Or, if using ``pip``, you can grab it with
+Or, if using ``pip``, you can grab them with
 
 ```bash
 pip install sphinx sphinx-panels
 pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
-Now, run the following if on macOS/Linux:
+Now, to build the docs site itself, run the following if on macOS/Linux:
 
 ```bash
 make docs
@@ -75,7 +73,6 @@ make.bat html
 cd ..
 ```
 
-to run the build.
 You should be able to view the html output inside the resulting ``_build`` directory it produces; ``index.html`` is the main page.
 
 **NOTE:** You can try to use the `make` commands on Windows if you have `make` installed and something like `Cygwin`, `MSYS2` or `MYSYS`, or by using Windows Subsystem for Linux (`WSL`).
@@ -112,10 +109,9 @@ doc/_build/html/
 
 Make sure you follow these to ensure clarity, consistency and correctness throughout our documentation and its repo.
 
-* **reStructuredText** (rst) for documentation format
-* **PEP8** style for any Python code
-* **79 characters** for line length on initial creation
-* **UTF-8** for character encoding
+* **reStructuredText** (reST/rst) for documentation format
+* **PEP 8** style for any Python code
+* **UTF-8** (no BOM) for character encoding
 * **LF** for newlines
 * **ISO 8601** (YYYY-MM-DD HH:MM:SS) for dates/times
 * **SI/metric** for units
