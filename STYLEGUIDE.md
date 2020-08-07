@@ -1,4 +1,4 @@
-# Spyder Documentation Style Guide:
+# Spyder Documentation Style Guide
 
 
 ## General
@@ -19,10 +19,10 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 - Heading case: Page titles (L1 headings) should use Title Case, all others should use Sentence case
 - One L1 Heading, used for page titles: Use ``######`` with overline; on first line of file; keep to a few words
 - L2 Headings for section heads: Use ========= with overline; 3 blank lines before them
-- L3 headings for subheads: Use ~~~~~~, 2 blank lines
-- L4 Headings for sub-subheads if truly necessary: Use ---------, 2 blank lines, keep to a minimum (consider a flatter structure or breaking into multiple files)
-- Related components at the bottom: L2 heading, bullets, 3 blank lines before, try for 2-4 links if included
-- All files with Related components should contain at least one L2 section; if only one, can be  entitled Overview
+- L3 headings for subheads: Use ~~~~~~; 2 blank lines
+- L4 Headings for sub-subheads if truly necessary: Use ---------; 1 blank line; keep to a minimum (consider a flatter structure or breaking into multiple files)
+- Related components at the bottom: L2 heading; bullets; try for 2-4 links if included
+- All files with Related components should contain at least one L2 section; if only one, can be entitled Overview
 - Typically, for files with multiple sections or longer than one page, a summary section of a few lines length is helpful before the first section, summarizing the functionality discussed in the section and its purpose
 - Name of component/topic should be in first sentence, Title Case, bold on first use
 
@@ -67,16 +67,18 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 .. Note::
 
    This is a note.
+
 ```
+
 
 ## Images/Figures
 
 - Lower case file names and extensions, separate with hyphens, 3-character extensions
 - For ease of visibility, images should be either full width, or 500 px if appropriate
 - Use PNG for all images, except photographs over 100-200 KB as a PNG (use moderately compressed JPEG); avoid sizes above 2000 x 2000 or below 1000 x 1000 if full width, or half of each if half width
-- GIFs should be compressed to 5 frames/s and should target a length of around 5-10 seconds, and be 500 px unlesss needed to illustrate a more complex or important subject
+- GIFs should be compressed to 5 frames/s, should target a length of around 5-10 seconds, and should be either 690 px or 500 px, depending on the subject
 - Always include alt text describing the content of the image
-- No line break before, one line break ("|") after an image/GIF if it is at the end of a section
+- Add a break element (`|`) after an image/GIF if it is followed by a new section
 
 
 ## Writing (All Languages)
