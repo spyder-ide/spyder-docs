@@ -4,11 +4,12 @@ First off, thanks for your interest in helping out with the documentation for Sp
 
 **Important Note:** This is the repository for the documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself.
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
+You can view the live Spyder 3 documentation at [docs.Spyder-IDE.org](https://docs.spyder-ide.org) and the in-development Spyder 4 docs at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
 Thanks!
 
 For more guidance on the basics of using ``git`` and Github to contribute to Spyder and its documentation, please see the [contributing guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) in the main Spyder repository mentioned above, and check out the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed information.
+For an introduction to the basics of reST syntax, the source format in which Spyder's documentation is written, see the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
 
-You can view the live Spyder 3 documentation at [docs.Spyder-IDE.org](https://docs.spyder-ide.org) and the in-development Spyder 4 docs at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
 
 
 ## Reporting Issues
@@ -107,11 +108,29 @@ doc/_build/html/
 
 ## Standards and Conventions
 
+### Key standards
+
 Make sure you follow these to ensure clarity, consistency and correctness throughout our documentation and its repo.
 
-* **reStructuredText** (reST/rst) for documentation format
-* **PEP 8** style for any Python code
-* **UTF-8** (no BOM) for character encoding
-* **LF** for newlines
-* **ISO 8601** (YYYY-MM-DD HH:MM:SS) for dates/times
-* **SI/metric** for units
+* **[reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)** (reST/rst) for documentation format
+* **[PEP 8](https://www.python.org/dev/peps/pep-0008/)** style for any Python code
+* **[UTF-8](https://en.wikipedia.org/wiki/UTF-8)** (no BOM) for character encoding
+* **[LF](https://en.wikipedia.org/wiki/Newline)** for newlines
+* **[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)** (YYYY-MM-DD HH:MM:SS) for dates/times
+* **[SI/metric](https://en.wikipedia.org/wiki/International_System_of_Units)** for units
+
+
+### Style conventions
+
+This section summarizes the important points for doc authors to actively keep in mind while writing the documentation.
+See the [Style Guide](https://github.com/spyder-ide/spyder-docs/blob/master/STYLEGUIDE.md) for a comprehensive reference on a wide variety of topics that may be pertinent to specific situations encountered when working on the docs.
+
+* **Admonitions**: ``important::`` for key points, ``warnings`` for things to avoid, and ``note::`` for everything else.
+* **Blank lines**: One after all headings and before and after paragraphs, directives and ``|``s
+* **Filenames**: Lowercase, hyphen-separated
+* **Headings**: *Level 1*—Page titles, title case, ``###`` top and bottom; *Level 2*—3 blank lines before, Sentence case, ``===`` top and bottom; *Level 3*—2 blank lines before, Sentence case, ``~~~`` bottom; *Level 4*—1 blank line before, Sentence case, ``---`` bottom
+* **Images/GIFS**: Full width, 690 px or 500 px; manual break (``|``) after before a new section; PNGs or GIFs 5-10 s at 5 frames/s
+* **Indentation**: Spaces, no tabs; 3 spaces after directives, 4 in code blocks
+* **Line breaks**: Break by sentence for text, 70 characters for code
+* **Lists**: ``#. `` for lists that have inherent order, ``* `` otherwise
+* **reST directives**: ``:file:`` for file paths; ``:kbd:`` for keyboard shortcuts; ``:guilabel:`` buttons, labels, options and other UI items; ``:menuselection`` for menu items and preference panes; ``code-block::`` for code

@@ -1,5 +1,9 @@
 # Spyder Documentation Style Guide
 
+This style guide is intended as a comprehensive reference on a wide variety of topics that may be pertinent to specific situations encountered when writing the docs.
+A more more digestible summary of the most important points for doc authors to actively keep in mind is included in the [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md).
+Readers should be familiar with the basics of reST syntax, as covered in a resource like the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
+
 
 ## General
 
@@ -35,7 +39,7 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 - Documentation should build with no warnings with ``Sphinx`` in nitpicky mode
 - Lower case filenames, rst extension, hyphens as space deliminators, short but descriptive
 - End files with a newline (blank line)
-- 1 blank line after all headings and before and after paragraphs, directives and "|"s
+- 1 blank line after all headings and before and after paragraphs, directives and ``|``s
 - Use Line Feed (LF, ``\n``) as the End of Line character on all platforms
 - Use UTF-8 for all files (with no BOM, as dictated by the UTF-8 standard); do not use Windows Notepad as this adds a BOM and can otherwise corrupt files easily
 - Use standard UTF-8 characters instead of escape sequences for non-ASCII values (e.g. em dash, en dash, etc)
@@ -78,7 +82,7 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 - Use PNG for all images, except photographs over 100-200 KB as a PNG (use moderately compressed JPEG); avoid sizes above 2000 x 2000 or below 1000 x 1000 if full width, or half of each if half width
 - GIFs should be compressed to 5 frames/s, should target a length of around 5-10 seconds, and should be either 690 px or 500 px, depending on the subject
 - Always include alt text describing the content of the image
-- Add a break element (`|`) after an image/GIF if it is followed by a new section
+- Add a break element (``|``) after an image/GIF if it is followed by a new section
 
 
 ## Writing (All Languages)
