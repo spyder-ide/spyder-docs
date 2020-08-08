@@ -8,5 +8,6 @@ Troubleshooting
     first-steps
     basic-first-aid
     emergency-cpr
-    additional-resources
-    submit-an-issue
+    common-illnesses
+    call-for-help
+    submit-a-report
