@@ -5,6 +5,7 @@ Calling for Help
 Aside from this troubbleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the following. Even if we aren't able to help you, these places might.
 
 
+.. rst-class:: fa-offset-h3
 
 ========================
 Spyder-related platforms
