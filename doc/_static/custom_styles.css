@@ -1,3 +1,8 @@
+/* Fix bold styling for font */
+b, strong {
+  font-weight: bold;
+} 
+
 /* Center all images by default */
 .section img:not([class]) {
     margin-left: auto;

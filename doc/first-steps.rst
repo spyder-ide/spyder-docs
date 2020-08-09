@@ -8,7 +8,7 @@ There's a good chance that someone else has already experienced the same issue, 
 .. important::
 	To make sure you're getting the most relevant help for your problem, please make sure the issue is actually related to Spyder:
 
-	* If the problem appears to be a result of *your own code*, `Stack Overflow`_ is a better place to start;
+	* If the problem appears to be a result of *your own code*, `Stack Overflow`_ is a better place to start.
 	* If the bug also occurs in the *standard python, IPython, or qtconsole* environments, or only with *a specific package*, it is unlikely to be something in Spyder, and you should report it to those sources instead.
 	* If the problem lies with *your specific install*, uninstalling and clean-reinstalling the `Anaconda`_ distribution is strongly recommended. As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for install issues.
 
@@ -31,17 +31,21 @@ If you check out our list of issue categories and problem descriptions and see a
 
 .. rst-class:: fasb fa-first-aid
 
-If those steps don't work, or you can't find a similar problem, you can try some :doc:`basic-first-aid`. 
+As a first step to solving your issue you can try some :doc:`basic-first-aid`. 
 
 .. rst-class:: fasb fa-heartbeat
 
 If Spyder won't launch check the :doc:`emergency-cpr` section and see if that clears it up.
 
+.. rst-class:: fasb fa-user-md
+
+If your problem is related to the kernel not starting, autocompletion or a plugin go to :doc:`common-illnesses` section. 
+
 .. rst-class:: fasb fa-phone
 
-Finally, if you still can't get it to work, and the problem is indeed Spyder-related (see above note), you should consult the the :doc:`call-for-help` section for other resources to explore.
+If you still can't get it to work, and the problem is indeed Spyder-related, you should consult the the :doc:`call-for-help` section for other resources to explore.
 
 .. rst-class:: fasb fa-bug
 
-If you couldn't solve your problem and want to submit an issue to our Github tracker, so the problem can be fixed for everyone try the :doc:`submit-a-report` section.
+Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the problem can be fixed for everyone, :doc:`submit-a-report`.
 

@@ -2,7 +2,7 @@
 Calling for Help
 ################
 
-Aside from this troubbleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the following. Even if we aren't able to help you, these places might.
+Aside from this troubbleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the problem. Even if we aren't able to help you, these places might.
 
 
 .. rst-class:: fa-offset-h3
@@ -17,7 +17,7 @@ Spyder-related platforms
 Spyder's FAQ section
 ~~~~~~~~~~~~~~~~~~~~
 
-Spyder's documentation has a FAQ section where you may find the answers that you are looking for. It contains help regarding some of the most common questions that users ask.
+Spyder's documentation has a FAQ section where you may find the answers that you are looking for.
 
 
 .. rst-class:: fasb fa-globe
@@ -35,7 +35,7 @@ The `Spyder website`_ contains basic information about Spyder and links to many 
 Spyder Google Group
 ~~~~~~~~~~~~~~~~~~~~
 
-Our `Google Group`_ is great for your more help-related questions, particularly those you aren't sure are a full-on Spyder issue.
+Our `Google Group`_ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
 
 .. _Google Group: https://groups.google.com/group/spyderlib
 
@@ -71,12 +71,14 @@ Stack Overflow
 
 
 
+.. rst-class:: fa-offset-h3
+
 ================
 Python resources
 ================
 
 
-.. rst-class:: fasb fa-python
+.. rst-class:: fabb fa-python
 
 Official Python help page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,7 +88,7 @@ Official Python help page
 .. _Python help page: https://www.python.org/about/help/
  
 
-.. rst-class:: fasb fa-
+.. rst-class:: fasb fa-book-open
 
 Python Documentation
 ~~~~~~~~~~~~~~~~~~~~
@@ -94,12 +96,12 @@ Python Documentation
 The `Python Documentation`_ site can help you understand a number of issues that can be caused due to quirks in the language itself, or misunderstandings as to how it behaves.
 
 
-.. rst-class:: fasb fa-
+.. rst-class:: fabb fa-reddit
 
 Python subreddits
 ~~~~~~~~~~~~~~~~~
 
- <https://www.reddit.com/r/Python/> `r/python`_  and `r/learnpython`_ are also resources you can use to ask about and discuss issues with Python and its packages. The former is aimed more at general Python usage and the latter more at beginners. 
+`r/python`_  and `r/learnpython`_ are also resources you can use to ask about and discuss issues with Python and its packages. The former is aimed more at general Python usage and the latter more at beginners. 
 
 .. _r/python: https://www.reddit.com/r/Python/
 
@@ -107,12 +109,14 @@ Python subreddits
 
 
 
+.. rst-class:: fa-offset-h3
+
 =============================
 Data science/SciPy resources:
 =============================
 
 
-.. rst-class:: fasb fa-
+.. rst-class:: fasb fa-circle-notch
 
 Anaconda Support
 ~~~~~~~~~~~~~~~~~
@@ -122,7 +126,7 @@ Anaconda Support
 .. _Anaconda Support: https://www.anaconda.com/support/
 
 
-.. rst-class:: fasb fa-
+.. rst-class:: fasb fa-flask
 
 SciPy.org Website
 ~~~~~~~~~~~~~~~~~
@@ -132,7 +136,7 @@ The `Scipy Website`_ is the the central home of the scipy stack, with informatio
 .. _Scipy Website: https://www.scipy.org/
     
 
-.. rst-class:: fasb fa-
+.. rst-class:: fasb fa-sticky-note
 
 Project Jupyter
 ~~~~~~~~~~~~~~~
@@ -142,7 +146,7 @@ Project Jupyter
 .. _Project Jupyter: https://jupyter.org/
 
 
-.. rst-class:: fasb fa-
+.. rst-class:: fabb fa-stack-exchange
 
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

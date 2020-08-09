@@ -15,21 +15,21 @@ Common solutions
    .. image:: images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
 
-#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or the Anaconda Prompt/Terminal/command line (on Windows/Mac/Linux) by simply typing ``spyder`` then enter/return, and see if any of those work.  
+#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda prompt on Windows) by simply typing ``spyder`` then enter/return, and see if any of those work.  
    If so, then something's wrong with your install, not Spyder itself, and so we recommend following the "Reinstalling Spyder" section under :doc:`basic-first-aid` to uninstall and reinstall Anaconda.
 
-#. Disable any security software you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages. Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder.
+#. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages. Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder.
 
-#. Run Spyder with administrator rights just in case it is some sort of permissions issue.
+#. **Run Spyder with administrator rights** just in case it is some sort of permissions issue.
 
    .. image:: images/emergency-cpr/emergency-cpr-administrator-run.png
       :alt: Spyder's app in menu showing run as adminsitrator option
 
-#. If Anaconda is currently installed "for just you", try uninstalling and reinstalling it "for all users" instead, and vice versa, as some systems can have issues with one or the other.
+#. If it is currently installed "for just you", **try uninstalling and reinstalling Anaconda "for all users" instead**, and vice versa, as some systems can have issues with one or the other.
 
-#. Reinstall it into your local startup drive, to a directory path and user account without spaces, special characters, or unusual permissions.
+#. **Reinstall Spyder into your local startup drive**, to a directory path and user account without spaces, special characters, or unusual permissions.
 
-#. Check and repair/reset permissions, your disk, and OS if all else fails
+#. **Check and repair/reset permissions**, your disk, and OS if all else fails
 
 
 
@@ -39,7 +39,7 @@ Advanced tricks
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide very useful information to help debug the problem further.
 
-The technique essentially consists on starting Spyder from the Anaconda Prompt/Terminal/command line (on Windows/Mac/Linux) by manually running the Spyder startup routine, ``start.py``, with a known good Python interpreter, and observing the results. 
+The technique essentially consists on starting Spyder from your terminal (or Anaconda prompt on Windows) by manually running the Spyder startup routine, ``start.py``, with a known good Python interpreter, and observing the results. 
 
 To do so, you'll need to:
 
@@ -64,7 +64,7 @@ To do so, you'll need to:
 
 #. If it doesn't launch, then you should see an error traceback printed; carefully copy that for future reference and also run ``python mainwindow.py``, and record your results as well. 
 
-#. (Windows only) In case the command window disappears immediately after the error, create a ``.bat`` file in the ``app`` directory with the following content
+#. (*Windows only*) In case the command window disappears immediately after the error, create a ``.bat`` file in the ``app`` directory with the following content
 
    .. code-block:: bash
 
