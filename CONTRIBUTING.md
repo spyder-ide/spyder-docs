@@ -108,6 +108,27 @@ resulting ``_build`` directory it produces; ``index.html`` is the main page.
 **NOTE:** You can try to use the `make` commands on Windows if you have `make` installed and something like `Cygwin`, `MSYS2` or `MYSYS`, or by using Windows Subsystem for Linux (`WSL`).
 
 
+
+## Configuring Netlify
+
+The steps to configure Netlify to preview pull requests are the following:
+
+* Pass a command to build the docs. In our case that command is
+
+      ci/install.sh && make docs
+
+* Pass the root directory of the generated docs. In our case that is
+
+      doc/_build/html/
+
+*NOTES*:
+
+* The `runtime.txt` file in the root of the repo is needed by Netlify to declare the Python version required to build the docs.
+* By default Netlify adds a lot of checks to pull requests, besides the one that actually allows to preview their changes live.
+To remove those extra checks, you need to go to the `Build and deploy` configuration entry, then to the `Outgoing notifications` section, and remove all commit notifications that don't start by `Add Deploy Preview`.
+
+
+
 ## Standards and Conventions
 
 Make sure you follow these to ensure clarity, consistency and correctness
