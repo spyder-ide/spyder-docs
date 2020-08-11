@@ -2,7 +2,9 @@
 Calling for Help
 ################
 
-Aside from this troubbleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the problem. Even if we aren't able to help you, these places might.
+Aside from this troubbleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the problem.
+Even if we aren't able to help you, these places might.
+
 
 
 .. rst-class:: fa-offset-h3
@@ -10,7 +12,6 @@ Aside from this troubbleshooting guide, there are a number of other sources of d
 ========================
 Spyder-related platforms
 ========================
-
 
 .. rst-class:: fasb fa-question-circle
 
@@ -27,7 +28,7 @@ Spyder website
 
 The `Spyder website`_ contains basic information about Spyder and links to many other helpful resources.
 
-.. _Spyder website: https://www.spyder-ide.org/ 
+.. _Spyder website: https://www.spyder-ide.org/
 
 
 .. rst-class:: fabb fa-google
@@ -45,7 +46,8 @@ Our `Google Group`_ is great for help-related questions, particularly those you 
 Spyder Gitter
 ~~~~~~~~~~~~~
 
-We have a public `Gitter room`_ where you can chat directly with the Spyder developers. If you've got a quick question to ask the team and are looking for a quick answer, this is a great place to go.
+We have a public `Gitter room`_ where you can chat directly with the Spyder developers.
+If you've got a quick question to ask the team and are looking for a quick answer, this is a great place to go.
 
 .. _gitter room: https://gitter.im/spyder-ide/public
 
@@ -65,7 +67,8 @@ Our `YouTube channel`_ contains helpful videos that will guide you through some 
 Stack Overflow
 ~~~~~~~~~~~~~~
 
-`Stack Overflow`_ is a great place to start searching and posting particularly if your question is more programming related, or has more to do with something specific to your own code. It has an active Spyder community as well, with new Spyder-related questions posted every day, and the developers, especially the lead maintainer, are active in answering them.
+`Stack Overflow`_ is a great place to start searching and posting particularly if your question is more programming related, or has more to do with something specific to your own code.
+It has an active Spyder community as well, with new Spyder-related questions posted every day, and the developers, especially the lead maintainer, are active in answering them.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
 
@@ -77,7 +80,6 @@ Stack Overflow
 Python resources
 ================
 
-
 .. rst-class:: fabb fa-python
 
 Official Python help page
@@ -86,7 +88,7 @@ Official Python help page
 `Python help page`_ is a great resource that lists a number of places you can get help, support and learning resources for the Python language and its packages.
 
 .. _Python help page: https://www.python.org/about/help/
- 
+
 
 .. rst-class:: fasb fa-book-open
 
@@ -101,10 +103,10 @@ The `Python Documentation`_ site can help you understand a number of issues that
 Python subreddits
 ~~~~~~~~~~~~~~~~~
 
-`r/python`_  and `r/learnpython`_ are also resources you can use to ask about and discuss issues with Python and its packages. The former is aimed more at general Python usage and the latter more at beginners. 
+`r/python`_  and `r/learnpython`_ are also resources you can use to ask about and discuss issues with Python and its packages.
+The former is aimed more at general Python usage and the latter more at beginners.
 
 .. _r/python: https://www.reddit.com/r/Python/
-
 .. _r/learnpython: https://www.reddit.com/r/learnpython/
 
 
@@ -134,7 +136,7 @@ SciPy.org Website
 The `Scipy Website`_ is the the central home of the scipy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy, and IPython.
 
 .. _Scipy Website: https://www.scipy.org/
-    
+
 
 .. rst-class:: fasb fa-sticky-note
 

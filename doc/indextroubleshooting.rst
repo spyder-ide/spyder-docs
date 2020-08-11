@@ -4,7 +4,7 @@ Troubleshooting
 
 .. toctree::
     :maxdepth: 2
-    
+
     first-steps
     basic-first-aid
     emergency-cpr

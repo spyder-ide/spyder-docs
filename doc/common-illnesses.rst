@@ -2,6 +2,8 @@
 Common Illnesses
 ################
 
+
+
 ==========================
 Errors starting the kernel
 ==========================
@@ -17,7 +19,6 @@ Spyder requires a supported version of the ``spyder-kernels`` package to be pres
 
 .. image:: images/common-illnesses/common-illnesses-kernel-version.png
    :alt: Kernel version error dialog
-
 
 It is included by default with Anaconda, but if you want to run your code in another Python environment or installation, you'll need to make sure it's installed and updated to the latest version.
 
@@ -65,7 +66,7 @@ Check the last few lines of the error message, and see if its an AttributeError 
    :alt: Spyder's AtributeError dialog
 
 If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string`` or ``time``, which overrides the built-in module that Spyder-Kernels is trying to load.
-To fix this, simply rename your file to something other than one of these names, and try restarting the kernel. 
+To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
 To check the names of these modules, see the list in the `Python Documentation`_.
 
 .. _Python Documentation: https://docs.python.org/3/library/
@@ -134,7 +135,6 @@ Plugin Problems
 
 If the error mentions or involves a Spyder plug-in, such as ``spyder-unittest``, ``spyder-terminal``, or ``spyder-notebook`` the first approach should be to update Spyder and the plugin to their latest versions.
 
-If this doesn't fix the problem, you should check if the plugin is compatible with your version of Spyder in the plugin's website or repository. 
+If this doesn't fix the problem, you should check if the plugin is compatible with your version of Spyder in the plugin's website or repository.
 
-Finally, if compatibility doesn't seem to be the problem, please check those repositories to see if an issue was already opened, and report it there if not. 
-
+Finally, if compatibility doesn't seem to be the problem, please check those repositories to see if an issue was already opened, and report it there if not.
