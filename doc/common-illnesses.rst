@@ -60,7 +60,7 @@ Otherwise, activate your environment by whatever means you installed it, and run
 AttributeError/ImportError
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Check the last few lines of the error message, and see if its an AttributeError or ImportError, or refers to a file you created, in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
+Check the last few lines of the error message, and see if its an ``AttributeError`` or ``ImportError``, or refers to a file you created, in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
 
 .. image:: images/common-illnesses/common-illnesses-atribute-error.png
    :alt: Spyder's AtributeError dialog

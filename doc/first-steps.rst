@@ -14,10 +14,10 @@ There's a good chance that someone else has already experienced the same issue, 
      As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for install issues.
 
 .. _Stack Overflow: https://stackoverflow.com
-.. _Anaconda: https://www.anaconda.com/download/
+.. _Anaconda: https://www.anaconda.com/products/individual
 
 Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message from the error dialog or Spyder's internal console.
-To view the latter go to ``Panes`` > ``Internal Console`` under the ``View`` menu.
+To view the latter go to :menuselection:`Panes --> Internal Console` under the :guilabel:`View` menu.
 
 .. image:: images/first-steps/first-steps-internal-console.png
    :alt: Spyder showing view internal console option

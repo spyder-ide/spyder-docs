@@ -12,13 +12,13 @@ Common solutions
 
 #. The **basic troubleshooting steps** discussed in the previous section usually resolve the vast majority of Spyder install-related issues.
 
-#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* Variable Explorer dialogs) are left open, and check that the preference setting "Use a single instance" (under ``Preferences``> ``General`` > ``Advanced Settings``) isn't checked.
+#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:variableexplorer dialogs) are left open, and check that the preference setting :menuselection:`General --> Advanced Settings --> Use a single instance` isn't checked.
 
    .. image:: images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
 
-#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda prompt on Windows) by simply typing ``spyder`` then enter/return, and see if any of those work.
-   If so, then something's wrong with your install, not Spyder itself, and so we recommend following the "Reinstalling Spyder" section under :doc:`basic-first-aid` to uninstall and reinstall Anaconda.
+#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
+   If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-reinstalling-spyder-ref` to uninstall and reinstall Anaconda.
 
 #. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
    Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder.
@@ -26,9 +26,9 @@ Common solutions
 #. **Run Spyder with administrator rights** just in case it is some sort of permissions issue.
 
    .. image:: images/emergency-cpr/emergency-cpr-administrator-run.png
-      :alt: Spyder's app in menu showing run as adminsitrator option
+      :alt: Spyder's app in menu showing run as administrator option
 
-#. If it is currently installed "for just you", **try uninstalling and reinstalling Anaconda "for all users" instead**, and vice versa, as some systems can have issues with one or the other.
+#. If it is currently installed "just you", **try uninstalling and reinstalling Anaconda "for all users" instead**, and vice versa, as some systems can have issues with one or the other.
 
 #. **Reinstall Spyder into your local startup drive**, to a directory path and user account without spaces, special characters, or unusual permissions.
 
@@ -42,7 +42,7 @@ Advanced tricks
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide very useful information to help debug the problem further.
 
-The technique essentially consists on starting Spyder from your terminal (or Anaconda prompt on Windows) by manually running the Spyder startup routine, ``start.py``, with a known good Python interpreter, and observing the results.
+The technique essentially consists on starting Spyder from your terminal (or Anaconda prompt on Windows) by manually running the Spyder startup routine, :guilabel:`start.py`, with a known good Python interpreter, and observing the results.
 
 To do so, you'll need to:
 
@@ -60,7 +60,7 @@ To do so, you'll need to:
 
       cd <OUTPUT-PATH>/spyder/app
 
-#. Once inside the ``app`` directory, run ``python start.py`` to launch Spyder.
+#. Once inside the :file:`app` directory, run ``python start.py`` to launch Spyder.
 
    .. image:: images/emergency-cpr/emergency-cpr-python-start.gif
       :alt: Command line showing python start to launch Spyder
@@ -68,7 +68,7 @@ To do so, you'll need to:
 
 #. If it doesn't launch, then you should see an error traceback printed; carefully copy that for future reference and also run ``python mainwindow.py``, and record your results as well.
 
-#. (*Windows only*) In case the command window disappears immediately after the error, create a ``.bat`` file in the ``app`` directory with the following content
+#. (*Windows only*) In case the command window disappears immediately after the error, create a ``.bat`` file in the :file:`app` directory with the following content
 
    .. code-block:: bash
 
@@ -76,7 +76,7 @@ To do so, you'll need to:
 
       pause
 
-   Replace <PYTHON-PATH> with the output of
+   Replace ``<PYTHON-PATH>`` with the output of
 
    .. code-block:: bash
 
