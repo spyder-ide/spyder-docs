@@ -34,11 +34,11 @@ If you check out our list of issue categories and problem descriptions and see a
 
 .. rst-class:: fasb fa-first-aid
 
-As a first step to solving your issue you can try some :doc:`basic-first-aid`.
+As a first step to solving your issue, you can try some :doc:`basic-first-aid`.
 
 .. rst-class:: fasb fa-heartbeat
 
-If Spyder won't launch check the :doc:`emergency-cpr` section and see if that clears it up.
+If Spyder won't launch, check the :doc:`emergency-cpr` section and see if that clears it up.
 
 .. rst-class:: fasb fa-user-md
 
@@ -50,4 +50,4 @@ If you still can't get it to work, and the problem is indeed Spyder-related, you
 
 .. rst-class:: fasb fa-bug
 
-Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the problem can be fixed for everyone, :doc:`submit-a-report`.
+Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the bug can hopefully be fixed for everyone, :doc:`submit-a-report`.
