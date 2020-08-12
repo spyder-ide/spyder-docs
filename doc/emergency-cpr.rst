@@ -18,7 +18,7 @@ Common solutions
    .. image:: images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
 
-#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
+#. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
    If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-reinstalling-spyder-ref` to uninstall and reinstall Anaconda.
 
 #. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
@@ -36,7 +36,7 @@ Advanced tricks
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide useful information to help debug the issue further.
 
-The technique consists of starting Spyder from your terminal (or Anaconda prompt on Windows) by manually running the Spyder startup routine ( :guilabel:`start.py` ) with a known good Python interpreter, and observing the results.
+The technique consists of starting Spyder from your terminal (or Anaconda Prompt on Windows) by manually running the Spyder startup routine ( :guilabel:`start.py` ) with a known good Python interpreter, and observing the results.
 
 To do so, you'll need to:
 

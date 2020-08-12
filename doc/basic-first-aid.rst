@@ -133,25 +133,6 @@ You can explore the error messages you're receiving and Spyder's inner workings 
 .. image:: images/basic-first-aid/basic-first-aid-internal-console.png
    :alt: Spyder showing Internal console
 
-If you want more detailed debug output, you can set the environment variable ``SPYDER_DEBUG`` to the value ``"3"``.
+For more detailed debug output, start Spyder from the command line (Anaconda Prompt on Windows) with ``spyder --debug-info verbose``.
 
-On Windows, under Anaconda Prompt, run:
-
-.. code-block:: bash
-
-   set SPYDER_DEBUG=3
-
-With ``bash`` and ``zsh`` (macOS and Linux default), execute:
-
-.. code-block:: bash
-
-   export SPYDER_DEBUG="3"
-
-and for ``tcsh``, run:
-
-.. code-block:: bash
-
-   setenv SPYDER_DEBUG 3
-
-Finally, launch Spyder from that same shell with ``spyder``, and observe the results.
 Even if you don't manage to fix the problem yourself, this output can be very helpful in aiding us to quickly narrow down and solve your issue for you.

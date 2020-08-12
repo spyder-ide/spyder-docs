@@ -24,20 +24,36 @@ Spyder requires a supported version of the ``spyder-kernels`` package to be pres
 
 It is included by default with Anaconda, but if you want to run your code in another Python environment or installation, you'll need to make sure it's installed and updated to the latest version.
 
+Check the required version of spyder-kernels for your version of Spyder in the following table:
+
+.. table:: Spyder and Spyder-Kernels version compatibility
+   :width: 50%
+
+   ==============   ==============  
+   Spyder           Spyder-Kernels    
+   ==============   ==============
+   4.0.0-4.0.1      1.8.1
+   4.1.0-4.1.2      1.9.0
+   4.1.3            1.9.1       
+   4.1.4            1.9.2
+   ==============   ============== 
+
+
 To do so, activate the environment, then install ``spyder-kernels``.
-If using Anaconda, open a terminal (Anaconda prompt on Windows) and run:
+If using Anaconda, open a terminal (Anaconda Prompt on Windows) and run:
 
 .. code-block:: bash
 
    conda activate ENVIRONEMENT-NAME
-   conda install spyder-kernels=1
+   conda install spyder-kernels=<VERSION>
 
 Otherwise, activate your environment by whatever means you created it, and execute:
 
 .. code-block:: bash
 
-   pip install spyder-kernels==1.*
+   pip install spyder-kernels==<VERSION>
 
+For both of the previous commands, replace <VERSION> with the corresponding version in the table.
 
 Issue with another dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +87,7 @@ If so, the the error is likely due to your file being named the same as a Python
 To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
 To check the names of these modules, see the list in the `Python standard library documentation`_.
 
-.. _`Python standard library documentation: https://docs.python.org/3/library/
+.. _Python standard library documentation: https://docs.python.org/3/library/
 
 
 
