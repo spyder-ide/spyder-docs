@@ -27,17 +27,15 @@ It is included by default with Anaconda, but if you want to run your code in ano
 Check the required version of spyder-kernels for your version of Spyder in the following table:
 
 .. table:: Spyder and Spyder-Kernels version compatibility
-   :width: 50%
 
-   ==============   ==============  
-   Spyder           Spyder-Kernels    
+   ==============   ==============
+   Spyder           Spyder-Kernels
    ==============   ==============
    4.0.0-4.0.1      1.8.1
    4.1.0-4.1.2      1.9.0
-   4.1.3            1.9.1       
+   4.1.3            1.9.1
    4.1.4            1.9.2
-   ==============   ============== 
-
+   ==============   ==============
 
 To do so, activate the environment, then install ``spyder-kernels``.
 If using Anaconda, open a terminal (Anaconda Prompt on Windows) and run:
@@ -53,7 +51,8 @@ Otherwise, activate your environment by whatever means you created it, and execu
 
    pip install spyder-kernels==<VERSION>
 
-For both of the previous commands, replace <VERSION> with the corresponding version in the table.
+For both of the previous commands, replace ``<VERSION>`` with the corresponding version in the table.
+
 
 Issue with another dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

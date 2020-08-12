@@ -16,7 +16,8 @@ There's a good chance that someone else has already experienced the same problem
 .. _Stack Overflow: https://stackoverflow.com
 .. _Anaconda: https://www.anaconda.com/products/individual
 
-Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message from the error dialog which you can view by clicking "Show details". 
+Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message.
+To view it, simply click :guilabel:`Show details` in the Spyder error dialog.
 
 .. image:: images/first-steps/first-steps-show-details.png
    :alt: Spyder showing view internal console option
