@@ -2,13 +2,15 @@
 Common Illnesses
 ################
 
+Beyond the general troubleshooting steps, some frequently-reported problems require more specialized solutions.
+
 
 
 ==========================
 Errors starting the kernel
 ==========================
 
-If you receive the message ``An error occurred while starting the kernel`` in the :doc:`ipythonconsole`, Spyder was unable to start a new Python interpreter in the current working environment to run your code.
+If you receive the message ``An error occurred while starting the kernel`` in the :doc:`ipythonconsole`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
 There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.
 
 
@@ -30,7 +32,7 @@ If using Anaconda, open a terminal (Anaconda prompt on Windows) and run:
    conda activate ENVIRONEMENT-NAME
    conda install spyder-kernels=1
 
-Otherwise, activate your environment by whatever means you installed it, and execute:
+Otherwise, activate your environment by whatever means you created it, and execute:
 
 .. code-block:: bash
 
@@ -50,7 +52,7 @@ In an Anaconda environment:
    conda activate ENVIRONMENT-NAME
    conda update spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
-Otherwise, activate your environment by whatever means you installed it, and run:
+Otherwise, activate your environment by whatever means you created it, and run:
 
 .. code-block:: bash
 
@@ -60,16 +62,16 @@ Otherwise, activate your environment by whatever means you installed it, and run
 AttributeError/ImportError
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Check the last few lines of the error message, and see if its an ``AttributeError`` or ``ImportError``, or refers to a file you created, in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
+Check the last few lines of the error message, and see if its an ``AttributeError`` or ``ImportError``, or refers to a file you created in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
 
 .. image:: images/common-illnesses/common-illnesses-atribute-error.png
    :alt: Spyder's AtributeError dialog
 
 If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string`` or ``time``, which overrides the built-in module that Spyder-Kernels is trying to load.
 To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
-To check the names of these modules, see the list in the `Python Documentation`_.
+To check the names of these modules, see the list in the `Python standard library documentation`_.
 
-.. _Python Documentation: https://docs.python.org/3/library/
+.. _`Python standard library documentation: https://docs.python.org/3/library/
 
 
 
@@ -125,7 +127,7 @@ If the issue still isn't resolved, update the various relevant dependencies with
 
 .. code-block:: bash
 
-   conda update jedi rope parso python-language-server
+   conda update python-language-server
 
 
 
@@ -133,8 +135,8 @@ If the issue still isn't resolved, update the various relevant dependencies with
 Plugin Problems
 ===============
 
-If the error mentions or involves a Spyder plug-in, such as ``spyder-unittest``, ``spyder-terminal``, or ``spyder-notebook`` the first approach should be to update Spyder and the plugin to their latest versions.
+If the error mentions or involves a Spyder plug-in, such as ``spyder-unittest``, ``spyder-terminal`` or ``spyder-notebook``, the first approach should be to update Spyder and the plugin to their latest versions.
 
-If this doesn't fix the problem, you should check if the plugin is compatible with your version of Spyder in the plugin's website or repository.
+If this doesn't fix the problem, you should check the plugin's website or repository to see if it is compatible with your version of Spyder.
 
 Finally, if compatibility doesn't seem to be the problem, please check those repositories to see if an issue was already opened, and report it there if not.

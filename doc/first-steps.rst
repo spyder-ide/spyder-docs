@@ -3,7 +3,7 @@ First Steps
 ###########
 
 If Spyder crashes or you receive an error message, please read the following troubleshooting steps before opening a new issue.
-There's a good chance that someone else has already experienced the same issue, so solving it yourself will likely get Spyder working again for you as quickly as possible.
+There's a good chance that someone else has already experienced the same problem, so checking for an existing solution will likely get Spyder working again for you as quickly as possible.
 
 .. important::
    To make sure you're getting the most relevant help for your problem, please make sure the issue is actually related to Spyder:
@@ -16,8 +16,8 @@ There's a good chance that someone else has already experienced the same issue, 
 .. _Stack Overflow: https://stackoverflow.com
 .. _Anaconda: https://www.anaconda.com/products/individual
 
-Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message from the error dialog or Spyder's internal console.
-To view the latter go to :menuselection:`Panes --> Internal Console` under the :guilabel:`View` menu.
+Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message from the error dialog.
+To view the latter, go to :menuselection:`Panes --> Internal Console` under the :guilabel:`View` menu.
 
 .. image:: images/first-steps/first-steps-internal-console.png
    :alt: Spyder showing view internal console option

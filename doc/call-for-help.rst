@@ -2,7 +2,7 @@
 Calling for Help
 ################
 
-Aside from this troubleshooting guide, there are a number of other sources of documentation and troubleshooting information you can search, before submitting an issue, as they might already offer an answer or at least help you better understand the problem.
+Aside from this troubleshooting guide, there are a number of other sources of documentation and troubleshooting information you can check before submitting an issue, as they might already offer an answer, or at least help you better understand the problem.
 Even if we aren't able to help you, these places might.
 
 
@@ -18,7 +18,7 @@ Spyder-related platforms
 Spyder's FAQ section
 ~~~~~~~~~~~~~~~~~~~~
 
-Spyder's documentation has a FAQ section where you may find the answers that you are looking for.
+Spyder's documentation has a FAQ section, where you might find the answers that you are looking for.
 
 
 .. rst-class:: fasb fa-globe
@@ -26,7 +26,7 @@ Spyder's documentation has a FAQ section where you may find the answers that you
 Spyder website
 ~~~~~~~~~~~~~~
 
-The `Spyder website`_ contains basic information about Spyder and links to many other helpful resources.
+The `Spyder website`_ contains basic information about the IDE and links to many other helpful resources.
 
 .. _Spyder website: https://www.spyder-ide.org/
 
@@ -57,7 +57,7 @@ If you've got a quick question to ask the team and are looking for a quick answe
 Spyder's YouTube channel
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Our `YouTube channel`_ contains helpful videos that will guide you through some of Spyder's functionalities providing a starting point for those who have never used Spyder before.
+Our `YouTube channel`_ contains helpful videos that will guide you through many of Spyder's features, and provide a starting point for newer users.
 
 .. _YouTube channel: https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg
 
@@ -67,8 +67,8 @@ Our `YouTube channel`_ contains helpful videos that will guide you through some 
 Stack Overflow
 ~~~~~~~~~~~~~~
 
-`Stack Overflow`_ is a great place to start searching and posting particularly if your question is more programming related, or has more to do with something specific to your own code.
-It has an active Spyder community as well, with new Spyder-related questions posted every day, and the developers, especially the lead maintainer, are active in answering them.
+`Stack Overflow`_ is a great place to start searching and posting particularly if your question is more programming-related, or has to do with something specific to your own code.
+It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
 
@@ -85,17 +85,19 @@ Python resources
 Official Python help page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Python help page`_ is a great resource that lists a number of places you can get help, support and learning resources for the Python language and its packages.
+The `Python help page`_ is a great resource that lists a number of places you can get assistance, support and learning resources for the language and its packages.
 
 .. _Python help page: https://www.python.org/about/help/
 
 
 .. rst-class:: fasb fa-book-open
 
-Python Documentation
+Python documentation
 ~~~~~~~~~~~~~~~~~~~~
 
-The `Python Documentation`_ site can help you understand a number of issues that can be caused due to quirks in the language itself, or misunderstandings as to how it behaves.
+The `Python documentation`_ site can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.
+
+.. _Python documentation: https://docs.python.org/
 
 
 .. rst-class:: fabb fa-reddit
@@ -103,8 +105,8 @@ The `Python Documentation`_ site can help you understand a number of issues that
 Python subreddits
 ~~~~~~~~~~~~~~~~~
 
-`r/python`_ and `r/learnpython`_ are also resources you can use to ask about and discuss issues with Python and its packages.
-The former is aimed more at general Python usage and the latter more at beginners.
+`r/python`_ and `r/learnpython`_ are resources you can use to ask about and discuss issues with Python and its packages.
+The former is aimed more at general Python usage, and the latter more specifically at beginners.
 
 .. _r/python: https://www.reddit.com/r/Python/
 .. _r/learnpython: https://www.reddit.com/r/learnpython/
@@ -120,22 +122,22 @@ Data science/SciPy resources:
 
 .. rst-class:: fasb fa-circle-notch
 
-Anaconda Support
-~~~~~~~~~~~~~~~~~
+Anaconda help
+~~~~~~~~~~~~~~
 
-`Anaconda Support`_ site offers free community help and documentation for the Anaconda applications,installing the Anaconda distribution, and using the Conda package and environment manager, as well as paid support options.
+The `Anaconda help`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
 
-.. _Anaconda Support: https://www.anaconda.com/help
+.. _Anaconda help: https://www.anaconda.com/help
 
 
 .. rst-class:: fasb fa-flask
 
-SciPy.org Website
+SciPy.org website
 ~~~~~~~~~~~~~~~~~
 
-The `Scipy Website`_ is the the central home of the scipy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy, and IPython.
+The `Scipy website`_ is the the central home of the SciPy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy and IPython.
 
-.. _Scipy Website: https://www.scipy.org/
+.. _Scipy website: https://www.scipy.org/
 
 
 .. rst-class:: fasb fa-sticky-note
@@ -153,6 +155,6 @@ Project Jupyter
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Data Science`_ site in Stack Exchange can be very useful for questions that relate more to data science than programming specifically.
+The `Data Science`_ site in Stack Exchange can be very useful for questions that relate more to science than programming specifically.
 
 .. _Data Science: https://datascience.stackexchange.com/

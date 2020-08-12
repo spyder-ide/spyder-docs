@@ -33,7 +33,6 @@ Recommended troubleshooting steps
 
       conda update --all
 
-
 #. **Restart your machine**, in case the problem lies with a lingering process or another such issue.
 
 #. **Restore Spyder's config files** to their defaults, which solves a huge variety of Spyder issues.
@@ -47,10 +46,10 @@ Recommended troubleshooting steps
 
       This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes, so you should make a copy of the :file:`.spyder-py3` folder in your user home directory if you particularly care about any of those, so you can restore it if this doesn't solve the problem.
 
-#. **Try installing Spyder into a new Conda environment** (recommended) or ``virtualenv``, and only installing its dependencies there, and seeing if the issue reoccurs.
+#. **Try installing Spyder into a new Conda environment** (recommended) or ``virtualenv``/``venv``, and see if the issue reoccurs.
    If it does not, it is likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.
 
-#. **Watch our video** on solving and avoiding problems with Pip, Conda and Conda-forge and follow its instructions.
+#. **Watch our video** on solving and avoiding problems with pip, Conda and Conda-Forge, and follow its instructions.
 
    .. youtube:: Ul79ihg41Rs
       :height: 360
@@ -69,12 +68,12 @@ Reinstalling Spyder
 
 If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.
 
-For Anaconda, follow all the steps under Option B in the `Anaconda uninstall guide`_, delete the Anaconda directory wherever it was originally installed, and (on Windows) delete the :file:`%appdata%/python` directory if it exists.
+For Anaconda, follow all the steps under Option B in the `Anaconda uninstall guide`_, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the :file:`%appdata%/python` directory if it exists.
 
 .. image:: images/basic-first-aid/basic-first-aid-app-data.gif
    :alt: Deleting appdata/python directory
 
-Then, do a clean install of the latest version of the `Anaconda distribution`_ which is how we recommend you install Spyder and keep in up to date.
+Then, do a clean install of the latest version of the `Anaconda distribution`_ which is how we recommend you install Spyder and keep it up to date.
 
 .. important::
 
@@ -91,7 +90,8 @@ Isolating problems
 ==================
 
 If you get the error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the "stack" it depends on.
-Try running it in the following, in order, if and until it starts working as you expect, and report the bug, if there is one, to the last one it *doesn't* work in.
+Try running it in the following in order if and until it starts working as you expect.
+If you manage to isolate the bug, report it to the last one it *doesn't* work in.
 
 #. **Spyder**, of course! Make sure you can reproduce the error, if possible.
 
@@ -100,7 +100,7 @@ Try running it in the following, in order, if and until it starts working as you
    .. image:: images/basic-first-aid/basic-first-aid-qtconsole.png
       :alt: Anaconda navigator showing qtconsole
 
-   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's Console are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
+   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :doc`ipythonconsole` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
 
 #. **An IPython command line shell**, launched with e.g. ``ipython`` from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
    Reproducible bugs can be reported to their `Github page`_, though make sure to read their guidelines and docs first.
@@ -115,7 +115,7 @@ Try running it in the following, in order, if and until it starts working as you
 .. tip::
 
    If the problem reoccurs in a similar or identical way with any of these methods (other than only Spyder itself), then it is almost certainly not an issue with Spyder, and would be best handled elsewhere.
-   As as we aren't able to do much of anything about issues not related to Spyder, a forum like `Stack Overflow`_ or the relevant package's docs is a much better place to get help or report the issue in that case.
+   As we usually aren't able to do much about issues not related to Spyder, a forum like `Stack Overflow`_ or the relevant package's docs is a much better place to get help or report the issue.
 
 .. _Stack Overflow: https://stackoverflow.com/
 
@@ -127,17 +127,15 @@ See the :doc:`call-for-help` section for other places to look for information an
 Debugging and patching
 ======================
 
-If you know your way around Python, you can often diagnose and even fix or patch issues yourself.
-You can explore the error messages you're receiving and Spyder's inner workings with the :guilabel:`Internal Console` under the menu item :menuselection:`View --> Panes --> Internal Console`.
+If you know your way around Python, you can often diagnose and even fix Spyder issues yourself.
+You can explore the error messages you're receiving and Spyder's inner workings with the :guilabel:`Internal Console`, available under the menu item :menuselection:`View --> Panes --> Internal Console`.
 
 .. image:: images/basic-first-aid/basic-first-aid-internal-console.png
    :alt: Spyder showing Internal console
 
-If you want more detailed debug output, you can do the following:
+If you want more detailed debug output, you can set the environment variable ``SPYDER_DEBUG`` to the value ``"3"``.
 
-Open your terminal (or Anaconda Prompt on Windows), set the environment variable ``SPYDER_DEBUG`` to the value ``"3"``.
-
-On Windows under Anaconda prompt, run:
+On Windows, under Anaconda Prompt, run:
 
 .. code-block:: bash
 
@@ -155,5 +153,5 @@ and for ``tcsh``, run:
 
    setenv SPYDER_DEBUG 3
 
-Launch Spyder from that same shell with ``spyder``, and observe the results.
+Finally, launch Spyder from that same shell with ``spyder``, and observe the results.
 Even if you don't manage to fix the problem yourself, this output can be very helpful in aiding us to quickly narrow down and solve your issue for you.
