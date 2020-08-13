@@ -138,6 +138,7 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :maxdepth: 2
     :hidden:
 
+    Overview<self>
     installation
     indexvideos
     indexpanes
