@@ -1,3 +1,9 @@
+/* Correctly wrap paragraphs*/
+p {
+  text-align: justify;
+  text-justify: distribute;
+}
+
 /* Center all images by default */
 .section > img:not([class]), .section > a > img:not([class]) {
     margin-left: auto;
