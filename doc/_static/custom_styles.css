@@ -1,7 +1,7 @@
 /* Fix bold styling for font */
 b, strong {
   font-weight: bold;
-} 
+}
 
 /* Center all images by default */
 .section img:not([class]) {
@@ -81,4 +81,45 @@ div.fa-user-friends::before {
 
 .dropdown .card-header::first-letter {
   font-weight: bold;
+}
+
+/*** Styling for quickstart interactive tour ***/
+
+.interactive-tour-container {
+  position: relative;
+  display: inline-block;
+  transition: transform 500ms ease-in-out;
+}
+
+.interactive-tour-container .tour-screenshot {
+   display: none;
+   max-width: 100%;
+   height: auto;
+}
+
+.interactive-tour-container img.tour-screenshot-active {
+   display: block !important;
+}
+
+.interactive-tour-container .tour-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+}
+
+.tour-overlay .highlight-rect {
+  fill: none;
+  opacity: 0;
+  stroke: #ee1c24;
+  stroke-linejoin: round;
+  stroke-width: 10;
+}
+
+div#driver-highlighted-element-stage {
+  opacity: 0;
+}
+
+rect.driver-highlighted-element {
+  opacity: 0.5 !important;
 }
