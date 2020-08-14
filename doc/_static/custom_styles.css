@@ -1,7 +1,6 @@
 /* Correctly wrap paragraphs*/
 p {
   text-align: justify;
-  text-justify: distribute;
 }
 
 /* Center all images by default */
