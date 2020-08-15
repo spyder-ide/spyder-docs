@@ -2,9 +2,14 @@
 
 *Copyright © 2009–2020 The Spyder Doc Contributors*
 
+
+[![license](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
 [![Travis status](https://travis-ci.org/spyder-ide/spyder-docs.svg?branch=master)](https://travis-ci.org/spyder-ide/spyder-docs)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](#backers)
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
+
+
+![Screenshot of documentation index page](./doc/_static/index_screenshot.png)
 
 
 ## Overview
