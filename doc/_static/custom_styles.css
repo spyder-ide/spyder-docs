@@ -50,6 +50,14 @@ div.fasb h3, div.fabb h3 {
   padding-bottom: 0.3em;
 }
 
+/* Center iframes and adjust their bottom margins */
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
 /*** Custom colors for specific FA icons in the index page ***/
 
 div.fa-laptop-code::before {
