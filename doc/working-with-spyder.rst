@@ -37,7 +37,7 @@ Learn how to improve the quality of your programs using code analysis.
             :align: left
 
 * Open and use Code Analysis to evaluate the quality and style of Python files
-* Run analysis on a file in the Editor, on your computer or at a path
+* Run analysis on a file in the Editor or anywhere on your computer
 * Determine what an error, warning or message means and how to fix it
 * Turn off messages on a line, in a file or globally
 
@@ -47,14 +47,14 @@ Learn how to improve the quality of your programs using code analysis.
 Optimizing your code
 ====================
 
-Learn how to optimize your code using the profiler.
+Learn how to optimize your code using the Profiler.
 
 .. youtube:: 4hcXa8aGu_c
             :height: 360
             :width: 640
             :align: left
 
-* Open and utilize the Profiler to determine the bottlenecks in your programs
-* Run profiling on a file in the Editor, on your computer or at a path
+* Use the Profiler to find bottlenecks in your programs
+* Run profiling on a file in the Editor or elsewhere on your machine
 * Interpret the results to evaluate function and method performance
 * Use the information to speed up the run time of your code
