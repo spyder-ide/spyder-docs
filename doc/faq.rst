@@ -34,7 +34,7 @@ Installing and updating
 
    Open the preferences menu in the Spyder's section in the Navigator. Go to "install specific version" and select the version of Spyder you want to install.
 
-   .. image:: images/FAQ/FAQ-Navigator-install.png
+   .. image:: images/faq/faq-Navigator-install.png
      :alt: Navigator showing installing specific version of Spyder
 
 
@@ -51,12 +51,12 @@ Running Spyder
 
    #. **From Anaconda Navigator**: Scroll to Spyder under Home, and click Launch.
 
-      .. image:: images/FAQ/FAQ-launch-anaconda.png
+      .. image:: images/faq/faq-launch-anaconda.png
          :alt: Navigator showing running a specific version of Spyder
 
    #. ***Windows Only***: Launch it via the Start menu shortcut. 
 
-      .. image:: images/FAQ/FAQ-windows-launch.png
+      .. image:: images/faq/faq-windows-launch.png
          :alt: Navigator showing running a specific version of Spyder
 
 .. dropdown:: Q: Can I try Spyder without installing it?
@@ -84,7 +84,7 @@ Running Spyder
 
    Select the environment you want to launch Spyder from under "Applications on:". If Spyder is installed in this environment, you will see it on Navigator's Home window. Click `Launch` to use Spyder with your selected environment. 
 
-   .. image:: images/FAQ/FAQ-run-environment.png
+   .. image:: images/faq/faq-run-environment.png
       :alt: Navigator showing running Spyder in a specific environment
 
 .. dropdown:: Q: How do I run Spyder in a conda environment using the command line?
@@ -119,12 +119,12 @@ Using Spyder
 
    To work with an existing environment in Spyder, change Spyder’s default python interpreter. To do so, first go to your terminal, type ``conda info --envs``, and copy the path from the environment you created to your clipboard. 
 
-   .. image:: images/FAQ/faq-conda-info.png
+   .. image:: images/faq/faq-conda-info.png
       :alt: Navigator showing installing specific version of Spyder
 
    Now, go to :guilabel:`Preferences` in Spyder’s main window, click :guilabel:`Python interpreter`, check :guilabel:`Use the following Python interpreter` paste the path and add `/bin/python` at the end for Mac and Linux or `/python.exe` in Windows.
 
-   .. image:: images/FAQ/faq-python-interpreter.png
+   .. image:: images/faq/faq-python-interpreter.png
       :alt: Navigator showing installing specific version of Spyder
 
    Restart Spyder for these changes to take effect. 
@@ -133,21 +133,21 @@ Using Spyder
 
    Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the `Reset Spyder settings` start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
 
-   .. image:: images/FAQ/faq-reset-Spyder.png
+   .. image:: images/faq/faq-reset-Spyder.png
       :alt: Spyder reset botton in tools
 
 .. dropdown:: Q: How do I change Spyder's language?
 
    Go to :guilabel:`Preferences`. Under :guilabel:`General` go to :guilabel:`Advanced settings` and select your language from the options displayed under :guilabel:`Language`.
 
-   .. image:: images/FAQ/faq-change-language.png
+   .. image:: images/faq/faq-change-language.png
       :alt: Spyder change language in preferences.
 
 .. dropdown:: Q: How do I use code cells in Spyder?
 
    To create a cell in Spyder's Editor type ``#%%`` in your script. Each ``#%%`` will determine a new cell. To run a cell, press shift+enter while in focus of a cell or use the :guilabel:`Run current cell` icon in the Icon Bar.
 
-   .. image:: images/FAQ/faq-cells.png
+   .. image:: images/faq/faq-cells.png
       :alt: Spyder showing cell generation.
 
 .. dropdown:: Q: How do I use plugins with Spyder (e.g. Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?
@@ -183,21 +183,21 @@ Using Spyder
    Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...`
    dialog under :guilabel:`Run` in the Menu bar.
 
-   .. image:: images/FAQ/faq-remove-variables.png
+   .. image:: images/faq/faq-remove-variables.png
       :alt: Spyder showing cell generation.
 
 .. dropdown:: Q: How do I run my code in a dedicated console or an external system terminal?
    
    Select the option in the :guilabel:`Configuration per file...` dialog under :guilabel:`Run` in the Menu bar.
 
-   .. image:: images/FAQ/faq-run-options.png
+   .. image:: images/faq/faq-run-options.png
       :alt: Spyder showing cell generation.
 
 .. dropdown:: Q: How do I change the syntax highlighting theme?
 
    Go to :guilabel:`Preferences` and select the theme under :guilabel:`Syntax highlighting theme in the :guilabel:`Appearence` section.
 
-   .. image:: images/FAQ/faq-highlighting-theme.png
+   .. image:: images/faq/faq-highlighting-theme.png
       :alt: Spyder showing cell generation.
 
 
