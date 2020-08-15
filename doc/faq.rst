@@ -34,7 +34,7 @@ Installing and updating
 
    Open the preferences menu in the Spyder's section in the Navigator. Go to "install specific version" and select the version of Spyder you want to install.
 
-   .. image:: images/faq/faq-Navigator-install.png
+   .. image:: images/faq/faq-navigator-install.png
      :alt: Navigator showing installing specific version of Spyder
 
 
@@ -133,7 +133,7 @@ Using Spyder
 
    Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the `Reset Spyder settings` start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
 
-   .. image:: images/faq/faq-reset-Spyder.png
+   .. image:: images/faq/faq-reset-spyder.png
       :alt: Spyder reset botton in tools
 
 .. dropdown:: Q: How do I change Spyder's language?
