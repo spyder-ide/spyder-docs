@@ -9,7 +9,7 @@ There's a good chance that someone else has already experienced the same problem
    To make sure you're getting the most relevant help for your problem, please make sure the issue is actually related to Spyder:
 
    * If the problem appears to be a result of *your own code*, `Stack Overflow`_ is a better place to start.
-   * If the bug also occurs in the *standard python, IPython, or qtconsole* environments, or only with *a specific package*, it is unlikely to be something in Spyder, and you should report it to those sources instead.
+   * If the bug also occurs in the *standard Python, IPython, or QtConsole* environments, or only with *a specific package*, it is unlikely to be something in Spyder, and you should report it to those sources instead.
    * If the problem lies with *your specific install*, uninstalling and clean-reinstalling the `Anaconda`_ distribution is strongly recommended.
      As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for install issues.
 

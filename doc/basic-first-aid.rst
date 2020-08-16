@@ -31,7 +31,7 @@ Recommended troubleshooting steps
 
    .. code-block:: bash
 
-      conda update --all
+      conda update qt pyqt spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq
 
 #. **Restart your machine**, in case the problem lies with a lingering process or another such issue.
 
@@ -44,10 +44,20 @@ Recommended troubleshooting steps
 
    .. note::
 
-      This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes, so you should make a copy of the :file:`.spyder-py3` folder in your user home directory if you particularly care about any of those, so you can restore it if this doesn't solve the problem.
+      This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes.
+      If you particularly care about any of those, you should make a copy of the :file:`.spyder-py3` folder in your user home directory, and restore it afterwards if this doesn't solve the problem.
 
 #. **Try installing Spyder into a new Conda environment** (recommended) or ``virtualenv``/``venv``, and see if the issue reoccurs.
-   If it does not, it is likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.
+
+In your system terminal (or Anaconda Prompt on Windows), run the following commands to create an a fresh, clean environment and start Spyder in it:
+
+.. code-block:: bash
+
+   conda create -n spyder-env spyder -y
+   conda activate spyder-env
+   spyder
+
+   If this fixes the issue, the problem was likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.
 
 #. **Watch our video** on solving and avoiding problems with pip, Conda and Conda-Forge, and follow its instructions.
 
@@ -79,6 +89,7 @@ Then, do a clean install of the latest version of the `Anaconda distribution`_ w
 
    While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
    In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
+   For further information, please visit our :doc:`installation`.
 
 .. _Anaconda uninstall guide: https://docs.anaconda.com/anaconda/install/uninstall/
 .. _Anaconda distribution: https://www.anaconda.com/products/individual
@@ -89,11 +100,12 @@ Then, do a clean install of the latest version of the `Anaconda distribution`_ w
 Isolating problems
 ==================
 
-If you get the error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the "stack" it depends on.
+If you get an error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the packages it depends on.
 Try running it in the following in order if and until it starts working as you expect.
 If you manage to isolate the bug, report it to the last one it *doesn't* work in.
 
-#. **Spyder**, of course! Make sure you can reproduce the error, if possible.
+#. **Spyder** itself, of course!
+    Make sure you can reproduce the error after closing and reopening it, if possible.
 
 #. **A bare QtConsole instance**, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with ``jupyter qtconsole``.
 
@@ -106,7 +118,7 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
    Reproducible bugs can be reported to their `Github page`_, though make sure to read their guidelines and docs first.
 
 #. **A standard Python interpreter**, either run as a script file with ``python path/to/your/file.py`` or launched interactively with ``python`` from your Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
-   While its not impossible it is a Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs`_ and the other resources listed above.
+   While it is not impossible that you've found Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs`_ and the other resources listed above.
 
 .. _issue tracker: https://github.com/jupyter/qtconsole/issues/
 .. _Github page: https://github.com/ipython/ipython/issues
@@ -127,7 +139,7 @@ See the :doc:`call-for-help` section for other places to look for information an
 Debugging and patching
 ======================
 
-If you know your way around Python, you can often diagnose and even fix Spyder issues yourself.
+If you know your way around Python, you can often diagnose and even fix Spyder issues yourself, since the IDE is written in the same language you use in it.
 You can explore the error messages you're receiving and Spyder's inner workings with the :guilabel:`Internal Console`, available under the menu item :menuselection:`View --> Panes --> Internal Console`.
 
 .. image:: images/basic-first-aid/basic-first-aid-internal-console.png

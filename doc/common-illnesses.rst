@@ -34,7 +34,7 @@ Check the required version of spyder-kernels for your version of Spyder in the f
    4.0.0-4.0.1      1.8.1
    4.1.0-4.1.2      1.9.0
    4.1.3            1.9.1
-   4.1.4            1.9.2
+   4.1.4            1.9.3
    ==============   ==============
 
 To do so, activate the environment, then install ``spyder-kernels``.
@@ -82,7 +82,7 @@ Check the last few lines of the error message, and see if its an ``AttributeErro
 .. image:: images/common-illnesses/common-illnesses-atribute-error.png
    :alt: Spyder's AtributeError dialog
 
-If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string`` or ``time``, which overrides the built-in module that Spyder-Kernels is trying to load.
+If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string.py`` or ``time.py``, which overrides the built-in module that Spyder-Kernels is trying to load.
 To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
 To check the names of these modules, see the list in the `Python standard library documentation`_.
 

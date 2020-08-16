@@ -67,7 +67,7 @@ Our `YouTube channel`_ contains helpful videos that will guide you through many 
 Stack Overflow
 ~~~~~~~~~~~~~~
 
-`Stack Overflow`_ is a great place to start searching and posting particularly if your question is more programming-related, or has to do with something specific to your own code.
+`Stack Overflow`_ is a great place to start searching and posting, particularly if your question is more programming-related, or has to do with something specific to your own code.
 It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
@@ -145,9 +145,10 @@ The `Scipy website`_ is the the central home of the SciPy stack, with informatio
 Project Jupyter
 ~~~~~~~~~~~~~~~
 
-`Project Jupyter`_ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the ``spyder-notebook`` plugin, and more.
+`Project Jupyter`_ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the `Spyder-Notebook`_ plugin, and more.
 
 .. _Project Jupyter: https://jupyter.org/
+.. _Spyder-Notebook: https://github.com/spyder-ide/spyder-notebook
 
 
 .. rst-class:: fabb fa-stack-exchange
@@ -155,6 +156,6 @@ Project Jupyter
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Data Science`_ site in Stack Exchange can be very useful for questions that relate more to science than programming specifically.
+The `Data Science`_ site in Stack Exchange can be very useful for questions that relate more to data science than programming specifically.
 
 .. _Data Science: https://datascience.stackexchange.com/

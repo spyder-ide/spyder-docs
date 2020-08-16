@@ -22,11 +22,11 @@ Common solutions
    If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-reinstalling-spyder-ref` to uninstall and reinstall Anaconda.
 
 #. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
-   Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder.
+   Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder or Python.
 
-#. If it is currently installed "for just you", **try uninstalling and reinstalling Anaconda "for all users" instead**, and vice versa, as some systems can have issues with one or the other.
+#. If it is currently installed "for just you", **try uninstalling and reinstalling Anaconda "for all users" instead**, and vice versa, as some systems can have issues with one or the other installation method.
 
-#. **Check and repair/reset permissions**, your disk, and OS if all else fails
+#. **Check and repair/reset permissions**, your disk, and OS if all else fails.
 
 
 
@@ -36,7 +36,7 @@ Advanced tricks
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide useful information to help debug the issue further.
 
-The technique consists of starting Spyder from your terminal (or Anaconda Prompt on Windows) by manually running the Spyder startup routine ( :guilabel:`start.py` ) with a known good Python interpreter, and observing the results.
+This technique consists of starting Spyder from your terminal (or Anaconda Prompt on Windows) by manually running the Spyder startup routine ( :guilabel:`start.py` ) with a known good Python interpreter, and observing the results.
 
 To do so, you'll need to:
 

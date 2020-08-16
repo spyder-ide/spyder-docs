@@ -50,8 +50,9 @@ In order of preference and difficulty:
 Once you submit your report, our team will try to get back to you as soon as possible, often within 24 hours or less, to try to help you fix it.
 
 
+==============================
 What to include in your report
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==============================
 
 **Please include as much as possible of the following in your report** to maximize your chances of getting relevant help and our ability to diagnose, reproduce and solve your issue.
 
@@ -66,7 +67,7 @@ The key items, in order of priority:
 
    .. note::
 
-      *If you are reporting a specific behavior* rather than an error, or the message does not fully explain what occurs, please *describe in detail what actually happened, and what you expected Spyder to do*.
+      If you are reporting a specific behavior rather than an error, or the message does not fully explain what occurs, please describe in detail what actually happened, and what you expected Spyder to do.
 
 * A **detailed, step by step description of exactly what you did** leading up to the error occurring, complete with sample code that triggers it, if applicable.
 
