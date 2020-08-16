@@ -256,7 +256,7 @@ Troubleshooting
    If nothing is displayed in the calltip, hover hint or :doc:`help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information go to the Completion/help not working component in the Common Illnesses section of our troubleshooting guide.
+   For more information, go to the Completion/help not working section in the Common Illnesses page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
