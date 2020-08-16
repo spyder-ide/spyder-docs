@@ -130,7 +130,7 @@ See the [Style Guide](https://github.com/spyder-ide/spyder-docs/blob/master/STYL
 * **Filenames**: Lowercase, hyphen-separated
 * **Headings**: *Level 1*—Page titles, title case, ``###`` top and bottom; *Level 2*—3 blank lines before, Sentence case, ``===`` top and bottom; *Level 3*—2 blank lines before, Sentence case, ``~~~`` bottom; *Level 4*—1 blank line before, Sentence case, ``---`` bottom
 * **Images/GIFS**: Full width, 690 px or 500 px; manual break (``|``) after before a new section; PNGs or GIFs 5-10 s at 5 frames/s
-* **Indentation**: Spaces, no tabs; 3 spaces after directives, 4 in code blocks
+* **Indentation**: Spaces, no tabs; 3 spaces after directives, 4 inside code blocks
 * **Line breaks**: Break by sentence for text, 70 characters for code
 * **Lists**: ``#. `` for lists that have inherent order, ``* `` otherwise
 * **reST directives**: ``:file:`` for file paths; ``:kbd:`` for keyboard shortcuts; ``:guilabel:`` buttons, labels, options and other UI items; ``:menuselection`` for menu items and preference panes; ``code-block::`` for code

@@ -1,7 +1,7 @@
 # Spyder Documentation Style Guide
 
 This style guide is intended as a comprehensive reference on a wide variety of topics that may be pertinent to specific situations encountered when writing the docs.
-A more more digestible summary of the most important points for doc authors to actively keep in mind is included in the [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md).
+A more digestible summary of the most important points for doc authors to actively keep in mind is included in the [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md).
 Readers should be familiar with the basics of reST syntax, as covered in a resource like the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
 
 
