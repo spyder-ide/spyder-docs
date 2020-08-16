@@ -51,17 +51,17 @@ Running Spyder
 
    You can run Spyder in any of the following ways:
 
-   #. **From the command line**: Type ``spyder`` in your command line (or Anaconda prompt on Windows).
+   * **From the command line**: Type ``spyder`` in your command line (or Anaconda prompt on Windows).
 
-   #. **From Anaconda Navigator**: Scroll to :guilabel:`Spyder` under :guilabel:`Home`, and click :guilabel:`Launch`.
+   * **From Anaconda Navigator**: Scroll to :guilabel:`Spyder` under :guilabel:`Home`, and click :guilabel:`Launch`.
 
-      .. image:: images/faq/faq-launch-anaconda.png
-         :alt: Navigator showing running a specific version of Spyder
+     .. image:: images/faq/faq-launch-anaconda.png
+        :alt: Navigator showing running a specific version of Spyder
 
-   #. ***Windows Only***: Launch it via the Start menu shortcut.
+   * ***Windows Only***: Launch it via the Start menu shortcut.
 
-      .. image:: images/faq/faq-windows-launch.png
-         :alt: Navigator showing running a specific version of Spyder
+     .. image:: images/faq/faq-windows-launch.png
+        :alt: Navigator showing running a specific version of Spyder
 
 
 .. dropdown:: Q: Can I try Spyder without installing it?
