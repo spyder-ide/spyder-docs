@@ -150,19 +150,25 @@ If the issue still isn't resolved, update the various relevant dependencies with
 Plugin Problems
 ===============
 
-
 Plugin does not work at all
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you have installed a Spyder plug-in, but Spyder does not seem to see it, then first select the :guilabel:`Dependencies` item under the :guilabel:`Help` menu. All Spyder plug-ins are listed at the bottom of the list of dependencies.
 
-If the plug-in with the problem is listed in the list of dependencies, then go to the :guilabel:`Panes` submenu of the :guilabel:`View` menu and select the plug-in. This makes the plug-in pane visible.
+If you have installed a Spyder plug-in, but Spyder does not seem to see it, then first select the :guilabel:`Dependencies` item under the :guilabel:`Help` menu.
+All Spyder plug-ins are listed at the bottom of the list of dependencies.
 
-If the plug-in with the problem is not listed in the list of dependencies, then check that you installed it in the same environment as Spyder. If you have, then the problem may well be caused by a dependency issue. Test whether you can import the plug-in manually by opening a Python console in the same environment as Spyder and typing for instance `import spyder_unittest` to test the `spyder-unittest` plug-in; this command should run without errors.
+If the plug-in with the problem is listed in the list of dependencies, then go to the :guilabel:`Panes` submenu of the :guilabel:`View` menu and select the plug-in.
+This makes the plug-in pane visible.
+
+If the plug-in with the problem is not listed in the list of dependencies, then check that you installed it in the same environment as Spyder.
+If you have, then the problem may well be caused by a dependency issue.
+Test whether you can import the plug-in manually by opening a Python console in the same environment as Spyder and typing for instance `import spyder_unittest` to test the `spyder-unittest` plug-in; this command should run without errors.
 
 If none of this helps you to resolve the problem, then continue as in the next section.
 
+
 Other issues
 ~~~~~~~~~~~~
+
 If you get an error which mentions or involves a Spyder plug-in, such as ``spyder-unittest``, ``spyder-terminal`` or ``spyder-notebook``, or if you encounter any other problem with a Spyder plug-in, then the first approach should be to update Spyder and the plugin to their latest versions.
 
 If this doesn't fix the problem, you should check the plugin's website or repository to see if it is compatible with your version of Spyder.
