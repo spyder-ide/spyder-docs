@@ -146,7 +146,7 @@ Using Spyder
    .. image:: images/faq/faq-python-interpreter.png
       :alt: Navigator showing installing specific version of Spyder
 
-   Restart Spyder for these changes to take effect.
+   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
 
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
@@ -244,7 +244,7 @@ Troubleshooting
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
 
    First, make sure the error you are seeing is not a bug in your code.
-   For this, try running it in any standard Python interpreter.
+   To confirm this, try running it in any standard Python interpreter.
    If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
    Otherwise, start at the Basic First Aid section of our troubleshooting guide.
 
