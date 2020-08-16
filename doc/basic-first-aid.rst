@@ -45,7 +45,7 @@ Recommended troubleshooting steps
    .. note::
 
       This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes.
-      If you particularly care about any of those, you should make a copy of the :file:`.spyder-py3` folder in your user home directory, and restore it afterwards if this doesn't solve the problem.
+      If you particularly care about any of those, you should make a copy of the :file:`.spyder-py3` folder in your user home directory (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux), and restore it afterwards if this doesn't solve the problem.
 
 #. **Try installing Spyder into a new Conda environment** (recommended) or ``virtualenv``/``venv``, and see if the issue reoccurs.
 
@@ -57,7 +57,7 @@ In your system terminal (or Anaconda Prompt on Windows), run the following comma
    conda activate spyder-env
    spyder
 
-   If this fixes the issue, the problem was likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.
+If this fixes the issue, the problem was likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.
 
 #. **Watch our video** on solving and avoiding problems with pip, Conda and Conda-Forge, and follow its instructions.
 
@@ -105,7 +105,7 @@ Try running it in the following in order if and until it starts working as you e
 If you manage to isolate the bug, report it to the last one it *doesn't* work in.
 
 #. **Spyder** itself, of course!
-    Make sure you can reproduce the error after closing and reopening it, if possible.
+   Make sure you can reproduce the error after closing and reopening it, if possible.
 
 #. **A bare QtConsole instance**, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with ``jupyter qtconsole``.
 
