@@ -1,5 +1,5 @@
 ##########################
-Frequently asked questions
+Frequently Asked Questions
 ##########################
 
 =======================
@@ -8,35 +8,35 @@ Installing and updating
 
 .. dropdown:: Q: How do I install Spyder?
 
-   The easiest way to install Spyder is with Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
+   The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
    Download it from its `webpage`_.
 
    .. _webpage: https://www.anaconda.com/products/individual
 
-   For more information visit our :doc:`installation`.
+   For more information, visit our :doc:`installation`.
 
 
 .. dropdown:: Q: How do I update Spyder using conda?
 
-   From the command line (or Anaconda prompt on Windows) run:
+   From the command line (or Anaconda prompt on Windows), run:
 
    .. code-block:: bash
 
       conda update anaconda
       conda update spyder
 
-   If this doesn't work try:
+   If this results in an error or does not update Spyder to the latest version, try:
 
    .. code-block:: bash
 
-      conda update anaconda
       conda install spyder=4
 
 
 .. dropdown:: Q: How do update I Spyder using Anaconda Navigator?
 
-   Open the preferences menu in the Spyder's section in the Navigator.
-   Go to :guilabel:`Install specific version` and select the version of Spyder you want to install.
+   Open the "gear" menu in Spyder's section under :guilabel:`Home` in Navigator.
+   Go to :guilabel:`Install specific version` and select the version of Spyder you want to use.
+   We strongly recommend the latest available, to benefit from new features, bug fixes, performance improvements and usability enhancements.
 
    .. image:: images/faq/faq-navigator-install.png
       :alt: Navigator showing installing specific version of Spyder
@@ -49,9 +49,9 @@ Running Spyder
 
 .. dropdown:: Q: How do I run Spyder?
 
-   You can run Spyder in any of the following ways:
+   You can launch it in any of the following ways:
 
-   * **From the command line**: Type ``spyder`` in your command line (or Anaconda prompt on Windows).
+   * **From the command line**: Type ``spyder`` in your terminal (or Anaconda prompt on Windows).
 
    * **From Anaconda Navigator**: Scroll to :guilabel:`Spyder` under :guilabel:`Home`, and click :guilabel:`Launch`.
 
@@ -61,13 +61,13 @@ Running Spyder
    * ***Windows Only***: Launch it via the Start menu shortcut.
 
      .. image:: images/faq/faq-windows-launch.png
-        :alt: Navigator showing running a specific version of Spyder
+        :alt: Spyder shortcut in the Windows Start menu
 
 
 .. dropdown:: Q: Can I try Spyder without installing it?
 
    Yes!
-   With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser.
+   With `Binder`_, you can work with a fully functional copy of Spyder that runs right in your web browser.
    Try it `here`_.
 
    .. _Binder: https://mybinder.org/
@@ -78,39 +78,39 @@ Running Spyder
 
    Spyder works on modern versions of Windows, macOS and Linux (see table below for recommended versions) via Anaconda, as well as other methods.
    It typically uses relatively minimal CPU when idle, and 0.5 GB - 1 GB of RAM, depending on how long you've been using it and how many files, projects, panes and consoles you have open.
-   It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is strongly recommended for best performance when running other applications.
+   It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is _strongly_ recommended for best performance when running other applications.
    However, the code you run, such as scientific computation and deep learning models, may require additional resources beyond this baseline for Spyder itself.
 
    .. table::
 
       ================   ===================
-      Operative system   Version
+      Operating system   Version
       ================   ===================
-      Windows            Windows 8
+      Windows            Windows 8.1
       macOS              High Sierra (10.13)
       Linux              Ubuntu 16.04
       ================   ===================
 
 
-.. dropdown:: Q: How do I run Spyder in a conda environment using Anaconda Navigator?
+.. dropdown:: Q: How do I run Spyder installed in a conda environment using Anaconda Navigator?
 
    Select the environment you want to launch Spyder from under :guilabel:`Applications on`.
-   If Spyder is installed in this environment, you will see it on Navigator's :guilabel:`Home` window.
-   Click :guilabel:`Launch` to use Spyder with your selected environment.
+   If Spyder is installed in this environment, you will see it in Navigator's :guilabel:`Home` window.
+   Click :guilabel:`Launch` to start Spyder in your selected environment.
 
    .. image:: images/faq/faq-run-environment.png
       :alt: Navigator showing running Spyder in a specific environment
 
 
-.. dropdown:: Q: How do I run Spyder in a conda environment using the command line?
+.. dropdown:: Q: How do I run Spyder installed in a conda environment using the command line?
 
-   Activate your conda environment typing on your command line (or Anaconda Prompt on Windows):
+   Activate your conda environment by typing the following in your terminal (or Anaconda Prompt on Windows):
 
    .. code-block:: bash
 
       conda activate <ENVIRONMENT-NAME>
 
-   Then, type ``spyder``.
+   Then, type ``spyder`` to launch the version installed in that environment.
 
 
 
@@ -121,13 +121,13 @@ Using Spyder
 .. dropdown:: Q: How do I install Python packages to use within Spyder?
 
    The first approach for installing a package should be using conda.
-   In your command line (or Anaconda Prompt on Windows) type:
+   In your system terminal (or Anaconda Prompt on Windows), type:
 
    .. code-block:: bash
 
       conda install <PACKAGE-NAME>
 
-   If your installation is not successful go through steps 3 to 5 of Part 2 in our `video`_ on solving and avoiding problems with pip, Conda and Conda-Forge.
+   If your installation is not successful, follow steps 3 through 5 of Part 2 in our `video`_ on solving and avoiding problems with pip, Conda and Conda-Forge.
 
    .. _video: https://www.youtube.com/watch?v=Ul79ihg41Rs&t=306s
 
@@ -135,12 +135,13 @@ Using Spyder
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
 
    To work with an existing environment in Spyder, change Spyder’s default python interpreter.
-   To do so, first go to your terminal, type ``conda info --envs``, and copy the path from the environment you created to your clipboard.
+   To do so, first go to your terminal (or Anaconda Prompt on Windows), type ``conda info --envs``, and copy the path from the environment you created to your clipboard.
 
    .. image:: images/faq/faq-conda-info.png
       :alt: Navigator showing installing specific version of Spyder
 
-   Now, go to :guilabel:`Preferences` in Spyder’s main window, click :guilabel:`Python interpreter`, check :guilabel:`Use the following Python interpreter` paste the path and add ``/bin/python`` at the end for Mac and Linux or ``/python.exe`` in Windows.
+   Now, go to :guilabel:`Preferences` in Spyder’s main window, click :guilabel:`Python interpreter` and check :guilabel:`Use the following Python interpreter`.
+   Paste the path you copied before, add ``/bin/python`` at the end on Mac and Linux or ``/python.exe`` on Windows, and click :guilabel:`OK`.
 
    .. image:: images/faq/faq-python-interpreter.png
       :alt: Navigator showing installing specific version of Spyder
@@ -158,8 +159,7 @@ Using Spyder
 
 .. dropdown:: Q: How do I change Spyder's language?
 
-   Go to :guilabel:`Preferences`.
-   Under :guilabel:`General` go to :guilabel:`Advanced settings` and select your language from the options displayed under :guilabel:`Language`.
+   Under :guilabel:`General` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
 
    .. image:: images/faq/faq-change-language.png
       :alt: Spyder change language in preferences.
@@ -167,9 +167,9 @@ Using Spyder
 
 .. dropdown:: Q: How do I use code cells in Spyder?
 
-   To create a cell in Spyder's Editor type ``#%%`` in your script.
-   Each ``#%%`` will determine a new cell.
-   To run a cell, press :kbd:`Shift-Enter` while in focus of a cell or use the :guilabel:`Run current cell` icon in the Icon Bar.
+   To create a cell in Spyder's :doc:`editor`, type ``#%%`` in your script.
+   Each ``#%%`` will make a new cell.
+   To run a cell, press :kbd:`Shift-Enter` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
    .. image:: images/faq/faq-cells.png
       :alt: Spyder showing cell generation.
@@ -177,15 +177,15 @@ Using Spyder
 
 .. dropdown:: Q: How do I use plugins with Spyder (e.g. Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?
 
-   Spyder plugins are available in the ``spyder-ide`` channel in Anaconda.
-   To install them type in your command line (or Anaconda Prompt on Windows):
+   Spyder plugins are available in the ``spyder-ide`` conda channel.
+   To install one, type on the command line (or Anaconda Prompt on Windows):
 
    .. code-block:: bash
 
       conda install -c spyder-ide <PLUGIN>
 
-   Replace ``<PLUGIN>`` for the name of the plugin you want to use.
-   For more information go to the Plugins' repository:
+   Replace ``<PLUGIN>`` with the name of the plugin you want to use.
+   For more information on a specific plugin, go to the its repository:
 
    * `spyder-reports`_
    * `spyder-unittest`_
@@ -206,9 +206,9 @@ Using Spyder
    .. _spyder-autopep8: https://github.com/spyder-ide/spyder-autopep8
 
 
-.. dropdown:: Q: How do I clear all my variables before executing my code?
+.. dropdown:: Q: How do I clear all variables before executing my code?
 
-   Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...` dialog under :guilabel:`Run` in the Menu bar.
+   Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
    .. image:: images/faq/faq-remove-variables.png
       :alt: Spyder showing cell generation.
@@ -216,7 +216,7 @@ Using Spyder
 
 .. dropdown:: Q: How do I run my code in a dedicated console or an external system terminal?
 
-   Select the option in the :guilabel:`Configuration per file...` dialog under :guilabel:`Run` in the Menu bar.
+   Select the appropriate option in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
    .. image:: images/faq/faq-run-options.png
       :alt: Spyder showing cell generation.
@@ -224,7 +224,7 @@ Using Spyder
 
 .. dropdown:: Q: How do I change the syntax highlighting theme?
 
-   Go to :guilabel:`Preferences` and select the theme under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
+   Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
 
    .. image:: images/faq/faq-highlighting-theme.png
       :alt: Spyder showing cell generation.
@@ -235,17 +235,17 @@ Using Spyder
 Troubleshooting
 ===============
 
-.. dropdown:: Q: I've found a bug or issue with Spyder, what do I do?
+.. dropdown:: Q: I've found a bug or issue with Spyder. What do I do?
 
    You should first follow the steps in our Troubleshooting guide.
-   If you can't solve your bug, open an issue by following the instructions in our Submit a Report section.
+   If you can't solve your problem, open an issue by following the instructions in our Submit a Report section.
 
 
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
 
-   First, make sure the error you are having is not an error with your code.
+   First, make sure the error you are seeing is not a bug in your code.
    For this, try running it in any standard Python interpreter.
-   If it turns out the error is with your code, `Stack Overflow`_ might be the best place to start.
+   If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
    Otherwise, start at the Basic First Aid section of our troubleshooting guide.
 
    .. _Stack Overflow: https://stackoverflow.com
@@ -253,15 +253,15 @@ Troubleshooting
 
 .. dropdown:: Q: Code completion/help doesn't work; what can I do?
 
-   If nothing is displayed in the calltip, hover hint or help pane, make sure the object you are inspecting has a docstring and try executing your code in the :doc:`ipythonconsole` to get help and completions on the object there.
-   If this doesn't work, try restarting the LSP by right-clicking it in the bottom of Spyder's main window and selecting the :guilabel:`Restart Python Language Server` item.
+   If nothing is displayed in the calltip, hover hint or :doc:`help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`ipythonconsole` to get help and completions there.
+   If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
    For more information go to the Completion/help not working component in the Common Illnesses section of our troubleshooting guide.
 
 
-.. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix it?
+.. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
 
-   First make sure your version of spyder-kernels is compatible with your version of Spyder.
+   First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
 
     .. table::
 
@@ -274,10 +274,10 @@ Troubleshooting
        4.1.4            1.9.2
        ==============   ==============
 
-   To install the right version, type on your command line (or Anaconda Prompt on Windows)
+   To install the right version, type the following on the command line (or Anaconda Prompt on Windows)
 
    .. code-block:: bash
 
       conda install spyder-kernels=<VERSION>
 
-   For more information go to the Errors starting the kernel component in the Common Illnesses section of our troubleshooting guide.
+   For more information, go to the Errors starting the kernel section in the Common Illnesses page of our troubleshooting guide.
