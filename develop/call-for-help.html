@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Help &#8212; Spyder 4 documentation</title>
+    <title>Calling for Help &#8212; Spyder 4 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
@@ -27,8 +27,8 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plots" href="plots.html" />
-    <link rel="prev" title="Variable Explorer" href="variableexplorer.html" />
+    <link rel="next" title="Submit a Report" href="submit-a-report.html" />
+    <link rel="prev" title="Common Illnesses" href="common-illnesses.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -131,9 +131,9 @@
         
       
        
-            <li class="nav-item active">
-                          
-              <details open>
+            <li class="nav-item ">
+              
+              <details>
               
                 <summary>
                     Panes in Depth
@@ -147,8 +147,8 @@
                     
                   
                     
-                        <li class="nav-item sub-nav-item active">
-                            <a href="">Help</a>
+                        <li class="nav-item sub-nav-item ">
+                            <a href="help.html">Help</a>
                         </li>
                     
                   
@@ -188,9 +188,9 @@
         
       
        
-            <li class="nav-item ">
-              
-              <details>
+            <li class="nav-item active">
+                          
+              <details open>
               
                 <summary>
                     Troubleshooting
@@ -222,8 +222,8 @@
                     
                   
                     
-                        <li class="nav-item sub-nav-item ">
-                            <a href="call-for-help.html">Calling for Help</a>
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">Calling for Help</a>
                         </li>
                     
                   
@@ -281,7 +281,7 @@
                   Variable Explorer
                 </option>
               
-                <option value="">
+                <option value="help.html">
                   Help
                 </option>
               
@@ -327,7 +327,7 @@
                   Common Illnesses
                 </option>
               
-                <option value="call-for-help.html">
+                <option value="">
                   Calling for Help
                 </option>
               
@@ -346,61 +346,73 @@
           <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="help">
-<h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
-<p>You can use the <strong>Help</strong> pane to find, render and display rich documentation for any object with a docstring, including modules, classes, functions and methods.
-This allows you to access documentation easily directly from Spyder, without having to interrupt your workflow.</p>
-<img alt="Spyder main window showing getting help for numpy arrays from editor" src="_images/help-execution.gif" />
-<p>You can also access Spyder’s tutorial from here, which will guide you through some basic steps for using its key features.</p>
-<a class="reference internal image-reference" href="_images/help-tutorial.png"><img alt="Spyder Help pane showing the link for the Spyder's tutorial" src="_images/help-tutorial.png" style="width: 500px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
+  <div class="section" id="calling-for-help">
+<h1>Calling for Help<a class="headerlink" href="#calling-for-help" title="Permalink to this headline">¶</a></h1>
+<p>Aside from this troubleshooting guide, there are a number of other sources of documentation and troubleshooting information you can check before submitting an issue, as they might already offer an answer, or at least help you better understand the problem.
+Even if we aren’t able to help you, these places might.</p>
+<div class="fa-offset-h3 section" id="spyder-related-platforms">
+<h2>Spyder-related platforms<a class="headerlink" href="#spyder-related-platforms" title="Permalink to this headline">¶</a></h2>
+<div class="fasb fa-question-circle section" id="spyder-s-faq-section">
+<h3>Spyder’s FAQ section<a class="headerlink" href="#spyder-s-faq-section" title="Permalink to this headline">¶</a></h3>
+<p>Spyder’s documentation has a FAQ section, where you might find the answers that you are looking for.</p>
 </div>
-<div class="section" id="getting-help">
-<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
-<p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.
-You can trigger help manually by pressing the configurable help shortcut (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> by default).</p>
-<img alt="Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former." src="_images/help-command.png" />
-<p>You can also manually enter the object’s name into the <span class="guilabel">Object</span> textbox at the top of the pane, if <span class="guilabel">Console</span> is selected as the <span class="guilabel">Source</span>.</p>
-<img alt="Spyder Help pane, displaying documentation for an object whose name was written in the object text box" src="_images/help-console.gif" />
-<p>Automatic help can be individually enabled for both the <span class="guilabel">Editor</span> and the <span class="guilabel">Console</span> under <span class="menuselection">Preferences ‣ Help ‣ Automatic Connections</span>, and turned on and off dynamically via the lock icon in the top right corner of the <span class="guilabel">Help</span> pane.
-If enabled, simply typing a left parenthesis (<code class="docutils literal notranslate"><span class="pre">(</span></code>) after a function or method name will show its associated help.</p>
-<img alt="Spyder console and help pane showing automatic help with parenthesis" src="_images/help-automatic-connections.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="fabb fa-youtube section" id="spyder-s-youtube-channel">
+<h3>Spyder’s YouTube channel<a class="headerlink" href="#spyder-s-youtube-channel" title="Permalink to this headline">¶</a></h3>
+<p>Our <a class="reference external" href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube channel</a> contains helpful videos that will guide you through many of Spyder’s features, and provide a starting point for newer users.</p>
 </div>
+<div class="fabb fa-gitlab section" id="spyder-gitter">
+<h3>Spyder Gitter<a class="headerlink" href="#spyder-gitter" title="Permalink to this headline">¶</a></h3>
+<p>We have a public <a class="reference external" href="https://gitter.im/spyder-ide/public">Gitter room</a> where you can chat directly with the Spyder developers.
+If you’ve got a quick question to ask the team and are looking for a quick answer, this is a great place to go.</p>
 </div>
-<div class="section" id="understanding-help-modes">
-<h2>Understanding help modes<a class="headerlink" href="#understanding-help-modes" title="Permalink to this headline">¶</a></h2>
-<p>You can use the options menu (<span class="guilabel">Hamburger</span> icon) in the top right of the <span class="guilabel">Help</span> pane to toggle the help display mode.</p>
-<p><span class="guilabel">Rich Text</span> mode renders the object’s docstrings with <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>, <span class="guilabel">Plain Text</span> mode displays the docstring without formatting while <span class="guilabel">Show Source</span> displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python).
-The latter can be useful when docstrings are not available or insufficient to document the object.</p>
-<img alt="Spyder help pane showing different modes" src="_images/help-modes.gif" />
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="fabb fa-google section" id="spyder-google-group">
+<h3>Spyder Google Group<a class="headerlink" href="#spyder-google-group" title="Permalink to this headline">¶</a></h3>
+<p>Our <a class="reference external" href="https://groups.google.com/group/spyderlib">Google Group</a> is great for help-related questions, particularly those you aren’t sure are a full-on Spyder issue.</p>
 </div>
+<div class="fasb fa-globe section" id="spyder-website">
+<h3>Spyder website<a class="headerlink" href="#spyder-website" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://www.spyder-ide.org/">Spyder website</a> contains basic information about the IDE and links to many other helpful resources.</p>
 </div>
-<div class="section" id="getting-help-by-hovering">
-<h2>Getting help by hovering<a class="headerlink" href="#getting-help-by-hovering" title="Permalink to this headline">¶</a></h2>
-<p>You can also get summary help for objects by hovering over them in the <span class="guilabel">Editor</span>.
-Clicking the hover popup will open the full documentation in the <span class="guilabel">Help</span> pane.</p>
-<img alt="Editor pane showing help of an object from hover" src="_images/help-hover.png" />
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="fabb fa-stack-overflow section" id="stack-overflow">
+<h3>Stack Overflow<a class="headerlink" href="#stack-overflow" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://stackoverflow.com/questions/tagged/spyder">Stack Overflow</a> is a great place to start searching and posting, particularly if your question is more programming-related, or has to do with something specific to your own code.
+It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.</p>
 </div>
 </div>
-<div class="section" id="control-automatic-import">
-<h2>Control automatic import<a class="headerlink" href="#control-automatic-import" title="Permalink to this headline">¶</a></h2>
-<p>When you get help in the <span class="guilabel">IPython Console</span> for an object that has not been previously imported, it is automatically loaded in the <a class="reference internal" href="internalconsole.html"><span class="doc">Internal Console</span></a> so that documentation can be shown when available.
-This can be disabled in the <span class="guilabel">Help</span> pane’s top-right options menu so that only documentation from imported objects is displayed.</p>
+<div class="fa-offset-h3 section" id="python-resources">
+<h2>Python resources<a class="headerlink" href="#python-resources" title="Permalink to this headline">¶</a></h2>
+<div class="fabb fa-python section" id="official-python-help-page">
+<h3>Official Python help page<a class="headerlink" href="#official-python-help-page" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://www.python.org/about/help/">Python help page</a> is a great resource that lists a number of places you can get assistance, support and learning resources for the language and its packages.</p>
 </div>
-<div class="section" id="related-components">
-<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
-<li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a></p></li>
-</ul>
+<div class="fasb fa-book-open section" id="python-documentation">
+<h3>Python documentation<a class="headerlink" href="#python-documentation" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://docs.python.org/">Python documentation</a> site can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.</p>
+</div>
+<div class="fabb fa-reddit section" id="python-subreddits">
+<h3>Python subreddits<a class="headerlink" href="#python-subreddits" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.reddit.com/r/Python/">r/python</a> and <a class="reference external" href="https://www.reddit.com/r/learnpython/">r/learnpython</a> are resources you can use to ask about and discuss issues with Python and its packages.
+The former is aimed more at general Python usage, and the latter more specifically at beginners.</p>
+</div>
+</div>
+<div class="fa-offset-h3 section" id="data-science-scipy-resources">
+<h2>Data science/SciPy resources:<a class="headerlink" href="#data-science-scipy-resources" title="Permalink to this headline">¶</a></h2>
+<div class="fasb fa-circle-notch section" id="anaconda-help">
+<h3>Anaconda help<a class="headerlink" href="#anaconda-help" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://www.anaconda.com/help">Anaconda help</a> site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.</p>
+</div>
+<div class="fasb fa-flask section" id="scipy-org-website">
+<h3>SciPy.org website<a class="headerlink" href="#scipy-org-website" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://www.scipy.org/">Scipy website</a> is the the central home of the SciPy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy and IPython.</p>
+</div>
+<div class="fasb fa-sticky-note section" id="project-jupyter">
+<h3>Project Jupyter<a class="headerlink" href="#project-jupyter" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://jupyter.org/">Project Jupyter</a> is the development hub for IPython, Spyder’s QtConsole, Jupyter notebooks used with the <a class="reference external" href="https://github.com/spyder-ide/spyder-notebook">Spyder-Notebook</a> plugin, and more.</p>
+</div>
+<div class="fabb fa-stack-exchange section" id="data-science-stack-exchange">
+<h3>Data Science Stack Exchange<a class="headerlink" href="#data-science-stack-exchange" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://datascience.stackexchange.com/">Data Science</a> site in Stack Exchange can be very useful for questions that relate more to data science than programming specifically.</p>
+</div>
 </div>
 </div>
 
@@ -409,8 +421,8 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev btn btn-outline-danger' id="prev-link" href="variableexplorer.html" title="previous page">Variable Explorer</a>
-    <a class='right-next btn btn-outline-danger' id="next-link" href="plots.html" title="next page">Plots</a>
+    <a class='left-prev btn btn-outline-danger' id="prev-link" href="common-illnesses.html" title="previous page">Common Illnesses</a>
+    <a class='right-next btn btn-outline-danger' id="next-link" href="submit-a-report.html" title="next page">Submit a Report</a>
 
               </div>
               
@@ -423,7 +435,7 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
     
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/help.rst">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/call-for-help.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -433,23 +445,73 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
         <ul class="nav section-nav flex-column">
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#getting-help" class="nav-link">Getting help</a>
+                <a href="#spyder-related-platforms" class="nav-link">Spyder-related platforms</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#spyder-s-faq-section" class="nav-link">Spyder’s FAQ section</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#spyder-s-youtube-channel" class="nav-link">Spyder’s YouTube channel</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#spyder-gitter" class="nav-link">Spyder Gitter</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#spyder-google-group" class="nav-link">Spyder Google Group</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#spyder-website" class="nav-link">Spyder website</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#stack-overflow" class="nav-link">Stack Overflow</a>
+            </li>
+        
+                </ul>
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#understanding-help-modes" class="nav-link">Understanding help modes</a>
+                <a href="#python-resources" class="nav-link">Python resources</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#official-python-help-page" class="nav-link">Official Python help page</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#python-documentation" class="nav-link">Python documentation</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#python-subreddits" class="nav-link">Python subreddits</a>
+            </li>
+        
+                </ul>
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#getting-help-by-hovering" class="nav-link">Getting help by hovering</a>
+                <a href="#data-science-scipy-resources" class="nav-link">Data science/SciPy resources:</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#anaconda-help" class="nav-link">Anaconda help</a>
             </li>
         
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#control-automatic-import" class="nav-link">Control automatic import</a>
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#scipy-org-website" class="nav-link">SciPy.org website</a>
             </li>
         
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#related-components" class="nav-link">Related components</a>
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#project-jupyter" class="nav-link">Project Jupyter</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#data-science-stack-exchange" class="nav-link">Data Science Stack Exchange</a>
+            </li>
+        
+                </ul>
             </li>
         
         </ul>
@@ -475,23 +537,73 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
             <ul class="nav section-nav flex-column">
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#getting-help" class="nav-link">Getting help</a>
+                    <a href="#spyder-related-platforms" class="nav-link">Spyder-related platforms</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#spyder-s-faq-section" class="nav-link">Spyder’s FAQ section</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#spyder-s-youtube-channel" class="nav-link">Spyder’s YouTube channel</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#spyder-gitter" class="nav-link">Spyder Gitter</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#spyder-google-group" class="nav-link">Spyder Google Group</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#spyder-website" class="nav-link">Spyder website</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#stack-overflow" class="nav-link">Stack Overflow</a>
+                </li>
+            
+                    </ul>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#understanding-help-modes" class="nav-link">Understanding help modes</a>
+                    <a href="#python-resources" class="nav-link">Python resources</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#official-python-help-page" class="nav-link">Official Python help page</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#python-documentation" class="nav-link">Python documentation</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#python-subreddits" class="nav-link">Python subreddits</a>
+                </li>
+            
+                    </ul>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#getting-help-by-hovering" class="nav-link">Getting help by hovering</a>
+                    <a href="#data-science-scipy-resources" class="nav-link">Data science/SciPy resources:</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#anaconda-help" class="nav-link">Anaconda help</a>
                 </li>
             
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#control-automatic-import" class="nav-link">Control automatic import</a>
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#scipy-org-website" class="nav-link">SciPy.org website</a>
                 </li>
             
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#related-components" class="nav-link">Related components</a>
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#project-jupyter" class="nav-link">Project Jupyter</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#data-science-stack-exchange" class="nav-link">Data Science Stack Exchange</a>
+                </li>
+            
+                    </ul>
                 </li>
             
             </ul>
@@ -576,7 +688,7 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
                     
                     
                       <span class="pipe-red">|</span>
-                      <a href="_sources/help.rst.txt"
+                      <a href="_sources/call-for-help.rst.txt"
                           rel="nofollow">Page source</a>
                     
                 </div>
