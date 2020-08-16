@@ -156,6 +156,8 @@ Plugin does not work at all
 If you have installed a Spyder plugin, but you can't see it, go to the :guilabel:`Panes` submenu of the :guilabel:`View` menu and select the plugin's name, which should make its pane visible.
 If you don't see the plugin there, select the :guilabel:`Dependencies` item under the :guilabel:`Help` menu and see if the plugin appears at the bottom.
 
+.. image:: images/common-illnesses/common-illnesses-plugins.png
+   :alt: Dependencies dialog showing Unittest plugin
 
 If the plugin with the problem is not listed in the dependencies dialog, check that you installed it in the same environment as Spyder.
 If you have, then the problem may well be caused by a dependency issue.

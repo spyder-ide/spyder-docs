@@ -21,24 +21,14 @@ Spyder's FAQ section
 Spyder's documentation has a FAQ section, where you might find the answers that you are looking for.
 
 
-.. rst-class:: fasb fa-globe
+.. rst-class:: fabb fa-youtube
 
-Spyder website
-~~~~~~~~~~~~~~
+Spyder's YouTube channel
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Spyder website`_ contains basic information about the IDE and links to many other helpful resources.
+Our `YouTube channel`_ contains helpful videos that will guide you through many of Spyder's features, and provide a starting point for newer users.
 
-.. _Spyder website: https://www.spyder-ide.org/
-
-
-.. rst-class:: fabb fa-google
-
-Spyder Google Group
-~~~~~~~~~~~~~~~~~~~~
-
-Our `Google Group`_ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
-
-.. _Google Group: https://groups.google.com/group/spyderlib
+.. _YouTube channel: https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg
 
 
 .. rst-class:: fabb fa-gitlab
@@ -52,14 +42,24 @@ If you've got a quick question to ask the team and are looking for a quick answe
 .. _gitter room: https://gitter.im/spyder-ide/public
 
 
-.. rst-class:: fabb fa-youtube
+.. rst-class:: fabb fa-google
 
-Spyder's YouTube channel
-~~~~~~~~~~~~~~~~~~~~~~~~
+Spyder Google Group
+~~~~~~~~~~~~~~~~~~~~
 
-Our `YouTube channel`_ contains helpful videos that will guide you through many of Spyder's features, and provide a starting point for newer users.
+Our `Google Group`_ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
 
-.. _YouTube channel: https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg
+.. _Google Group: https://groups.google.com/group/spyderlib
+
+
+.. rst-class:: fasb fa-globe
+
+Spyder website
+~~~~~~~~~~~~~~
+
+The `Spyder website`_ contains basic information about the IDE and links to many other helpful resources.
+
+.. _Spyder website: https://www.spyder-ide.org/
 
 
 .. rst-class:: fabb fa-stack-overflow
