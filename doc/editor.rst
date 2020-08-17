@@ -26,7 +26,7 @@ Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 Defining code cells
 ===================
 
-A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current doc:`ipythonconsole`.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`.
 This is much like a "cell" in MATLAB (except without any need to enable a "cell mode", since in Spyder, cells are detected automatically).
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
