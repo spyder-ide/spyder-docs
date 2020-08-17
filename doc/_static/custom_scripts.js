@@ -55,7 +55,7 @@
             element: "#statusbar-rect",
             popover: {
               title: "Status Bar",
-              description: 'The status bar shows your current Python environment, git branch, memory usage and various attributes of your current file.',
+              description: 'The status bar shows your current Python environment, git branch, memory usage and various attributes of the currently active file.',
               position: "top",
             },
           },
@@ -63,7 +63,7 @@
             element: "#options-menu-rect",
             popover: {
               title: "Options Menu",
-              description: 'You can display the options menu by clicking the hamburger icon at the top right of the pane. It contains useful options and actions relevant to the pane.',
+              description: 'You can display the options menu by clicking the "hamburger" icon at the top right of the pane. It contains useful settings and actions relevant to the pane.',
               position: "right",
             },
           },
@@ -86,8 +86,8 @@
           {
             element: "#console-rect",
             popover: {
-              title: "Ipython Console",
-              description: 'The <a href="ipythonconsole.html">Console</a> allows you to run your code from the Editor or interactively. You can also use it to interact with Spyder’s debugger.',
+              title: "IPython Console",
+              description: 'The <a href="ipythonconsole.html">Console</a> allows you to run your code from the Editor or interactively. You can also use it to control Spyder’s debugger.',
               position: "left",
             },
           },
@@ -95,7 +95,7 @@
             element: "#help-rect",
             popover: {
               title: "Help",
-              description: 'The <a href="help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To use it, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the object field.',
+              description: 'The <a href="help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To trigger Help, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the object field.',
               position: "left",
             },
           },
@@ -127,7 +127,7 @@
             element: "#find-rect",
             popover: {
               title: "Find",
-              description: 'The <a href="findinfiles.html">Find</a> pane allows you to view and navigate through all occurrences of your search text in a directory.',
+              description: 'The <a href="findinfiles.html">Find</a> pane allows you to view and navigate through all occurrences of your search text in a given directory.',
               position: "left",
             },
           },

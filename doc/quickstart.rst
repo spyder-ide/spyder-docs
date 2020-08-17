@@ -17,7 +17,7 @@ Quickstart
       
       <svg class="tour-overlay" viewBox="0 0 1280 720">
         <rect id="introduction-rect" class="highlight-rect tour-default-layout-main" x="5" y="5" width="1270" height="710" />
-        <rect id="toolbar-rect" class="highlight-rect tour-default-layout-main" x="5" y="5" width="1270" height="32"" />
+        <rect id="toolbar-rect" class="highlight-rect tour-default-layout-main" x="5" y="5" width="1270" height="32" />
         <rect id="statusbar-rect" class="highlight-rect tour-default-layout-main" x="5" y="690" width="1270" height="25" /> 
         <rect id="options-menu-rect" class="highlight-rect tour-options-menu" x="610" y="60" width="250" height="410" />
         <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="210" y="240" width="280" height="410" />

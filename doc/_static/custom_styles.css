@@ -92,20 +92,19 @@ div.fa-user-friends::before {
 }
 
 .interactive-tour-container .tour-screenshot {
-   display: none;
-   max-width: 100%;
-   height: auto;
+  display: none;
+  max-width: 100%;
+  height: auto;
 }
 
 .interactive-tour-container img.tour-screenshot-active {
-   display: block !important;
+  display: block !important;
 }
 
 .interactive-tour-container .tour-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  /* opacity: 0; */
 }
 
 .tour-overlay .highlight-rect {
