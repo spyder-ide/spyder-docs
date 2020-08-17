@@ -237,8 +237,8 @@ Troubleshooting
 
 .. dropdown:: Q: I've found a bug or issue with Spyder. What do I do?
 
-   You should first follow the steps in our Troubleshooting guide.
-   If you can't solve your problem, open an issue by following the instructions in our Submit a Report section.
+   You should first follow the steps in our :doc:`troubleshooting guide<first-steps>`.
+   If you can't solve your problem, open an issue by following the instructions in our :doc:`submit-a-report` section.
 
 
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
@@ -246,7 +246,7 @@ Troubleshooting
    First, make sure the error you are seeing is not a bug in your code.
    To confirm this, try running it in any standard Python interpreter.
    If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
-   Otherwise, start at the Basic First Aid section of our troubleshooting guide.
+   Otherwise, start at the :doc:`basic-first-aid` section of our troubleshooting guide.
 
    .. _Stack Overflow: https://stackoverflow.com
 
@@ -256,7 +256,7 @@ Troubleshooting
    If nothing is displayed in the calltip, hover hint or :doc:`help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information, go to the Completion/help not working section in the Common Illnesses page of our troubleshooting guide.
+   For more information, go to the Completion/help not working section in the :doc:`common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
@@ -280,4 +280,4 @@ Troubleshooting
 
       conda install spyder-kernels=<VERSION>
 
-   For more information, go to the Errors starting the kernel section in the Common Illnesses page of our troubleshooting guide.
+   For more information, go to the Errors starting the kernel section in the :doc:`common-illnesses` page of our troubleshooting guide.
