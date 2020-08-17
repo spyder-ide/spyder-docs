@@ -7,8 +7,13 @@ p {
     text-align: center;
 }
 
+/* Fix bold styling for font */
+b, strong {
+  font-weight: bold;
+} 
+
 /* Center all images by default */
-.section > img:not([class]), .section > a > img:not([class]) {
+.section img:not([class]) {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -20,7 +25,7 @@ p {
 }
 
 /* Style for Font Awesome that only styles the icons before elements */
-.fasb::before {
+.fasb::before, .fabb::before  {
   display: inline-block;
   font-family: "Font Awesome 5 Free";
   font-size: 26px;
@@ -30,10 +35,16 @@ p {
   line-height: 1;
   margin-right: 5px;
   vertical-align: middle;
+  color: #36557c;
+}
+
+/* Style for Font Awesome brands */
+.fabb::before {
+  font-family: "Font Awesome 5 Brands";
 }
 
 /* Ensure FA icons applied to section divs display inline */
-div.fasb h3 {
+div.fasb h3, div.fabb h3 {
   display: inline-block;
 }
 
@@ -44,11 +55,15 @@ div.fasb h3 {
 }
 
 /* Adjust vertical positioning of FA icons to be centered */
-.fa-offset-h3 .fasb::before {
+.fa-offset-h3 .fasb::before, .fa-offset-h3 .fabb::before {
   padding-bottom: 0.3em;
 }
 
 /*** Custom colors for specific FA icons in the index page ***/
+
+div.fa-laptop-code::before {
+  color: #4e4e4e;
+}
 
 div.fa-book::before {
   color: #6a3514;

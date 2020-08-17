@@ -4,10 +4,6 @@
 
 
 [![license](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
-[![PyPI status](https://img.shields.io/pypi/status/spyder.svg)](https://github.com/spyder-ide/spyder)
-[![pypi version](https://img.shields.io/pypi/v/spyder.svg)](https://pypi.org/project/spyder)
-[![conda version](https://img.shields.io/conda/vn/conda-forge/spyder.svg)](https://www.anaconda.com/download/)
-[![download count](https://img.shields.io/conda/dn/conda-forge/spyder.svg)](https://www.anaconda.com/download/)
 [![Travis status](https://travis-ci.org/spyder-ide/spyder-docs.svg?branch=master)](https://travis-ci.org/spyder-ide/spyder-docs)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](#backers)
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)

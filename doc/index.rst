@@ -62,7 +62,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
    
     .. div:: align-center
     
-       If you've run into a Spyder problem and need help solving it, take a look at our troubleshooting guide.
+       If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<first-steps>`.
     ---
     .. div:: align-center
 
@@ -142,6 +142,7 @@ Connect with Spyder through our social media channels to stay up to date with ou
     installation
     indexvideos
     indexpanes
+    indextroubleshooting
 ..
     overview
     installation
