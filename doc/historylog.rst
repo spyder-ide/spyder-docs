@@ -1,12 +1,10 @@
-:orphan:
+#######
+History
+#######
 
-###########
-History Log
-###########
+With the **History** pane, you can view an automatically de-duplicated, time-stamped list of every command you enter into any connected :doc:`ipythonconsole`.
 
-With the **History Log** pane, you can view an automatically de-duplicated, time-stamped list of every command you enter into any connected :doc:`ipythonconsole`.
-
-.. image:: images/history_log/history_log_menu.png
+.. image:: images/history/history-menu.png
    :alt: Spyder History Log, displaying a list of previously executed commands
 
 |

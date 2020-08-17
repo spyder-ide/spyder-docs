@@ -5,19 +5,19 @@ Panes in Depth
 .. toctree::
     :maxdepth: 2
     
+    editor
+    ipythonconsole
     variableexplorer
     help
     plots
-    pylint
-    profiler
-    onlinehelp
-    findinfiles
-..
-    editor
-    ipythonconsole
-    debugging
-    profiler
-    projects
     fileexplorer
+    projects
+    findinfiles
     historylog
+    profiler
+    debugging
+    pylint
+    onlinehelp
+
+..
     internalconsole

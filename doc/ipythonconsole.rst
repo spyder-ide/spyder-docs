@@ -1,5 +1,3 @@
-:orphan:
-
 ###############
 IPython Console
 ###############
@@ -9,7 +7,7 @@ Each console is executed in a separate process, allowing you to run scripts, int
 
 .. _IPython: https://ipython.org/
 
-.. image:: images/console/console_standard.png
+.. image:: images/console/console-standard.png
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
 |
@@ -24,7 +22,7 @@ Each console implements a robust two-process IPython session, with a lightweight
 You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus
 External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
-.. image:: images/console/console_menu.png
+.. image:: images/console/console-menu.png
    :alt: Spyder IPython Console as above, with the options menu open
 
 |
@@ -59,7 +57,7 @@ To connect to an external kernel,
 
    The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
 
-.. image:: images/console/console_dialog_connect.png
+.. image:: images/console/console-dialog-connect.png
    :alt: Connect to kernel dialog, requesting path and connection details
 
 |
@@ -78,9 +76,7 @@ Supported features
 
 Any :guilabel:`IPython Console` in Spyder, internally or externally created, supports additional features including:
 
-.. image:: images/console/console_completion.png
-   :align: right
-   :width: 50%
+.. image:: images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
 
 * Automatic code completion
