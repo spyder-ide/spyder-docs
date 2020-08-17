@@ -24,7 +24,9 @@ The :guilabel:`History Log` is stored in the :file:`.spyder-py3` (Python 3) or :
 You might need to show invisible files in order to see it on a non-Windows operating system.
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`ipythonconsole`

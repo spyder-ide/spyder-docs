@@ -110,8 +110,10 @@ UMR is enabled by default, and will do its work automatically without user inter
 If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`debugging`
 * :doc:`editor`

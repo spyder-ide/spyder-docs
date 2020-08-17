@@ -23,8 +23,10 @@ You can use context menus to access a number of functions on a per-file and per-
 |
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`findinfiles`

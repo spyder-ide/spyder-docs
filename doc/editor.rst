@@ -42,8 +42,10 @@ You can separate cells by lines starting with either:
 Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`fileexplorer`
 * :doc:`findinfiles`

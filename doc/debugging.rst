@@ -44,8 +44,10 @@ For a comprehensive but accessible introduction to ``pdb``/``ipdb``, consult Ste
 .. _Debugging in Python: https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`ipythonconsole`

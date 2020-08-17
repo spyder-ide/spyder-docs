@@ -69,8 +69,10 @@ The second option in the dialog below is generally a safe approach.
 |
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`fileexplorer`
