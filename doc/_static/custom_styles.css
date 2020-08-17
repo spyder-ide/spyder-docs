@@ -3,6 +3,10 @@ p {
   text-align: justify;
 }
 
+.card-text {
+    text-align: center;
+}
+
 /* Center all images by default */
 .section > img:not([class]), .section > a > img:not([class]) {
     margin-left: auto;
