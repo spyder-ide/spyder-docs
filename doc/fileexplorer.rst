@@ -14,7 +14,7 @@ The **Files** pane is a built-in filesystem and directory browser allowing you t
 Performing file operations
 ==========================
 
-You can use context menus to access a number of functions on a per-file and per-directory basis, including running scripts, creating, renaming, moving, editing or deleting files, performing basic operations with ``git``, and (on Windows) opening an external file explorer.
+You can use context menus to access a number of functions on a per-file and per-directory basis, including running scripts, creating, renaming, moving, editing or deleting files, performing basic operations with ``git``, and opening an external file explorer.
 
 .. image:: images/files/files-contextmenu-new.png
    :align: center

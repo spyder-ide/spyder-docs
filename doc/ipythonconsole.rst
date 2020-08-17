@@ -17,7 +17,7 @@ Connecting to a console
 
 Spyder can launch new IPython instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
 Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
-You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus.
 External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
 .. image:: images/console/console-menu.png
