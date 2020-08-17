@@ -10,8 +10,6 @@ Each console is executed in a separate process, allowing you to run scripts, int
 .. image:: images/console/console-standard.png
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
-|
-
 
 =======================
 Connecting to a console
@@ -24,8 +22,6 @@ External kernels still support :ref:`many <console-features>` (though not all) o
 
 .. image:: images/console/console-menu.png
    :alt: Spyder IPython Console as above, with the options menu open
-
-|
 
 
 Connect to an external kernel
@@ -59,8 +55,6 @@ To connect to an external kernel,
 
 .. image:: images/console/console-dialog-connect.png
    :alt: Connect to kernel dialog, requesting path and connection details
-
-|
 
 For more technical details about connecting to remote IPython kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
 Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
