@@ -39,7 +39,7 @@
             element: "#introduction-rect",
             popover: {
               title: "Spyder",
-              description: 'Spyder is a powerful scientific IDE for Python. We will guide you through some of its most important features.',
+              description: 'Spyder is a powerful scientific IDE for Python. Here, we will guide you through some of its most important features.',
               position: "right",
             },
           },
@@ -47,7 +47,7 @@
             element: "#toolbar-rect",
             popover: {
               title: "Toolbar",
-              description: 'The toolbar allows you to quickly access some of the most common commands in Spyder.',
+              description: 'The toolbar allows you to quickly access some of the most common commands in Spyder, such as run, save and debug files.',
               position: "bottom",
             },
           },
@@ -63,7 +63,7 @@
             element: "#options-menu-rect",
             popover: {
               title: "Options Menu",
-              description: 'You can display the options menu by clicking the "hamburger" icon at the top right of the pane. It contains useful settings and actions relevant to the pane.',
+              description: 'You can display each pane's options menu by clicking the "hamburger" icon at the top right. It contains useful settings and actions relevant to the pane.',
               position: "right",
             },
           },
@@ -71,7 +71,7 @@
             element: "#context-menu-rect",
             popover: {
               title: "Context Menu",
-              description: 'To display the context menu for a pane, right-click anywhere over it. The menu shows actions relevant to the element you are hovering over.',
+              description: 'To display the context menu for a pane, right-click anywhere over it. The menu shows actions relevant to the element under your cursor.',
               position: "right",
             },
           },
@@ -95,7 +95,7 @@
             element: "#help-rect",
             popover: {
               title: "Help",
-              description: 'The <a href="help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To trigger Help, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the object field.',
+              description: 'The <a href="help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To trigger Help, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the Object field.',
               position: "left",
             },
           },
@@ -103,7 +103,7 @@
             element: "#variable-explorer-rect",
             popover: {
               title: "Variable Explorer",
-              description: 'The <a href="variableexplorer.html">Variable Explorer</a> allows you to browse and interact with the objects generated running your code. Double-clicking a variable will open a specialized viewer, allowing you to inspect its contents.',
+              description: 'The <a href="variableexplorer.html">Variable Explorer</a> allows you to browse and interact with the objects generated when running your code. Double-clicking a variable will open a specialized viewer, allowing you to inspect its contents.',
               position: "left",
             },
           },
@@ -119,7 +119,7 @@
             element: "#files-rect",
             popover: {
               title: "Files",
-              description: 'The <a href="fileexplorer.html">Files</a> pane lets you browse the contents of the directories on your computer, open them in the Editor, and perform a variety of other file operations.',
+              description: 'The <a href="fileexplorer.html">Files</a> pane lets you browse the directories on your computer, open files in the Editor, and perform a variety of other operations.',
               position: "left",
             },
           },
@@ -127,7 +127,7 @@
             element: "#find-rect",
             popover: {
               title: "Find",
-              description: 'The <a href="findinfiles.html">Find</a> pane allows you to view and navigate through all occurrences of your search text in a given directory.',
+              description: 'The <a href="findinfiles.html">Find</a> pane allows you to search for text in a given directory and navigate through all the found occurrences.',
               position: "left",
             },
           },
@@ -135,7 +135,7 @@
             element: "#profiler-rect",
             popover: {
               title: "Profiler",
-              description: 'The <a href="profiler.html">Profiler</a> helps you optimize your code by determining the run time and number of calls for every function and method used in a file. It allows you to save and compare your results between runs.',
+              description: 'The <a href="profiler.html">Profiler</a> helps you optimize your code by determining the run time and number of calls for every function and method used in a file. It also allows you to save and compare your results between runs.',
               position: "left",
             },
           },

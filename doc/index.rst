@@ -139,8 +139,8 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :hidden:
 
     Overview<self>
-    installation
     quickstart
+    installation
     indexvideos
     indexpanes
     indextroubleshooting
