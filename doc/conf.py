@@ -348,9 +348,11 @@ class IframeVideo(Directive):
         'height': directives.nonnegative_int,
         'width': directives.nonnegative_int,
         'align': align,
+        'start': directives.nonnegative_int,
     }
     default_width = 500
     default_height = 281
+    default_start = 0
 
     def run(self):
         self.options['video_id'] = directives.uri(self.arguments[0])
@@ -360,11 +362,14 @@ class IframeVideo(Directive):
             self.options['height'] = self.default_height
         if not self.options.get('align'):
             self.options['align'] = 'left'
+        if not self.options.get('start'):
+            self.options['start'] = self.default_start
         return [nodes.raw('', self.html % self.options, format='html')]
 
 
 class Youtube(IframeVideo):
-    html = ('<iframe src="http://www.youtube.com/embed/%(video_id)s" '
+    html = ('<iframe src="http://www.youtube.com/embed/%(video_id)s'
+            '?start=%(start)s" '
             'width="%(width)u" height="%(height)u" frameborder="0" '
             'webkitAllowFullScreen mozallowfullscreen allowfullscreen '
             'class="align-%(align)s"></iframe>')
