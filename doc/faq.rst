@@ -127,10 +127,13 @@ Using Spyder
 
       conda install <PACKAGE-NAME>
 
-   If your installation is not successful, follow steps 3 through 5 of Part 2 in our `video`_ on solving and avoiding problems with pip, Conda and Conda-Forge.
+   If your installation is not successful, follow steps 3 through 5 of Part 2 in our video on solving and avoiding problems with pip, Conda and Conda-Forge.
 
-   .. _video: https://www.youtube.com/watch?v=Ul79ihg41Rs&t=306s
-
+   .. youtube:: Ul79ihg41Rs
+      :height: 360
+      :width: 640
+      :align: left
+      :start: 306
 
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
 
@@ -250,7 +253,7 @@ Troubleshooting
    If nothing is displayed in the calltip, hover hint or :doc:`help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information, go to the Completion/help not working section in the :doc:`common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
@@ -274,4 +277,4 @@ Troubleshooting
 
       conda install spyder-kernels=<VERSION>
 
-   For more information, go to the Errors starting the kernel section in the :doc:`common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`common-illnesses` page of our troubleshooting guide.
