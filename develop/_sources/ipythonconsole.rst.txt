@@ -1,5 +1,3 @@
-:orphan:
-
 ###############
 IPython Console
 ###############
@@ -9,10 +7,8 @@ Each console is executed in a separate process, allowing you to run scripts, int
 
 .. _IPython: https://ipython.org/
 
-.. image:: images/console/console_standard.png
+.. image:: images/console/console-standard.png
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
-
-|
 
 
 =======================
@@ -21,13 +17,11 @@ Connecting to a console
 
 Spyder can launch new IPython instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
 Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
-You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus.
 External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
 
-.. image:: images/console/console_menu.png
+.. image:: images/console/console-menu.png
    :alt: Spyder IPython Console as above, with the options menu open
-
-|
 
 
 Connect to an external kernel
@@ -59,10 +53,8 @@ To connect to an external kernel,
 
    The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
 
-.. image:: images/console/console_dialog_connect.png
+.. image:: images/console/console-dialog-connect.png
    :alt: Connect to kernel dialog, requesting path and connection details
-
-|
 
 For more technical details about connecting to remote IPython kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
 Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
@@ -78,9 +70,7 @@ Supported features
 
 Any :guilabel:`IPython Console` in Spyder, internally or externally created, supports additional features including:
 
-.. image:: images/console/console_completion.png
-   :align: right
-   :width: 50%
+.. image:: images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
 
 * Automatic code completion
@@ -120,8 +110,10 @@ UMR is enabled by default, and will do its work automatically without user inter
 If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`debugging`
 * :doc:`editor`

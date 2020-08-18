@@ -1,5 +1,3 @@
-:orphan:
-
 ########
 Projects
 ########
@@ -25,19 +23,11 @@ Creating a Project
 
 To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a :guilabel:`Project` with an existing directory or make a new one, and enter the :guilabel:`Project` 's name and path:
 
-|projectsmenu| |newprojectdialog|
-
-.. |projectsmenu|
-   image:: images/menu/menu_projects.png
-   :width: 37%
-   :alt: Closeup of Spyder's Projects menu, containing project-related commands
-
-.. |newprojectdialog|
-   image:: images/dialog/dialog_new_project.png
-   :width: 62%
+.. image:: images/projects/projects-new-project.png
    :alt: New project dialog, with options to set the name, type and location
 
 |
+
 
 
 .. _project-explorer:
@@ -49,19 +39,11 @@ Using the Project Explorer
 Once a :guilabel:`Project` is opened, the :guilabel:`Project Explorer` pane is shown, presenting a tree view of the current :guilabel:`Project` 's files and directories.
 This pane allows you to perform all the same operations as a normal Spyder :doc:`fileexplorer`.
 
-|projectexplorer| |projectcontextmenu|
-
-.. |projectexplorer|
-   image:: images/projects/project_explorer_standard.png
-   :width: 40%
+.. image:: images/projects/projects-standard.png
    :alt: Spyder Project Explorer, displaying a directory tree of project files
 
-.. |projectcontextmenu|
-   image:: images/projects/project_explorer_inset_contextmenu.png
-   :width: 50%
-   :alt: Inset of the context-menu for a directory in project explorer
-
 |
+
 
 
 .. _vcs-section:
@@ -81,14 +63,16 @@ The second option in the dialog below is generally a safe approach.
 
 .. _Git for Windows: https://gitforwindows.org/
 
-.. image:: images/other/git_for_windows_install_path.png
+.. image:: images/other/git-for-windows-install-path.png
    :alt: Git for Windows installer on the PATH options page; 2nd option chosen
 
 |
 
 
+
+==================
 Related components
-~~~~~~~~~~~~~~~~~~
+==================
 
 * :doc:`editor`
 * :doc:`fileexplorer`

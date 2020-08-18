@@ -69,7 +69,7 @@
 
     <div id="doc-content" class="container">
       <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
 <div class="d-none d-xl-block">
   <form class="bd-search d-flex align-items-center" action="search.html" method="get">
     <div class="input-group">
@@ -83,7 +83,7 @@
   </form>
 </div>
 
-<nav class="bd-links d-none d-md-block d-xl-block" id="bd-docs-nav" aria-label="Main navigation">
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
 
   <div class="bd-toc-item active">
   
@@ -140,6 +140,18 @@
                 
                     
                         <li class="nav-item sub-nav-item ">
+                            <a href="editor.html">Editor</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="ipythonconsole.html">IPython Console</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
                             <a href="variableexplorer.html">Variable Explorer</a>
                         </li>
                     
@@ -158,7 +170,25 @@
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="pylint.html">Code Analysis</a>
+                            <a href="fileexplorer.html">Files</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="findinfiles.html">Find</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="historylog.html">History</a>
                         </li>
                     
                   
@@ -170,13 +200,19 @@
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="onlinehelp.html">Online Help</a>
+                            <a href="debugging.html">Debugging</a>
                         </li>
                     
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="findinfiles.html">Find</a>
+                            <a href="pylint.html">Code Analysis</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="onlinehelp.html">Online Help</a>
                         </li>
                     
                   
@@ -240,7 +276,7 @@
 
 </nav>
 
-<nav class="d-block d-sm-block d-md-none" id="bd-docs-nav" aria-label="Main navigation">
+<nav class="d-block d-xl-none" aria-label="Main navigation">
     <div class="bd-toc-item active row">
     
       <h4 id="topics-header">Topics</h4>
@@ -275,6 +311,14 @@
           
             <optgroup label="Panes in Depth">
               
+                <option value="editor.html">
+                  Editor
+                </option>
+              
+                <option value="ipythonconsole.html">
+                  IPython Console
+                </option>
+              
                 <option value="variableexplorer.html">
                   Variable Explorer
                 </option>
@@ -287,20 +331,36 @@
                   Plots
                 </option>
               
-                <option value="pylint.html">
-                  Code Analysis
+                <option value="fileexplorer.html">
+                  Files
+                </option>
+              
+                <option value="projects.html">
+                  Projects
+                </option>
+              
+                <option value="findinfiles.html">
+                  Find
+                </option>
+              
+                <option value="historylog.html">
+                  History
                 </option>
               
                 <option value="profiler.html">
                   Profiler
                 </option>
               
-                <option value="onlinehelp.html">
-                  Online Help
+                <option value="debugging.html">
+                  Debugging
                 </option>
               
-                <option value="findinfiles.html">
-                  Find
+                <option value="pylint.html">
+                  Code Analysis
+                </option>
+              
+                <option value="onlinehelp.html">
+                  Online Help
                 </option>
               
             </optgroup>
@@ -341,7 +401,7 @@
 </nav>
           </div>
 
-          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
   <div class="section" id="overview">
@@ -415,10 +475,10 @@
 <li><p><a class="reference internal" href="pylint.html"><span class="doc">Code Analysis</span></a>: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by <code class="docutils literal notranslate"><span class="pre">pylint</span></code>)</p></li>
 <li><p><a class="reference internal" href="profiler.html"><span class="doc">Profiler</span></a>: Measures the performance impact of every function in a file to identify bottlenecks and aid optimization</p></li>
 <li><p><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a>: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously</p></li>
-<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">File Explorer</span></a>: Integrated filesystem viewing supporting many common operations</p></li>
+<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a>: Integrated filesystem viewing supporting many common operations</p></li>
 <li><p><a class="reference internal" href="findinfiles.html"><span class="doc">Find</span></a>: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations</p></li>
 <li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a>: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own</p></li>
-<li><p><a class="reference internal" href="historylog.html"><span class="doc">History Log</span></a>: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication</p></li>
+<li><p><a class="reference internal" href="historylog.html"><span class="doc">History</span></a>: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication</p></li>
 <li><p><a class="reference internal" href="internalconsole.html"><span class="doc">Internal Console</span></a>: Provides access to viewing, exploring and controlling Spyder’s own operation</p></li>
 <li><p>Preferences:</p>
 <ul>
@@ -453,10 +513,10 @@ Spyder can also be used as a PyQt5 extension library, allowing you to build upon
               
           </main>
 
-          <div class="col-xl-2">
+          <div class="col-md-3 col-xl-2">
               
 
-<div class="row d-none d-xl-block bd-toc">
+<div class="row d-none d-md-block bd-toc">
     
 
 <div class="tocsection editthispage">
@@ -471,7 +531,7 @@ Spyder can also be used as a PyQt5 extension library, allowing you to build upon
     </nav>
 </div>
 
-<div class="row d-block d-md-none bd-toc nav-bd-toc">
+<div class="row d-block d-md-none">
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
         <div class="navbar-toggler-item">
             <a class="navbar-toggler btn-outline-default" href="search.html"><span class="fas fa-search"></span></a>
@@ -509,7 +569,7 @@ Spyder can also be used as a PyQt5 extension library, allowing you to build upon
 
 
 
-<div class="footer">
+<div class="footer pb-5 pb-md-0">
     <div class="container pb-3">
         
         <div class="row justify-content-center">

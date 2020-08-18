@@ -27,6 +27,8 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variable Explorer" href="variableexplorer.html" />
+    <link rel="prev" title="Editor" href="editor.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -69,7 +71,7 @@
 
     <div id="doc-content" class="container">
       <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
 <div class="d-none d-xl-block">
   <form class="bd-search d-flex align-items-center" action="search.html" method="get">
     <div class="input-group">
@@ -83,7 +85,7 @@
   </form>
 </div>
 
-<nav class="bd-links d-none d-md-block d-xl-block" id="bd-docs-nav" aria-label="Main navigation">
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
 
   <div class="bd-toc-item active">
   
@@ -129,15 +131,27 @@
         
       
        
-            <li class="nav-item ">
-              
-              <details>
+            <li class="nav-item active">
+                          
+              <details open>
               
                 <summary>
                     Panes in Depth
                 </summary>
                 <ul class="nav">
                 
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="editor.html">Editor</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">IPython Console</a>
+                        </li>
+                    
+                  
                     
                         <li class="nav-item sub-nav-item ">
                             <a href="variableexplorer.html">Variable Explorer</a>
@@ -158,7 +172,25 @@
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="pylint.html">Code Analysis</a>
+                            <a href="fileexplorer.html">Files</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="findinfiles.html">Find</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="historylog.html">History</a>
                         </li>
                     
                   
@@ -170,13 +202,19 @@
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="onlinehelp.html">Online Help</a>
+                            <a href="debugging.html">Debugging</a>
                         </li>
                     
                   
                     
                         <li class="nav-item sub-nav-item ">
-                            <a href="findinfiles.html">Find</a>
+                            <a href="pylint.html">Code Analysis</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="onlinehelp.html">Online Help</a>
                         </li>
                     
                   
@@ -240,7 +278,7 @@
 
 </nav>
 
-<nav class="d-block d-sm-block d-md-none" id="bd-docs-nav" aria-label="Main navigation">
+<nav class="d-block d-xl-none" aria-label="Main navigation">
     <div class="bd-toc-item active row">
     
       <h4 id="topics-header">Topics</h4>
@@ -275,6 +313,14 @@
           
             <optgroup label="Panes in Depth">
               
+                <option value="editor.html">
+                  Editor
+                </option>
+              
+                <option value="">
+                  IPython Console
+                </option>
+              
                 <option value="variableexplorer.html">
                   Variable Explorer
                 </option>
@@ -287,20 +333,36 @@
                   Plots
                 </option>
               
-                <option value="pylint.html">
-                  Code Analysis
+                <option value="fileexplorer.html">
+                  Files
+                </option>
+              
+                <option value="projects.html">
+                  Projects
+                </option>
+              
+                <option value="findinfiles.html">
+                  Find
+                </option>
+              
+                <option value="historylog.html">
+                  History
                 </option>
               
                 <option value="profiler.html">
                   Profiler
                 </option>
               
-                <option value="onlinehelp.html">
-                  Online Help
+                <option value="debugging.html">
+                  Debugging
                 </option>
               
-                <option value="findinfiles.html">
-                  Find
+                <option value="pylint.html">
+                  Code Analysis
+                </option>
+              
+                <option value="onlinehelp.html">
+                  Online Help
                 </option>
               
             </optgroup>
@@ -341,27 +403,21 @@
 </nav>
           </div>
 
-          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
   <div class="section" id="ipython-console">
 <h1>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>IPython Console</strong> allows you to execute commands and enter, interact with and visualize data inside any number of fully featured <a class="reference external" href="https://ipython.org/">IPython</a> interpreters.
 Each console is executed in a separate process, allowing you to run scripts, interrupt execution and restart or terminate a shell without affecting the others or Spyder itself, and easily test your code in a clean environment without disrupting your primary session.</p>
-<img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="_images/console_standard.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="_images/console-standard.png" />
 <div class="section" id="connecting-to-a-console">
 <h2>Connecting to a console<a class="headerlink" href="#connecting-to-a-console" title="Permalink to this headline">¶</a></h2>
 <p>Spyder can launch new IPython instances itself, through “Open an IPython console” under the <span class="guilabel">Consoles</span> menu, the <span class="guilabel">IPython Console</span> pane menu or its context menu (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd></kbd> by default), to take advantage of the full suite of Spyder’s features.
 Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
-You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the <span class="guilabel">Connect to an existing kernel</span> dialog under the same menus
+You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the <span class="guilabel">Connect to an existing kernel</span> dialog under the same menus.
 External kernels still support <a class="reference internal" href="#console-features"><span class="std std-ref">many</span></a> (though not all) of Spyder’s advanced capabilities.</p>
-<img alt="Spyder IPython Console as above, with the options menu open" src="_images/console_menu.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="Spyder IPython Console as above, with the options menu open" src="_images/console-menu.png" />
 <div class="section" id="connect-to-an-external-kernel">
 <h3>Connect to an external kernel<a class="headerlink" href="#connect-to-an-external-kernel" title="Permalink to this headline">¶</a></h3>
 <div class="alert alert-info">
@@ -389,10 +445,7 @@ Then, enter <em>either</em> <code class="file docutils literal notranslate"><em>
 <p>The port number is the one on which the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is running, typically 22 unless you or your administrator has configured it otherwise.</p>
 </li>
 </ol>
-<img alt="Connect to kernel dialog, requesting path and connection details" src="_images/console_dialog_connect.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<img alt="Connect to kernel dialog, requesting path and connection details" src="_images/console-dialog-connect.png" />
 <p>For more technical details about connecting to remote IPython kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.
 Just remember to enter the appropriate details into Spyder’s <span class="guilabel">Connect to an existing kernel</span> dialog instead of launching a new frontend on the client with <code class="docutils literal notranslate"><span class="pre">--existing</span></code>.</p>
 </div>
@@ -400,7 +453,7 @@ Just remember to enter the appropriate details into Spyder’s <span class="guil
 <div class="section" id="supported-features">
 <span id="console-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
 <p>Any <span class="guilabel">IPython Console</span> in Spyder, internally or externally created, supports additional features including:</p>
-<a class="reference internal image-reference" href="_images/console_completion.png"><img alt="Spyder IPython Console, with a popup list of code completion guesses" class="align-right" src="_images/console_completion.png" style="width: 50%;" /></a>
+<img alt="Spyder IPython Console, with a popup list of code completion guesses" src="_images/console-completion.png" />
 <ul class="simple">
 <li><p>Automatic code completion</p></li>
 <li><p>Real-time function calltips</p></li>
@@ -428,16 +481,16 @@ With UMR enabled, you can test complex applications within the same IPython inte
 Or, if you’re analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.</p>
 <p>UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it activates.
 If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
+</div>
 <div class="section" id="related-components">
-<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a></p></li>
 <li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
 <li><p><a class="reference internal" href="help.html"><span class="doc">Help</span></a></p></li>
-<li><p><a class="reference internal" href="historylog.html"><span class="doc">History Log</span></a></p></li>
+<li><p><a class="reference internal" href="historylog.html"><span class="doc">History</span></a></p></li>
 <li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a></p></li>
 </ul>
-</div>
 </div>
 </div>
 
@@ -446,15 +499,17 @@ If desired, you can turn it and the message on or off, and prevent specific modu
               
               <div class='prev-next-bottom'>
                 
+    <a class='left-prev btn btn-outline-danger' id="prev-link" href="editor.html" title="previous page">Editor</a>
+    <a class='right-next btn btn-outline-danger' id="next-link" href="variableexplorer.html" title="next page">Variable Explorer</a>
 
               </div>
               
           </main>
 
-          <div class="col-xl-2">
+          <div class="col-md-3 col-xl-2">
               
 
-<div class="row d-none d-xl-block bd-toc">
+<div class="row d-none d-md-block bd-toc">
     
 
 <div class="tocsection editthispage">
@@ -482,20 +537,18 @@ If desired, you can turn it and the message on or off, and prevent specific modu
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#using-umr-to-reload-changed-modules" class="nav-link">Using UMR to reload changed modules</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#related-components" class="nav-link">Related components</a>
+                <a href="#using-umr-to-reload-changed-modules" class="nav-link">Using UMR to reload changed modules</a>
             </li>
         
-                </ul>
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#related-components" class="nav-link">Related components</a>
             </li>
         
         </ul>
     </nav>
 </div>
 
-<div class="row d-block d-md-none bd-toc nav-bd-toc">
+<div class="row d-block d-md-none">
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
         <div class="navbar-toggler-item">
             <a class="navbar-toggler btn-outline-default" href="search.html"><span class="fas fa-search"></span></a>
@@ -528,13 +581,11 @@ If desired, you can turn it and the message on or off, and prevent specific modu
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#using-umr-to-reload-changed-modules" class="nav-link">Using UMR to reload changed modules</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#related-components" class="nav-link">Related components</a>
+                    <a href="#using-umr-to-reload-changed-modules" class="nav-link">Using UMR to reload changed modules</a>
                 </li>
             
-                    </ul>
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#related-components" class="nav-link">Related components</a>
                 </li>
             
             </ul>
@@ -563,7 +614,7 @@ If desired, you can turn it and the message on or off, and prevent specific modu
 
 
 
-<div class="footer">
+<div class="footer pb-5 pb-md-0">
     <div class="container pb-3">
         
         <div class="row justify-content-center">
