@@ -28,8 +28,6 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 .. image:: images/installation/installation-spyder-binder.png
    :alt: Spyder running on Binder
 
-|
-
 
 
 ==============

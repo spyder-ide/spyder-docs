@@ -7,7 +7,6 @@ The **Files** pane is a built-in filesystem and directory browser allowing you t
 .. image:: images/files/files-standard.png
    :alt: Spyder File Explorer panel, showing a tree view of files and metadata
 
-|
 
 
 ==========================
@@ -19,8 +18,6 @@ You can use context menus to access a number of functions on a per-file and per-
 .. image:: images/files/files-contextmenu-new.png
    :align: center
    :alt: File Explorer context menu, with common file manipulation tasks
-
-|
 
 
 

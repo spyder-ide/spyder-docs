@@ -173,6 +173,7 @@ html_theme_options = {
             "name": "Google Groups",
         },
     ],
+    "page_toc_limit": 1,
 }
 html_context = {
     "github_user": "spyder-ide",

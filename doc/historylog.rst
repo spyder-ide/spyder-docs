@@ -7,7 +7,6 @@ With the **History** pane, you can view an automatically de-duplicated, time-sta
 .. image:: images/history/history-menu.png
    :alt: Spyder History Log, displaying a list of previously executed commands
 
-|
 
 
 =====================

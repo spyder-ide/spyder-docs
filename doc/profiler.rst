@@ -8,8 +8,6 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 .. image:: images/profiler/profiler-standard.png
    :alt: Spyder Profiler pane, displaying a list of functions and their execution time
 
-|
-
 
 
 ====================
@@ -53,8 +51,6 @@ To remove the loaded data, click the :guilabel:`Clear comparison` button.
 .. image:: images/profiler/profiler-save-load.gif
    :alt: Spyder Profiler pane, showing running profiler from menu bar
 
-|
-
 
 
 ========================
@@ -95,8 +91,6 @@ For more information, go to the `spyder-memory-profiler git repository`_.
 
 .. image:: images/profiler/profiler-memory-profiler.png
    :alt: Spyder Profiler pane, displaying a list of functions and their execution time
-
-|
 
 
 

@@ -18,8 +18,6 @@ To modify a scalar variable, like an number, string or boolean, simply double cl
 .. image:: images/variable_explorer/variable-explorer-modifying.gif
    :alt: Spyder Variable Explorer modifying value of a variable
 
-|
-
 
 
 ==============
@@ -98,8 +96,6 @@ Additionally, the Variable Explorer in Spyder 4 has MultiIndex support in its Da
 .. image:: images/variable_explorer/variable-explorer-multi-index.png
    :alt: Dataframe editor showing multi-index support
 
-|
-
 
 
 ============
@@ -116,8 +112,6 @@ It also allows you to display the min and max of Numpy arrays instead of a previ
 .. image:: images/variable_explorer/variable-explorer-array-min-max.png
    :width: 500
    :alt: Variable Explorer showing max and min values of numpy array
-
-|
 
 
 
@@ -184,8 +178,6 @@ Finally, we added a context-menu action to open any object using the new Object 
 
 .. image:: images/variable_explorer/variable-explorer-object-explorer.png
    :alt: Object explorer showing dataframe
-
-|
 
 
 
