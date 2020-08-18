@@ -11,8 +11,6 @@ Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which
 .. image:: images/pylint/code-analysis-standard.png
    :alt: Spyder Pylint pane, showing numerous issues discovered in a file
 
-|
-
 
 
 =======================
@@ -45,8 +43,6 @@ Finally, you can click the dropdown or press the dropdown arrow in the filename 
 .. image:: images/pylint/code-analysis-history.png
    :alt: Spyder Pylint pane, showing history
 
-|
-
 
 
 ============
@@ -62,8 +58,6 @@ You can also expand or collapse one or all the sections in the pane by using the
 
 .. image:: images/pylint/code-analysis-expand-collapse.gif
    :alt: Spyder Pylint pane, expanding and collapsing sections
-
-|
 
 
 
@@ -89,8 +83,6 @@ For more details on configuring Pylint, see the `Pylint documentation`_.
 
 .. image:: images/pylint/code-analysis-pylint-file.gif
    :alt: Spyder Pylint pane, disabling a message globally in the .pylintrc
-
-|
 
 
 

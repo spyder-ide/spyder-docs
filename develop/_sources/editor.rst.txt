@@ -18,8 +18,6 @@ Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 .. image:: images/editor/editor-inset-code-analysis.png
    :alt: A snippit of code in the Spyder Editor, showing code style warnings
 
-|
-
 
 
 ===================
