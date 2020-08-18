@@ -26,8 +26,6 @@ To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the 
 .. image:: images/projects/projects-new-project.png
    :alt: New project dialog, with options to set the name, type and location
 
-|
-
 
 
 .. _project-explorer:
@@ -41,8 +39,6 @@ This pane allows you to perform all the same operations as a normal Spyder :doc:
 
 .. image:: images/projects/projects-standard.png
    :alt: Spyder Project Explorer, displaying a directory tree of project files
-
-|
 
 
 
@@ -65,8 +61,6 @@ The second option in the dialog below is generally a safe approach.
 
 .. image:: images/other/git-for-windows-install-path.png
    :alt: Git for Windows installer on the PATH options page; 2nd option chosen
-
-|
 
 
 

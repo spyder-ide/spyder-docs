@@ -13,8 +13,6 @@ The figures shown in the Plots pane are those associated with the currently acti
 .. image:: images/plots/plots-switch.gif
    :alt: Spyder's plots pane and console showing switching consoles
 
-|
-
 
 
 ============
@@ -52,8 +50,6 @@ Disabling it will display plots at their native size, and allow you use the zoom
 .. image:: images/plots/plots-zoom.gif
    :alt: Spyder main window showing plots zoom
 
-|
-
 
 
 ===============
@@ -81,8 +77,6 @@ Finally, you can use the "remove" and "remove all" buttons in the toolbar to cle
 
 .. image:: images/plots/plots-remove.gif
    :alt: Spyder plots pane showing pasting plot in LibreOffice.
-
-|
 
 
 

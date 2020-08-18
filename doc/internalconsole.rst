@@ -9,7 +9,6 @@ You can use the **Internal Console** to control and debug Spyder itself, or as a
 .. image:: images/internal_console/internal_console_standard.png
    :alt: Spyder Internal Console, with error messages and command output shown
 
-|
 
 
 ==================
@@ -23,8 +22,6 @@ See the :guilabel:`Help` dialog in the context menu for more details on these.
 
 .. image:: images/internal_console/internal_console_contextmenu_settings.png
    :alt: Spyder Internal Console, showing context menu with settings options
-
-|
 
 By default, all the commands entered in the :guilabel:`Internal Console` are executed in the same process as Spyder's.
 However, you can run the :guilabel:`Internal Console` in a separate thread by passing ``--multithread`` as one of Spyder's :doc:`options` on launch.

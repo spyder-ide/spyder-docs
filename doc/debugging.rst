@@ -8,7 +8,6 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 .. image:: images/debugging/debugging-console.png
    :alt: A Spyder IPython console window, showing the ipdb debugger in action
 
-|
 
 
 ===================

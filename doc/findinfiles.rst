@@ -7,7 +7,6 @@ The **Find** pane allows you to search the content of text files in a user-defin
 .. image:: images/find_in_files/find-in-files-inprogress.png
    :alt: Spyder Find in Files panel, with search results shown per-file
 
-|
 
 
 ===================
@@ -28,8 +27,6 @@ To erase all of these saved directories, select the :guilabel:`Clear the list` o
 
 .. image:: images/find_in_files/find-in-files-directory.gif
    :alt: Spyder Find pane showing chosing new directory and directory stored in the list
-
-|
 
 
 
@@ -60,8 +57,6 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
 
 .. image:: images/find_in_files/find-in-files-max-results.png
    :alt: Spyder Find pane showing window with maximum results dialog open
-
-|
 
 
 

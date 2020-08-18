@@ -66,8 +66,6 @@ If this fixes the issue, the problem was likely due to another package installed
       :width: 640
       :align: left
 
-|
-
 
 
 .. _troubleshooting-reinstalling-spyder-ref:

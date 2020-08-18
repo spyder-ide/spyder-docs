@@ -82,7 +82,6 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 - Use PNG for all images, except photographs over 100-200 KB as a PNG (use moderately compressed JPEG); avoid sizes above 2000 x 2000 or below 1000 x 1000 if full width, or half of each if half width
 - GIFs should be compressed to 5 frames/s, should target a length of around 5-10 seconds, and should be either 690 px or 500 px, depending on the subject
 - Always include alt text describing the content of the image
-- Add a break element (``|``) after an image/GIF if it is followed by a new section
 
 
 ## Writing (All Languages)

@@ -14,8 +14,6 @@ You can also access Spyder's tutorial from here, which will guide you through so
    :width: 500
    :alt: Spyder Help pane showing the link for the Spyder's tutorial
 
-|
-
 
 
 ============
@@ -39,8 +37,6 @@ If enabled, simply typing a left parenthesis (``(``) after a function or method 
 .. image:: images/help/help-automatic-connections.gif
    :alt: Spyder console and help pane showing automatic help with parenthesis
 
-|
-
 
 
 ========================
@@ -55,8 +51,6 @@ The latter can be useful when docstrings are not available or insufficient to do
 .. image:: images/help/help-modes.gif
    :alt: Spyder help pane showing different modes
 
-|
-
 
 
 ========================
@@ -68,8 +62,6 @@ Clicking the hover popup will open the full documentation in the :guilabel:`Help
 
 .. image:: images/help/help-hover.png
    :alt: Editor pane showing help of an object from hover
-
-|
 
 
 
