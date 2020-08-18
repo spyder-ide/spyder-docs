@@ -70,7 +70,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
    
     .. div:: align-center
     
-       If you have a question about Spyder, visit the frequently asked questions section.
+       If you have a question about Spyder, visit the :doc:`faq` section.
 
 
 
@@ -143,6 +143,8 @@ Connect with Spyder through our social media channels to stay up to date with ou
     indexvideos
     indexpanes
     indextroubleshooting
+    FAQ<faq>
+
 ..
     overview
     installation

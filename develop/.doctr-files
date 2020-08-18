@@ -30,6 +30,18 @@ develop/_images/editor-outline-standard.png
 develop/_images/editor-standard.png
 develop/_images/emergency-cpr-python-start.gif
 develop/_images/emergency-cpr-single-instance.png
+develop/_images/faq-cells.png
+develop/_images/faq-change-language.png
+develop/_images/faq-conda-info.png
+develop/_images/faq-highlighting-theme.png
+develop/_images/faq-launch-anaconda.png
+develop/_images/faq-navigator-install.png
+develop/_images/faq-python-interpreter.png
+develop/_images/faq-remove-variables.png
+develop/_images/faq-reset-spyder.png
+develop/_images/faq-run-environment.png
+develop/_images/faq-run-options.png
+develop/_images/faq-windows-launch.png
 develop/_images/files-contextmenu-new.png
 develop/_images/files-standard.png
 develop/_images/find-in-files-case.gif
@@ -122,6 +134,7 @@ develop/_sources/common-illnesses.rst.txt
 develop/_sources/debugging.rst.txt
 develop/_sources/editor.rst.txt
 develop/_sources/emergency-cpr.rst.txt
+develop/_sources/faq.rst.txt
 develop/_sources/fileexplorer.rst.txt
 develop/_sources/findinfiles.rst.txt
 develop/_sources/first-steps-with-spyder.rst.txt
@@ -186,6 +199,7 @@ develop/common-illnesses.html
 develop/debugging.html
 develop/editor.html
 develop/emergency-cpr.html
+develop/faq.html
 develop/fileexplorer.html
 develop/findinfiles.html
 develop/first-steps-with-spyder.html

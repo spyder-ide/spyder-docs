@@ -67,3 +67,18 @@ div.fa-globe-americas::before {
 div.fa-user-friends::before {
   color: #f6951f;
 }
+
+/*** Changes to the FAQ page ***/
+
+.dropdown .card-header {
+  text-transform: none;
+  font-size: 0.95rem;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.dropdown .card-header::first-letter {
+  font-weight: bold;
+}

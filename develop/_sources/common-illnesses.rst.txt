@@ -6,6 +6,8 @@ Beyond the general troubleshooting steps, some frequently-reported problems requ
 
 
 
+.. _starting-kernel-problems-ref:
+
 ==========================
 Errors starting the kernel
 ==========================
@@ -89,6 +91,8 @@ To check the names of these modules, see the list in the `Python standard librar
 .. _Python standard library documentation: https://docs.python.org/3/library/
 
 
+
+.. _code-completion-problems-ref:
 
 ===========================
 Completion/help not working
