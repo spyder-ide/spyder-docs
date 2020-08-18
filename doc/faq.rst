@@ -76,9 +76,9 @@ Running Spyder
 
 .. dropdown:: Q: What are the system requirements for Spyder? How resource-intensive is it?
 
-   Spyder works on modern versions of Windows, macOS and Linux (see table below for recommended versions) via Anaconda, as well as other methods.
+   Spyder works on modern versions of Windows, macOS and Linux (see the table below for recommended versions) via Anaconda, as well as other methods.
    It typically uses relatively minimal CPU when idle, and 0.5 GB - 1 GB of RAM, depending on how long you've been using it and how many files, projects, panes and consoles you have open.
-   It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is _strongly_ recommended for best performance when running other applications.
+   It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is *strongly* recommended for best performance when running other applications.
    However, the code you run, such as scientific computation and deep learning models, may require additional resources beyond this baseline for Spyder itself.
 
    .. table::
@@ -134,7 +134,7 @@ Using Spyder
 
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
 
-   To work with an existing environment in Spyder, change Spyder’s default python interpreter.
+   To work with an existing environment in Spyder, change Spyder’s default Python interpreter.
    To do so, first go to your terminal (or Anaconda Prompt on Windows), type ``conda info --envs``, and copy the path from the environment you created to your clipboard.
 
    .. image:: images/faq/faq-conda-info.png
@@ -187,23 +187,17 @@ Using Spyder
    Replace ``<PLUGIN>`` with the name of the plugin you want to use.
    For more information on a specific plugin, go to the its repository:
 
-   * `spyder-reports`_
    * `spyder-unittest`_
    * `spyder-terminal`_
    * `spyder-notebook`_
    * `spyder-memory-profiler`_
    * `spyder-line-profiler`_
-   * `spyder-vim`_
-   * `spyder-autopep8`_
 
-   .. _spyder-reports: https://github.com/spyder-ide/spyder-reports
    .. _spyder-unittest: https://github.com/spyder-ide/spyder-unittest
    .. _spyder-terminal: https://github.com/spyder-ide/spyder-terminal
    .. _spyder-notebook: https://github.com/spyder-ide/spyder-notebook
    .. _spyder-memory-profiler: https://github.com/spyder-ide/spyder-memory-profiler
    .. _spyder-line-profiler: https://github.com/spyder-ide/spyder-line-profiler
-   .. _spyder-vim: https://github.com/spyder-ide/spyder-vim
-   .. _spyder-autopep8: https://github.com/spyder-ide/spyder-autopep8
 
 
 .. dropdown:: Q: How do I clear all variables before executing my code?
@@ -222,7 +216,7 @@ Using Spyder
       :alt: Spyder showing cell generation.
 
 
-.. dropdown:: Q: How do I change the syntax highlighting theme?
+.. dropdown:: Q: How do I change the syntax highlighting theme in the Editor?
 
    Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
 
@@ -271,7 +265,7 @@ Troubleshooting
        4.0.0-4.0.1      1.8.1
        4.1.0-4.1.2      1.9.0
        4.1.3            1.9.1
-       4.1.4            1.9.2
+       4.1.4            1.9.3
        ==============   ==============
 
    To install the right version, type the following on the command line (or Anaconda Prompt on Windows)
