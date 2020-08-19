@@ -140,3 +140,10 @@ div#driver-popover-item .tour-arrow {
     pointer-events: none;
     vertical-align: middle;
 }
+
+/* Style tour progress indicator */
+div#driver-popover-item .tour-progress-indicator {
+    float: right;
+    font-style: italic;
+    font-weight: normal;
+}
