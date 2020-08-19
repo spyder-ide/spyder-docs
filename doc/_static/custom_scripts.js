@@ -63,7 +63,7 @@
             element: "#options-menu-rect",
             popover: {
               title: "Options Menu",
-              description: 'You can display each pane's options menu by clicking the "hamburger" icon at the top right. It contains useful settings and actions relevant to the pane.',
+              description: 'You can display each pane\'s options menu by clicking the "hamburger" icon at the top right. It contains useful settings and actions relevant to the pane.',
               position: "right",
             },
           },
