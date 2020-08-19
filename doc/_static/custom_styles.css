@@ -122,3 +122,21 @@ div#driver-highlighted-element-stage {
 rect.driver-highlighted-element {
   opacity: 0.5 !important;
 }
+
+/*** Fix tour navigation buttons' margins, arrows and alignment ***/
+
+div#driver-popover-item .driver-popover-footer {
+  margin-top: 1em;
+}
+
+div#driver-popover-item .driver-navigation-btns {
+  line-height: 1rem;
+}
+
+div#driver-popover-item .tour-arrow {
+    font-size: 2em;
+    line-height: 0;
+    padding-bottom: 0.05em;
+    pointer-events: none;
+    vertical-align: middle;
+}
