@@ -8,7 +8,7 @@
     /* Top-level variables */
 
     // Interactive tour driver options
-    var driverOptions = {
+    var quickstartDriverOptions = {
         animate: false,
         opacity: 0.1,
         padding: 0,
@@ -158,8 +158,7 @@
 
     /* Main functions */
 
-    driverOptions.onHighlightStarted = setActiveTourImage;
-    var driver = new Driver(driverOptions);
+    var driver = null;
 
     // Event handler to start tour
     function startTour() {
@@ -167,17 +166,30 @@
     };
 
     // Interactive tour of Spyder for Quickstart using Driver
-    function setupTourDriver(driverObj, tourSteps) {
-        addProgressSpan(tourSteps)
+    function setupTourDriver(driverOptions, tourSteps) {
+        driverOptions.onHighlightStarted = setActiveTourImage;
+        driver = new Driver(driverOptions);
+
+        addProgressSpan(tourSteps);
         driver.defineSteps(tourSteps);
         document.getElementById('quickstart-tour-start').onclick = startTour;
+        return driver;
     };
 
-    /* Fire when document ready */
+    /* Fire events */
 
+    // On initial DOM load, set up the tour so its ready
     document.addEventListener('DOMContentLoaded', function() {
-        setupTourDriver(driver, quickstartTourSteps);
-        startTour();
+        if (document.getElementsByClassName("interactive-tour-container").length > 0) {
+            driver = setupTourDriver(quickstartDriverOptions, quickstartTourSteps);
+        };
     });
+
+    // Once everything is loaded, start the tour
+    window.onload = function () {
+        if (document.getElementsByClassName("interactive-tour-container").length > 0) {
+            startTour();
+        };
+    };
 
 }());
