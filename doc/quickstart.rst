@@ -2,9 +2,10 @@
 Quickstart
 ##########
 
-Welcome to our Quickstart! Here you will find a tour that will guide you through Spyder's interface. 
-You will get familiar with some of the elements found in the IDE, especially those that we will be mentioning through all our docs. 
-Finally, you will walk through some of the panes and its main functionality.
+Welcome to our Quickstart!
+Here you will find an interactive tour that will guide you through Spyder's interface. 
+You will get familiar with the most important parts of the IDE, especially those we will be mentioning throughout our docs. 
+Finally, you will get to walk through some of Spyder's key panes and functionality.
 
 .. raw:: html
 
