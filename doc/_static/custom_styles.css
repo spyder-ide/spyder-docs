@@ -112,7 +112,7 @@ div.fa-user-friends::before {
   opacity: 0;
   stroke: #ee1c24;
   stroke-linejoin: round;
-  stroke-width: 10;
+  stroke-width: 5;
 }
 
 div#driver-highlighted-element-stage {
@@ -120,7 +120,7 @@ div#driver-highlighted-element-stage {
 }
 
 rect.driver-highlighted-element {
-  opacity: 0.5 !important;
+  opacity: 1 !important;
 }
 
 /*** Fix tour navigation buttons' margins, arrows and alignment ***/
@@ -136,7 +136,7 @@ div#driver-popover-item .driver-navigation-btns {
 div#driver-popover-item .tour-arrow {
     font-size: 2em;
     line-height: 0;
-    padding-bottom: 0.05em;
+    font-weight: bold;
     pointer-events: none;
     vertical-align: middle;
 }
@@ -144,6 +144,6 @@ div#driver-popover-item .tour-arrow {
 /* Style tour progress indicator */
 div#driver-popover-item .tour-progress-indicator {
     float: right;
-    font-style: italic;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 0.6em;
 }
