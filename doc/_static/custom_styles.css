@@ -160,3 +160,48 @@ div#driver-popover-item .tour-progress-indicator {
 a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
+
+.dropdown-videos {
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  border-radius: unset;
+}
+
+.dropdown-videos .summary-content {
+  background-color: #dce2e8;
+}
+
+.dropdown-videos .card-header {
+  background-color: white;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  color: black;
+  font-weight: bold;
+  background-color: #8b9399;
+  font-size: 0.8em;
+  border-radius: unset;
+}
+
+.dropdown-videos .card-header::first-letter {
+  font-weight: unset;
+}
+
+.dropdown-videos .card-header::first-child {
+  border-radius: unset;
+}
+
+details.dropdown-videos .summary-up, details.dropdown-videos .summary-down {
+  top: 0.1em !important;
+}
+
+div.scroll { 
+  margin:1px, 1px; 
+  height: 250px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  text-align:justify; 
+  font-size: 0.8em;
+  color: #2c2e30;
+} 
