@@ -6,11 +6,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview &#8212; Spyder 4 documentation</title>
+    <title>Quickstart &#8212; Spyder 4 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
     <link href="_static/css/theme.css" rel="stylesheet">
@@ -24,9 +25,13 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
+    <script src="_static/driver.min.js"></script>
+    <script src="_static/custom_scripts.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation Guide" href="installation.html" />
+    <link rel="prev" title="Welcome to Spyder’s Documentation" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -91,7 +96,13 @@
       
        
             <li class="nav-item ">
-              <a class="nav-link" href="index.html">Overview</a>
+              <a class="nav-link" href="index.html">Welcome</a>
+            </li>
+        
+      
+       
+            <li class="nav-item active">
+              <a class="nav-link" href="">Quickstart</a>
             </li>
         
       
@@ -290,7 +301,13 @@
         
           
               <option value="index.html">
-              Overview
+              Welcome
+              </option>
+          
+        
+          
+              <option value="">
+              Quickstart
               </option>
           
         
@@ -416,110 +433,49 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<p>Spyder, the Scientific Python Development Environment, includes the following key features:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>:</p>
-<ul>
-<li><p>Customizable syntax highlighting themes</p></li>
-<li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> breakpoints and conditional breakpoints (through <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> integration)</p></li>
-<li><p>Interactive execution: Run line/selection, run cell, run file, re-run and debug</p></li>
-<li><p>Run configuration settings:</p>
-<ul>
-<li><p>Working directory selection</p></li>
-<li><p>Command line options</p></li>
-<li><p>Run in Current/dedicated/external console choice</p></li>
-<li><p>Automatically clear variables or enter debugging</p></li>
-</ul>
-</li>
-<li><p><span class="guilabel">Outline Explorer</span>: Navigate cells, functions, classes, blocks, and more</p></li>
-<li><p>Real-time code introspection features (powered by <code class="docutils literal notranslate"><span class="pre">rope</span></code> and <code class="docutils literal notranslate"><span class="pre">jedi</span></code>):</p>
-<ul>
-<li><p>On-demand (<kbd class="kbd docutils literal notranslate">Tab</kbd>) and “dot” automatic code completion</p></li>
-<li><p>Automatic popup calltips showing function signatures</p></li>
-<li><p>Go-to-definition for any symbol: Functions, classes, attributes, etc. (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-Click or <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> by default)</p></li>
-</ul>
-</li>
-<li><p>Occurrence highlighting: Select or double-click any word to show all other instances throughout the current document</p></li>
-<li><p>On-the-fly automatic formatters (optional):</p>
-<ul>
-<li><p>Automatic insertion of closing quotes parentheses, braces and brackets</p></li>
-<li><p>Automatic indentation after ‘else’, ‘elif’, ‘finally’, etc.</p></li>
-<li><p>Smart auto-indentation based on code structure</p></li>
-<li><p>Automatic insertion of colons after for, if, def, etc.</p></li>
-<li><p>Automatically fix mixed indentation, EOL characters and trailing spaces</p></li>
-</ul>
-</li>
-<li><p>Real-time code analysis:
-* Errors/warnings/problems (powered by <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code>)
-* PEP 8 and code style (powered by <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>)
-* Code annotation parsing and “Todo lists” (<code class="docutils literal notranslate"><span class="pre">TODO</span></code>, <code class="docutils literal notranslate"><span class="pre">FIXME</span></code>, <code class="docutils literal notranslate"><span class="pre">XXX</span></code>, etc.)</p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>:</p>
-<ul>
-<li><p>Any number of individual consoles, each executed in a separate, isolated processes</p></li>
-<li><p>Each console uses the full IPython kernel as a backend with a light GUI frontend</p></li>
-<li><p>Supports all of the powerful IPython magic commands and functionality</p></li>
-<li><p>Automatic code completion and calltips, and automatic link to <a class="reference internal" href="help.html"><span class="doc">Help</span></a></p></li>
-<li><p>Range of code run options and interactivity</p></li>
-<li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugging</span></a> integration with enhanced <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> debugger and the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p>Inline display of Matplotlib graphics (optional)</p></li>
-<li><p>The <span class="guilabel">User Module Reloader</span>, automatically re-importing modified source files</p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a>:</p>
-<ul>
-<li><p>Can list all global variables, functions, classes, and other objects, or filter them by several criteria</p></li>
-<li><p>GUI-based editors for numerous data types (numeric, strings, collections, NumPy arrays, Pandas DataFrames, dates/times, images, and more)</p></li>
-<li><p>Import/export data or an entire session from/to many formats (text, csv, NumPy files, MATLAB files)</p></li>
-<li><p>Interactive data visualization options (plot, histogram, image…) using Matplotlib</p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="help.html"><span class="doc">Help</span></a>:</p>
-<ul>
-<li><p>Provides documentation or source code for any Python object (class, function, module…)</p></li>
-<li><p>Can be triggered manually, on demand (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> by default) or automatically on typing a left parenthesis after a function name (optional)</p></li>
-<li><p>Real-time rendering and rich HTML display of the popular <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> docstring format (powered by <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>)</p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="pylint.html"><span class="doc">Code Analysis</span></a>: Detects an array of style issues, bad practices, potential bugs, and other problems with your code (powered by <code class="docutils literal notranslate"><span class="pre">pylint</span></code>)</p></li>
-<li><p><a class="reference internal" href="profiler.html"><span class="doc">Profiler</span></a>: Measures the performance impact of every function in a file to identify bottlenecks and aid optimization</p></li>
-<li><p><a class="reference internal" href="projects.html"><span class="doc">Projects</span></a>: Allows for easy saving and restoring of settings, sessions and setup for working on multiple development efforts simultaneously</p></li>
-<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a>: Integrated filesystem viewing supporting many common operations</p></li>
-<li><p><a class="reference internal" href="findinfiles.html"><span class="doc">Find</span></a>: Find string occurrences in a file, directory, or entire project with full support for powerful regular expressions and excluded locations</p></li>
-<li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a>: Search and browse rich HTML documentation on installed Python modules, packages, functions, classes, builtins and more, including your own</p></li>
-<li><p><a class="reference internal" href="historylog.html"><span class="doc">History</span></a>: Chronologically records every command entered into any Spyder console with timestamps, syntax highlighting and de-duplication</p></li>
-<li><p><a class="reference internal" href="internalconsole.html"><span class="doc">Internal Console</span></a>: Provides access to viewing, exploring and controlling Spyder’s own operation</p></li>
-<li><p>Preferences:</p>
-<ul>
-<li><p>Fully customizable keyboard shortcuts editor</p></li>
-<li><p>Selection of a custom Python interpreter to use for consoles</p></li>
-<li><p>Choice of 10 built-in syntax coloring theme, or create your own</p></li>
-<li><p>Toggle automatic editor and console introspection, analysis and helper features</p></li>
-<li><p>Options to use a variety of graphics backends and display preferences</p></li>
-<li><p>Much more…</p></li>
-</ul>
-</li>
-<li><p>General Features:</p>
-<ul>
-<li><p>MATLAB-like <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> management dialog</p></li>
-<li><p>User environment variables viewer/editor (Windows-only)</p></li>
-<li><p>Handy links to useful resources and documentation (Python, Matplotlib, NumPy, Scipy, Qt, IPython, etc.)</p></li>
-<li><p>Interactive tour, tutorial and shortcut cheat sheet for new users</p></li>
-</ul>
-</li>
-</ul>
-<p>Beyond its many built-in features, Spyder’s abilities can be extended even further via its plugin system and API.
-Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.</p>
+  <div class="section" id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to our Quickstart!
+Here you will find an interactive tour that will guide you through Spyder’s interface.
+You’ll get familiar with the most important parts of the IDE, especially those we’ll be mentioning throughout our docs.
+Finally, you’ll get to walk through some of Spyder’s key panes and functionality.</p>
+<div class="interactive-tour-container">
+   <img id="tour-default-layout-main" class="tour-screenshot tour-screenshot-active" src="_static/tour/default-layout-main.png">
+   <img id="tour-options-menu" class="tour-screenshot" src="_static/tour/options-menu.png">
+   <img id="tour-context-menu" class="tour-screenshot" src="_static/tour/context-menu.png">
+   <img id="tour-variable-explorer" class="tour-screenshot" src="_static/tour/variable-explorer.png">
+   <img id="tour-plots" class="tour-screenshot" src="_static/tour/plots.png">
+   <img id="tour-files" class="tour-screenshot" src="_static/tour/files.png">
+   <img id="tour-find" class="tour-screenshot" src="_static/tour/find.png">
+   <img id="tour-profiler" class="tour-screenshot" src="_static/tour/profiler.png">
+   <img id="tour-code-analysis" class="tour-screenshot" src="_static/tour/code-analysis.png">
+
+   <svg class="tour-overlay" viewBox="0 0 1280 720">
+     <rect id="introduction-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="2.5" width="1275.5" height="715" />
+     <rect id="toolbar-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="2.5" width="1275.5" height="35" />
+     <rect id="statusbar-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="688" width="1275.5" height="30" />
+     <rect id="options-menu-rect" class="highlight-rect tour-options-menu" x="612" y="60" width="245" height="405" />
+     <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="214" y="240" width="276" height="405" />
+     <rect id="editor-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="35" width="635" height="655" />
+     <rect id="console-rect" class="highlight-rect tour-default-layout-main" x="640" y="335" width="638" height="358" />
+     <rect id="help-rect" class="highlight-rect tour-default-layout-main" x="640" y="35" width="638" height="305" />
+     <rect id="variable-explorer-rect" class="highlight-rect tour-variable-explorer" x="640" y="35" width="638" height="305" />
+     <rect id="plots-rect" class="highlight-rect tour-plots" x="640" y="35" width="638" height="305" />
+     <rect id="files-rect" class="highlight-rect tour-files" x="640" y="35" width="638" height="305" />
+     <rect id="find-rect" class="highlight-rect tour-find" x="640" y="35" width="638" height="305" />
+     <rect id="profiler-rect" class="highlight-rect tour-profiler" x="640" y="35" width="638" height="305" />
+     <rect id="code-analysis-rect" class="highlight-rect tour-code-analysis" x="640" y="35" width="638" height="305" />
+   </svg>
 </div>
+<input id="quickstart-tour-start" type="button" value="Restart Tour" /></div>
 
 
               </div>
               
               <div class='prev-next-bottom'>
                 
+    <a class='left-prev btn btn-outline-danger' id="prev-link" href="index.html" title="previous page">Welcome to Spyder’s Documentation</a>
+    <a class='right-next btn btn-outline-danger' id="next-link" href="installation.html" title="next page">Installation Guide</a>
 
               </div>
               
@@ -532,7 +488,7 @@ Spyder can also be used as a PyQt5 extension library, allowing you to build upon
     
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/overview.rst">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/quickstart.rst">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -637,7 +593,7 @@ Spyder can also be used as a PyQt5 extension library, allowing you to build upon
                     
                     
                       <span class="pipe-red">|</span>
-                      <a href="_sources/overview.rst.txt"
+                      <a href="_sources/quickstart.rst.txt"
                           rel="nofollow">Page source</a>
                     
                 </div>

@@ -1,7 +1,7 @@
 /* Fix bold styling for font */
 b, strong {
   font-weight: bold;
-} 
+}
 
 /* Center all images by default */
 .section img:not([class]) {
@@ -90,4 +90,73 @@ div.fa-user-friends::before {
 
 .dropdown .card-header::first-letter {
   font-weight: bold;
+}
+
+/*** Styling for quickstart interactive tour ***/
+
+.interactive-tour-container {
+  position: relative;
+  display: inline-block;
+  transition: transform 500ms ease-in-out;
+  margin-top: 0.7rem;
+}
+
+.interactive-tour-container .tour-screenshot {
+  display: none;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.4rem;
+}
+
+.interactive-tour-container img.tour-screenshot-active {
+  display: block !important;
+}
+
+.interactive-tour-container .tour-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tour-overlay .highlight-rect {
+  fill: none;
+  opacity: 0;
+  stroke: #ee1c24;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+div#driver-highlighted-element-stage {
+  opacity: 0;
+}
+
+rect.driver-highlighted-element {
+  opacity: 1 !important;
+}
+
+/*** Fix tour navigation buttons' margins, arrows and alignment ***/
+
+div#driver-popover-item .driver-popover-footer {
+  margin-top: 1em;
+}
+
+div#driver-popover-item .driver-popover-footer button {
+  min-width: 4.3rem;
+}
+
+div#driver-popover-item .driver-navigation-btns {
+  line-height: 1rem;
+}
+
+/* Style tour progress indicator */
+div#driver-popover-item .tour-progress-indicator {
+    float: right;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+/*** Remove h3 titles from Join our community section on index page ***/
+
+a[href="#join-our-community"] + ul li.toc-h3 {
+  display: none;
 }
