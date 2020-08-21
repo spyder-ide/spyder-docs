@@ -207,7 +207,16 @@ html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
 
 # Custom CSS for the site
-html_css_files = ["custom_styles.css"]
+html_css_files = [
+    "driver.min.css",
+    "custom_styles.css",
+]
+
+# Custom Javascript for the site
+html_js_files = [
+    "driver.min.js",
+    "custom_scripts.js",
+]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

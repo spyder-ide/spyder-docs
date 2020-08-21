@@ -30,7 +30,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
    
     .. div:: align-center
 
-       If you are looking for a summary of its features and interface, check out the :doc:`overview`.
+       If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
     ---
     .. div:: align-center
 
@@ -139,6 +139,7 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :hidden:
 
     Overview<self>
+    quickstart
     installation
     indexvideos
     indexpanes
@@ -146,15 +147,3 @@ Connect with Spyder through our social media channels to stay up to date with ou
     FAQ<faq>
 
 ..
-    overview
-    installation
-    options
-    editor
-    ipythonconsole
-    debugging
-    projects
-    fileexplorer
-    findinfiles
-    onlinehelp
-    historylog
-    internalconsole
