@@ -1,6 +1,6 @@
-###############################
-Welcome to Spyder Documentation
-###############################
+#################################
+Welcome to Spyder's Documentation
+#################################
 
 .. image:: images/mainwindow/mainwindow_default_1610.png
    :align: center
