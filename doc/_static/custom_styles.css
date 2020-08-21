@@ -89,12 +89,14 @@ div.fa-user-friends::before {
   position: relative;
   display: inline-block;
   transition: transform 500ms ease-in-out;
+  margin-top: 0.7rem;
 }
 
 .interactive-tour-container .tour-screenshot {
   display: none;
   max-width: 100%;
   height: auto;
+  margin-bottom: 0.4rem;
 }
 
 .interactive-tour-container img.tour-screenshot-active {
@@ -129,16 +131,12 @@ div#driver-popover-item .driver-popover-footer {
   margin-top: 1em;
 }
 
-div#driver-popover-item .driver-navigation-btns {
-  line-height: 1rem;
+div#driver-popover-item .driver-popover-footer button {
+  min-width: 4.3rem;
 }
 
-div#driver-popover-item .tour-arrow {
-    font-size: 2em;
-    line-height: 0;
-    font-weight: bold;
-    pointer-events: none;
-    vertical-align: middle;
+div#driver-popover-item .driver-navigation-btns {
+  line-height: 1rem;
 }
 
 /* Style tour progress indicator */

@@ -13,8 +13,8 @@
         opacity: 0.1,
         padding: 0,
         allowClose: false,
-        nextBtnText: 'Next <span class="tour-arrow">→</span>',
-        prevBtnText: '<span class="tour-arrow">←</span> Previous',
+        nextBtnText: 'Next',
+        prevBtnText: 'Previous',
     };
 
     // Step definitions for the quickstart tour
