@@ -1,6 +1,6 @@
-####################
-Spyder Documentation
-####################
+#################################
+Welcome to Spyder's Documentation
+#################################
 
 .. image:: images/mainwindow/mainwindow_default_1610.png
    :align: center
@@ -138,12 +138,10 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :maxdepth: 2
     :hidden:
 
-    Overview<self>
+    Welcome<self>
     quickstart
     installation
     indexvideos
     indexpanes
     indextroubleshooting
     FAQ<faq>
-
-..
