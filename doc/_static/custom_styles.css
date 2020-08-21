@@ -170,16 +170,15 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 }
 
 .dropdown-videos .summary-content {
-  background-color: #dce2e8;
+  background-color: #EDEDED;
 }
 
 .dropdown-videos .card-header {
   background-color: white;
   padding-top: 0.1em;
   padding-bottom: 0.1em;
-  color: black;
-  font-weight: bold;
-  background-color: #8b9399;
+  color: white;
+  background-color: #4E4E4E;
   font-size: 0.8em;
   border-radius: unset;
 }
@@ -200,8 +199,9 @@ div.scroll {
   margin:1px, 1px; 
   height: 250px; 
   overflow-x: hidden; 
-  overflow-y: auto; 
-  text-align:justify; 
+  overflow-y: auto;  
   font-size: 0.8em;
   color: #2c2e30;
+  padding-left: 1.2rem;
+  padding-right:1.2rem;
 } 

@@ -25,7 +25,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
 
 .. rst-class:: dropdown-videos
 
-.. dropdown:: Video transcript
+.. dropdown:: Transcript
    :animate: fade-in
 
    .. div:: scroll
