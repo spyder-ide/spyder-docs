@@ -154,3 +154,9 @@ div#driver-popover-item .tour-progress-indicator {
     font-weight: bold;
     font-size: 0.7em;
 }
+
+/*** Remove h3 titles from Join our community section on index page ***/
+
+a[href="#join-our-community"] + ul li.toc-h3 {
+  display: none;
+}
