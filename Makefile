@@ -35,6 +35,7 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	sphinx-multiversion doc build/html
+	cp ci/index_redirect.html build/html/index.html
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
