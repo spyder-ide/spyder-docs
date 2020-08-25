@@ -234,15 +234,11 @@ html_js_files = [
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {
-#     "**": [
-#         "about.html",
-#         "navigation.html",
-#         #'relations.html',
-#         "searchbox.html",
-#         "donate.html",
-#     ]
-# }
+html_sidebars = {
+    "**": [
+        "versioning.html",
+    ]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
