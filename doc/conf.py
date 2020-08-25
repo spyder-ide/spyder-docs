@@ -43,6 +43,7 @@ TRAVIS_BRANCH = os.environ.get("TRAVIS_BRANCH")
 extensions = [
     "sphinx.ext.githubpages",
     "sphinx_panels",
+    "sphinx_multiversion"
 ]
 
 panels_add_boostrap_css = False
@@ -241,6 +242,7 @@ html_sidebars = {
         #'relations.html',
         "searchbox.html",
         "donate.html",
+        "versioning.html",
     ]
 }
 
