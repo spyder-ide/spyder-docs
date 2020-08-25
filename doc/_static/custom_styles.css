@@ -160,3 +160,16 @@ div#driver-popover-item .tour-progress-indicator {
 a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
+
+/*Version selector and header*/
+#versions-header {
+  margin: 0 10px;
+}
+
+#select-versions, #select-versions option {
+  width: 90%;
+}
+
+#select-versions {
+  margin: 10px;
+}

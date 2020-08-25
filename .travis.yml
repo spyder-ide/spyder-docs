@@ -19,7 +19,7 @@ script:
   - make docs
   - make linkcheck
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
-      doctr deploy develop --built-docs doc/_build/html;
+      doctr deploy develop --built-docs build/html;
     fi
 
 notifications:

@@ -34,8 +34,7 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 	sphinx-apidoc -o doc/ spyder-repo/spyder/ *tests*
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	$(MAKE) -C doc clean
-	$(MAKE) -C doc html
+	sphinx-multiversion doc build/html
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck

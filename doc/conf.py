@@ -146,7 +146,6 @@ html_theme_options = {
     "use_edit_page_button": True,
     "show_powered_by": True,
     "gitter_room": "spyder-ide/public",
-    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version",
     "open_collective": "spyder",
     "footer_links": [
         {
@@ -235,16 +234,15 @@ html_js_files = [
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-html_sidebars = {
-    "**": [
-        "about.html",
-        "navigation.html",
-        #'relations.html',
-        "searchbox.html",
-        "donate.html",
-        "versioning.html",
-    ]
-}
+# html_sidebars = {
+#     "**": [
+#         "about.html",
+#         "navigation.html",
+#         #'relations.html',
+#         "searchbox.html",
+#         "donate.html",
+#     ]
+# }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -269,6 +267,15 @@ html_sidebars = {
 
 # If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = ''
+
+
+# -- Options for shpinx-multiversion -----------------------------------------
+
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = r'\d+\.\w|(master)$'
+
+# Whitelist pattern for remotes (set to None to use local branches only)
+smv_remote_whitelist = None
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

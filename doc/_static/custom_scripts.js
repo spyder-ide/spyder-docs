@@ -192,4 +192,26 @@
         };
     };
 
+    // Handle version selector
+    $(document).ready(() => {
+      var select_options = $('#select-versions option');
+      var current_page = window.location.pathname.split("/").slice(-1)[0];
+      var selection_length = select_options.filter(`[value="${current_page}"]`).length;
+      console.log(selection_length);
+      if(selection_length) {
+        select_options.removeAttr('selected').filter(`[value="${current_page}"]`).attr('selected', true);
+      }
+    
+    // Based on https://stackoverflow.com/a/37796085
+    $('#select-versions').click(function() {
+      console.log($(this));
+      var open = $(this).data('isopen');
+      if(open && $(this).val()) {
+        window.location.href = $(this).val();
+      }
+      //Set 'isopen' to the opposite so next time when select box is clicked
+      //it won't trigger the redirection to a new page
+      $(this).data('isopen', !open);
+      });
+    });
 }());
