@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: clean clean-test clean-pyc clean-build docs multidocs help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
@@ -38,6 +38,7 @@ docs: ## generate Sphinx HTML documentation for the current branch
 	$(MAKE) -C doc html
 
 multidocs: ## generate Sphinx HTML documentation for the multiple versions available
+	$(MAKE) -C doc clean
 	sphinx-multiversion doc doc/_build/html
 	cp ci/index_redirect.html doc/_build/html/index.html
 
