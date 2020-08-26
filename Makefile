@@ -33,7 +33,11 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 	rm -f doc/modules.rst
 	sphinx-apidoc -o doc/ spyder-repo/spyder/ *tests*
 
-docs: ## generate Sphinx HTML documentation, including API docs
+docs: ## generate Sphinx HTML documentation for the current branch
+	$(MAKE) -C doc clean
+	$(MAKE) -C doc html
+
+multidocs: ## generate Sphinx HTML documentation for the multiple versions available
 	sphinx-multiversion doc build/html
 	cp ci/index_redirect.html build/html/index.html
 
@@ -43,5 +47,5 @@ linkcheck: ## check that links are still valid
 servedocs: doc ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C doc html' -R -D .
 
-serve: clean ## install the package to the active Python's site-packages
+serve: clean ## Launch the docs on the browser
 	$(BROWSER) doc/_build/html/index.html

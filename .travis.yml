@@ -19,7 +19,7 @@ install:
 
 script:
   - set -e
-  - make docs
+  - make multidocs
   - make linkcheck
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs build/html;

@@ -175,6 +175,30 @@
         document.getElementById('quickstart-tour-start').onclick = startTour;
         return driver;
     };
+    
+    // Handle version selector
+    function setupVersionSelector() {
+      var selectOptions = document.querySelectorAll("#select-versions option");
+      var previouslySelected = document.querySelector("#select-versions option selected");
+      var currentPage = window.location.pathname.split("/").slice(-1)[0];
+      var selection = [...selectOptions].filter(function(elem){
+                                                    return elem.value === currentPage
+                                                 });
+      if(selection.length) {
+        //select_options.removeAttribute("selected").filter(`[value="${current_page}"]`).attr("selected", true);
+        //previouslySelected.removeAttribute("selected");
+        selection[0].setAttribute("selected", true);
+      }
+
+      // Based on https://stackoverflow.com/a/37796085
+      document.querySelectorAll("#select-versions option").forEach(function(ele) {
+        ele.onclick = function () {
+            if(this.value) {
+              window.location.href = this.value;
+            }
+          };
+      });
+    }
 
     /* Fire events */
 
@@ -185,33 +209,13 @@
         };
     });
 
-    // Once everything is loaded, start the tour
+    // Once everything is loaded, start the tour, handle version dropdown
     window.onload = function () {
         if (document.getElementsByClassName("interactive-tour-container").length > 0) {
             startTour();
         };
+        setupVersionSelector();
     };
 
-    // Handle version selector
-    $(document).ready(() => {
-      var select_options = $('#select-versions option');
-      var current_page = window.location.pathname.split("/").slice(-1)[0];
-      var selection_length = select_options.filter(`[value="${current_page}"]`).length;
-      console.log(selection_length);
-      if(selection_length) {
-        select_options.removeAttr('selected').filter(`[value="${current_page}"]`).attr('selected', true);
-      }
     
-    // Based on https://stackoverflow.com/a/37796085
-    $('#select-versions').click(function() {
-      console.log($(this));
-      var open = $(this).data('isopen');
-      if(open && $(this).val()) {
-        window.location.href = $(this).val();
-      }
-      //Set 'isopen' to the opposite so next time when select box is clicked
-      //it won't trigger the redirection to a new page
-      $(this).data('isopen', !open);
-      });
-    });
 }());
