@@ -38,8 +38,8 @@ docs: ## generate Sphinx HTML documentation for the current branch
 	$(MAKE) -C doc html
 
 multidocs: ## generate Sphinx HTML documentation for the multiple versions available
-	sphinx-multiversion doc build/html
-	cp ci/index_redirect.html build/html/index.html
+	sphinx-multiversion doc doc/_build/html
+	cp ci/index_redirect.html doc/_build/html/index.html
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
