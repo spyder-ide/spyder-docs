@@ -178,26 +178,26 @@
     
     // Handle version selector
     function setupVersionSelector() {
-      var selectOptions = document.querySelectorAll("#select-versions option");
-      var previouslySelected = document.querySelector("#select-versions option selected");
-      var currentPage = window.location.pathname.split("/").slice(-1)[0];
-      var selection = [...selectOptions].filter(function(elem){
-                                                    return elem.value === currentPage
-                                                 });
-      if(selection.length) {
-        //select_options.removeAttribute("selected").filter(`[value="${current_page}"]`).attr("selected", true);
-        //previouslySelected.removeAttribute("selected");
-        selection[0].setAttribute("selected", true);
-      }
+        var selectOptions = document.querySelectorAll("#select-versions option");
+        var currentPage = window.location.pathname.split("/").slice(-1)[0];
+        var selection = [...selectOptions].filter(function(elem){
+            return elem.value === currentPage;
+        });
 
-      // Based on https://stackoverflow.com/a/37796085
-      document.querySelectorAll("#select-versions option").forEach(function(ele) {
-        ele.onclick = function () {
-            if(this.value) {
-              window.location.href = this.value;
-            }
-          };
-      });
+        if(selection.length) {
+            selection.forEach(function(elem){
+                elem.setAttribute("selected", true);
+            });
+        }
+
+        // Based on https://stackoverflow.com/a/37796085
+        document.querySelectorAll("#select-versions option").forEach(function(ele) {
+            ele.onclick = function () {
+                if(this.value) {
+                  window.location.href = this.value;
+                }
+            };
+        });
     }
 
     /* Fire events */
