@@ -18,9 +18,10 @@ install:
   - ci/install.sh
 
 script:
-  - set -e
-  - make multidocs
+  - ci/build.sh
   - make linkcheck
+
+after_success:
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy develop --built-docs doc/_build/html;
     fi
