@@ -40,7 +40,8 @@ docs: ## generate Sphinx HTML documentation for the current branch
 multidocs: ## generate Sphinx HTML documentation for the multiple versions available
 	$(MAKE) -C doc clean
 	sphinx-multiversion doc doc/_build/html
-	cp ci/index_redirect.html doc/_build/html/index.html
+	@python -c "import shutil; shutil.copytree('doc/_build/html/master/', 'doc/_build/html/stable/')"
+	@python ci/generateredirects.py "stable" -v --base-path "doc/_build/html" --base-url "https://docs.spyder-ide.org"
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
