@@ -166,6 +166,8 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
 
+/*** Styles for video transcript dropdown elements ***/
+
 .dropdown-videos {
   width: 100%;
   max-width: 640px;
@@ -173,18 +175,18 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   margin-right: auto;
   border: 0;
   border-radius: unset;
-  margin-top:-1px;
+  margin-top: -1px;
 }
 
 .dropdown-videos .summary-content {
-  background-color: #EDEDED;
+  background-color: #ededed;
 }
 
 .dropdown-videos .card-header {
   padding-top: 0.1em;
   padding-bottom: 0.1em;
   color: white;
-  background-color: #4E4E4E;
+  background-color: #4e4e4e;
   font-size: 0.8em;
   border-radius: unset;
 }
@@ -202,14 +204,14 @@ details.dropdown-videos .summary-up, details.dropdown-videos .summary-down {
 }
 
 div.scroll { 
-  margin:1px, 1px; 
+  margin: 1px 1px; 
   height: 250px; 
   overflow-x: hidden; 
   overflow-y: auto;  
   font-size: 0.8em;
   color: #2c2e30;
   padding-left: 1.2rem;
-  padding-right:1.2rem;
+  padding-right: 1.2rem;
 } 
 
 div.video-container {
