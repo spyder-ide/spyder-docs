@@ -162,18 +162,6 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 }
 
 /*Version selector and header*/
-/* #versions-header {
-  margin: 0 10px;
-}
-
-#select-versions, #select-versions option {
-  width: 90%;
-}
-
-#select-versions {
-  margin: 10px;
-} */
-
 #versions-header {
   color: rgba(0,0,0,.65);
   font-size: 0.8rem;
@@ -187,6 +175,7 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   font-size: 90%;
   color: rgba(0,0,0,.65);
   padding: 2px;
+  background-color: transparent;
 }
 
 #select-versions, #select-versions option {
