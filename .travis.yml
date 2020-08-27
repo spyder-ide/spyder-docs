@@ -18,11 +18,10 @@ install:
   - ci/install.sh
 
 script:
+  - set -e
   - ci/build.sh
   - make linkcheck
-
-after_success:
-  - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
+  - if [ "${TRAVIS_BRANCH-}" = "master" ]; then
       doctr deploy develop --built-docs doc/_build/html;
     fi
 

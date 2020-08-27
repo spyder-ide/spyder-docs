@@ -268,7 +268,7 @@ html_sidebars = {
 # -- Options for shpinx-multiversion -----------------------------------------
 
 # Whitelist pattern for branches (set to None to ignore all branches)
-smv_branch_whitelist = r'\d+\.\w|(master)|(pr)$'
+smv_branch_whitelist = r'\d+\.\w|(master)|(current)$'
 
 # Whitelist pattern for remotes (set to None to use local branches only)
 smv_remote_whitelist = None
