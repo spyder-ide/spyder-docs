@@ -378,11 +378,13 @@ class IframeVideo(Directive):
 
 
 class Youtube(IframeVideo):
-    html = ('<iframe src="https://www.youtube.com/embed/%(video_id)s'
+    html = ('<div class="video-container-container">'
+            '<div class="video-container">'
+            '<iframe src="https://www.youtube.com/embed/%(video_id)s'
             '?start=%(start)s" '
             'width="%(width)u" height="%(height)u" frameborder="0" '
             'webkitAllowFullScreen mozallowfullscreen allowfullscreen '
-            'class="align-%(align)s"></iframe>')
+            'class="align-%(align)s"></iframe></div></div>')
 
 
 def setup(builder):
