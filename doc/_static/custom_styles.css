@@ -192,12 +192,3 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 #select-versions, #select-versions option {
   width: 98%;
 }
-
-.form-control {
-  box-shadow: none;
-  background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  height: 54px;
-  font-size: 18px;
-  font-weight: 300;
-}
