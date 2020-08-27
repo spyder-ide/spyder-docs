@@ -55,8 +55,13 @@ iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem;
-  margin-top: 1.0rem;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
 }
 
 /*** Custom colors for specific FA icons in the index page ***/
@@ -159,4 +164,69 @@ div#driver-popover-item .tour-progress-indicator {
 
 a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
+}
+
+/*** Styles for video transcript dropdown elements ***/
+
+.dropdown-videos {
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  border-radius: unset;
+  margin-top: -1px;
+}
+
+.dropdown-videos .summary-content {
+  background-color: #ededed;
+}
+
+.dropdown-videos .card-header {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: #4e4e4e;
+  font-size: 0.8em;
+  border-radius: unset;
+}
+
+.dropdown-videos .card-header::first-letter {
+  font-weight: unset;
+}
+
+.dropdown-videos .card-header::first-child {
+  border-radius: unset;
+}
+
+details.dropdown-videos .summary-up, details.dropdown-videos .summary-down {
+  top: 0.1em !important;
+}
+
+div.scroll { 
+  margin: 1px 1px; 
+  height: 250px; 
+  overflow-x: hidden; 
+  overflow-y: auto;  
+  font-size: 0.8em;
+  color: #2c2e30;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+} 
+
+div.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+}
+
+div.video-container-container {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
