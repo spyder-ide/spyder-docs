@@ -271,7 +271,7 @@ html_sidebars = {
 smv_branch_whitelist = r'\d+\.\w|(master)|(current)$'
 
 # Whitelist pattern for remotes (set to None to use local branches only)
-smv_remote_whitelist = None
+smv_remote_whitelist = r'^(origin|upstream)$'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

@@ -9,18 +9,7 @@ if [ "${CI-}" = "true" ]; then
     # Set up the actual branch to build on
     if [ "${PULL_REQUEST-}" = "true" ] || [ "${TRAVIS_PULL_REQUEST_BRANCH-}" != "" ]; then
         git branch current
-        BRANCH_TO_CHECKOUT="current"
-    else if [ "${TRAVIS_BRANCH-}" != "" ]; then
-        BRANCH_TO_CHECKOUT="${TRAVIS_BRANCH-}"
-        else
-            BRANCH_TO_CHECKOUT="${BRANCH-}"
-        fi
     fi
     git config remote.origin.url >&- || git remote add origin https://github.com/spyder-ide/spyder-docs.git
-    git fetch origin
-    git checkout master
-    git pull origin master
-    git checkout 3.x
-    git pull origin 3.x
-    git checkout "${BRANCH_TO_CHECKOUT}"
+    git fetch --all
 fi
