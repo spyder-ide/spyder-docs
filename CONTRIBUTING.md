@@ -93,7 +93,7 @@ The steps to configure Netlify to preview pull requests are the following:
 1. Pass the command to build the docs:
 
 ```bash
-ci/install.sh && ci/build.sh
+ci/install.sh && chmod a+x ci/build.sh && ci/build.sh
 ```
 
 2. Pass the root directory of the generated docs:
