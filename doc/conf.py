@@ -134,7 +134,7 @@ html_logo = '_static/spyder_logo.png'
 html_theme_options = {
     "external_links": [
         {
-            "url": "https://www.spyder-ide.org",
+            "url": "/",
             "name": "Home"
         },
         {
@@ -174,6 +174,7 @@ html_theme_options = {
         },
     ],
     "page_toc_limit": 1,
+    "logo_link": "https://www.spyder-ide.org/",
 }
 html_context = {
     "github_user": "spyder-ide",
