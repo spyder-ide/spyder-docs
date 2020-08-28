@@ -126,7 +126,7 @@ div.fa-user-friends::before {
 .tour-overlay .highlight-rect {
   fill: none;
   opacity: 0;
-  stroke: #8c0000;
+  stroke: #d50000;
   stroke-linejoin: round;
   stroke-width: 5;
 }
