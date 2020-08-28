@@ -1,8 +1,8 @@
 {% if versions %}
-<h4 id="versions-header">{{ _('Versions') }}</h4>
+<h4 id="versions-header">{{ _('Version') }}</h4>
 <select id="select-versions">
-  {%- for item in versions %}
-  <option value="{{ item.url }}">{{ item.name }}</option>
+  {%- for version in versions %}
+  <option value="{{ version.url }}">Spyder {{ version.release }}{% if version.name == 'current' %} (Branch){% endif %}</option>
   {%- endfor %}
 </select>
 {% endif %}

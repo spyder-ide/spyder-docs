@@ -19,9 +19,14 @@ def copy_dir_if_not_existing(
     if not target_dir.is_absolute():
         target_dir = base_path / target_dir
 
+    if not source_dir.exists():
+        if verbose:
+            print(f"Source directory {source_dir} doesn't exist; "
+                  f"skipping copy to {target_dir}")
+        return False
     if target_dir.exists():
         if verbose:
-            print(f"Target directory {target_dir} exists, "
+            print(f"Target directory {target_dir} exists; "
                   f"skipping copy from {source_dir}")
         return False
     print(f"Copying {source_dir} to {target_dir}")
@@ -44,7 +49,7 @@ def generate_arg_parser():
             "if not absolute; defaults to the working dir."))
     arg_parser.add_argument(
         "-v", "--verbose", action="store_true", help=(
-            "If passed, prints each redirect generated."))
+            "If passed, prints details about the copy attempt."))
 
     return arg_parser
 

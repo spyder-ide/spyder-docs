@@ -24,6 +24,7 @@ from docutils.parsers.rst import Directive, directives
 
 # Standard library imports
 import os
+import subprocess
 
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
@@ -267,11 +268,33 @@ html_sidebars = {
 
 # -- Options for shpinx-multiversion -----------------------------------------
 
+# Whitelist pattern for tags (set to None to ignore all tags)
+smv_tag_whitelist = r'^current$'
+
 # Whitelist pattern for branches (set to None to ignore all branches)
-smv_branch_whitelist = r'\d+\.\w|(master)|(current)$'
+smv_branch_whitelist = r'^\d+\.\w|(master)$'
 
 # Whitelist pattern for remotes (set to None to use local branches only)
 smv_remote_whitelist = r'^(origin|upstream)$'
+
+# Pattern for released versions
+smv_released_pattern = r'^heads/\d+\.\w+$'
+
+# Format for versioned output directories inside the build directory
+smv_outputdir_format = '{config.release}'
+
+# Determine whether remote or local git branches/tags are preferred if their output dirs conflict
+smv_prefer_remote_refs = False
+
+# Use git ref naming if on a feature/PR branch
+try:
+    current_tag = subprocess.run(
+        ["git", "describe"], check=True, timeout=5,
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
+    if current_tag.stdout.strip() == "current":
+        smv_outputdir_format = '{ref.name}'
+except subprocess.SubprocessError:  # Pass if we're not in a git repo
+    pass
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
