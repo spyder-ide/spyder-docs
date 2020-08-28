@@ -193,8 +193,6 @@
         // Based on https://stackoverflow.com/a/37796085
         var isSafari = navigator.userAgent.indexOf("Safari") != -1;
         var isChrome = navigator.userAgent.indexOf("Chrome") != -1;
-        console.log(isChrome);
-        console.log(isSafari);
         if (isChrome || isSafari){
           document.querySelectorAll("#select-versions").forEach(function(ele) {
             ele.onchange = function () {
