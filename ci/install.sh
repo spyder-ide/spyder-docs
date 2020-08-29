@@ -8,6 +8,7 @@ pip3 install git+https://github.com/dalthviz/spyder-docs-sphinx-theme.git@sideba
 if [ "${CI-}" = "true" ]; then
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
-    git config remote.origin.url >&- || git remote add origin https://github.com/spyder-ide/spyder-docs.git
+    git config remote.upstream.url >&- || git remote add upstream https://github.com/spyder-ide/spyder-docs.git
     git fetch --all
+    git update-ref -m "reset: Update master to latest commit" refs/heads/master upstream/master
 fi
