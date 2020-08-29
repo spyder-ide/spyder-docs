@@ -186,7 +186,7 @@
 
         if (selection.length) {
             selection.forEach(function(elem){
-                elem.setAttribute("selected", true);
+                elem.selected = true;
             });
         }
 
