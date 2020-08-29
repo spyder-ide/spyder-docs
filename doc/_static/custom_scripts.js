@@ -190,26 +190,13 @@
             });
         }
 
-        // Based on https://stackoverflow.com/a/37796085
-        var isSafari = navigator.userAgent.indexOf("Safari") != -1;
-        var isChrome = navigator.userAgent.indexOf("Chrome") != -1;
-        if (isChrome || isSafari){
-          document.querySelectorAll("#select-versions").forEach(function(ele) {
-            ele.onchange = function () {
-                if (this.value) {
-                  window.location.href = this.value;
-                }
-            };
-          });
-        } else {
-          document.querySelectorAll("#select-versions option").forEach(function(ele) {
-            ele.onclick = function () {
-                if (this.value) {
-                  window.location.href = this.value;
-                }
-            };
-          });
-        }
+        document.querySelectorAll("#select-versions").forEach(function(ele) {
+          ele.onchange = function () {
+              if(this.value) {
+                window.location.href = this.value;
+              }
+          };
+        });
     }
 
     /* Fire events */
