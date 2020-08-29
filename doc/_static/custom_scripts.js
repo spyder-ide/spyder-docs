@@ -192,7 +192,7 @@
 
         document.querySelectorAll("#select-versions").forEach(function(ele) {
           ele.onchange = function () {
-              if(this.value) {
+              if (this.value) {
                 window.location.href = this.value;
               }
           };
