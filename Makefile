@@ -39,10 +39,10 @@ docs: ## generate Sphinx HTML documentation for the current branch
 
 multidocs: ## generate Sphinx HTML documentation for the multiple versions available
 	$(MAKE) -C doc clean
-	@python ci/tagcurrent.py -v --exclude-pattern "^\d+\.\w|(master)$$"
+	@python scripts/tagcurrent.py -v --exclude-pattern "^\d+\.\w|(master)$$"
 	sphinx-multiversion doc doc/_build/html
-	@python ci/safecopy.py "4" "current" -v --base-path "doc/_build/html"
-	@python ci/generateredirects.py "current" -v --base-path "doc/_build/html" --base-url "https://docs.spyder-ide.org"
+	@python scripts/safecopy.py "4" "current" -v --base-path "doc/_build/html"
+	@python scripts/generateredirects.py "current" -v --base-path "doc/_build/html" --base-url "https://docs.spyder-ide.org"
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
