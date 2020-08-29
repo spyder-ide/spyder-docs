@@ -50,5 +50,5 @@ linkcheck: ## check that links are still valid
 servedocs: doc ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C doc html' -R -D .
 
-serve: clean ## Launch the docs on the browser
+serve: clean ## Launch the docs in a web browser
 	$(BROWSER) doc/_build/html/index.html

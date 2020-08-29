@@ -184,7 +184,7 @@
             return elem.value === currentPage;
         });
 
-        if(selection.length) {
+        if (selection.length) {
             selection.forEach(function(elem){
                 elem.setAttribute("selected", true);
             });
@@ -196,7 +196,7 @@
         if (isChrome || isSafari){
           document.querySelectorAll("#select-versions").forEach(function(ele) {
             ele.onchange = function () {
-                if(this.value) {
+                if (this.value) {
                   window.location.href = this.value;
                 }
             };
@@ -204,7 +204,7 @@
         } else {
           document.querySelectorAll("#select-versions option").forEach(function(ele) {
             ele.onclick = function () {
-                if(this.value) {
+                if (this.value) {
                   window.location.href = this.value;
                 }
             };
@@ -221,7 +221,7 @@
         };
     });
 
-    // Once everything is loaded, start the tour, handle version dropdown
+    // Once everything is loaded, start the tour and handle the version dropdown
     window.onload = function () {
         if (document.getElementsByClassName("interactive-tour-container").length > 0) {
             startTour();
