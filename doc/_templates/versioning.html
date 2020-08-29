@@ -2,7 +2,7 @@
 <h4 id="versions-header">{{ _('Version') }}</h4>
 <select id="select-versions">
   {%- for version in versions %}
-  <option value="{{ version.url }}">Spyder {{ version.release }}{% if version.name == 'current' %} (Branch){% endif %}</option>
+  <option value="{{ version.url }}"{% if version.name == current_version.name %} selected{% endif %}>Spyder {{ version.release }}{% if version.name == 'current' %} (Branch){% endif %}</option>
   {%- endfor %}
 </select>
 {% endif %}
