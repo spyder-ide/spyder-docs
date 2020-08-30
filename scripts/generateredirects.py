@@ -12,7 +12,7 @@ from pathlib import Path
 REDIRECT_TEXT = """<!DOCTYPE html>
 <html>
   <head>
-    <title>Redirecting to master branch</title>
+    <title>Spyder IDE Documentation</title>
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={redirect_url}">
     <link rel="canonical" href="{base_url}{canonical_url}">
