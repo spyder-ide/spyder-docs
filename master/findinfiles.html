@@ -1,0 +1,650 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find &#8212; Spyder 4 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link href="_static/css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link href="_static/css/spyder.css" rel="stylesheet">
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/driver.min.js"></script>
+    <script src="_static/custom_scripts.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="History" href="historylog.html" />
+    <link rel="prev" title="Projects" href="projects.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
+<div class="container">
+  
+  <a class="navbar-brand" href="https://www.spyder-ide.org/">
+    <img src="_static/spyder_logo.png" class="logo" alt="logo">
+  </a>
+  
+  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbar-menu" class="collapse navbar-collapse">
+    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="/">Home</a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+    </nav>
+
+    <div id="doc-content" class="container">
+      <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
+<div class="d-none d-xl-block">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="../current/findinfiles.html">Spyder 4 (Branch)</option>
+  <option value="findinfiles.html" selected>Spyder 4</option>
+  <option value="../3.x/findinfiles.html">Spyder 3</option>
+</select>
+
+  <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+    <div class="input-group">
+      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-danger" type="submit">
+          <span class="fas fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+  <ul class="nav bd-sidenav">
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Welcome</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="quickstart.html">Quickstart</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="installation.html">Installation Guide</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Intro Videos
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="first-steps-with-spyder.html">First Steps with Spyder</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="working-with-spyder.html">Working with Spyder</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item active">
+                          
+              <details open>
+              
+                <summary>
+                    Panes in Depth
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="editor.html">Editor</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="ipythonconsole.html">IPython Console</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="variableexplorer.html">Variable Explorer</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="help.html">Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="plots.html">Plots</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="fileexplorer.html">Files</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">Find</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="historylog.html">History</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="profiler.html">Profiler</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="debugging.html">Debugging</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="pylint.html">Code Analysis</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="onlinehelp.html">Online Help</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Troubleshooting
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="first-steps.html">First Steps</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="basic-first-aid.html">Basic First Aid</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="emergency-cpr.html">Emergency CPR</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="common-illnesses.html">Common Illnesses</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="call-for-help.html">Calling for Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="submit-a-report.html">Submit a Report</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+        
+      
+    </ul>
+
+</nav>
+
+<nav class="d-block d-xl-none" aria-label="Main navigation">
+          <div class="bd-toc-item active row px-3">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="../current/findinfiles.html">Spyder 4 (Branch)</option>
+  <option value="findinfiles.html" selected>Spyder 4</option>
+  <option value="../3.x/findinfiles.html">Spyder 3</option>
+</select>
+
+          </div>
+    <div class="bd-toc-item active row px-3">
+    
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
+        
+          
+              <option value="index.html">
+              Welcome
+              </option>
+          
+        
+          
+              <option value="quickstart.html">
+              Quickstart
+              </option>
+          
+        
+          
+              <option value="installation.html">
+              Installation Guide
+              </option>
+          
+        
+          
+            <optgroup label="Intro Videos">
+              
+                <option value="first-steps-with-spyder.html">
+                  First Steps with Spyder
+                </option>
+              
+                <option value="working-with-spyder.html">
+                  Working with Spyder
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Panes in Depth">
+              
+                <option value="editor.html">
+                  Editor
+                </option>
+              
+                <option value="ipythonconsole.html">
+                  IPython Console
+                </option>
+              
+                <option value="variableexplorer.html">
+                  Variable Explorer
+                </option>
+              
+                <option value="help.html">
+                  Help
+                </option>
+              
+                <option value="plots.html">
+                  Plots
+                </option>
+              
+                <option value="fileexplorer.html">
+                  Files
+                </option>
+              
+                <option value="projects.html">
+                  Projects
+                </option>
+              
+                <option value="">
+                  Find
+                </option>
+              
+                <option value="historylog.html">
+                  History
+                </option>
+              
+                <option value="profiler.html">
+                  Profiler
+                </option>
+              
+                <option value="debugging.html">
+                  Debugging
+                </option>
+              
+                <option value="pylint.html">
+                  Code Analysis
+                </option>
+              
+                <option value="onlinehelp.html">
+                  Online Help
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Troubleshooting">
+              
+                <option value="first-steps.html">
+                  First Steps
+                </option>
+              
+                <option value="basic-first-aid.html">
+                  Basic First Aid
+                </option>
+              
+                <option value="emergency-cpr.html">
+                  Emergency CPR
+                </option>
+              
+                <option value="common-illnesses.html">
+                  Common Illnesses
+                </option>
+              
+                <option value="call-for-help.html">
+                  Calling for Help
+                </option>
+              
+                <option value="submit-a-report.html">
+                  Submit a Report
+                </option>
+              
+            </optgroup>
+          
+        
+          
+              <option value="faq.html">
+              FAQ
+              </option>
+          
+        
+      </select>
+    </div>
+</nav>
+          </div>
+
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+              <div>
+                
+  <div class="section" id="find">
+<h1>Find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Find</strong> pane allows you to search the content of text files in a user-defined location, with advanced features to filter your results.</p>
+<img alt="Spyder Find in Files panel, with search results shown per-file" src="_images/find-in-files-inprogress.png" />
+<div class="section" id="using-the-find-pane">
+<h2>Using the Find pane<a class="headerlink" href="#using-the-find-pane" title="Permalink to this headline">¶</a></h2>
+<p>To search for text in the Find pane, enter it in the field in the top left and press the search button.
+This will allow you to view and navigate through all the occurrences of your search text in your working directory.
+You can expand or collapse the search results to view the matches in each file.
+Clicking on a match will automatically open the file and highlight the line where the text was found.</p>
+<img alt="Spyder Find pane showing search and going to a file" src="_images/find-in-files-search.gif" />
+<p>If you want to change the scope of your search, select another directory, project or file in the <span class="guilabel">Search in</span> menu.
+The locations that you select for your search will be stored in the list so you can access them easily in the future.
+To erase all of these saved directories, select the <span class="guilabel">Clear the list</span> option from the dropdown menu in the <span class="guilabel">Search in</span> field.</p>
+<img alt="Spyder Find pane showing chosing new directory and directory stored in the list" src="_images/find-in-files-directory.gif" />
+</div>
+<div class="section" id="choosing-search-options">
+<h2>Choosing search options<a class="headerlink" href="#choosing-search-options" title="Permalink to this headline">¶</a></h2>
+<p>You can select from a number of options to enable searches as broad or refined as you need.</p>
+<p>To enable case sensitivity, which only returns matches with identical capitalization to your search text, toggle the <span class="guilabel">Aa</span> button on.</p>
+<img alt="Spyder Find pane showing search with case sensitive activated" src="_images/find-in-files-case.gif" />
+<p>To parse your search string as a <a class="reference external" href="https://docs.python.org/3/library/re.html">regular expression</a>, enable the <span class="guilabel">.*</span> button.</p>
+<img alt="Spyder Find pane showing regular expression search" src="_images/find-in-files-regex.gif" />
+<p>To exclude certain filenames, extensions or directories from your search, click the <span class="guilabel">Plus</span> button to display the advanced options for the pane, and then enter them in the <span class="guilabel">Exclude</span> text box.</p>
+<img alt="Spyder Find pane showing search excluding several file-types" src="_images/find-in-files-extensions.gif" />
+<p>Finally, to change the number of matches displayed, select the <span class="guilabel">Set maximum number of results</span> option under the pane’s Options menu in the top right.</p>
+<img alt="Spyder Find pane showing window with maximum results dialog open" src="_images/find-in-files-max-results.png" />
+</div>
+<div class="section" id="related-components">
+<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="projects.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Projects</a>
+    <a class='prev-next-link right-next' id="next-link" href="historylog.html" title="next page">History <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
+
+              </div>
+              
+          </main>
+
+          <div class="col-md-3 col-xl-2">
+              
+
+<div class="row d-none d-md-block bd-toc">
+    
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/findinfiles.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+    <nav id="bd-toc-nav">
+        <ul class="nav section-nav flex-column">
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#using-the-find-pane" class="nav-link">Using the Find pane</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#choosing-search-options" class="nav-link">Choosing search options</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#related-components" class="nav-link">Related components</a>
+            </li>
+        
+        </ul>
+    </nav>
+</div>
+
+<div class="row d-block d-md-none">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
+        <div class="navbar-toggler-item">
+            <a class="navbar-toggler btn-outline-default" href="search.html"><span class="fas fa-search"></span></a>
+        </div>
+        <div class="navbar-toggler-item">
+            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
+                <span class="fas fa-comment"></span>
+            </a>
+        </div>
+            <div class="navbar-toggler-item">
+                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars fa-2"></span>
+                </button>
+            </div>
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
+            <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#using-the-find-pane" class="nav-link">Using the Find pane</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#choosing-search-options" class="nav-link">Choosing search options</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#related-components" class="nav-link">Related components</a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+              
+          </div>
+      </div>
+    </div>
+
+    <script src="_static/js/theme.js"></script>
+    <script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'spyder-ide/public',
+        activationElement: '#open_chat',
+    };
+</script>
+
+<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
+    Open chat
+</a>
+
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+<div class="footer pb-5 pb-md-0">
+    <div class="container pb-3">
+        
+        <div class="row justify-content-center">
+            <a href="https://opencollective.com/spyder/donate" target="_blank">
+              <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
+            </a>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="text-center pb-3">
+                 Connect with us on: 
+                 
+                  
+                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://instagram.com/spyderide">Instagram</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center">
+              <small>
+                
+                <div class="text-center">
+                  &copy; 2020 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>
+                </div>
+                
+                <div class="text-center">
+                    
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+                    
+                    
+                      <span class="pipe-red">|</span>
+                      <a href="_sources/findinfiles.rst.txt"
+                          rel="nofollow">Page source</a>
+                    
+                </div>
+              </small>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
