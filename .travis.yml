@@ -22,7 +22,7 @@ script:
   - ci/build.sh
   - make linkcheck
   - if [ "${TRAVIS_BRANCH-}" = "master" ]; then
-      doctr deploy develop --built-docs doc/_build/html;
+      doctr deploy . --built-docs doc/_build/html;
     fi
 
 notifications:
