@@ -21,9 +21,7 @@ script:
   - set -e
   - ci/build.sh
   - make linkcheck
-  - if [ "${TRAVIS_BRANCH-}" = "master" ]; then
-      doctr deploy . --built-docs doc/_build/html;
-    fi
+  - doctr deploy . --built-docs doc/_build/html
 
 notifications:
   email: false

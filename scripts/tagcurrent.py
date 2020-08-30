@@ -5,6 +5,7 @@ Tag the current git branch with 'current' if not on a customizable list.
 
 # Standard library imports
 import argparse
+import os
 import re
 import subprocess
 
@@ -14,21 +15,34 @@ TAG_ADD_COMMAND = ["git", "tag", "-f", "-a", "current", "-m",
                    "Tag used for tracking the branch for Sphinx-Multiversion"]
 TAG_DELETE_COMMAND = ["git", "tag", "-d", "current"]
 
+CI_BRANCH_VARIABLES = [
+    "BRANCH",
+    "TRAVIS_PULL_REQUEST_BRANCH",
+    "TRAVIS_BRANCH",
+    ]
+
 
 def tag_current_branch(exclude_pattern=None, verbose=False):
     current_branch = subprocess.run(
         BRANCH_COMMAND, check=False, stdout=subprocess.PIPE, encoding="utf-8")
     branch_name = current_branch.stdout.strip()
 
+    # Check CI variables if not on a branch (in a detached HEAD state)
+    if not branch_name and os.environ.get("CI", None):
+        for branch_variable in CI_BRANCH_VARIABLES:
+            branch_name = os.environ.get(branch_variable, "").strip()
+            if branch_name:
+                break
+
     if exclude_pattern and re.match(exclude_pattern, branch_name):
         if verbose:
-            print(f"Current branch {branch_name} matches exclude pattern "
-                  f"{exclude_pattern}, removing tag")
+            print(f"Current branch {branch_name!r} matches exclude pattern "
+                  f"{exclude_pattern!r}, removing tag")
         subprocess.run(TAG_DELETE_COMMAND, check=False)
         return False
 
     if verbose:
-        print(f"Adding tag to current branch {branch_name}")
+        print(f"Adding tag to current branch {branch_name!r}")
     subprocess.run(TAG_ADD_COMMAND, check=False)
     return True
 
