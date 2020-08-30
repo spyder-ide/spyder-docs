@@ -24,6 +24,7 @@ from docutils.parsers.rst import Directive, directives
 
 # Standard library imports
 import os
+import subprocess
 
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
@@ -43,6 +44,7 @@ TRAVIS_BRANCH = os.environ.get("TRAVIS_BRANCH")
 extensions = [
     "sphinx.ext.githubpages",
     "sphinx_panels",
+    "sphinx_multiversion",
 ]
 
 panels_add_boostrap_css = False
@@ -145,7 +147,6 @@ html_theme_options = {
     "use_edit_page_button": True,
     "show_powered_by": True,
     "gitter_room": "spyder-ide/public",
-    "alert_message": "This documentation is still a work in progress. Check out the <a href='https://docs.spyder-ide.org' target='_blank'>Spyder 3 docs</a> for the stable version",
     "open_collective": "spyder",
     "footer_links": [
         {
@@ -237,11 +238,7 @@ html_js_files = [
 #
 html_sidebars = {
     "**": [
-        "about.html",
-        "navigation.html",
-        #'relations.html',
-        "searchbox.html",
-        "donate.html",
+        "versioning.html",
     ]
 }
 
@@ -268,6 +265,37 @@ html_sidebars = {
 
 # If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = ''
+
+
+# -- Options for shpinx-multiversion -----------------------------------------
+
+# Whitelist pattern for tags (set to None to ignore all tags)
+smv_tag_whitelist = r'^current$'
+
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = r'^\d+\.\w|(master)$'
+
+# Whitelist pattern for remotes (set to None to use local branches only)
+smv_remote_whitelist = r'^(origin|upstream)$'
+
+# Pattern for released versions
+smv_released_pattern = r'^heads/\d+\.\w+$'
+
+# Format for versioned output directories inside the build directory
+smv_outputdir_format = '{config.release}'
+
+# Determine whether remote or local git branches/tags are preferred if their output dirs conflict
+smv_prefer_remote_refs = False
+
+# Use git ref naming if on a feature/PR branch
+try:
+    current_tag = subprocess.run(
+        ["git", "describe"], check=True, timeout=5,
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
+    if current_tag.stdout.strip() == "current":
+        smv_outputdir_format = '{ref.name}'
+except subprocess.SubprocessError:  # Pass if we're not in a git repo
+    pass
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

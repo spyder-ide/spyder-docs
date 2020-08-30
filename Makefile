@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: clean clean-test clean-pyc clean-build docs multidocs help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
@@ -33,9 +33,16 @@ autodocs: ## generate Sphinx HTML documentation, including API docs
 	rm -f doc/modules.rst
 	sphinx-apidoc -o doc/ spyder-repo/spyder/ *tests*
 
-docs: ## generate Sphinx HTML documentation, including API docs
+docs: ## generate Sphinx HTML documentation for the current branch
 	$(MAKE) -C doc clean
 	$(MAKE) -C doc html
+
+multidocs: ## generate Sphinx HTML documentation for the multiple versions available
+	$(MAKE) -C doc clean
+	@python scripts/tagcurrent.py -v --exclude-pattern "^\d+\.\w|(master)$$"
+	sphinx-multiversion doc doc/_build/html
+	@python scripts/safecopy.py "4" "current" -v --base-path "doc/_build/html"
+	@python scripts/generateredirects.py "current" -v --base-path "doc/_build/html" --base-url "https://docs.spyder-ide.org"
 
 linkcheck: ## check that links are still valid
 	$(MAKE) -C doc linkcheck
@@ -43,5 +50,5 @@ linkcheck: ## check that links are still valid
 servedocs: doc ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C doc html' -R -D .
 
-serve: clean ## install the package to the active Python's site-packages
+serve: clean ## Launch the docs in a web browser
 	$(BROWSER) doc/_build/html/index.html

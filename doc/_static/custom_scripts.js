@@ -176,18 +176,32 @@
         return driver;
     };
 
+    // Handle version selector
+    function setupVersionSelector() {
+        document.querySelectorAll("#select-versions").forEach(function(ele) {
+            ele.onchange = function () {
+                if (this.value) {
+                    window.location.href = this.value;
+                };
+            };
+        });
+    };
+
     /* Fire events */
 
-    // On initial DOM load, set up the tour so its ready
+    // On initial DOM ready, set up the tour and the version dropdown
     document.addEventListener('DOMContentLoaded', function() {
-        if (document.getElementsByClassName("interactive-tour-container").length > 0) {
+        if (document.getElementsByClassName("interactive-tour-container").length) {
             driver = setupTourDriver(quickstartDriverOptions, quickstartTourSteps);
+        };
+        if (document.getElementById("select-versions")) {
+            setupVersionSelector();
         };
     });
 
     // Once everything is loaded, start the tour
     window.onload = function () {
-        if (document.getElementsByClassName("interactive-tour-container").length > 0) {
+        if (document.getElementsByClassName("interactive-tour-container").length) {
             startTour();
         };
     };

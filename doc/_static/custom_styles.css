@@ -166,6 +166,27 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
 
+/*Version selector and header*/
+#versions-header {
+  color: rgba(0,0,0,.65);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 1.1rem;
+}
+
+#select-versions {
+  margin-bottom: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 90%;
+  color: rgba(0,0,0,.65);
+  padding: 2px;
+  background-color: transparent;
+}
+
+#select-versions, #select-versions option {
+  width: 98%;
+}
+
 /*** Styles for video transcript dropdown elements ***/
 
 .dropdown-videos {

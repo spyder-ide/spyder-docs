@@ -48,14 +48,14 @@ You can install them into your current Anaconda environment with
 
 ```bash
 conda install sphinx
-pip install sphinx-panels
+pip install sphinx-panels sphinx-multiversion
 pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
-Or, if using ``pip``, you can grab them with
+Or, if using ``pip`` (``pip3`` on Linux), you can grab them with
 
 ```bash
-pip install sphinx sphinx-panels
+pip install sphinx sphinx-panels sphinx-multiversion
 pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 ```
 
@@ -74,9 +74,15 @@ make.bat html
 cd ..
 ```
 
-You should be able to view the html output inside the resulting ``_build`` directory it produces; ``index.html`` is the main page.
-
 **NOTE:** You can try to use the `make` commands on Windows if you have `make` installed and something like `Cygwin`, `MSYS2` or `MYSYS`, or by using Windows Subsystem for Linux (`WSL`).
+
+To build the full site with the documentation for all Spyder versions, run:
+
+```bash
+make multidocs
+```
+
+You should be able to view the html output inside the resulting ``_build`` directory it produces; ``index.html`` is the main page.
 
 
 
@@ -84,10 +90,10 @@ You should be able to view the html output inside the resulting ``_build`` direc
 
 The steps to configure Netlify to preview pull requests are the following:
 
-1. Pass a command to build the docs:
+1. Pass the command to build the docs:
 
 ```bash
-ci/install.sh && make docs
+ci/install.sh && chmod a+x ci/build.sh && ci/build.sh
 ```
 
 2. Pass the root directory of the generated docs:
