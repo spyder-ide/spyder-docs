@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spyder: The Scientific Python Development Environment — Documentation &#8212; Spyder 3 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link href="_static/css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link href="_static/css/spyder.css" rel="stylesheet">
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/driver.min.js"></script>
+    <script src="_static/custom_scripts.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="overview.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
+<div class="container">
+  
+  <a class="navbar-brand" href="https://www.spyder-ide.org/">
+    <img src="_static/spyder_logo.png" class="logo" alt="logo">
+  </a>
+  
+  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbar-menu" class="collapse navbar-collapse">
+    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="/">Home</a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+    </nav>
+
+    <div id="doc-content" class="container">
+      <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
+<div class="d-none d-xl-block">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="../current/index.html">Spyder 4 (Branch)</option>
+  <option value="../master/index.html">Spyder 4</option>
+  <option value="index.html" selected>Spyder 3</option>
+</select>
+
+  <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+    <div class="input-group">
+      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-danger" type="submit">
+          <span class="fas fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+  <ul class="nav bd-sidenav">
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="overview.html">Overview</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="installation.html">Installation</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="options.html">Command Line Options</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="editor.html">Editor</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="ipythonconsole.html">IPython Console</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="variableexplorer.html">Variable Explorer</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="help.html">Help</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="debugging.html">Debugging</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="pylint.html">Static Code Analysis</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="profiler.html">Profiler</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="fileexplorer.html">File Explorer</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="findinfiles.html">Find in Files</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="onlinehelp.html">Online Help</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="historylog.html">History Log</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="internalconsole.html">Internal Console</a>
+            </li>
+        
+      
+    </ul>
+
+</nav>
+
+<nav class="d-block d-xl-none" aria-label="Main navigation">
+          <div class="bd-toc-item active row px-3">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="../current/index.html">Spyder 4 (Branch)</option>
+  <option value="../master/index.html">Spyder 4</option>
+  <option value="index.html" selected>Spyder 3</option>
+</select>
+
+          </div>
+    <div class="bd-toc-item active row px-3">
+    
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
+        
+          
+              <option value="overview.html">
+              Overview
+              </option>
+          
+        
+          
+              <option value="installation.html">
+              Installation
+              </option>
+          
+        
+          
+              <option value="options.html">
+              Command Line Options
+              </option>
+          
+        
+          
+              <option value="editor.html">
+              Editor
+              </option>
+          
+        
+          
+              <option value="ipythonconsole.html">
+              IPython Console
+              </option>
+          
+        
+          
+              <option value="variableexplorer.html">
+              Variable Explorer
+              </option>
+          
+        
+          
+              <option value="help.html">
+              Help
+              </option>
+          
+        
+          
+              <option value="debugging.html">
+              Debugging
+              </option>
+          
+        
+          
+              <option value="pylint.html">
+              Static Code Analysis
+              </option>
+          
+        
+          
+              <option value="profiler.html">
+              Profiler
+              </option>
+          
+        
+          
+              <option value="projects.html">
+              Projects
+              </option>
+          
+        
+          
+              <option value="fileexplorer.html">
+              File Explorer
+              </option>
+          
+        
+          
+              <option value="findinfiles.html">
+              Find in Files
+              </option>
+          
+        
+          
+              <option value="onlinehelp.html">
+              Online Help
+              </option>
+          
+        
+          
+              <option value="historylog.html">
+              History Log
+              </option>
+          
+        
+          
+              <option value="internalconsole.html">
+              Internal Console
+              </option>
+          
+        
+      </select>
+    </div>
+</nav>
+          </div>
+
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+              <div>
+                
+  <div class="section" id="spyder-the-scientific-python-development-environment-documentation">
+<h1>Spyder: The Scientific Python Development Environment — Documentation<a class="headerlink" href="#spyder-the-scientific-python-development-environment-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="Screenshot of the Spyder main window, with the default panel layout" class="align-center" src="_images/mainwindow_default_1610.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
+It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
+Furthermore, Spyder offers built-in integration with many popular scientific packages, including <a class="reference external" href="https://www.numpy.org/">NumPy</a>, <a class="reference external" href="https://www.scipy.org/">SciPy</a>, <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>, <a class="reference external" href="https://ipython.org/">IPython</a>, <a class="reference external" href="https://qtconsole.readthedocs.io/en/stable/">QtConsole</a>, <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a>, and more.</p>
+<p>Beyond its many built-in features, Spyder’s abilities can be extended even further via its plugin system and API.
+Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-with-anaconda-recommended">Installing with Anaconda (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-with-an-alternative-distribution">Installing with an alternative distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-with-pip-experts-only">Installing with pip (experts only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#updating-spyder">Updating Spyder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-a-development-build">Installing a development build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#additional-help">Additional help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command Line Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editor.html#defining-code-cells">Defining code cells</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">IPython Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ipythonconsole.html#connecting-to-a-console">Connecting to a console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipythonconsole.html#supported-features">Supported features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipythonconsole.html#using-umr-to-reload-changed-modules">Using UMR to reload changed modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Variable Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#features-and-editors">Features and editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variableexplorer.html#supported-types">Supported types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help.html#understanding-help-modes">Understanding help modes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#debugging-with-ipdb">Debugging with ipdb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Static Code Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pylint.html#using-the-static-analyzer">Using the static analyzer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="profiler.html">Profiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profiler.html#running-the-profiler">Running the Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiler.html#interpreting-the-results">Interpreting the results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#creating-a-project">Creating a Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#using-the-project-explorer">Using the Project Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#working-with-version-control">Working with version control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">File Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileexplorer.html#performing-file-operations">Performing file operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Find in Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="findinfiles.html#choosing-search-options">Choosing search options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Online Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onlinehelp.html#using-the-online-help">Using the Online Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">History Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="historylog.html#using-the-history-log">Using the History Log</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="internalconsole.html">Internal Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="internalconsole.html#supported-features">Supported features</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='prev-next-link right-next' id="next-link" href="overview.html" title="next page">Overview <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
+
+              </div>
+              
+          </main>
+
+          <div class="col-md-3 col-xl-2">
+              
+
+<div class="row d-none d-md-block bd-toc">
+    
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/index.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+<nav id="bd-toc-nav">
+        <ul class="nav section-nav flex-column">
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#contents" class="nav-link">Contents</a>
+            </li>
+        
+        </ul>
+    </nav>
+</div>
+
+<div class="row d-block d-md-none">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
+        <div class="navbar-toggler-item">
+            <a class="navbar-toggler btn-outline-default" href="search.html"><span class="fas fa-search"></span></a>
+        </div>
+        <div class="navbar-toggler-item">
+            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
+                <span class="fas fa-comment"></span>
+            </a>
+        </div>
+            <div class="navbar-toggler-item">
+                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars fa-2"></span>
+                </button>
+            </div>
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
+            <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#contents" class="nav-link">Contents</a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+              
+          </div>
+      </div>
+    </div>
+
+    <script src="_static/js/theme.js"></script>
+    <script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'spyder-ide/public',
+        activationElement: '#open_chat',
+    };
+</script>
+
+<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
+    Open chat
+</a>
+
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+<div class="footer pb-5 pb-md-0">
+    <div class="container pb-3">
+        
+        <div class="row justify-content-center">
+            <a href="https://opencollective.com/spyder/donate" target="_blank">
+              <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
+            </a>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="text-center pb-3">
+                 Connect with us on: 
+                 
+                  
+                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://instagram.com/spyderide">Instagram</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center">
+              <small>
+                
+                <div class="text-center">
+                  &copy; 2020 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>
+                </div>
+                
+                <div class="text-center">
+                    
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+                    
+                    
+                      <span class="pipe-red">|</span>
+                      <a href="_sources/index.rst.txt"
+                          rel="nofollow">Page source</a>
+                    
+                </div>
+              </small>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
