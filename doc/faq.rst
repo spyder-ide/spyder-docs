@@ -135,19 +135,22 @@ Using Spyder
       :align: left
       :start: 306
 
+
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
 
-   To work with an existing environment in Spyder, change Spyder’s default Python interpreter.
-   To do so, first go to your terminal (or Anaconda Prompt on Windows), type ``conda info --envs``, and copy the path from the environment you created to your clipboard.
+   To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
+   To do so, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
 
-   .. image:: images/faq/faq-conda-info.png
-      :alt: Navigator showing installing specific version of Spyder
+   .. image:: images/faq/faq-change-environment.png
+      :alt: Change default environment in Preferences option in status bar
 
-   Now, go to :guilabel:`Preferences` in Spyder’s main window, click :guilabel:`Python interpreter` and check :guilabel:`Use the following Python interpreter`.
-   Paste the path you copied before, add ``/bin/python`` at the end on Mac and Linux or ``/python.exe`` on Windows, and click :guilabel:`OK`.
+   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section.
+   Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
+   If its not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interepreter you want to use.
+   See the :doc:`ipythonconsole` for more information.
 
    .. image:: images/faq/faq-python-interpreter.png
-      :alt: Navigator showing installing specific version of Spyder
+      :alt: Preferences showing changing Python interpreter
 
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
