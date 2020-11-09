@@ -9,11 +9,12 @@
     <title>Frequently Asked Questions &#8212; Spyder 4 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link href="_static/css/theme.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -600,12 +601,14 @@ Q: How do I get Spyder to work with my existing Python packages/environment?<div
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">To work with an existing environment in Spyder, change Spyder’s default Python interpreter.
-To do so, first go to your terminal (or Anaconda Prompt on Windows), type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code>, and copy the path from the environment you created to your clipboard.</p>
-<img alt="Navigator showing installing specific version of Spyder" src="_images/faq-conda-info.png" />
-<p class="card-text">Now, go to <span class="guilabel">Preferences</span> in Spyder’s main window, click <span class="guilabel">Python interpreter</span> and check <span class="guilabel">Use the following Python interpreter</span>.
-Paste the path you copied before, add <code class="docutils literal notranslate"><span class="pre">/bin/python</span></code> at the end on Mac and Linux or <code class="docutils literal notranslate"><span class="pre">/python.exe</span></code> on Windows, and click <span class="guilabel">OK</span>.</p>
-<img alt="Navigator showing installing specific version of Spyder" src="_images/faq-python-interpreter.png" />
+<p class="card-text">To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
+To do so, click the name of the current environment in the status bar, and then click <span class="guilabel">Change default environment in Preferences</span>.</p>
+<img alt="Change default environment in Preferences option in status bar" src="_images/faq-change-environment.png" />
+<p class="card-text">This will open the <span class="guilabel">Preferences</span> dialog in the <span class="guilabel">Python interpreter</span> section.
+Here, select the option <span class="guilabel">Use the following Python interpreter</span>, and use the dropdown below to select your preferred environment.
+If its not listed, use the text box or the <span class="guilabel">Select file</span> button to enter the path to the Python interepreter you want to use.
+See the <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a> for more information.</p>
+<img alt="Preferences showing changing Python interpreter" src="_images/faq-python-interpreter.png" />
 <p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -931,7 +934,7 @@ Q: I get the message “An error occurred while starting the kernel”. How do I
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.0</a>
                     
                     
                       <span class="pipe-red">|</span>
