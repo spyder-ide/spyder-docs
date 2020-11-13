@@ -14,6 +14,26 @@ Thanks!
 
 
 
+
+=================
+Spyder Installers
+=================
+
+Here you will find our standalone installers for Windows and macOS which are avaliable from Spyder 4.2 onwards. We recommend using this installation method, but if you want to try another or are using Linux, go to the sections below.
+
+.. rst-class:: installer-table
+
+.. table::
+
+   ========================================== ==========================================                   
+   `Windows Installer`_                       `macOS Installer`_
+   ========================================== ==========================================
+
+.. _Windows Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe
+.. _macOS Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder.dmg
+
+
+
 =================
 Try Spyder online
 =================

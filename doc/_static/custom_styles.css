@@ -251,3 +251,34 @@ div.video-container-container {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Style for adding icons to the installers table */
+
+table.installer-table td{
+  border-top: 0;
+  font-size: 1.4em;
+}
+
+table.installer-table tbody td:nth-child(1) p{
+  padding-top: 0.62em
+}
+
+table.installer-table tbody td p::before{
+  font-family: "Font Awesome 5 Brands";
+}
+
+table.installer-table tbody td:nth-child(1) p::before{
+  content: "\f17a";
+  font-size: 1.6em;
+  padding-right: 0.7em;
+  vertical-align: middle;
+}
+
+table.installer-table tbody td:nth-child(2) p::before{
+  content: "\f179";
+  font-size: 2em;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
+
