@@ -5,14 +5,36 @@ Installation Guide
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.
 
-If you run into problems, before posting a report, *please* consult our comprehensive `Troubleshooting Guide`_ and search the `issue tracker`_ for your error message and problem description.
+If you run into problems, before posting a report, *please* consult our comprehensive :doc:`troubleshooting guide<first-steps>` and search the `issue tracker`_ for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
-.. _Troubleshooting Guide: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
+.. important::
 
+   Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+   While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.
+
+
+
+=================
+Try Spyder online
+=================
+
+Want to try out Spyder without installing it?
+With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
+Just visit the `Spyder page on Binder`_ to get started using Spyder now.
+
+.. _Binder: https://mybinder.org/
+.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop
+
+.. image:: images/installation/installation-spyder-binder.png
+   :alt: Spyder running on Binder
+
+
+
+.. _standalone_installers_ref:
 
 =====================
 Standalone installers
@@ -34,35 +56,13 @@ We recommend using this installation method on those platforms, but we offer sev
 
 
 
-=================
-Try Spyder online
-=================
-
-Want to try out Spyder without installing it?
-With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
-Just visit the `Spyder page on Binder`_ to get started using Spyder now.
-
-.. _Binder: https://mybinder.org/
-.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop
-
-.. image:: images/installation/installation-spyder-binder.png
-   :alt: Spyder running on Binder
-
-
-
 ==============
 Using Anaconda
 ==============
 
-.. important::
-
-   If in doubt, you should install Spyder via this method; it generally has the least likelihood of potential pitfalls for non-experts, and we will be able to provide assistance if you do run into trouble.
-
-Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
+Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package, and is our recommended installation method on Linux (and supported on the other platforms too).
 
 .. _Anaconda: https://www.anaconda.com/products/individual
-
-This is the easiest way to install Spyder for any of our supported platforms, and the way we recommend to avoid unexpected issues we aren't able to help you with.
 
 
 Running Spyder
