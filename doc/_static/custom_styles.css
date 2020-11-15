@@ -224,16 +224,16 @@ details.dropdown-videos .summary-up, details.dropdown-videos .summary-down {
   top: 0.1em !important;
 }
 
-div.scroll { 
-  margin: 1px 1px; 
-  height: 250px; 
-  overflow-x: hidden; 
-  overflow-y: auto;  
+div.scroll {
+  margin: 1px 1px;
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-size: 0.8em;
   color: #2c2e30;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-} 
+}
 
 div.video-container {
   position: relative;
@@ -254,31 +254,29 @@ div.video-container-container {
 
 /* Style for adding icons to the installers table */
 
-table.installer-table td{
+table.installer-table td {
   border-top: 0;
   font-size: 1.4em;
 }
 
-table.installer-table tbody td:nth-child(1) p{
-  padding-top: 0.62em
-}
-
-table.installer-table tbody td p::before{
+table.installer-table tbody td p::before {
   font-family: "Font Awesome 5 Brands";
 }
 
-table.installer-table tbody td:nth-child(1) p::before{
+table.installer-table tbody td:nth-child(1) p {
+  padding-top: 0.62em;
+}
+
+table.installer-table tbody td:nth-child(1) p::before {
   content: "\f17a";
   font-size: 1.6em;
   padding-right: 0.7em;
   vertical-align: middle;
 }
 
-table.installer-table tbody td:nth-child(2) p::before{
+table.installer-table tbody td:nth-child(2) p::before {
   content: "\f179";
   font-size: 2em;
   padding-right: 0.5em;
   vertical-align: sub;
 }
-
-

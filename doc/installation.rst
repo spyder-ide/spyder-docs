@@ -14,18 +14,18 @@ Thanks!
 
 
 
+=====================
+Standalone installers
+=====================
 
-=================
-Spyder Installers
-=================
-
-Here you will find our standalone installers for Windows and macOS which are avaliable from Spyder 4.2 onwards. We recommend using this installation method, but if you want to try another or are using Linux, go to the sections below.
+Our standalone installers for Windows and macOS are available from Spyder 4.2 onwards.
+We recommend using this installation method on those platforms, but we offer several other options for Linux, advanced users and specific needs, so keep reading if that's the case for you.
 
 .. rst-class:: installer-table
 
 .. table::
 
-   ========================================== ==========================================                   
+   ========================================== ==========================================
    `Windows Installer`_                       `macOS Installer`_
    ========================================== ==========================================
 
