@@ -45,6 +45,28 @@ Installing and updating
       :alt: Navigator showing installing specific version of Spyder
 
 
+.. dropdown:: Q: Is commercial use allowed? What's the situation with Anaconda?
+   :container: + dropdown-id-commercial-use
+
+   Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
+   It is developed by its international user community, and supported by its users through `OpenCollective`_ and by its generous sponsoring organizations, including `Quansight`_ and `NumFOCUS`_.
+   Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use.
+
+   .. _OpenCollective: https://opencollective.com/spyder
+   .. _Quansight: https://www.quansight.com/
+   .. _NumFOCUS: https://numfocus.org/
+
+   The Anaconda distribution `recently changed`_ their `Terms of Service`_ to add restrictions on large (> 200 employee) for-profit companies using it on a large scale, but that only applies to the package distribution infrastructure (the packaged Anaconda distribution and the ``defaults`` conda channel).
+   Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda except for the many Python packages installed by default in the Anaconda ``base`` environment (which we recommend you avoid using anyway, as any problems here can break your whole Anaconda installation).
+   Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`standalone_installers_ref`) with ``conda`` as you usually do.
+   Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
+   For more, see our :doc:`installation`.
+
+   .. _recently changed: https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community
+   .. _Terms of Service: https://www.anaconda.com/terms-of-service
+   .. _Miniforge distribution: https://github.com/conda-forge/miniforge/releases/latest
+
+
 
 ==============
 Running Spyder
