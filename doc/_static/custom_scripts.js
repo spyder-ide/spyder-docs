@@ -7,6 +7,9 @@
 
     /* Top-level variables */
 
+    // Name of the dropdown class to check for
+    const dropdownClassName = "dropdown"
+
     // Interactive tour driver options
     var quickstartDriverOptions = {
         animate: false,
@@ -156,6 +159,22 @@
         };
     };
 
+    // Get the currently selected anchor element if its a dropdown
+    function getDropdownElement() {
+        var dropdownID = window.location.hash;
+        if (! dropdownID) {
+          return false;
+        };
+
+        var dropdownElement = document.getElementById(dropdownID.substring(1));
+        if ((! dropdownElement) || (! dropdownElement.classList.contains(dropdownClassName))) {
+          return false;
+        };
+
+        return dropdownElement;
+    };
+
+
     /* Main functions */
 
     var driver = null;
@@ -187,23 +206,59 @@
         });
     };
 
+    // Set up ids and direct links to dropdowns in FAQ
+    function setupDropdownLinks() {
+        var dropdowns = document.getElementsByClassName(dropdownClassName);
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].id = "dropdown-" + (i + 1);
+        };
+    };
+
+    // Scroll to the specified dropdown and open it
+    function scrollToDropdown() {
+        var dropdownElement = getDropdownElement();
+        if (dropdownElement) {
+          dropdownElement.open = true;
+          dropdownElement.scrollIntoView(true);
+          window.scrollBy(0, -100);
+        };
+    };
+
+
     /* Fire events */
 
-    // On initial DOM ready, set up the tour and the version dropdown
+    // Initial DOM ready
     document.addEventListener('DOMContentLoaded', function() {
+        // Set up the tour
         if (document.getElementsByClassName("interactive-tour-container").length) {
             driver = setupTourDriver(quickstartDriverOptions, quickstartTourSteps);
         };
+
+        // Set up the version dropdown
         if (document.getElementById("select-versions")) {
             setupVersionSelector();
         };
+
+        // Set up the dropdown direct links
+        if (document.getElementsByClassName(dropdownClassName).length) {
+            setupDropdownLinks();
+            window.onhashchange = scrollToDropdown
+        };
     });
 
-    // Once everything is loaded, start the tour
+    // Asset load complete
     window.onload = function () {
+        // Start the tour
         if (document.getElementsByClassName("interactive-tour-container").length) {
             startTour();
         };
+
+        // Scroll to and open the dropdown direct links
+        if (getDropdownElement()) {
+            setTimeout(scrollToDropdown, 1);
+        };
     };
+
+
 
 }());
