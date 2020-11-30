@@ -211,6 +211,15 @@
         var dropdowns = document.getElementsByClassName(dropdownClassName);
         for (var i = 0; i < dropdowns.length; i++) {
             dropdowns[i].id = "dropdown-" + (i + 1);
+
+            var aTag = document.createElement('a');
+            aTag.setAttribute("href", "#" + dropdowns[i].id)
+            aTag.classList.add("fas")
+            aTag.classList.add("fa-link")
+            aTag.classList.add("dropdown-link")
+
+            var summaryElement = dropdowns[i].getElementsByClassName("summary-title")[0]
+            summaryElement.insertBefore(aTag, summaryElement.getElementsByClassName("docutils")[0])
         };
     };
 

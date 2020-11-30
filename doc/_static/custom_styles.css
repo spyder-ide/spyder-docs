@@ -280,3 +280,22 @@ table.installer-table tbody td:nth-child(2) p::before {
   padding-right: 0.5em;
   vertical-align: sub;
 }
+
+/* Style for links added to dropdowns */
+
+a.dropdown-link {
+  color: #c60f0f;
+  margin-left: 0.5em;
+  padding: 0.25em;
+  visibility: hidden;
+}
+
+details.dropdown:hover a.dropdown-link {
+  visibility: visible;
+}
+
+a.dropdown-link:hover {
+  background-color: #c60f0f;
+  color: #ffffff;
+  text-decoration: none;
+}
