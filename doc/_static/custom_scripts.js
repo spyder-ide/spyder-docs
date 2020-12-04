@@ -174,6 +174,14 @@
         return dropdownElement;
     };
 
+    // Scroll to the specified element, with an offset for the navbar
+    function scrollToElement(theElement) {
+        if (theElement) {
+            theElement.scrollIntoView(true);
+            window.scrollBy(0, -100);
+        };
+    };
+
 
     /* Main functions */
 
@@ -230,13 +238,16 @@
         };
     };
 
-    // Scroll to the specified dropdown and open it
+    // Open the specified dropdown, wait for images to load then scroll to it
     function scrollToDropdown() {
         var dropdownElement = getDropdownElement();
         if (dropdownElement) {
-            dropdownElement.open = true;
-            dropdownElement.scrollIntoView(true);
-            window.scrollBy(0, -100);
+            if (dropdownElement.open) {
+                scrollToElement(dropdownElement);
+            } else {
+                dropdownElement.open = true;
+                setTimeout(scrollToElement, 500, dropdownElement);
+            };
         };
     };
 
@@ -258,7 +269,7 @@
         // Set up the dropdown direct links
         if (document.getElementsByClassName(dropdownClassName).length) {
             setupDropdownLinks();
-            window.onhashchange = scrollToDropdown
+            window.onhashchange = scrollToDropdown;
         };
     });
 
@@ -271,7 +282,7 @@
 
         // Scroll to and open the dropdown direct links
         if (getDropdownElement()) {
-            setTimeout(scrollToDropdown, 1);
+            scrollToDropdown();
         };
     };
 
