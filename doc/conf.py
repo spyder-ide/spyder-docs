@@ -136,13 +136,13 @@ html_logo = '_static/spyder_logo.png'
 html_theme_options = {
     "external_links": [
         {
-            "url": "/",
-            "name": "Home"
+            "url": "https://www.spyder-ide.org/blog",
+            "name": "Blog",
         },
         {
-            "url": "https://www.spyder-ide.org/blog",
-            "name": "Blog"
-        }
+            "url": "/",
+            "name": "Docs",
+        },
     ],
     "use_edit_page_button": True,
     "show_powered_by": True,
