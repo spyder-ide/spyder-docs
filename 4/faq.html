@@ -772,6 +772,30 @@ Q: I get the message “An error occurred while starting the kernel”. How do I
 </div>
 <p class="card-text">For more information, go to the <a class="reference internal" href="common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">Errors starting the kernel</span></a> section in the <a class="reference internal" href="common-illnesses.html"><span class="doc">Common Illnesses</span></a> page of our troubleshooting guide.</p>
 </div>
+</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-troubleshooting-macos-bigsur">
+<summary class="summary-title card-header">
+Q: Spyder doesn’t launch or is slow on macOS Big Sur. How can I get it working?<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Spyder is in the final stages of being updated for full compatibility with macOS 11 Big Sur, which will be released by the end of 2020 as part of version 4.2.1.
+However, you can get it working right now with the workaround below.
+Make sure you have the Anaconda or Miniconda distribution installed, and run the following commands in the Terminal to install Spyder from Conda-Forge in a clean environment:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-dev <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda activate spyder-dev
+conda install -c conda-forge spyder
+</pre></div>
+</div>
+</div></blockquote>
+<p class="card-text">Then, whenever you want to start Spyder, run the following from the Terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate spyder-dev
+<span class="nb">export</span> <span class="nv">QT_MAC_WANTS_LAYER</span><span class="o">=</span><span class="m">1</span>
+spyder
+</pre></div>
+</div>
+</div>
 </details></div>
 </div>
 
