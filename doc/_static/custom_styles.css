@@ -284,7 +284,7 @@ table.installer-table tbody td:nth-child(2) p::before {
 /* Style for links added to dropdowns */
 
 a.dropdown-link {
-  color: #c60f0f;
+  color: #36557c;
   margin-left: 0.5em;
   padding: 0.25em;
   visibility: hidden;
@@ -295,7 +295,7 @@ details.dropdown:hover a.dropdown-link {
 }
 
 a.dropdown-link:hover {
-  background-color: #c60f0f;
+  background-color: #36557c;
   color: #ffffff;
   text-decoration: none;
 }
