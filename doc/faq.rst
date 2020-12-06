@@ -302,3 +302,25 @@ Troubleshooting
       conda install spyder-kernels=<VERSION>
 
    For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`common-illnesses` page of our troubleshooting guide.
+
+
+.. dropdown:: Q: Spyder doesn't launch or is slow on macOS Big Sur. How can I get it working?
+   :container: + dropdown-id-troubleshooting-macos-bigsur
+
+   Spyder is in the final stages of being updated for full compatibility with macOS 11 Big Sur, which will be released by the end of 2020 as part of version 4.2.1.
+   However, you can get it working right now with the workaround below.
+   Make sure you have the Anaconda or Miniconda distribution installed, and run the following commands in the Terminal to install Spyder from Conda-Forge in a clean environment:
+
+    .. code-block:: bash
+
+       conda create -n spyder-dev python=3
+       conda activate spyder-dev
+       conda install -c conda-forge spyder
+
+   Then, whenever you want to start Spyder, run the following from the Terminal:
+
+   .. code-block:: bash
+
+       conda activate spyder-dev
+       export QT_MAC_WANTS_LAYER=1
+       spyder
