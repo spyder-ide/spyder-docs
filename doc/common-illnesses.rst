@@ -37,6 +37,8 @@ Check the required version of spyder-kernels for your version of Spyder in the f
    4.1.0-4.1.2      1.9.0
    4.1.3            1.9.1
    4.1.4            1.9.3
+   4.1.5-4.1.6      1.9.4
+   4.2.0            1.10.0
    ==============   ==============
 
 To do so, activate the environment, then install ``spyder-kernels``.
