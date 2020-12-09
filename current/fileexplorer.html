@@ -445,12 +445,43 @@
                 
   <div class="section" id="files">
 <h1>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>Files</strong> pane is a built-in filesystem and directory browser allowing you to view and filter files and their properties, open them with the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> or an external tool, and perform common management tasks (varies by platform).</p>
-<img alt="Spyder File Explorer panel, showing a tree view of files and metadata" src="_images/files-standard.png" />
-<div class="section" id="performing-file-operations">
-<h2>Performing file operations<a class="headerlink" href="#performing-file-operations" title="Permalink to this headline">¶</a></h2>
-<p>You can use context menus to access a number of functions on a per-file and per-directory basis, including running scripts, creating, renaming, moving, editing or deleting files, performing basic operations with <code class="docutils literal notranslate"><span class="pre">git</span></code>, and opening an external file explorer.</p>
-<img alt="File Explorer context menu, with common file manipulation tasks" class="align-center" src="_images/files-contextmenu-new.png" />
+<p>The <strong>Files</strong> pane is a filesystem and directory browser built right into Spyder.
+You can view and filter files according to their type and extension, open them with the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> or an external tool, and perform many common operations.</p>
+<img alt="Spyder Files pane, showing a tree view of files and metadata" src="_images/files-standard.png" />
+<div class="section" id="file-operations">
+<h2>File operations<a class="headerlink" href="#file-operations" title="Permalink to this headline">¶</a></h2>
+<p>To browse the files on your system, use the arrows at the top of the pane.
+You can expand/collapse the folders in the pane to display the files and subdirectories hierarchically.
+Double-clicking a folder will open it, showing the files inside and making it your working directory.</p>
+<img alt="Spyder Files pane showing browsing directories" src="_images/files-browse.gif" />
+<p>To open a file in the <span class="guilabel">Editor</span> from the <span class="guilabel">Files</span> pane, double-click its name.
+If you right-click over it, you will see a context menu that allows you to access a number of functions, including running scripts; creating, renaming, moving, deleting files; and opening them in your computer’s file manager.</p>
+<img alt="Spyder Files pane showing context menu" src="_images/files-context-menu.png" />
+<p>You can copy and paste one or several files to and from the pane, and copy their absolute or relative paths to the clipboard as text.
+If copying the paths for multiple files, they will be automatically formatted so you can paste them directly into a Python list.</p>
+<img alt="Spyder Files pane showing copying absolute path to Editor" src="_images/files-copy-path.gif" />
+<p>Additionally, the <span class="guilabel">Files</span> pane allows you to perform basic operations with Git, like commiting your changes and browsing the repository a given file or folder is part of.</p>
+<img alt="Spyder Files pane showing commiting change of file" src="_images/files-commit.gif" />
+</div>
+<div class="section" id="options-menu">
+<h2>Options menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
+<p>The options menu in the top right of the <span class="guilabel">Files</span> pane offers several ways to customize how your files are displayed.</p>
+<p>By default, the pane displays the contents of your working directory without filtering.
+However, it can filter the list to show only files matching the patterns set under <span class="guilabel">Show filenames with these extensions…</span>, if you toggle the <span class="guilabel">Filter filenames</span> button in the pane toolbar.</p>
+<img alt="Spyder Files pane showing filtering files" src="_images/files-filters.gif" />
+<p>You can also activate the <span class="guilabel">Show hidden files</span> option, which will display files that are invisible by default in your operating system.</p>
+<p>Additionally, you can change which file attributes you want to see by hiding or displaying the <span class="guilabel">Type</span>, <span class="guilabel">Size</span> and <span class="guilabel">Date Modified</span> columns using the corresponding menu options.</p>
+<img alt="Spyder Files pane showing columns checked and shown" src="_images/files-columns-display.png" />
+<p>The menu also gives you the option to open files and directories with a single instead of a double click, to suit your preferences.</p>
+</div>
+<div class="section" id="file-associations">
+<h2>File associations<a class="headerlink" href="#file-associations" title="Permalink to this headline">¶</a></h2>
+<p><span class="guilabel">Files</span> allows you to associate different external applications with specific file extensions they can open.
+Under the <span class="guilabel">File associations</span> tab of the <span class="guilabel">Files</span> preferences pane, you can add file types and set the external program used to open each of them by default.</p>
+<img alt="Spyder Files pane showing files associations" src="_images/files-associations.gif" />
+<p>Once you’ve set this up, files will automatically launch in the associated application when opened from Spyder’s <span class="guilabel">Files</span> pane.
+Additionally, when you right-click a file, you will find an <span class="guilabel">Open with…</span> option that will allow you to select from the applications associated with this extension.</p>
+<img alt="Spyder Files pane showing opening file with associated program" src="_images/files-associations-open.gif" />
 </div>
 <div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
@@ -491,7 +522,15 @@
         <ul class="nav section-nav flex-column">
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#performing-file-operations" class="nav-link">Performing file operations</a>
+                <a href="#file-operations" class="nav-link">File operations</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#options-menu" class="nav-link">Options menu</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#file-associations" class="nav-link">File associations</a>
             </li>
         
             <li class="nav-item toc-entry toc-h2">
@@ -521,7 +560,15 @@
             <ul class="nav section-nav flex-column">
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#performing-file-operations" class="nav-link">Performing file operations</a>
+                    <a href="#file-operations" class="nav-link">File operations</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#options-menu" class="nav-link">Options menu</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#file-associations" class="nav-link">File associations</a>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
