@@ -20,43 +20,59 @@ As each Console is executed in a separate process, this won't affect the others 
 
 .. _connecting-external-kernel:
 
-=============================
-Connect to an external kernel
-=============================
+==================================
+Using external kernels with Spyder
+==================================
+
+You can connect to external local and remote kernels (including those managed by QtConsole sessions or the Jupyter Notebook), through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu, the pane menu or its context menu.
+External kernels still support all of the :ref:`features<console-features>` of Spyder's IPython console.
+To work with Spyder, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running.
+
+.. image:: images/console/console-menu.png
+   :alt: Connect to external kernel dialog of the Spyder IPython console
+
 
 Connect to a local kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus.
-External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
+To connect to a local kernel that is already running (e.g. under Jupyter notebook),
 
-.. image:: images/console/console-menu.png
-   :alt: Spyder IPython Console as above, with the options menu open
+#. Note the location of the kernel connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) of the kernel you are running, or its process ID (PID).
+
+   You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
+   Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.
+
+#. In Spyder, click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
+
+#. Browse for or enter the path to the :guilabel:`Connection file` from the previous step.
+
+   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path to the file, :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`.
+
+#. Click :guilabel:`OK` to connect to the kernel.
+
+(Gif of connecting to external kernel SSH ->CAM)
 
 
 Connect to a remote kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to an external kernel,
+To connect to a kernel on a remote machine,
 
-#. Launch an IPython kernel on the local or remote host if one is not already running.
+#. Launch an IPython kernel on the remote host if one is not already running, with ``python -m spyder_kernels.console``.
 
-   * If using Spyder 3.3.0 or later, you'll need to launch the kernel with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
-   * If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
-
-#. Copy the connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
+#. Copy the kernel's connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on.
 
    You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
+   Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.
 
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
 
 #. Browse for or enter the path to the connection file from the previous step.
-   If you're connecting to a local kernel, click :guilabel:`Ok` and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.
 
-   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine.
+   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine, if you've copied the connection file there.
 
-#. If connecting to a remote kernel over ``ssh``, check the appropriate box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
-   Then, enter *either* :file:`{username}` 's password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
+#. Check the :guilabel:`This is a remote kernel (via SSH)` box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
+   Then, enter *either* :file:`{username}`'s password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`OK`.
 
    The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
 
