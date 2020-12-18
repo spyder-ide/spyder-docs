@@ -18,6 +18,60 @@ As each Console is executed in a separate process, this won't affect the others 
 
 
 
+.. _console-features:
+
+==================
+Supported features
+==================
+
+Any :guilabel:`IPython Console`, whether :ref:`external<connecting-external-kernel>` or started by Spyder, supports:
+
+* Automatic code completion
+* Real-time function calltips
+* Full GUI integration with the enhanced Spyder :doc:`debugging`.
+* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects.
+* Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
+
+.. image:: images/console/console-completion.png
+   :alt: Spyder IPython Console, with a popup list of code completion guesses
+
+For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_.
+
+.. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
+
+
+
+================
+Special consoles
+================
+
+Spyder also supports several types of specialized consoles.
+A `Cython console`_ will allow you to use Cython language to speed up your code and call C functions directly from Python.
+A `Sympy console`_ allows creating and displaying symbolic math expressions right inside Spyder.
+Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and not recommended for new code, it can be used for older scripts that need this.
+
+.. _Cython console: https://cython.org/#documentation
+.. _Sympy console: https://docs.sympy.org/latest/index.html
+.. _Pylab console: https://matplotlib.org/faq/usage_faq.html#matplotlib-pyplot-and-pylab-how-are-they-related
+
+(Gif opening menu and showing opening one of the special consoles)
+
+
+
+============
+Options menu
+============
+
+The options menu allows you to inspect your current environment variables and the contents of your system's ``PATH`` in Spyder :doc:`variableexplorer` browsers with :guilabel:`Show environment variables` and :guilabel:`Show sys.path contents` respectively, and you can have each kernel display how long it has been running with :guilabel:`Show elapsed time`.
+
+(Screenshot of options menu)
+
+You can also change the name of the current :guilabel:`IPython console` tab by simply double-clicking it, or with the :guilabel:`Rename tab` option.
+
+(Gif of changing name)
+
+
+
 .. _connecting-external-kernel:
 
 ==================================
@@ -82,60 +136,6 @@ For more technical details about connecting to remote IPython kernels, see the `
 Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
 
 .. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
-
-
-
-================
-Special consoles
-================
-
-Spyder also supports several types of specialized consoles.
-A `Cython console`_ will allow you to use Cython language to speed up your code and call C functions directly from Python.
-A `Sympy console`_ allows creating and displaying symbolic math expressions right inside Spyder.
-Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and not recommended for new code, it can be used for older scripts that need this.
-
-.. _Cython console: https://cython.org/#documentation
-.. _Sympy console: https://docs.sympy.org/latest/index.html
-.. _Pylab console: https://matplotlib.org/faq/usage_faq.html#matplotlib-pyplot-and-pylab-how-are-they-related
-
-(Gif opening menu and showing opening one of the special consoles)
-
-
-
-.. _console-features:
-
-==================
-Supported features
-==================
-
-Any :guilabel:`IPython Console`, whether :ref:`external<connecting-external-kernel>` or started by Spyder, supports:
-
-* Automatic code completion
-* Real-time function calltips
-* Full GUI integration with the enhanced Spyder :doc:`debugging`.
-* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects.
-* Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
-
-.. image:: images/console/console-completion.png
-   :alt: Spyder IPython Console, with a popup list of code completion guesses
-
-For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_.
-
-.. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
-
-
-
-============
-Options menu
-============
-
-The options menu allows you to inspect your current environment variables and the contents of your system's ``PATH`` in Spyder :doc:`variableexplorer` browsers with :guilabel:`Show environment variables` and :guilabel:`Show sys.path contents` respectively, and you can have each kernel display how long it has been running with :guilabel:`Show elapsed time`.
-
-(Screenshot of options menu)
-
-You can also change the name of the current :guilabel:`IPython console` tab by simply double-clicking it, or with the :guilabel:`Rename tab` option.
-
-(Gif of changing name)
 
 
 
