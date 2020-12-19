@@ -15,7 +15,7 @@ Panes in Depth
     findinfiles
     historylog
     profiler
-    debugging
+    Debugger<debugging>
     pylint
     onlinehelp
 
