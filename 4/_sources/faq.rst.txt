@@ -323,6 +323,40 @@ Troubleshooting
 
    .. code-block:: bash
 
-       conda activate spyder-dev
-       export QT_MAC_WANTS_LAYER=1
-       spyder
+      conda activate spyder-dev
+      export QT_MAC_WANTS_LAYER=1
+      spyder
+
+
+
+============
+About Spyder
+============
+
+.. dropdown:: Q: What's Spyder's licensing situation? Is commercial use allowed?
+   :container: + dropdown-id-commercial-use
+
+   Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
+   It is developed by its international user community, and supported by its users through `OpenCollective`_ and by its generous sponsoring organizations, including `Quansight`_ and `NumFOCUS`_.
+   Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use.
+   For more details about the situation with Anaconda, see `that question`_.
+
+   .. _OpenCollective: https://opencollective.com/spyder
+   .. _Quansight: https://www.quansight.com/
+   .. _NumFOCUS: https://numfocus.org/
+   .. _that question: #anaconda-license
+
+
+.. dropdown:: Q: What do the Anaconda licensing changes mean for Spyder?
+   :container: + dropdown-id-anaconda-license
+
+   If you use Spyder with the Anaconda distribution, they `recently changed`_ their `Terms of Service`_ to add restrictions on large (> 200 employee) for-profit companies using Anaconda on a large scale.
+   However, these terms only apply to the package infrastructure (the full Anaconda distribution and the ``defaults`` conda channel).
+   Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
+   Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`standalone_installers_ref`) with ``conda`` as you usually do.
+   Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
+   For more, see our :doc:`installation`.
+
+   .. _recently changed: https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community
+   .. _Terms of Service: https://www.anaconda.com/terms-of-service
+   .. _Miniforge distribution: https://github.com/conda-forge/miniforge/releases/latest

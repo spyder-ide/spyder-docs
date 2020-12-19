@@ -803,6 +803,35 @@ spyder
 </div>
 </div>
 </details></div>
+<div class="section" id="about-spyder">
+<h2>About Spyder<a class="headerlink" href="#about-spyder" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3 dropdown-id-commercial-use">
+<summary class="summary-title card-header">
+Q: What’s Spyder’s licensing situation? Is commercial use allowed?<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
+It is developed by its international user community, and supported by its users through <a class="reference external" href="https://opencollective.com/spyder">OpenCollective</a> and by its generous sponsoring organizations, including <a class="reference external" href="https://www.quansight.com/">Quansight</a> and <a class="reference external" href="https://numfocus.org/">NumFOCUS</a>.
+Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use.
+For more details about the situation with Anaconda, see <a class="reference external" href="#anaconda-license">that question</a>.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-anaconda-license">
+<summary class="summary-title card-header">
+Q: What do the Anaconda licensing changes mean for Spyder?<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">If you use Spyder with the Anaconda distribution, they <a class="reference external" href="https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community">recently changed</a> their <a class="reference external" href="https://www.anaconda.com/terms-of-service">Terms of Service</a> to add restrictions on large (&gt; 200 employee) for-profit companies using Anaconda on a large scale.
+However, these terms only apply to the package infrastructure (the full Anaconda distribution and the <code class="docutils literal notranslate"><span class="pre">defaults</span></code> conda channel).
+Instead, you can simply download the similar <a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest">Miniforge distribution</a>, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
+Then, simply install the packages you need (including Spyder, if you aren’t using our recommended <a class="reference internal" href="installation.html#standalone-installers-ref"><span class="std std-ref">Standalone installers</span></a>) with <code class="docutils literal notranslate"><span class="pre">conda</span></code> as you usually do.
+Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
+For more, see our <a class="reference internal" href="installation.html"><span class="doc">Installation Guide</span></a>.</p>
+</div>
+</details></div>
 </div>
 
 
@@ -848,6 +877,10 @@ spyder
                 <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
             </li>
         
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#about-spyder" class="nav-link">About Spyder</a>
+            </li>
+        
         </ul>
     </nav>
 </div>
@@ -884,6 +917,10 @@ spyder
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
                     <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#about-spyder" class="nav-link">About Spyder</a>
                 </li>
             
             </ul>
