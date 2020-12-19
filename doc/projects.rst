@@ -5,7 +5,8 @@ Projects
 Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :doc:`editor` from the last time you opened that project.
 With the :ref:`Project <project-explorer>` pane, you can browse all your project's files, regardless of your current working directory or :doc:`fileexplorer` location.
 
-(Screenshot of Spyder with project explorer and projects menu)
+.. image:: images/projects/projects-main.png
+   :alt: Spyder showing Project Explorer and projects menu
 
 In addition, your project's root folder is used to set your working directory, and automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create inside of it.
 
@@ -22,7 +23,8 @@ Creating a Project
 
 To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a :guilabel:`Project` with an existing directory or make a new one, and enter the :guilabel:`Project`'s name and path.
 
-(Gif showing opening a new project)
+.. image:: images/projects/projects-new.gif
+   :alt: Spyder showing opening a new project
 
 
 
