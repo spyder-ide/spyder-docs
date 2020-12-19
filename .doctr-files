@@ -206,7 +206,9 @@
 ./4/_images/help-hover.png
 ./4/_images/help-modes.gif
 ./4/_images/help-tutorial.png
-./4/_images/history-menu.png
+./4/_images/history-log-file.png
+./4/_images/history-standard.png
+./4/_images/history-wrap.gif
 ./4/_images/installation-anaconda-navigator.png
 ./4/_images/installation-conda-install.gif
 ./4/_images/installation-pip-install.gif
@@ -470,7 +472,9 @@
 ./current/_images/help-hover.png
 ./current/_images/help-modes.gif
 ./current/_images/help-tutorial.png
-./current/_images/history-menu.png
+./current/_images/history-log-file.png
+./current/_images/history-standard.png
+./current/_images/history-wrap.gif
 ./current/_images/installation-anaconda-navigator.png
 ./current/_images/installation-conda-install.gif
 ./current/_images/installation-pip-install.gif

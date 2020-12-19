@@ -445,17 +445,25 @@
                 
   <div class="section" id="history">
 <h1>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h1>
-<p>With the <strong>History</strong> pane, you can view an automatically de-duplicated, time-stamped list of every command you enter into any connected <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.</p>
-<img alt="Spyder History Log, displaying a list of previously executed commands" src="_images/history-menu.png" />
-<div class="section" id="using-the-history-log">
-<h2>Using the History Log<a class="headerlink" href="#using-the-history-log" title="Permalink to this headline">¶</a></h2>
-<p>Navigating the <span class="guilabel">History Log</span> is very straightforward.
-Each session is marked by a date and time-stamp, making it easy to remember when you executed a certain command.
+<p>With the <strong>History</strong> pane, you can view all the commands you’ve entered into any <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>, along with their timestamp.</p>
+<img alt="Spyder History Log, displaying a list of previously executed commands" src="_images/history-standard.png" />
+<div class="section" id="using-the-history-pane">
+<h2>Using the History pane<a class="headerlink" href="#using-the-history-pane" title="Permalink to this headline">¶</a></h2>
+<p>Navigating the <span class="guilabel">History</span> pane is very straightforward.
+Each Spyder session is marked by a date and timestamp, making it easy to remember when you executed a certain command.
 Statements can be selected and copied from the context menu or with the normal system shortcuts.
-Just like in the editor, highlighting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.
-Finally, the top-right options menu (<span class="guilabel">Gear</span> icon) allows you to toggle soft-wrapping of long lines (<span class="guilabel">Wrap lines</span>), and set the number of commands the <span class="guilabel">History Log</span> should remember (<span class="guilabel">History</span>).</p>
-<p>The <span class="guilabel">History Log</span> is stored in the <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> (Python 3) or <code class="file docutils literal notranslate"><span class="pre">spyder</span></code> (Python 2) directory in your user home folder (by default, <code class="file docutils literal notranslate"><span class="pre">C:/Users/</span><em><span class="pre">username</span></em></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/</span><em><span class="pre">username</span></em></code> for macOS, and typically <code class="file docutils literal notranslate"><span class="pre">/home/</span><em><span class="pre">username</span></em></code> on GNU/Linux).
+Just like in the Editor, selecting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.</p>
+</div>
+<div class="section" id="options-menu">
+<h2>Options Menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
+<p>The top-right options menu (<span class="guilabel">Hamburger</span> icon) allows you to toggle wrapping of long lines (<span class="guilabel">Wrap lines</span>), and whether the line number is displayed to the left of the text (<span class="guilabel">Show line numbers</span>).</p>
+<img alt="Spyder History Log, displaying wraping lines and showing line number" src="_images/history-wrap.gif" />
+</div>
+<div class="section" id="advanced-usage">
+<h2>Advanced usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h2>
+<p>The list of commands shown in the <span class="guilabel">History</span> pane are stored in <code class="file docutils literal notranslate"><span class="pre">history.py</span></code> in the <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> directory in your user home folder (by default, <code class="file docutils literal notranslate"><span class="pre">C:/Users/</span><em><span class="pre">username</span></em></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/</span><em><span class="pre">username</span></em></code> for macOS, and typically <code class="file docutils literal notranslate"><span class="pre">/home/</span><em><span class="pre">username</span></em></code> on GNU/Linux).
 You might need to show invisible files in order to see it on a non-Windows operating system.</p>
+<img alt="Spyder History Log file" src="_images/history-log-file.png" />
 </div>
 <div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
@@ -494,7 +502,15 @@ You might need to show invisible files in order to see it on a non-Windows opera
         <ul class="nav section-nav flex-column">
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#using-the-history-log" class="nav-link">Using the History Log</a>
+                <a href="#using-the-history-pane" class="nav-link">Using the History pane</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#options-menu" class="nav-link">Options Menu</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#advanced-usage" class="nav-link">Advanced usage</a>
             </li>
         
             <li class="nav-item toc-entry toc-h2">
@@ -524,7 +540,15 @@ You might need to show invisible files in order to see it on a non-Windows opera
             <ul class="nav section-nav flex-column">
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#using-the-history-log" class="nav-link">Using the History Log</a>
+                    <a href="#using-the-history-pane" class="nav-link">Using the History pane</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#options-menu" class="nav-link">Options Menu</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#advanced-usage" class="nav-link">Advanced usage</a>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
