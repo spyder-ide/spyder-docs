@@ -24,7 +24,6 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/driver.min.js"></script>
     <script src="_static/custom_scripts.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -449,7 +448,7 @@
 You can view and filter files according to their type and extension, open them with the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> or an external tool, and perform many common operations.</p>
 <img alt="Spyder Files pane, showing a tree view of files and metadata" src="_images/files-standard.png" />
 <div class="section" id="file-operations">
-<h2>File operations<a class="headerlink" href="#file-operations" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>File operations<a class="headerlink" href="#file-operations" title="Permalink to this headline">¶</a></h2>
 <p>To browse the files on your system, use the arrows at the top of the pane.
 You can expand/collapse the folders in the pane to display the files and subdirectories hierarchically.
 Double-clicking a folder will open it, showing the files inside and making it your working directory.</p>
@@ -460,7 +459,11 @@ If you right-click over it, you will see a context menu that allows you to acces
 <p>You can copy and paste one or several files to and from the pane, and copy their absolute or relative paths to the clipboard as text.
 If copying the paths for multiple files, they will be automatically formatted so you can paste them directly into a Python list.</p>
 <img alt="Spyder Files pane showing copying absolute path to Editor" src="_images/files-copy-path.gif" />
-<p>Additionally, the <span class="guilabel">Files</span> pane allows you to perform basic operations with Git, like commiting your changes and browsing the repository a given file or folder is part of.</p>
+</div>
+<div class="section" id="version-control-support">
+<span id="files-vcs-support"></span><h2>Version control support<a class="headerlink" href="#version-control-support" title="Permalink to this headline">¶</a></h2>
+<p>The <span class="guilabel">Files</span> pane allows you to perform basic operations with the <a class="reference external" href="https://git-scm.com/">Git</a> distributed version control system, like commiting your changes and browsing the repository a given file or folder is part of.
+This is <a class="reference internal" href="projects.html#vcs-section"><span class="std std-ref">particularly useful</span></a> when you’re working in Spyder <a class="reference internal" href="projects.html"><span class="doc">Projects</span></a>.</p>
 <img alt="Spyder Files pane showing commiting change of file" src="_images/files-commit.gif" />
 </div>
 <div class="section" id="options-menu">
@@ -526,6 +529,10 @@ Additionally, when you right-click a file, you will find an <span class="guilabe
             </li>
         
             <li class="nav-item toc-entry toc-h2">
+                <a href="#version-control-support" class="nav-link">Version control support</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
                 <a href="#options-menu" class="nav-link">Options menu</a>
             </li>
         
@@ -561,6 +568,10 @@ Additionally, when you right-click a file, you will find an <span class="guilabe
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
                     <a href="#file-operations" class="nav-link">File operations</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#version-control-support" class="nav-link">Version control support</a>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
@@ -653,7 +664,7 @@ Additionally, when you right-click a file, you will find an <span class="guilabe
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.0</a>
                     
                     
                       <span class="pipe-red">|</span>

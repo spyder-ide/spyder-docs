@@ -198,7 +198,6 @@
 ./4/_images/find-in-files-regex.gif
 ./4/_images/find-in-files-search.gif
 ./4/_images/first-steps-show-details.png
-./4/_images/git-for-windows-install-path.png
 ./4/_images/help-automatic-connections.gif
 ./4/_images/help-command.png
 ./4/_images/help-console.gif
@@ -247,7 +246,8 @@
 ./4/_images/profiler-previous-paths.png
 ./4/_images/profiler-save-load.gif
 ./4/_images/profiler-standard.png
-./4/_images/projects-new-project.png
+./4/_images/projects-main.png
+./4/_images/projects-new.gif
 ./4/_images/projects-standard.png
 ./4/_images/submit-a-report-conda-list.png
 ./4/_images/submit-a-report-error-dialog.png
@@ -464,7 +464,6 @@
 ./current/_images/find-in-files-regex.gif
 ./current/_images/find-in-files-search.gif
 ./current/_images/first-steps-show-details.png
-./current/_images/git-for-windows-install-path.png
 ./current/_images/help-automatic-connections.gif
 ./current/_images/help-command.png
 ./current/_images/help-console.gif
@@ -513,7 +512,8 @@
 ./current/_images/profiler-previous-paths.png
 ./current/_images/profiler-save-load.gif
 ./current/_images/profiler-standard.png
-./current/_images/projects-new-project.png
+./current/_images/projects-main.png
+./current/_images/projects-new.gif
 ./current/_images/projects-standard.png
 ./current/_images/submit-a-report-conda-list.png
 ./current/_images/submit-a-report-error-dialog.png

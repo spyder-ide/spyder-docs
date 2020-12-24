@@ -10,6 +10,8 @@ You can view and filter files according to their type and extension, open them w
 
 
 
+.. _file-operations:
+
 ===============
 File operations
 ===============
@@ -33,7 +35,18 @@ If copying the paths for multiple files, they will be automatically formatted so
 .. image:: images/files/files-copy-path.gif
    :alt: Spyder Files pane showing copying absolute path to Editor
 
-Additionally, the :guilabel:`Files` pane allows you to perform basic operations with Git, like commiting your changes and browsing the repository a given file or folder is part of.
+
+
+.. _files-vcs-support:
+
+=======================
+Version control support
+=======================
+
+The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like commiting your changes and browsing the repository a given file or folder is part of.
+This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :doc:`projects`.
+
+.. _Git: https://git-scm.com/
 
 .. image:: images/files/files-commit.gif
    :alt: Spyder Files pane showing commiting change of file
