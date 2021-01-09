@@ -48,11 +48,14 @@ We recommend using this installation method on those platforms, but we offer sev
 .. table::
 
    ========================================== ==========================================
-   `Windows Installer`_                       `macOS Installer`_
+   `Windows Installer (full)`_                       `macOS Installer (full)`_
+   `Windows Installer (lite)`_                       `macOS Installer (lite)`_
    ========================================== ==========================================
 
-.. _Windows Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe
-.. _macOS Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder.dmg
+.. _Windows Installer (full): https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe
+.. _Windows Installer (lite): https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_lite.exe
+.. _macOS Installer (full): https://github.com/spyder-ide/spyder/releases/latest/download/Spyder.dmg
+.. _macOS Installer (lite): https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Lite.dmg
 
 
 
