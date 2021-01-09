@@ -58,6 +58,27 @@ We recommend using this installation method on those platforms, but we offer sev
 .. _macOS Installer (lite): https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Lite.dmg
 
 
+Using External Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The principle advantage of the standalone installers is that Spyder is completely self-contained and does not require an external Python installation to run the application, in addition to leveraging features provided by the operating system.
+However, you may need to define your own custom Python environments (such as with Anaconda, pyenv, or virtualenv) and Spyder lets you work with these as well.
+If you have Anaconda or pyenv environments on your system, Spyder will automatically identify them and you can select them by going to ``Preferences > Python Interpreter > Use the following interpreter`` and selecting the desired environment in the dropdown list.
+Alternatively, for virtualenv/venv environments anywhere on your system, click the "Select File" button next to the dropdown list and navigate the Python executable file in the desired environment.
+
+In order to use any external environment for your IPython console, you must have `spyder-kernels` installed in that environment.
+After activating your environment in a terminal window, do the following.
+For a conda environment:
+
+.. code-block:: bash
+
+    conda install spyder-kernels
+
+And for other environments:
+
+.. code-block:: bash
+
+    pip install spyder-kernels
 
 ==============
 Using Anaconda
