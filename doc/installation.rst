@@ -66,6 +66,9 @@ However, you may need to define your own custom Python environments (such as wit
 If you have Anaconda or pyenv environments on your system, Spyder will automatically identify them and you can select them by going to ``Preferences > Python Interpreter > Use the following interpreter`` and selecting the desired environment in the dropdown list.
 Alternatively, for virtualenv/venv environments anywhere on your system, click the "Select File" button next to the dropdown list and navigate the Python executable file in the desired environment.
 
+.. image:: images/installation/installation-preferences-interpreter.png
+    :alt: Spyder Preferences showing interpreter
+
 In order to use any external environment for your IPython console, you must have `spyder-kernels` installed in that environment.
 After activating your environment in a terminal window, do the following.
 For a conda environment:
