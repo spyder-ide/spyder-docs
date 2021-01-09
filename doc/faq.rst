@@ -9,9 +9,15 @@ Installing and updating
 .. dropdown:: Q: How do I install Spyder?
    :container: + dropdown-id-install-spyder
 
-   The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
+   The easiest way to install Spyder for macOS or Windows is to download the standalone application from Spyder's `main page`_.
+   For macOS, just open the downloaded dmg file and drag Spyder to the Applications folder.
+   For Windows, double-click the downloaded installer executable and follow the installer instructions.
+   
+   You can also install Spyder with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
+   This is the only option for Linux platforms.
    Download it from its `webpage`_.
 
+   .. _main page: https://www.spyder-ide.org
    .. _webpage: https://www.anaconda.com/products/individual
 
    For more information, visit our :doc:`/installation`.
