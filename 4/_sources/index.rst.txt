@@ -17,8 +17,8 @@ It features a unique combination of the advanced editing, analysis, debugging, a
 Where to go now?
 ================
 
-Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each of its panes.
-These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with the IDE.
+Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
+These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
 .. panels::
     :container: container-lg pb-3 px-md-0 px-5
