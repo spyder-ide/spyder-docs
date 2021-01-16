@@ -1,0 +1,15 @@
+name: 'Install and Build'
+description: 'Setup the environment, install dependencies and build the docs'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh
+    - name: Build with Sphinx-Multiversion
+      shell: bash
+      run: ./ci/build.sh

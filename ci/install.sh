@@ -5,7 +5,7 @@ pip3 install sphinx doctr sphinx-panels sphinx-multiversion
 # You can change the command above to use a different version of the theme (but return it to the correct one before merging)
 pip3 install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 # Needed to build PR previews using Netlify with the different versions of the docs available
-if [ "${CI-}" = "true" ]; then
+if [ "${NETLIFY-}" = "true" ]; then
     git config --global user.email "spyder.python@gmail.com"
     git config --global user.name "Spyder-Docs Deploy Bot"
     git config remote.upstream.url >&- || git remote add upstream https://github.com/spyder-ide/spyder-docs.git

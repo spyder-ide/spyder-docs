@@ -1,0 +1,12 @@
+name: 'Setup and Install'
+description: 'Setup the environment and install dependencies'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh

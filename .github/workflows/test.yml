@@ -1,0 +1,33 @@
+# Builds the docs and tests that they work correctly
+# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test Docs
+
+on: [pull_request]
+
+jobs:
+  build:
+    name: Build docs
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install and Build
+        uses: ./.github/actions/install-and-build
+
+  linkcheck:
+    name: Check links
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup and Install
+        uses: ./.github/actions/setup-and-install
+      - name: Run Linkcheck
+        run: make linkcheck
