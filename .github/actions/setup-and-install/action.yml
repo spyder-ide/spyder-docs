@@ -1,0 +1,8 @@
+name: 'Setup and Install'
+description: 'Set up the environment and install dependencies'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh
