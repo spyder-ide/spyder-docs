@@ -23,6 +23,7 @@ from docutils.parsers.rst import Directive, directives
 #
 
 # Standard library imports
+import datetime
 import os
 import subprocess
 
@@ -32,6 +33,7 @@ import subprocess
 # Constants
 CI = os.environ.get("CI")
 TRAVIS_BRANCH = os.environ.get("TRAVIS_BRANCH")
+UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 
 # -- General configuration ---------------------------------------------------
 
@@ -66,7 +68,12 @@ master_doc = "index"
 
 # General information about the project.
 project = "Spyder"
-copyright = " 2021 Spyder Doc Contributors <a href='https://opensource.org/licenses/MIT' target='_blank'>MIT License</a>"
+copyright = (
+    f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
+    "<span class='pipe-red'>|</span> "
+    "<a href='https://opensource.org/licenses/MIT' "
+    "target='_blank'>MIT License</a>"
+    )
 author = "The Spyder Doc Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
