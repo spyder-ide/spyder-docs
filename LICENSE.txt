@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2009-2018 Spyder Doc Contributors (see AUTHORS.txt)
+Copyright (c) 2009-2021 Spyder Doc Contributors (see AUTHORS.txt)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
