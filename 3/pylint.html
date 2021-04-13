@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/driver.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom_styles.css" />
     <link href="_static/css/theme.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -328,7 +328,7 @@ The analyzer works with both <code class="docutils literal notranslate"><span cl
 Then, to run it, select <span class="menuselection">Sour<span class="accelerator">c</span>e ‣ Run static code analysis</span> from the menubar, click the <span class="guilabel">Analyze</span> button in the pane, or press the configurable static analysis shortcut (<kbd class="kbd docutils literal notranslate">F8</kbd> by default).
 Cancel analyzing a file with the <span class="guilabel">Stop</span> button, and if analysis fails, click the <span class="guilabel">Output</span> button to find out why.</p>
 <p>To go directly to the file and line in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> highlighted by a failed check, just click its name.
-You can click the dropdown or press the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> key in the filename field to view results of previous analyses; the number of recent runs Spyder should remember can be customized in the <span class="guilabel">History</span> dialog from the <span class="guilabel">Static Code Analysis</span> context menu.
+You can click the dropdown or press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> key in the filename field to view results of previous analyses; the number of recent runs Spyder should remember can be customized in the <span class="guilabel">History</span> dialog from the <span class="guilabel">Static Code Analysis</span> context menu.
 All standard checks are run by default.
 You can turn certain messages off at the line, block or file/module level by adding a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=&lt;list</span> <span class="pre">of</span> <span class="pre">message</span> <span class="pre">names&gt;</span></code> comment at the respective level, where the <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> portion should be replaced with a comma-separated list (or single value) without the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>/<code class="docutils literal notranslate"><span class="pre">&gt;</span></code> of Pylint message names (<em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">multiple-statements</span></code>, or <code class="docutils literal notranslate"><span class="pre">fixme,</span> <span class="pre">line-too-long</span></code>; you can also use error codes like <code class="docutils literal notranslate"><span class="pre">C0321</span></code> although names are preferred for clarity).
 Or, you can globally suppress certain messages by editing the <code class="file docutils literal notranslate"><span class="pre">.pylintrc</span></code> configuration file in your user home directory.
@@ -489,7 +489,7 @@ For more details on configuring Pylint, see the <a class="reference external" hr
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
                     
                     
                       <span class="pipe-red">|</span>

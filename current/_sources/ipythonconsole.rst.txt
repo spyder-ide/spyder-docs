@@ -2,64 +2,21 @@
 IPython Console
 ###############
 
-The **IPython Console** allows you to execute commands and enter, interact with and visualize data inside any number of fully featured `IPython`_ interpreters.
-Each console is executed in a separate process, allowing you to run scripts, interrupt execution and restart or terminate a shell without affecting the others or Spyder itself, and easily test your code in a clean environment without disrupting your primary session.
+The **IPython Console** allows you to execute commands and interact with data inside `IPython`_ interpreters.
 
 .. _IPython: https://ipython.org/
 
 .. image:: images/console/console-standard.png
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
+To launch a new IPython instance, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu, or use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused.
 
-=======================
-Connecting to a console
-=======================
+.. image:: images/console/console-new.gif
+   :alt: Spyder showing opening a new Ipython Console
 
-Spyder can launch new IPython instances itself, through "Open an IPython console" under the :guilabel:`Consoles` menu, the :guilabel:`IPython Console` pane menu or its context menu (:kbd:`Ctrl-T` by default), to take advantage of the full suite of Spyder's features.
-Each console implements a robust two-process IPython session, with a lightweight front-end interface connected to a full kernel back end.
-You can also connect to external local and remote kernels, including those managed by QtConsole sessions or the Jupyter Notebook, through the :guilabel:`Connect to an existing kernel` dialog under the same menus.
-External kernels still support :ref:`many <console-features>` (though not all) of Spyder's advanced capabilities.
+From the same menu, you can stop currently executing code with :guilabel:`Interrupt kernel`, clear a console's namespace with :guilabel:`Remove all variables`, or relaunch a fresh one with :guilabel:`Restart kernel`.
+As each console is executed in a separate process, this won't affect any others you've opened, and you will be able to easily test your code in a clean environment without disrupting your primary session.
 
-.. image:: images/console/console-menu.png
-   :alt: Spyder IPython Console as above, with the options menu open
-
-
-Connect to an external kernel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-   If on Windows and connecting to a remote machine over ``ssh``, you'll need to install the ``paramiko`` python package first, *e.g.* with ``conda install paramiko`` if using Anaconda.
-
-To connect to an external kernel,
-
-#. Launch an IPython kernel on the local or remote host if one is not already running.
-
-   * If using Spyder 3.3.0 or later, you'll need to launch the kernel with ``python -m spyder_kernels.console`` (after you've first installed ``spyder-kernels`` on the host with ``<conda/pip> install spyder-kernels``).
-   * If using a version of Spyder before 3.3.0, ``ipython kernel`` should work to launch the kernel, albeit without certain Spyder-specific features.
-
-#. Copy the connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on (if remote) or note its location (if local).
-
-   You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
-
-#. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Console` menu or the :guilabel:`IPython Console` pane's "Gear" menu.
-
-#. Browse for or enter the path to the connection file from the previous step.
-   If you're connecting to a local kernel, click :guilabel:`Ok` and Spyder should connect to the kernel; if a remote kernel, proceed to the final step.
-
-   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine.
-
-#. If connecting to a remote kernel over ``ssh``, check the appropriate box and type the full hostname you're connecting to (in the form :file:`{username}@{hostname}:{port-number}`).
-   Then, enter *either* :file:`{username}` 's password on the remote machine, or your user SSH keyfile (typically :file:`.perm`) (only one is needed to connect), and press :guilabel:`Ok`.
-
-   The port number is the one on which the SSH daemon (``sshd``) is running, typically 22 unless you or your administrator has configured it otherwise.
-
-.. image:: images/console/console-dialog-connect.png
-   :alt: Connect to kernel dialog, requesting path and connection details
-
-For more technical details about connecting to remote IPython kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
-Just remember to enter the appropriate details into Spyder's :guilabel:`Connect to an existing kernel` dialog instead of launching a new frontend on the client with ``--existing``.
-
-.. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
 
 
 .. _console-features:
@@ -68,46 +25,158 @@ Just remember to enter the appropriate details into Spyder's :guilabel:`Connect 
 Supported features
 ==================
 
-Any :guilabel:`IPython Console` in Spyder, internally or externally created, supports additional features including:
-
-.. image:: images/console/console-completion.png
-   :alt: Spyder IPython Console, with a popup list of code completion guesses
+Any :guilabel:`IPython Console`, whether :ref:`external<connecting-external-kernel>` or started by Spyder, supports:
 
 * Automatic code completion
 * Real-time function calltips
-* Debugging toolbar integration for launching the debugger and controlling execution flow
+* Full GUI integration with the enhanced Spyder :doc:`Debugger<debugging>`.
+* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects.
+* Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
 
-Spyder-created consoles support even more advanced capabilities, such as:
-
-* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects
-* Full GUI integration with the enhanced IPython debugger, ``ipdb``, including viewing and setting normal and conditional breakpoints interactively in any file, a :guilabel:`Breakpoints` pane, and following along with execution flow in the in the :doc:`editor` (see the :doc:`debugging` documentation for more details)
-* The :ref:`User Module Reloader <umr-section>`, which can automatically re-import modified packages and files
-* Inline display of Matplotlib graphics, if the ``Inline`` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`
+.. image:: images/console/console-completion.png
+   :alt: Spyder IPython Console, with a popup list of code completion guesses
 
 For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_.
 
 .. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
 
 
+
+================
+Special consoles
+================
+
+Spyder also supports several types of specialized consoles.
+A `Sympy console`_ enables creating and displaying symbolic math expressions right inside Spyder.
+A `Cython console`_ allows you to use the Cython language to speed up your code and call C functions directly from Python.
+Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it.
+
+.. _Cython console: https://cython.org/#documentation
+.. _Sympy console: https://docs.sympy.org/latest/index.html
+.. _Pylab console: https://matplotlib.org/stable/api/index.html
+
+.. image:: images/console/console-special.gif
+   :alt: Spyder showing opening a new special Console
+
+
+
+============
+Options menu
+============
+
+The options menu allows you to inspect your current environment variables (:guilabel:`Show environment variables`), and the contents of your system's ``PATH`` (:guilabel:`Show sys.path contents`).
+In addition, you can have each console display how long it has been running with :guilabel:`Show elapsed time`.
+
+.. image:: images/console/console-options-menu.png
+   :alt: Spyder IPython Console with options menu
+
+You can also change the name of the current :guilabel:`IPython console` tab with the :guilabel:`Rename tab` option, or by simply double-clicking it.
+
+.. image:: images/console/console-rename.gif
+   :alt: Spyder IPython Console showing renaming console
+
+
+
+.. _connecting-external-kernel:
+
+======================
+Using external kernels
+======================
+
+You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
+For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running.
+
+.. image:: images/console/console-menu.png
+   :alt: Connect to external kernel dialog of the Spyder IPython console
+
+
+Connect to a local kernel
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect to a local kernel that is already running (e.g. one started by Jupyter notebook),
+
+#. Run ``%connect_info`` in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after ``jupyter <app> --existing``.
+
+   .. image:: images/console/console-connect-local-step1.gif
+      :alt: Running connect_info in a Jupyter notebook
+
+#. In Spyder, click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and paste the name of the :guilabel:`Connection file` from the previous step.
+
+   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path of the file, i.e. :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`.
+
+   .. image:: images/console/console-connect-local-step2.gif
+      :alt: Copying the connection filename into Spyder's dialog
+
+#. Click :guilabel:`OK` to connect to the kernel.
+
+   .. image:: images/console/console-connect-local-step3.gif
+      :alt: Connecting to the kernel and running basic commands.
+
+
+Connect to a remote kernel
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect to a kernel on a remote machine,
+
+#. Launch a Spyder kernel on the remote host if one is not already running, with ``python -m spyder_kernels.console``.
+
+   .. image:: images/console/console-connect-remote-step1.gif
+      :alt: Staring a Spyder kernel on a remote machine
+
+#. Copy the kernel's connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on.
+
+   You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
+   Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.
+
+   .. image:: images/console/console-connect-remote-step2.gif
+      :alt: Using SCP to copy the connection file to the local machine
+
+#. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and browse for or enter the path to the connection file from the previous step.
+
+   As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine, if you've copied the connection file there.
+
+   .. image:: images/console/console-connect-remote-step3.gif
+      :alt: Opening the connect to kernel dialog and browsing for the path
+
+#. Check the :guilabel:`This is a remote kernel (via SSH)` box and enter the :guilabel:`Hostname` or IP address, username and port to connect to on the remote machine.
+   Then, enter *either* :file:`{username}`'s password on the remote machine, or browse to an SSH keyfile (typically in the :file:`.ssh` directory in your home folder on the local machine, often called :file:`id_rsa` or similar) registered on it; only one is needed to connect.
+   If you check :guilabel:`Save connection settings`, these details will be remembered and filled for you automatically next time you open the dialog.
+
+   Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically 22 unless you or your administrator has configured it otherwise.
+
+   .. image:: images/console/console-connect-remote-step4.gif
+      :alt: Entering pre-filled SSH details into the connection dialog
+
+#. Click :guilabel:`OK` to connect to the remote kernel
+
+   .. image:: images/console/console-connect-remote-step5.gif
+      :alt: Connecting to the remote kernel and running basic commands
+
+For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
+
+.. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
+
+
+
 .. _umr-section:
 
-===================================
-Using UMR to reload changed modules
-===================================
+======================
+Reload changed modules
+======================
 
-When working with scripts and modules in an interactive session, Python only loads a module from its source file once, the first time it is ``import``-ed.
-During this first ``import``, the bytecode (``.pyc`` file) is generated if necessary and the imported module object is cached in ``sys.modules``.
-If you subsequently re-import the module anytime in the same session without Spyder, this cached code object will be used even if its source code (``.py{w}`` file) has changed in the meantime.
-While efficient for final production code, this behavior is often undesired when working interactively, such as when analyzing data or testing your own modules.
-In effect, you're left with no way to update or modify any already-imported modules, aside from manually removing the relevant ``.pyc`` files, or restarting the console entirely.
+When working in an interactive session, Python only loads a module from its source file once, the first time it is imported.
 
-Fortunately, in Spyder, there's an easy solution: the :guilabel:`User Module Reloader` (UMR), a Spyder-exclusive feature that, when enabled, automatically reloads modules right in the existing IPython shell whenever they are modified and re-imported, without any of the downsides of the above workarounds.
-Even better, Spyder also loads the ``%autoreload`` magic by default into any kernels it starts, allowing changes in already imported modules to be automatically picked up the as soon as the modified file is saved, without any additional user action.
-With UMR enabled, you can test complex applications within the same IPython interpreter without having to restart it every time you make a change, saving large amounts of manual tedium and long restart times.
-Or, if you're analyzing data step by step using your own custom libraries, you can easily add or tweak a function in the latter and see the results reflected in the former, all without the overhead of reloading the data and re-running your whole script to restore your session to the same point.
+Spyder's :guilabel:`User Module Reloader` (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported.
+With the UMR enabled, you can test changes to your code without restarting the kernel.
 
-UMR is enabled by default, and will do its work automatically without user intervention, although it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it activates.
-If desired, you can turn it and the message on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
+.. image:: images/console/console-reload-modules.png
+   :alt: Spyder showing reloading modules in console
+
+UMR is enabled by default, and it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it is activated.
+If desired, you can turn it on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
+
+.. image:: images/console/console-umr-preferences.png
+   :alt: Spyder preferences showing option to use module reloader
 
 
 
