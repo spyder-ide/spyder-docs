@@ -3,7 +3,7 @@
 
 name: Test Docs
 
-on: [pull_request]
+on: [pull_request]  # yamllint disable-line rule:truthy
 
 jobs:
   build:
@@ -24,6 +24,7 @@ jobs:
         uses: ./.github/actions/setup-and-install
       - name: Build docs
         uses: ./.github/actions/build-docs
+
 
   linkcheck:
     name: Check links

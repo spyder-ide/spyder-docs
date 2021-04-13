@@ -71,8 +71,8 @@ project = "Spyder"
 copyright = (
     f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
     "<span class='pipe-red'>|</span> "
-    "<a href='https://opensource.org/licenses/MIT' "
-    "target='_blank'>MIT License</a>"
+    "<a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
+    "target='_blank' rel='noopener noreferrer'>MIT License</a>"
     )
 author = "The Spyder Doc Contributors"
 

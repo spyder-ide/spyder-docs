@@ -1,0 +1,4 @@
+sphinx>=3
+sphinx-multiversion
+sphinx-panels
+git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
