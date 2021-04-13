@@ -49,11 +49,11 @@ Special consoles
 Spyder also supports several types of specialized consoles.
 A `Sympy console`_ enables creating and displaying symbolic math expressions right inside Spyder.
 A `Cython console`_ allows you to use the Cython language to speed up your code and call C functions directly from Python.
-Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and not recommended for new code, it can be used for older scripts that need it.
+Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it.
 
 .. _Cython console: https://cython.org/#documentation
 .. _Sympy console: https://docs.sympy.org/latest/index.html
-.. _Pylab console: https://matplotlib.org/faq/usage_faq.html#matplotlib-pyplot-and-pylab-how-are-they-related
+.. _Pylab console: https://matplotlib.org/stable/api/index.html
 
 .. image:: images/console/console-special.gif
    :alt: Spyder showing opening a new special Console
@@ -79,9 +79,9 @@ You can also change the name of the current :guilabel:`IPython console` tab with
 
 .. _connecting-external-kernel:
 
-==================================
-Using external kernels with Spyder
-==================================
+======================
+Using external kernels
+======================
 
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
 For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running.
@@ -160,9 +160,9 @@ For more technical details about connecting to remote kernels, see the `Connecti
 
 .. _umr-section:
 
-===================================
-Using UMR to reload changed modules
-===================================
+======================
+Reload changed modules
+======================
 
 When working in an interactive session, Python only loads a module from its source file once, the first time it is imported.
 
