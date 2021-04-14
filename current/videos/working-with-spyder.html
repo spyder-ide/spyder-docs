@@ -1,0 +1,728 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working with Spyder &#8212; Spyder 4 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css" />
+    <link href="../_static/css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link href="../_static/css/spyder.css" rel="stylesheet">
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/driver.min.js"></script>
+    <script src="../_static/js/custom_scripts.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Panes in Depth" href="../indexpanes.html" />
+    <link rel="prev" title="First Steps with Spyder" href="first-steps-with-spyder.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
+<div class="container">
+  
+  <a class="navbar-brand" href="https://www.spyder-ide.org/">
+    <img src="../_static/spyder_logo.png" class="logo" alt="logo">
+  </a>
+  
+  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbar-menu" class="collapse navbar-collapse">
+    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external nav-link-active-section" href="/">Docs</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+    </nav>
+
+    <div id="doc-content" class="container">
+      <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
+<div class="d-none d-xl-block">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="working-with-spyder.html" selected>Spyder 4</option>
+  <option value="../../3/index.html">Spyder 3</option>
+</select>
+
+  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+    <div class="input-group">
+      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-danger" type="submit">
+          <span class="fas fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+  <ul class="nav bd-sidenav">
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../index.html">Welcome</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../quickstart.html">Quickstart</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../installation.html">Installation Guide</a>
+            </li>
+        
+      
+       
+            <li class="nav-item active">
+                          
+              <details open>
+              
+                <summary>
+                    Intro Videos
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="first-steps-with-spyder.html">First Steps with Spyder</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">Working with Spyder</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Panes in Depth
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/debugging.html">Debugger</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/editor.html">Editor</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/fileexplorer.html">Files</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/findinfiles.html">Find</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/help.html">Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/historylog.html">History</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/ipythonconsole.html">IPython Console</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/onlinehelp.html">Online Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/plots.html">Plots</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/profiler.html">Profiler</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/projects.html">Projects</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/pylint.html">Code Analysis</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../panes/variableexplorer.html">Variable Explorer</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Troubleshooting
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/first-steps.html">First Steps</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/basic-first-aid.html">Basic First Aid</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/emergency-cpr.html">Emergency CPR</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/common-illnesses.html">Common Illnesses</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/call-for-help.html">Calling for Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/submit-a-report.html">Submit a Report</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../faq.html">FAQ</a>
+            </li>
+        
+      
+    </ul>
+
+</nav>
+
+<nav class="d-block d-xl-none" aria-label="Main navigation">
+          <div class="bd-toc-item active row px-3">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="working-with-spyder.html" selected>Spyder 4</option>
+  <option value="../../3/index.html">Spyder 3</option>
+</select>
+
+          </div>
+    <div class="bd-toc-item active row px-3">
+    
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
+        
+          
+              <option value="../index.html">
+              Welcome
+              </option>
+          
+        
+          
+              <option value="../quickstart.html">
+              Quickstart
+              </option>
+          
+        
+          
+              <option value="../installation.html">
+              Installation Guide
+              </option>
+          
+        
+          
+            <optgroup label="Intro Videos">
+              
+                <option value="first-steps-with-spyder.html">
+                  First Steps with Spyder
+                </option>
+              
+                <option value="">
+                  Working with Spyder
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Panes in Depth">
+              
+                <option value="../panes/debugging.html">
+                  Debugger
+                </option>
+              
+                <option value="../panes/editor.html">
+                  Editor
+                </option>
+              
+                <option value="../panes/fileexplorer.html">
+                  Files
+                </option>
+              
+                <option value="../panes/findinfiles.html">
+                  Find
+                </option>
+              
+                <option value="../panes/help.html">
+                  Help
+                </option>
+              
+                <option value="../panes/historylog.html">
+                  History
+                </option>
+              
+                <option value="../panes/ipythonconsole.html">
+                  IPython Console
+                </option>
+              
+                <option value="../panes/onlinehelp.html">
+                  Online Help
+                </option>
+              
+                <option value="../panes/plots.html">
+                  Plots
+                </option>
+              
+                <option value="../panes/profiler.html">
+                  Profiler
+                </option>
+              
+                <option value="../panes/projects.html">
+                  Projects
+                </option>
+              
+                <option value="../panes/pylint.html">
+                  Code Analysis
+                </option>
+              
+                <option value="../panes/variableexplorer.html">
+                  Variable Explorer
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Troubleshooting">
+              
+                <option value="../troubleshooting/first-steps.html">
+                  First Steps
+                </option>
+              
+                <option value="../troubleshooting/basic-first-aid.html">
+                  Basic First Aid
+                </option>
+              
+                <option value="../troubleshooting/emergency-cpr.html">
+                  Emergency CPR
+                </option>
+              
+                <option value="../troubleshooting/common-illnesses.html">
+                  Common Illnesses
+                </option>
+              
+                <option value="../troubleshooting/call-for-help.html">
+                  Calling for Help
+                </option>
+              
+                <option value="../troubleshooting/submit-a-report.html">
+                  Submit a Report
+                </option>
+              
+            </optgroup>
+          
+        
+          
+              <option value="../faq.html">
+              FAQ
+              </option>
+          
+        
+      </select>
+    </div>
+</nav>
+          </div>
+
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+              <div>
+                
+  <div class="section" id="working-with-spyder">
+<h1>Working with Spyder<a class="headerlink" href="#working-with-spyder" title="Permalink to this headline">¶</a></h1>
+<p>In this section, you will learn about Spyder’s more advanced functionality, and explore most of the panes.</p>
+<div class="section" id="beyond-the-main-panes">
+<h2>Beyond the main panes<a class="headerlink" href="#beyond-the-main-panes" title="Permalink to this headline">¶</a></h2>
+<p>Explore how to take advantage of Spyder’s functionality beyond just the four core panes.</p>
+<ul class="simple">
+<li><p>View, manage and save figures with the Plots pane</p></li>
+<li><p>Browse, interact with and open external programs in the in the Files pane</p></li>
+<li><p>Quickly navigate within and between files with the Outline pane</p></li>
+<li><p>Search for text or regular expressions across your entire project with the Find pane</p></li>
+<li><p>Discover and explore structured documentation in the Online Help pane</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/NOu9JTkUuDg?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sphinx-bs dropdown card mb-3 fade-in dropdown-videos">
+<summary class="summary-title card-header">
+Transcript<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="scroll docutils">
+<p class="card-text">Hello everyone! I’m Juanita, and I am going to show you how to use some of the remaining panes available in Spyder beyond just the four primary ones.</p>
+<p class="card-text">Let’s start with the Plots pane, which is open by default when launching Spyder. To see how it works, let’s open a file that will generate a couple plots from Matplotlib’s documentation. You can view the generated plots in the Plots pane and browse between them using the arrows, or simply clicking them in the sidebar.</p>
+<p class="card-text">If you open the pane’s options menu, you will see that Fit Plots to Window is enabled by default. Disabling it will allow you to zoom the plots in or out. You can also see that Mute inline plotting is enabled, which prevents the same figures from also appearing in the IPython Console. Note that every time that the code is run, new copies of the plots are generated in the pane, but you can remove any you don’t want to keep around with the X button in the pane toolbar. Additionally, the pane automatically updates to show the plots generated by each console as you switch between them.</p>
+<p class="card-text">To use a plot in another document, click the Copy to Clipboard button and paste it wherever you want, such as a word processor. Additionally, you can save a plot as a PNG by clicking the save icon.</p>
+<p class="card-text">The Files pane, also open by default, lets you browse the contents of the directories on your computer, open them in the Editor, and perform a variety of other file operations. You can show or hide the size, kind and date of the files in the pane’s options menu. As you change the top-level folder you’re viewing in the pane, Spyder’s working directory shown in the top right of the main toolbar will update, which will also be synchronized with the currently active console. Double-clicking a text file will open it in the Editor, and copying one or more files will allow you to paste them as automatically-formatted absolute or relative paths. Right-clicking any item will offer an array of additional options for interacting with it.</p>
+<p class="card-text">You can also open a file in the system default external application, or set up a custom file association in the File Associations tab of the Files preferences pane. For example, we can add the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension and associate it with LibreOffice Calc under associated applications. Now every time you click a file with this extension, it opens externally with this program.</p>
+<p class="card-text">Now, let’s see how to use the Outline pane to navigate within a file. First, we have to open the pane under Panes in the View menu, since it isn’t visible by default. As you can see, it shows you all the classes, methods and functions that are currently defined, and allows you to move between them with just a click. For a very large file like this one, it is very useful to switch between classes easily instead of scrolling through the four-thousand-plus lines of code. You can also browse the methods of a class by expanding it using the arrows, or the buttons in the Outline pane’s toolbar. The Outline continuously updates to highlight the function, method or class corresponding to the cursor position in your code, so you can easily keep track of what object you are working on. Finally, by going to the pane options menu and activating Show all files, you can easily switch between the scripts and modules you have open, which is particularly important for navigating larger projects.</p>
+<p class="card-text">The Files pane is another useful tool for particularly larger projects. Like the Outline pane, it can be opened under Panes in the View menu. This allows you to view and navigate through all occurrences of text or regular expressions in any file in the working directory, project or another custom directory. We see, for example, in the <code class="docutils literal notranslate"><span class="pre">mainwindow.py</span></code> file we import the ﻿``is_dark_font_color`` function. If we want to quickly find the file where it was defined, we can write this string in the search bar. With this search, we get 7 matches from 3 different files. When we click on any of these matches, the file is opened automatically in the Editor, right where this string appears.</p>
+<p class="card-text">Finally, we’ll learn how to browse documentation using the Online Help pane. Once you open it, again under Panes in the View menu, you will see an index of modules from which documentation is available, including both those in the Python standard library and any third-party packages that may be installed in Spyder’s environment. For example, we can find help for Numpy, Pandas and Matplotlib, which are all installed if you’ve downloaded Spyder with Anaconda. You can browse the contents in the built-in web browser provided by the pane, and click the hyperlinks within to navigate to different pages. You can also enter the name of the item you’d like documentation on in the Get field or in the space over the pane’s toolbar, to load its information directly. If you’re not sure of the object’s name, use the Search field to view a list of results applicable to any keyword.</p>
+<p class="card-text">Now that you’re familiar with a wider array of Spyder’s panes and features, you can accomplish a variety of common programming tasks with ease. Stay tuned for our our next videos to further add to your scientific toolbox, and as always, Happy Spydering!</p>
+</div>
+</div>
+</details></div>
+<div class="section" id="improving-your-code-quality">
+<h2>Improving your code quality<a class="headerlink" href="#improving-your-code-quality" title="Permalink to this headline">¶</a></h2>
+<p>Learn how to improve the quality of your programs using code analysis.</p>
+<ul class="simple">
+<li><p>Open and use Code Analysis to evaluate the quality and style of Python files</p></li>
+<li><p>Run analysis on a file in the Editor or anywhere on your computer</p></li>
+<li><p>Determine what an error, warning or message means and how to fix it</p></li>
+<li><p>Turn off messages on a line, in a file or globally</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/JnljnAjdO_w?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sphinx-bs dropdown card mb-3 fade-in dropdown-videos">
+<summary class="summary-title card-header">
+Transcript<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="scroll docutils">
+<p class="card-text">Hello everyone! I’m Juanita, and in this video we will learn how to improve your code quality using the Code Analysis pane. To display it, we can click its name under Panes in the View menu.</p>
+<p class="card-text">This pane detects style issues, bad practices, potential bugs and other quality problems in your code, without having to execute it. There are three ways of running code analysis:</p>
+<ul class="simple">
+<li><p class="card-text">To analyze a file that is open in the Editor, we can press the configurable shortcut, <kbd class="kbd docutils literal notranslate">F8</kbd> by default, or select Source –&gt; Run code analysis from the menu bar.</p></li>
+<li><p class="card-text">We can also select a file to analyze by browsing for it using the file button next to the path box. This will start the analysis automatically.</p></li>
+<li><p class="card-text">The third way is to manually enter the path of a file we’d like to check in the path entry box in the pane’s toolbar, and click the Analyze button in the pane.</p></li>
+</ul>
+<p class="card-text">Based on these results, the code analysis shows an overall score of 4.34/10, which allows us to track improvements in our code quality. We can also expand or collapse one or all the sections in the pane to be able to see the Pylint errors, warnings and messages identifying the issues with our code.</p>
+<p class="card-text">For example, the results tell us that there is a warning on line 20. To go directly to this line in the Editor, just click the message. Here, the code analysis says there is a <code class="docutils literal notranslate"><span class="pre">bad-whitespace</span></code> issue. To understand what this means, open the Pylint documentation. On the <a class="reference external" href="http://pylint.pycqa.org/en/stable/index.html">Pylint docs page</a> , click on Pylint features and search for the code of the message.</p>
+<p class="card-text">We can see that the docs say that we used the wrong number of spaces around an operator.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bad</span><span class="o">-</span><span class="n">whitespace</span> <span class="p">[</span><span class="n">C0326</span><span class="p">]:</span>
+
+<span class="o">%</span><span class="n">s</span> <span class="n">space</span> <span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span> <span class="n">Used</span> <span class="n">when</span> <span class="n">a</span> <span class="n">wrong</span> <span class="n">number</span> <span class="n">of</span> <span class="n">spaces</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">around</span> <span class="n">an</span> <span class="n">operator</span><span class="p">,</span> <span class="n">bracket</span> <span class="ow">or</span> <span class="n">block</span> <span class="n">opener</span><span class="o">.</span>
+</pre></div>
+</div>
+<p class="card-text">We can fix the error by adding one space before and after the operator in this variable assignment. If we run the analysis again, we can see the error isn’t shown any more on this line.</p>
+<p class="card-text">We can click the dropdown arrow in the filename field to view the list of previous analyses. Clicking one of them will show us the results.</p>
+<p class="card-text">Sometimes, it is useful to turn certain messages off. We can do that in three different ways.</p>
+<p class="card-text">We might want to silence warnings on only one line; for example, this “unused” import that is still necessary for the code execution. For this, type <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=unused-import</span></code> as a comment at the end of the line. Running the analysis again will show us that the error is no longer visible.</p>
+<p class="card-text">If we want to silence a message in the whole file, we can do it by writing the disable command at the beginning of the file. For example, we can disable the <code class="docutils literal notranslate"><span class="pre">invalid-name</span></code> warning that appears several times in this file. If we run the analysis again, all of these warnings are gone.</p>
+<p class="card-text">Finally, we can suppress specific messages for all files by editing the <code class="docutils literal notranslate"><span class="pre">.pylintrc</span></code> configuration file in your user folder. If it doesn’t exist, we can generate it by opening our terminal, or the Anaconda Prompt if you’re using Windows, and running <code class="docutils literal notranslate"><span class="pre">pylint</span> <span class="pre">--generate-rc</span> <span class="pre">&gt;</span> <span class="pre">.pylintrc</span></code> in our user directory.</p>
+<p class="card-text">Now, we can go to the <code class="docutils literal notranslate"><span class="pre">MESSAGE</span> <span class="pre">CONTROL</span></code> section in this file and add the corresponding Pylint message name, for example <code class="docutils literal notranslate"><span class="pre">no-name-in-module</span></code>. If we run the analysis one more time, we see that the <code class="docutils literal notranslate"><span class="pre">no-name-in-module</span></code> warnings don’t appear anymore.</p>
+<p class="card-text">We can see that the score of our file increased to 7.63/10, a big improvement over the previous 4.34.</p>
+<p class="card-text">Now that we’ve learned how to improve the quality of our code, you are ready to write cleaner and more correct programs using Spyder. Stay tuned for our next videos and as always, Happy Spydering!</p>
+</div>
+</div>
+</details></div>
+<div class="section" id="optimizing-your-code">
+<h2>Optimizing your code<a class="headerlink" href="#optimizing-your-code" title="Permalink to this headline">¶</a></h2>
+<p>Learn how to optimize your code using the Profiler.</p>
+<ul class="simple">
+<li><p>Use the Profiler to find bottlenecks in your programs</p></li>
+<li><p>Run profiling on a file in the Editor or elsewhere on your machine</p></li>
+<li><p>Interpret the results to evaluate function and method performance</p></li>
+<li><p>Use the information to speed up the run time of your code</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/4hcXa8aGu_c?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sphinx-bs dropdown card mb-3 fade-in dropdown-videos">
+<summary class="summary-title card-header">
+Transcript<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="scroll docutils">
+<blockquote>
+<div><p class="card-text">Hello everyone! I’m Juanita, and in this video we will learn how to optimize your code using the profiler. To display it, click its name under Panes in the View menu.</p>
+</div></blockquote>
+<p class="card-text">The Profiler will determine the run time and number of calls for every function and method used in a file. There are three ways of profiling a file:</p>
+<ul class="simple">
+<li><p class="card-text">We can browse for a file using the open button to the right of the Profiler’s path box, which will run profiling over it automatically.</p></li>
+<li><p class="card-text">We can also manually enter the path in the pane’s path box, and then run the analysis on the file by pressing the Profile button.</p></li>
+<li><p class="card-text">If we want to run the profiler for the file that is currently open in the Editor, we can click Run –&gt; Profile… in the menu bar, or use the configurable shortcut <kbd class="kbd docutils literal notranslate">F10</kbd>.</p></li>
+</ul>
+<p class="card-text">We see that the results in the pane show us the different functions and methods in our file, with each sub-function listed hierarchically under the item that called them. The columns show the total time taken by each function and everything it called, while the local time includes only the time spent in that particular function.</p>
+<p class="card-text">For example, the function <code class="docutils literal notranslate"><span class="pre">values</span></code> in this file calls a function <code class="docutils literal notranslate"><span class="pre">internal_values</span></code> values took a total of 482 us to run, with 338 us of that spent executing internal_values inside of it. Therefore, the total time for values is 482 us, but its local time is only 144 us as the rest was spent inside <code class="docutils literal notranslate"><span class="pre">internal_values</span></code>.</p>
+<p class="card-text">The Calls column displays the total number of times that function was called at that level. Finally, the numbers in the Diff columns for each of the three appear if a comparison is loaded, and indicate the change in runtime between the two measurements.</p>
+<p class="card-text">By double-clicking an item in the Profiler, we will be taken to the file and line in the Editor where it was called. If this function was not called in one of your open scripts, clicking it will open the file that contains it. We can click the down arrow button in the filename field to recall paths of previously profiled files.</p>
+<p class="card-text">Now that we know how to interpret the results of our profiling, let’s optimize our code by finding the functions that take the longest time and making them faster. In this case, <code class="docutils literal notranslate"><span class="pre">to_datetime</span></code> takes 39 seconds to run. The reason for this is Pandas has to parse the non-standard timestamp format and is not told to try to use a faster parser than the default.</p>
+<p class="card-text">We can reduce the time this function takes and compare it with the one before. For this, first we have to save the data as a <code class="docutils literal notranslate"><span class="pre">.Result</span></code> file with the save button in the pane. Now we have to figure out how to optimize the function, so let’s search for it. We see that we can speed up this function by <a class="reference external" href="https://stackoverflow.com/questions/32034689/why-is-pandas-to-datetime-slow-for-non-standard-time-format-such-as-2014-12-31">manually specifying a datetime format</a>. So, we add the appropriate argument, <code class="docutils literal notranslate"><span class="pre">format=&quot;%Y-%m-%d</span> <span class="pre">%H:%M:%S.%f</span> <span class="pre">%z&quot;</span></code>, to our function call.</p>
+<p class="card-text">Now, we run the profiling again to see how our script’s performance has improved. If we want to see how much we lowered the time, we can load our previous result and take a look at the diff columns. Notice the difference is green because the time was reduced by three times, taking only 13 seconds instead of 39. Our code is now 26 seconds faster!</p>
+<p class="card-text">Now that you’ve learned how to analyze the execution time of your code, you are ready to write more efficient programs with Spyder’s help. Stay tuned for our next videos and as always, Happy Spydering!</p>
+</div>
+</div>
+</details></div>
+</div>
+
+
+              </div>
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="first-steps-with-spyder.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> First Steps with Spyder</a>
+    <a class='prev-next-link right-next' id="next-link" href="../indexpanes.html" title="next page">Panes in Depth <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
+
+              </div>
+              
+          </main>
+
+          <div class="col-md-3 col-xl-2">
+              
+
+<div class="row d-none d-md-block bd-toc">
+    
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/videos/working-with-spyder.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+    <nav id="bd-toc-nav">
+        <ul class="nav section-nav flex-column">
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#beyond-the-main-panes" class="nav-link">Beyond the main panes</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#improving-your-code-quality" class="nav-link">Improving your code quality</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#optimizing-your-code" class="nav-link">Optimizing your code</a>
+            </li>
+        
+        </ul>
+    </nav>
+</div>
+
+<div class="row d-block d-md-none">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
+        <div class="navbar-toggler-item">
+            <a class="navbar-toggler btn-outline-default" href="../search.html"><span class="fas fa-search"></span></a>
+        </div>
+        <div class="navbar-toggler-item">
+            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
+                <span class="fas fa-comment"></span>
+            </a>
+        </div>
+            <div class="navbar-toggler-item">
+                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars fa-2"></span>
+                </button>
+            </div>
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
+            <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#beyond-the-main-panes" class="nav-link">Beyond the main panes</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#improving-your-code-quality" class="nav-link">Improving your code quality</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#optimizing-your-code" class="nav-link">Optimizing your code</a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+              
+          </div>
+      </div>
+    </div>
+
+    <script src="../_static/js/theme.js"></script>
+    <script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'spyder-ide/public',
+        activationElement: '#open_chat',
+    };
+</script>
+
+<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
+    Open chat
+</a>
+
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+<div class="footer pb-5 pb-md-0">
+    <div class="container pb-3">
+        
+        <div class="row justify-content-center">
+            <a href="https://opencollective.com/spyder/donate" target="_blank">
+              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
+            </a>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="text-center pb-3">
+                 Connect with us on: 
+                 
+                  
+                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://instagram.com/spyderide">Instagram</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center">
+              <small>
+                
+                <div class="text-center">
+                  &copy; 2009-2021 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                </div>
+                
+                <div class="text-center">
+                    
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    
+                    
+                      <span class="pipe-red">|</span>
+                      <a href="../_sources/videos/working-with-spyder.rst.txt"
+                          rel="nofollow">Page source</a>
+                    
+                </div>
+              </small>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 Welcome to Spyder's Documentation
 #################################
 
-.. image:: images/mainwindow/mainwindow_default_1610.png
+.. image:: /images/mainwindow/mainwindow_default_1610.png
    :align: center
    :alt: Screenshot of the Spyder main window, with the default panel layout
 
@@ -23,11 +23,11 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 .. panels::
     :container: container-lg pb-3 px-md-0 px-5
     :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
-    
+
     .. div:: align-center
 
        .. rst-class:: fasb fa-book-open
-   
+
     .. div:: align-center
 
        If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
@@ -35,41 +35,41 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
     .. div:: align-center
 
        .. rst-class:: fasb fa-download
-   
+
     .. div:: align-center
-    
-       If you don't have Spyder installed and want to get started, follow the :doc:`installation`.
+
+       If you don't have Spyder installed and want to get started, follow the :doc:`/installation`.
     ---
     .. div:: align-center
 
        .. rst-class:: fasb fa-walking
-   
+
     .. div:: align-center
-    
-       If you are completely new to Spyder, watch our basic tutorial series, :doc:`first-steps-with-spyder`.
+
+       If you are completely new to Spyder, watch our basic tutorial series, :doc:`videos/first-steps-with-spyder`.
     ---
     .. div:: align-center
 
        .. rst-class:: fasb fa-columns
-   
+
     .. div:: align-center
-    
+
        If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
     ---
     .. div:: align-center
 
        .. rst-class:: fasb fa-first-aid
-   
+
     .. div:: align-center
-    
-       If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<first-steps>`.
+
+       If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<troubleshooting/first-steps>`.
     ---
     .. div:: align-center
 
        .. rst-class:: fasb fa-question-circle
-   
+
     .. div:: align-center
-    
+
        If you have a question about Spyder, visit the :doc:`faq` section.
 
 

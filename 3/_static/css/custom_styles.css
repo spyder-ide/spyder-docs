@@ -1,0 +1,323 @@
+/* Fix bold styling for font */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/* Center all images by default */
+
+.section img:not([class]) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom bottom margin for the cards section */
+
+.section .sphinx-bs {
+  margin-bottom: 18px;
+}
+
+/* Style for Font Awesome that only styles the icons before elements */
+
+.fasb::before,
+.fabb::before {
+  color: #36557c;
+  display: inline-block;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 5 Free";
+  font-size: 26px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Style for Font Awesome brands */
+
+.fabb::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 5 Brands";
+}
+
+/* Ensure FA icons applied to section divs display inline */
+
+div.fasb h3,
+div.fabb h3 {
+  display: inline-block;
+}
+
+/* Custom color and size for FA icons */
+
+.blue-32px .fasb::before {
+  color: #36557c;
+  width: 32px;
+}
+
+/* Adjust vertical positioning of FA icons to be centered */
+
+.fa-offset-h3 .fasb::before,
+.fa-offset-h3 .fabb::before {
+  padding-bottom: 0.3em;
+}
+
+/* Center iframes and adjust their bottom margins */
+
+iframe {
+  display: block;
+  height: 100%;
+  left: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*** Custom colors for specific FA icons in the index page ***/
+
+div.fa-laptop-code::before {
+  color: #4e4e4e;
+}
+
+div.fa-book::before {
+  color: #6a3514;
+}
+
+div.fa-globe-americas::before {
+  color: #1c4489;
+}
+
+div.fa-user-friends::before {
+  color: #f6951f;
+}
+
+/*** Changes to the FAQ page ***/
+
+.dropdown .card-header {
+  background-color: #cce5ff;
+  color: #004085;
+  font-size: 0.95rem;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+  text-transform: none;
+}
+
+.dropdown .card-header::first-letter {
+  font-weight: bold;
+}
+
+/*** Styling for quickstart interactive tour ***/
+
+.interactive-tour-container {
+  display: inline-block;
+  margin-top: 0.7rem;
+  position: relative;
+  transition: transform 500ms ease-in-out;
+}
+
+.interactive-tour-container .tour-screenshot {
+  display: none;
+  height: auto;
+  margin-bottom: 0.4rem;
+  max-width: 100%;
+}
+
+.interactive-tour-container img.tour-screenshot-active {
+  display: block !important;
+}
+
+.interactive-tour-container .tour-overlay {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.tour-overlay .highlight-rect {
+  fill: none;
+  opacity: 0;
+  stroke: #d50000;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+div#driver-highlighted-element-stage {
+  opacity: 0;
+}
+
+rect.driver-highlighted-element {
+  opacity: 1 !important;
+}
+
+/*** Fix tour navigation buttons' margins, arrows and alignment ***/
+
+div#driver-popover-item .driver-popover-footer {
+  margin-top: 1em;
+}
+
+div#driver-popover-item .driver-popover-footer button {
+  min-width: 4.3rem;
+}
+
+div#driver-popover-item .driver-navigation-btns {
+  line-height: 1rem;
+}
+
+/* Style tour progress indicator */
+
+div#driver-popover-item .tour-progress-indicator {
+  float: right;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+/*** Remove h3 titles from Join our community section on index page ***/
+
+a[href="#join-our-community"] + ul li.toc-h3 {
+  display: none;
+}
+
+/* Version selector and header */
+
+#versions-header {
+  color: rgb(0 0 0 / 0.65);
+  font-size: 0.8rem;
+  margin-top: 1.1rem;
+  text-transform: uppercase;
+}
+
+#select-versions {
+  background-color: transparent;
+  border: 1px solid rgb(0 0 0 / 0.15);
+  color: rgb(0 0 0 / 0.65);
+  font-size: 90%;
+  margin-bottom: 7px;
+  padding: 2px;
+}
+
+#select-versions,
+#select-versions option {
+  width: 98%;
+}
+
+/*** Styles for video transcript dropdown elements ***/
+
+.dropdown-videos {
+  border: 0;
+  border-radius: unset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.dropdown-videos .summary-content {
+  background-color: #ededed;
+}
+
+.dropdown-videos .card-header {
+  background-color: #4e4e4e;
+  border-radius: unset;
+  color: #fff;
+  font-size: 0.8em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
+}
+
+.dropdown-videos .card-header::first-letter {
+  font-weight: unset;
+}
+
+.dropdown-videos .card-header:first-child {
+  border-radius: unset;
+}
+
+details.dropdown-videos .summary-up,
+details.dropdown-videos .summary-down {
+  top: 0.1em !important;
+}
+
+div.scroll {
+  color: #2c2e30;
+  font-size: 0.8em;
+  height: 250px;
+  margin: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+div.video-container {
+  background-color: #000;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+div.video-container-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+}
+
+/* Style for adding icons to the installers table */
+
+table.installer-table td {
+  border-top: 0;
+  font-size: 1.4em;
+}
+
+table.installer-table tbody td p::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 5 Brands";
+}
+
+table.installer-table tbody td:nth-child(1) p {
+  padding-top: 0.62em;
+}
+
+table.installer-table tbody td:nth-child(1) p::before {
+  content: "\f17a";
+  font-size: 1.6em;
+  padding-right: 0.7em;
+  vertical-align: middle;
+}
+
+table.installer-table tbody td:nth-child(2) p::before {
+  content: "\f179";
+  font-size: 2em;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
+/* Style for links added to dropdowns */
+
+a.dropdown-link {
+  color: #36557c;
+  margin-left: 0.5em;
+  padding: 0.25em;
+  visibility: hidden;
+}
+
+details.dropdown:hover a.dropdown-link,
+details.dropdown:focus a.dropdown-link {
+  visibility: visible;
+}
+
+a.dropdown-link:hover,
+a.dropdown-link:focus {
+  background-color: #36557c;
+  color: #fff;
+  text-decoration: none;
+}

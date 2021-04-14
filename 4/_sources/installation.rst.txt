@@ -5,7 +5,7 @@ Installation Guide
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.
 
-If you run into problems, before posting a report, *please* consult our comprehensive :doc:`troubleshooting guide<first-steps>` and search the `issue tracker`_ for your error message and problem description.
+If you run into problems, before posting a report, *please* consult our comprehensive :doc:`troubleshooting guide</troubleshooting/first-steps>` and search the `issue tracker`_ for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
@@ -29,7 +29,7 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 .. _Binder: https://mybinder.org/
 .. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop
 
-.. image:: images/installation/installation-spyder-binder.png
+.. image:: /images/installation/installation-spyder-binder.png
    :alt: Spyder running on Binder
 
 
@@ -65,13 +65,13 @@ Spyder is included by default in the `Anaconda`_ Python distribution, which come
 .. _Anaconda: https://www.anaconda.com/products/individual
 
 
-Running Spyder
-~~~~~~~~~~~~~~
+Running with Anaconda
+~~~~~~~~~~~~~~~~~~~~~
 
 To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
 On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
 
-.. image:: images/installation/installation-anaconda-navigator.png
+.. image:: /images/installation/installation-anaconda-navigator.png
    :alt: Anaconda Navigator showing Spyder
 
 If Spyder does not launch via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``.
@@ -97,7 +97,7 @@ To install Spyder from Conda-Forge instead of the default Anaconda channel, add 
 
 You can then run Spyder by the same methods as above, except make sure to select the start menu shortcut with ``(spyder-env)`` in the name, select the ``spyder-env`` environment on the left before launching it with Navigator, or type ``conda activate spyder-env`` before launching it on the command line.
 
-.. image:: images/installation/installation-conda-install.gif
+.. image:: /images/installation/installation-conda-install.gif
    :alt: Running Spyder installation with conda
 
 For more information on this approach, and using Spyder with your existing Python environments and packages, please see our `Guide to working with packages and environments in Spyder`_.
@@ -189,8 +189,8 @@ Spyder is also available in other GNU/Linux distributions, like
 Please refer to your distribution's documentation for how to install Spyder.
 
 
-Running Spyder
-~~~~~~~~~~~~~~
+Running on Linux
+~~~~~~~~~~~~~~~~
 
 How to launch Spyder after installation varies depending on your OS and install method, but with those featured here, it will generally be the same as for any other installed application.
 Alternately, you should be able to launch it from the terminal/command line with ``spyder`` or ``spyder3``.
@@ -236,7 +236,7 @@ or on Windows:
 
 After activating your environment, to install Spyder and its other dependencies, run ``pip install spyder``.
 
-.. image:: images/installation/installation-pip-install.gif
+.. image:: /images/installation/installation-pip-install.gif
    :alt: Running Spyder installation with pip
 
 You may need to install a Qt binding (PyQt5) separately with ``pip`` if running under Python 2.
