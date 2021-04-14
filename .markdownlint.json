@@ -1,0 +1,35 @@
+{
+    "default": true,
+    "line-length": false,
+    "heading-style": {
+        "style": "atx"
+    },
+    "ul-style": {
+        "style": "asterisk"
+    },
+    "ul-indent": {
+        "number": 2
+    },
+    "no-trailing-spaces": {
+        "number": 0,
+        "strict": true
+    },
+    "no-multiple-blanks": {
+        "maximum": 4
+    },
+    "no-duplicate-heading": {
+        "siblings_only": true
+    },
+    "hr-style": {
+        "style": "---"
+    },
+    "proper-names": {
+        "code_blocks": false
+    },
+    "code-block-style": {
+        "style": "fenced"
+    },
+    "code-fence-style": {
+        "style": "backtick"
+    }
+}

@@ -1,0 +1,5 @@
+git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
+pre-commit>=2.8.2
+sphinx>=3
+sphinx-multiversion
+sphinx-panels

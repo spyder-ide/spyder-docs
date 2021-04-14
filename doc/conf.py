@@ -12,6 +12,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+# pylint: disable = invalid-name, wrong-import-order
+
+"""Sphinx configuration file for Spyder's documentation."""
+
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
@@ -68,11 +72,12 @@ master_doc = "index"
 
 # General information about the project.
 project = "Spyder"
-copyright = (
+copyright = (  # pylint: disable = redefined-builtin
     f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
     "<span class='pipe-red'>|</span> "
-    "<a href='https://opensource.org/licenses/MIT' "
-    "target='_blank'>MIT License</a>"
+    "<a href="
+    "'https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
+    "target='_blank' rel='noopener noreferrer'>MIT License</a>"
     )
 author = "The Spyder Doc Contributors"
 
@@ -139,7 +144,7 @@ pygments_style = "sphinx"
 # CI = True
 # TRAVIS_BRANCH = 'master'
 html_theme = "pandas_sphinx_theme"
-html_logo = '_static/spyder_logo.png'
+html_logo = '_static/images/spyder_logo.png'
 html_theme_options = {
     "external_links": [
         {
@@ -217,14 +222,14 @@ html_static_path = ["_static"]
 
 # Custom CSS for the site
 html_css_files = [
-    "driver.min.css",
-    "custom_styles.css",
+    "css/driver.min.css",
+    "css/custom_styles.css",
 ]
 
 # Custom Javascript for the site
 html_js_files = [
-    "driver.min.js",
-    "custom_scripts.js",
+    "js/driver.min.js",
+    "js/custom_scripts.js",
 ]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
@@ -291,7 +296,8 @@ smv_released_pattern = r'^heads/\d+\.\w+$'
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{config.release}'
 
-# Determine whether remote or local git branches/tags are preferred if their output dirs conflict
+# Determine whether remote or local git branches/tags are preferred
+# if their output dirs conflict
 smv_prefer_remote_refs = False
 
 # Use git ref naming if on a feature/PR branch
@@ -423,5 +429,5 @@ class Youtube(IframeVideo):
             'class="align-%(align)s"></iframe></div></div>')
 
 
-def setup(builder):
+def setup(builder):  # pylint: disable = unused-argument
     directives.register_directive('youtube', Youtube)

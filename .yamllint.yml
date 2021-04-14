@@ -1,0 +1,25 @@
+# Configuration file for yamllint. Extends the default configuration.
+
+extends: default
+
+locale: en_US.UTF-8
+
+rules:
+  braces:
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+  brackets:
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+  document-start: disable
+  empty-values: enable
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+    check-multi-line-strings: true
+  line-length: disable
+  new-lines: disable
+  octal-values: enable
+  quoted-strings:
+    quote-type: single
+    required: false

@@ -4,10 +4,11 @@ Troubleshooting
 
 .. toctree::
     :maxdepth: 2
+    :glob:
 
-    first-steps
-    basic-first-aid
-    emergency-cpr
-    common-illnesses
-    call-for-help
-    submit-a-report
+    troubleshooting/first-steps
+    troubleshooting/basic-first-aid
+    troubleshooting/emergency-cpr
+    troubleshooting/common-illnesses
+    troubleshooting/call-for-help
+    troubleshooting/submit-a-report

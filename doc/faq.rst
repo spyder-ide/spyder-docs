@@ -14,7 +14,7 @@ Installing and updating
 
    .. _webpage: https://www.anaconda.com/products/individual
 
-   For more information, visit our :doc:`installation`.
+   For more information, visit our :doc:`/installation`.
 
 
 .. dropdown:: Q: How do I update Spyder using conda?
@@ -41,7 +41,7 @@ Installing and updating
    Go to :guilabel:`Install specific version` and select the version of Spyder you want to use.
    We strongly recommend the latest available, to benefit from new features, bug fixes, performance improvements and usability enhancements.
 
-   .. image:: images/faq/faq-navigator-install.png
+   .. image:: /images/faq/faq-navigator-install.png
       :alt: Navigator showing installing specific version of Spyder
 
 
@@ -59,12 +59,12 @@ Running Spyder
 
    * **From Anaconda Navigator**: Scroll to :guilabel:`Spyder` under :guilabel:`Home`, and click :guilabel:`Launch`.
 
-     .. image:: images/faq/faq-launch-anaconda.png
+     .. image:: /images/faq/faq-launch-anaconda.png
         :alt: Navigator showing running a specific version of Spyder
 
    * ***Windows Only***: Launch it via the Start menu shortcut.
 
-     .. image:: images/faq/faq-windows-launch.png
+     .. image:: /images/faq/faq-windows-launch.png
         :alt: Spyder shortcut in the Windows Start menu
 
 
@@ -105,7 +105,7 @@ Running Spyder
    If Spyder is installed in this environment, you will see it in Navigator's :guilabel:`Home` window.
    Click :guilabel:`Launch` to start Spyder in your selected environment.
 
-   .. image:: images/faq/faq-run-environment.png
+   .. image:: /images/faq/faq-run-environment.png
       :alt: Navigator showing running Spyder in a specific environment
 
 
@@ -151,15 +151,15 @@ Using Spyder
    To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
    To do so, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
 
-   .. image:: images/faq/faq-change-environment.png
+   .. image:: /images/faq/faq-change-environment.png
       :alt: Change default environment in Preferences option in status bar
 
    This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section.
    Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
    If its not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interepreter you want to use.
-   See the :doc:`ipythonconsole` for more information.
+   See the :doc:`/panes/ipythonconsole` for more information.
 
-   .. image:: images/faq/faq-python-interpreter.png
+   .. image:: /images/faq/faq-python-interpreter.png
       :alt: Preferences showing changing Python interpreter
 
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
@@ -168,9 +168,9 @@ Using Spyder
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
    :container: + dropdown-id-using-reset-prefs
 
-   Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the `Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
+   Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the :guilabel:`Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
 
-   .. image:: images/faq/faq-reset-spyder.png
+   .. image:: /images/faq/faq-reset-spyder.png
       :alt: Spyder reset button in tools
 
 
@@ -179,18 +179,18 @@ Using Spyder
 
    Under :guilabel:`General` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
 
-   .. image:: images/faq/faq-change-language.png
+   .. image:: /images/faq/faq-change-language.png
       :alt: Spyder change language in preferences.
 
 
 .. dropdown:: Q: How do I use code cells in Spyder?
    :container: + dropdown-id-using-code-cells
 
-   To create a cell in Spyder's :doc:`editor`, type ``#%%`` in your script.
+   To create a cell in Spyder's :doc:`/panes/editor`, type ``#%%`` in your script.
    Each ``#%%`` will make a new cell.
    To run a cell, press :kbd:`Shift-Enter` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
-   .. image:: images/faq/faq-cells.png
+   .. image:: /images/faq/faq-cells.png
       :alt: Spyder showing cell generation.
 
 
@@ -225,7 +225,7 @@ Using Spyder
 
    Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
-   .. image:: images/faq/faq-remove-variables.png
+   .. image:: /images/faq/faq-remove-variables.png
       :alt: Spyder showing cell generation.
 
 
@@ -234,7 +234,7 @@ Using Spyder
 
    Select the appropriate option in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
-   .. image:: images/faq/faq-run-options.png
+   .. image:: /images/faq/faq-run-options.png
       :alt: Spyder showing cell generation.
 
 
@@ -243,7 +243,7 @@ Using Spyder
 
    Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
 
-   .. image:: images/faq/faq-highlighting-theme.png
+   .. image:: /images/faq/faq-highlighting-theme.png
       :alt: Spyder showing cell generation.
 
 
@@ -255,8 +255,8 @@ Troubleshooting
 .. dropdown:: Q: I've found a bug or issue with Spyder. What do I do?
    :container: + dropdown-id-troubleshooting-spyder
 
-   You should first follow the steps in our :doc:`troubleshooting guide<first-steps>`.
-   If you can't solve your problem, open an issue by following the instructions in our :doc:`submit-a-report` section.
+   You should first follow the steps in our :doc:`troubleshooting guide</troubleshooting/first-steps>`.
+   If you can't solve your problem, open an issue by following the instructions in our :doc:`/troubleshooting/submit-a-report` section.
 
 
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
@@ -265,7 +265,7 @@ Troubleshooting
    First, make sure the error you are seeing is not a bug in your code.
    To confirm this, try running it in any standard Python interpreter.
    If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
-   Otherwise, start at the :doc:`basic-first-aid` section of our troubleshooting guide.
+   Otherwise, start at the :doc:`/troubleshooting/basic-first-aid` section of our troubleshooting guide.
 
    .. _Stack Overflow: https://stackoverflow.com
 
@@ -273,10 +273,10 @@ Troubleshooting
 .. dropdown:: Q: Code completion/help doesn't work; what can I do?
    :container: + dropdown-id-troubleshooting-completion
 
-   If nothing is displayed in the calltip, hover hint or :doc:`help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`ipythonconsole` to get help and completions there.
+   If nothing is displayed in the calltip, hover hint or :doc:`/panes/help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`/panes/ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
@@ -303,7 +303,7 @@ Troubleshooting
 
       conda install spyder-kernels=<VERSION>
 
-   For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: Spyder doesn't launch or is slow on macOS Big Sur. How can I get it working?
@@ -355,7 +355,7 @@ About Spyder
    Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
    Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`standalone_installers_ref`) with ``conda`` as you usually do.
    Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
-   For more, see our :doc:`installation`.
+   For more, see our :doc:`/installation`.
 
    .. _recently changed: https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community
    .. _Terms of Service: https://www.anaconda.com/terms-of-service
