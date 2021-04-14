@@ -5,7 +5,7 @@
 ## Pull Request Checklist
 
 * [ ] Read and followed this repo's [Contributing Guidelines](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md)
-* [ ] Based your PR on the latest version of the correct branch (master or 3.x)
+* [ ] Based your PR on the latest version of the correct branch (master or 4.x)
 * [ ] Checked your writing carefully for correct English spelling, grammar, etc
 * [ ] Described your changes and the motivation for them below
 * [ ] Noted what issue(s) this pull request resolves, creating one if needed

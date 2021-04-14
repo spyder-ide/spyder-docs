@@ -41,7 +41,7 @@ For more information about Spyder itself, please see our [website](https://www.s
 ## Building and Deploying
 
 The docs are built with [Sphinx](http://www.sphinx-doc.org/en/stable/index.html) and deployed with GitHub Actions to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
-The ``master`` branch contains the in-development docs for Spyder 4, while the ``3.x`` branch has the docs for the previous major version, Spyder 3.
+The ``master`` branch contains the in-development docs for Spyder 5, while the ``4.x`` branch with the Spyder 4 docs is still maintained, and the frozen ``3.x`` branch retains the docs for the legacy Spyder 3.
 
 
 ## Contributing
