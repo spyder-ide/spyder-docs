@@ -44,7 +44,7 @@ The :guilabel:`Show plot outline` option, off by default, shows a thin stroke su
 Fit plots to window
 ~~~~~~~~~~~~~~~~~~~
 
-The :guilabel:`Fit plots to Window` option, also enabled by default, sizes the figures to match the pane. 
+The :guilabel:`Fit plots to Window` option, also enabled by default, sizes the figures to match the pane.
 Disabling it will display plots at their native size, and allow you use the zoom buttons at the top of the pane to scale them manually.
 
 .. image:: /images/plots/plots-zoom.gif

@@ -32,7 +32,7 @@ The analyzer works with both individual scripts and whole Python packages (direc
 .. image:: /images/pylint/code-analysis-file.gif
    :alt: Spyder Pylint pane, showing running analysis browsing file
 
-Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. 
+Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why.
 If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.
 
 .. image:: /images/pylint/code-analysis-output.png
@@ -66,7 +66,7 @@ Advanced options
 ================
 
 You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_.
-For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``. 
+For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``.
 
 .. _scope: http://pylint.pycqa.org/en/stable/user_guide/message-control.html
 

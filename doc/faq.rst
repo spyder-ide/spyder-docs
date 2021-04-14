@@ -168,7 +168,7 @@ Using Spyder
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
    :container: + dropdown-id-using-reset-prefs
 
-   Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the `Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
+   Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the :guilabel:`Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
 
    .. image:: /images/faq/faq-reset-spyder.png
       :alt: Spyder reset button in tools

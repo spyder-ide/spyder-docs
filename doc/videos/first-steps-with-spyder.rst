@@ -16,7 +16,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
 * Find out different ways to open Spyder
 * Understand the key elements of Spyder’s interface
 * Learn more about Spyder’s four core panes
-* Explore the other default panes 
+* Explore the other default panes
 
 .. youtube:: E2Dap5SfXkI
    :height: 360
@@ -29,7 +29,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
    :animate: fade-in
 
    .. div:: scroll
-      
+
       Hello everyone! I'm Juanita, and in this video I'm going to show you how to open Spyder and go over the basics of Spyder's interface. We will learn about Spyder's four panes that you'll likely be using most often, as well as briefly explore the others that are open by default. If you don't have Spyder installed and would like to follow along, you can `download it here`_.
 
       .. _download it here: https://www.spyder-ide.org/#section-download
@@ -44,9 +44,9 @@ Discover the basics of using the Spyder interface and get an introduction to its
       To launch Spyder without opening Navigator, open your command line and type ``spyder``. If you followed the :doc:`/installation`, you should have everything necessary to open Spyder 4.
 
       This is what Spyder 4 looks like in its default configuration, though you can thoroughly customize it, which we'll get to in a later tutorial. You can see that it is divided into three sections showing three different panes: the Editor, the IPython Console and the Help viewer. These three, along with the Variable Explorer, are the four core panes you'll work with the most in Spyder.
- 
+
       On the left we have the Editor, where you can open, edit and run files. Bottom right is the IPython Console, which you can use both interactively and to run your code in the Editor. It shows you which version of Python you are using. Above it, you'll find the Help pane, where you can get more information and documentation for any object in the Editor or Console by pressing :kbd:`Ctrl-I` (or :kbd:`Cmd-I` on macOS). We'll see how to do this in our next video.
- 
+
       For the two sections on the right, you can switch tabs to see the other panes that are open by default when launching Spyder. In the top section, you can switch to the Variable Explorer, which shows you the name, type, size and value of the variables that you have previously defined in the Editor or the Console. You can also modify the value of these variables directly from this pane by double clicking them under the Value column. The Plots pane will show you the figures you generate with Matplotlib and other libraries, and the Files pane allows you to browse the files on your computer and open them in the Editor with just a click.
 
       Finally, in the bottom section you can also access the History pane, which shows you the commands you have entered in the Console, including those from previous sessions.
@@ -67,7 +67,7 @@ Learn the basics of using Spyder’s four main panes.
 * Run a script in the Editor and see the output in Spyder’s IPython Console
 * Execute basic Python commands in the IPython Console
 * Define variables in the Editor and modify their values in the IPython Console
-* View and interact with the variables in Spyder’s Variable Explorer 
+* View and interact with the variables in Spyder’s Variable Explorer
 * Get documentation in the Help pane in two different ways
 
 .. youtube:: WV9bm4ey7Cg
@@ -103,9 +103,9 @@ Customization
 
 Learn how to customize Spyder’s interface to match your workflow and development style.
 
-* Choose your preferred fonts 
-* Switch between different interface, icon and syntax themes 
-* Show, hide, undock and rearrange Spyder panes 
+* Choose your preferred fonts
+* Switch between different interface, icon and syntax themes
+* Show, hide, undock and rearrange Spyder panes
 * Split, close and pop out Editor panels
 
 .. youtube:: -dARZBUDk_s
@@ -121,7 +121,7 @@ Learn how to customize Spyder’s interface to match your workflow and developme
    .. div:: scroll
 
       Hello everyone, I'm Juanita! In this video, I will show you how to customize Spyder to match your workflow and development style.
- 
+
       First, we are going to learn how to change the font in the Editor, IPython Console and Help panes. To do this, go to Preferences, select the Appearance entry and scroll down to Fonts. You can change both the style and the size of the font for both plain and rich text. You can see how this affects the font in the Editor, Console and Help panes.
 
       In this same dialog, you can easily change the syntax highlighting theme, for which you can see the preview at the right of the window. Note that Spyder's interface theme changes to match the highlighting theme because the Interface theme option is set to Automatic by default. However, you can change the theme for the entire Spyder interface, choosing between Light and Dark. After selecting this change, click Apply to restart Spyder to apply the new theme.

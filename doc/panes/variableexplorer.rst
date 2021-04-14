@@ -161,7 +161,7 @@ For lists and Numpy arrays, more advanced options are available, including gener
 .. image:: /images/variable_explorer/variable-explorer-histogram-plot.gif
    :alt: Plot window showing a plot, generated via the previous options
 
-You can even save an array to a ``.npy`` file by simply clicking the appropriate option, which can later be loaded by Spyder or in your code via `numpy.load()`.
+You can even save an array to a ``.npy`` file by simply clicking the appropriate option, which can later be loaded by Spyder or in your code via ``numpy.load()``.
 
 .. image:: /images/variable_explorer/variable-explorer-contextmenu-array.png
    :width: 500

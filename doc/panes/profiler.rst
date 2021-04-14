@@ -14,7 +14,7 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 Running the Profiler
 ====================
 
-You can browse for a file using the open button to the right of the `Profiler`'s path box (top left of the pane), which will run profiling over this file automatically. 
+You can browse for a file using the open button to the right of the Profiler's path box (top left of the pane), which will run profiling over this file automatically.
 
 .. image:: /images/profiler/profiler-execution-browse.gif
    :alt: Spyder Profiler pane, showing browsing a file and running profiler
@@ -27,7 +27,7 @@ clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a config
 .. image:: /images/profiler/profiler-execution-menu.gif
    :alt: Spyder Profiler pane, showing running profiler from menu bar
 
-If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in the top right, and if profiling fails for any reason, the :guilabel:`Output` dialog will be displayed, indicating the error that occurred. 
+If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in the top right, and if profiling fails for any reason, the :guilabel:`Output` dialog will be displayed, indicating the error that occurred.
 
 By double-clicking an item in the Profiler, you will be taken to the file and line in the :doc:`editor` where it was called.
 
@@ -75,8 +75,8 @@ Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.66 ms, but 
 Profiler plugins
 ================
 
-There are two additional plugins that you can install to enable other types of profiling in Spyder. 
-First, Spyder Line Profiler allows you to benchmark each line of your code individually. 
+There are two additional plugins that you can install to enable other types of profiling in Spyder.
+First, Spyder Line Profiler allows you to benchmark each line of your code individually.
 To learn more, visit the `spyder-line-profiler git repository`_.
 
 .. _spyder-line-profiler git repository: https://github.com/spyder-ide/spyder-line-profiler
@@ -84,7 +84,7 @@ To learn more, visit the `spyder-line-profiler git repository`_.
 .. image:: /images/profiler/profiler-line-profiler.png
    :alt: Spyder Profiler pane, displaying a list of functions and their execution time
 
-Second, Spyder Memory Profiler measures the memory usage of your code. 
+Second, Spyder Memory Profiler measures the memory usage of your code.
 For more information, go to the `spyder-memory-profiler git repository`_.
 
 .. _spyder-memory-profiler git repository: https://github.com/spyder-ide/spyder-memory-profiler

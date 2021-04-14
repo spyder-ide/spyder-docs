@@ -16,7 +16,7 @@ Using the Online Help
 =====================
 
 The Online Help's home shows an index where you can browse the documentation of standard library modules, third party packages installed in your Python environment, and your own local code.
-Click on the name of any module to open its documentation. 
+Click on the name of any module to open its documentation.
 
 .. image:: /images/online_help/online-help-browse.gif
    :alt: Spyder Online Help pane showing module browsing
