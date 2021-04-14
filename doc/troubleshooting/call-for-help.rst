@@ -57,15 +57,15 @@ Our `Google Group`_ is great for help-related questions, particularly those you 
 Spyder website
 ~~~~~~~~~~~~~~
 
-The `Spyder website`_ contains basic information about the IDE and links to many other helpful resources.
+The `Spyder site`_ contains basic information about the IDE and links to many other helpful resources.
 
-.. _Spyder website: https://www.spyder-ide.org/
+.. _Spyder site: https://www.spyder-ide.org/
 
 
 .. rst-class:: fabb fa-stack-overflow
 
-Stack Overflow
-~~~~~~~~~~~~~~
+Stack Overflow tag
+~~~~~~~~~~~~~~~~~~
 
 `Stack Overflow`_ is a great place to start searching and posting, particularly if your question is more programming-related, or has to do with something specific to your own code.
 It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.
@@ -95,9 +95,9 @@ The `Python help page`_ is a great resource that lists a number of places you ca
 Python documentation
 ~~~~~~~~~~~~~~~~~~~~
 
-The `Python documentation`_ site can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.
+The `Python docs`_ can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.
 
-.. _Python documentation: https://docs.python.org/
+.. _Python docs: https://docs.python.org/
 
 
 .. rst-class:: fabb fa-reddit
@@ -125,9 +125,9 @@ Data science/SciPy resources:
 Anaconda help
 ~~~~~~~~~~~~~~
 
-The `Anaconda help`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
+The `Anaconda docs`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
 
-.. _Anaconda help: https://www.anaconda.com/help
+.. _Anaconda docs: https://www.anaconda.com/help
 
 
 .. rst-class:: fasb fa-flask
@@ -145,9 +145,9 @@ The `Scipy website`_ is the the central home of the SciPy stack, with informatio
 Project Jupyter
 ~~~~~~~~~~~~~~~
 
-`Project Jupyter`_ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the `Spyder-Notebook`_ plugin, and more.
+`Jupyter`_ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the `Spyder-Notebook`_ plugin, and more.
 
-.. _Project Jupyter: https://jupyter.org/
+.. _Jupyter: https://jupyter.org/
 .. _Spyder-Notebook: https://github.com/spyder-ide/spyder-notebook
 
 

@@ -28,10 +28,6 @@ Enter the name of the item you'd like help on in the :guilabel:`Package` field t
 
 The module's file location is linked to the right of the doc's title, which you can click to view its source code.
 
-Standard library modules also have a link to the corresponding `Python docs`_, which can be viewed right inside of the pane.
-
-.. _Python docs: https://docs.python.org/
-
 .. image:: /images/online_help/online-help-path.gif
    :alt: Spyder Online Help pane showing source code clicking module's path
 

@@ -65,8 +65,8 @@ Spyder is included by default in the `Anaconda`_ Python distribution, which come
 .. _Anaconda: https://www.anaconda.com/products/individual
 
 
-Running Spyder
-~~~~~~~~~~~~~~
+Running with Anaconda
+~~~~~~~~~~~~~~~~~~~~~
 
 To run Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
 On other platforms, open Anaconda Navigator, scroll to Spyder under ``Home``, and click ``Launch``.
@@ -189,8 +189,8 @@ Spyder is also available in other GNU/Linux distributions, like
 Please refer to your distribution's documentation for how to install Spyder.
 
 
-Running Spyder
-~~~~~~~~~~~~~~
+Running on Linux
+~~~~~~~~~~~~~~~~
 
 How to launch Spyder after installation varies depending on your OS and install method, but with those featured here, it will generally be the same as for any other installed application.
 Alternately, you should be able to launch it from the terminal/command line with ``spyder`` or ``spyder3``.

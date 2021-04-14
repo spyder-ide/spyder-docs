@@ -43,6 +43,11 @@ repos:
     exclude_types: [svg, batch]
     args: [--whitespaces-count, '2']
 
+# ReST checker
+- repo: https://github.com/myint/rstcheck
+  rev: '3f92957478422df87bd730abde66f089cc1ee19b'
+  hooks:
+  - id: rstcheck
 
 # General checkers
 
