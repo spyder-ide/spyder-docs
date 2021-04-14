@@ -1,4 +1,4 @@
-![Spyder Docs — Documentation for the Scientific Python Development Environment](./doc/_static/spyder_readme_banner.png)
+![Spyder Docs — Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
 
 *Copyright © 2009–2021 The Spyder Doc Contributors*
 
@@ -9,7 +9,7 @@
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
 
 
-![Screenshot of documentation index page](./doc/_static/index-docs.gif)
+![Screenshot of documentation index page](./doc/_static/images/index-docs.gif)
 
 
 ## Overview

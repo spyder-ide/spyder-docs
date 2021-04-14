@@ -139,7 +139,7 @@ pygments_style = "sphinx"
 # CI = True
 # TRAVIS_BRANCH = 'master'
 html_theme = "pandas_sphinx_theme"
-html_logo = '_static/spyder_logo.png'
+html_logo = '_static/images/spyder_logo.png'
 html_theme_options = {
     "external_links": [
         {
@@ -217,14 +217,14 @@ html_static_path = ["_static"]
 
 # Custom CSS for the site
 html_css_files = [
-    "driver.min.css",
-    "custom_styles.css",
+    "css/driver.min.css",
+    "css/custom_styles.css",
 ]
 
 # Custom Javascript for the site
 html_js_files = [
-    "driver.min.js",
-    "custom_scripts.js",
+    "js/driver.min.js",
+    "js/custom_scripts.js",
 ]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,

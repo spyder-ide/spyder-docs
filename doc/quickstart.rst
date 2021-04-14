@@ -10,15 +10,15 @@ Finally, you'll get to walk through some of Spyder's key panes and functionality
 .. raw:: html
 
    <div class="interactive-tour-container">
-      <img id="tour-default-layout-main" class="tour-screenshot tour-screenshot-active" src="_static/tour/default-layout-main.png">
-      <img id="tour-options-menu" class="tour-screenshot" src="_static/tour/options-menu.png">
-      <img id="tour-context-menu" class="tour-screenshot" src="_static/tour/context-menu.png">
-      <img id="tour-variable-explorer" class="tour-screenshot" src="_static/tour/variable-explorer.png">
-      <img id="tour-plots" class="tour-screenshot" src="_static/tour/plots.png">
-      <img id="tour-files" class="tour-screenshot" src="_static/tour/files.png">
-      <img id="tour-find" class="tour-screenshot" src="_static/tour/find.png">
-      <img id="tour-profiler" class="tour-screenshot" src="_static/tour/profiler.png">
-      <img id="tour-code-analysis" class="tour-screenshot" src="_static/tour/code-analysis.png">
+      <img id="tour-default-layout-main" class="tour-screenshot tour-screenshot-active" src="_static/images/tour/default-layout-main.png">
+      <img id="tour-options-menu" class="tour-screenshot" src="_static/images/tour/options-menu.png">
+      <img id="tour-context-menu" class="tour-screenshot" src="_static/images/tour/context-menu.png">
+      <img id="tour-variable-explorer" class="tour-screenshot" src="_static/images/tour/variable-explorer.png">
+      <img id="tour-plots" class="tour-screenshot" src="_static/images/tour/plots.png">
+      <img id="tour-files" class="tour-screenshot" src="_static/images/tour/files.png">
+      <img id="tour-find" class="tour-screenshot" src="_static/images/tour/find.png">
+      <img id="tour-profiler" class="tour-screenshot" src="_static/images/tour/profiler.png">
+      <img id="tour-code-analysis" class="tour-screenshot" src="_static/images/tour/code-analysis.png">
       
       <svg class="tour-overlay" viewBox="0 0 1280 720">
         <rect id="introduction-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="2.5" width="1275.5" height="715" />
