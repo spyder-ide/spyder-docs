@@ -4,9 +4,7 @@ First off, thanks for your interest in helping out with the documentation for Sp
 
 **Important Note:** This is the repository for the documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself.
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
-You can view the live Spyder 3 documentation at [docs.Spyder-IDE.org](https://docs.spyder-ide.org) and the in-development Spyder 4 docs at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
-Thanks!
-
+You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
 For more guidance on the basics of using ``git`` and Github to contribute to Spyder and its documentation, please see the [contributing guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) in the main Spyder repository mentioned above, and check out the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed information.
 For an introduction to the basics of reST syntax, the source format in which Spyder's documentation is written, see the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
 
@@ -26,7 +24,7 @@ Issue reports that don't contain enough information to allow us to do something 
 * Currently, all PRs should be based against ``master``, which contains the in-development documentation for the current Spyder 4 release.
 * The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version
 
-In the near future, once the Spyder 4 docs are substantially complete, the ``4.x`` branch will be contain the docs for the stable version, while ``master`` will be dedicated to the changes necessary for the forthcoming Spyder 5.
+In the near future, the ``4.x`` branch will be contain the docs for the stable version, while ``master`` will be dedicated to the changes necessary for Spyder 5.
 
 
 
@@ -35,31 +33,37 @@ In the near future, once the Spyder 4 docs are substantially complete, the ``4.x
 We welcome contributions from the community, and will do our best to review all of them in a timely fashion.
 To do so, please submit a pull request (PR) to this repo against the appropriate branch with your changes, and create a corresponding issue as well if your change is substantive, so that we can keep track of everything and give you credit for closing it.
 
-Please make sure your PR titles are brief but descriptive, and include ``PR: `` as a prefix (if a work in progress, also prefix ``[WiP]``); most importantly, make sure you follow and fill out the template provided, which should guide you through the process and make sure everything runs smoothly.
+Please make sure your PR titles are brief but descriptive, and include ``PR: `` as a prefix; most importantly, make sure you follow and fill out the template provided, which should guide you through the process and make sure everything runs smoothly.
 
 
 
-## Building the Docs Locally
+## Building and Testing Locally
+
+For non-trivial changes, its easy to work with Spyder-Docs locally by following a few simple steps.
+
+
+### Install dependencies
+
+Make sure you have the appropriate dependencies installed in your active Python environment for the script to work.
+You can install them into your current conda environment with:
+
+```bash
+conda install -c conda-forge --file requirements-conda.txt
+pip install -r requirements-dev.txt
+```
+
+Or, if using ``pip`` (``pip3`` on Linux), you can grab them with just:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+
+### Build the docs
 
 To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line (or the Anaconda prompt on Windows).
 
-Make sure you have the appropriate dependencies (Sphinx, Sphinx-Panels and the Spyder-Docs-Sphinx-Theme) installed in your active Python environment for the script to work.
-You can install them into your current Anaconda environment with
-
-```bash
-conda install sphinx
-pip install sphinx-panels sphinx-multiversion
-pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
-```
-
-Or, if using ``pip`` (``pip3`` on Linux), you can grab them with
-
-```bash
-pip install sphinx sphinx-panels sphinx-multiversion
-pip install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
-```
-
-Now, to build the docs site itself, run the following if on macOS/Linux:
+To build just the docs for the current version, run the following if on macOS/Linux:
 
 ```bash
 make docs
@@ -82,29 +86,11 @@ To build the full site with the documentation for all Spyder versions, run:
 make multidocs
 ```
 
-You should be able to view the html output inside the resulting ``_build`` directory it produces; ``index.html`` is the main page.
+Either way, you should be able to view the HTML output inside the resulting ``_build`` directory the build commands produce; ``index.html`` is the main page.
 
 
 
-## Configuring Netlify
-
-The steps to configure Netlify to preview pull requests are the following:
-
-1. Pass the command to build the docs:
-
-```bash
-ci/install.sh && chmod a+x ci/build.sh && ci/build.sh
-```
-
-2. Pass the root directory of the generated docs:
-
-```bash
-doc/_build/html/
-```
-
-
-
-### Netlify Notes
+## Netlify Notes
 
 * The `runtime.txt` file in the root of the repo is needed by Netlify to declare the Python version required to build the docs.
 * By default, Netlify adds a lot of checks to pull requests, besides the one that actually builds the live preview.

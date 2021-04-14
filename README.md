@@ -1,10 +1,12 @@
-![Spyder Docs — Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
+![Spyder Docs - Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
 
-*Copyright © 2009–2021 The Spyder Doc Contributors*
+*Copyright (c) 2009-2021 Spyder Doc Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-docs/blob/master/AUTHORS.txt))*
 
 
-[![license](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
-[![Travis status](https://travis-ci.org/spyder-ide/spyder-docs.svg?branch=master)](https://travis-ci.org/spyder-ide/spyder-docs)
+[![License](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
+[![Checks](https://github.com/spyder-ide/spyder-docs/actions/workflows/test.yml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/test.yml)
+[![Deploy](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](#backers)
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
 
@@ -15,15 +17,15 @@
 ## Overview
 
 This repository contains the documentation for Spyder, the Scientific Python Development Environment.
-The Spyder 3 docs can be viewed at [docs.Spyder-IDE.org](https://docs.spyder-ide.org/), and the in-development Spyder 4 docs can be previewed at [docs.Spyder-IDE.org/develop/](https://docs.spyder-ide.org/develop/).
+You can view the live docs for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
 
 For more information about Spyder itself, please see our [website](https://www.spyder-ide.org/) and the [main repo](https://github.com/spyder-ide/spyder).
 
 
 ## Building and Deploying
 
-The docs are built with [Sphinx](http://www.sphinx-doc.org/en/stable/index.html) and deployed with [Doctr](https://drdoctr.github.io/doctr/) to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
-The ``master`` branch contains the in-development docs for Spyder 4, which should be ready for release soon, while the ``3.x`` branch has the docs for the previous major version, Spyder 3.
+The docs are built with [Sphinx](http://www.sphinx-doc.org/en/stable/index.html) and deployed with GitHub Actions to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
+The ``master`` branch contains the in-development docs for Spyder 4, while the ``3.x`` branch has the docs for the previous major version, Spyder 3.
 
 
 ## Contributing
