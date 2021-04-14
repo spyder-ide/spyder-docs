@@ -144,6 +144,17 @@ repos:
     name: Lint Markdown
     args: [--fix]
 
+# Lint Python
+- repo: https://github.com/pycqa/flake8
+  rev: '3.9.0'
+  hooks:
+  - id: flake8
+
+- repo: https://github.com/pycqa/pylint
+  rev: pylint-2.7.4
+  hooks:
+  - id: pylint
+
 # Check reST
 - repo: https://github.com/myint/rstcheck
   rev: '3f92957478422df87bd730abde66f089cc1ee19b'

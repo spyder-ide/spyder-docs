@@ -12,6 +12,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+# pylint: disable = invalid-name, wrong-import-order
+
+"""Sphinx configuration file for Spyder's documentation."""
+
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
@@ -68,10 +72,11 @@ master_doc = "index"
 
 # General information about the project.
 project = "Spyder"
-copyright = (
+copyright = (  # pylint: disable = redefined-builtin
     f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
     "<span class='pipe-red'>|</span> "
-    "<a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
+    "<a href="
+    "'https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
     "target='_blank' rel='noopener noreferrer'>MIT License</a>"
     )
 author = "The Spyder Doc Contributors"
@@ -291,7 +296,8 @@ smv_released_pattern = r'^heads/\d+\.\w+$'
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{config.release}'
 
-# Determine whether remote or local git branches/tags are preferred if their output dirs conflict
+# Determine whether remote or local git branches/tags are preferred
+# if their output dirs conflict
 smv_prefer_remote_refs = False
 
 # Use git ref naming if on a feature/PR branch
@@ -423,5 +429,5 @@ class Youtube(IframeVideo):
             'class="align-%(align)s"></iframe></div></div>')
 
 
-def setup(builder):
+def setup(builder):  # pylint: disable = unused-argument
     directives.register_directive('youtube', Youtube)
