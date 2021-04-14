@@ -1,0 +1,76 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+minimum_pre_commit_version: '2.8.2'
+
+default_language_version:
+  python: python3
+
+default_stages: [commit]
+
+exclude: '\.min\.(js|css)$'
+
+
+repos:
+# Meta checks
+- repo: meta
+  hooks:
+  - id: check-useless-excludes
+
+# General fixers
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: trailing-whitespace
+    exclude_types: [svg]
+  - id: mixed-line-ending
+    name: Normalize mixed line endings
+    args: [--fix=lf]
+    exclude_types: [batch]
+  - id: end-of-file-fixer
+    exclude_types: [svg]
+  - id: fix-byte-order-marker
+    name: Remove Unicode BOM
+  - id: requirements-txt-fixer
+
+# More general fixers
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.1.9
+  hooks:
+  - id: remove-tabs
+    name: Replace tabs with spaces
+    types: [text]
+    exclude_types: [svg, batch]
+    args: [--whitespaces-count, '2']
+
+
+# General checkers
+
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: v1.8.0
+  hooks:
+  - id: text-unicode-replacement-char
+    name: Check for Unicode replacement chars
+  - id: rst-backticks
+  - id: rst-directive-colons
+  - id: rst-inline-touching-normal
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: check-added-large-files
+    args: [--maxkb=1025]
+  - id: check-ast
+  - id: check-case-conflict
+  - id: check-executables-have-shebangs
+    exclude: 'pre\-commit\-config\.yaml'
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-toml
+  - id: check-xml
+  - id: check-yaml
+  - id: destroyed-symlinks
+  - id: no-commit-to-branch
+    name: Prevent commits to wrong branch
+    args: [--branch, master, --pattern, 'v?\d{1,3}\.x']

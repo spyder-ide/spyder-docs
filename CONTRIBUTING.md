@@ -58,6 +58,27 @@ Or, if using ``pip`` (``pip3`` on Linux), you can grab them with just:
 pip install -r requirements-dev.txt
 ```
 
+### Set up Pre-Commit
+
+This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
+Pre-commit itself is installed with the above command, and the hooks can be installed by running the following from the root of this repo:
+
+```bash
+pre-commit install
+pre-commit install --hook-type commit-msg
+```
+
+The hooks will be automatically run against any new/changed files every time you commit.
+It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
+If you made one or more commits before installing the hooks (not recommended), to run them manually on all the files in the repo, execute:
+
+```bash
+pre-commit run --all-files
+```
+
+**Note**: Most of the hooks fix the problems they detect automatically (the hook output will say ``files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
+Once you're satisfied, ``git add .`` again and commit again.
+
 
 ### Build the docs
 
