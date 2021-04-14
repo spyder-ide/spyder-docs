@@ -144,22 +144,43 @@ repos:
     name: Lint Markdown
     args: [--fix]
 
+# Check Python
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: check-ast
+    name: Check Python AST
+
 # Lint Python
 - repo: https://github.com/pycqa/flake8
   rev: '3.9.0'
   hooks:
   - id: flake8
+    name: Lint Python with Flake8
 
 - repo: https://github.com/pycqa/pylint
   rev: pylint-2.7.4
   hooks:
   - id: pylint
+    name: Lint Python with Pylint
 
-# Check reST
+# Check RST
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: v1.8.0
+  hooks:
+  - id: rst-backticks
+    name: Check RST backticks
+  - id: rst-directive-colons
+    name: Check RST directive colons
+  - id: rst-inline-touching-normal
+    name: Check RST inline touching normal
+
+# Lint RST
 - repo: https://github.com/myint/rstcheck
   rev: '3f92957478422df87bd730abde66f089cc1ee19b'
   hooks:
   - id: rstcheck
+    name: Lint RST
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -206,9 +227,6 @@ repos:
 - repo: https://github.com/pre-commit/pygrep-hooks
   rev: v1.8.0
   hooks:
-  - id: rst-backticks
-  - id: rst-directive-colons
-  - id: rst-inline-touching-normal
   - id: text-unicode-replacement-char
     name: Check for Unicode replacement chars
 
@@ -217,7 +235,6 @@ repos:
   hooks:
   - id: check-added-large-files
     args: [--maxkb=1025]
-  - id: check-ast
   - id: check-case-conflict
   - id: check-executables-have-shebangs
     exclude: 'pre\-commit\-config\.yaml'
