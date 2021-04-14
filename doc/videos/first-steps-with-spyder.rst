@@ -41,7 +41,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
          conda update anaconda
          conda install spyder=4
 
-      To launch Spyder without opening Navigator, open your command line and type ``spyder``. If you followed the :doc:`installation`, you should have everything necessary to open Spyder 4.
+      To launch Spyder without opening Navigator, open your command line and type ``spyder``. If you followed the :doc:`/installation`, you should have everything necessary to open Spyder 4.
 
       This is what Spyder 4 looks like in its default configuration, though you can thoroughly customize it, which we'll get to in a later tutorial. You can see that it is divided into three sections showing three different panes: the Editor, the IPython Console and the Help viewer. These three, along with the Variable Explorer, are the four core panes you'll work with the most in Spyder.
  

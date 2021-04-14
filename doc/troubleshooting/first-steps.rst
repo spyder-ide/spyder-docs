@@ -19,7 +19,7 @@ There's a good chance that someone else has already experienced the same problem
 Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message.
 To view it, simply click :guilabel:`Show details` in the Spyder error dialog.
 
-.. image:: images/first-steps/first-steps-show-details.png
+.. image:: /images/first-steps/first-steps-show-details.png
    :alt: Spyder showing view internal console option
 
 Often, that alone will tell you how to fix the problem on your own, but if not, we're here to help.

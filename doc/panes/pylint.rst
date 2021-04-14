@@ -8,7 +8,7 @@ Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which
 
 .. _Pylint: http://pylint.pycqa.org/
 
-.. image:: images/pylint/code-analysis-standard.png
+.. image:: /images/pylint/code-analysis-standard.png
    :alt: Spyder Pylint pane, showing numerous issues discovered in a file
 
 
@@ -23,24 +23,24 @@ If the Code Analysis pane is not visible, you can open it under :menuselection:`
 All standard checks are run by default.
 To go directly to a line in the :doc:`editor` highlighted by a failed check, just click its name.
 
-.. image:: images/pylint/code-analysis-editor.gif
+.. image:: /images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
 
 You can also manually enter the path of a file you'd like it to check in the path entry box in the pane's toolbar.
 The analyzer works with both individual scripts and whole Python packages (directories containing an :file:`__init__.py` file).
 
-.. image:: images/pylint/code-analysis-file.gif
+.. image:: /images/pylint/code-analysis-file.gif
    :alt: Spyder Pylint pane, showing running analysis browsing file
 
 Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. 
 If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions.
 
-.. image:: images/pylint/code-analysis-output.png
+.. image:: /images/pylint/code-analysis-output.png
    :alt: Spyder Pylint pane, showing output
 
 Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses.
 
-.. image:: images/pylint/code-analysis-history.png
+.. image:: /images/pylint/code-analysis-history.png
    :alt: Spyder Pylint pane, showing history
 
 
@@ -51,12 +51,12 @@ Options menu
 
 The number of recent runs Spyder should remember can be customized in the :guilabel:`History` dialog, available from the Code Analysis options menu.
 
-.. image:: images/pylint/code-analysis-history-custom.gif
+.. image:: /images/pylint/code-analysis-history-custom.gif
    :alt: Spyder Pylint pane, customizing history dialog
 
 You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu.
 
-.. image:: images/pylint/code-analysis-expand-collapse.gif
+.. image:: /images/pylint/code-analysis-expand-collapse.gif
    :alt: Spyder Pylint pane, expanding and collapsing sections
 
 
@@ -72,7 +72,7 @@ For example, a directive might look like ``# pylint: disable=invalid-name``, or 
 
 .. _Pylint message names: http://pylint.pycqa.org/en/latest/technical_reference/features.html#pylint-checkers-options-and-switches
 
-.. image:: images/pylint/code-analysis-pylint-disable.gif
+.. image:: /images/pylint/code-analysis-pylint-disable.gif
    :alt: Spyder Pylint pane, showing disabling a message locally
 
 Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user folder.
@@ -81,7 +81,7 @@ For more details on configuring Pylint, see the `Pylint documentation`_.
 
 .. _Pylint documentation:  http://pylint.pycqa.org/en/stable/index.html
 
-.. image:: images/pylint/code-analysis-pylint-file.gif
+.. image:: /images/pylint/code-analysis-pylint-file.gif
    :alt: Spyder Pylint pane, disabling a message globally in the .pylintrc
 
 

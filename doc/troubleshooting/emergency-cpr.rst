@@ -15,7 +15,7 @@ Common solutions
 
 #. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:variableexplorer dialogs) are left open, and check that the preference setting :menuselection:`General --> Advanced Settings --> Use a single instance` isn't checked.
 
-   .. image:: images/emergency-cpr/emergency-cpr-single-instance.png
+   .. image:: /images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
 
 #. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
@@ -55,7 +55,7 @@ To do so, you'll need to:
 
 #. Once inside the :file:`app` directory, run ``python start.py`` to launch Spyder.
 
-   .. image:: images/emergency-cpr/emergency-cpr-python-start.gif
+   .. image:: /images/emergency-cpr/emergency-cpr-python-start.gif
       :alt: Command line showing python start to launch Spyder
 
 

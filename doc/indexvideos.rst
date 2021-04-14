@@ -4,6 +4,7 @@ Intro Videos
 
 .. toctree::
     :maxdepth: 2
-    
-    first-steps-with-spyder
-    working-with-spyder
+    :glob:
+
+    videos/first-steps-with-spyder
+    videos/working-with-spyder

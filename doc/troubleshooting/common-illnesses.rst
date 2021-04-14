@@ -12,7 +12,7 @@ Beyond the general troubleshooting steps, some frequently-reported problems requ
 Errors starting the kernel
 ==========================
 
-If you receive the message ``An error occurred while starting the kernel`` in the :doc:`ipythonconsole`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
+If you receive the message ``An error occurred while starting the kernel`` in the :doc:`/panes/ipythonconsole`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
 There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.
 
 
@@ -21,7 +21,7 @@ Spyder-Kernels not installed/incompatible
 
 Spyder requires a supported version of the ``spyder-kernels`` package to be present in the working environment you want to run your console in.
 
-.. image:: images/common-illnesses/common-illnesses-kernel-version.png
+.. image:: /images/common-illnesses/common-illnesses-kernel-version.png
    :alt: Kernel version error dialog
 
 It is included by default with Anaconda, but if you want to run your code in another Python environment or installation, you'll need to make sure it's installed and updated to the latest version.
@@ -83,7 +83,7 @@ AttributeError/ImportError
 
 Check the last few lines of the error message, and see if its an ``AttributeError`` or ``ImportError``, or refers to a file you created in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
 
-.. image:: images/common-illnesses/common-illnesses-atribute-error.png
+.. image:: /images/common-illnesses/common-illnesses-atribute-error.png
    :alt: Spyder's AtributeError dialog
 
 If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string.py`` or ``time.py``, which overrides the built-in module that Spyder-Kernels is trying to load.
@@ -109,7 +109,7 @@ Object missing docstring
 
 If nothing is displayed in the calltip, hover hint or help pane, the object you're trying to introspect may not have a docstring.
 
-.. image:: images/common-illnesses/common-illnesses-missing-docstring.png
+.. image:: /images/common-illnesses/common-illnesses-missing-docstring.png
    :alt: Docstring not found in help pane
    :width: 500px
 
@@ -121,11 +121,11 @@ Object cannot be found
 
 Some objects, whether due to being written in C, Cython or another language; generated dynamically at runtime; or being a method of an object you create, cannot be easily found without executing the code.
 
-.. image:: images/common-illnesses/common-illnesses-not-found.png
+.. image:: /images/common-illnesses/common-illnesses-not-found.png
    :alt: Object not found in help pane
    :width: 500px
 
-However, once you run your code in the :doc:`ipythonconsole`, you might be able to get help and completions on the object there.
+However, once you run your code in the :doc:`/panes/ipythonconsole`, you might be able to get help and completions on the object there.
 
 
 LSP has stopped working
@@ -134,7 +134,7 @@ LSP has stopped working
 Occasionally, especially after using Spyder for a while, code completion, help and analysis may stop working.
 If this is the case, you can check LSP status with the :guilabel:`LSP Python` item in Spyder's status bar at the bottom of the screen, and restart it by right-clicking it and selecting the :guilabel:`Restart Python Language Server` item.
 
-.. image:: images/common-illnesses/common-illnesses-LSP-restart.png
+.. image:: /images/common-illnesses/common-illnesses-LSP-restart.png
    :alt: Spyder with LSP restart dialog
 
 
@@ -162,7 +162,7 @@ Plugin does not work at all
 If you have installed a Spyder plugin, but you can't see it, go to the :guilabel:`Panes` submenu of the :guilabel:`View` menu and select the plugin's name, which should make its pane visible.
 If you don't see the plugin there, select the :guilabel:`Dependencies` item under the :guilabel:`Help` menu and see if the plugin appears at the bottom.
 
-.. image:: images/common-illnesses/common-illnesses-plugins.png
+.. image:: /images/common-illnesses/common-illnesses-plugins.png
    :alt: Dependencies dialog showing Unittest plugin
 
 If the plugin with the problem is not listed in the dependencies dialog, check that you installed it in the same environment as Spyder.

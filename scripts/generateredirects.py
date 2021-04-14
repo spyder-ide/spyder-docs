@@ -45,6 +45,8 @@ def generate_redirect(
         base_url=base_url,
         canonical_url=canonical_url.as_posix(),
         )
+
+    redirect_output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(redirect_output_path, mode="w",
               encoding="utf-8", newline="\n") as redirect_file:
         redirect_file.write(output_text)

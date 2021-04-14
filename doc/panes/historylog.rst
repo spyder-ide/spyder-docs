@@ -4,7 +4,7 @@ History
 
 With the **History** pane, you can view all the commands you've entered into any :doc:`ipythonconsole`, along with their timestamp.
 
-.. image:: images/history/history-standard.png
+.. image:: /images/history/history-standard.png
    :alt: Spyder History Log, displaying a list of previously executed commands
 
 
@@ -26,7 +26,7 @@ Options Menu
 
 The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle wrapping of long lines (:guilabel:`Wrap lines`), and whether the line number is displayed to the left of the text (:guilabel:`Show line numbers`).
 
-.. image:: images/history/history-wrap.gif
+.. image:: /images/history/history-wrap.gif
    :alt: Spyder History Log, displaying wraping lines and showing line number
 
 
@@ -38,7 +38,7 @@ Advanced usage
 The list of commands shown in the :guilabel:`History` pane are stored in :file:`history.py` in the :file:`.spyder-py3` directory in your user home folder (by default, :file:`C:/Users/{username}` on Windows, :file:`/Users/{username}` for macOS, and typically :file:`/home/{username}` on GNU/Linux).
 You might need to show invisible files in order to see it on a non-Windows operating system.
 
-.. image:: images/history/history-log-file.png
+.. image:: /images/history/history-log-file.png
    :alt: Spyder History Log file
 
 
