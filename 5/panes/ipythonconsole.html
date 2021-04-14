@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPython Console &#8212; Spyder 5 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css" />
+    <link href="../_static/css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link href="../_static/css/spyder.css" rel="stylesheet">
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/driver.min.js"></script>
+    <script src="../_static/js/custom_scripts.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Online Help" href="onlinehelp.html" />
+    <link rel="prev" title="History" href="historylog.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
+<div class="container">
+  
+  <a class="navbar-brand" href="https://www.spyder-ide.org/">
+    <img src="../_static/spyder_logo.png" class="logo" alt="logo">
+  </a>
+  
+  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbar-menu" class="collapse navbar-collapse">
+    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link nav-external nav-link-active-section" href="/">Docs</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+    </nav>
+
+    <div id="doc-content" class="container">
+      <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
+<div class="d-none d-xl-block">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="ipythonconsole.html" selected>Spyder 5</option>
+  <option value="../../3/index.html">Spyder 3</option>
+  <option value="../../4/panes/ipythonconsole.html">Spyder 4</option>
+</select>
+
+  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+    <div class="input-group">
+      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-danger" type="submit">
+          <span class="fas fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+  <ul class="nav bd-sidenav">
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../index.html">Welcome</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../quickstart.html">Quickstart</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../installation.html">Installation Guide</a>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Intro Videos
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../videos/first-steps-with-spyder.html">First Steps with Spyder</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../videos/working-with-spyder.html">Working with Spyder</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item active">
+                          
+              <details open>
+              
+                <summary>
+                    Panes in Depth
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="debugging.html">Debugger</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="editor.html">Editor</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="fileexplorer.html">Files</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="findinfiles.html">Find</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="help.html">Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="historylog.html">History</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">IPython Console</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="onlinehelp.html">Online Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="plots.html">Plots</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="profiler.html">Profiler</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="pylint.html">Code Analysis</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="variableexplorer.html">Variable Explorer</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              
+              <details>
+              
+                <summary>
+                    Troubleshooting
+                </summary>
+                <ul class="nav">
+                
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/first-steps.html">First Steps</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/basic-first-aid.html">Basic First Aid</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/emergency-cpr.html">Emergency CPR</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/common-illnesses.html">Common Illnesses</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/call-for-help.html">Calling for Help</a>
+                        </li>
+                    
+                  
+                    
+                        <li class="nav-item sub-nav-item ">
+                            <a href="../troubleshooting/submit-a-report.html">Submit a Report</a>
+                        </li>
+                    
+                  
+                </ul>
+              </details>
+            </li>
+        
+      
+       
+            <li class="nav-item ">
+              <a class="nav-link" href="../faq.html">FAQ</a>
+            </li>
+        
+      
+    </ul>
+
+</nav>
+
+<nav class="d-block d-xl-none" aria-label="Main navigation">
+          <div class="bd-toc-item active row px-3">
+<h4 id="versions-header">Version</h4>
+<select id="select-versions">
+  <option value="ipythonconsole.html" selected>Spyder 5</option>
+  <option value="../../3/index.html">Spyder 3</option>
+  <option value="../../4/panes/ipythonconsole.html">Spyder 4</option>
+</select>
+
+          </div>
+    <div class="bd-toc-item active row px-3">
+    
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
+        
+          
+              <option value="../index.html">
+              Welcome
+              </option>
+          
+        
+          
+              <option value="../quickstart.html">
+              Quickstart
+              </option>
+          
+        
+          
+              <option value="../installation.html">
+              Installation Guide
+              </option>
+          
+        
+          
+            <optgroup label="Intro Videos">
+              
+                <option value="../videos/first-steps-with-spyder.html">
+                  First Steps with Spyder
+                </option>
+              
+                <option value="../videos/working-with-spyder.html">
+                  Working with Spyder
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Panes in Depth">
+              
+                <option value="debugging.html">
+                  Debugger
+                </option>
+              
+                <option value="editor.html">
+                  Editor
+                </option>
+              
+                <option value="fileexplorer.html">
+                  Files
+                </option>
+              
+                <option value="findinfiles.html">
+                  Find
+                </option>
+              
+                <option value="help.html">
+                  Help
+                </option>
+              
+                <option value="historylog.html">
+                  History
+                </option>
+              
+                <option value="">
+                  IPython Console
+                </option>
+              
+                <option value="onlinehelp.html">
+                  Online Help
+                </option>
+              
+                <option value="plots.html">
+                  Plots
+                </option>
+              
+                <option value="profiler.html">
+                  Profiler
+                </option>
+              
+                <option value="projects.html">
+                  Projects
+                </option>
+              
+                <option value="pylint.html">
+                  Code Analysis
+                </option>
+              
+                <option value="variableexplorer.html">
+                  Variable Explorer
+                </option>
+              
+            </optgroup>
+          
+        
+          
+            <optgroup label="Troubleshooting">
+              
+                <option value="../troubleshooting/first-steps.html">
+                  First Steps
+                </option>
+              
+                <option value="../troubleshooting/basic-first-aid.html">
+                  Basic First Aid
+                </option>
+              
+                <option value="../troubleshooting/emergency-cpr.html">
+                  Emergency CPR
+                </option>
+              
+                <option value="../troubleshooting/common-illnesses.html">
+                  Common Illnesses
+                </option>
+              
+                <option value="../troubleshooting/call-for-help.html">
+                  Calling for Help
+                </option>
+              
+                <option value="../troubleshooting/submit-a-report.html">
+                  Submit a Report
+                </option>
+              
+            </optgroup>
+          
+        
+          
+              <option value="../faq.html">
+              FAQ
+              </option>
+          
+        
+      </select>
+    </div>
+</nav>
+          </div>
+
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+              <div>
+                
+  <div class="section" id="ipython-console">
+<h1>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>IPython Console</strong> allows you to execute commands and interact with data inside <a class="reference external" href="https://ipython.org/">IPython</a> interpreters.</p>
+<img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="../_images/console-standard.png" />
+<p>To launch a new IPython instance, go to <span class="guilabel">New console (default settings)</span> under the <span class="guilabel">Consoles</span> menu, or use the keyboard shortcut <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd></kbd> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd></kbd> on macOS) when the console is focused.</p>
+<img alt="Spyder showing opening a new Ipython Console" src="../_images/console-new.gif" />
+<p>From the same menu, you can stop currently executing code with <span class="guilabel">Interrupt kernel</span>, clear a console’s namespace with <span class="guilabel">Remove all variables</span>, or relaunch a fresh one with <span class="guilabel">Restart kernel</span>.
+As each console is executed in a separate process, this won’t affect any others you’ve opened, and you will be able to easily test your code in a clean environment without disrupting your primary session.</p>
+<div class="section" id="supported-features">
+<span id="console-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
+<p>Any <span class="guilabel">IPython Console</span>, whether <a class="reference internal" href="#connecting-external-kernel"><span class="std std-ref">external</span></a> or started by Spyder, supports:</p>
+<ul class="simple">
+<li><p>Automatic code completion</p></li>
+<li><p>Real-time function calltips</p></li>
+<li><p>Full GUI integration with the enhanced Spyder <a class="reference internal" href="debugging.html"><span class="doc">Debugger</span></a>.</p></li>
+<li><p>The <a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a>, with GUI-based editors for many built-in and third-party Python objects.</p></li>
+<li><p>Display of Matplotlib graphics in Spyder’s <a class="reference internal" href="plots.html"><span class="doc">Plots</span></a> pane, if the <span class="guilabel">Inline</span> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span>, and inline in the console if <span class="guilabel">Mute inline plotting</span> is unchecked under the <span class="guilabel">Plots</span> pane’s options menu.</p></li>
+</ul>
+<img alt="Spyder IPython Console, with a popup list of code completion guesses" src="../_images/console-completion.png" />
+<p>For information on the features, commands and capabilities built into IPython itself, see the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
+</div>
+<div class="section" id="special-consoles">
+<h2>Special consoles<a class="headerlink" href="#special-consoles" title="Permalink to this headline">¶</a></h2>
+<p>Spyder also supports several types of specialized consoles.
+A <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> enables creating and displaying symbolic math expressions right inside Spyder.
+A <a class="reference external" href="https://cython.org/#documentation">Cython console</a> allows you to use the Cython language to speed up your code and call C functions directly from Python.
+Finally, a <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it.</p>
+<img alt="Spyder showing opening a new special Console" src="../_images/console-special.gif" />
+</div>
+<div class="section" id="options-menu">
+<h2>Options menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
+<p>The options menu allows you to inspect your current environment variables (<span class="guilabel">Show environment variables</span>), and the contents of your system’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Show sys.path contents</span>).
+In addition, you can have each console display how long it has been running with <span class="guilabel">Show elapsed time</span>.</p>
+<img alt="Spyder IPython Console with options menu" src="../_images/console-options-menu.png" />
+<p>You can also change the name of the current <span class="guilabel">IPython console</span> tab with the <span class="guilabel">Rename tab</span> option, or by simply double-clicking it.</p>
+<img alt="Spyder IPython Console showing renaming console" src="../_images/console-rename.gif" />
+</div>
+<div class="section" id="using-external-kernels">
+<span id="connecting-external-kernel"></span><h2>Using external kernels<a class="headerlink" href="#using-external-kernels" title="Permalink to this headline">¶</a></h2>
+<p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
+For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
+<img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
+<div class="section" id="connect-to-a-local-kernel">
+<h3>Connect to a local kernel<a class="headerlink" href="#connect-to-a-local-kernel" title="Permalink to this headline">¶</a></h3>
+<p>To connect to a local kernel that is already running (e.g. one started by Jupyter notebook),</p>
+<ol class="arabic">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">%connect_info</span></code> in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--existing</span></code>.</p>
+<img alt="Running connect_info in a Jupyter notebook" src="../_images/console-connect-local-step1.gif" />
+</li>
+<li><p>In Spyder, click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Consoles</span> menu, and paste the name of the <span class="guilabel">Connection file</span> from the previous step.</p>
+<p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">1234</span></code>) entered in the connection file path field will be expanded to the full path of the file, i.e. <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code>.</p>
+<img alt="Copying the connection filename into Spyder's dialog" src="../_images/console-connect-local-step2.gif" />
+</li>
+<li><p>Click <span class="guilabel">OK</span> to connect to the kernel.</p>
+<img alt="Connecting to the kernel and running basic commands." src="../_images/console-connect-local-step3.gif" />
+</li>
+</ol>
+</div>
+<div class="section" id="connect-to-a-remote-kernel">
+<h3>Connect to a remote kernel<a class="headerlink" href="#connect-to-a-remote-kernel" title="Permalink to this headline">¶</a></h3>
+<p>To connect to a kernel on a remote machine,</p>
+<ol class="arabic">
+<li><p>Launch a Spyder kernel on the remote host if one is not already running, with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p>
+<img alt="Staring a Spyder kernel on a remote machine" src="../_images/console-connect-remote-step1.gif" />
+</li>
+<li><p>Copy the kernel’s connection file (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on.</p>
+<p>You can get <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.
+Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.</p>
+<img alt="Using SCP to copy the connection file to the local machine" src="../_images/console-connect-remote-step2.gif" />
+</li>
+<li><p>Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Consoles</span> menu, and browse for or enter the path to the connection file from the previous step.</p>
+<p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">1234</span></code>) entered in the connection file path field will be expanded to <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> on your local machine, if you’ve copied the connection file there.</p>
+<img alt="Opening the connect to kernel dialog and browsing for the path" src="../_images/console-connect-remote-step3.gif" />
+</li>
+<li><p>Check the <span class="guilabel">This is a remote kernel (via SSH)</span> box and enter the <span class="guilabel">Hostname</span> or IP address, username and port to connect to on the remote machine.
+Then, enter <em>either</em> <code class="file docutils literal notranslate"><em><span class="pre">username</span></em></code>’s password on the remote machine, or browse to an SSH keyfile (typically in the <code class="file docutils literal notranslate"><span class="pre">.ssh</span></code> directory in your home folder on the local machine, often called <code class="file docutils literal notranslate"><span class="pre">id_rsa</span></code> or similar) registered on it; only one is needed to connect.
+If you check <span class="guilabel">Save connection settings</span>, these details will be remembered and filled for you automatically next time you open the dialog.</p>
+<p>Note that <span class="guilabel">Port</span> is the port number on your remote machine that the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is listening on, typically 22 unless you or your administrator has configured it otherwise.</p>
+<img alt="Entering pre-filled SSH details into the connection dialog" src="../_images/console-connect-remote-step4.gif" />
+</li>
+<li><p>Click <span class="guilabel">OK</span> to connect to the remote kernel</p>
+<img alt="Connecting to the remote kernel and running basic commands" src="../_images/console-connect-remote-step5.gif" />
+</li>
+</ol>
+<p>For more technical details about connecting to remote kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.</p>
+</div>
+</div>
+<div class="section" id="reload-changed-modules">
+<span id="umr-section"></span><h2>Reload changed modules<a class="headerlink" href="#reload-changed-modules" title="Permalink to this headline">¶</a></h2>
+<p>When working in an interactive session, Python only loads a module from its source file once, the first time it is imported.</p>
+<p>Spyder’s <span class="guilabel">User Module Reloader</span> (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported.
+With the UMR enabled, you can test changes to your code without restarting the kernel.</p>
+<img alt="Spyder showing reloading modules in console" src="../_images/console-reload-modules.png" />
+<p>UMR is enabled by default, and it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it is activated.
+If desired, you can turn it on or off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
+<img alt="Spyder preferences showing option to use module reloader" src="../_images/console-umr-preferences.png" />
+</div>
+<div class="section" id="related-components">
+<h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugger</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="help.html"><span class="doc">Help</span></a></p></li>
+<li><p><a class="reference internal" href="historylog.html"><span class="doc">History</span></a></p></li>
+<li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="historylog.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> History</a>
+    <a class='prev-next-link right-next' id="next-link" href="onlinehelp.html" title="next page">Online Help <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
+
+              </div>
+              
+          </main>
+
+          <div class="col-md-3 col-xl-2">
+              
+
+<div class="row d-none d-md-block bd-toc">
+    
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/panes/ipythonconsole.rst">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+    <nav id="bd-toc-nav">
+        <ul class="nav section-nav flex-column">
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#supported-features" class="nav-link">Supported features</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#special-consoles" class="nav-link">Special consoles</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#options-menu" class="nav-link">Options menu</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#using-external-kernels" class="nav-link">Using external kernels</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#connect-to-a-local-kernel" class="nav-link">Connect to a local kernel</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#connect-to-a-remote-kernel" class="nav-link">Connect to a remote kernel</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#reload-changed-modules" class="nav-link">Reload changed modules</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#related-components" class="nav-link">Related components</a>
+            </li>
+        
+        </ul>
+    </nav>
+</div>
+
+<div class="row d-block d-md-none">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
+        <div class="navbar-toggler-item">
+            <a class="navbar-toggler btn-outline-default" href="../search.html"><span class="fas fa-search"></span></a>
+        </div>
+        <div class="navbar-toggler-item">
+            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
+                <span class="fas fa-comment"></span>
+            </a>
+        </div>
+            <div class="navbar-toggler-item">
+                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars fa-2"></span>
+                </button>
+            </div>
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
+            <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#supported-features" class="nav-link">Supported features</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#special-consoles" class="nav-link">Special consoles</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#options-menu" class="nav-link">Options menu</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#using-external-kernels" class="nav-link">Using external kernels</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#connect-to-a-local-kernel" class="nav-link">Connect to a local kernel</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#connect-to-a-remote-kernel" class="nav-link">Connect to a remote kernel</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#reload-changed-modules" class="nav-link">Reload changed modules</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#related-components" class="nav-link">Related components</a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+</div>
+              
+          </div>
+      </div>
+    </div>
+
+    <script src="../_static/js/theme.js"></script>
+    <script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'spyder-ide/public',
+        activationElement: '#open_chat',
+    };
+</script>
+
+<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
+    Open chat
+</a>
+
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+<div class="footer pb-5 pb-md-0">
+    <div class="container pb-3">
+        
+        <div class="row justify-content-center">
+            <a href="https://opencollective.com/spyder/donate" target="_blank">
+              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
+            </a>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="text-center pb-3">
+                 Connect with us on: 
+                 
+                  
+                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://instagram.com/spyderide">Instagram</a>
+                
+                  
+                  <span class="pipe-red">|</span>
+                  
+                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center">
+              <small>
+                
+                <div class="text-center">
+                  &copy; 2009-2021 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                </div>
+                
+                <div class="text-center">
+                    
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    
+                    
+                      <span class="pipe-red">|</span>
+                      <a href="../_sources/panes/ipythonconsole.rst.txt"
+                          rel="nofollow">Page source</a>
+                    
+                </div>
+              </small>
+            </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
