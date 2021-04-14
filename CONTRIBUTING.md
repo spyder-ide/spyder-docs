@@ -42,10 +42,9 @@ Issue reports that don't contain enough information to allow us to do something 
 
 ## Documentation Branches
 
-* Currently, all PRs should be based against ``master``, which contains the in-development documentation for the current Spyder 4 release.
-* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version
-
-In the near future, the ``4.x`` branch will be contain the docs for the stable version, while ``master`` will be dedicated to the changes necessary for Spyder 5.
+* The ``master`` branch contains the in-development documentation for Spyder 5; changes specific to that version should be made against this branch.
+* The ``4.x`` branch contains the docs for Spyder 4 and is still maintained, which all PRs not specifically for Spyder 5 should be based against.
+* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version; no further PRs will be accepted
 
 
 
