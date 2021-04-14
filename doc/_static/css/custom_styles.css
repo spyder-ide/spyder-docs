@@ -1,23 +1,31 @@
 /* Fix bold styling for font */
-b, strong {
+
+b,
+strong {
   font-weight: bold;
 }
 
 /* Center all images by default */
+
 .section img:not([class]) {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Custom bottom margin for the cards section */
+
 .section .sphinx-bs {
   margin-bottom: 18px;
 }
 
 /* Style for Font Awesome that only styles the icons before elements */
-.fasb::before, .fabb::before  {
+
+.fasb::before,
+.fabb::before {
+  color: #36557c;
   display: inline-block;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
   font-family: "Font Awesome 5 Free";
   font-size: 26px;
   font-style: normal;
@@ -26,42 +34,49 @@ b, strong {
   line-height: 1;
   margin-right: 5px;
   vertical-align: middle;
-  color: #36557c;
 }
 
 /* Style for Font Awesome brands */
+
 .fabb::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
   font-family: "Font Awesome 5 Brands";
 }
 
 /* Ensure FA icons applied to section divs display inline */
-div.fasb h3, div.fabb h3 {
+
+div.fasb h3,
+div.fabb h3 {
   display: inline-block;
 }
 
 /* Custom color and size for FA icons */
+
 .blue-32px .fasb::before {
   color: #36557c;
   width: 32px;
 }
 
 /* Adjust vertical positioning of FA icons to be centered */
-.fa-offset-h3 .fasb::before, .fa-offset-h3 .fabb::before {
+
+.fa-offset-h3 .fasb::before,
+.fa-offset-h3 .fabb::before {
   padding-bottom: 0.3em;
 }
 
 /* Center iframes and adjust their bottom margins */
+
 iframe {
   display: block;
+  height: 100%;
+  left: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
+  padding-top: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  padding-top: 0;
 }
 
 /*** Custom colors for specific FA icons in the index page ***/
@@ -85,12 +100,12 @@ div.fa-user-friends::before {
 /*** Changes to the FAQ page ***/
 
 .dropdown .card-header {
-  text-transform: none;
-  font-size: 0.95rem;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
   background-color: #cce5ff;
   color: #004085;
+  font-size: 0.95rem;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+  text-transform: none;
 }
 
 .dropdown .card-header::first-letter {
@@ -100,17 +115,17 @@ div.fa-user-friends::before {
 /*** Styling for quickstart interactive tour ***/
 
 .interactive-tour-container {
-  position: relative;
   display: inline-block;
-  transition: transform 500ms ease-in-out;
   margin-top: 0.7rem;
+  position: relative;
+  transition: transform 500ms ease-in-out;
 }
 
 .interactive-tour-container .tour-screenshot {
   display: none;
-  max-width: 100%;
   height: auto;
   margin-bottom: 0.4rem;
+  max-width: 100%;
 }
 
 .interactive-tour-container img.tour-screenshot-active {
@@ -118,9 +133,9 @@ div.fa-user-friends::before {
 }
 
 .interactive-tour-container .tour-overlay {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
 }
 
 .tour-overlay .highlight-rect {
@@ -154,10 +169,11 @@ div#driver-popover-item .driver-navigation-btns {
 }
 
 /* Style tour progress indicator */
+
 div#driver-popover-item .tour-progress-indicator {
-    float: right;
-    font-weight: bold;
-    font-size: 0.7em;
+  float: right;
+  font-size: 0.7em;
+  font-weight: bold;
 }
 
 /*** Remove h3 titles from Join our community section on index page ***/
@@ -166,37 +182,39 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
 
-/*Version selector and header*/
+/* Version selector and header */
+
 #versions-header {
-  color: rgba(0,0,0,.65);
+  color: rgb(0 0 0 / 0.65);
   font-size: 0.8rem;
-  text-transform: uppercase;
   margin-top: 1.1rem;
+  text-transform: uppercase;
 }
 
 #select-versions {
-  margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  font-size: 90%;
-  color: rgba(0,0,0,.65);
-  padding: 2px;
   background-color: transparent;
+  border: 1px solid rgb(0 0 0 / 0.15);
+  color: rgb(0 0 0 / 0.65);
+  font-size: 90%;
+  margin-bottom: 7px;
+  padding: 2px;
 }
 
-#select-versions, #select-versions option {
+#select-versions,
+#select-versions option {
   width: 98%;
 }
 
 /*** Styles for video transcript dropdown elements ***/
 
 .dropdown-videos {
-  width: 100%;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
   border: 0;
   border-radius: unset;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -1px;
+  max-width: 640px;
+  width: 100%;
 }
 
 .dropdown-videos .summary-content {
@@ -204,52 +222,53 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 }
 
 .dropdown-videos .card-header {
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
-  color: white;
   background-color: #4e4e4e;
-  font-size: 0.8em;
   border-radius: unset;
+  color: #fff;
+  font-size: 0.8em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
 }
 
 .dropdown-videos .card-header::first-letter {
   font-weight: unset;
 }
 
-.dropdown-videos .card-header::first-child {
+.dropdown-videos .card-header:first-child {
   border-radius: unset;
 }
 
-details.dropdown-videos .summary-up, details.dropdown-videos .summary-down {
+details.dropdown-videos .summary-up,
+details.dropdown-videos .summary-down {
   top: 0.1em !important;
 }
 
 div.scroll {
-  margin: 1px 1px;
+  color: #2c2e30;
+  font-size: 0.8em;
   height: 250px;
+  margin: 1px;
   overflow-x: hidden;
   overflow-y: auto;
-  font-size: 0.8em;
-  color: #2c2e30;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }
 
 div.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
+  background-color: #000;
   height: 0;
-  overflow: hidden;
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: black;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
 }
 
 div.video-container-container {
-  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 640px;
 }
 
 /* Style for adding icons to the installers table */
@@ -260,6 +279,7 @@ table.installer-table td {
 }
 
 table.installer-table tbody td p::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
   font-family: "Font Awesome 5 Brands";
 }
 
@@ -290,12 +310,14 @@ a.dropdown-link {
   visibility: hidden;
 }
 
-details.dropdown:hover a.dropdown-link {
+details.dropdown:hover a.dropdown-link,
+details.dropdown:focus a.dropdown-link {
   visibility: visible;
 }
 
-a.dropdown-link:hover {
+a.dropdown-link:hover,
+a.dropdown-link:focus {
   background-color: #36557c;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }

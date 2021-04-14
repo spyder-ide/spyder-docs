@@ -43,13 +43,13 @@ If copying the paths for multiple files, they will be automatically formatted so
 Version control support
 =======================
 
-The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like commiting your changes and browsing the repository a given file or folder is part of.
+The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like committing your changes and browsing the repository a given file or folder is part of.
 This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :doc:`projects`.
 
 .. _Git: https://git-scm.com/
 
 .. image:: /images/files/files-commit.gif
-   :alt: Spyder Files pane showing commiting change of file
+   :alt: Spyder Files pane showing committing change of file
 
 
 

@@ -1,6 +1,7 @@
 <!--- **PLEASE NOTE:** This is the issue tracker for Spyder's documentation, not problems with the Spyder application itself nor general help with Spyder. For that, please see the main Spyder repo: <https://github.com/spyder-ide/spyder> . --->
 
 <!--- Please make sure you fill out this template completely so we can find and fix your issue. Otherwise, it may be closed. Thanks! --->
+# Issue Report
 
 ## Issue Description
 

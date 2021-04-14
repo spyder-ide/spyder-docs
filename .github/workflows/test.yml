@@ -12,18 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Setup and Install
-        uses: ./.github/actions/setup-and-install
-      - name: Build docs
-        uses: ./.github/actions/build-docs
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup and Install
+      uses: ./.github/actions/setup-and-install
+    - name: Build docs
+      uses: ./.github/actions/build-docs
 
 
   linkcheck:
@@ -32,16 +32,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Setup and Install
-        uses: ./.github/actions/setup-and-install
-      - name: Run Linkcheck
-        run: make linkcheck
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup and Install
+      uses: ./.github/actions/setup-and-install
+    - name: Run Linkcheck
+      run: make linkcheck
 
 
   pre-commit:
@@ -62,3 +62,7 @@ jobs:
       uses: ./.github/actions/setup-and-install
     - name: Run Main Pre-Commit Hooks
       uses: pre-commit/action@v2.0.2
+    - name: Run Manual Pre-Commit Checks
+      uses: pre-commit/action@v2.0.2
+      with:
+        extra_args: --all-files --hook-stage manual

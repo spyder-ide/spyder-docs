@@ -6,7 +6,7 @@ name: Deploy Docs
 on:  # yamllint disable-line rule:truthy
   push:
     branches:
-      - master
+    - master
 
 jobs:
   deploy:
@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Setup and Install
-        uses: ./.github/actions/setup-and-install
-      - name: Build docs
-        uses: ./.github/actions/build-docs
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          BRANCH: gh-pages    # The branch the action should deploy to
-          FOLDER: doc/_build/html    # The folder the action should deploy
-          CLEAN: true    # Automatically remove deleted files from the deploy branch
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup and Install
+      uses: ./.github/actions/setup-and-install
+    - name: Build docs
+      uses: ./.github/actions/build-docs
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        BRANCH: gh-pages      # The branch the action should deploy to
+        FOLDER: doc/_build/html      # The folder the action should deploy
+        CLEAN: true      # Automatically remove deleted files from the deploy branch

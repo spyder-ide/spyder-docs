@@ -1,3 +1,5 @@
+# Spyder Documentation
+
 ![Spyder Docs - Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
 
 *Copyright (c) 2009-2021 Spyder Doc Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-docs/blob/master/AUTHORS.txt))*
@@ -13,6 +15,19 @@
 
 
 ![Screenshot of documentation index page](./doc/_static/images/index-docs.gif)
+
+
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Overview](#overview)
+- [Building and Deploying](#building-and-deploying)
+- [Contributing](#contributing)
+- [More information](#more-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-restore -->
 
 
 ## Overview

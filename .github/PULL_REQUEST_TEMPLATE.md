@@ -1,7 +1,8 @@
 <!--- Before submitting your pull request, --->
 <!--- please complete as much as possible of the following checklist: --->
+# Pull Request
 
-### Pull Request Checklist
+## Pull Request Checklist
 
 * [ ] Read and followed this repo's [Contributing Guidelines](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md)
 * [ ] Based your PR on the latest version of the correct branch (master or 3.x)
@@ -18,7 +19,7 @@
 
 
 
-### Issue(s) Resolved
+## Issue(s) Resolved
 
 <!--- Pull requests should typically resolve at least one—preferably only one—
 <!--- outstanding issue; create a new one if no relevant issue exists.

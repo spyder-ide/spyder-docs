@@ -10,6 +10,27 @@ For an introduction to the basics of reST syntax, the source format in which Spy
 
 
 
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Reporting Issues](#reporting-issues)
+- [Documentation Branches](#documentation-branches)
+- [Submitting Pull Requests](#submitting-pull-requests)
+- [Building and Testing Locally](#building-and-testing-locally)
+  - [Install dependencies](#install-dependencies)
+  - [Set up Pre-Commit](#set-up-pre-commit)
+  - [Build the docs](#build-the-docs)
+- [Netlify Notes](#netlify-notes)
+- [Standards and Conventions](#standards-and-conventions)
+  - [Key standards](#key-standards)
+  - [Style conventions](#style-conventions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-restore -->
+
+
+
 ## Reporting Issues
 
 If you find a typo in the text, a passage that could be clarified, or would like a section or document added or expanded upon, please submit an issue report documenting the bug, enhancement or new content following the guidance in our issue template.
@@ -33,7 +54,7 @@ In the near future, the ``4.x`` branch will be contain the docs for the stable v
 We welcome contributions from the community, and will do our best to review all of them in a timely fashion.
 To do so, please submit a pull request (PR) to this repo against the appropriate branch with your changes, and create a corresponding issue as well if your change is substantive, so that we can keep track of everything and give you credit for closing it.
 
-Please make sure your PR titles are brief but descriptive, and include ``PR: `` as a prefix; most importantly, make sure you follow and fill out the template provided, which should guide you through the process and make sure everything runs smoothly.
+Please make sure your PR titles are brief but descriptive, and include ``PR:`` as a prefix; most importantly, make sure you follow and fill out the template provided, which should guide you through the process and make sure everything runs smoothly.
 
 
 
@@ -145,5 +166,5 @@ See the [Style Guide](https://github.com/spyder-ide/spyder-docs/blob/master/STYL
 * **Images/GIFS**: Full width, 690 px or 500 px; manual break (``|``) after before a new section; PNGs or GIFs 5-10 s at 5 frames/s
 * **Indentation**: Spaces, no tabs; 3 spaces after directives, 4 inside code blocks
 * **Line breaks**: Break by sentence for text, 70 characters for code
-* **Lists**: ``#. `` for lists that have inherent order, ``* `` otherwise
+* **Lists**: ``#.`` for lists that have inherent order, ``*`` otherwise
 * **reST directives**: ``:file:`` for file paths; ``:kbd:`` for keyboard shortcuts; ``:guilabel:`` buttons, labels, options and other UI items; ``:menuselection`` for menu items and preference panes; ``code-block::`` for code

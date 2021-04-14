@@ -26,7 +26,7 @@ The locations that you select for your search will be stored in the list so you 
 To erase all of these saved directories, select the :guilabel:`Clear the list` option from the dropdown menu in the :guilabel:`Search in` field.
 
 .. image:: /images/find_in_files/find-in-files-directory.gif
-   :alt: Spyder Find pane showing chosing new directory and directory stored in the list
+   :alt: Spyder Find pane showing choosing new directory and directory stored in the list
 
 
 

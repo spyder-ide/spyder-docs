@@ -3,6 +3,6 @@ description: 'Build the docs with Sphinx-Multiversion'
 runs:
   using: 'composite'
   steps:
-    - name: Build with Sphinx-Multiversion
-      shell: bash
-      run: ./ci/build.sh
+  - name: Build with Sphinx-Multiversion
+    shell: bash
+    run: ./ci/build.sh

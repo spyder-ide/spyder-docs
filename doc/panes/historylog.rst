@@ -27,7 +27,7 @@ Options Menu
 The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle wrapping of long lines (:guilabel:`Wrap lines`), and whether the line number is displayed to the left of the text (:guilabel:`Show line numbers`).
 
 .. image:: /images/history/history-wrap.gif
-   :alt: Spyder History Log, displaying wraping lines and showing line number
+   :alt: Spyder History Log, displaying wrapping lines and showing line number
 
 
 
