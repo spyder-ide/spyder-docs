@@ -65,9 +65,9 @@ Finally, the numbers in the :guilabel:`Diff` columns for each of the three appea
 .. image:: /images/profiler/profiler-comparison.png
    :alt: Profiler with a comparison loaded, displaying the time deltas between two runs
 
-For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``sleep_wrapper()`` that in turn called the ``sleep()`` function, and the ``sleep_wrapper()`` function took a total of 3.66 ms to run, with 3.64 ms of that spent executing the ``sleep()`` function inside it.
-Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 3.64 ms.
-Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.66 ms, but :guilabel:`Local Time` only 0.02 ms as the rest was spent inside the ``sleep()`` function it called.
+For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``sleep_wrapper()`` that in turn called the ``sleep()`` function, and the ``sleep_wrapper()`` function took a total of 3.87 ms to run, with 3.86 ms of that spent executing the ``sleep()`` function inside it.
+Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 3.87 ms.
+Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.86 ms, but :guilabel:`Local Time` only 0.01 ms as the rest was spent inside the ``sleep()`` function it called.
 
 
 
