@@ -126,7 +126,7 @@ Running Spyder
 Using Spyder
 ============
 
-.. dropdown:: Q: How do I install Python packages to use within Spyder?
+.. dropdown:: Q: How do I install Python packages to use within Spyder if installed Spyder with conda?
    :container: + dropdown-id-using-install-packages
 
    The first approach for installing a package should be using conda.
@@ -161,6 +161,35 @@ Using Spyder
 
    .. image:: /images/faq/faq-python-interpreter.png
       :alt: Preferences showing changing Python interpreter
+
+   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+
+
+.. dropdown:: Q: How do I install Python packages to use within Spyder if downloaded Spyder from the standalone installers?
+   :container: + dropdown-id-using-packages-installer
+
+   If you want to use other modules that don't come with our installer, you need to install `Miniconda`_ (**Only if you don't have Anaconda or Miniconda yet!**).
+
+   .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html)
+
+   Then, you need to create a new conda environment with the modules that you want to use with spyder and include ```spyder-kernels``` in it.
+
+   For example, if you want to use ```scikit-klearn``, open your terminal or Anaconda prompt on Windows and run the following commmads:
+
+   .. code-block:: bash
+
+      conda create -n spyder-env -y
+      conda activate spyder-env
+      conda install spyder-kernels scikit-learn -y
+
+   Finally, you need to connect Spyder with this new environment by changing Spyder’s default Python interpreter.
+
+   To do this, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
+
+   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section. Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
+   If its not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interepreter you want to use.
+
+   **Your new environment will only be listed here if you installed Miniconda (or Anaconda) in the default path (which depends on the OS).**
 
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
