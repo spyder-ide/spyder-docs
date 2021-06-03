@@ -170,7 +170,7 @@ Using Spyder
 
    If you want to use other modules that don't come with our installer, you need to install `Miniconda`_ (**Only if you don't have Anaconda or Miniconda yet!**).
 
-   .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html)
+   .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
    Then, you need to create a new conda environment with the modules that you want to use with spyder and include ```spyder-kernels``` in it.
 
