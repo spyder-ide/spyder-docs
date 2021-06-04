@@ -184,7 +184,7 @@ Spyder is also available in other GNU/Linux distributions, like
 .. _Arch Linux: https://aur.archlinux.org/packages/spyder3-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
-.. _openSUSE: https://software.opensuse.org/package/spyder3
+.. _openSUSE: https://software.opensuse.org/package/spyder
 
 Please refer to your distribution's documentation for how to install Spyder.
 
