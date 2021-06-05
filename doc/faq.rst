@@ -168,7 +168,7 @@ Using Spyder
 .. dropdown:: Q: How do I install Python packages to use within Spyder if downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
 
-   If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**Only if you don't have Anaconda or Miniconda yet!**). For Spyder to recognize it, the installation should be done in one of the default paths. See the table below:
+   If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**). For Spyder to recognize it, the installation should be done in one of the following default paths:
 
    .. table::
 
@@ -202,7 +202,7 @@ Using Spyder
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Then, you need to create a new conda environment with the modules that you want to use with spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-klearn``, open your terminal or Anaconda prompt on Windows and run the following commands:
+   Then, you need to create a new conda environment with the modules that you want to use with Spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-klearn``, open your terminal or the Anaconda prompt on Windows and run the following commands:
 
    .. code-block:: bash
 
@@ -210,7 +210,7 @@ Using Spyder
       conda activate spyder-env
       conda install spyder-kernels scikit-learn -y
 
-   Finally, you need to connect Spyder with this new environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
+   Finally, you need to connect Spyder to this environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
 
    .. image:: /images/faq/faq-change-environment.png
       :alt: Change default environment in Preferences option in status bar
