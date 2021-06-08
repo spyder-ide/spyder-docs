@@ -5,12 +5,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>IPython Console &#8212; Spyder 5 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -495,7 +496,7 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="ipython-console">
+  <section id="ipython-console">
 <h1>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>IPython Console</strong> allows you to execute commands and interact with data inside <a class="reference external" href="https://ipython.org/">IPython</a> interpreters.</p>
 <img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="../_images/console-standard.png" />
@@ -503,7 +504,7 @@
 <img alt="Spyder showing opening a new Ipython Console" src="../_images/console-new.gif" />
 <p>From the same menu, you can stop currently executing code with <span class="guilabel">Interrupt kernel</span>, clear a console’s namespace with <span class="guilabel">Remove all variables</span>, or relaunch a fresh one with <span class="guilabel">Restart kernel</span>.
 As each console is executed in a separate process, this won’t affect any others you’ve opened, and you will be able to easily test your code in a clean environment without disrupting your primary session.</p>
-<div class="section" id="supported-features">
+<section id="supported-features">
 <span id="console-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
 <p>Any <span class="guilabel">IPython Console</span>, whether <a class="reference internal" href="#connecting-external-kernel"><span class="std std-ref">external</span></a> or started by Spyder, supports:</p>
 <ul class="simple">
@@ -515,29 +516,29 @@ As each console is executed in a separate process, this won’t affect any other
 </ul>
 <img alt="Spyder IPython Console, with a popup list of code completion guesses" src="../_images/console-completion.png" />
 <p>For information on the features, commands and capabilities built into IPython itself, see the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
-</div>
-<div class="section" id="special-consoles">
+</section>
+<section id="special-consoles">
 <h2>Special consoles<a class="headerlink" href="#special-consoles" title="Permalink to this headline">¶</a></h2>
 <p>Spyder also supports several types of specialized consoles.
 A <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> enables creating and displaying symbolic math expressions right inside Spyder.
 A <a class="reference external" href="https://cython.org/#documentation">Cython console</a> allows you to use the Cython language to speed up your code and call C functions directly from Python.
 Finally, a <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it.</p>
 <img alt="Spyder showing opening a new special Console" src="../_images/console-special.gif" />
-</div>
-<div class="section" id="options-menu">
+</section>
+<section id="options-menu">
 <h2>Options menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
 <p>The options menu allows you to inspect your current environment variables (<span class="guilabel">Show environment variables</span>), and the contents of your system’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Show sys.path contents</span>).
 In addition, you can have each console display how long it has been running with <span class="guilabel">Show elapsed time</span>.</p>
 <img alt="Spyder IPython Console with options menu" src="../_images/console-options-menu.png" />
 <p>You can also change the name of the current <span class="guilabel">IPython console</span> tab with the <span class="guilabel">Rename tab</span> option, or by simply double-clicking it.</p>
 <img alt="Spyder IPython Console showing renaming console" src="../_images/console-rename.gif" />
-</div>
-<div class="section" id="using-external-kernels">
+</section>
+<section id="using-external-kernels">
 <span id="connecting-external-kernel"></span><h2>Using external kernels<a class="headerlink" href="#using-external-kernels" title="Permalink to this headline">¶</a></h2>
 <p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
 For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
 <img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
-<div class="section" id="connect-to-a-local-kernel">
+<section id="connect-to-a-local-kernel">
 <h3>Connect to a local kernel<a class="headerlink" href="#connect-to-a-local-kernel" title="Permalink to this headline">¶</a></h3>
 <p>To connect to a local kernel that is already running (e.g. one started by Jupyter notebook),</p>
 <ol class="arabic">
@@ -552,8 +553,8 @@ For this feature to work, a compatible version of the <code class="docutils lite
 <img alt="Connecting to the kernel and running basic commands." src="../_images/console-connect-local-step3.gif" />
 </li>
 </ol>
-</div>
-<div class="section" id="connect-to-a-remote-kernel">
+</section>
+<section id="connect-to-a-remote-kernel">
 <h3>Connect to a remote kernel<a class="headerlink" href="#connect-to-a-remote-kernel" title="Permalink to this headline">¶</a></h3>
 <p>To connect to a kernel on a remote machine,</p>
 <ol class="arabic">
@@ -580,9 +581,9 @@ If you check <span class="guilabel">Save connection settings</span>, these detai
 </li>
 </ol>
 <p>For more technical details about connecting to remote kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.</p>
-</div>
-</div>
-<div class="section" id="reload-changed-modules">
+</section>
+</section>
+<section id="reload-changed-modules">
 <span id="umr-section"></span><h2>Reload changed modules<a class="headerlink" href="#reload-changed-modules" title="Permalink to this headline">¶</a></h2>
 <p>When working in an interactive session, Python only loads a module from its source file once, the first time it is imported.</p>
 <p>Spyder’s <span class="guilabel">User Module Reloader</span> (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported.
@@ -591,8 +592,8 @@ With the UMR enabled, you can test changes to your code without restarting the k
 <p>UMR is enabled by default, and it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it is activated.
 If desired, you can turn it on or off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR)</span>.</p>
 <img alt="Spyder preferences showing option to use module reloader" src="../_images/console-umr-preferences.png" />
-</div>
-<div class="section" id="related-components">
+</section>
+<section id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugger</span></a></p></li>
@@ -601,8 +602,8 @@ If desired, you can turn it on or off, and prevent specific modules from being r
 <li><p><a class="reference internal" href="historylog.html"><span class="doc">History</span></a></p></li>
 <li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -800,7 +801,7 @@ If desired, you can turn it on or off, and prevent specific modules from being r
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
                     
                     
                       <span class="pipe-red">|</span>

@@ -5,12 +5,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Static Code Analysis &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/driver.min.css" />
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -315,7 +316,7 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="static-code-analysis">
+  <section id="static-code-analysis">
 <h1>Static Code Analysis<a class="headerlink" href="#static-code-analysis" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>Static Code Analysis</strong> pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
 Spyder’s static analyzer is powered by the best in class <a class="reference external" href="https://www.pylint.org/">Pylint</a> back-end, which can intelligently detect an enormous and customizable range of problem signatures.</p>
@@ -323,7 +324,7 @@ Spyder’s static analyzer is powered by the best in class <a class="reference e
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="using-the-static-analyzer">
+<section id="using-the-static-analyzer">
 <h2>Using the static analyzer<a class="headerlink" href="#using-the-static-analyzer" title="Permalink to this headline">¶</a></h2>
 <p>You can select the desired file to analyze directly in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> by clicking anywhere within it, or you can manually enter the Python module or package path you’d like it to check in the path entry textbox in the <span class="guilabel">Static Code Analysis</span> pane.
 The analyzer works with both <code class="docutils literal notranslate"><span class="pre">.py</span></code> (or <code class="docutils literal notranslate"><span class="pre">.pyw</span></code>) Python scripts and whole Python packages (directories containing an <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file).
@@ -335,15 +336,15 @@ All standard checks are run by default.
 You can turn certain messages off at the line, block or file/module level by adding a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=&lt;list</span> <span class="pre">of</span> <span class="pre">message</span> <span class="pre">names&gt;</span></code> comment at the respective level, where the <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> portion should be replaced with a comma-separated list (or single value) without the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>/<code class="docutils literal notranslate"><span class="pre">&gt;</span></code> of Pylint message names (<em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">multiple-statements</span></code>, or <code class="docutils literal notranslate"><span class="pre">fixme,</span> <span class="pre">line-too-long</span></code>; you can also use error codes like <code class="docutils literal notranslate"><span class="pre">C0321</span></code> although names are preferred for clarity).
 Or, you can globally suppress certain messages by editing the <code class="file docutils literal notranslate"><span class="pre">.pylintrc</span></code> configuration file in your user home directory.
 For more details on configuring Pylint, see the <a class="reference external" href="https://pylint.readthedocs.io/en/latest/faq.html#message-control">Pylint documentation</a>.</p>
-<div class="section" id="related-components">
+<section id="related-components">
 <h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
 <li><p><a class="reference internal" href="profiler.html"><span class="doc">Profiler</span></a></p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -491,7 +492,7 @@ For more details on configuring Pylint, see the <a class="reference external" hr
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
                     
                     
                       <span class="pipe-red">|</span>

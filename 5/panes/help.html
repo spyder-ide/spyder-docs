@@ -5,12 +5,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Help &#8212; Spyder 5 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -495,14 +496,14 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="help">
+  <section id="help">
 <h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
 <p>You can use the <strong>Help</strong> pane to find, render and display rich documentation for any object with a docstring, including modules, classes, functions and methods.
 This allows you to access documentation easily directly from Spyder, without having to interrupt your workflow.</p>
 <img alt="Spyder main window showing getting help for numpy arrays from editor" src="../_images/help-execution.gif" />
 <p>You can also access Spyder’s tutorial from here, which will guide you through some basic steps for using its key features.</p>
 <a class="reference internal image-reference" href="../_images/help-tutorial.png"><img alt="Spyder Help pane showing the link for the Spyder's tutorial" src="../_images/help-tutorial.png" style="width: 500px;" /></a>
-<div class="section" id="getting-help">
+<section id="getting-help">
 <h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
 <p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.
 You can trigger help manually by pressing the configurable help shortcut (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> by default).</p>
@@ -512,34 +513,34 @@ You can trigger help manually by pressing the configurable help shortcut (<kbd c
 <p>Automatic help can be individually enabled for both the <span class="guilabel">Editor</span> and the <span class="guilabel">Console</span> under <span class="menuselection">Preferences ‣ Help ‣ Automatic Connections</span>, and turned on and off dynamically via the lock icon in the top right corner of the <span class="guilabel">Help</span> pane.
 If enabled, simply typing a left parenthesis (<code class="docutils literal notranslate"><span class="pre">(</span></code>) after a function or method name will show its associated help.</p>
 <img alt="Spyder console and help pane showing automatic help with parenthesis" src="../_images/help-automatic-connections.gif" />
-</div>
-<div class="section" id="understanding-help-modes">
+</section>
+<section id="understanding-help-modes">
 <h2>Understanding help modes<a class="headerlink" href="#understanding-help-modes" title="Permalink to this headline">¶</a></h2>
 <p>You can use the options menu (<span class="guilabel">Hamburger</span> icon) in the top right of the <span class="guilabel">Help</span> pane to toggle the help display mode.</p>
 <p><span class="guilabel">Rich Text</span> mode renders the object’s docstrings with <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>, <span class="guilabel">Plain Text</span> mode displays the docstring without formatting while <span class="guilabel">Show Source</span> displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python).
 The latter can be useful when docstrings are not available or insufficient to document the object.</p>
 <img alt="Spyder help pane showing different modes" src="../_images/help-modes.gif" />
-</div>
-<div class="section" id="getting-help-by-hovering">
+</section>
+<section id="getting-help-by-hovering">
 <h2>Getting help by hovering<a class="headerlink" href="#getting-help-by-hovering" title="Permalink to this headline">¶</a></h2>
 <p>You can also get summary help for objects by hovering over them in the <span class="guilabel">Editor</span>.
 Clicking the hover popup will open the full documentation in the <span class="guilabel">Help</span> pane.</p>
 <img alt="Editor pane showing help of an object from hover" src="../_images/help-hover.png" />
-</div>
-<div class="section" id="control-automatic-import">
+</section>
+<section id="control-automatic-import">
 <h2>Control automatic import<a class="headerlink" href="#control-automatic-import" title="Permalink to this headline">¶</a></h2>
 <p>When you get help in the <span class="guilabel">IPython Console</span> for an object that has not been previously imported, it is automatically loaded in Spyder’s own internal interpreter so that documentation can be shown when available.
 This can be disabled in the <span class="guilabel">Help</span> pane’s top-right options menu so that only documentation from imported objects is displayed.</p>
-</div>
-<div class="section" id="related-components">
+</section>
+<section id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
 <li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
 <li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -709,7 +710,7 @@ This can be disabled in the <span class="guilabel">Help</span> pane’s top-righ
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
                     
                     
                       <span class="pipe-red">|</span>

@@ -5,12 +5,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Profiler &#8212; Spyder 3 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/driver.min.css" />
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -315,7 +316,7 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <div class="section" id="profiler">
+  <section id="profiler">
 <h1>Profiler<a class="headerlink" href="#profiler" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>Profiler</strong> pane recursively determines the run time and number of calls for every function and method called in a file, whether directly or indirectly, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.</p>
@@ -323,7 +324,7 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="running-the-profiler">
+<section id="running-the-profiler">
 <h2>Running the Profiler<a class="headerlink" href="#running-the-profiler" title="Permalink to this headline">¶</a></h2>
 <p>You can select the file to run in Spyder’s <span class="guilabel">Profiler</span> by simply clicking within it in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, or you can manually enter the name/path in the <span class="guilabel">Profiler</span>’s path box (top left of the pane).
 Either way, you can then run it on the file by clicking <span class="menuselection"><span class="accelerator">R</span>un ‣ Profile</span>, clicking <span class="guilabel">Profile</span> in the <span class="guilabel">Profiler</span> pane, or by using a configurable shortcut (<kbd class="kbd docutils literal notranslate">F10</kbd> by default).
@@ -337,8 +338,8 @@ Increase the number of hierarchical levels displayed for a particular object by 
 You can click the dropdown or press the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Down</kbd> <kbd class="kbd docutils literal notranslate">Arrow</kbd></kbd> key in the filename field to recall paths of previous profiled files.
 You can save the data for a given run to disk with the <span class="guilabel">Save data</span> button, and it can be loaded to compare with another run with the <span class="guilabel">Load data</span> button.
 To remove the loaded data, click the <span class="guilabel">Clear comparison</span> button.</p>
-</div>
-<div class="section" id="interpreting-the-results">
+</section>
+<section id="interpreting-the-results">
 <h2>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h2>
 <p>Results are broken down by top-level function/method/statement, with each sub-element listed hierarchically under the top-level item that called them.
 <span class="guilabel">Total Time</span> is that taken by the specified item and every function “underneath” (<em>i.e.</em> called by) it, while <span class="guilabel">Local Time</span> only counts the time spent in the particular callable object’s own scope.
@@ -351,15 +352,15 @@ Finally, the numbers in the <span class="guilabel">Diff</span> columns for each 
 <p>For example, suppose you ran the <span class="guilabel">Profiler</span> on a file calling a function <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> that in turn called the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, and the <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> function took a total of 3 ms to run, with 2 ms of that spent executing the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function inside it.
 Therefore, if <code class="docutils literal notranslate"><span class="pre">print()</span></code> called nothing else itself, its <span class="guilabel">Total Time</span> and <span class="guilabel">Local Time</span> would both be identical, at 2 ms.
 Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils literal notranslate"><span class="pre">print_wrapper()</span></code> would be 3 ms, but <span class="guilabel">Local Time</span> only 1 ms as the rest of that time was spend inside the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function it called.</p>
-<div class="section" id="related-components">
+<section id="related-components">
 <h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
 <li><p><a class="reference internal" href="pylint.html"><span class="doc">Static Code Analysis</span></a></p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -517,7 +518,7 @@ Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils li
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
                     
                     
                       <span class="pipe-red">|</span>
