@@ -126,7 +126,7 @@ Running Spyder
 Using Spyder
 ============
 
-.. dropdown:: Q: How do I install Python packages to use within Spyder if installed Spyder with conda?
+.. dropdown:: Q: How do I install Python packages to use within Spyder if I installed Spyder with conda?
    :container: + dropdown-id-using-install-packages
 
    The first approach for installing a package should be using conda.
@@ -165,7 +165,7 @@ Using Spyder
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
 
-.. dropdown:: Q: How do I install Python packages to use within Spyder if downloaded Spyder from the standalone installers?
+.. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
 
    If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**). For Spyder to recognize it, the installation should be done in one of the following default paths:
@@ -202,7 +202,7 @@ Using Spyder
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Then, you need to create a new conda environment with the modules that you want to use with Spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-klearn``, open your terminal or the Anaconda prompt on Windows and run the following commands:
+   Then, you need to create a new conda environment with the modules that you want to use with Spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-learn``, open your terminal or the Anaconda prompt on Windows and run the following commands:
 
    .. code-block:: bash
 
