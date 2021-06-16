@@ -5,13 +5,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects &#8212; Spyder 5 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -496,7 +495,7 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <section id="projects">
+  <div class="section" id="projects">
 <h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
 <p>Spyder allows you to associate a given directory with a <strong>Project</strong>, which automatically saves and restores the files you have open in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> from the last time you opened that project.
 With the <a class="reference internal" href="#project-explorer"><span class="std std-ref">Project</span></a> pane, you can browse all your project’s files, regardless of your current working directory or <a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a> location.</p>
@@ -507,31 +506,31 @@ With the <a class="reference internal" href="#project-explorer"><span class="std
 <p>Projects are completely optional and not imposed on users.
 All of Spyder’ functionality (code completion, session saving, File Explorer, working directory, etc) is available without creating a <span class="guilabel">Project</span>.</p>
 </div>
-<section id="creating-a-project">
+<div class="section" id="creating-a-project">
 <h2>Creating a Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h2>
 <p>To create a <span class="guilabel">Project</span>, click the <span class="guilabel">New Project</span> entry in the <span class="guilabel">Projects</span> menu, choose whether you’d like to associate a <span class="guilabel">Project</span> with an existing directory or make a new one, and enter the <span class="guilabel">Project</span>’s name and path.</p>
 <img alt="Spyder showing opening a new project" src="../_images/projects-new.gif" />
-</section>
-<section id="using-the-projects-pane">
+</div>
+<div class="section" id="using-the-projects-pane">
 <span id="project-explorer"></span><h2>Using the Projects Pane<a class="headerlink" href="#using-the-projects-pane" title="Permalink to this headline">¶</a></h2>
 <p>Once a <span class="guilabel">Project</span> is opened, the <span class="guilabel">Project</span> pane is shown, presenting a tree view of the current <span class="guilabel">Project</span>’s files and directories.
 It allows you to perform all the same <a class="reference internal" href="fileexplorer.html#file-operations"><span class="std std-ref">operations</span></a> as Spyder’s <a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a> pane.</p>
 <img alt="Spyder Project Explorer, displaying a directory tree of project files" src="../_images/projects-standard.png" />
-</section>
-<section id="working-with-version-control">
+</div>
+<div class="section" id="working-with-version-control">
 <span id="vcs-section"></span><h2>Working with version control<a class="headerlink" href="#working-with-version-control" title="Permalink to this headline">¶</a></h2>
 <p>The <span class="guilabel">Project</span> pane has basic integration with the <a class="reference external" href="https://git-scm.com/">Git</a> distributed version control system, just like <a class="reference internal" href="fileexplorer.html#files-vcs-support"><span class="std std-ref">in the Files pane</span></a>.
 You can commit or browse a file, directory or the entire repository via the commands in the context menu.</p>
 <p>To use this functionality, the <span class="guilabel">Project</span> must be located in a <code class="docutils literal notranslate"><span class="pre">git</span></code> repository and the <code class="docutils literal notranslate"><span class="pre">git</span></code> and <code class="docutils literal notranslate"><span class="pre">gitk</span></code> commands must be on the system path.</p>
-</section>
-<section id="related-components">
+</div>
+<div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
 <li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Files</span></a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
               </div>
@@ -693,7 +692,7 @@ You can commit or browse a file, directory or the entire repository via the comm
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
                     
                     
                       <span class="pipe-red">|</span>

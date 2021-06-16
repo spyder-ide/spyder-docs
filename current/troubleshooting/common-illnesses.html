@@ -5,13 +5,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Common Illnesses &#8212; Spyder 4 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -445,14 +444,14 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <section id="common-illnesses">
+  <div class="section" id="common-illnesses">
 <h1>Common Illnesses<a class="headerlink" href="#common-illnesses" title="Permalink to this headline">¶</a></h1>
 <p>Beyond the general troubleshooting steps, some frequently-reported problems require more specialized solutions.</p>
-<section id="errors-starting-the-kernel">
+<div class="section" id="errors-starting-the-kernel">
 <span id="starting-kernel-problems-ref"></span><h2>Errors starting the kernel<a class="headerlink" href="#errors-starting-the-kernel" title="Permalink to this headline">¶</a></h2>
 <p>If you receive the message <code class="docutils literal notranslate"><span class="pre">An</span> <span class="pre">error</span> <span class="pre">occurred</span> <span class="pre">while</span> <span class="pre">starting</span> <span class="pre">the</span> <span class="pre">kernel</span></code> in the <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
 There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.</p>
-<section id="spyder-kernels-not-installed-incompatible">
+<div class="section" id="spyder-kernels-not-installed-incompatible">
 <h3>Spyder-Kernels not installed/incompatible<a class="headerlink" href="#spyder-kernels-not-installed-incompatible" title="Permalink to this headline">¶</a></h3>
 <p>Spyder requires a supported version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package to be present in the working environment you want to run your console in.</p>
 <img alt="Kernel version error dialog" src="../_images/common-illnesses-kernel-version.png" />
@@ -501,8 +500,8 @@ conda install spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
 </pre></div>
 </div>
 <p>For both of the previous commands, replace <code class="docutils literal notranslate"><span class="pre">&lt;VERSION&gt;</span></code> with the corresponding version in the table.</p>
-</section>
-<section id="issue-with-another-dependency">
+</div>
+<div class="section" id="issue-with-another-dependency">
 <h3>Issue with another dependency<a class="headerlink" href="#issue-with-another-dependency" title="Permalink to this headline">¶</a></h3>
 <p>If the kernel displays a long error traceback that mentions other packages like <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter_client</span></code>, <code class="docutils literal notranslate"><span class="pre">traitlets</span></code> or <code class="docutils literal notranslate"><span class="pre">pyzmq</span></code>, the problem may be an out of date or incompatible version of a dependency package.
 To fix this, activate the environment and update the key dependencies.</p>
@@ -515,39 +514,39 @@ conda update spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 </pre></div>
 </div>
-</section>
-<section id="attributeerror-importerror">
+</div>
+<div class="section" id="attributeerror-importerror">
 <h3>AttributeError/ImportError<a class="headerlink" href="#attributeerror-importerror" title="Permalink to this headline">¶</a></h3>
 <p>Check the last few lines of the error message, and see if its an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> or <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, or refers to a file you created in your current working directory or your home folder (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> on Linux).</p>
 <img alt="Spyder's AtributeError dialog" src="../_images/common-illnesses-atribute-error.png" />
 <p>If so, the the error is likely due to your file being named the same as a Python standard library module, such as <code class="docutils literal notranslate"><span class="pre">string.py</span></code> or <code class="docutils literal notranslate"><span class="pre">time.py</span></code>, which overrides the built-in module that Spyder-Kernels is trying to load.
 To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
 To check the names of these modules, see the list in the <a class="reference external" href="https://docs.python.org/3/library/">Python standard library documentation</a>.</p>
-</section>
-</section>
-<section id="completion-help-not-working">
+</div>
+</div>
+<div class="section" id="completion-help-not-working">
 <span id="code-completion-problems-ref"></span><h2>Completion/help not working<a class="headerlink" href="#completion-help-not-working" title="Permalink to this headline">¶</a></h2>
 <p>To provide code completions, help and real-time analysis in the Editor, Spyder uses the Python Language Server (PyLS), an implementation of the Language Server Protocol specification used by VSCode, Atom and other popular editors/IDEs.
 Most help and completion issues lie outside of Spyder’s control, and are either limitations with PyLS or the code that is being introspected, but some can be worked around.</p>
-<section id="object-missing-docstring">
+<div class="section" id="object-missing-docstring">
 <h3>Object missing docstring<a class="headerlink" href="#object-missing-docstring" title="Permalink to this headline">¶</a></h3>
 <p>If nothing is displayed in the calltip, hover hint or help pane, the object you’re trying to introspect may not have a docstring.</p>
 <a class="reference internal image-reference" href="../_images/common-illnesses-missing-docstring.png"><img alt="Docstring not found in help pane" src="../_images/common-illnesses-missing-docstring.png" style="width: 500px;" /></a>
 <p>In this case, the only solution is to add one in the source code of the original function, method or class.</p>
-</section>
-<section id="object-cannot-be-found">
+</div>
+<div class="section" id="object-cannot-be-found">
 <h3>Object cannot be found<a class="headerlink" href="#object-cannot-be-found" title="Permalink to this headline">¶</a></h3>
 <p>Some objects, whether due to being written in C, Cython or another language; generated dynamically at runtime; or being a method of an object you create, cannot be easily found without executing the code.</p>
 <a class="reference internal image-reference" href="../_images/common-illnesses-not-found.png"><img alt="Object not found in help pane" src="../_images/common-illnesses-not-found.png" style="width: 500px;" /></a>
 <p>However, once you run your code in the <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>, you might be able to get help and completions on the object there.</p>
-</section>
-<section id="lsp-has-stopped-working">
+</div>
+<div class="section" id="lsp-has-stopped-working">
 <h3>LSP has stopped working<a class="headerlink" href="#lsp-has-stopped-working" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, especially after using Spyder for a while, code completion, help and analysis may stop working.
 If this is the case, you can check LSP status with the <span class="guilabel">LSP Python</span> item in Spyder’s status bar at the bottom of the screen, and restart it by right-clicking it and selecting the <span class="guilabel">Restart Python Language Server</span> item.</p>
 <img alt="Spyder with LSP restart dialog" src="../_images/common-illnesses-LSP-restart.png" />
-</section>
-<section id="spyder-bug-dependency-issue">
+</div>
+<div class="section" id="spyder-bug-dependency-issue">
 <h3>Spyder bug/dependency issue<a class="headerlink" href="#spyder-bug-dependency-issue" title="Permalink to this headline">¶</a></h3>
 <p>Given the variety of dependencies involved in making LSP work, an incompatible or out of date version in your environment can result in error messages, incomplete results, or help/analysis not working at all.</p>
 <p>To address this, first try updating Anaconda and Spyder as described in <a class="reference internal" href="basic-first-aid.html"><span class="doc">Basic First Aid</span></a>.
@@ -555,11 +554,11 @@ If the issue still isn’t resolved, update the various relevant dependencies wi
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update python-language-server
 </pre></div>
 </div>
-</section>
-</section>
-<section id="plugin-problems">
+</div>
+</div>
+<div class="section" id="plugin-problems">
 <h2>Plugin Problems<a class="headerlink" href="#plugin-problems" title="Permalink to this headline">¶</a></h2>
-<section id="plugin-does-not-work-at-all">
+<div class="section" id="plugin-does-not-work-at-all">
 <h3>Plugin does not work at all<a class="headerlink" href="#plugin-does-not-work-at-all" title="Permalink to this headline">¶</a></h3>
 <p>If you have installed a Spyder plugin, but you can’t see it, go to the <span class="guilabel">Panes</span> submenu of the <span class="guilabel">View</span> menu and select the plugin’s name, which should make its pane visible.
 If you don’t see the plugin there, select the <span class="guilabel">Dependencies</span> item under the <span class="guilabel">Help</span> menu and see if the plugin appears at the bottom.</p>
@@ -568,15 +567,15 @@ If you don’t see the plugin there, select the <span class="guilabel">Dependenc
 If you have, then the problem may well be caused by a dependency issue.
 Test whether you can import the plug-in manually by opening a Python console in the same environment as Spyder and typing, for instance, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spyder_unittest</span></code> to test the Spyder-Unittest` plug-in; this command should run without errors.</p>
 <p>If none of this helps you to resolve the problem, then continue to the next section.</p>
-</section>
-<section id="other-issues">
+</div>
+<div class="section" id="other-issues">
 <h3>Other issues<a class="headerlink" href="#other-issues" title="Permalink to this headline">¶</a></h3>
 <p>If you get an error which mentions or involves a Spyder plugin, such as <code class="docutils literal notranslate"><span class="pre">spyder-unittest</span></code>, <code class="docutils literal notranslate"><span class="pre">spyder-terminal</span></code> or <code class="docutils literal notranslate"><span class="pre">spyder-notebook</span></code>, or if you encounter any other problem with a Spyder plugin, then the first approach should be to update Spyder and the plugin to their latest versions.</p>
 <p>If this doesn’t fix the problem, you should check the plugin’s website or repository to see if it is compatible with your version of Spyder.</p>
 <p>Finally, if compatibility doesn’t seem to be the problem, please check those repositories to see if an issue was already opened, and report it there if not.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
               </div>
@@ -814,7 +813,7 @@ Test whether you can import the plug-in manually by opening a Python console in 
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
                     
                     
                       <span class="pipe-red">|</span>

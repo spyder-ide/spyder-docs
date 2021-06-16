@@ -5,13 +5,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic First Aid &#8212; Spyder 5 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -496,10 +495,10 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <section id="basic-first-aid">
+  <div class="section" id="basic-first-aid">
 <h1>Basic First Aid<a class="headerlink" href="#basic-first-aid" title="Permalink to this headline">¶</a></h1>
 <p>These suggestions, while more of a shotgun approach, tend to fix the majority of reported issues just on their own.</p>
-<section id="recommended-troubleshooting-steps">
+<div class="section" id="recommended-troubleshooting-steps">
 <h2>Recommended troubleshooting steps<a class="headerlink" href="#recommended-troubleshooting-steps" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p><strong>Restart Spyder</strong>, and try what you were doing before again.</p></li>
@@ -544,8 +543,8 @@ spyder
 <li><p><strong>Watch our video</strong> on solving and avoiding problems with pip, Conda and Conda-Forge, and follow its instructions.</p>
 <div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/Ul79ihg41Rs?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div></li>
 </ol>
-</section>
-<section id="reinstalling-spyder">
+</div>
+<div class="section" id="reinstalling-spyder">
 <span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalling Spyder<a class="headerlink" href="#reinstalling-spyder" title="Permalink to this headline">¶</a></h2>
 <p>If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.</p>
 <p>For Anaconda, follow all the steps under Option B in the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">Anaconda uninstall guide</a>, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> directory if it exists.</p>
@@ -557,8 +556,8 @@ spyder
 In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
 For further information, please visit our <a class="reference internal" href="../installation.html"><span class="doc">Installation Guide</span></a>.</p>
 </div>
-</section>
-<section id="isolating-problems">
+</div>
+<div class="section" id="isolating-problems">
 <h2>Isolating problems<a class="headerlink" href="#isolating-problems" title="Permalink to this headline">¶</a></h2>
 <p>If you get an error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the packages it depends on.
 Try running it in the following in order if and until it starts working as you expect.
@@ -581,16 +580,16 @@ While it is not impossible that you’ve found Python bug, it is much more likel
 As we usually aren’t able to do much about issues not related to Spyder, a forum like <a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> or the relevant package’s docs is a much better place to get help or report the issue.</p>
 </div>
 <p>See the <a class="reference internal" href="call-for-help.html"><span class="doc">Calling for Help</span></a> section for other places to look for information and assistance.</p>
-</section>
-<section id="debugging-and-patching">
+</div>
+<div class="section" id="debugging-and-patching">
 <h2>Debugging and patching<a class="headerlink" href="#debugging-and-patching" title="Permalink to this headline">¶</a></h2>
 <p>If you know your way around Python, you can often diagnose and even fix Spyder issues yourself, since the IDE is written in the same language you use in it.
 You can explore the error messages you’re receiving and Spyder’s inner workings with the <span class="guilabel">Internal Console</span>, available under the menu item <span class="menuselection">View ‣ Panes ‣ Internal Console</span>.</p>
 <img alt="Spyder showing Internal console" src="../_images/basic-first-aid-internal-console.png" />
 <p>For more detailed debug output, start Spyder from the command line (Anaconda Prompt on Windows) with <code class="docutils literal notranslate"><span class="pre">spyder</span> <span class="pre">--debug-info</span> <span class="pre">verbose</span></code>.</p>
 <p>Even if you don’t manage to fix the problem yourself, this output can be very helpful in aiding us to quickly narrow down and solve your issue for you.</p>
-</section>
-</section>
+</div>
+</div>
 
 
               </div>
@@ -752,7 +751,7 @@ You can explore the error messages you’re receiving and Spyder’s inner worki
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
                     
                     
                       <span class="pipe-red">|</span>

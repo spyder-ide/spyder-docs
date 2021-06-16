@@ -5,13 +5,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profiler &#8212; Spyder 4 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-bootstrap.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -445,12 +444,12 @@
           <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 
-  <section id="profiler">
+  <div class="section" id="profiler">
 <h1>Profiler<a class="headerlink" href="#profiler" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>Profiler</strong> pane recursively determines the run time and number of calls for every function and method called in a file, breaking down each procedure into its smallest individual units.
 This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes.</p>
 <img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="../_images/profiler-standard.png" />
-<section id="running-the-profiler">
+<div class="section" id="running-the-profiler">
 <h2>Running the Profiler<a class="headerlink" href="#running-the-profiler" title="Permalink to this headline">¶</a></h2>
 <p>You can browse for a file using the open button to the right of the Profiler’s path box (top left of the pane), which will run profiling over this file automatically.</p>
 <img alt="Spyder Profiler pane, showing browsing a file and running profiler" src="../_images/profiler-execution-browse.gif" />
@@ -469,8 +468,8 @@ clicking <span class="menuselection"><span class="accelerator">R</span>un ‣ Pr
 This can be loaded to compare with a previous run of the same file using the <span class="guilabel">Load data</span> button.
 To remove the loaded data, click the <span class="guilabel">Clear comparison</span> button.</p>
 <img alt="Spyder Profiler pane, showing running profiler from menu bar" src="../_images/profiler-save-load.gif" />
-</section>
-<section id="interpreting-the-results">
+</div>
+<div class="section" id="interpreting-the-results">
 <h2>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h2>
 <p>Results are broken down by function/method/statement, with each sub-element listed hierarchically under the top-level item that called them.
 <span class="guilabel">Total Time</span> is that taken by the specified item and every function “underneath” (<em>i.e.</em> called by) it, while <span class="guilabel">Local Time</span> only counts the time spent in the particular callable object’s own scope.
@@ -480,8 +479,8 @@ Finally, the numbers in the <span class="guilabel">Diff</span> columns for each 
 <p>For example, suppose you ran the <span class="guilabel">Profiler</span> on a file calling a function <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> that in turn called the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function, and the <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> function took a total of 3.66 ms to run, with 3.64 ms of that spent executing the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function inside it.
 Therefore, if <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> called nothing else itself, its <span class="guilabel">Total Time</span> and <span class="guilabel">Local Time</span> would both be identical, at 3.64 ms.
 Meanwhile, <span class="guilabel">Total Time</span> for <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> would be 3.66 ms, but <span class="guilabel">Local Time</span> only 0.02 ms as the rest was spent inside the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function it called.</p>
-</section>
-<section id="profiler-plugins">
+</div>
+<div class="section" id="profiler-plugins">
 <h2>Profiler plugins<a class="headerlink" href="#profiler-plugins" title="Permalink to this headline">¶</a></h2>
 <p>There are two additional plugins that you can install to enable other types of profiling in Spyder.
 First, Spyder Line Profiler allows you to benchmark each line of your code individually.
@@ -490,15 +489,15 @@ To learn more, visit the <a class="reference external" href="https://github.com/
 <p>Second, Spyder Memory Profiler measures the memory usage of your code.
 For more information, go to the <a class="reference external" href="https://github.com/spyder-ide/spyder-memory-profiler">spyder-memory-profiler git repository</a>.</p>
 <img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="../_images/profiler-memory-profiler.png" />
-</section>
-<section id="related-components">
+</div>
+<div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
 <li><p><a class="reference internal" href="pylint.html"><span class="doc">Code Analysis</span></a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
               </div>
@@ -660,7 +659,7 @@ For more information, go to the <a class="reference external" href="https://gith
                 
                 <div class="text-center">
                     
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
                     
                     
                       <span class="pipe-red">|</span>
