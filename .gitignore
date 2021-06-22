@@ -36,3 +36,6 @@ spyder_crash.log
 # Subrepos
 spyder-repo/
 spyder-docs-sphinx-theme/
+
+# vsCode
+.vscode/
