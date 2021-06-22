@@ -9,3 +9,4 @@ Workshops
     workshops/financial
     workshops/scientific-computing
     workshops/plugin-development
+    workshops/qt_fundamentals
