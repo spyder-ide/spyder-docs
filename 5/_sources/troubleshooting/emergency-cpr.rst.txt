@@ -13,7 +13,7 @@ Common solutions
 
 #. Try :doc:`basic-first-aid` first, which usually resolves most Spyder install-related issues.
 
-#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:variableexplorer dialogs) are left open, and check that the preference setting :menuselection:`General --> Advanced Settings --> Use a single instance` isn't checked.
+#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:variableexplorer dialogs) are left open, and check that the preference setting :menuselection:`Application --> Advanced Settings --> Use a single instance` isn't checked.
 
    .. image:: /images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
