@@ -143,5 +143,6 @@ Connect with Spyder through our social media channels to stay up to date with ou
     installation
     indexvideos
     indexpanes
+    indexplugins
     indextroubleshooting
     FAQ<faq>
