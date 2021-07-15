@@ -22,6 +22,9 @@ jobs:
         python-version: '3.x'
     - name: Setup and Install
       uses: ./.github/actions/setup-and-install
+    - name: List dependencies
+      shell: bash
+      run: pip list
     - name: Build docs
       uses: ./.github/actions/build-docs
 
