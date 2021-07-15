@@ -7,13 +7,13 @@ Spyder Notebook
 .. image:: /images/console/console-standard.png
    :alt: Spyder Notebook in Spyder
 
-Using notebooks inside of Spyder allows you to take advantage of its web interface alongside Spyder’s powerful features such as the Variable explorer, the console and the debugger.
+Using notebooks inside Spyder allows you to take advantage of their web interface alongside Spyder’s powerful features such as the Variable explorer, console and debugger.
 
 =======================
 Installing the Notebook
 =======================
 
-If you installed Spyder using conda, the best way to install the the Notebook is to run the following in your terminal or Anaconda prompt on Windows:
+If you installed Spyder using conda, the best way to install Spyder-notebook is to run the following command in your terminal or Anaconda prompt on Windows:
 
 .. code-block:: bash
 
@@ -34,30 +34,30 @@ When the Notebook is installed, it will be available under the menu item :menuse
 .. image:: /images/console/console-standard.png
    :alt: Spyder showing view panes Notebook
 
-You will see it then as a tab in the bottom of the editor area. When switching to it, you will see a welcome screen, from where you can create a new notebook by right-clicking it and selecting :guilabel:`New notebook`.
+You will see it then as a tab in the bottom of the editor area. When switching to it, a welcome screen will be displayed, from where you can create a new notebook by right-clicking it and selecting :guilabel:`New notebook`.
 
 .. image:: /images/console/console-standard.png
    :alt: Spyder with context menu showing new notebook option
 
-You can also click the :guilabel:`Plus` button at the top right of the pane. A new Jupyter Notebook will be opened as a tab, ready for user input in temporary space. This can serve as a scratch pad where you can do quick calculations and plots.
+You can also click the :guilabel:`Plus` button at the top right of the pane. A new Jupyter Notebook will be opened as a tab, ready for user input in a temporary file. This can serve as a scratch pad where you can do quick calculations and plots.
 
 .. image:: /images/console/console-standard.png
    :alt: Spyder showing a new notebook
 
-To save this notebook go to the options menu at the top right of the pane and click the :guilabel:`Save as...` option. This will store your notebook locally with ``ipynb`` extension which will allow you to open it then as a Jupyter Notebook outside of Spyder.
+To save this notebook go to the options menu at the top right of the pane and click the :guilabel:`Save as...` option. This will store your notebook locally with the ``ipynb`` extension, which will allow you to open it then as a Jupyter Notebook outside of Spyder.
 
 .. image:: /images/console/console-standard.png
    :alt: Gif showing save as
 
-You can also open any Jupyter Notebook inside Spyder. For this go to the options menu at the top right of the pane and click :guilabel:`Open` which will allow you to browse the files in your computer. Click any notebook that you want to open inside Spyder and you will be able to see it as a new tab in the Notebook pane.
+You can also open any Jupyter Notebook inside Spyder. For this go to the options menu at the top right of the pane and click :guilabel:`Open`, which will allow you to look for ``ipynb`` files in your computer. Click any notebook that you want to open inside Spyder and you will be able to see it as a new tab in the Notebook pane.
 
 .. image:: /images/console/console-standard.png
    :alt: Gif showing opening a Jupyter notebook inside Spyder
 
-The :guilabel:`Open recent` option displays a list of the recent notebooks you opened in Spyder from which you can select them and open them in Spyder too.
+The :guilabel:`Open recent` option displays a list of the recent notebooks you opened in Spyder, from which you can select them and open them again in Spyder.
 
 =============================
-Connecting an Ipython Console
+Connecting an IPython Console
 =============================
 
 You can connect an Ipython Console to your notebook which will allow you to view the variables of your notebook in the :guilabel:`Variable Explorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display in the Variable Explorer, the variables of the cells that you have executed preciously in your Notebook.
@@ -65,15 +65,15 @@ You can connect an Ipython Console to your notebook which will allow you to view
 .. image:: /images/console/console-standard.png
    :alt: Gif showing connecting console and displaying variables
 
-You can view, modify and create new ones in the console.
+You can view, modify and create new ones in the console too.
 
-Since the Variable Explorer is associated to each console, closing the notebook's console will immediately delete the variables from your variable explorer.
+Since the Variable Explorer is associated to each console, closing the notebook's console will immediately hide the variables from the Variable Explorer.
 
 ==================
 Additional Options
 ==================
 
-The context menu, available by right-clicking pane area outside of the notebook, allows you to zoom your notebook in or out.
+The context menu, available by right-clicking the pane area outside the notebook, allows you to zoom your notebook in or out.
 
 .. image:: /images/console/console-standard.png
    :alt: Gif zooming in and out the notebook.
