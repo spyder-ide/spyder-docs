@@ -21,7 +21,7 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
 
 .. important::
 
-   At the moment it is not possible to use this plugin with the Spyder installers for Windows and macOS. We're working to make that possible in the future.
+   At the moment it is not possible to use this plugin with the Spyder :ref:`standalone_installers_ref` for Windows and macOS. We're working to make that possible in the future.
 
 Restart Spyder in order to be able to use the plugin.
 
@@ -60,7 +60,7 @@ The :guilabel:`Open recent` option displays a list of the recent notebooks you o
 Connecting an IPython Console
 =============================
 
-You can connect an IPython Console to your notebook, which will allow you to view your variables in the :guilabel:`Variable Explorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console. 
+You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will allow you to view your variables in the :doc:`/panes/variableexplorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console.
 
 .. image:: /images/console/console-standard.png
    :alt: Gif showing connecting console and displaying variables
