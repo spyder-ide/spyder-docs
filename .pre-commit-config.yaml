@@ -241,9 +241,6 @@ repos:
   - id: check-merge-conflict
   - id: check-symlinks
   - id: destroyed-symlinks
-  - id: no-commit-to-branch
-    name: Prevent commits to wrong branch
-    args: [--branch, master, --pattern, 'v?\d{1,3}\.x']
 
 
 # Commit message hooks #
