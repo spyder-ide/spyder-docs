@@ -2,12 +2,12 @@
 Spyder Terminal
 ###############
 
-**Spyder-terminal** is a plugin that allows you to have an integrated Terminal inside Spyder.
+**Spyder-terminal** is a plugin that allows you to have integrated system terminals inside Spyder.
 
 .. image:: /images/terminal/terminal-standard.png
    :alt: Spyder Terminal in Spyder
 
-Using the terminal inside Spyder allows you to use the system shell rather than just the IPython console. You can use it to issue commands, interact
+Spyder-terminal allows you to use any system shell installed in your system (e.g. Bash, Zsh or Powershell) rather than just the IPython console. You can use it to issue commands, interact
 with version control or to run programs.
 
 =======================
@@ -35,12 +35,12 @@ When the Terminal is installed, it will be available under the menu item :menuse
 .. image:: /images/terminal/terminal-view-panes.png
    :alt: Spyder showing view panes Terminal
 
-You will see it then as a tab in the bottom of the console area. When switching to it, a new terminal tab will be created. You can also create a new terminal tab by clicking in the :guilabel:`+` button at the upper right corner of the console area.
+You will see it then as a tab at the bottom of the console area. When switching to it, a new terminal tab will be created. You can also create more terminals by clicking in the :guilabel:`+` button at the upper right corner of the terminal area.
 
 .. image:: /images/terminal/terminal-new-terminal-option.gif
    :alt: Spyder showing the new terminal button
 
-You can also click the :guilabel:`Options` button next to the :guilabel:`+` button. You can rename terminals, undock the terminal, and open a terminal in the directory of the current Editor file.
+Clicking the :guilabel:`Options` button next to the :guilabel:`+` button will allow you to rename terminals, undock the terminal, and open a terminal in the directory of the current Editor file.
 
 .. image:: /images/terminal/terminal-options-menu.gif
    :alt: Spyder showing the terminal Options menu
