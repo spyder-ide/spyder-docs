@@ -34,19 +34,19 @@ When the Line Profiler is installed, it will be available under the menu item :m
 .. image:: /images/lineprofiler/lineprofiler-view-panes.png
    :alt: Spyder showing View Panes Line Profiler
 
-You will see it then as a tab next to the 'Files' tab. You can then either select a script with the button present in the pane or run the profiler from :menuselection:`Run --> Profile line by line`.
-Afterwards, your file will be profiled line by line.
-
-.. image:: /images/lineprofiler/lineprofiler-run-menu.png
-   :alt: Spyder showing the line profiler button in the Run menu
-
-For the Line Profiler to work, we must place the ``@profile`` decorator on top of the functions that we wish to profile.
+You will see it then as a tab next to the 'Files' tab. For the Line Profiler to work, we must place the ``@profile`` decorator on top of the functions that we wish to profile.
 
 .. image:: /images/lineprofiler/lineprofiler-add-decorators.gif
    :alt: Adding 'profile' decorators to script to profile it line by line.
 
-Now that the decorators have been added, we can run the Line Profiler from the button in the Pane or from the :menuselection:`Run` menu.
-It's then possible to inspect the results in the Line Profiler pane. The path displayed there is the path of the file that is being profiled.
+Now that the decorators have been added, you can then either select a script with the button present in the pane or run the profiler from :menuselection:`Run --> Profile line by line`.
+Your file will then be profiled line by line.
+
+.. image:: /images/lineprofiler/lineprofiler-run-menu.png
+   :alt: Spyder showing the line profiler button in the Run menu
+
+After running the Line Profiler, either from the button in the Pane or the :menuselection:`Run` menu,
+the results are shown in the Line Profiler pane. The path displayed there is the path of the file being profiled.
 
 .. image:: /images/lineprofiler/lineprofiler-run-profiler.gif
    :alt: Running the line profiler and inspecting the results.
