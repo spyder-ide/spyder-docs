@@ -50,3 +50,13 @@ the results are shown in the Line Profiler pane. The path displayed there is the
 
 .. image:: /images/lineprofiler/lineprofiler-run-profiler.gif
    :alt: Running the line profiler and inspecting the results.
+
+The Line Profiler pane shows six columns: 
+   * ``Line #:`` the number of the line being profiled.
+   * ``Hits:`` how many times that line is hit in the scope.
+   * ``Time (ms):`` time spent running the line in total for all hits, in milliseconds.
+   * ``Per hit (ms):`` average time spent per hit, in milliseconds.
+   * ``% Time:`` percentage of time taken by that line of total scope time.
+   * ``Line contents:`` the source code in the line.
+
+Lines with a stronger color take more time to run.
