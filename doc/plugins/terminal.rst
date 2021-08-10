@@ -14,7 +14,7 @@ with version control or to run programs.
 Installing the Terminal
 =======================
 
-If you installed Spyder using conda, the best way to install Spyder-terminal is to run the following command in your terminal or Anaconda prompt on Windows:
+If you installed Spyder using conda, the best way to install Spyder-terminal is to run the following command in your Terminal or Anaconda prompt on Windows:
 
 .. code-block:: bash
 
@@ -49,3 +49,13 @@ If you right click the terminal area, it's possible to issue commands such as :g
 
 .. image:: /images/terminal/terminal-right-click.gif
    :alt: Spyder showing the terminal context menu
+
+====================
+Terminal Preferences
+====================
+
+It's also possible to customize the Terminal by going to :menuselection:`python --> Preferences...` and then clicking on the Terminal tab on the menu to the left.
+You can select the shell interpreter, set the buffer limit and the type of cursor.
+
+.. image:: /images/terminal/terminal-preferences.png
+   :alt: Preferences of the Terminal plugin
