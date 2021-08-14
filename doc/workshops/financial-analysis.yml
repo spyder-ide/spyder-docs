@@ -1,0 +1,15 @@
+name: financial-analysis
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - sympy
+  - lxml
+  - pandas
+  - tqdm
+  - cython
+  - spyder-kernels
+  - multitasking
+  - requests
+  - matplotlib
+  - scipy

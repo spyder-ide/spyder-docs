@@ -1,0 +1,13 @@
+name: scientific-computing
+channels:
+  - conda-forge
+dependencies:
+  - seaborn
+  - cython
+  - pandas
+  - numpy
+  - scipy
+  - spyder-kernels
+  - matplotlib
+  - pyarrow
+  - sympy
