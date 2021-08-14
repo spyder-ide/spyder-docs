@@ -29,8 +29,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scientific Computing and Visualization with Spyder" href="scientific-computing.html" />
-    <link rel="prev" title="Workshops" href="../indexworkshops.html" />
+    <link rel="next" title="Plugin Development with Spyder" href="plugin-development.html" />
+    <link rel="prev" title="Scientific Computing and Visualization with Spyder" href="scientific-computing.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -323,14 +323,14 @@
                 <ul class="nav">
                 
                     
-                        <li class="nav-item sub-nav-item active">
-                            <a href="">Financial Data Analysis with Spyder</a>
+                        <li class="nav-item sub-nav-item ">
+                            <a href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a>
                         </li>
                     
                   
                     
-                        <li class="nav-item sub-nav-item ">
-                            <a href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a>
+                        <li class="nav-item sub-nav-item active">
+                            <a href="">Financial Data Analysis with Spyder</a>
                         </li>
                     
                   
@@ -503,12 +503,12 @@
           
             <optgroup label="Workshops">
               
-                <option value="">
-                  Financial Data Analysis with Spyder
-                </option>
-              
                 <option value="scientific-computing.html">
                   Scientific Computing and Visualization with Spyder
+                </option>
+              
+                <option value="">
+                  Financial Data Analysis with Spyder
                 </option>
               
                 <option value="plugin-development.html">
@@ -528,7 +528,763 @@
                 
   <div class="section" id="financial-data-analysis-with-spyder">
 <h1>Financial Data Analysis with Spyder<a class="headerlink" href="#financial-data-analysis-with-spyder" title="Permalink to this headline">¶</a></h1>
-<p>This is a work in progress. The workshop for Financial Data Analysis with Spyder will be available soon!</p>
+<p>By the end of this workshop participants will be able to use Spyder effectively for  applying some normative financial theories and models to assemble a portfolio of assets in a way that maximizes the expected return for a given level of risk. In this way, statistically-based tools are used to construct investment portfolios.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>To follow this workshop we recommend that you have a intermediate knowledge of Python. You can visit <a class="reference external" href="https://docs.python.org/3/tutorial/">The Python Tutorial</a> to learn the basics of this programming language or to refresh your knowledge of Python.</p>
+<p>You will also need to have <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> (or <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>) and Spyder installed. More information about Spyder installation in <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a>.</p>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Spyder now offers <a class="reference internal" href="../installation.html#standalone-installers-ref"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.</p>
+</div>
+<p>It is also desirable to have the following prior knowledge:</p>
+<ul class="simple">
+<li><p>Intermediate level of Python</p></li>
+<li><p>Basic knowledge of Statistics</p></li>
+<li><p>Some knowledge of Financial Econometrics is desirable</p></li>
+</ul>
+</div>
+<div class="section" id="learning-goals">
+<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h2>
+<p>After completing this workshop, you should be able to:</p>
+<ul class="simple">
+<li><p>Apply elementary statistical analysis to stock and cryptocurrency portfolios to measure their performance</p></li>
+<li><p>Understand the advantages of programming with an IDE, such as inspecting variables using the Variable Explorer and interacting with plots leveraging the Plots Pane.</p></li>
+</ul>
+</div>
+<div class="section" id="learner-profile">
+<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Permalink to this headline">¶</a></h2>
+<p>This workshop is intended for people interested in finance who want to take their first steps in Financial Analysis using Python and Spyder.</p>
+</div>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>In this workshop we will obtain financial data in real-time from <a class="reference external" href="https://finance.yahoo.com">Yahoo! Finance</a> API and explore financial portfolios using Econometrics and computational tools.</p>
+<div class="section" id="why-use-python-for-financial-analysis">
+<h3>Why use Python for financial analysis?<a class="headerlink" href="#why-use-python-for-financial-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Real-time analysis of historical and current financial data is essential for those investing in financial instruments. Python has a number of features that make it ideal for financial tasks:</p>
+<ul class="simple">
+<li><p>It is easy to learn for anyone, whether they have previous programming experience or not</p></li>
+<li><p>It has a variety of specialized mathematical and statistical libraries (<a class="reference external" href="https://www.scipy.org/scipylib/index.html">SciPy</a>, <a class="reference external" href="https://numpy.org">NumPy</a>, <a class="reference external" href="https://pandas.pydata.org">Pandas</a>) that are commonly used for financial analysis</p></li>
+<li><p>It can be connected to APIs for loading financial data in real time</p></li>
+<li><p>It is the programming language with the most resources for machine learning (supervised learning, unsupervised learning, reinforcement learning), which is one of the most useful tools for Econometrics nowadays</p></li>
+<li><p>It has excellent libraries for plotting</p></li>
+<li><p>You can use resources such as <a class="reference external" href="https://colab.research.google.com">Google Colab</a> or <a class="reference external" href="https://mybinder.org">Binder</a> to do your analysis in the cloud.</p></li>
+</ul>
+</div>
+<div class="section" id="why-should-i-use-an-ide">
+<h3>Why should I use an IDE?<a class="headerlink" href="#why-should-i-use-an-ide" title="Permalink to this headline">¶</a></h3>
+<p>Although you can use Python without an IDE (Integrated Development Environment), you will work much better with one. Spyder is a Scientific Integrated Development Environment written in Python, and designed by and for scientists, engineers, and data analysts. Spyder’s capabilities and its integration with Python make it perfect for financial analysis.</p>
+</div>
+<div class="section" id="introduction-to-financial-analysis-with-spyder">
+<h3>Introduction to financial analysis with Spyder<a class="headerlink" href="#introduction-to-financial-analysis-with-spyder" title="Permalink to this headline">¶</a></h3>
+<p>If you’re not familiar with Spyder, we recommend you start with our <a class="reference internal" href="../quickstart.html"><span class="doc">Quickstart</span></a>. But if you want a  summary, here’s a quick overview.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you already have experience with Spyder, you can skip this section.</p>
+</div>
+<div class="section" id="editor">
+<h4>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> is the place where you write your code and save it as a file (script). It allows you to easily persist your work. This is where you write the code you want to keep from the data analysis you do in IPython Console. <strong>Here you will also be able to read, edit and run the code from this workshop</strong>.</p>
+</div>
+<div class="section" id="ipython-console">
+<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> is the Spyder’s component where you write chunks of code that you want to experiment with. <strong>In this workshop, we are going to give you pieces of code that you can copy and run in this console</strong>.</p>
+<p>In essence, the IPython Console allows you to execute commands and interact with data using Python.</p>
+</div>
+<div class="section" id="variable-explorer">
+<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Variable Explorer</span></a> is one of Spyder’s best features. It allows you to interactively browse and manage the objects generated in the code of the currently selected <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> session.</p>
+<p>The Variable Explorer is one of the most frequently used components in this workshop. <strong>This is the pane where we will observe the data and most of the results of the analysis, except for the plots</strong>.</p>
+</div>
+<div class="section" id="plots-pane">
+<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="../panes/plots.html"><span class="doc">Plots pane</span></a> shows all the static graphs and images created in your IPython Console session. <strong>All plots generated by the code will appear in this component</strong>.  This pane also allows you to save each graphic in a local file or copy it to the clipboard to share it with other people.</p>
+</div>
+</div>
+</div>
+<div class="section" id="preparation-work">
+<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Permalink to this headline">¶</a></h2>
+<p>Before starting, you must have installed some packages and libraries needed to run the code. We recommend you to install these requirements in a virtual environment. Here we explain step by step how to do it.</p>
+<div class="section" id="set-up-conda-environment">
+<h3>Set up Conda environment<a class="headerlink" href="#set-up-conda-environment" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.</p>
+<p>You can set up your environment in two different ways.</p>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>We recommend creating the virtual environment with Anaconda (or Miniconda) as it integrates seamlessly with Spyder. You can find installation instructions in <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda documentation</a>.</p>
+</div>
+<div class="section" id="with-commands">
+<h4>With commands<a class="headerlink" href="#with-commands" title="Permalink to this headline">¶</a></h4>
+<p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">financial-analysis</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis
+</pre></div>
+</div>
+<p>To install Spyder’s optional dependencies as well for full functionality, use the following command instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
+$ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
+$ pip install Historic-Crypto
+</pre></div>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Spyder now offers <a class="reference internal" href="../installation.html#standalone-installers-ref"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.</p>
+</div>
+</div>
+<div class="section" id="from-an-environment-yml-file">
+<h4>From an environment.yml file<a class="headerlink" href="#from-an-environment-yml-file" title="Permalink to this headline">¶</a></h4>
+<p>You can also install the virtual environment easily using the environment file that we share with you. To do so, run the following command in the terminal (you must have the environment file (<code class="docutils literal notranslate"><span class="pre">financial-analysis.yml</span></code>) in the current directory):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis
+$ conda env create -f financial-analysis.yml
+$ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
+$ pip install Historic-Crypto
+</pre></div>
+</div>
+</div>
+<div class="section" id="activate-environment">
+<h4>Activate environment<a class="headerlink" href="#activate-environment" title="Permalink to this headline">¶</a></h4>
+<p>You can now enter the newly created virtual environment by using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate financial-analysis
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="download-the-datasets">
+<h3>Download the datasets<a class="headerlink" href="#download-the-datasets" title="Permalink to this headline">¶</a></h3>
+<p>Although during the workshop we will explain how to use some APIs to download up-to-date data, you can also download the datasets in csv format from <a class="reference external" href="https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215">this link</a>.</p>
+<p>To follow this workshop you do not need to create a new directory. However, if you have downloaded the data and want to use it instead of the APIs, you must set the directory that has the downloaded data as the working directory. In order to do this, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the downloaded data. Something like this:</p>
+<img alt="Spyder's Working Directory plugin showing the working directory downloaded-data-dir" src="../_images/working-directory.png" />
+</div>
+<div class="section" id="setting-up-the-virtual-environment-in-spyder">
+<h3>Setting up the virtual environment in Spyder<a class="headerlink" href="#setting-up-the-virtual-environment-in-spyder" title="Permalink to this headline">¶</a></h3>
+<p>Let’s check that the virtual environment we created is enabled in Spyder. Go to <span class="guilabel">Preferences &gt; Python interpreter</span>, and use the dropdown below <span class="guilabel">Use the following Python interpreter</span> to choose your virtual environment. You should see something like this:</p>
+<img alt="Screenshot on how to set up environment in Spyder's Preferences" src="../_images/set-up-environment.png" />
+<p>Now, you have everything ready to proceed with the workshop.</p>
+</div>
+<div class="section" id="download-the-code">
+<h3>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this headline">¶</a></h3>
+<p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can download <a class="reference download internal" download="" href="../_downloads/468d7c76843772ae0fb48a15096383df/financial-analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
+</div>
+</div>
+<div class="section" id="obtain-financial-data">
+<h2>Obtain financial data<a class="headerlink" href="#obtain-financial-data" title="Permalink to this headline">¶</a></h2>
+<p>When it comes to finance, being up to date is very important. So we are going to use a Python library that allows us to get updated historical Stock Market records from <a class="reference external" href="https://finance.yahoo.com">Yahoo! Finance</a> API. In this way, we will be able to download data in the period of time we are interested in analyzing.</p>
+<p>Remember to type and run all code for this workshop in the “IPython Console” at the bottom right of Spyder.</p>
+<img alt="Screenshot IPython Console location in Spyder IDE" src="../_images/ipython-console-in-context.png" />
+<p>You can also write your code in the Editor (the pane that occupies the entire left side of Spyder). If you use the Editor, you can run the code by selecting it and pressing the <span class="guilabel">Run selection or current line</span> button in the <span class="guilabel">Run toolbar</span> or by pressing the <kbd class="kbd docutils literal notranslate">F9</kbd> key.</p>
+<img alt="Editor location in Spyder IDE" src="../_images/editor-in-context.png" />
+<p>To get started, import the libraries.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+
+<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">Cryptocurrencies</span>
+<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">HistoricalData</span>
+<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+</pre></div>
+</div>
+<p>The first group of imports is for basic operations. The second (<code class="docutils literal notranslate"><span class="pre">Historic_Crypto</span></code> and <code class="docutils literal notranslate"><span class="pre">yfinance</span></code>) imports the libraries that we will use to download financial data.</p>
+<p>Let’s start exploring libraries with an example. We are going to get financial information about Netflix with one line of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">netflix</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;NFLX&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We have used the <code class="docutils literal notranslate"><span class="pre">Ticker</span></code> class of the <code class="docutils literal notranslate"><span class="pre">yfinance</span></code> library to create a <code class="docutils literal notranslate"><span class="pre">netflix</span></code> object. This object contains attributes and methods that we can query to obtain various types of information.</p>
+<div class="section" id="general-stock-information">
+<h3>General stock information<a class="headerlink" href="#general-stock-information" title="Permalink to this headline">¶</a></h3>
+<p>If you want to know which methods and attributes you can query, you can do so with the built-in <code class="docutils literal notranslate"><span class="pre">help()</span></code> function.</p>
+<p>You can also type the name of the object (<code class="docutils literal notranslate"><span class="pre">netflix</span></code>) in the console, then type a period and hit the Tab key once. IPython suggestions will then appear to help you navigate the object:</p>
+<img alt="IPython Console auto-suggestions" src="../_images/ipython-auto-suggestions.png" />
+<p>For example, we can obtain general information with the <code class="docutils literal notranslate"><span class="pre">info</span></code> property of the object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">netflix_info</span> <span class="o">=</span> <span class="n">netflix</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+<p>We can observe the result in the Variable Explorer, in the <code class="docutils literal notranslate"><span class="pre">netflix_info</span></code> variable.</p>
+<img alt="First variable in Variable Explorer" src="../_images/net_flix-variable-in-variable-explorer.png" />
+<p>If we double-click on it, a new window with detailed information will be displayed.</p>
+<img alt="Python dict example in Variable Explorer" src="../_images/dict-in-variable-explorer.png" />
+<p>In that window we can see a Python dictionary in which each key has a value assigned to it. Each type of value is represented by a distinctive color. For example, we see that Netflix is an Entertainment industry, the summary of the business type, among other indicators. The Variable Explorer is a very convenient way to view these types of results. We can compare it to viewing them in the IPython Console with the <code class="docutils literal notranslate"><span class="pre">pprint</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">netflix_info</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="netflix_info output in IPython Console" src="../_images/pprint-output-netflix-info.png" />
+<p>Although <code class="docutils literal notranslate"><span class="pre">pprint</span></code> displays all the information, it is easier to view it in the Variable Explorer.</p>
+</div>
+<div class="section" id="historical-stock-data">
+<h3>Historical stock data<a class="headerlink" href="#historical-stock-data" title="Permalink to this headline">¶</a></h3>
+<p>We can download in a dataset the history of a stock with the following line of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">netflix</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can see a summary and more details of this dataset in the Variable Explorer. It appears as a DataFrame object, with 7 columns and thousands of rows. If we double-click on it we will see the historical records of Netflix stock organized by ascending dates.</p>
+<img alt="Netflix historical operations" src="../_images/netflix-history.png" />
+<p>Throughout this workshop we will use this historical information to compare, with various normative financial theories, different types of financial portfolios.</p>
+</div>
+</div>
+<div class="section" id="first-portfolio">
+<h2>First portfolio<a class="headerlink" href="#first-portfolio" title="Permalink to this headline">¶</a></h2>
+<p>Let’s build our first stock investment portfolio! Say we are interested in investing in technology, and we want to know what performance can be obtained by putting money into some of the “heavyweights” in this industry.</p>
+<p>To measure the performance of our first portfolio we are going to use a classic theory in the world of finance: <a class="reference external" href="https://analystprep.com/study-notes/actuarial-exams/soa/ifm-investment-and-financial-markets/mean-variance-portfolio-theory/">mean-variance portfolio (MVP) theory</a>. This model assumes that investors only care about expected returns and the variance of such returns. The analysis is based entirely on statistical measures based on a time series of share prices, such as periodic mean returns and the variances of those returns with the same periodicity.</p>
+<div class="section" id="prepare-portfolio-data">
+<h3>Prepare portfolio data<a class="headerlink" href="#prepare-portfolio-data" title="Permalink to this headline">¶</a></h3>
+<p>Before we start, let’s run some lines of code to style the plots.  These lines are optional, but we recommend that you run them so that the graphics look like the screenshots we present in this workshop.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;fivethirtyeight&quot;</span><span class="p">)</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;savefig.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;font.family&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;serif&quot;</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;float&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">6.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Suppose we want to measure the performance of a portfolio consisting of Google, Apple, Microsoft, Netflix and Amazon stocks. Let’s call this set <code class="docutils literal notranslate"><span class="pre">SYMBOLS_1</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SYMBOLS_1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GOOG&quot;</span><span class="p">,</span> <span class="s2">&quot;AAPL&quot;</span><span class="p">,</span> <span class="s2">&quot;MSFT&quot;</span><span class="p">,</span> <span class="s2">&quot;NFLX&quot;</span><span class="p">,</span> <span class="s2">&quot;AMZN&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you search for <code class="docutils literal notranslate"><span class="pre">SYMBOLS_1</span></code> in Variable Explorer you will not find it: Python interprets this element not as a variable, but as a <strong>constant</strong>. This is because the name is written with uppercase letters (no letter is lowercase). By default, the Variable Explorer doesn’t show this, but actually you can change the settings in the <span class="guilabel">Preferences</span> to be able to see these constants.</p>
+</div>
+<p>We are going to download the historical data for this portfolio. To do this, we are going to use the <code class="docutils literal notranslate"><span class="pre">yfinance</span></code> <code class="docutils literal notranslate"><span class="pre">download()</span></code> function, which takes as its first argument a string with the symbols (<code class="docutils literal notranslate"><span class="pre">SYMBOLS_1</span></code>) defined above. The rest of the arguments are the start date (<code class="docutils literal notranslate"><span class="pre">start=&quot;2012-01-01&quot;</span></code>), the end date (<code class="docutils literal notranslate"><span class="pre">end=&quot;2021-01-01&quot;</span></code>) and how the data will be grouped (<code class="docutils literal notranslate"><span class="pre">group_by=&quot;Ticker&quot;</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_1</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">SYMBOLS_1</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2012-01-01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2021-01-01&quot;</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;Ticker&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The last argument (<code class="docutils literal notranslate"><span class="pre">group_by=&quot;Ticker&quot;</span></code>) groups the information mainly by stock. Otherwise, the primary grouping is done by the type of information (e.g., opening price, closing price, volume traded) of the transactions. In the following image you can see the differences (above is the default organization and below is the grouping by “Ticker”).</p>
+<img alt="Data grouped by Ticker" src="../_images/data-grouped-by-ticker.png" />
+<p>The historical data has been downloaded as a Pandas DataFrame. We can explore this data in the variable <code class="docutils literal notranslate"><span class="pre">data_1</span></code> in the Variable Explorer.</p>
+<img alt="Portfolio 1 historical data" src="../_images/data_1-in-variable-explorer.png" />
+<p>Let’s change the formatting of the data a bit so that the symbols appear as the column names, and the Ticker moves from columns to rows. We will do this with the <code class="docutils literal notranslate"><span class="pre">stack()</span></code> operation of the DataFrame.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_1</span> <span class="o">=</span> <span class="n">data_1</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">([</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ticker&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 1 historical data stacked by Ticker" src="../_images/data_1-stacked-in-variable-explorer.png" />
+<p>From the Ticker we are only interested in the daily closing price. So we will leave only the values for <code class="docutils literal notranslate"><span class="pre">&quot;Close&quot;</span></code> and eliminate the Ticker column afterwards.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">close_data_1</span> <span class="o">=</span> <span class="n">data_1</span><span class="p">[</span><span class="n">data_1</span><span class="o">.</span><span class="n">Ticker</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Ticker&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You will notice that there is a new DataFrame in the Variable Explorer called <code class="docutils literal notranslate"><span class="pre">close_data_1</span></code> with 2,265 rows and 5 columns.</p>
+</div>
+<div class="section" id="a-first-glance-at-the-portfolio">
+<h3>A first glance at the portfolio<a class="headerlink" href="#a-first-glance-at-the-portfolio" title="Permalink to this headline">¶</a></h3>
+<p>We want to see how our portfolio would have performed if we had invested in it from 2012 to early 2021. How could we obtain this measurement? Let’s look at the monthly closing prices of each stock. To do this we will do an automatic resample of the data. And then we will calculate the change in relative frequencies (percentages).</p>
+<p>The resampling will be performed with the <code class="docutils literal notranslate"><span class="pre">resample(&quot;M&quot;)</span></code> method and the calculation of percentages with the <code class="docutils literal notranslate"><span class="pre">pct_change()</span></code> method. The result will be stored in the <code class="docutils literal notranslate"><span class="pre">monthly_data_1</span></code> variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_1</span> <span class="o">=</span> <span class="n">close_data_1</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Since each stock is a column, we can use the <code class="docutils literal notranslate"><span class="pre">mean()</span></code> method on the DataFrame to see the results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># AMZN    0.029931</span>
+<span class="c1"># GOOG    0.018784</span>
+<span class="c1"># MSFT    0.020698</span>
+<span class="c1"># AAPL    0.023033</span>
+<span class="c1"># NFLX    0.042060</span>
+<span class="c1"># dtype: float64</span>
+</pre></div>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Remember that this closing information represents the relative growth of each stock, not its closing price in any currency.</p>
+</div>
+<p>As we can see, all the results are positive, so this portfolio has been profitable over the years. In relative terms, the biggest gains would come from Netflix (0.4 percent). These percentages show an average of the monthly variation of the stock price. But how stable have that prices been? To find this out, we can calculate the standard deviation of stock price growth:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_1</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># AMZN    0.082308</span>
+<span class="c1"># GOOG    0.061057</span>
+<span class="c1"># MSFT    0.058395</span>
+<span class="c1"># AAPL    0.081239</span>
+<span class="c1"># NFLX    0.145416</span>
+<span class="c1"># dtype: float64</span>
+</pre></div>
+</div>
+<p>The highest volatility is found in Netflix (0.1454), which indicates that its price, despite being the fastest growing, has also had a lot of variation during these years. The most stable price, on the other hand, has been Microsoft’s (0.0583).</p>
+<p>A good way to observe both growth and variability is to draw a time-series plot. To scale the values, we are going to divide the relative frequency of the closing price of the actions by the initial value it has in the dataframe <code class="docutils literal notranslate"><span class="pre">close_data_1</span></code> (these initial values can be found with <code class="docutils literal notranslate"><span class="pre">close_data_1.iloc[0])</span></code>). The plot is drawn with the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> method of the Pandas DataFrame (to which we pass as arguments the size of the plot and the plot title).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">close_data_1</span><span class="o">/</span><span class="n">close_data_1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Portfolio 1 daily stock price&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 1 daily stock price" src="../_images/portfolio-1-daily-stock-price.png" />
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>You will be able to see the graph in the Plots pane. On the left, you will see the plot in detail. On the right, a stack will be created with all the plots that are generated both in the Console and by running the code directly in the Editor. You can copy, delete or save the plot to disk by clicking on it with the right mouse button or trackpad.</p>
+</div>
+<p>The above time-series plot clearly shows the growth of all stocks, particularly Netflix. The high volatility discussed above can also be seen. For example, it can be seen from the plots that, due to high volatility, investing in Netflix in the years 2014 and 2019 left virtually no profit (if shares were bought at the beginning of the year and sold right at the end).</p>
+<p>We can also plot with the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> method the DataFrame we already have with the monthly data. To do this, we will add 1 to all the values and calculate the accumulated product with the <code class="docutils literal notranslate"><span class="pre">cumprod()</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">monthly_data_1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Portfolio 1 monthly stock price&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 1 monthly stock price" src="../_images/portfolio-1-monthly-stock-price.png" />
+<p>This plot of the monthly data is “smoother” than the plot of the daily data.</p>
+</div>
+<div class="section" id="returns-and-volatility">
+<h3>Returns and volatility<a class="headerlink" href="#returns-and-volatility" title="Permalink to this headline">¶</a></h3>
+<p>Remember that in the <em>mean-variance portfolio theory</em> what matters are the expected returns and variances. To calculate these returns, we will divide the price of the stock on one day by the price of the same stock on the previous day. We will do this by dividing the <code class="docutils literal notranslate"><span class="pre">close_data_1</span></code> DataFrame by a version of itself in which we shift each record one date backwards (<code class="docutils literal notranslate"><span class="pre">shift(1)</span></code>). For example, if on the date 2012-01-03 a stock was valued at 1, and on the next day (2012-01-02), it was valued at 2, then in our shifted dataset, on the day 2012-01-03 the stock would be worth 1. In this way, we would divide 1 by 2. And so on with all the values of all the shares. We will also normalize the results by passing them to a logarithmic scale with <code class="docutils literal notranslate"><span class="pre">np.log()</span></code>.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Trend lines are more easily drawn in logarithmic scale because they tend to fit better to the minimums. In addition, the logarithmic scale gives a more realistic view of price movements.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rets_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">close_data_1</span><span class="o">/</span><span class="n">close_data_1</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the variable <code class="docutils literal notranslate"><span class="pre">rets_1</span></code> you can see the resulting DataFrame. If you double-click on the variable name in the Variable Explorer, you will see that there are positive values (the share price increased) and negative values (the price decreased at the time of closing).</p>
+<img alt="Portfolio 1 daily returns" src="../_images/portfolio-1-returns.png" />
+<p>In addition to the returns of each stock, we will need the specific weight of each stock in the portfolio, i.e., how many shares of each company are in the portfolio. In this workshop we will assume that there is one share of each company and, therefore, the weights will be distributed equally.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>A stock is a financial security that represents that you own a part of a company (whatever the size of this part). A share, on the other hand, is the smallest unit of denomination of a stock. A stock is composed of one or several shares.</p>
+</div>
+<p>This weight will be a vector (Python list) composed of the relative weight (between 0 and 1) of each stock in the portfolio. The sum of these weights has to be 1. Since we will assume that each stock is a single share, the distribution will be equal: <code class="docutils literal notranslate"><span class="pre">[0.2,</span> <span class="pre">0.2,</span> <span class="pre">0.2,</span> <span class="pre">0.2,</span> <span class="pre">0.2]</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights_1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>With this information we can calculate the expected return of this portfolio. The math is simple: this is given by the dot product of the portfolio weights vector and the vector of expected returns. This result must be multiplied by the number of days for which the return is to be calculated (a year has approximately 252 stock price closings).</p>
+<p>Let’s put all this into a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">returns</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">weights</span><span class="p">)</span> <span class="o">*</span> <span class="mi">252</span>
+</pre></div>
+</div>
+<p>Let’s look at the expected return of this portfolio if we hold it for one year:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">portfolio_return</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">)</span>
+
+<span class="c1"># 0.2859066023606343</span>
+</pre></div>
+</div>
+<p>An expected gain of almost 30% in one year. Not bad, right? But don’t forget the other side of this coin: volatility. This calculation is a bit more complex. First, the dot product of the annualized covariance of the returns (this is multiplied by the number of trading days in a year) and the weights is calculated. Then the dot product of the weights and the previous result is obtained. Finally, the square root of this result is extracted. Let’s implement this into a function as well.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">returns</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span> <span class="o">*</span> <span class="mi">252</span><span class="p">,</span> <span class="n">weights</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>Let’s see how our portfolio performs with respect to its volatility:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">)</span>
+
+<span class="c1"># 0.23704031354688784</span>
+</pre></div>
+</div>
+<p>If high return is desirable, high volatility is undesirable. The risk of this portfolio is relatively large.</p>
+</div>
+<div class="section" id="sharpe-ratio">
+<h3>Sharpe ratio<a class="headerlink" href="#sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sharpe_ratio">Sharpe</a> ratio or index is a measure of portfolio performance. It relates the portfolio’s return to its volatility, comparing the expected/realized return with the expected/realized risk. It is calculated as the difference between the actual investment returns and the expected return in a zero-risk situation, divided by the volatility of the investment. <strong>It provides a model of the additional amount of returns received for each additional unit of risk</strong>.</p>
+<p>Let’s formalize this in a function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span> <span class="o">/</span> <span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And let’s apply this to our portfolio.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">portfolio_sharpe</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">)</span>
+
+<span class="c1"># 1.2061518063427656</span>
+</pre></div>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>The Sharpe ratio measure is best understood in context: when comparing two or more portfolios, the one with the higher Sharpe ratio provides more profit for the same amount of risk.</p>
+</div>
+<p>We can also use a <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation to randomize the weights of each stock in the portfolio so that we can see the range over which the Sharpe ratio can vary. In this way we can plot some scenarios that together will give us a good insight of the relationship between expected returns and expected volatility.</p>
+<p>We are going to do this with a function that we will explain step by step in the <a class="reference internal" href="#monte-carlo-sharpe-function-explained">monte_carlo_sharpe function explained</a> section.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">monte_carlo_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+
+    <span class="n">sim_weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)))</span>
+    <span class="n">sim_weights</span> <span class="o">=</span> <span class="p">(</span><span class="n">sim_weights</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="n">sim_weights</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="n">volat_ret</span> <span class="o">=</span> <span class="p">[(</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">],</span> <span class="n">weights</span><span class="p">),</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">],</span> <span class="n">weights</span><span class="p">))</span> <span class="k">for</span> <span class="n">weights</span> <span class="ow">in</span> <span class="n">sim_weights</span><span class="p">]</span>
+    <span class="n">volat_ret</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">volat_ret</span><span class="p">)</span>
+
+    <span class="n">sharpe_ratio</span> <span class="o">=</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">volat_ret</span><span class="p">,</span> <span class="n">sharpe_ratio</span>
+</pre></div>
+</div>
+<div class="alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>You do not need to type the following code in the IPython Console. If you write the function above it will be enough. It is just a code presentation to explain what is inside the function.</p>
+</div>
+<div class="section" id="monte-carlo-sharpe-function-explained">
+<h4><code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function explained<a class="headerlink" href="#monte-carlo-sharpe-function-explained" title="Permalink to this headline">¶</a></h4>
+<p>Let’s now break the function down to understand what is happening. First, we create a numpy array of length 1,000 and width of the number of shares in the portfolio. Each row of the array has random weights that always add up to 1:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sim_weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)))</span>
+<span class="n">sim_weights</span> <span class="o">=</span> <span class="p">(</span><span class="n">sim_weights</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="n">sim_weights</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>The next section calculates the volatility and returns for the new random weights using a list comprehension. The resulting list is transformed back into a numpy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">volat_ret</span> <span class="o">=</span> <span class="p">[(</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">],</span> <span class="n">weights</span><span class="p">),</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">],</span> <span class="n">weights</span><span class="p">))</span> <span class="k">for</span> <span class="n">weights</span> <span class="ow">in</span> <span class="n">sim_weights</span><span class="p">]</span>
+<span class="n">volat_ret</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">volat_ret</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, we obtain the Sharpe ratio by dividing the index 1 (volatilities) by the index 0 (returns) of the numpy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sharpe_ratio</span> <span class="o">=</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-monte-carlo-sharpe-function">
+<h4>Using the <code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function<a class="headerlink" href="#using-the-monte-carlo-sharpe-function" title="Permalink to this headline">¶</a></h4>
+<p>We use the function to get the simulated returns and volatility of portfolio 1 (<code class="docutils literal notranslate"><span class="pre">port_1_vr</span></code>) and the related Sharpe ratios (<code class="docutils literal notranslate"><span class="pre">port_1_sr</span></code>).</p>
+<p>Enter the following code in the console.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_vr</span><span class="p">,</span> <span class="n">port_1_sr</span> <span class="o">=</span> <span class="n">monte_carlo_sharpe</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">SYMBOLS_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Remember that the weights are initialized randomly, so each time you run this code you will get different results.</p>
+</div>
+<p>With this we obtain two arrays with 1,000 simulated cases for our portfolio. But the best way to explore this is with a plot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">port_1_vr</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">port_1_vr</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">port_1_sr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;cool&quot;</span><span class="p">)</span>
+<span class="n">CB</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+<span class="n">CB</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Sharpe ratio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;expected volatility&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;expected return&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot; | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">SYMBOLS_1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You should see in the Plots pane something like this:</p>
+<img alt="Portfolio 1 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-1.png" />
+<p>A roughly linear relationship can be observed between returns and volatility: the higher the volatility, the higher the gains. And the Sharpe ratio shows an important amount of variability (it is noticeable in the “width” of the line drawn).</p>
+<p>This seems to be a good portfolio because it has a good performance with a not very large variance.</p>
+</div>
+</div>
+<div class="section" id="optimal-portfolio-weights">
+<h3>Optimal portfolio weights<a class="headerlink" href="#optimal-portfolio-weights" title="Permalink to this headline">¶</a></h3>
+<p>Can we use the data obtained to calculate the optimal weights for the portfolio by year? Of course we can. Let’s start by delimiting the previous years as variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We will now write a function to calculate these optimal weights.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">optimal_weights</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">actual_weights</span><span class="p">,</span> <span class="n">start_y</span><span class="p">,</span> <span class="n">end_y</span><span class="p">):</span>
+
+    <span class="n">bounds</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)</span> <span class="o">*</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">]</span>
+    <span class="n">constraints</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;fun&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">weights</span><span class="p">:</span> <span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">}</span>
+    <span class="n">opt_weights</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_y</span><span class="p">,</span> <span class="n">end_y</span><span class="p">):</span>
+        <span class="n">_rets</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
+        <span class="n">_opt_w</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">weights</span><span class="p">:</span> <span class="o">-</span><span class="n">portfolio_sharpe</span><span class="p">(</span><span class="n">_rets</span><span class="p">,</span> <span class="n">weights</span><span class="p">),</span> <span class="n">actual_weights</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)[</span><span class="s2">&quot;x&quot;</span><span class="p">]</span>
+        <span class="n">opt_weights</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">=</span> <span class="n">_opt_w</span>
+    <span class="k">return</span> <span class="n">opt_weights</span>
+</pre></div>
+</div>
+<p>Let’s describe this function in broad strokes. <code class="docutils literal notranslate"><span class="pre">bounds</span></code> indicates the maximum and minimum weights for each stock in the portfolio. The lowest weight will be 0 and the highest weight will be 1 for each stock in the portfolio. <code class="docutils literal notranslate"><span class="pre">constraints</span></code> is a function that ensures that the sum of the weights of all actions always adds up to 1. Then a loop is initialized that will segment the data for each year. In the variable <code class="docutils literal notranslate"><span class="pre">_rets</span></code> the returns for the specified year are obtained. In <code class="docutils literal notranslate"><span class="pre">_opt_w</span></code> the <code class="docutils literal notranslate"><span class="pre">portfolio_shape()</span></code> function is used to calculate the weights that maximize the Sharpe ratio. This is done with the <code class="docutils literal notranslate"><span class="pre">minimize()</span></code> function of SciPy (which takes as arguments the <code class="docutils literal notranslate"><span class="pre">portfolio_shape</span></code> function, the actual weights of our stocks in the portfolio, and the <code class="docutils literal notranslate"><span class="pre">bounds</span></code> and the <code class="docutils literal notranslate"><span class="pre">constraints</span></code> variables). Notice the <code class="docutils literal notranslate"><span class="pre">-</span></code> sign before <code class="docutils literal notranslate"><span class="pre">portfolio_sharpe</span></code>? It’s because <code class="docutils literal notranslate"><span class="pre">minimize()</span></code> aims to find the minimum value of a function relative to a parameter, but we are interested in the maximum, so we make the result of <code class="docutils literal notranslate"><span class="pre">portfolio_sharpe</span></code> a negative one.</p>
+<p>We will use the function we just defined to calculate the optimal weights for each year, and we are going to save the result in a Pandas DataFrame to take advantage of the Variable Explorer display options.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">opt_weights_1</span> <span class="o">=</span> <span class="n">optimal_weights</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">SYMBOLS_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
+<span class="n">port_1_ow</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">opt_weights_1</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">port_1_ow</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">SYMBOLS_1</span>
+</pre></div>
+</div>
+<p>Double click on the <code class="docutils literal notranslate"><span class="pre">port_1_ow</span></code> variable in the Variable Explorer. In the table, you can specify the number of decimal places to display, by clicking the format button at the bottom left of the pane, as you can see in the following image:</p>
+<img alt="Portfolio 1 optimal weights by year" src="../_images/portfolio-1-optimal-weights.png" />
+<p>We set the number of decimal places to 4 and uncheck the <strong>Column min/max</strong> checkbox to better appreciate the contrasts in the row values (years).</p>
+<p>You can see, for example, how 2015 was a particularly good year for investing in Amazon and Netflix, while 2014 was the year of Apple. Despite Netflix’s rapid growth over the years, its high volatility means that its Sharpe Ratio is not very remarkable in any year, especially (as we said above) in 2014 and 2019. In the same respect, Apple and Microsoft seem to be safer bets in the return/volatility ratio.</p>
+</div>
+<div class="section" id="comparison-of-expected-and-realized-returns">
+<h3>Comparison of expected and realized returns<a class="headerlink" href="#comparison-of-expected-and-realized-returns" title="Permalink to this headline">¶</a></h3>
+<p>Finally, we will use the optimal weights to calculate the expected returns and compare them with the actual returns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exp_real_rets</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
+
+    <span class="n">_rets</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
+        <span class="n">prev_year</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
+        <span class="n">current_year</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
+        <span class="n">expected_pr</span> <span class="o">=</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">prev_year</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">[</span><span class="n">year</span><span class="p">])</span>
+        <span class="n">realized_pr</span> <span class="o">=</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">current_year</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">[</span><span class="n">year</span><span class="p">])</span>
+        <span class="n">_rets</span><span class="p">[</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">expected_pr</span><span class="p">,</span> <span class="n">realized_pr</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">_rets</span>
+</pre></div>
+</div>
+<p>In this function we compare year to year realized returns with theoretically expected returns. This is done by estimating:</p>
+<ol class="arabic simple">
+<li><p>The returns from applying the optimal weights of the previous year’s stocks to the data for that same year (<code class="docutils literal notranslate"><span class="pre">expected_pr</span></code>).</p></li>
+<li><p>The returns from applying the optimal weights of the previous year’s stocks to the following year’s data (<code class="docutils literal notranslate"><span class="pre">realized_pr</span></code>).</p></li>
+</ol>
+<p>We are going to apply this function to the data in portfolio 1 and store the results in a DataFrame that we can review in the Variable Explorer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_exp_real</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">exp_real_rets</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">opt_weights_1</span><span class="p">,</span> <span class="n">SYMBOLS_1</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">),</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">port_1_exp_real</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;expected&quot;</span><span class="p">,</span> <span class="s2">&quot;realized&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The expected column shows the predicted values if the optimal portfolio composition had been used. The realized column, on the other hand, shows the actual profits that would have been obtained with those weights. It can be seen that there are notable differences in some years. Let’s look at this in a plot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_exp_real</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Expected vs. realized Portfolio Returns&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 1 expected and realized returns comparison" src="../_images/expected-vs-realized-portfolio-1-returns.png" />
+<p>The most notable differences are seen in 2014 and 2016. In those years, the previous year’s optimal portfolio weights (in blue in the above plot) are a lousy indicator of the following year’s stock performance (in red). In 2013, our model estimated that Google and Netflix were excellent investments. But by 2014 their share price did not grow if we compare the price at the beginning and at the end of that year. And something similar happened in 2016, in which Amazon’s growing trend of the previous year diminished, and the value of Microsoft and Apple shares grew.</p>
+<p>Let’s summarize these numbers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_exp_real</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># expected    0.408009</span>
+<span class="c1"># realized    0.199700</span>
+<span class="c1"># dtype: float64</span>
+</pre></div>
+</div>
+<p>Our optimal weight model offered us a profit of around 40%, but the profit we would have obtained, due to real market fluctuations, would have been almost 20%. Not bad, but the mean-variance portfolio model we have applied for annual calculations is not very accurate, is it?</p>
+<p>And this result is less encouraging if we calculate the correlations between expected and realized profits.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_exp_real</span><span class="p">[[</span><span class="s2">&quot;expected&quot;</span><span class="p">,</span> <span class="s2">&quot;realized&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1">#           expected  realized</span>
+<span class="c1"># expected  1.000000 -0.324053</span>
+<span class="c1"># realized -0.324053  1.000000</span>
+</pre></div>
+</div>
+<p>As we can see, the correlations are negative, which warns us that we should be cautious when using this type of modeling.</p>
+</div>
+</div>
+<div class="section" id="second-portfolio">
+<h2>Second portfolio<a class="headerlink" href="#second-portfolio" title="Permalink to this headline">¶</a></h2>
+<p>We are now going to apply all the previous code with a portfolio of a different nature. Let’s assume that instead of technology companies, we are now interested in pharmaceuticals. We will build a portfolio with stocks of Pfizer, Astra Zeneca, Johnson &amp; Johnson.</p>
+<div class="section" id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline">¶</a></h3>
+<p>Let’s download the data and format it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SYMBOLS_2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PFE&quot;</span><span class="p">,</span> <span class="s2">&quot;AZN&quot;</span><span class="p">,</span> <span class="s2">&quot;JNJ&quot;</span><span class="p">]</span>  <span class="c1"># Pfizer, Astra Zeneca, Johnson N Johnson</span>
+
+<span class="n">data_2</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">SYMBOLS_2</span><span class="p">),</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2012-01-01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2021-01-01&quot;</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;Ticker&quot;</span><span class="p">)</span>
+<span class="n">data_2</span> <span class="o">=</span> <span class="n">data_2</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">([</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ticker&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">close_data_2</span> <span class="o">=</span> <span class="n">data_2</span><span class="p">[</span><span class="n">data_2</span><span class="o">.</span><span class="n">Ticker</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Ticker&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you do not want to use the yfinance API, you can download the <code class="docutils literal notranslate"><span class="pre">close_data_2.csv</span></code> file containing the closing information for this portfolio. Copy this file to your working directory. Load the data with the following instruction:  <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">close_data_2</span> <span class="pre">=</span> <span class="pre">pd.read_csv(&quot;close_data_2.csv&quot;)</span></code>.</p>
+</div>
+</div>
+<div class="section" id="mean-and-standard-deviation">
+<h3>Mean and standard deviation<a class="headerlink" href="#mean-and-standard-deviation" title="Permalink to this headline">¶</a></h3>
+<p>We are going to put the data in a monthly format and observe the mean and standard deviation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_2</span> <span class="o">=</span> <span class="n">close_data_2</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthly_data_2</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;STD:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">monthly_data_2</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+
+<span class="c1"># Mean:</span>
+<span class="c1"># AZN    0.008778</span>
+<span class="c1"># PFE    0.006954</span>
+<span class="c1"># JNJ    0.009126</span>
+<span class="c1"># dtype: float64</span>
+<span class="c1"># STD:</span>
+<span class="c1"># AZN    0.063068</span>
+<span class="c1"># PFE    0.053174</span>
+<span class="c1"># JNJ    0.044063</span>
+<span class="c1"># dtype: float64</span>
+</pre></div>
+</div>
+<p>As in portfolio 1, all means are positive. But its largest value (that of JNJ) barely reaches 1% per month, which is slower growth than that of portfolio 1. The variation is also smaller compared to that of the previous portfolio (here the largest deviation is 0.06) which makes it a lower risk investment.</p>
+</div>
+<div class="section" id="daily-and-monthly-timelines">
+<h3>Daily and monthly timelines<a class="headerlink" href="#daily-and-monthly-timelines" title="Permalink to this headline">¶</a></h3>
+<p>Let’s better visualize the above with a couple of charts.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rets_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span> <span class="o">/</span> <span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="p">(</span><span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span> <span class="o">/</span> <span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Portfolio 2 daily stock price&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="p">(</span><span class="n">monthly_data_2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Portfolio 2 monthly stock price&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 2 daily stock price" src="../_images/portfolio-2-daily-stock-price.png" />
+<img alt="Portfolio 2 monthly stock price" src="../_images/portfolio-2-monthly-stock-price.png" />
+<p>These two plots show a steady growth over the years, but also a high variability in each year. This seems to be a good portfolio only if taken as a long-term investment.</p>
+</div>
+<div class="section" id="returns-volatility-and-sharpe-ratio">
+<h3>Returns, volatility and Sharpe ratio<a class="headerlink" href="#returns-volatility-and-sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+<p>To confirm what was said in the previous section, let’s calculate returns, volatility and Sharpe ratio.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights_2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 returns: </span><span class="si">{</span><span class="n">portfolio_return</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 volatility: </span><span class="si">{</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;portfolio 2 Sharpe: </span><span class="si">{</span><span class="n">portfolio_sharpe</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Portfolio 2 returns: 0.0809</span>
+<span class="c1"># Portfolio 2 volatility: 0.1637</span>
+<span class="c1"># Portfolio 2 Sharpe: 0.4940</span>
+</pre></div>
+</div>
+<p>The return of this portfolio is significantly lower than that of the previous portfolio (0.0809 &lt; 0.2859). Its volatility (0.1637 &lt; 0.2370) is also lower, but to a lesser extent. This is reflected in a lower Sharpe ratio as well (0.4940 &lt; 1.2062). This means, within the mean-variance theory approach, that the first portfolio is a better investment than the second one.</p>
+<p>The different behavior is clearly observed if we apply a Monte Carlo simulation and visualize it with a graph:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_2_vr</span><span class="p">,</span> <span class="n">port_2_sr</span> <span class="o">=</span> <span class="n">monte_carlo_sharpe</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">SYMBOLS_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">port_2_vr</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">port_2_vr</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">port_2_sr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;cool&quot;</span><span class="p">)</span>
+<span class="n">CB</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+<span class="n">CB</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Sharpe ratio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;expected volatility&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;expected return&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot; | &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">SYMBOLS_2</span><span class="p">))</span>
+</pre></div>
+</div>
+<img alt="Portfolio 2 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-2.png" />
+<p>High volatility does not correspond in most cases with high returns. In fact, there are scenarios in the simulation in which higher expected returns are related to lower expected volatility.</p>
+</div>
+<div class="section" id="optimal-weights">
+<h3>Optimal weights<a class="headerlink" href="#optimal-weights" title="Permalink to this headline">¶</a></h3>
+<p>Let us now see what are the optimal weights for each stock using the <code class="docutils literal notranslate"><span class="pre">optimal_weights</span></code> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="n">opt_weights_2</span> <span class="o">=</span> <span class="n">optimal_weights</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">SYMBOLS_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
+
+<span class="n">port_2_ow</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">opt_weights_2</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">port_2_ow</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">SYMBOLS_2</span>
+</pre></div>
+</div>
+<img alt="Portfolio 2 optimal weights by year" src="../_images/portfolio-2-optimal-weights.png" />
+<p>In addition, we can use these optimal weights to plot the expected and realized returns of this portfolio for each year.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_2_exp_real</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">exp_real_rets</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">opt_weights_2</span><span class="p">,</span> <span class="n">SYMBOLS_2</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">),</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">port_2_exp_real</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;expected&quot;</span><span class="p">,</span> <span class="s2">&quot;realized&quot;</span><span class="p">]</span>
+
+<span class="n">port_2_exp_real</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Expected vs. realized portfolio returns&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Portfolio 2 expected and realized returns comparison" src="../_images/expected-vs-realized-portfolio-2-returns.png" />
+<p>Due to the high volatility of this portfolio, our model has not been able to adequately forecast expected returns in several of the years. Higher than expected returns would have been realized in 2013 and 2017, but in 2015 and 2018 using the model would have generated losses.</p>
+<p>Finally, let us look at the differences between the expected and realized means, and the linear correlation between the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Expected and realized means:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">port_2_exp_real</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Expected and realized correlations:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">port_2_exp_real</span><span class="p">[[</span><span class="s2">&quot;expected&quot;</span><span class="p">,</span> <span class="s2">&quot;realized&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
+
+<span class="c1"># Expected and realized means:</span>
+<span class="c1"># expected    0.155103</span>
+<span class="c1"># realized    0.062207</span>
+
+<span class="c1"># Expected and realized correlations:</span>
+<span class="c1">#          expected  realized</span>
+<span class="c1"># expected  1.000000 -0.023134</span>
+<span class="c1"># realized -0.023134  1.000000</span>
+</pre></div>
+</div>
+<p>As we can see, the model with optimal weights predicted a return close to 15% per year, but the realized return would have barely reached 6%. And the negative correlations show, as with portfolio 1, that there does not seem to be any correspondence between these values.</p>
+<p>The comparison is then favorable for portfolio 1. But what if we compare portfolio 1 with a “higher risk” investment such as cryptocurrencies? Let’s discuss it below.</p>
+</div>
+</div>
+<div class="section" id="third-portfolio">
+<h2>Third portfolio<a class="headerlink" href="#third-portfolio" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download-cryptocurrencies-data">
+<h3>Download cryptocurrencies data<a class="headerlink" href="#download-cryptocurrencies-data" title="Permalink to this headline">¶</a></h3>
+<p>Our third portfolio will consist of three cryptocurrencies: bitcoin (BTC), ethereum (ETH) and litecoin (LTC). To access historical data, we are going to use a library called <strong>Historic-Crypto</strong>.</p>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>If you want to make use of the data without the Historic-Crypto library, you can <a class="reference external" href="https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215">download the dataset</a> “crypto_hist.csv” in your working directory, and load it in memory with the instruction <code class="docutils literal notranslate"><span class="pre">crypto_hist</span> <span class="pre">=</span> <span class="pre">pd.read_csv(&quot;crypto_hist.csv&quot;)</span></code>, and skip to section <a class="reference internal" href="#monthly-data">Monthly data</a>.</p>
+</div>
+<p>Import the libraries:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">Cryptocurrencies</span>
+<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">HistoricalData</span>
+</pre></div>
+</div>
+<p>We are going to use the <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> class to obtain a list of available cryptocurrencies.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crypto_list</span> <span class="o">=</span> <span class="n">Cryptocurrencies</span><span class="p">(</span><span class="n">coin_search</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">extended_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">find_crypto_pairs</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you want more information about the use of this library you can make a quick query using the Spyder Help panel (type in the console <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> and use <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> to display it). Or you can read the documentation in their <a class="reference external" href="https://github.com/David-Woroniuk/Historic_Crypto">official repository</a></p>
+</div>
+<p>A new variable has appeared in the Variable Explorer: <code class="docutils literal notranslate"><span class="pre">crypto_list</span></code>. It is a Pandas DataFrame that has a basic description of the types of cryptocurrency transactions. For example, we can look up which token is the token for ethereum transactions in US dollars.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crypto_list</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">crypto_list</span><span class="o">.</span><span class="n">base_currency</span> <span class="o">==</span> <span class="s2">&quot;ETH&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In this case, we are interested in the symbol with ID 171: ETH-USD.</p>
+<p>We can use the HistoricalData class of Historic-Crypto to download the history of transactions done in the cryptocurrencies of our portfolio, in US dollars.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download and format ETC data:</span>
+<span class="n">ETC_HIST</span> <span class="o">=</span> <span class="n">HistoricalData</span><span class="p">(</span><span class="s2">&quot;ETH-USD&quot;</span><span class="p">,</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;2016-01-01-00-00&quot;</span><span class="p">,</span> <span class="s2">&quot;2021-01-01-00-00&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">retrieve_data</span><span class="p">()</span>
+<span class="n">ETC_HIST</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;close&quot;</span><span class="p">:</span> <span class="s2">&quot;ETC&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ETC_HIST</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;low&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;volume&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># Download and format BTC data:</span>
+<span class="n">BTC_HIST</span> <span class="o">=</span> <span class="n">HistoricalData</span><span class="p">(</span><span class="s2">&quot;BTC-USD&quot;</span><span class="p">,</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;2016-01-01-00-00&quot;</span><span class="p">,</span> <span class="s2">&quot;2021-01-01-00-00&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">retrieve_data</span><span class="p">()</span>
+<span class="n">BTC_HIST</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;close&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">BTC_HIST</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;low&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;volume&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># Download and format LTC data:</span>
+<span class="n">LTC_HIST</span> <span class="o">=</span> <span class="n">HistoricalData</span><span class="p">(</span><span class="s2">&quot;LTC-USD&quot;</span><span class="p">,</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;2016-01-01-00-00&quot;</span><span class="p">,</span> <span class="s2">&quot;2021-01-01-00-00&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">retrieve_data</span><span class="p">()</span>
+<span class="n">LTC_HIST</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;close&quot;</span><span class="p">:</span> <span class="s2">&quot;LTC&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">LTC_HIST</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;low&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;volume&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s merge the resulting dataframes to have all the data in a single table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crypto_hist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">BTC_HIST</span><span class="p">,</span> <span class="n">ETC_HIST</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<span class="n">crypto_hist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">crypto_hist</span><span class="p">,</span> <span class="n">LTC_HIST</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We will not present the procedures and code in this section, but only the results of the analysis. You can follow the steps in the previous sections to recreate these results.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Use all this section on portfolio 3 to check your understanding of the concepts and code we have presented until now. If you have any questions, you can consult the <a class="reference download internal" download="" href="../_downloads/468d7c76843772ae0fb48a15096383df/financial-analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">code</span></code></a> code that accompanies this workshop. But we encourage you to try as much as possible to solve the code on your own.</p>
+</div>
+</div>
+<div class="section" id="monthly-data">
+<h3>Monthly data<a class="headerlink" href="#monthly-data" title="Permalink to this headline">¶</a></h3>
+<p>Let’s take a look at the monthly history of cryptocurrency price growth.</p>
+<img alt="Portfolio 3 daily stock price" src="../_images/portfolio-3-monthly-stock-price.png" />
+<p>We can note that the scale here is much larger. And the proportion of ETH growth over the other two coins is quite remarkable.</p>
+</div>
+<div class="section" id="return-volatility-and-sharpe-ratio">
+<h3>Return, volatility and Sharpe ratio<a class="headerlink" href="#return-volatility-and-sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+<p>Let’s consider the return, volatility and Sharpe ratio of this portfolio.</p>
+<ul class="simple">
+<li><p>Return: 0.6203</p></li>
+<li><p>Volatility: 0.7587</p></li>
+<li><p>Sharpe: 0.8176</p></li>
+</ul>
+<p>These numbers are higher than those obtained for portfolios 1 and 2, except for the Sharpe ratio. This is a very volatile portfolio (in fact three times more volatile than that of the technology companies), and that makes it ultimately not as profitable as portfolio 1. The returns are higher (almost double) but the risk may not compensate for it.</p>
+</div>
+<div class="section" id="monte-carlo-simulation">
+<h3>Monte carlo simulation<a class="headerlink" href="#monte-carlo-simulation" title="Permalink to this headline">¶</a></h3>
+<p>The Monte Carlo simulation also shows the non-linear correlation between risk and returns (as you can see, sometimes high risk involves only modest profits):</p>
+<img alt="Portfolio 3 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-3.png" />
+<p>As can be seen, there are points (bottom right) that show a very high volatility and yet have a very low expected return. In this sense, portfolio 1 represents a safer investment because the higher risk is consistently offset by higher returns.</p>
+</div>
+<div class="section" id="id1">
+<h3>Optimal weights<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<img alt="Portfolio 3 optimal weights by year" src="../_images/portfolio-3-optimal-weights.png" />
+<p>The optimal portfolio weights, if calculated annually, suggest that our portfolio should have been quite polarized in some years: the recommendation is to have bought only bitcoins before the start of 2016 and 2019, and only ethereum in 2018. Starting 2017 and 2020, on the other hand, our weights recommended a more balanced investment between bitcoin and ethereum. Litecoin is not recommended by our model.</p>
+</div>
+<div class="section" id="expected-and-realized-returns">
+<h3>Expected and realized returns<a class="headerlink" href="#expected-and-realized-returns" title="Permalink to this headline">¶</a></h3>
+<img alt="Portfolio 3 expected and realized returns comparison" src="../_images/expected-vs-realized-portfolio-3-returns.png" />
+<p>In this graph we can see that in 2017 and 2020 the earnings obtained would have exceeded the expected earnings (with our calculated weights). In 2019 our model predicted a sharp drop in the portfolio, but in reality the portfolio did not make either annualized gains or losses that year. In contrast, in 2018, our model would have brought us heavy losses, as the value of cryptocurrencies declined sharply that year.</p>
+<p>The mean expected return for our portfolio is 0.6972, which is higher than the realized return of 0.4181 that we would have obtained. Having invested in this portfolio over the long term (from 2016 to the present) would have been a very good deal. Due to the high variability, investing in the short term would have been very risky. In terms of gross profits, the realized returns of this portfolio were more than double those of portfolio 1 (0.4181 &gt; 0.1997).</p>
+</div>
+</div>
+<div class="section" id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this headline">¶</a></h2>
+<p>The mean-variance portfolio (MVP) theory is one of the many tools available to financial analysis. In recent years, machine learning algorithms have even been used to predict the behavior of stock prices more accurately than can be achieved with any standard financial theory.</p>
+<p>The examples given during this workshop are not intended to serve as guidelines for you to invest your money. It is only a first step towards learning financial analysis using Python and a scientific IDE.</p>
+<p>In this workshop you have learned how to:</p>
+<ul class="simple">
+<li><p>Set up a Conda environment.</p></li>
+<li><p>Use the Spyder Editor to write and run code.</p></li>
+<li><p>Write and test code with the IPython Console.</p></li>
+<li><p>Obtain financial data using an API.</p></li>
+<li><p>Graphing data.</p></li>
+<li><p>Inspect objects in the Variable Explorer.</p></li>
+<li><p>Browse between plots using the Plots pane.</p></li>
+<li><p>Manipulate data in a Pandas DataFrame.</p></li>
+<li><p>Build a financial portfolio.</p></li>
+<li><p>Calculate returns and volatility of a portfolio over time.</p></li>
+<li><p>Obtain the optimal weights of the stocks in a portfolio.</p></li>
+</ul>
+<p>With the skills learned here, you will be able to approach more complex topics of financial analysis such as those you will find in the references in the next section.</p>
+<p>Thank you for reaching the end of this workshop! We hope you found it helpful and informative.</p>
+<p>If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop <a class="reference internal" href="scientific-computing.html"><span class="doc">Scientific Computing and Visualization with Spyder</span></a>.</p>
+<div class="section" id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<p>If you want to check what you have learned, we suggest you try to obtain the results presented for the third portfolio. If you have any questions, you can consult the code that accompanies this workshop in our repository.</p>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p>Much of the math used to apply MVP was the mathematics outlined in Yves Hilpisch’s excellent book, which we recommend to you:</p>
+<ul class="simple">
+<li><p>Yves Hilpisch, Y. (2020). <em>Artificial Intelligence in Finance</em>. O’Reilly.*</p></li>
+</ul>
+<p>A classic that has been with us for decades and is one of Warren Buffett’s favorites:</p>
+<ul class="simple">
+<li><p>Graham, B. (1949). <em>The Intelligent Investor</em>. HarperCollins.</p></li>
+</ul>
+<p>Another good resource for financial analysis with Python is the following book by James Ma Weiming:</p>
+<ul class="simple">
+<li><p>Ma Weiming, J. (2019). <em>Mastering Python for Finance</em>. Packt</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -536,8 +1292,8 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="../indexworkshops.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Workshops</a>
-    <a class='prev-next-link right-next' id="next-link" href="scientific-computing.html" title="next page">Scientific Computing and Visualization with Spyder <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
+    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="scientific-computing.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Scientific Computing and Visualization with Spyder</a>
+    <a class='prev-next-link right-next' id="next-link" href="plugin-development.html" title="next page">Plugin Development with Spyder <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
 
               </div>
               
@@ -554,8 +1310,176 @@
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
-<nav id="bd-toc-nav">
+
+    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+    <nav id="bd-toc-nav">
         <ul class="nav section-nav flex-column">
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#prerequisites" class="nav-link">Prerequisites</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#learning-goals" class="nav-link">Learning goals</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#learner-profile" class="nav-link">Learner profile</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#why-use-python-for-financial-analysis" class="nav-link">Why use Python for financial analysis?</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#why-should-i-use-an-ide" class="nav-link">Why should I use an IDE?</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#introduction-to-financial-analysis-with-spyder" class="nav-link">Introduction to financial analysis with Spyder</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#set-up-conda-environment" class="nav-link">Set up Conda environment</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#download-the-datasets" class="nav-link">Download the datasets</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#setting-up-the-virtual-environment-in-spyder" class="nav-link">Setting up the virtual environment in Spyder</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#download-the-code" class="nav-link">Download the code</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#obtain-financial-data" class="nav-link">Obtain financial data</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#general-stock-information" class="nav-link">General stock information</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#historical-stock-data" class="nav-link">Historical stock data</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#first-portfolio" class="nav-link">First portfolio</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#prepare-portfolio-data" class="nav-link">Prepare portfolio data</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#a-first-glance-at-the-portfolio" class="nav-link">A first glance at the portfolio</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#returns-and-volatility" class="nav-link">Returns and volatility</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#sharpe-ratio" class="nav-link">Sharpe ratio</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#optimal-portfolio-weights" class="nav-link">Optimal portfolio weights</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#comparison-of-expected-and-realized-returns" class="nav-link">Comparison of expected and realized returns</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#second-portfolio" class="nav-link">Second portfolio</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#download-the-data" class="nav-link">Download the data</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#mean-and-standard-deviation" class="nav-link">Mean and standard deviation</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#daily-and-monthly-timelines" class="nav-link">Daily and monthly timelines</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#returns-volatility-and-sharpe-ratio" class="nav-link">Returns, volatility and Sharpe ratio</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#optimal-weights" class="nav-link">Optimal weights</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#third-portfolio" class="nav-link">Third portfolio</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#download-cryptocurrencies-data" class="nav-link">Download cryptocurrencies data</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#monthly-data" class="nav-link">Monthly data</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#return-volatility-and-sharpe-ratio" class="nav-link">Return, volatility and Sharpe ratio</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#monte-carlo-simulation" class="nav-link">Monte carlo simulation</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#id1" class="nav-link">Optimal weights</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#expected-and-realized-returns" class="nav-link">Expected and realized returns</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#homework" class="nav-link">Homework</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#further-reading" class="nav-link">Further reading</a>
+            </li>
         
         </ul>
     </nav>
@@ -570,8 +1494,180 @@
             <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
                 <span class="fas fa-comment"></span>
             </a>
-        </div><div id="bd-toc-nav-small" class="collapse navbar-collapse ">
+        </div>
+            <div class="navbar-toggler-item">
+                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars fa-2"></span>
+                </button>
+            </div>
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
             <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#prerequisites" class="nav-link">Prerequisites</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#learning-goals" class="nav-link">Learning goals</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#learner-profile" class="nav-link">Learner profile</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#why-use-python-for-financial-analysis" class="nav-link">Why use Python for financial analysis?</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#why-should-i-use-an-ide" class="nav-link">Why should I use an IDE?</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#introduction-to-financial-analysis-with-spyder" class="nav-link">Introduction to financial analysis with Spyder</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#set-up-conda-environment" class="nav-link">Set up Conda environment</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#download-the-datasets" class="nav-link">Download the datasets</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#setting-up-the-virtual-environment-in-spyder" class="nav-link">Setting up the virtual environment in Spyder</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#download-the-code" class="nav-link">Download the code</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#obtain-financial-data" class="nav-link">Obtain financial data</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#general-stock-information" class="nav-link">General stock information</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#historical-stock-data" class="nav-link">Historical stock data</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#first-portfolio" class="nav-link">First portfolio</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#prepare-portfolio-data" class="nav-link">Prepare portfolio data</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#a-first-glance-at-the-portfolio" class="nav-link">A first glance at the portfolio</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#returns-and-volatility" class="nav-link">Returns and volatility</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#sharpe-ratio" class="nav-link">Sharpe ratio</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#optimal-portfolio-weights" class="nav-link">Optimal portfolio weights</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#comparison-of-expected-and-realized-returns" class="nav-link">Comparison of expected and realized returns</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#second-portfolio" class="nav-link">Second portfolio</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#download-the-data" class="nav-link">Download the data</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#mean-and-standard-deviation" class="nav-link">Mean and standard deviation</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#daily-and-monthly-timelines" class="nav-link">Daily and monthly timelines</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#returns-volatility-and-sharpe-ratio" class="nav-link">Returns, volatility and Sharpe ratio</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#optimal-weights" class="nav-link">Optimal weights</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#third-portfolio" class="nav-link">Third portfolio</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#download-cryptocurrencies-data" class="nav-link">Download cryptocurrencies data</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#monthly-data" class="nav-link">Monthly data</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#return-volatility-and-sharpe-ratio" class="nav-link">Return, volatility and Sharpe ratio</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#monte-carlo-simulation" class="nav-link">Monte carlo simulation</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#id1" class="nav-link">Optimal weights</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#expected-and-realized-returns" class="nav-link">Expected and realized returns</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#homework" class="nav-link">Homework</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#further-reading" class="nav-link">Further reading</a>
+                </li>
             
             </ul>
         </div>

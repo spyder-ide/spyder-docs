@@ -6,6 +6,6 @@ Workshops
     :maxdepth: 2
     :glob:
 
-    workshops/financial
     workshops/scientific-computing
+    workshops/financial
     workshops/plugin-development
