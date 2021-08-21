@@ -2,7 +2,7 @@
 Spyder Unittest
 ###############
 
-**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder: such as Pytest, Unittest, and Nose. Which allow you to run test suites and view the results in the IDE.
+**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder: such as Pytest, Unittest and Nose. It allows you to run test suites and view the results in the IDE.
 
 .. image:: /images/unittest/unittest-run.png
    :alt: Spyder Unittest in Spyder
@@ -40,7 +40,7 @@ When Unittest is installed, it will be available under the menu item :menuselect
 .. image:: /images/unittest/unittest-view-panes.png
    :alt: Spyder showing view panes Unittest
 
-You will see it then as a tab in the bottom of the top right area in the same location as the Variable explorer, Help, and Plots views.
+You will see it then as a tab in the bottom of the top right area in the same location as the Variable explorer, Help, and Plots panes.
 
 Press on the  :guilabel:`Run Green Arrow` to run the testing.
 
@@ -66,7 +66,7 @@ The configuration view will show you how to choose the pytest option and the dir
 .. image:: /images/unittest/unittest-configuration-view.png
    :alt: Spyder Unittest configuration view in Spyder
 
-The dependencies view will show you all of your installed package versions.
+The dependencies view will show you all of your installed testing frameworks.
 
 .. image:: /images/unittest/unittest-dependencies-view.png
    :alt: Spyder Unittest dependencies view in Spyder
