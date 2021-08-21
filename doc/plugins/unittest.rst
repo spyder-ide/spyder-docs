@@ -35,7 +35,7 @@ Restart Spyder in order to be able to use the plugin.
 Using Unittest
 ==============
 
-When Unittest is installed, it will be available under the menu item :menuselection:`View --> Panes --> Unit testing`.
+When Spyder-unittest is installed, it will be available under the menu item :menuselection:`View --> Panes --> Unit testing`.
 
 .. image:: /images/unittest/unittest-view-panes.png
    :alt: Spyder showing view panes Unittest
