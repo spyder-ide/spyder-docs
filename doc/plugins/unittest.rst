@@ -7,7 +7,7 @@ Spyder Unittest
 .. image:: /images/unittest/unittest-run.png
    :alt: Spyder Unittest in Spyder
 
-| `Pytest <https://docs.pytest.org/en/6.2.x/>`_
+| `Pytest <https://docs.pytest.org/en/stable/getting-started.html#install-pytest>`_
 
 | `Unittest <https://docs.python.org/3/library/unittest.html#module-unittest>`_
 
@@ -46,7 +46,7 @@ Press on the  :guilabel:`Run Green Arrow` to run the testing.
 
 Pytest will run all files of the form :guilabel:`test_*.py` or :guilabel:`*_test.py` in the current directory and its subdirectories.
 
-| `Pytest Run Guide <https://docs.pytest.org/en/6.2.x/getting-started.html#run-multiple-tests>`_
+| `Pytest Run Guide <https://docs.pytest.org/en/stable/getting-started.html#run-multiple-tests>`_
 
 .. image:: /images/unittest/unittest-run-button.png
    :alt: Spyder showing Unittest run button
