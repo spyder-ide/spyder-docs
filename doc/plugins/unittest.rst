@@ -2,12 +2,16 @@
 Spyder Unittest
 ###############
 
-**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder, allowing you to run test suites and view the results in the IDE.
+**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder, such as Pytest, Unittest and Nose, allowing you to run test suites and view the results in the IDE.
 
 .. image:: /images/unittest/unittest-run.png
    :alt: Spyder Unittest in Spyder
 
-Using unittest inside Spyder allows you to take advantage of their web interface alongside Spyder’s powerful features such as the Variable explorer, console and debugger.
+| `Pytest <https://docs.pytest.org/en/6.2.x/>`_
+
+| `Unittest <https://docs.python.org/3/library/unittest.html#module-unittest>`_
+
+| `Nose <https://nose.readthedocs.io/en/latest/>`_
 
 ===================
 Installing Unittest
@@ -19,7 +23,7 @@ Installing Unittest
 
 .. important::
 
-   Please make sure you have Python's pytest package installed if you are going to use that program as well.
+   Please make sure you have Python's Pytest package installed if you are going to use that program as well.
 
 .. code-block:: bash
 
@@ -39,6 +43,10 @@ When Unittest is installed, it will be available under the menu item :menuselect
 You will see it then as a tab in the bottom of the top right area in the same location as the Variable explorer, Help, and Plots views.
 
 Press on the  :guilabel:`Run Green Arrow` to run the testing.
+
+Pytest will run all files of the form :guilabel:`test_*.py` or :guilabel:`*_test.py` in the current directory and its subdirectories.
+
+| `Pytest Run Guide <https://docs.pytest.org/en/6.2.x/getting-started.html#run-multiple-tests>`_
 
 .. image:: /images/unittest/unittest-run-button.png
    :alt: Spyder showing Unittest run button
@@ -63,7 +71,7 @@ The dependencies view will show you all of your installed package versions.
 .. image:: /images/unittest/unittest-dependencies-view.png
    :alt: Spyder Unittest dependencies view in Spyder
 
-The output viewer can be used to directly view the output results of your testing.  This view can be very useful for viewing the results of unittests.
+Finally, the output viewer can be used to directly view the output results of your testing.  This view can be very useful for viewing the results of unittests.
 
 .. image:: /images/unittest/unittest-output-viewer.png
    :alt: Spyder Unittest output viewer in Spyder
