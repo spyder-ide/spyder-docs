@@ -2,7 +2,7 @@
 Spyder Unittest
 ###############
 
-**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder, such as Pytest, Unittest and Nose, allowing you to run test suites and view the results in the IDE.
+**Spyder-unittest** is a plugin that integrates popular unit test frameworks with Spyder: such as Pytest, Unittest, and Nose. Which allow you to run test suites and view the results in the IDE.
 
 .. image:: /images/unittest/unittest-run.png
    :alt: Spyder Unittest in Spyder
