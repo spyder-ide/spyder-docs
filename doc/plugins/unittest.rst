@@ -46,6 +46,8 @@ Press on the  :guilabel:`Run Green Arrow` to run the testing.
 
 Pytest will run all files of the form :guilabel:`test_*.py` or :guilabel:`*_test.py` in the current directory and its subdirectories.
 
+For more on the Python Pytest package:
+
 | `Pytest Run Guide <https://docs.pytest.org/en/stable/getting-started.html#run-multiple-tests>`_
 
 | `Real Python Article on using Pytest <https://realpython.com/pytest-python-testing/>`_
