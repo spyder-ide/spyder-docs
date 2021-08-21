@@ -50,6 +50,8 @@ Pytest will run all files of the form :guilabel:`test_*.py` or :guilabel:`*_test
 
 | `Real Python Article on using Pytest <https://realpython.com/pytest-python-testing/>`_
 
+| `Software Testing Help's Pytest Tutorial <https://www.softwaretestinghelp.com/pytest-tutorial/>`_
+
 .. image:: /images/unittest/unittest-run-button.png
    :alt: Spyder showing Unittest run button
 
