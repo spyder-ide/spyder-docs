@@ -616,12 +616,13 @@ While we still support Anaconda, we recommend this install method on those platf
 </div>
 <div class="section" id="with-commands">
 <h4>With commands<a class="headerlink" href="#with-commands" title="Permalink to this headline">¶</a></h4>
-<p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">financial-analysis</span></code>:</p>
+<p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), to create a new environment called <code class="docutils literal notranslate"><span class="pre">financial-analysis</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis
 </pre></div>
 </div>
-<p>To install Spyder’s optional dependencies as well for full functionality, use the following command instead:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
+<p>To install Spyder’s optional dependencies as well for full functionality, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate financial-analysis
+$ conda install -c conda-forge numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
 $ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
 $ pip install Historic-Crypto
 </pre></div>
@@ -629,23 +630,6 @@ $ pip install Historic-Crypto
 <div class="alert alert-primary">
 <p class="admonition-title">Important</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#standalone-installers-ref"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.</p>
-</div>
-</div>
-<div class="section" id="from-an-environment-yml-file">
-<h4>From an environment.yml file<a class="headerlink" href="#from-an-environment-yml-file" title="Permalink to this headline">¶</a></h4>
-<p>You can also install the virtual environment easily using the environment file that we share with you. To do so, run the following command in the terminal (you must have the environment file (<code class="docutils literal notranslate"><span class="pre">financial-analysis.yml</span></code>) in the current directory):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis
-$ conda env create -f financial-analysis.yml
-$ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
-$ pip install Historic-Crypto
-</pre></div>
-</div>
-</div>
-<div class="section" id="activate-environment">
-<h4>Activate environment<a class="headerlink" href="#activate-environment" title="Permalink to this headline">¶</a></h4>
-<p>You can now enter the newly created virtual environment by using the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate financial-analysis
-</pre></div>
 </div>
 </div>
 </div>

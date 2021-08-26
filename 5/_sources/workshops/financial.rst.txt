@@ -136,48 +136,26 @@ You can set up your environment in two different ways.
 With commands
 -------------
 
-Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called ``financial-analysis``:
+Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), to create a new environment called ``financial-analysis``:
 
 .. code-block:: bash
    
    $ conda create -n financial-analysis
 
-To install Spyder's optional dependencies as well for full functionality, use the following command instead:
+To install Spyder's optional dependencies as well for full functionality, use the following command:
    
 .. code-block:: bash
-   
-   $ conda create -n financial-analysis numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
+
+   $ conda activate financial-analysis
+   $ conda install -c conda-forge numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
    $ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
    $ pip install Historic-Crypto
-   
+
 .. important::
    
    Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 
 
-From an environment.yml file
-----------------------------
-
-You can also install the virtual environment easily using the environment file that we share with you. To do so, run the following command in the terminal (you must have the environment file (``financial-analysis.yml``) in the current directory):
-
-.. code-block:: bash
-   
-   $ conda create -n financial-analysis
-   $ conda env create -f financial-analysis.yml
-   $ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
-   $ pip install Historic-Crypto
-
-
-Activate environment
---------------------
-
-You can now enter the newly created virtual environment by using the following command:
-
-.. code-block:: bash
-   
-   $ conda activate financial-analysis
-
-   
 Download the datasets
 ~~~~~~~~~~~~~~~~~~~~~
    
