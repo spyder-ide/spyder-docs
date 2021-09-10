@@ -705,14 +705,22 @@ See the <a class="reference internal" href="panes/ipythonconsole.html"><span cla
 <img alt="Preferences showing changing Python interpreter" src="_images/faq-python-interpreter.png" />
 <p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-packages-installer">
+</details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?<div class="summary-down docutils">
+Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
+ :container: + dropdown-id-using-packages-installer<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">If you want to use other modules in Spyder that don’t come with our installer, you need to install <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> (<strong>only if you don’t have Anaconda or Miniconda yet!</strong>). For Spyder to recognize it, the installation should be done in one of the following default paths:</p>
+<blockquote>
+<div><p class="card-text">Watch our video on using additional modules or follow the instructions below it.</p>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/i7Njb3xO4Fw?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div></div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p class="card-text">If you want to use other modules in Spyder that don’t come with our installer, you need to install <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> (<strong>only if you don’t have Anaconda or Miniconda yet!</strong>). For Spyder to recognize it, the installation should be done in one of the following default paths:</p>
 <table class="table">
 <colgroup>
 <col style="width: 52%" />
@@ -769,11 +777,10 @@ conda install spyder-kernels scikit-learn -y
 </pre></div>
 </div>
 <p class="card-text">Finally, you need to connect Spyder to this environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click <span class="guilabel">Change default environment in Preferences</span>.</p>
-<img alt="Change default environment in Preferences option in status bar" src="_images/faq-change-environment.png" />
 <p class="card-text">This will open the <span class="guilabel">Preferences</span> dialog in the <span class="guilabel">Python interpreter</span> section. Here, select the option <span class="guilabel">Use the following Python interpreter</span>, and use the dropdown below to select your preferred environment. If it is not listed, use the text box or the <span class="guilabel">Select file</span> button to enter the path to the Python interpreter you want to use.</p>
-<img alt="Preferences showing changing Python interpreter" src="_images/faq-python-interpreter-modules.png" />
 <p class="card-text"><strong>Your new environment will only be listed here if you installed Miniconda (or Anaconda) in the default path as shown in the table above.</strong></p>
 <p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
+</div></blockquote>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-reset-prefs">
 <summary class="summary-title card-header">
