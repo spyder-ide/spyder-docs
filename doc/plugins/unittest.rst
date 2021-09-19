@@ -11,7 +11,7 @@ Spyder Unittest
 
 | `Unittest <https://docs.python.org/3/library/unittest.html#module-unittest>`_
 
-| `Nose <https://nose.readthedocs.io/en/latest/>`_
+.. _Nose: https://nose.readthedocs.io/en/latest/
 
 ===================
 Installing Unittest
