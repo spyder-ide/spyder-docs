@@ -44,6 +44,10 @@ You will see it then as a tab in the bottom of the top right area in the same lo
 
 Press on the  :guilabel:`Run Green Arrow` to run the testing.
 
+.. image:: /images/unittest/unittest-hamburger-menu.png
+   :alt: Spyder showing Unittest run button
+
+
 Pytest will run all files of the form :guilabel:`test_*.py` or :guilabel:`*_test.py` in the current directory and its subdirectories.
 
 For more on the Python Pytest package:
