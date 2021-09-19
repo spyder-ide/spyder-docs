@@ -54,7 +54,6 @@ For more on the Python Pytest package:
 
 | `Software Testing Help's Pytest Tutorial <https://www.softwaretestinghelp.com/pytest-tutorial/>`_
 
-.. image:: /images/unittest/unittest-run-button.png
    :alt: Spyder showing Unittest run button
 
 You can get an expanded view of the testing messages by clicking on the expand option.
