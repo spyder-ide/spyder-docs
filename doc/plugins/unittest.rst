@@ -7,7 +7,7 @@ Spyder Unittest
 .. image:: /images/unittest/unittest-run.png
    :alt: Spyder Unittest in Spyder
 
-| `Pytest <https://docs.pytest.org/en/stable/getting-started.html#install-pytest>`_
+.. _Pytest: https://docs.pytest.org/en/stable/getting-started.html#install-pytest
 
 | `Unittest <https://docs.python.org/3/library/unittest.html#module-unittest>`_
 
