@@ -63,6 +63,11 @@ You can get an expanded view of the testing messages by clicking on the expand o
 .. image:: /images/unittest/unittest-expanded-message-view.png
    :alt: Spyder showing Unittest expanded message view
 
+
+==================
+Additional Options
+==================
+
 Press on the  :guilabel:`Hamburger Menu Icon` to view different unittest options.
 
 .. image:: /images/unittest/unittest-hamburger-menu.png
