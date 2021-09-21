@@ -16,7 +16,7 @@ Spyder Unittest
 ===================
 Installing Unittest
 ===================
-
+If you installed Spyder using conda, the best way to install Spyder-unittest is to run the following command in your terminal or Anaconda prompt on Windows:
 .. code-block:: bash
 
    conda install -c spyder-ide spyder-unittest
