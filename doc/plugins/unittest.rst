@@ -45,7 +45,7 @@ You will see it then as a tab in the bottom of the top right area in the same lo
 
 Press on the  :guilabel:`Run Green Arrow` to run the testing.
 
-.. image:: /images/unittest/unittest-hamburger-menu.png
+.. image:: /images/unittest/unittest-run-button.png
    :alt: Spyder showing Unittest run button
 
 
