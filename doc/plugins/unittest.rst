@@ -79,12 +79,12 @@ The configuration view will show you how to choose the pytest option and the dir
 .. image:: /images/unittest/unittest-configuration-view.png
    :alt: Spyder Unittest configuration view in Spyder
 
-The dependencies view will show you all of your installed testing frameworks.
-
-.. image:: /images/unittest/unittest-dependencies-view.png
-   :alt: Spyder Unittest dependencies view in Spyder
-
-Finally, the output viewer can be used to directly view the output results of your testing.  This view can be very useful for viewing the results of unittests.
+The output viewer can be used to directly view the output results of your testing.  This view can be very useful for viewing the results of unittests.
 
 .. image:: /images/unittest/unittest-output-viewer.png
    :alt: Spyder Unittest output viewer in Spyder
+
+Finally, the dependencies view will show you all of your installed testing frameworks.
+
+.. image:: /images/unittest/unittest-dependencies-view.png
+   :alt: Spyder Unittest dependencies view in Spyder
