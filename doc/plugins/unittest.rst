@@ -9,7 +9,7 @@ Spyder Unittest
 
 .. _Pytest: https://docs.pytest.org/en/stable/getting-started.html#install-pytest
 
-| `Unittest <https://docs.python.org/3/library/unittest.html#module-unittest>`_
+.. _Unittest: https://docs.python.org/3/library/unittest.html#module-unittest
 
 .. _Nose: https://nose.readthedocs.io/en/latest/
 
@@ -57,8 +57,6 @@ For more on the Python Pytest package:
 | `Real Python Article on using Pytest <https://realpython.com/pytest-python-testing/>`_
 
 | `Software Testing Help's Pytest Tutorial <https://www.softwaretestinghelp.com/pytest-tutorial/>`_
-
-   :alt: Spyder showing Unittest run button
 
 You can get an expanded view of the testing messages by clicking on the expand option.
 
