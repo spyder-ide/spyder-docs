@@ -1127,8 +1127,8 @@ $ pip install Historic-Crypto
 <img alt="Portfolio 2 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-2.png" />
 <p>High volatility does not correspond in most cases with high returns. In fact, there are scenarios in the simulation in which higher expected returns are related to lower expected volatility.</p>
 </div>
-<div class="section" id="optimal-weights">
-<h3>Optimal weights<a class="headerlink" href="#optimal-weights" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="optimal-pharmaceutical-stock-weights">
+<h3>Optimal pharmaceutical stock weights<a class="headerlink" href="#optimal-pharmaceutical-stock-weights" title="Permalink to this headline">¶</a></h3>
 <p>Let us now see what are the optimal weights for each stock using the <code class="docutils literal notranslate"><span class="pre">optimal_weights</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="n">opt_weights_2</span> <span class="o">=</span> <span class="n">optimal_weights</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">SYMBOLS_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
@@ -1246,8 +1246,8 @@ $ pip install Historic-Crypto
 <img alt="Portfolio 3 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-3.png" />
 <p>As can be seen, there are points (bottom right) that show a very high volatility and yet have a very low expected return. In this sense, portfolio 1 represents a safer investment because the higher risk is consistently offset by higher returns.</p>
 </div>
-<div class="section" id="id1">
-<h3>Optimal weights<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="optimal-cryptocurrency-weights">
+<h3>Optimal cryptocurrency weights<a class="headerlink" href="#optimal-cryptocurrency-weights" title="Permalink to this headline">¶</a></h3>
 <img alt="Portfolio 3 optimal weights by year" src="../_images/portfolio-3-optimal-weights.png" />
 <p>The optimal portfolio weights, if calculated annually, suggest that our portfolio should have been quite polarized in some years: the recommendation is to have bought only bitcoins before the start of 2016 and 2019, and only ethereum in 2018. Starting 2017 and 2020, on the other hand, our weights recommended a more balanced investment between bitcoin and ethereum. Litecoin is not recommended by our model.</p>
 </div>
@@ -1445,7 +1445,7 @@ $ pip install Historic-Crypto
             </li>
         
             <li class="nav-item toc-entry toc-h3">
-                <a href="#optimal-weights" class="nav-link">Optimal weights</a>
+                <a href="#optimal-pharmaceutical-stock-weights" class="nav-link">Optimal pharmaceutical stock weights</a>
             </li>
         
                 </ul>
@@ -1471,7 +1471,7 @@ $ pip install Historic-Crypto
             </li>
         
             <li class="nav-item toc-entry toc-h3">
-                <a href="#id1" class="nav-link">Optimal weights</a>
+                <a href="#optimal-cryptocurrency-weights" class="nav-link">Optimal cryptocurrency weights</a>
             </li>
         
             <li class="nav-item toc-entry toc-h3">
@@ -1633,7 +1633,7 @@ $ pip install Historic-Crypto
                 </li>
             
                 <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#optimal-weights" class="nav-link">Optimal weights</a>
+                    <a href="#optimal-pharmaceutical-stock-weights" class="nav-link">Optimal pharmaceutical stock weights</a>
                 </li>
             
                     </ul>
@@ -1659,7 +1659,7 @@ $ pip install Historic-Crypto
                 </li>
             
                 <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#id1" class="nav-link">Optimal weights</a>
+                    <a href="#optimal-cryptocurrency-weights" class="nav-link">Optimal cryptocurrency weights</a>
                 </li>
             
                 <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">

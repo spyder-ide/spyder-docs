@@ -51,7 +51,7 @@ np.set_printoptions(precision=5, suppress=True,
 
 
 
-# ---- PORTFOLIO 1 
+# ---- PORTFOLIO 1
 # %% Portfolio 1 (Google, Apple, Microsoft, Netflix, Amazon)
 
 # %%% Download finance data
@@ -114,7 +114,7 @@ print(portfolio_sharpe(rets_1, weights_1))
 
 # %% Sharpe ratio with Monte Carlo simulation
 def monte_carlo_sharpe(returns, symbols, weights):
-    
+
     sim_weights = np.random.random((1000, len(symbols)))
     sim_weights = (sim_weights.T / sim_weights.sum(axis=1)).T
 
@@ -122,9 +122,9 @@ def monte_carlo_sharpe(returns, symbols, weights):
                   portfolio_return(returns[symbols], weights))
                  for weights in sim_weights]
     volat_ret = np.array(volat_ret)
-    
+
     sharpe_ratio = volat_ret[:, 1] / volat_ret[:, 0]
-    
+
     return volat_ret, sharpe_ratio
 
 port_1_vr, port_1_sr = monte_carlo_sharpe(rets_1, SYMBOLS_1, weights_1)
@@ -145,7 +145,7 @@ plt.title(" | ".join(SYMBOLS_1))
 start_year, end_year = (2012, 2020)
 
 def optimal_weights(returns, symbols, actual_weights, start_y, end_y):
-    
+
     bounds = len(symbols) * [(0, 1), ]
     constraints = {"type": "eq", "fun": lambda weights: weights.sum() - 1}
     opt_weights = {}
@@ -166,7 +166,7 @@ port_1_ow.columns = SYMBOLS_1
 
 # %% Expected and realized returns
 def exp_real_rets(returns, opt_weights, symbols, start_year, end_year):
-    
+
     _rets = {}
     for year in range(start_year, end_year):
         prev_year = returns[symbols].loc[f"{year}-01-01":f"{year}-12-31"]
@@ -174,12 +174,12 @@ def exp_real_rets(returns, opt_weights, symbols, start_year, end_year):
         expected_pr = portfolio_return(prev_year, opt_weights[year])
         realized_pr = portfolio_return(current_year, opt_weights[year])
         _rets[year + 1] = [expected_pr, realized_pr]
-        
+
     return _rets
 
 
 port_1_exp_real = pd.DataFrame.from_dict(
-    exp_real_rets(rets_1, opt_weights_1, SYMBOLS_1, start_year, end_year), 
+    exp_real_rets(rets_1, opt_weights_1, SYMBOLS_1, start_year, end_year),
     orient='index')
 port_1_exp_real.columns = ["expected", "realized"]
 
@@ -279,7 +279,7 @@ port_2_ow.columns = SYMBOLS_2
 
 # %% Expected and realized returns
 port_2_exp_real = pd.DataFrame.from_dict(
-    exp_real_rets(rets_2, opt_weights_2, SYMBOLS_2, start_year, end_year), 
+    exp_real_rets(rets_2, opt_weights_2, SYMBOLS_2, start_year, end_year),
     orient='index')
 port_2_exp_real.columns = ["expected", "realized"]
 
@@ -391,7 +391,7 @@ port_3_ow.columns = SYMBOLS_3
 start_year, end_year = (2016, 2020)
 
 port_3_exp_real = pd.DataFrame.from_dict(
-    exp_real_rets(rets_3, opt_weights_3, SYMBOLS_3, start_year, end_year), 
+    exp_real_rets(rets_3, opt_weights_3, SYMBOLS_3, start_year, end_year),
     orient='index')
 port_3_exp_real.columns = ["expected", "realized"]
 

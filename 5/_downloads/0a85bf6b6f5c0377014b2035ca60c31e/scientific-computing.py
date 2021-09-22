@@ -100,7 +100,7 @@ print(f"The new lenght of data is {len(ca_test)} rows.")
 print(ca_test.cognitive_score.describe())
 
 
-# %% 
+# %%
 sns.histplot(ca_test.cognitive_score, kde=True, bins=6)
 
 

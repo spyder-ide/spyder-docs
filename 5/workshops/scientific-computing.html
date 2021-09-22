@@ -695,7 +695,7 @@ While we still support Anaconda, we recommend this install method on those platf
 <div class="section" id="downloading-the-dataset">
 <h3>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Permalink to this headline">¶</a></h3>
 <p>We are going to work with a public dataset called OKCupid, collected by Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and 2,626 variables.</p>
-<p>Download the datasets <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">here</a>.</p>
+<p>Download the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a> to a directory of your choice.</p>
 </div>
 <div class="section" id="setting-up-the-working-directory">
 <h3>Setting up the working directory<a class="headerlink" href="#setting-up-the-working-directory" title="Permalink to this headline">¶</a></h3>
@@ -718,7 +718,7 @@ $ <span class="nb">cd</span> scientific-computing
 </div>
 <div class="section" id="download-the-code">
 <h3>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this headline">¶</a></h3>
-<p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can download <a class="reference download internal" download="" href="../_downloads/0a85bf6b6f5c0377014b2035ca60c31e/scientific-computing.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
+<p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can <a class="reference download internal" download="" href="../_downloads/0a85bf6b6f5c0377014b2035ca60c31e/scientific-computing.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
 </div>
 </div>
 <div class="section" id="the-dataset">
@@ -828,7 +828,7 @@ $ <span class="nb">cd</span> scientific-computing
 <span class="c1"># Name: d_religion_seriosity, dtype: int64</span>
 </pre></div>
 </div>
-<p>In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix “q” followed by an integer. The text of the questions is stored in a file called “question_data.csv” (which you can download <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">here</a>).</p>
+<p>In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix “q” followed by an integer. The text of the questions is stored in a file called <code class="file docutils literal notranslate"><span class="pre">question_data.csv</span></code> (which you can download as part of the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a>).</p>
 <p>We can examine this file in the Variable Explorer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">question_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;question_data.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 </pre></div>
@@ -842,7 +842,7 @@ $ <span class="nb">cd</span> scientific-computing
 <p>A theory is nothing more than an explanation of something. For example, we could get involved in the eternal conflict between cats and dogs. I, as a dog person, might have a theory (unscientific, of course) that those who prefer to have the companionship of a dog are smarter people than those who prefer a wicked (but lovable) kitty. To test the support of a theory, one can make a prediction based on it and see how this prediction behaves in an experiment or a concrete situation. We call this prediction a hypothesis.</p>
 <p>A hypothesis is a statement that can be tested employing the scientific method. They must be verifiable using empirical evidence or data. For example, <em>green is the best color</em> is not a hypothesis since it cannot be proven or disproven.</p>
 <p>Concerning the above theory of a person’s pet preferences, to explore it we should find two variables to relate. The first variable would be related to a <strong>self-identification as a cat person or dog person</strong>. The second variable would be related to a person’s <strong>ability to solve problems and situations</strong>.</p>
-<p>The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question <strong>q997</strong> (<em>Are you a cat person or a dog person?</em> ) provides information about a person’s pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">test_items.csv</a>.</p>
+<p>The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question <strong>q997</strong> (<em>Are you a cat person or a dog person?</em> ) provides information about a person’s pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file <code class="file docutils literal notranslate"><span class="pre">test_items.csv</span></code> in the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">test_items</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;test_items.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

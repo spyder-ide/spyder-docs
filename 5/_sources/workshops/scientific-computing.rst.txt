@@ -21,7 +21,7 @@ It is also desirable to have the following prior knowledge:
 
    * Basic level of Python. You can visit `The Python Tutorial`_ to learn the basics of this programming language.
    * Some knowledge of Statistics (`hypothesis testing`_ , `ANOVA`_, `p-value`_)
-     
+
    .. _The Python Tutorial: https://docs.python.org/3/tutorial/
    .. _hypothesis testing: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
    .. _ANOVA: https://en.wikipedia.org/wiki/Analysis_of_variance
@@ -158,31 +158,31 @@ You can set up your environment in two different ways.
 
 1. With commands
 ----------------
-   
+
 Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called ``scientific-computing``:
 
 .. code-block:: bash
-   
+
    $ conda create -n scientific-computing
-   
+
 To install Spyder's optional dependencies as well for full functionality, use the following command instead:
-   
+
 .. code-block:: bash
-   
+
    $ conda create -n scientific-computing spyder=5 numpy scipy pandas matplotlib sympy cython seaborn spyder-kernels pyarrow
-   
+
 .. warning::
-   
+
    Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment. If you use the standalone installer, there is no need to install ``spyder=5`` with conda.
 
 
 2. From an environment.yml file
 -------------------------------
-   
+
 You can also install the virtual environment easily using the environment file (``scientific-computing.yml``) that we share with you. Just run the following command in the terminal (you must have the environment file in the current directory):
 
 .. code-block:: bash
-   
+
    $ conda env create -f scientific-computing.yml
 
 
@@ -192,36 +192,38 @@ Activate environment
 You can now enter the newly created virtual environment in this way:
 
 .. code-block:: bash
-   
+
    $ conda activate scientific-computing
 
-   
+
 Downloading the dataset
 ~~~~~~~~~~~~~~~~~~~~~~~
-   
+
 We are going to work with a public dataset called OKCupid, collected by Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and 2,626 variables.
 
-Download the datasets `here <https://figshare.com/articles/dataset/OKCupid_Datasets/14987388>`_.
+Download the `OKCupid dataset`_ to a directory of your choice.
+
+.. _OKCupid dataset: https://figshare.com/articles/dataset/OKCupid_Datasets/14987388
 
 
 Setting up the working directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   
+
 The virtual environment and the data file are now ready. The only thing that remains is to create a directory to work in. In your operating system, create a new directory with the name of your choice. Then copy and unzip the dataset file there.
 
 Here is an example (on Linux or macOS):
-   
+
 .. code-block:: bash
-   
+
    $ mkdir scientific-computing
    $ cd scientific-computing
-   
+
 Keep in mind that in this new directory you must have the data file unzipped.
-   
+
 Launch Spyder:
-   
+
 .. code-block:: bash
-      
+
    $ spyder
 
 Let's make sure Spyder is ready. First, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the dataset. Something like this:
@@ -240,7 +242,7 @@ Now, you have everything ready to proceed with the workshop.
 Download the code
 ~~~~~~~~~~~~~~~~~
 
-Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can download :download:`here <scientific-computing.py>`. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.
+Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can :download:`download <scientific-computing.py>`. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.
 
 
 
@@ -324,7 +326,7 @@ The return of a function, method or the attribute of an object can be stored as 
 
 .. image:: images/workshop-2/min-age-max-age-variables.png
    :alt: More variables in Variable Explorer
-   
+
 The values are floats. The lowest age is 18.0 years and the highest is 100.0 years.
 
 .. note::
@@ -336,7 +338,7 @@ We already know the minimum and maximum age, and that the mean is around 32 year
 We can plot a histogram directly from the dataframe. To do this we select the variable (as we did with the ``.describe()``) and invoke the ``.plot.hist()`` method. In this method we will pass as arguments the number of bins and the transparency of the plot (``alpha``).
 
 .. code-block:: python
-   
+
    data.d_age.plot.hist(bins=25, alpha=0.5)
 
 .. image:: images/workshop-2/age-histogram-1.png
@@ -346,7 +348,7 @@ We can plot a histogram directly from the dataframe. To do this we select the va
 Another way to generate a simple histogram in Spyder is to use a context menu on an array in the Variable Explorer. But first we must store these values in a list and call that variable ``age``.
 
 .. code-block:: python
-   
+
    age = data.d_age.tolist()
 
 .. image:: images/workshop-2/histogram-from-variable-explorer.png
@@ -375,7 +377,7 @@ We call ``sns.histplot()`` with three arguments. The first one (``data.d_age``) 
 The second line (``plt.show()``) is intended to show all the figures not displayed so far. If you have any doubts about how to utilize an object, method or function, you can use the ``help()`` tool in the console. For example:
 
 .. code-block:: python
-   
+
    help(plt.show)
 
 Or you can also take advantage of the Help pane included in Spyder to get on-screen help:
@@ -398,7 +400,7 @@ With Seaborn, we can add a line representing the mean of the histogram. To do th
 .. image:: images/workshop-2/age-histogram-3.png
    :alt: Age histogram with mean line
 
-   
+
 Religion seriosity
 ~~~~~~~~~~~~~~~~~~
 
@@ -427,7 +429,7 @@ You can then see a list of all relevant methods and attributes of the class. Rig
    # and very serious about it         3290
    # Name: d_religion_seriosity, dtype: int64
 
-In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix "q" followed by an integer. The text of the questions is stored in a file called "question_data.csv" (which you can download `here <https://figshare.com/articles/dataset/OKCupid_Datasets/14987388>`_).
+In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix "q" followed by an integer. The text of the questions is stored in a file called :file:`question_data.csv` (which you can download as part of the `OKCupid dataset`_).
 
 We can examine this file in the Variable Explorer:
 
@@ -451,10 +453,10 @@ A hypothesis is a statement that can be tested employing the scientific method. 
 
 Concerning the above theory of a person's pet preferences, to explore it we should find two variables to relate. The first variable would be related to a **self-identification as a cat person or dog person**. The second variable would be related to a person's **ability to solve problems and situations**.
 
-The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question **q997** (*Are you a cat person or a dog person?* ) provides information about a person's pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file `test_items.csv <https://figshare.com/articles/dataset/OKCupid_Datasets/14987388>`_.
+The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question **q997** (*Are you a cat person or a dog person?* ) provides information about a person's pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file :file:`test_items.csv` in the `OKCupid dataset`_.
 
 .. code-block:: python
-   
+
    test_items = pd.read_csv("test_items.csv")
 
 So, let's try to see if there is any evidence in the OKCupid dataset to support the following hypothesis:
@@ -502,7 +504,7 @@ Next, we will indicate, in the ``ca_test`` dataframe, whether the person answere
            ca_test["resp_" + QUESTION] = ca_test.apply(lambda row: row[QUESTION] == ANSWER, axis=1)
        except KeyError:
            print(f"{QUESTION} not found.")
-   
+
 .. important::
 
    Some ``test_items`` questions are not in the data but don't worry about that. We use a ``try... except`` block to ignore these errors. Answering these questions was optional, so many OkCupid site users did not answer all of them. So we have removed from the records the users who did not answer the 14 questions we have chosen for the cognitive ability test. This reduced the sample size considerably. There are other ways to avoid this reduction, but they are outside the scope of this workshop.
@@ -590,7 +592,7 @@ Box plots or box-whisker diagrams display, near the center of the box, the **mea
 The graph shows four boxes measuring cognitive ability for the following groups:
 
 1. Those who prefer dogs
-2. Those who define themselves as cat people and dog people indistinctly. 
+2. Those who define themselves as cat people and dog people indistinctly.
 3. Those who prefer cats
 4. Those who like neither cats nor dogs.
 
@@ -623,7 +625,7 @@ If the box plots indicated that the means did not show significant differences (
 ANOVA test
 ==========
 
-To make sure that the differences between the means are statistically significant, we will perform an ANOVA (analysis of variance) because we are going to compare the means of more than two groups. 
+To make sure that the differences between the means are statistically significant, we will perform an ANOVA (analysis of variance) because we are going to compare the means of more than two groups.
 
 How does ANOVA work? This analysis tells us whether three or more means are equal. If so, this would support the null hypothesis.
 
@@ -741,7 +743,7 @@ You can see four categories that can help you improve your code:
 Each of these categories indicates the type of alert and the line on which the potential issue occurs. For example, it tells us that line 129 is too long, or that we imported numpy but did not use it at all in the code.
 
 These suggestions can contribute to sharing clean code. We recommend using this panel to polish your code before publishing it.
-   
+
 
 
 ===========
