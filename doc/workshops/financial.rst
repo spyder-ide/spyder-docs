@@ -139,11 +139,11 @@ With commands
 Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), to create a new environment called ``financial-analysis``:
 
 .. code-block:: bash
-   
+
    $ conda create -n financial-analysis
 
 To install Spyder's optional dependencies as well for full functionality, use the following command:
-   
+
 .. code-block:: bash
 
    $ conda activate financial-analysis
@@ -152,13 +152,13 @@ To install Spyder's optional dependencies as well for full functionality, use th
    $ pip install Historic-Crypto
 
 .. important::
-   
+
    Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 
 
 Download the datasets
 ~~~~~~~~~~~~~~~~~~~~~
-   
+
 Although during the workshop we will explain how to use some APIs to download up-to-date data, you can also download the datasets in csv format from `this link <https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215>`_.
 
 To follow this workshop you do not need to create a new directory. However, if you have downloaded the data and want to use it instead of the APIs, you must set the directory that has the downloaded data as the working directory. In order to do this, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the downloaded data. Something like this:
@@ -176,7 +176,7 @@ Let's check that the virtual environment we created is enabled in Spyder. Go to 
    :alt: Screenshot on how to set up environment in Spyder's Preferences
 
 Now, you have everything ready to proceed with the workshop.
-   
+
 
 Download the code
 ~~~~~~~~~~~~~~~~~
@@ -184,11 +184,11 @@ Download the code
 Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can download :download:`here <financial-analysis.py>`. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.
 
 
-   
+
 =====================
 Obtain financial data
 =====================
-   
+
 When it comes to finance, being up to date is very important. So we are going to use a Python library that allows us to get updated historical Stock Market records from `Yahoo! Finance`_ API. In this way, we will be able to download data in the period of time we are interested in analyzing.
 
 .. _`Yahoo! Finance`: https://finance.yahoo.com
@@ -207,14 +207,14 @@ You can also write your code in the Editor (the pane that occupies the entire le
 To get started, import the libraries.
 
 .. code-block:: python
-      
+
    import numpy as np
    import pandas as pd
    import matplotlib as mpl
    from scipy.optimize import minimize
    import matplotlib.pyplot as plt
    import pprint
-   
+
    from Historic_Crypto import Cryptocurrencies
    from Historic_Crypto import HistoricalData
    import yfinance as yf
@@ -246,12 +246,12 @@ For example, we can obtain general information with the ``info`` property of the
 
    netflix_info = netflix.info
 
-We can observe the result in the Variable Explorer, in the ``netflix_info`` variable. 
+We can observe the result in the Variable Explorer, in the ``netflix_info`` variable.
 
 .. image:: images/workshop-1/net_flix-variable-in-variable-explorer.png
    :alt: First variable in Variable Explorer
 
-If we double-click on it, a new window with detailed information will be displayed. 
+If we double-click on it, a new window with detailed information will be displayed.
 
 .. image:: images/workshop-1/dict-in-variable-explorer.png
    :alt: Python dict example in Variable Explorer
@@ -319,7 +319,7 @@ Suppose we want to measure the performance of a portfolio consisting of Google, 
 
    If you search for ``SYMBOLS_1`` in Variable Explorer you will not find it: Python interprets this element not as a variable, but as a **constant**. This is because the name is written with uppercase letters (no letter is lowercase). By default, the Variable Explorer doesn't show this, but actually you can change the settings in the :guilabel:`Preferences` to be able to see these constants.
 
-We are going to download the historical data for this portfolio. To do this, we are going to use the ``yfinance`` ``download()`` function, which takes as its first argument a string with the symbols (``SYMBOLS_1``) defined above. The rest of the arguments are the start date (``start="2012-01-01"``), the end date (``end="2021-01-01"``) and how the data will be grouped (``group_by="Ticker"``). 
+We are going to download the historical data for this portfolio. To do this, we are going to use the ``yfinance`` ``download()`` function, which takes as its first argument a string with the symbols (``SYMBOLS_1``) defined above. The rest of the arguments are the start date (``start="2012-01-01"``), the end date (``end="2021-01-01"``) and how the data will be grouped (``group_by="Ticker"``).
 
 .. code-block:: python
 
@@ -512,7 +512,7 @@ And let's apply this to our portfolio.
    # 1.2061518063427656
 
 .. important::
-   
+
    The Sharpe ratio measure is best understood in context: when comparing two or more portfolios, the one with the higher Sharpe ratio provides more profit for the same amount of risk.
 
 We can also use a `Monte Carlo <https://en.wikipedia.org/wiki/Monte_Carlo_method>`_ simulation to randomize the weights of each stock in the portfolio so that we can see the range over which the Sharpe ratio can vary. In this way we can plot some scenarios that together will give us a good insight of the relationship between expected returns and expected volatility.
@@ -614,17 +614,17 @@ We will now write a function to calculate these optimal weights.
 .. code-block:: python
 
    def optimal_weights(returns, symbols, actual_weights, start_y, end_y):
-      
+
        bounds = len(symbols) * [(0, 1), ]
        constraints = {"type": "eq", "fun": lambda weights: weights.sum() - 1}
        opt_weights = {}
- 
+
        for year in range(start_y, end_y):
            _rets = returns[symbols].loc[f"{year}-01-01":f"{year}-12-31"]
            _opt_w = minimize(lambda weights: -portfolio_sharpe(_rets, weights), actual_weights, bounds=bounds, constraints=constraints)["x"]
            opt_weights[year] = _opt_w
        return opt_weights
-       
+
 
 Let's describe this function in broad strokes. ``bounds`` indicates the maximum and minimum weights for each stock in the portfolio. The lowest weight will be 0 and the highest weight will be 1 for each stock in the portfolio. ``constraints`` is a function that ensures that the sum of the weights of all actions always adds up to 1. Then a loop is initialized that will segment the data for each year. In the variable ``_rets`` the returns for the specified year are obtained. In ``_opt_w`` the ``portfolio_shape()`` function is used to calculate the weights that maximize the Sharpe ratio. This is done with the ``minimize()`` function of SciPy (which takes as arguments the ``portfolio_shape`` function, the actual weights of our stocks in the portfolio, and the ``bounds`` and the ``constraints`` variables). Notice the ``-`` sign before ``portfolio_sharpe``? It's because ``minimize()`` aims to find the minimum value of a function relative to a parameter, but we are interested in the maximum, so we make the result of ``portfolio_sharpe`` a negative one.
 
@@ -654,7 +654,7 @@ Finally, we will use the optimal weights to calculate the expected returns and c
 .. code-block:: python
 
    def exp_real_rets(returns, opt_weights, symbols, start_year, end_year):
-      
+
        _rets = {}
        for year in range(start_year, end_year):
            prev_year = returns[symbols].loc[f"{year}-01-01":f"{year}-12-31"]
@@ -662,7 +662,7 @@ Finally, we will use the optimal weights to calculate the expected returns and c
            expected_pr = portfolio_return(prev_year, opt_weights[year])
            realized_pr = portfolio_return(current_year, opt_weights[year])
            _rets[year + 1] = [expected_pr, realized_pr]
-         
+
        return _rets
 
 In this function we compare year to year realized returns with theoretically expected returns. This is done by estimating:
@@ -830,8 +830,8 @@ The different behavior is clearly observed if we apply a Monte Carlo simulation 
 High volatility does not correspond in most cases with high returns. In fact, there are scenarios in the simulation in which higher expected returns are related to lower expected volatility.
 
 
-Optimal weights
-~~~~~~~~~~~~~~~
+Optimal pharmaceutical stock weights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let us now see what are the optimal weights for each stock using the ``optimal_weights`` function.
 
@@ -839,7 +839,7 @@ Let us now see what are the optimal weights for each stock using the ``optimal_w
 
    start_year, end_year = (2012, 2020)
    opt_weights_2 = optimal_weights(rets_2, SYMBOLS_2, weights_2, start_year, end_year)
-   
+
    port_2_ow = pd.DataFrame.from_dict(opt_weights_2, orient='index')
    port_2_ow.columns = SYMBOLS_2
 
@@ -991,8 +991,8 @@ The Monte Carlo simulation also shows the non-linear correlation between risk an
 As can be seen, there are points (bottom right) that show a very high volatility and yet have a very low expected return. In this sense, portfolio 1 represents a safer investment because the higher risk is consistently offset by higher returns.
 
 
-Optimal weights
-~~~~~~~~~~~~~~~
+Optimal cryptocurrency weights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/workshop-1/portfolio-3-optimal-weights.png
    :alt: Portfolio 3 optimal weights by year
