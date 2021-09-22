@@ -176,7 +176,7 @@ Using Spyder
       :align: left
       :start: 306
 
-   | If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**).
+   If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**).
    For Spyder to recognize it, the installation should be done in one of the following default paths:
 
    .. table::
