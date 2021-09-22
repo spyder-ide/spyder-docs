@@ -271,6 +271,12 @@ div.video-container-container {
   max-width: 640px;
 }
 
+/* Add vertical whitespace after videos when followed by text */
+
+div.video-container-container + p {
+  margin-top: 1em;
+}
+
 /* Style for adding icons to the installers table */
 
 table.installer-table td {
