@@ -220,6 +220,9 @@ html_favicon = "_static/favicon.ico"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+# Extra paths that contain files that should be included
+html_extra_path = ["_assets"]
+
 # Custom CSS for the site
 html_css_files = [
     "css/driver.min.css",
