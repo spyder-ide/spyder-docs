@@ -38,6 +38,14 @@ You can separate cells by lines starting with either:
 * ``# <codecell>`` (IPython notebook cell separator)
 
 Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
+You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
+This displays multiple levels in the the :guilabel:`Outline Explorer`.
+
+.. image:: /images/editor/editor-subsections.png
+   :alt: Spyder outline panel, showing an example of sub sections
+
+Note that this only affects how the outline is displayed; it has no impact on the functioning of the code cells.
+
 
 
 
