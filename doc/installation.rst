@@ -154,8 +154,8 @@ Alternative methods
 Windows
 ~~~~~~~
 
-Spyder is also included in the `WinPython`_ scientific Python distribution, although it doesn't include Anaconda's convenient ``conda`` package and environment manager like Anaconda.
-You can use it immediately after installing, just like with Anaconda.
+Spyder is included in the `WinPython`_ scientific Python distribution (although Anaconda's ``conda`` package and environment manager is not).
+You can use Spyder immediately after installing, just like with Anaconda.
 
 .. _WinPython: https://winpython.github.io/
 
@@ -175,37 +175,43 @@ There are `several versions`_ available from which you can choose.
 Linux
 ~~~~~
 
-.. caution::
+.. warning::
 
    Distribution packages are created by third parties, are often outdated relative to the current Spyder release, and may contain bugs and be missing features relative to the current supported version.
-   As such, given we are not able to provide official support for them, we strongly recommend using :ref:`anaconda_install_ref` on Linux whenever practical.
+   As such, given we are not able to provide official support for them, we strongly recommend using :ref:`anaconda_install_ref` on Linux whenever practical (or :ref:`pip<pip_install_spyder_ref>`, for advanced users).
+
+Spyder can be installed via third-party distro packages on most common Linux distributions.
+
+Running Spyder installed this way will generally be the same as any other distro-installed application.
+Alternatively, it can be launched from the terminal with ``spyder`` (or ``spyder3``, on older versions of some distros).
 
 
 Ubuntu
 ------
 
-Using the official package manager:
+Using the package manager:
 
 .. code-block:: bash
 
-   sudo apt install spyder3
+   sudo apt install spyder
+
+Spyder's Ubuntu package is available on the `Ubuntu package repository`_.
+
+.. _Ubuntu package repository: https://packages.ubuntu.com/search?keywords=spyder
 
 
-.. _Ubuntu package: https://packages.ubuntu.com/search?keywords=spyder3
-
-
-Debian Unstable
----------------
+Debian
+------
 
 Using the package manager:
 
 .. code-block:: bash
 
-   sudo apt install spyder3
+   sudo apt install spyder
 
-Spyder's official Debian package is available on the `Debian package repository`_.
+Spyder's Debian package is available on the `Debian package repository`_.
 
-.. _Debian package repository: https://packages.debian.org/unstable/spyder3
+.. _Debian package repository: https://packages.debian.org/stable/spyder
 
 
 Other distributions
@@ -221,18 +227,13 @@ Spyder is also available in other GNU/Linux distributions, like
 .. _Arch Linux: https://aur.archlinux.org/packages/spyder-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
-.. _openSUSE: https://software.opensuse.org/package/spyder3
+.. _openSUSE: https://software.opensuse.org/package/spyder
 
 Please refer to your distribution's documentation for how to install Spyder.
 
 
-Running on Linux
-~~~~~~~~~~~~~~~~
 
-How to launch Spyder after installation varies depending on your OS and install method, but with those featured here, it will generally be the same as for any other installed application.
-Alternately, you should be able to launch it from the terminal/command line with ``spyder`` or ``spyder3``.
-
-
+.. _pip_install_spyder_ref:
 
 =========
 Using pip
@@ -240,13 +241,17 @@ Using pip
 
 .. warning::
 
-   While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with ``pip`` can lead to a number of tricky issues.
+   While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with ``pip`` can lead to a number of tricky issues, particularly on Windows and macOS.
    While you are welcome to try this on your own, we unfortunately do not have the resources to help you if you do run into problems, except to recommend our :ref:`standalone installers<standalone_installers_ref>` (Windows and macOS) or :ref:`anaconda_install_ref`.
 
 You can install Spyder with the ``pip`` package manager, which comes by default with most Python installations.
 Before installing Spyder itself by this method, you need to acquire the `Python`_ programming language.
 
 .. _Python: https://www.python.org/
+
+.. note::
+
+   Due to a known issue with some DEB-based Linux distributions (Debian, Ubuntu, Mint), you might also need to install the ``pyqt5-dev-tools`` package first, with ``sudo apt install pyqt5-dev-tools``.
 
 You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.
 
