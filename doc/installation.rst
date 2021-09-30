@@ -43,6 +43,19 @@ Standalone installers
 Our standalone installers for Windows and macOS are available from Spyder 4.2 onwards.
 We recommend using this installation method on those platforms, but we offer several other options for Linux, advanced users and specific needs, so keep reading if that's the case for you.
 
+
+Downloading and installing
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To download the supported Spyder installer for your platform, simply click the appropriate link below.
+(For Linux, see the :ref:`anaconda_install_ref` section).
+Then, double-click the downloaded file to open the installer.
+If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:`OK`, :guilabel:`Open`, :guilabel:`Allow` or similar.
+
+On Windows, if a SmartScreen dialog appears, click :guilabel:`More info` followed by :guilabel:`Run anyway`, and then proceed through the steps in the installer.
+
+On macOS, open the disk image and drag Spyder to your :guilabel:`Applications` folder.
+
 .. rst-class:: installer-table
 
 .. table::
@@ -53,6 +66,26 @@ We recommend using this installation method on those platforms, but we offer sev
 
 .. _Windows Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe
 .. _macOS Installer: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder.dmg
+
+.. note::
+
+   "Lite" versions of both installers are also available from the `releases page`_, which are somewhat smaller than the full installers.
+   These lack a number of optional but recommended dependencies, such as NumPy, SciPy and Pandas, meaning that a few :doc:`/panes/variableexplorer` features, including graphical data import wizards and support for rich display and editing of NumPy arrays and Pandas DataFrames, will not be available.
+   Given this only saves a modest amount of space while missing out on significant features, we recommend using the full installers unless minimizing download/install size and memory usage is a priority.
+
+.. _releases page: https://github.com/spyder-ide/spyder/releases/latest
+
+
+Running from a standalone install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To run Spyder when installed standalone, you can simply use your operating system's typical method of launching applications, such as opening it from the Start menu on Windows (or the Taskbar, if you've pinned it there), or from Launchpad, Spotlight or the Applications folder on macOS (or the Dock, if you've added it there).
+
+On macOS, the first time you open Spyder, you may see a message that it cannot be opened because the developer cannot be verified.
+If so, right-click on the application, select :guilabel:`Open`, then click :guilabel:`Open` in the resulting dialog, and the warning will no longer be shown.
+You can also click :guilabel:`Open Anyway` under :menuselection:`Security & Privacy --> General` in System Preferences.
+
+For more information on installing your own packages and using standalone Spyder with your existing Python environments, see our :ref:`FAQ<using_spyder_faqs_ref>`.
 
 
 
