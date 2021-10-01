@@ -146,6 +146,13 @@ div.fa-user-friends::before {
   stroke-width: 5;
 }
 
+@media (max-width: 767px) {
+
+  .tour-overlay .highlight-rect {
+    stroke-width: 10;
+  }
+}
+
 div#driver-highlighted-element-stage {
   opacity: 0;
 }
