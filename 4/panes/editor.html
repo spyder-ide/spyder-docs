@@ -516,7 +516,11 @@ You can divide your scripts into as many cells as needed, or none at all—the c
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (standard cell separator, when file has been edited with Eclipse)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;codecell&gt;</span></code> (IPython notebook cell separator)</p></li>
 </ul>
-<p>Providing a description to the right of the separator will give that cell its own name in the <span class="guilabel">Outline Explorer</span>.</p>
+<p>Providing a description to the right of the separator will give that cell its own name in the <span class="guilabel">Outline Explorer</span>.
+You can also create “subsections” by adding more <code class="docutils literal notranslate"><span class="pre">%</span></code> signs to the cell separator, e.g. <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%</span></code> to create a level 2 subsection, <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%%</span></code> for level 3, etc.
+This displays multiple levels in the the <span class="guilabel">Outline Explorer</span>.</p>
+<img alt="Spyder outline panel, showing an example of sub sections" src="../_images/editor-subsections.png" />
+<p>Note that this only affects how the outline is displayed; it has no impact on the functioning of the code cells.</p>
 </div>
 <div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
