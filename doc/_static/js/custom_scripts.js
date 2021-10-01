@@ -25,7 +25,7 @@
       popover: {
         title: 'Spyder',
         description: 'Spyder is a powerful scientific IDE for Python. Here, we will guide you through some of its most important features.',
-        position: 'right'
+        position: 'bottom'
       }
     },
     {
