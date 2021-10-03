@@ -294,7 +294,7 @@ smv_branch_whitelist = r'^\d+\.\w|(master)$'
 smv_remote_whitelist = r'^(origin|upstream)$'
 
 # Pattern for released versions
-smv_released_pattern = r'^heads/\d+\.\w+$'
+smv_released_pattern = r'.*((3|4)\.[xX]|master)$'
 
 # Format for versioned output directories inside the build directory
 smv_outputdir_format = '{config.release}'
