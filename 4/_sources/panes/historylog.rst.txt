@@ -2,7 +2,7 @@
 History
 #######
 
-With the **History** pane, you can view all the commands you've entered into any :doc:`ipythonconsole`, along with their timestamp.
+With the **History** pane, you can view the recent code and commands you've entered into any :doc:`ipythonconsole`, along with their timestamp.
 
 .. image:: /images/history/history-standard.png
    :alt: Spyder History Log, displaying a list of previously executed commands
@@ -17,6 +17,7 @@ Navigating the :guilabel:`History` pane is very straightforward.
 Each Spyder session is marked by a date and timestamp, making it easy to remember when you executed a certain command.
 Statements can be selected and copied from the context menu or with the normal system shortcuts.
 Just like in the Editor, selecting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.
+The last ≈1000 lines entered are stored in the pane.
 
 
 
@@ -40,6 +41,8 @@ You might need to show invisible files in order to see it on a non-Windows opera
 
 .. image:: /images/history/history-log-file.png
    :alt: Spyder History Log file
+
+While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and restarting Spyder again.
 
 
 

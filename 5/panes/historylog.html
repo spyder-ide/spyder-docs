@@ -558,14 +558,15 @@
                 
   <div class="section" id="history">
 <h1>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h1>
-<p>With the <strong>History</strong> pane, you can view all the commands you’ve entered into any <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>, along with their timestamp.</p>
+<p>With the <strong>History</strong> pane, you can view the recent code and commands you’ve entered into any <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>, along with their timestamp.</p>
 <img alt="Spyder History Log, displaying a list of previously executed commands" src="../_images/history-standard.png" />
 <div class="section" id="using-the-history-pane">
 <h2>Using the History pane<a class="headerlink" href="#using-the-history-pane" title="Permalink to this headline">¶</a></h2>
 <p>Navigating the <span class="guilabel">History</span> pane is very straightforward.
 Each Spyder session is marked by a date and timestamp, making it easy to remember when you executed a certain command.
 Statements can be selected and copied from the context menu or with the normal system shortcuts.
-Just like in the Editor, selecting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.</p>
+Just like in the Editor, selecting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.
+The last ≈1000 lines entered are stored in the pane.</p>
 </div>
 <div class="section" id="options-menu">
 <h2>Options Menu<a class="headerlink" href="#options-menu" title="Permalink to this headline">¶</a></h2>
@@ -577,6 +578,7 @@ Just like in the Editor, selecting a word or phrase displays all other occurrenc
 <p>The list of commands shown in the <span class="guilabel">History</span> pane are stored in <code class="file docutils literal notranslate"><span class="pre">history.py</span></code> in the <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> directory in your user home folder (by default, <code class="file docutils literal notranslate"><span class="pre">C:/Users/</span><em><span class="pre">username</span></em></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/</span><em><span class="pre">username</span></em></code> for macOS, and typically <code class="file docutils literal notranslate"><span class="pre">/home/</span><em><span class="pre">username</span></em></code> on GNU/Linux).
 You might need to show invisible files in order to see it on a non-Windows operating system.</p>
 <img alt="Spyder History Log file" src="../_images/history-log-file.png" />
+<p>While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and restarting Spyder again.</p>
 </div>
 <div class="section" id="related-components">
 <h2>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h2>
