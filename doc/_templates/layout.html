@@ -1,0 +1,10 @@
+{% extends "!layout.html" %}
+{% block alertmessage %}
+    {% if current_version and latest_version and current_version != latest_version %}
+    <div class="alert-danger text-center" role="alert">
+      You're reading the documentation for {% if current_version.is_released %}an out-of-date{% else %}a development{% endif %} version of Spyder.
+      For the currently-supported stable version, see the <a href="{{ vpathto(latest_version.name) }}">Spyder {{latest_version.release}} docs</a>.
+    </div>
+    {% endif %}
+{{ super() }}
+{% endblock %}
