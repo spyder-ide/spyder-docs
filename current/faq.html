@@ -574,6 +574,33 @@ Q: How do I install Spyder?<div class="summary-down docutils">
 Download it from its <a class="reference external" href="https://www.anaconda.com/products/individual">webpage</a>.</p>
 <p class="card-text">For more information, visit our <a class="reference internal" href="installation.html"><span class="doc">Installation Guide</span></a>.</p>
 </div>
+</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-install-wsl2">
+<summary class="summary-title card-header">
+Q: How do I install Spyder on Windows Subsystem for Linux 2 (WSL2)?<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment if your code must run there.</p>
+<p class="card-text">Instead, just install <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> inside WSL2 and create a new conda environment (or use an existing conda- or virtualenv), then install Spyder-Kernels into that environment with e.g. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>.
+You must manually install <code class="docutils literal notranslate"><span class="pre">ipython_genutils</span></code> with e.g. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">ipython_genutils</span></code>.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p class="card-text">Windows creates a network path located at <code class="docutils literal notranslate"><span class="pre">\\wsl$</span></code> that points to the partitions of your WSL2 machines, e.g. <code class="docutils literal notranslate"><span class="pre">\\wsl$\Ubuntu-20.04</span></code>.
+You <strong>must</strong> map a network drive letter to your machine path, e.g. <code class="docutils literal notranslate"><span class="pre">W:</span></code>, for Spyder to correctly see its files and folders.</p>
+</div>
+<p class="card-text">To start a Spyder kernel, from your Linux terminal run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m spyder_kernels.console --matplotlib<span class="o">=</span><span class="s2">&quot;inline&quot;</span> --ip<span class="o">=</span><span class="m">127</span>.0.0.1 -f<span class="o">=</span>~/remotemachine.json <span class="p">&amp;</span>
+</pre></div>
+</div>
+<p class="card-text">It will run the kernel as a subprocess and create a file named <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> in your WSL home folder.</p>
+<p class="card-text">Finally, under the options menu of Spyder’s <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>, select <span class="guilabel">Connect to an existing kernel</span> as described in <a class="reference internal" href="panes/ipythonconsole.html#connecting-external-kernel"><span class="std std-ref">Using external kernels</span></a>.
+Insert the absolute path of <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> into the <span class="guilabel">Connection file</span> field.
+If you mapped <code class="docutils literal notranslate"><span class="pre">W:</span></code> as mentioned in above note, the path should be <code class="file docutils literal notranslate"><span class="pre">W:/home/</span><em><span class="pre">username</span></em><span class="pre">/remotemachine.json</span></code>.
+A new console will open in Spyder, running in the Linux environment.
+Try running <code class="docutils literal notranslate"><span class="pre">os.system('ls</span> <span class="pre">-la')</span></code> and see if it lists your WSL home folder.
+If you run <code class="docutils literal notranslate"><span class="pre">exit()</span></code> from Spyder, the kernel running on Linux will be stopped.</p>
+</div>
 </details><details class="sphinx-bs dropdown card mb-3 dropdown-id-update-conda">
 <summary class="summary-title card-header">
 Q: How do I update Spyder using conda?<div class="summary-down docutils">
