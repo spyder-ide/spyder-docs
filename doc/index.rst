@@ -54,7 +54,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
     .. div:: align-center
 
-       If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`indexpanes`.
+       If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`panes/index`.
     ---
     .. div:: align-center
 
@@ -141,8 +141,8 @@ Connect with Spyder through our social media channels to stay up to date with ou
     Welcome<self>
     quickstart
     installation
-    indexvideos
-    indexpanes
-    indexplugins
-    indextroubleshooting
+    videos/index
+    panes/index
+    plugins/index
+    troubleshooting/index
     FAQ<faq>
