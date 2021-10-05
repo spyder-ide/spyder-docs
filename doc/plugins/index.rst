@@ -6,4 +6,4 @@ Spyder Plugins
     :maxdepth: 2
     :glob:
 
-    plugins/*
+    *
