@@ -16,24 +16,36 @@ Installing and updating
 
    For more information, visit our :doc:`/installation`.
 
+
 .. dropdown:: Q: How do I install Spyder on Windows Subsystem for Linux 2 (WSL2)?
    :container: + dropdown-id-install-wsl2
 
    If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment if your code must run there.
 
-   Instead, just install `Miniconda`_ inside WSL2 and create a new conda environment (or use an existing conda- or virtualenv), then install Spyder-Kernels into that environment with e.g. ``conda install spyder-kernels``. You must manualy install `gen_utils`: ``pip install ipython_genutils``.
-     
+   Instead, just install `Miniconda`_ inside WSL2 and create a new conda environment (or use an existing conda- or virtualenv), then install Spyder-Kernels into that environment with e.g. ``conda install spyder-kernels``.
+   You must manually install ``ipython_genutils`` with e.g. ``conda install ipython_genutils``.
+
    .. note::
 
-      Windows creates a network path located at ``\\wsl$`` that points to the partitions of your WSL2 machines, e.g. ``\\wsl$\Ubuntu-20.04``
+      Windows creates a network path located at ``\\wsl$`` that points to the partitions of your WSL2 machines, e.g. ``\\wsl$\Ubuntu-20.04``.
       You **must** map a network drive letter to your machine path, e.g. ``W:``, for Spyder to correctly see its files and folders.
 
-   
-   From your linux terminal, run ``python -m spyder_kernels.console - matplotlib=’inline’    --ip=127.0.0.1 -f=./remotemachine.json``. Add a ``&`` in the end to run it as a subprocess. It will create a file named ``remotemachine.json`` in your WSL home folder.
+   To start a Spyder kernel, from your Linux terminal run
 
-   Finally, under the sandwich menu of Spyder's IPython console, select `connect to an existing kernel` as described in :doc:`panes/ipythonconsole`. Insert the absolute path of ``remotemachine.json``. If you mapped W: as mentionned in above note, the path should be ``W:\home\<username>\remotemachine.json``. A new terminal will open in Spyder. Try running ``os.system('ls -la')`` and see if it lists your WSL home folder. If you run ``exit()`` from Spyder, the whole kernel on Linux will be stopped.
-   
-   
+   .. code-block:: bash
+
+      python -m spyder_kernels.console --matplotlib="inline" --ip=127.0.0.1 -f=~/remotemachine.json &
+
+   It will run the kernel as a subprocess and create a file named :file:`remotemachine.json` in your WSL home folder.
+
+   Finally, under the options menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`connecting-external-kernel`.
+   Insert the absolute path of :file:`remotemachine.json` into the :guilabel:`Connection file` field.
+   If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`.
+   A new console will open in Spyder, running in the Linux environment.
+   Try running ``os.system('ls -la')`` and see if it lists your WSL home folder.
+   If you run ``exit()`` from Spyder, the kernel running on Linux will be stopped.
+
+
 .. dropdown:: Q: How do I update Spyder using conda?
    :container: + dropdown-id-update-conda
 
