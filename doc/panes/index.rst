@@ -6,4 +6,4 @@ Panes in Depth
     :maxdepth: 2
     :glob:
 
-    panes/*
+    *
