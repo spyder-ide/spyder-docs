@@ -30,13 +30,18 @@ Installing and updating
       Windows creates a network path located at ``\\wsl$`` that points to the partitions of your WSL2 machines, e.g. ``\\wsl$\Ubuntu-20.04``.
       You **must** map a network drive letter to your machine path, e.g. ``W:``, for Spyder to correctly see its files and folders.
 
-   From your linux terminal, run ``python -m spyder_kernels.console --matplotlib="inline" --ip=127.0.0.1 -f=./remotemachine.json``.
-   Add a ``&`` in the end to run it as a subprocess.
-   It will create a file named ``remotemachine.json`` in your WSL home folder.
+   From your Linux terminal, run
 
-   Finally, under the sandwich menu of Spyder's IPython console, select ``connect to an existing kernel`` as described in :doc:`panes/ipythonconsole`.
-   Insert the absolute path of ``remotemachine.json``.
-   If you mapped W: as mentioned in above note, the path should be ``W:\home\<username>\remotemachine.json``.
+   .. code-block:: bash
+
+      python -m spyder_kernels.console --matplotlib="inline" --ip=127.0.0.1 -f=~/remotemachine.json
+
+   Add a ``&`` in the end to run it as a subprocess.
+   It will create a file named :file:`remotemachine.json` in your WSL home folder.
+
+   Finally, under the sandwich menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`connecting-external-kernel`.
+   Insert the absolute path of :file:`remotemachine.json`.
+   If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`.
    A new terminal will open in Spyder.
    Try running ``os.system('ls -la')`` and see if it lists your WSL home folder.
    If you run ``exit()`` from Spyder, the whole kernel on Linux will be stopped.
