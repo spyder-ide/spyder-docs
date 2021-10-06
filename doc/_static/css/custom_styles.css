@@ -308,6 +308,13 @@ table.installer-table tbody td:nth-child(2) p::before {
   vertical-align: sub;
 }
 
+@media screen and (max-width: 991px) {
+
+  table.installer-table td {
+    display: block;
+  }
+}
+
 /* Style for links added to dropdowns */
 
 a.dropdown-link {
