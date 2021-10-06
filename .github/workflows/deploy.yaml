@@ -1,7 +1,7 @@
 # Builds the docs and deploys them to the GitHub pages docs site
 # Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Deploy Docs
+name: Deploy
 
 on:  # yamllint disable-line rule:truthy
   push:

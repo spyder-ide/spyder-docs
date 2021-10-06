@@ -1,0 +1,29 @@
+# Build the docs to test that they work correctly
+# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Build
+
+on: [pull_request]  # yamllint disable-line rule:truthy
+
+jobs:
+  build:
+    name: Build Docs
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup and Install
+      uses: ./.github/actions/setup-and-install
+    - name: List dependencies
+      shell: bash
+      run: pip list
+    - name: Build docs
+      uses: ./.github/actions/build-docs

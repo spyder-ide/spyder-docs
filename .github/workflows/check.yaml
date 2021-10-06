@@ -1,0 +1,24 @@
+# Build the docs and run checks on them
+# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Check
+
+on: [pull_request]  # yamllint disable-line rule:truthy
+
+jobs:
+  linkcheck:
+    name: Check Docs
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Setup and Install
+      uses: ./.github/actions/setup-and-install
+    - name: Run Linkcheck
+      run: make linkcheck
