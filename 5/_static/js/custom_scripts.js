@@ -248,6 +248,16 @@
     };
   };
 
+  // Open all dropdowns that have highlighted words
+  function openHighlightedDropdowns () {
+    var dropdowns = document.getElementsByClassName(dropdownClassName)
+    for (var idx = 0; idx < dropdowns.length; idx++) {
+      if (dropdowns[idx].getElementsByClassName('highlighted').length) {
+        dropdowns[idx].open = true
+      };
+    };
+  };
+
   /* Fire events */
 
   // Initial DOM ready
@@ -274,6 +284,11 @@
     // Start the tour
     if (document.getElementsByClassName('interactive-tour-container').length) {
       startTour()
+    };
+
+    // Open any dropdowns with highlighted words
+    if (document.getElementsByClassName(dropdownClassName).length) {
+      openHighlightedDropdowns()
     };
 
     // Scroll to and open the dropdown direct links
