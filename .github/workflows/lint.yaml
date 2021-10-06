@@ -1,26 +1,38 @@
 # Run the project's linting suite via Pre-Commit
-# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Lint
 
-on: [pull_request]  # yamllint disable-line rule:truthy
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
+  pull_request:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
 
 jobs:
-  pre-commit:
-    name: Lint Docs
+  lint:
+    name: Lint with Pre-Commit
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        submodules: true
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-    - name: Install Dependencies
-      uses: ./.github/actions/setup-and-install
-    - name: Run Pre-Commit Hooks
-      uses: pre-commit/action@v2.0.2
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh
+    - name: List dependencies
+      shell: bash
+      run: pip list
+    - name: Run Pre-Commit hooks
+      uses: pre-commit/action@v2.0.3

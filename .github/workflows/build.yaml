@@ -3,7 +3,19 @@
 
 name: Build
 
-on: [pull_request]  # yamllint disable-line rule:truthy
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
+  pull_request:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
 
 jobs:
   build:
@@ -12,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout repository
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
@@ -20,10 +32,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-    - name: Setup and Install
-      uses: ./.github/actions/setup-and-install
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh
     - name: List dependencies
       shell: bash
       run: pip list
-    - name: Build docs
-      uses: ./.github/actions/build-docs
+    - name: Build with Sphinx
+      shell: bash
+      run: ./ci/build.sh
