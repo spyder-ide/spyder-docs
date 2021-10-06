@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Tag the current git branch with 'current' if not on a customizable list.
-"""
+"""Tag the current git branch with 'current' if not on a customizable list."""
 
 # Standard library imports
 import argparse
@@ -23,6 +21,7 @@ CI_BRANCH_VARIABLES = [
 
 
 def tag_current_branch(exclude_pattern=None, verbose=False):
+    """Tag the current branch if it doesn't match an exclude pattern."""
     current_branch = subprocess.run(
         BRANCH_COMMAND, check=False, stdout=subprocess.PIPE, encoding="utf-8")
     branch_name = current_branch.stdout.strip()
@@ -48,6 +47,7 @@ def tag_current_branch(exclude_pattern=None, verbose=False):
 
 
 def generate_arg_parser():
+    """Create and return the argument parser for the tag current script."""
     arg_parser = argparse.ArgumentParser(
         description="Tags a branch if it doesn't match an exclude pattern",
         argument_default=argparse.SUPPRESS)
@@ -64,6 +64,7 @@ def generate_arg_parser():
 
 
 def main(argv=None):
+    """Tag the current branch if it doesn't match an exclude pattern."""
     arg_parser = generate_arg_parser()
     parsed_args = arg_parser.parse_args(argv)
     did_tag = tag_current_branch(**vars(parsed_args))

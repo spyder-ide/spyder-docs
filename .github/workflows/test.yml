@@ -65,7 +65,3 @@ jobs:
       uses: ./.github/actions/setup-and-install
     - name: Run Main Pre-Commit Hooks
       uses: pre-commit/action@v2.0.2
-    - name: Run Manual Pre-Commit Checks
-      uses: pre-commit/action@v2.0.2
-      with:
-        extra_args: --all-files --hook-stage manual

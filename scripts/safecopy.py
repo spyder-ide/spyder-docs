@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Copy the source directory to the target dir if the target doesn't exist.
-"""
+"""Copy the source directory to the target dir if the target doesn't exist."""
 
 # Standard library imports
 import argparse
@@ -11,6 +9,7 @@ from pathlib import Path
 
 def copy_dir_if_not_existing(
         source_dir, target_dir, base_path="", verbose=False):
+    """Copy a directory to another path if the target doesn't already exist."""
     base_path = Path(base_path)
     source_dir = Path(source_dir)
     if not source_dir.is_absolute():
@@ -35,6 +34,7 @@ def copy_dir_if_not_existing(
 
 
 def generate_arg_parser():
+    """Create and return the argument parser for the safe copy script."""
     arg_parser = argparse.ArgumentParser(
         description="Copies a directory, skipping if the target exists",
         argument_default=argparse.SUPPRESS)
@@ -55,6 +55,7 @@ def generate_arg_parser():
 
 
 def main(argv=None):
+    """Copy a directory, not doing so if it isn't possible safely."""
     arg_parser = generate_arg_parser()
     parsed_args = arg_parser.parse_args(argv)
     did_copy = copy_dir_if_not_existing(**vars(parsed_args))
