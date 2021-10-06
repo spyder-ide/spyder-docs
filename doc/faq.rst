@@ -151,6 +151,8 @@ Running Spyder
 
 
 
+.. _using_spyder_faqs_ref:
+
 ============
 Using Spyder
 ============
