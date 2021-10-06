@@ -377,6 +377,14 @@ texinfo_documents = [
 # man_show_urls = False
 
 
+# -- Options for Linkcheck --------------------------------------------------
+
+linkcheck_ignore = [
+    r"https://(www\.)?github\.com/.+/compare/.+#diff-.+",
+    r"https://(www\.)?packages\.gentoo\.org.*",
+    ]
+
+
 # -- Additional Directives ---------------------------------------------------
 
 # ReST directive for embedding Youtube and Vimeo videos.
