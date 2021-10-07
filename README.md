@@ -6,8 +6,10 @@
 
 
 [![License](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
-[![Checks](https://github.com/spyder-ide/spyder-docs/actions/workflows/test.yml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/test.yml)
-[![Deploy](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yml)
+[![Build](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml)
+[![Check](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml)
+[![Lint](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml)
+[![Deploy](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](#backers)

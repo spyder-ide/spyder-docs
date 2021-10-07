@@ -1,21 +1,20 @@
-# Builds the docs and deploys them to the GitHub pages docs site
-# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Deploy Docs
+# Build the docs and deploy them to the GitHub pages docs site
+name: Deploy
 
 on:  # yamllint disable-line rule:truthy
   push:
     branches:
     - master
+    - main
 
 jobs:
   deploy:
-    name: Deploy Docs
+    name: Build and Deploy Docs
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout repository
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
@@ -23,16 +22,18 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-    - name: Setup and Install
-      uses: ./.github/actions/setup-and-install
+    - name: Install dependencies
+      shell: bash
+      run: ./ci/install.sh
     - name: List dependencies
       shell: bash
       run: pip list
-    - name: Build docs
-      uses: ./.github/actions/build-docs
+    - name: Build with Sphinx
+      shell: bash
+      run: ./ci/build.sh
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.1
+      uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         BRANCH: gh-pages      # The branch the action should deploy to
-        FOLDER: doc/_build/html      # The folder the action should deploy
+        FOLDER: ./doc/_build/html      # The folder the action should deploy
         CLEAN: true      # Automatically remove deleted files from the deploy branch

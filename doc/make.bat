@@ -10,6 +10,7 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=.
 set BUILDDIR=_build
 set SPHINXPROJ=Spyder
+set SPHINXOPTS=-n -W --keep-going
 
 if "%1" == "" goto help
 

@@ -1,10 +1,10 @@
 #!/bin/bash -ex
 
-pip3 install -U pip
-pip3 install -r requirements-dev.txt
+python3 -m pip install --upgrade pip setuptools wheel
+python3 -m pip install --upgrade -r requirements-dev.txt
 
 # You can uncomment the command below to use a different version of the theme (but return it to the correct one before merging)
-# pip3 install git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
+# python3 -m pip install --upgrade --force-reinstall --no-deps git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
 
 # Configure the username and email so Git doesn't complain
 if [ "${CI-}" = "true" ]; then
