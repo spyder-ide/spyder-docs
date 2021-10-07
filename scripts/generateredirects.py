@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Recursively build redirects for the HTML in a given dir to an output dir.
-"""
+"""Recursively build redirects for the HTML in a given dir to an output dir."""
 
 # Standard library imports
 import argparse
@@ -28,6 +26,7 @@ def generate_redirect(
         base_path="",
         base_url="/"
         ):
+    """Generate an individual HTML redirect from one location to another."""
     base_path = Path(base_path).resolve()
     canonical_dir = base_path / canonical_dir
     redirect_dir = base_path / redirect_dir
@@ -60,6 +59,7 @@ def generate_redirects(
         match_glob="**/*.html",
         verbose=False,
         **redirect_kwargs):
+    """Generate HTML redirect from one set of locations to another."""
     base_path = Path(base_path).resolve()
 
     redirect_paths = []
@@ -79,6 +79,7 @@ def generate_redirects(
 
 
 def generate_arg_parser():
+    """Create and return the argument parser for the redirect script."""
     arg_parser = argparse.ArgumentParser(
         description="Generate redirects given a directory of HTML files",
         argument_default=argparse.SUPPRESS)
@@ -111,6 +112,7 @@ def generate_arg_parser():
 
 
 def main(argv=None):
+    """Generate redirects for the given directories."""
     arg_parser = generate_arg_parser()
     parsed_args = arg_parser.parse_args(argv)
     redirect_paths = generate_redirects(**vars(parsed_args))

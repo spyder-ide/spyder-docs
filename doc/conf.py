@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-#
+
+# pylint: disable = invalid-name, empty-comment
+
 # Spyder documentation build configuration file, created by
 # sphinx-quickstart on Fri Jul 10 16:32:25 2009.
 #
@@ -12,11 +14,11 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-# pylint: disable = invalid-name, wrong-import-order
-
 """Sphinx configuration file for Spyder's documentation."""
 
+# pylint: disable-next = import-error
 from docutils import nodes
+# pylint: disable-next = import-error
 from docutils.parsers.rst import Directive, directives
 
 # -- Path setup --------------------------------------------------------------
@@ -27,9 +29,9 @@ from docutils.parsers.rst import Directive, directives
 #
 
 # Standard library imports
-import datetime
-import os
-import subprocess
+import datetime  # pylint: disable = wrong-import-order
+import os  # pylint: disable = wrong-import-order
+import subprocess  # pylint: disable = wrong-import-order
 
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
@@ -144,7 +146,7 @@ pygments_style = "sphinx"
 # CI = True
 # TRAVIS_BRANCH = 'master'
 html_theme = "pandas_sphinx_theme"
-html_logo = '_static/images/spyder_logo.png'
+html_logo = "_static/images/spyder_logo.png"
 html_theme_options = {
     "external_links": [
         {
@@ -208,7 +210,7 @@ html_context = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'spyder_bbg.png'
+# html_logo = "spyder_bbg.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -285,19 +287,19 @@ html_sidebars = {
 # -- Options for shpinx-multiversion -----------------------------------------
 
 # Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r'^current$'
+smv_tag_whitelist = r"^current$"
 
 # Whitelist pattern for branches (set to None to ignore all branches)
-smv_branch_whitelist = r'^\d+\.\w|(master)$'
+smv_branch_whitelist = r"^\d+\.\w|(master)$"
 
 # Whitelist pattern for remotes (set to None to use local branches only)
-smv_remote_whitelist = r'^(origin|upstream)$'
+smv_remote_whitelist = r"^(origin|upstream)$"
 
 # Pattern for released versions
-smv_released_pattern = r'.*((3|4)\.[xX]|master)$'
+smv_released_pattern = r".*((3|4)\.[xX]|master)$"
 
 # Format for versioned output directories inside the build directory
-smv_outputdir_format = '{config.release}'
+smv_outputdir_format = "{config.release}"
 
 # Determine whether remote or local git branches/tags are preferred
 # if their output dirs conflict
@@ -308,10 +310,11 @@ try:
     current_tag = subprocess.run(
         ["git", "describe"], check=True, timeout=5,
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
-    if current_tag.stdout.strip() == "current":
-        smv_outputdir_format = '{ref.name}'
 except subprocess.SubprocessError:  # Pass if we're not in a git repo
     pass
+else:
+    if current_tag.stdout.strip() == "current":
+        smv_outputdir_format = "{ref.name}"
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
@@ -376,7 +379,10 @@ texinfo_documents = [
 
 # -- Options for Linkcheck --------------------------------------------------
 
-linkcheck_ignore = [r'https://(www\.)?github\.com/.+/compare/.+#diff-.+']
+linkcheck_ignore = [
+    r"https://(www\.)?github\.com/.+/compare/.+#diff-.+",
+    r"https://(www\.)?packages\.gentoo\.org.*",
+    ]
 
 
 # -- Additional Directives ---------------------------------------------------
@@ -395,47 +401,56 @@ linkcheck_ignore = [r'https://(www\.)?github\.com/.+/compare/.+#diff-.+']
 # :license: BSD 3-clause
 
 def align(argument):
-    """Conversion function for the "align" option."""
-    return directives.choice(argument, ('left', 'center', 'right'))
+    """Convert the "align" argument to one of the specified options."""
+    return directives.choice(argument, ("left", "center", "right"))
 
 
-class IframeVideo(Directive):
+class IFrameVideo(Directive):
+    """A general directive for injecting an iframe video in a Sphinx doc."""
+
     has_content = False
     required_arguments = 1
     optional_arguments = 0
     final_argument_whitespace = False
     option_spec = {
-        'height': directives.nonnegative_int,
-        'width': directives.nonnegative_int,
-        'align': align,
-        'start': directives.nonnegative_int,
+        "height": directives.nonnegative_int,
+        "width": directives.nonnegative_int,
+        "align": align,
+        "start": directives.nonnegative_int,
     }
     default_width = 500
     default_height = 281
     default_start = 0
 
     def run(self):
-        self.options['video_id'] = directives.uri(self.arguments[0])
-        if not self.options.get('width'):
-            self.options['width'] = self.default_width
-        if not self.options.get('height'):
-            self.options['height'] = self.default_height
-        if not self.options.get('align'):
-            self.options['align'] = 'left'
-        if not self.options.get('start'):
-            self.options['start'] = self.default_start
-        return [nodes.raw('', self.html % self.options, format='html')]
+        """Execute the iframe video directive."""
+        self.options["video_id"] = directives.uri(self.arguments[0])
+        if not self.options.get("width"):
+            self.options["width"] = self.default_width
+        if not self.options.get("height"):
+            self.options["height"] = self.default_height
+        if not self.options.get("align"):
+            self.options["align"] = "left"
+        if not self.options.get("start"):
+            self.options["start"] = self.default_start
+        return [nodes.raw("", self.html % self.options, format="html")]
 
 
-class Youtube(IframeVideo):
-    html = ('<div class="video-container-container">'
-            '<div class="video-container">'
-            '<iframe src="https://www.youtube.com/embed/%(video_id)s'
-            '?start=%(start)s" '
-            'width="%(width)u" height="%(height)u" frameborder="0" '
-            'webkitAllowFullScreen mozallowfullscreen allowfullscreen '
-            'class="align-%(align)s"></iframe></div></div>')
+class Youtube(IFrameVideo):
+    """A specific directive for injecting a Youtube video in a Sphinx doc."""
+
+    html = "".join([
+        '<div class="video-container-container">',
+        '<div class="video-container">',
+        '<iframe src="https://www.youtube.com/embed/%(video_id)s',
+        '?start=%(start)s" ',
+        'width="%(width)u" height="%(height)u" frameborder="0" ',
+        # pylint: disable = inconsistent-quotes
+        'webkitAllowFullScreen mozallowfullscreen allowfullscreen ',
+        'class="align-%(align)s"></iframe></div></div>',
+        ])
 
 
 def setup(builder):  # pylint: disable = unused-argument
-    directives.register_directive('youtube', Youtube)
+    """Register directives with Sphinx."""
+    directives.register_directive("youtube", Youtube)

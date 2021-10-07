@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-a11y/recommended"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-a11y/recommended"],
   "reportDescriptionlessDisables": true,
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
@@ -34,12 +31,7 @@
     "no-empty-first-line": true,
     "no-unknown-animations": true,
     "number-max-precision": 5,
-    "property-no-unknown": [
-      true,
-      {
-        "checkPrefixed": true
-      }
-    ],
+    "property-no-unknown": [true, {"checkPrefixed": true}],
     "property-no-vendor-prefix": true,
     "rule-empty-line-before": "always",
     "selector-attribute-quotes": "always",
