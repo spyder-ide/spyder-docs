@@ -60,7 +60,7 @@ Why use Python for financial analysis?
 Real-time analysis of historical and current financial data is essential for those investing in financial instruments. Python has a number of features that make it ideal for financial tasks:
 
 * It is easy to learn for anyone, whether they have previous programming experience or not
-* It has a variety of specialized mathematical and statistical libraries (`SciPy <https://www.scipy.org/scipylib/index.html>`_, `NumPy <https://numpy.org>`_, `Pandas <https://pandas.pydata.org>`_) that are commonly used for financial analysis
+* It has a variety of specialized mathematical and statistical libraries (`SciPy <https://scipy.org>`_, `NumPy <https://numpy.org>`_, `Pandas <https://pandas.pydata.org>`_) that are commonly used for financial analysis
 * It can be connected to APIs for loading financial data in real time
 * It is the programming language with the most resources for machine learning (supervised learning, unsupervised learning, reinforcement learning), which is one of the most useful tools for Econometrics nowadays
 * It has excellent libraries for plotting
