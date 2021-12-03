@@ -63,7 +63,7 @@ Python is a mature programming language that has been chosen by much of the scie
 * It is versatile and easy to learn and use
 * It allows for multiple ways to handle inputs and outputs. No matter what format your data is in, in Python there is always a way to import it (and export it in the format of your choice)
 * It is interpreted. You don't have to write code from start to finish to see partial results. This makes it especially easy and fast to explore data
-* It has built-in support for scientific computing tasks: `SciPy <https://www.scipy.org/scipylib/index.html>`_, `NumPy <https://numpy.org>`_, `Pandas <https://pandas.pydata.org>`_, and a vast number of other libraries created by and for scientists
+* It has built-in support for scientific computing tasks: `SciPy <https://scipy.org>`_, `NumPy <https://numpy.org>`_, `Pandas <https://pandas.pydata.org>`_, and a vast number of other libraries created by and for scientists
 * It is the most widely used programming language for Machine Learning (including Keras and TensorFlow)
 * It has excellent libraries for plotting
 * It can be integrated with `Jupyter Notebooks <https://jupyter.org>`_ and implementations of these in the cloud (`Google Colab <https://colab.research.google.com>`_ or `Binder <https://mybinder.org>`_)

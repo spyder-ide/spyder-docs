@@ -273,7 +273,9 @@ A detailed description of `repository creation`_ could be found in the official 
 
 .. _Version control with git: https://swcarpentry.github.io/git-novice/
 .. _repository creation: https://docs.github.com/en/get-started/quickstart/create-a-repo
-.. _hello world: https://guides.github.com/activities/hello-world/
+.. _hello world: https://docs.github.com/en/get-started/quickstart/hello-world
+
+
 
 =================
 Let's get started
