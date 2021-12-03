@@ -2,7 +2,7 @@
 Plugin Development with Spyder
 ##############################
 
-This workshop consists of a review of the features and possibilities of the API offered by `Spyder`_ 5, the recently released version of our favorite IDE for Scientific Python, to develop plugins to extend its functionality.
+This workshop consists of a review of the features and possibilities of the API offered by `Spyder`_ 5, the recently released version of our favorite IDE for Scientific Python, to develop plugins and extend its functionality.
 
 As a practical exercise, we will develop a simple plugin that incorporates a configurable pomodoro timer in the status bar and some toolbar buttons to interact with it.
 
@@ -443,7 +443,7 @@ The first version that we are going to reach after the first editions will be ca
 
 `INITIAL -> HELLO WORLD widgets.py diff`_
 
-.. _INITIAL -> HELLO WORLD widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc
+.. _INITIAL -> HELLO WORLD widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/c7b5cc6c4ce3c4afcd3cb9d3474bdabe2b81e060
 
 Since we want a widget that shows the pomodoro countdown and is periodically updated, we will use a ``BaseTimerStatus`` instance.
 
@@ -546,7 +546,7 @@ Thus, the `COOKIECUTTER`_ version of ``container.py`` is:
 
 `INITIAL -> HELLO WORLD container.py diff`_
 
-.. _INITIAL -> HELLO WORLD container.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-cd6991f5ce0c63fdcbdc3ae3f5d9ac1f685ebc59c5517d5208e85ff30e3da050
+.. _INITIAL -> HELLO WORLD container.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/73dbc2c010274613357d6d8d2e4d1428dc030c77
 
 In this case ``SpyderPomodoroTimerContainer`` is already defined, and we must implement the ``setup`` and ``update_actions`` methods.
 
@@ -618,9 +618,9 @@ The `INITIAL`_ version (i.e. the one created by cookiecutter)  for ``plugin.py``
         def get_icon(self):
             return QIcon()
 
-        def register(self):
+        def on_initialize(self):
             container = self.get_container()
-            print('SpyderPomodoroTimer registered!')
+            print('SpyderPomodoroTimer initialized!')
 
         def check_compatibility(self):
             valid = True
@@ -632,7 +632,7 @@ The `INITIAL`_ version (i.e. the one created by cookiecutter)  for ``plugin.py``
 
 `INITIAL -> HELLO WORLD plugin.py diff`_
 
-.. _INITIAL -> HELLO WORLD plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d
+.. _INITIAL -> HELLO WORLD plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/d368e695e096e1a054e043671f98b5f0021b6822
 
 First, we need to declare the dependencies of our plugin, by defining the ``REQUIRES`` class constant. Since we're going to add a status bar widget, we require the ``StatusBar`` plugin, as shown below.
 
@@ -680,20 +680,9 @@ Due to recent changes to the Spyder API, we need to add to the spyder imports
    # Spyder imports
    from spyder.api.plugin_registration.decorators import on_plugin_available
 
-and change,
+And add after the ``on_initialize`` method, the following:
 
 .. code-block:: python
-
-       def register(self):
-           container = self.get_container()
-           print('SpyderPomodoroTimer registered!')
-
-to
-
-.. code-block:: python
-
-       def on_initialize(self):
-           print("SpyderPomodoroTimer registered!")
 
        @on_plugin_available(plugin=Plugins.StatusBar)
        def on_statusbar_available(self):
@@ -721,7 +710,7 @@ In summary, we did the following:
 
 We created a widget, then we added it to the container, which is registered in the plugin through the ``CONTAINER_CLASS`` constant. In the plugin, we accessed the instance of that widget and added it to the status bar.
 
-.. _INITIAL: https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.0.1-dev0
+.. _INITIAL: https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0
 
 ======================
 How to test our plugin
@@ -729,11 +718,11 @@ How to test our plugin
 
 Now it is time to see how our plugin looks in the Spyder interface.
 
-From the root folder of our plugin, we activate the environment where Spyder is installed, and run:
+**From the root folder of our plugin**, we activate the environment where Spyder is installed, and run:
 
 .. code-block:: bash
 
-   (base) $ mamba activate spyder-dev
+   (base) $ conda activate spyder-dev
    (spyder-dev) $ pip install -e .
 
 
@@ -772,7 +761,7 @@ Let's go back to ``widgets.py`` and add this constant below the import lines (li
 
 `HELLO WORLD -> TIMER widgets.py diff`_
 
-.. _HELLO WORLD -> TIMER widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.2-dev0...v0.0.3-dev0
+.. _HELLO WORLD -> TIMER widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/5d72eaf2c8ce6c7760529c90121837e275757974
 
 .. code-block:: python
 
@@ -844,7 +833,7 @@ The next version where actions are added to the toolbar is called ``ACTIONS``.
 
 `TIMER -> ACTIONS widgets.py diff`_
 
-.. _TIMER -> ACTIONS widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc
+.. _TIMER -> ACTIONS widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/48a946fdbb934b9b85facd3c1b77fc8999e049a9
 
 Let's go back to ``widgets.py`` and import the Spyder application toolbar class:
 
@@ -894,7 +883,7 @@ Now we are going to create a new section in our toolbar and associate some funct
 
 `TIMER -> ACTIONS api.py diff`_
 
-.. _TIMER -> ACTIONS api.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-8b754f536d1a4dce97591575bff0afd8b9f72c8fd3514886cb998ee288615686
+.. _TIMER -> ACTIONS api.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/cf540f972f37aaf5d6ccc8524cbcc7aeae9c483b
 
 Let's add the following to the end of ``api.py``:
 
@@ -921,7 +910,7 @@ Add actions to the toolbar
 
 `TIMER -> ACTIONS container.py diff`_
 
-.. _TIMER -> ACTIONS container.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-cd6991f5ce0c63fdcbdc3ae3f5d9ac1f685ebc59c5517d5208e85ff30e3da050
+.. _TIMER -> ACTIONS container.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/492f30771285af937a8a75d69e4e879d21f9dc0f
 
 Now let's go to ``container.py``, where we are going to implement the behavior of our new toolbar and its actions.
 In this case, we are not going to specify the internal behavior of our plugin, but the relationship between its widgets and other areas of Spyder, so it is more convenient to do it in the container.
@@ -1065,7 +1054,7 @@ Register the toolbar
 
 `TIMER -> ACTIONS plugin.py diff`_
 
-.. _TIMER -> ACTIONS plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d
+.. _TIMER -> ACTIONS plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/012c5ef6568114ea945501d44efb30afeefbad98
 
 A final mandatory step is to go to ``plugin.py`` and register this new toolbar component.
 
@@ -1123,7 +1112,7 @@ The first step is to define what options we want to offer to our users. For this
 
 `ACTIONS -> CONFPAGE config.py diff`_
 
-.. _ACTIONS -> CONFPAGE config.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-c42d6af375b7edb0140c4c0ca179f249d3101baedd9c869269cf6755f52376b9
+.. _ACTIONS -> CONFPAGE config.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/b71457c96013dc0b9c27d588f46568a81e9a2f0c
 
 .. code-block:: python
 
@@ -1170,7 +1159,7 @@ Now, we need to build the page that will appear in the Preferences window. For t
 
 `ACTIONS -> CONFPAGE confpage.py diff`_
 
-.. _ACTIONS -> CONFPAGE confpage.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-f6d15740b70da8d64979fb4e655d5363de0539ef44b58e9935d70ea60f386d3d
+.. _ACTIONS -> CONFPAGE confpage.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/bd3bcf2ce895c440fb2d6b80233100c6d86822fe
 
 .. code-block:: python
 
@@ -1225,7 +1214,7 @@ Since we moved all the configuration information to ``conf.py``, now we have to 
 
 `ACTIONS -> CONFPAGE widgets.py diff`_
 
-.. _ACTIONS -> CONFPAGE widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc
+.. _ACTIONS -> CONFPAGE widgets.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/b94cee118bf887b52934230a35d67a0080551a68
 
 .. code-block:: python
 
@@ -1261,7 +1250,7 @@ Finally, it is necessary to activate the use of preferences in ``plugin.py``, by
 
 `ACTIONS -> CONFPAGE plugin.py diff`_
 
-.. _ACTIONS -> CONFPAGE plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d
+.. _ACTIONS -> CONFPAGE plugin.py diff: https://github.com/map0logo/spyder-pomodoro-timer/commit/b238b133d46a52e2d6e57ae938964094a45e7177
 
 .. code-block:: python
 
