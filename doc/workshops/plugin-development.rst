@@ -2,7 +2,7 @@
 Plugin Development with Spyder
 ##############################
 
-This workshop consists of a review of the features and possibilities of the API offered by `Spyder`_ 5, the recently released version of our favorite IDE for Scientific Python, to develop plugins and extend its functionality.
+This workshop reviews the features and possibilities of the API offered by `Spyder`_ 5—the recently released version of our favorite IDE for scientific Python—for plugin development and to extend its functionality.
 
 As a practical exercise, we will develop a simple plugin that incorporates a configurable pomodoro timer in the status bar and some toolbar buttons to interact with it.
 
