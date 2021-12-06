@@ -680,7 +680,7 @@ Due to recent changes to the Spyder API, we need to add to the spyder imports
    # Spyder imports
    from spyder.api.plugin_registration.decorators import on_plugin_available
 
-And add after the ``on_initialize`` method, the following:
+And add the following after the ``on_initialize`` method:
 
 .. code-block:: python
 
