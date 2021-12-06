@@ -541,7 +541,7 @@
                 
   <div class="section" id="plugin-development-with-spyder">
 <h1>Plugin Development with Spyder<a class="headerlink" href="#plugin-development-with-spyder" title="Permalink to this headline">¶</a></h1>
-<p>This workshop consists of a review of the features and possibilities of the API offered by <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> 5, the recently released version of our favorite IDE for Scientific Python, to develop plugins to extend its functionality.</p>
+<p>This workshop reviews the features and possibilities of the API offered by <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> 5—the recently released version of our favorite IDE for scientific Python—for plugin development and to extend its functionality.</p>
 <p>As a practical exercise, we will develop a simple plugin that incorporates a configurable pomodoro timer in the status bar and some toolbar buttons to interact with it.</p>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
@@ -827,7 +827,7 @@ We can also place here the instance of <code class="docutils literal notranslate
 <h3>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h3>
 <p>The best way to start building our plugin is by implementing its graphical components first in <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code></p>
 <p>Let’s call the initial version, without any editing <code class="docutils literal notranslate"><span class="pre">INITIAL</span></code>.
-In <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.0.1-dev0">INITIAL</a>, widgets.py is as follows:</p>
+In <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a>, widgets.py is as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spyder imports</span>
 <span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
 <span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
@@ -853,7 +853,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <p>Below, we will be indicating links in github with the diffs between the tags, this as an aid to check the progressive changes that will be made in the code.</p>
 </div>
 <p>The first version that we are going to reach after the first editions will be called <code class="docutils literal notranslate"><span class="pre">HELLO</span> <span class="pre">WORLD</span></code>.</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc">INITIAL -&gt; HELLO WORLD widgets.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/c7b5cc6c4ce3c4afcd3cb9d3474bdabe2b81e060">INITIAL -&gt; HELLO WORLD widgets.py diff</a></p>
 <p>Since we want a widget that shows the pomodoro countdown and is periodically updated, we will use a <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code> instance.</p>
 <p>So, we can substitute</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.mixins</span> <span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
@@ -932,7 +932,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
         <span class="k">pass</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-cd6991f5ce0c63fdcbdc3ae3f5d9ac1f685ebc59c5517d5208e85ff30e3da050">INITIAL -&gt; HELLO WORLD container.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/73dbc2c010274613357d6d8d2e4d1428dc030c77">INITIAL -&gt; HELLO WORLD container.py diff</a></p>
 <p>In this case <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> is already defined, and we must implement the <code class="docutils literal notranslate"><span class="pre">setup</span></code> and <code class="docutils literal notranslate"><span class="pre">update_actions</span></code> methods.</p>
 <p>Now we are going to add the widget created earlier to the container. To do so, first we need to import the widget.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
@@ -949,7 +949,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <div class="section" id="plugin">
 <h3>Plugin<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h3>
 <p>Finally, we define our plugin so that it is registered within Spyder.
-The <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.0.1-dev0">INITIAL</a> version (i.e. the one created by cookiecutter)  for <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> is:</p>
+The <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a> version (i.e. the one created by cookiecutter)  for <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> is:</p>
 <ul class="simple">
 <li><p>Imports:</p></li>
 </ul>
@@ -995,9 +995,9 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
     <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">QIcon</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SpyderPomodoroTimer registered!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SpyderPomodoroTimer initialized!&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">check_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">valid</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1008,7 +1008,7 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
         <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.1-dev0...v0.0.2-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d">INITIAL -&gt; HELLO WORLD plugin.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/d368e695e096e1a054e043671f98b5f0021b6822">INITIAL -&gt; HELLO WORLD plugin.py diff</a></p>
 <p>First, we need to declare the dependencies of our plugin, by defining the <code class="docutils literal notranslate"><span class="pre">REQUIRES</span></code> class constant. Since we’re going to add a status bar widget, we require the <code class="docutils literal notranslate"><span class="pre">StatusBar</span></code> plugin, as shown below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">]</span>
 </pre></div>
@@ -1042,17 +1042,8 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <span class="kn">from</span> <span class="nn">spyder.api.plugin_registration.decorators</span> <span class="kn">import</span> <span class="n">on_plugin_available</span>
 </pre></div>
 </div>
-<p>and change,</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SpyderPomodoroTimer registered!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>to</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SpyderPomodoroTimer registered!&quot;</span><span class="p">)</span>
-
-<span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
+<p>And add the following after the <code class="docutils literal notranslate"><span class="pre">on_initialize</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">on_statusbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">statusbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">statusbar</span><span class="p">:</span>
@@ -1076,8 +1067,8 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <div class="section" id="how-to-test-our-plugin">
 <h2>How to test our plugin<a class="headerlink" href="#how-to-test-our-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Now it is time to see how our plugin looks in the Spyder interface.</p>
-<p>From the root folder of our plugin, we activate the environment where Spyder is installed, and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> $ mamba activate spyder-dev
+<p><strong>From the root folder of our plugin</strong>, we activate the environment where Spyder is installed, and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> $ conda activate spyder-dev
 <span class="o">(</span>spyder-dev<span class="o">)</span> $ pip install -e .
 </pre></div>
 </div>
@@ -1099,7 +1090,7 @@ We created an annex to this workshop that quickly explains way the fundamental c
 <p>The first problem with our plugin is that its pomodoro timer is not being updated. To activate it we can use the <code class="docutils literal notranslate"><span class="pre">QTimer</span></code> in <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, which is present because it’s an instance of <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>.</p>
 <p>The second version where the value in the status bar is updated is called <code class="docutils literal notranslate"><span class="pre">TIMER</span></code>.</p>
 <p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and add this constant below the import lines (line 22).</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.2-dev0...v0.0.3-dev0">HELLO WORLD -&gt; TIMER widgets.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/5d72eaf2c8ce6c7760529c90121837e275757974">HELLO WORLD -&gt; TIMER widgets.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Constants</span>
 <span class="c1"># ------ Time limits by default</span>
 
@@ -1150,7 +1141,7 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <div class="section" id="pomodorotimertoolbar">
 <h3>PomodoroTimerToolbar<a class="headerlink" href="#pomodorotimertoolbar" title="Permalink to this headline">¶</a></h3>
 <p>The next version where actions are added to the toolbar is called <code class="docutils literal notranslate"><span class="pre">ACTIONS</span></code>.</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc">TIMER -&gt; ACTIONS widgets.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/48a946fdbb934b9b85facd3c1b77fc8999e049a9">TIMER -&gt; ACTIONS widgets.py diff</a></p>
 <p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and import the Spyder application toolbar class:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.toolbars</span> <span class="kn">import</span> <span class="n">ApplicationToolbar</span>
 </pre></div>
@@ -1182,7 +1173,7 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <div class="section" id="create-the-pomodoro-toolbar">
 <h3>Create the Pomodoro Toolbar<a class="headerlink" href="#create-the-pomodoro-toolbar" title="Permalink to this headline">¶</a></h3>
 <p>Now we are going to create a new section in our toolbar and associate some functionality to it by means of actions. This particular information is recommended to be included in the <code class="docutils literal notranslate"><span class="pre">api.py</span></code> file because this way we can offer endpoints to the rest of Spyder and new plugins for tweaking the behavior of our plugin.</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-8b754f536d1a4dce97591575bff0afd8b9f72c8fd3514886cb998ee288615686">TIMER -&gt; ACTIONS api.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/cf540f972f37aaf5d6ccc8524cbcc7aeae9c483b">TIMER -&gt; ACTIONS api.py diff</a></p>
 <p>Let’s add the following to the end of <code class="docutils literal notranslate"><span class="pre">api.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroToolbarActions</span><span class="p">:</span>
     <span class="n">Start</span> <span class="o">=</span> <span class="s1">&#39;start_timer&#39;</span>
@@ -1202,7 +1193,7 @@ As for the update interval of the timer, we set it to to the value of <code clas
 </div>
 <div class="section" id="add-actions-to-the-toolbar">
 <h3>Add actions to the toolbar<a class="headerlink" href="#add-actions-to-the-toolbar" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-cd6991f5ce0c63fdcbdc3ae3f5d9ac1f685ebc59c5517d5208e85ff30e3da050">TIMER -&gt; ACTIONS container.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/492f30771285af937a8a75d69e4e879d21f9dc0f">TIMER -&gt; ACTIONS container.py diff</a></p>
 <p>Now let’s go to <code class="docutils literal notranslate"><span class="pre">container.py</span></code>, where we are going to implement the behavior of our new toolbar and its actions.
 In this case, we are not going to specify the internal behavior of our plugin, but the relationship between its widgets and other areas of Spyder, so it is more convenient to do it in the container.</p>
 <p>As we did with <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, we are going to use <code class="docutils literal notranslate"><span class="pre">qtawesome</span></code> icons for our actions. For this purpose, let’s add at the beginning of our imports:</p>
@@ -1320,7 +1311,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </div>
 <div class="section" id="register-the-toolbar">
 <h3>Register the toolbar<a class="headerlink" href="#register-the-toolbar" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.3-dev0...v0.0.4-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d">TIMER -&gt; ACTIONS plugin.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/012c5ef6568114ea945501d44efb30afeefbad98">TIMER -&gt; ACTIONS plugin.py diff</a></p>
 <p>A final mandatory step is to go to <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> and register this new toolbar component.</p>
 <p>To do this, add <code class="docutils literal notranslate"><span class="pre">Plugins.Toolbar</span></code> to the plugin requirements:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">]</span>
@@ -1353,7 +1344,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <h3>Configuration defaults<a class="headerlink" href="#configuration-defaults" title="Permalink to this headline">¶</a></h3>
 <p>The final version in which we add a configurable parameter will be called <code class="docutils literal notranslate"><span class="pre">CONFPAGE</span></code>.</p>
 <p>The first step is to define what options we want to offer to our users. For this we must create a new file, which we can call <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. In this file we will write the following:</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-c42d6af375b7edb0140c4c0ca179f249d3101baedd9c869269cf6755f52376b9">ACTIONS -&gt; CONFPAGE config.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b71457c96013dc0b9c27d588f46568a81e9a2f0c">ACTIONS -&gt; CONFPAGE config.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Spyder terminal default configuration.&quot;&quot;&quot;</span>
 
 <span class="c1"># --- Constants</span>
@@ -1391,7 +1382,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <div class="section" id="configuration-page">
 <h3>Configuration page<a class="headerlink" href="#configuration-page" title="Permalink to this headline">¶</a></h3>
 <p>Now, we need to build the page that will appear in the Preferences window. For this, we edit the <code class="docutils literal notranslate"><span class="pre">confpage.py</span></code> file generated by cokkiecutter as follows:</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-f6d15740b70da8d64979fb4e655d5363de0539ef44b58e9935d70ea60f386d3d">ACTIONS -&gt; CONFPAGE confpage.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/bd3bcf2ce895c440fb2d6b80233100c6d86822fe">ACTIONS -&gt; CONFPAGE confpage.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Spyder Pomodoro Timer Preferences Page.</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -1439,7 +1430,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <div class="section" id="propagate-configuration-changes">
 <h3>Propagate configuration changes<a class="headerlink" href="#propagate-configuration-changes" title="Permalink to this headline">¶</a></h3>
 <p>Since we moved all the configuration information to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, now we have to import it from there into <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code>.</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-f156d182eb57c9fa20d1ca4b9677d13b158447c04f90724d936bb77a50df31bc">ACTIONS -&gt; CONFPAGE widgets.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b94cee118bf887b52934230a35d67a0080551a68">ACTIONS -&gt; CONFPAGE widgets.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
 <span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.config</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">CONF_SECTION</span><span class="p">,</span>
@@ -1466,7 +1457,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <div class="section" id="registering-preferences">
 <h3>Registering preferences<a class="headerlink" href="#registering-preferences" title="Permalink to this headline">¶</a></h3>
 <p>Finally, it is necessary to activate the use of preferences in <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code>, by requiring the Preferences plugin</p>
-<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/compare/v0.0.4-dev0...v0.0.5-dev0#diff-1e1feff1c9cd8690a64077ba61b59db060cae1212f9da8ce0522d3e027d09b0d">ACTIONS -&gt; CONFPAGE plugin.py diff</a></p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b238b133d46a52e2d6e57ae938964094a45e7177">ACTIONS -&gt; CONFPAGE plugin.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">]</span>
