@@ -60,7 +60,7 @@ Installing and updating
 
    .. code-block:: bash
 
-      conda install spyder=4
+      conda install spyder=5
 
 
 .. dropdown:: Q: How do update I Spyder using Anaconda Navigator?
@@ -377,19 +377,7 @@ Troubleshooting
    :container: + dropdown-id-troubleshooting-starting-kernel
 
    First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
-
-    .. table::
-
-       ==============   ==============
-       Spyder           Spyder-Kernels
-       ==============   ==============
-       4.0.0-4.0.1      1.8.1
-       4.1.0-4.1.2      1.9.0
-       4.1.3            1.9.1
-       4.1.4            1.9.3
-       4.1.5-4.1.6      1.9.4
-       4.2.0            1.10.0
-       ==============   ==============
+   See the table in the :ref:`spyder-kernels-version-ref` section of the troubleshooting guide to check.
 
    To install the right version, type the following on the command line (or Anaconda Prompt on Windows)
 
