@@ -1,5 +1,5 @@
 git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder
-jinja2<3
+jinja2
 pre-commit>=2.8.2
 sphinx>=3,<4
 sphinx-multiversion
