@@ -349,9 +349,12 @@ Additional help
 
 *Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
 
+* Get help from expert Spyder consultants on `OpenTeams`_.
+
 .. _Troubleshooting Guide and FAQ: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _main website: https://www.spyder-ide.org/
 .. _Github repository: https://github.com/spyder-ide/spyder/
 .. _Github wiki: https://github.com/spyder-ide/spyder/wiki
 .. _Google Group: https://groups.google.com/group/spyderlib
 .. _Gitter chatroom: https://gitter.im/spyder-ide/public
+.. _OpenTeams: https://www.openteams.com/app/marketplace/project-page-2/3502

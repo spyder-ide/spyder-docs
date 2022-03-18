@@ -72,6 +72,12 @@ It has an vibrant Spyder community as well, with new questions posted every day,
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
 
+OpenTeams support
+~~~~~~~~~~~~~~~~~
+
+Get help from expert Spyder consultants on `OpenTeams`_. The OpenTeams marketplace is your one source for everything open source.
+
+.. _OpenTeams: https://www.openteams.com/app/marketplace/project-page-2/3502
 
 
 .. rst-class:: fa-offset-h3
