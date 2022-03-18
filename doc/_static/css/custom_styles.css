@@ -21,6 +21,11 @@ strong {
 
 /* Style for Font Awesome that only styles the icons before elements */
 
+.openteams-icon::before {
+  content: url("../images/Opeteams_Favicon-01.svg");
+  width: 1em;
+}
+
 .fasb::before,
 .fabb::before {
   color: #36557c;

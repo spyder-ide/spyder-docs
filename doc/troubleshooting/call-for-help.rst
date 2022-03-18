@@ -72,6 +72,8 @@ It has an vibrant Spyder community as well, with new questions posted every day,
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
 
+.. rst-class:: fabb openteams-icon
+
 OpenTeams support
 ~~~~~~~~~~~~~~~~~
 
