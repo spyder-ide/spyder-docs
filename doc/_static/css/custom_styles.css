@@ -26,8 +26,8 @@ strong {
 
 .openteams-icon::before {
   content: url("../images/openteams-favicon.svg");
-  width: 1.3em;
   margin-left: -0.2em;
+  width: 1.3em;
 }
 
 div.openteams-icon::before {
