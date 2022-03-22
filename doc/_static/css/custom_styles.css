@@ -21,9 +21,18 @@ strong {
 
 /* Style for Font Awesome that only styles the icons before elements */
 
+
+/* Style for OpenTeams icon, used like the FA Brands icons */
+
 .openteams-icon::before {
-  content: url("../images/Opeteams_Favicon-01.svg");
-  width: 1em;
+  content: url("../images/openteams-favicon.svg");
+  width: 1.3em;
+  margin-left: -0.2em;
+}
+
+div.openteams-icon::before {
+  margin-right: 0;
+  padding-bottom: 0;
 }
 
 .fasb::before,

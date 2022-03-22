@@ -351,7 +351,7 @@ Additional help
 
 .. rst-class:: fasb openteams-icon
 
-Get help from expert Spyder consultants on `OpenTeams`_.
+*Need personalized help from expert Spyder consultants?* Visit `OpenTeams`_.
 
 .. _Troubleshooting Guide and FAQ: https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ
 .. _main website: https://www.spyder-ide.org/
