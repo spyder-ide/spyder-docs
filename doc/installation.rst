@@ -349,7 +349,7 @@ Additional help
 
 *Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
 
-.. rst-class:: fasb openteams-icon
+.. rst-class:: fabb openteams-icon
 
 *Seeking personalized help from expert Spyder consultants?* Visit `OpenTeams`_.
 
