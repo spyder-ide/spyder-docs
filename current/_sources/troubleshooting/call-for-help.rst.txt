@@ -73,6 +73,16 @@ It has an vibrant Spyder community as well, with new questions posted every day,
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
 
 
+.. rst-class:: fabb openteams-icon
+
+OpenTeams support
+~~~~~~~~~~~~~~~~~
+
+On `OpenTeams`_, you can get help from expert Spyder consultants.
+OpenTeams offers services from Spyder experts ranging from a brief consultation to an experienced team to help you with a large scale implementation project.
+
+.. _OpenTeams: https://www.openteams.com/app/marketplace/project-page-2/3502
+
 
 .. rst-class:: fa-offset-h3
 

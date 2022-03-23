@@ -97,6 +97,19 @@ div.fa-user-friends::before {
   color: #f6951f;
 }
 
+/*** Style for OpenTeams icon, used like the FA Brands icons ***/
+
+.openteams-icon::before {
+  content: url("../images/openteams-favicon.svg");
+  margin-left: -0.2em;
+  width: 1.3em;
+}
+
+div.openteams-icon::before {
+  margin-right: 0;
+  padding-bottom: 0;
+}
+
 /*** Changes to the FAQ page ***/
 
 .dropdown .card-header {
