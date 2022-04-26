@@ -1,4 +1,5 @@
-jinja2
+jinja2>=2,<3  # Sphinx <4 is not compatible with Jinja >=3
+MarkupSafe>=1,<2  # Sphinx <4 is not compatible with MarkupSafe >=2
 pre-commit>=2.8.2
-sphinx>=3,<4
+sphinx>=3,<4  # Sphinx-Multiversion is not compatible with Sphinx 4
 virtualenv<20.0.34  # To not break pre-commit on Windows, for now

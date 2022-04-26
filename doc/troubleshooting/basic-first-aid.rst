@@ -110,7 +110,7 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
    .. image:: /images/basic-first-aid/basic-first-aid-qtconsole.png
       :alt: Anaconda navigator showing qtconsole
 
-   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :doc`ipythonconsole` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
+   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :doc:`/panes/ipythonconsole` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
 
 #. **An IPython command line shell**, launched with e.g. ``ipython`` from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
    Reproducible bugs can be reported to their `Github page`_, though make sure to read their guidelines and docs first.
