@@ -165,11 +165,12 @@ repos:
     name: Check RST inline touching normal
 
 # Lint RST
-- repo: https://github.com/myint/rstcheck
-  rev: '3f92957478422df87bd730abde66f089cc1ee19b'
+- repo: https://github.com/sphinx-contrib/sphinx-lint
+  rev: 'v0.4'
   hooks:
-  - id: rstcheck
+  - id: sphinx-lint
     name: Lint RST
+    args: [-f, --severity, '0', --disable, 'line too long']
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
