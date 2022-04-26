@@ -14,6 +14,9 @@
     "br_spaces": 0,
     "strict": true
   },
+  "no-hard-tabs": {
+    "spaces_per_tab": 4
+  },
   "no-multiple-blanks": {
     "maximum": 4
   },
@@ -31,5 +34,11 @@
   },
   "code-fence-style": {
     "style": "backtick"
+  },
+  "emphasis-style": {
+    "style": "asterisk"
+  },
+  "strong-style": {
+    "style": "asterisk"
   }
 }

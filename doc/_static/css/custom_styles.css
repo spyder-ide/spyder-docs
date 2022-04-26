@@ -192,7 +192,7 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 /* Version selector and header */
 
 #versions-header {
-  color: rgb(0 0 0 / 0.65);
+  color: rgb(0 0 0 / 65%);
   font-size: 0.8rem;
   margin-top: 1.1rem;
   text-transform: uppercase;
@@ -200,8 +200,8 @@ a[href="#join-our-community"] + ul li.toc-h3 {
 
 #select-versions {
   background-color: transparent;
-  border: 1px solid rgb(0 0 0 / 0.15);
-  color: rgb(0 0 0 / 0.65);
+  border: 1px solid rgb(0 0 0 / 15%);
+  color: rgb(0 0 0 / 65%);
   font-size: 90%;
   margin-bottom: 7px;
   padding: 2px;

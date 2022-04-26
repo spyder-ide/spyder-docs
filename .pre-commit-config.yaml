@@ -19,22 +19,24 @@ repos:
 
 # General fixers
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: trailing-whitespace
+    name: Trim trailing whitespace
     exclude_types: [svg]
   - id: mixed-line-ending
     name: Normalize mixed line endings
     args: [--fix=lf]
     exclude_types: [batch]
   - id: end-of-file-fixer
+    name: Fix end of files
     exclude_types: [svg]
   - id: fix-byte-order-marker
     name: Remove Unicode BOM
 
 # More general fixers
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.10
+  rev: v1.1.13
   hooks:
   - id: remove-tabs
     name: Replace tabs with spaces
@@ -64,14 +66,12 @@ repos:
     name: Lint and fix CSS (stylelint)
     args: [--fix, --color, --maxWarnings, '0']
     additional_dependencies:
-    - 'stylelint@13.13.1'
-    - 'stylelint-config-standard@22.0.0'
-    - 'stylelint-a11y@1.2.3'
-    - 'stylelint-csstree-validator@1.9.0'
-    - 'stylelint-declaration-block-no-ignored-properties@2.4.0'
-    - 'stylelint-no-unsupported-browser-features@5.0.1'
-    - 'stylelint-order@4.1.0'
-    - 'postcss'  # Manually required or a11y doesn't work properly
+    - 'stylelint@14.7.1'
+    - 'stylelint-config-standard@25.0.0'
+    - 'stylelint-csstree-validator@2.0.0'
+    - 'stylelint-declaration-block-no-ignored-properties@2.5.0'
+    - 'stylelint-no-unsupported-browser-features@5.0.3'
+    - 'stylelint-order@5.0.0'
 
 # Lint CSS with CSSlint
 - repo: https://github.com/pre-commit/mirrors-csslint
@@ -82,7 +82,7 @@ repos:
 
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.1.0
+  rev: v2.3.0
   hooks:
   - id: pretty-format-ini
     name: Format INI
@@ -90,28 +90,28 @@ repos:
     args: [--autofix]
 
 # Lint and fix JavaScript
-- repo: https://github.com/pre-commit/mirrors-eslint
-  rev: v7.32.0
+- repo: https://github.com/eslint/eslint
+  rev: v8.14.0
   hooks:
   - id: eslint
-    name: Lint and fix JavaScript
-    args: [--fix, --max-warnings, '0', --color]
+    name: Lint and fix JavaScript (ESLint)
+    args: [--fix, --max-warnings, '0', --color --report-unused-disable-directives]
     additional_dependencies:
-    - 'eslint@7.32.0'
-    - 'eslint-config-standard@16.0.3'
-    - 'eslint-plugin-import@2.24.1'
-    - 'eslint-plugin-node@11.1.0'
-    - 'eslint-plugin-promise@4.3.1'
+    - 'eslint-config-standard@17.0.0'
+    - 'eslint-plugin-import@2.25.2'
+    - 'eslint-plugin-n@15.2.0'
+    - 'eslint-plugin-promise@6.0.0'
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: check-json
+    name: Check JSON
 
 # Add doctoc to Markdown
 - repo: https://github.com/thlorenz/doctoc
-  rev: v2.0.1
+  rev: v2.1.0
   hooks:
   - id: doctoc
     name: Generate Markdown ToCs
@@ -119,7 +119,7 @@ repos:
 
 # Lint Markdown
 - repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.29.0
+  rev: v0.31.1
   hooks:
   - id: markdownlint
     name: Lint Markdown
@@ -127,27 +127,27 @@ repos:
 
 # Check Python
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: check-ast
     name: Check Python AST
 
 # Lint Python
 - repo: https://github.com/pycqa/flake8
-  rev: '3.9.2'
+  rev: '4.0.1'
   hooks:
   - id: flake8
     name: Lint Python with Flake8
 
 - repo: https://github.com/pycqa/pylint
-  rev: v2.11.1
+  rev: v2.13.7
   hooks:
   - id: pylint
     name: Lint Python with Pylint
 
 # Check Python dependencies
 - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-  rev: v1.2.2
+  rev: v1.2.4
   hooks:
   - id: python-safety-dependencies-check
     name: Run Safety check on dependencies
@@ -165,45 +165,49 @@ repos:
     name: Check RST inline touching normal
 
 # Lint RST
-- repo: https://github.com/myint/rstcheck
-  rev: '3f92957478422df87bd730abde66f089cc1ee19b'
+- repo: https://github.com/sphinx-contrib/sphinx-lint
+  rev: 'v0.4'
   hooks:
-  - id: rstcheck
+  - id: sphinx-lint
     name: Lint RST
+    args: [-f, --severity, '0', --disable, 'line too long']
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: check-toml
+    name: Check TOML
   - id: check-xml
+    name: Check XML
 
 # Pretty-format YAML
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.1.0
+  rev: v2.3.0
   hooks:
   - id: pretty-format-yaml
-    name: Format Yaml
+    name: Format YAML
     args: [--autofix, --indent, '2', --preserve-quotes]
 
 # Check YAML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: check-yaml
+    name: Check YAML
 
 # Lint YAML
 - repo: https://github.com/adrienverge/yamllint.git
   rev: v1.26.3
   hooks:
   - id: yamllint
-    name: Lint Yaml
+    name: Lint YAML
     types: [yaml]
     args: [-s, -f, colored]
 
 # Replace CRLF with LF post-prettify
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.10
+  rev: v1.1.13
   hooks:
   - id: remove-crlf
     name: Replace CRLFs with LF
@@ -220,27 +224,28 @@ repos:
     name: Check for Unicode replacement chars
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: v4.2.0
   hooks:
   - id: check-added-large-files
+    name: Check for added large files
     args: [--maxkb=1025]
   - id: check-case-conflict
+    name: Check for case conflicts
   - id: check-executables-have-shebangs
+    name: Check that executables have shebangs
     exclude: 'pre\-commit\-config\.yaml'
   - id: check-shebang-scripts-are-executable
+    name: Check that shebangs are executable
     exclude: 'pre\-commit\-config\.yaml'
   - id: check-merge-conflict
-  # Disable to avoid GitHub CI lint checks failing on merging to production
-  # - id: no-commit-to-branch
-  #   name: Prevent commits to wrong branch
-  #   args: [--branch, master, --branch, main, --pattern, 'v?\d{1,3}\.x']
+    name: Check for merge conflicts
 
 
 # Commit message hooks #
 
 # Check that commit message follows basic rules
 - repo: https://github.com/jorisroovers/gitlint
-  rev: v0.15.1
+  rev: v0.17.0
   hooks:
   - id: gitlint
     name: Check commit message
