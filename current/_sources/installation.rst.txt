@@ -120,13 +120,13 @@ Just run the following command in your Anaconda Prompt (Windows) or terminal (ot
 
 .. code-block:: bash
 
-   conda create -n spyder-env spyder=4
+   conda create -n spyder-env spyder
 
 To install Spyder's optional dependencies as well for full functionality, use the following command instead:
 
 .. code-block:: bash
 
-   conda create -n spyder-env spyder=4 numpy scipy pandas matplotlib sympy cython
+   conda create -n spyder-env spyder numpy scipy pandas matplotlib sympy cython
 
 To install Spyder from Conda-Forge instead of the default Anaconda channel, add ``-c conda-forge`` at the end of either of the previous commands.
 

@@ -611,11 +611,11 @@ On other platforms, open Anaconda Navigator, scroll to Spyder under <code class=
 <h3>New Conda environment<a class="headerlink" href="#new-conda-environment" title="Permalink to this headline">¶</a></h3>
 <p>If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.
 Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env <span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env spyder
 </pre></div>
 </div>
 <p>To install Spyder’s optional dependencies as well for full functionality, use the following command instead:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env <span class="nv">spyder</span><span class="o">=</span><span class="m">4</span> numpy scipy pandas matplotlib sympy cython
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env spyder numpy scipy pandas matplotlib sympy cython
 </pre></div>
 </div>
 <p>To install Spyder from Conda-Forge instead of the default Anaconda channel, add <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">conda-forge</span></code> at the end of either of the previous commands.</p>
