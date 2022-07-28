@@ -5,9 +5,14 @@ First off, thanks for your interest in helping out with the documentation for Sp
 **Important Note:** This is the repository for the documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself.
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
 You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
-For more guidance on the basics of using ``git`` and Github to contribute to Spyder and its documentation, please see the [contributing guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) in the main Spyder repository mentioned above, and check out the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed information.
+
+Spyder-Docs is part of the Spyder IDE Github org, and is developed with standard Github flow.
+If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://guides.github.com/introduction/git-handbook/#basic-git) and its [guide to the fork workflow](https://guides.github.com/activities/forking/), or (if you prefer) their [video equivalents](https://www.youtube.com/githubguides).
+However, this contributing guide should fill you in on most of the basics you need to know.
+
 For an introduction to the basics of reST syntax, the source format in which Spyder's documentation is written, see the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
 
+Let us know if you have any further questions, and we look forward to your contributions!
 
 
 <!-- markdownlint-disable -->
@@ -15,13 +20,16 @@ For an introduction to the basics of reST syntax, the source format in which Spy
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Reporting Issues](#reporting-issues)
-- [Documentation Branches](#documentation-branches)
-- [Submitting Pull Requests](#submitting-pull-requests)
-- [Building and Testing Locally](#building-and-testing-locally)
+- [Setting Up a Development Environment](#setting-up-a-development-environment)
+  - [Fork and clone the repo](#fork-and-clone-the-repo)
+  - [Create and activate a fresh environment](#create-and-activate-a-fresh-environment)
   - [Install dependencies](#install-dependencies)
-  - [Set up Pre-Commit](#set-up-pre-commit)
-  - [Build the docs](#build-the-docs)
-- [Netlify Notes](#netlify-notes)
+  - [Install the required Pre-Commit hooks](#install-the-required-pre-commit-hooks)
+- [Building the docs](#building-the-docs)
+- [Deciding Which Branch to Use](#deciding-which-branch-to-use)
+- [Making Your Changes](#making-your-changes)
+- [Pushing your Branch](#pushing-your-branch)
+- [Submitting a Pull Request](#submitting-a-pull-request)
 - [Standards and Conventions](#standards-and-conventions)
   - [Key standards](#key-standards)
   - [Style conventions](#style-conventions)
@@ -33,74 +41,115 @@ For an introduction to the basics of reST syntax, the source format in which Spy
 
 ## Reporting Issues
 
-If you find a typo in the text, a passage that could be clarified, or would like a section or document added or expanded upon, please submit an issue report documenting the bug, enhancement or new content following the guidance in our issue template.
+Find a typo in the text, a passage that could be clarified, or would like a section or document added or expanded upon?
+Please [open](https://github.com/spyder-ide/spyder-docs/issues/new/choose) an [issue](https://github.com/spyder-ide/spyder-docs/issues) documenting the bug, enhancement or new content following the guidance in our issue template.
 
 If referring to a particular word, line or section, please be sure to provide a snippet of context and/or the file and line number to allow us to find and fix it, and if pointing out a problem, please be as specific as you can in suggesting a revised wording that would solve it.
-Issue reports that don't contain enough information to allow us to do something about them will be closed.
 
 
 
-## Documentation Branches
-
-* The ``master`` branch contains the in-development documentation for Spyder 5; changes specific to that version should be made against this branch.
-* The ``4.x`` branch contains the docs for Spyder 4 and is still maintained, which all PRs not specifically for Spyder 5 should be based against.
-* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version; no further PRs will be accepted
-
-
-
-## Submitting Pull Requests
-
-We welcome contributions from the community, and will do our best to review all of them in a timely fashion.
-To do so, please submit a pull request (PR) to this repo against the appropriate branch with your changes, and create a corresponding issue as well if your change is substantive, so that we can keep track of everything and give you credit for closing it.
-
-Please make sure your PR titles are brief but descriptive, and include ``PR:`` as a prefix; most importantly, make sure you follow and fill out the template provided, which should guide you through the process and make sure everything runs smoothly.
-
-
-
-## Building and Testing Locally
+## Setting Up a Development Environment
 
 For non-trivial changes, its easy to work with Spyder-Docs locally by following a few simple steps.
+
+**Note**: You may need to substitute ``python3`` for ``python`` in the commands below on some Linux distros where ``python`` isn't mapped to ``python3`` (yet).
+
+
+### Fork and clone the repo
+
+First, navigate to the [project repository](https://github.com/spyder-ide/spyder-docs) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own Github account.
+Then, click the ``Clone or Download`` button on your repository, copy the link and run the following on the command line to clone the repo:
+
+```bash
+git clone <LINK-TO-YOUR-REPO>
+```
+
+Finally, set the upstream remote to the official Spyder-Docs repo with:
+
+```bash
+git remote add upstream https://github.com/spyder-ide/spyder-docs.git
+```
+
+
+### Create and activate a fresh environment
+
+We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
+Of course, you're free to use any environment management tool of your choice (conda, virtualenvwrapper, pyenv, etc).
+
+To do so with Conda (recommended), simply execute the following:
+
+```bash
+conda create -c conda-forge -n spyder-docs-env python=3.9
+```
+
+And activate it with
+
+```bash
+conda activate spyder-docs-env
+```
+
+With pip/venv, you can create a virtual environment with
+
+```bash
+python -m venv spyder-docs-env
+```
+
+And activate it with the following on Linux and macOS,
+
+```bash
+source spyder-docs-env/bin/activate
+```
+
+or on Windows (cmd),
+
+```cmd
+.\spyder-docs-env\Scripts\activate.bat
+```
+
+Regardless of the tool you use, make sure to remember to always activate your environment before using it.
 
 
 ### Install dependencies
 
-Make sure you have the appropriate dependencies installed in your active Python environment for the script to work.
-You can install them into your current conda environment with:
+Then, you need to install the appropriate dependencies in your active Python environment to develop and build the documentation.
+You can install them into your current Conda environment with:
 
 ```bash
 conda install -c conda-forge --file requirements-conda.txt
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 ```
 
-Or, if using ``pip`` (``pip3`` on Linux), you can grab them with just:
+Or, if using ``pip``, you can grab them with just:
 
 ```bash
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 ```
 
-### Set up Pre-Commit
 
-This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
-Pre-commit itself is installed with the above command, and the hooks can be installed by running the following from the root of this repo:
+### Install the required Pre-Commit hooks
+
+This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
+You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide; they are also run in CI, and will fail the build if any don't pass or modify any files.
+Pre-commit itself is installed with the above command, and the hooks should be enabled by running the following from the root of this repo:
 
 ```bash
-pre-commit install
-pre-commit install --hook-type commit-msg
+pre-commit install --hook-type pre-commit --hook-type commit-msg
 ```
 
 The hooks will be automatically run against any new/changed files every time you commit.
 It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
-If you made one or more commits before installing the hooks (not recommended), to run them manually on all the files in the repo, execute:
+If you made one or more commits before installing the hooks (not recommended), you can run them manually on all the files in the repo with:
 
 ```bash
 pre-commit run --all-files
 ```
 
-**Note**: Most of the hooks fix the problems they detect automatically (the hook output will say ``files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
-Once you're satisfied, ``git add .`` again and commit again.
+**Note**: Many of the hooks fix the problems they detect automatically (the hook output will say ``Files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
+Once you're satisfied, ``git add .`` and commit again.
 
 
-### Build the docs
+
+## Building the docs
 
 To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line (or the Anaconda prompt on Windows).
 
@@ -131,11 +180,69 @@ Either way, you should be able to view the HTML output inside the resulting ``_b
 
 
 
-## Netlify Notes
+## Deciding Which Branch to Use
 
-* The `runtime.txt` file in the root of the repo is needed by Netlify to declare the Python version required to build the docs.
-* By default, Netlify adds a lot of checks to pull requests, besides the one that actually builds the live preview.
-  To remove those extra checks, you need to go to the `Build and deploy` configuration entry, then to the `Outgoing notifications` section, and remove all commit notifications that don't start with `Add Deploy Preview`.
+When you start to work on a new pull request (PR), you need to be sure that your work is done on top of the correct branch, and that you base your PR on Github against it.
+
+To guide you, issues on Github are marked with a milestone that indicates the correct branch to use.
+If not, follow these guidelines:
+
+* The ``master`` branch contains the in-development documentation for Spyder 5; most general changes and those specific to that version should be made against this branch.
+* The ``4.x`` branch contains the docs for Spyder 4 and is in bugfix-only mode; no substantial new content should be added here at this point.
+* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version; no further PRs will be accepted
+
+Of course, if an issue is only present in a specific branch, please base your PR on that branch.
+If you are at all unsure which branch to use, we'll be happy to guide you.
+
+
+
+## Making Your Changes
+
+To start working on a new PR, you need to execute these commands, filling in the branch names where appropriate (``<BASE-BRANCH>`` is the branch you're basing your work against, e.g. ``master``, while ``<FEATURE-BRANCH>`` is the branch you'll be creating to store your changes, e.g. ``fix-doc-typo`` or ``add-plugin-guide``:
+
+```bash
+git checkout <BASE-BRANCH>
+git pull upstream <BASE-BRANCH>
+git checkout -b <FEATURE-BRANCH>
+```
+
+Once you've made and tested your changes, commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
+Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the diffs.
+For example:
+
+```bash
+git commit -am "Add new guide on developing plugins for Spyder"
+```
+
+If your changes are complex (more than a few dozen lines) and can be broken into discrete steps/parts, its often a good idea to make multiple commits as you work.
+On the other hand, if your changes are fairly small (less than a dozen lines), its usually better to make them as a single commit, and then use the ``git -a --amend`` (followed by ``git push -f``, if you've already pushed your work) if you spot a bug or a reviewer requests a change.
+
+These aren't hard and fast rules, so just use your best judgment, and if there does happen to be a significant issue we'll be happy to help.
+
+
+
+## Pushing your Branch
+
+Now that your changes are ready to go, you'll need to push them to the appropriate remote repository.
+All contributors, including core developers, should push to their personal fork and submit a PR from there, to avoid cluttering the upstream repo with feature branches.
+To do so, run:
+
+```bash
+git push -u origin <FEATURE-BRANCH>
+```
+
+Where ``<FEATURE-BRANCH>`` is the name of your feature branch, e.g. ``fix-docs-typo``.
+
+
+
+## Submitting a Pull Request
+
+Finally, create a pull request to the [spyder-ide/spyder-docs repository](https://github.com/spyder-ide/spyder-docs/) on Github.
+Make sure to set the target branch to the one you based your PR off of (``master`` or ``X.x``).
+
+We'll then review your changes, and after they're ready to go, your work will become an official part of Spyder-Docs.
+
+Thanks for taking the time to read and follow this guide, and we look forward to your contributions!
 
 
 
@@ -157,6 +264,8 @@ Make sure you follow these to ensure clarity, consistency and correctness throug
 
 This section summarizes the important points for doc authors to actively keep in mind while writing the documentation.
 See the [Style Guide](https://github.com/spyder-ide/spyder-docs/blob/master/STYLEGUIDE.md) for a comprehensive reference on a wide variety of topics that may be pertinent to specific situations encountered when working on the docs.
+If you're not sure about something, don't worry about it!
+Feel free to ask, or request a maintainer take care of the style nits for you.
 
 * **Admonitions**: ``important::`` for key points, ``warnings`` for things to avoid, and ``note::`` for everything else.
 * **Blank lines**: One after all headings and before and after paragraphs, directives and ``|``s
