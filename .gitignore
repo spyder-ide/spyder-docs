@@ -1,13 +1,18 @@
 # Standard gitignore list
 
 # Archive files
+*.7z
+*.bz2
 *.gz
-*.zip
+*.lzma
+*.lzma2
 *.tar
 *.xz
+*.zip
 
 # Temporary / backup files
 *.bak
+*.swp
 *.tmp
 *.temp
 
@@ -24,6 +29,10 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+*.egg
+*.egg-info/
+.eggs/
+.installed.cfg
 .Python
 bin/
 build/
@@ -31,19 +40,15 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
+MANIFEST
 parts/
+pip-wheel-metadata/
 sdist/
+share/python-wheels/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -56,21 +61,20 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
+.cache
+*.cover
 .coverage
 .coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
 .hypothesis/
+.nox/
 .pytest_cache/
+.tox/
+coverage.xml
+htmlcov/
+nosetests.xml
 
 # Translations
 *.mo
-*.pot
 
 # Django stuff:
 *.log
@@ -102,14 +106,7 @@ ipython_config.py
 # pyenv
 .python-version
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# celery beat schedule file
+# Celery beat schedule file
 celerybeat-schedule
 
 # SageMath parsed files
@@ -119,8 +116,8 @@ celerybeat-schedule
 .env
 .venv
 env/
-venv/
 ENV/
+venv/
 VENV/
 env.bak/
 venv.bak/
@@ -161,3 +158,14 @@ nppBackup/
 
 # VSCode files
 .vscode/
+
+# Kate
+.directory
+.swp.*
+*.swp
+
+# PyPi configuration
+.pypirc
+
+# Other files
+toread.md
