@@ -97,7 +97,7 @@ Anaconda
 
 Spyder is included by default in the `Anaconda Python distribution`_, which comes with everything you need to get started in an all-in-one package, and is our recommended installation method on Linux (and supported on the other platforms too).
 
-.. _Anaconda Python distribution: https://www.anaconda.com/products/individual
+.. _Anaconda Python distribution: https://www.anaconda.com/products/distribution
 
 
 Running with Anaconda
@@ -169,7 +169,7 @@ Thanks to the `MacPorts project`_, Spyder can be installed using its ``port`` pa
 
 There are `several versions`_ available from which you can choose.
 
-.. _several versions: https://ports.macports.org/?search=spyder&search_by=name
+.. _several versions: https://ports.macports.org/search/?q=spyder&name=on
 
 
 Linux
@@ -357,6 +357,6 @@ Additional help
 .. _main website: https://www.spyder-ide.org/
 .. _Github repository: https://github.com/spyder-ide/spyder/
 .. _Github wiki: https://github.com/spyder-ide/spyder/wiki
-.. _Google Group: https://groups.google.com/group/spyderlib
+.. _Google Group: https://groups.google.com/g/spyderlib
 .. _Gitter chatroom: https://gitter.im/spyder-ide/public
 .. _OpenTeams: https://www.openteams.com/app/marketplace/project-page-2/3502

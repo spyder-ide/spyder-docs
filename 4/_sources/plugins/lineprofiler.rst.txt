@@ -5,7 +5,7 @@ Spyder Line Profiler
 **Spyder-Line-Profiler** is a plugin to run the Python `line profiler`_.
 This package profiles the time that individual lines of code take to execute.
 
-.. _line profiler: https://pypi.python.org/pypi/line_profiler
+.. _line profiler: https://pypi.org/project/line-profiler/
 
 .. image:: /images/lineprofiler/lineprofiler-overview.png
    :alt: Spyder with the Line Profiler pane open

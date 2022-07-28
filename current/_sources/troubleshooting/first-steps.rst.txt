@@ -14,7 +14,7 @@ There's a good chance that someone else has already experienced the same problem
      As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for install issues.
 
 .. _Stack Overflow: https://stackoverflow.com
-.. _Anaconda: https://www.anaconda.com/products/individual
+.. _Anaconda: https://www.anaconda.com/products/distribution
 
 Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message.
 To view it, simply click :guilabel:`Show details` in the Spyder error dialog.
