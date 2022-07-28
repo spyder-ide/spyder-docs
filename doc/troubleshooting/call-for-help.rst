@@ -49,7 +49,7 @@ Spyder Google Group
 
 Our `Google Group`_ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
 
-.. _Google Group: https://groups.google.com/group/spyderlib
+.. _Google Group: https://groups.google.com/g/spyderlib
 
 
 .. rst-class:: fasb fa-globe
@@ -127,8 +127,7 @@ Anaconda help
 
 The `Anaconda docs`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
 
-.. _Anaconda docs: https://www.anaconda.com/help
-
+.. _Anaconda docs: https://anaconda.cloud/support-center
 
 .. rst-class:: fasb fa-flask
 
@@ -137,7 +136,7 @@ SciPy.org website
 
 The `Scipy website`_ is the the central home of the SciPy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy and IPython.
 
-.. _Scipy website: https://www.scipy.org/
+.. _Scipy website: https://scipy.org/
 
 
 .. rst-class:: fasb fa-sticky-note

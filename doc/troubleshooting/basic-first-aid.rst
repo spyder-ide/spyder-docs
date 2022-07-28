@@ -90,7 +90,7 @@ Then, do a clean install of the latest version of the `Anaconda distribution`_ w
    For further information, please visit our :doc:`/installation`.
 
 .. _Anaconda uninstall guide: https://docs.anaconda.com/anaconda/install/uninstall/
-.. _Anaconda distribution: https://www.anaconda.com/products/individual
+.. _Anaconda distribution: https://www.anaconda.com/products/distribution
 
 
 

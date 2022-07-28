@@ -12,7 +12,7 @@ Installing and updating
    The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
    Download it from its `webpage`_.
 
-   .. _webpage: https://www.anaconda.com/products/individual
+   .. _webpage: https://www.anaconda.com/products/distribution
 
    For more information, visit our :doc:`/installation`.
 
