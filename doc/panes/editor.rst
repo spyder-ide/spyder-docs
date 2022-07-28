@@ -2,22 +2,26 @@
 Editor
 ######
 
-Spyder's multi-language **Editor** integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
-The Editor's key features include syntax highlighting (``pygments``); real-time code and style analysis (``pyflakes`` and ``pycodestyle``); on-demand completion, calltips and go-to-definition features (``rope`` and ``jedi``); a function/class browser, horizontal and vertical splitting, and much more.
+Spyder's multi-language **Editor** pane is the key element of the IDE where users can create, open, and modify code files.
+The Editor offers a variety of core features like autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
+In addition, it uniquely integrates a number of powerful tools for an easy to use, efficient editing experience.
 
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
-:guilabel:`Outline Explorer` (function/class/method browser) and horizontal/vertical splitting capabilities:
+The editor pane consists of the following areas:
 
-.. image:: /images/editor/editor-outline-standard.png
-   :alt: Spyder outline panel, showing the functions/classes/methods in a file
+.. image:: /images/editor/editor-pane.png
+   :alt: Spyder's Editor panel, showing the different areas of the editor
 
-Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
 
-.. image:: /images/editor/editor-inset-code-analysis.png
-   :alt: A snippit of code in the Spyder Editor, showing code style warnings
-
+1. The left sidebar shows line numbers and displays any code analysis errors/warnings that exist in the current file.
+   Clicking a line number highlights the code in that line.
+2. The right and bottom scrollbars help navigate the code in the current file vertically and horizontally.
+3. The Context menu displays actions relevant to the editor pane. To display the context menu for the editor, right-click anywhere over it and a list of possible options appears under the cursor.
+4. The options menu appears when clicking the "Hamburger" icon at the top right containing useful settings and actions relevant to the editor.
+5. The location-based breadcrumbs on the top of the editor pane show the exact location of the current file in your machine.
+6. The tabs bar displays the names of all active/opened files. It also offers a “Browse tabs” ability to effortlessly switch between tabs and see which file is currently under selection, especially when there is large number of active files.
 
 
 ===================
