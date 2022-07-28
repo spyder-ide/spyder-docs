@@ -60,13 +60,13 @@ For non-trivial changes, its easy to work with Spyder-Docs locally by following 
 First, navigate to the [project repository](https://github.com/spyder-ide/spyder-docs) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own Github account.
 Then, click the ``Clone or Download`` button on your repository, copy the link and run the following on the command line to clone the repo:
 
-```bash
+```shell
 git clone <LINK-TO-YOUR-REPO>
 ```
 
 Finally, set the upstream remote to the official Spyder-Docs repo with:
 
-```bash
+```shell
 git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 ```
 
@@ -78,19 +78,19 @@ Of course, you're free to use any environment management tool of your choice (co
 
 To do so with Conda (recommended), simply execute the following:
 
-```bash
+```shell
 conda create -c conda-forge -n spyder-docs-env python=3.9
 ```
 
 And activate it with
 
-```bash
+```shell
 conda activate spyder-docs-env
 ```
 
 With pip/venv, you can create a virtual environment with
 
-```bash
+```shell
 python -m venv spyder-docs-env
 ```
 
@@ -114,14 +114,14 @@ Regardless of the tool you use, make sure to remember to always activate your en
 Then, you need to install the appropriate dependencies in your active Python environment to develop and build the documentation.
 You can install them into your current Conda environment with:
 
-```bash
+```shell
 conda install -c conda-forge --file requirements-conda.txt
 python -m pip install -r requirements-dev.txt
 ```
 
 Or, if using ``pip``, you can grab them with just:
 
-```bash
+```shell
 python -m pip install -r requirements-dev.txt
 ```
 
@@ -132,7 +132,7 @@ This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure
 You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide; they are also run in CI, and will fail the build if any don't pass or modify any files.
 Pre-commit itself is installed with the above command, and the hooks should be enabled by running the following from the root of this repo:
 
-```bash
+```shell
 pre-commit install --hook-type pre-commit --hook-type commit-msg
 ```
 
@@ -140,7 +140,7 @@ The hooks will be automatically run against any new/changed files every time you
 It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
 If you made one or more commits before installing the hooks (not recommended), you can run them manually on all the files in the repo with:
 
-```bash
+```shell
 pre-commit run --all-files
 ```
 
@@ -168,7 +168,7 @@ make multidocs
 
 On a system without ``make`` (like Windows, by default), or to build the docs manually, run:
 
-```bash
+```shell
 python -m sphinx -n -W --keep-going -b html doc doc/_build/html
 ```
 
@@ -196,7 +196,7 @@ If you are at all unsure which branch to use, we'll be happy to guide you.
 
 To start working on a new PR, you need to execute these commands, filling in the branch names where appropriate (``<BASE-BRANCH>`` is the branch you're basing your work against, e.g. ``master``, while ``<FEATURE-BRANCH>`` is the branch you'll be creating to store your changes, e.g. ``fix-doc-typo`` or ``add-plugin-guide``:
 
-```bash
+```shell
 git checkout <BASE-BRANCH>
 git pull upstream <BASE-BRANCH>
 git checkout -b <FEATURE-BRANCH>
@@ -206,7 +206,7 @@ Once you've made and tested your changes, commit them with a descriptive, unique
 Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the diffs.
 For example:
 
-```bash
+```shell
 git commit -am "Add new guide on developing plugins for Spyder"
 ```
 
@@ -223,7 +223,7 @@ Now that your changes are ready to go, you'll need to push them to the appropria
 All contributors, including core developers, should push to their personal fork and submit a PR from there, to avoid cluttering the upstream repo with feature branches.
 To do so, run:
 
-```bash
+```shell
 git push -u origin <FEATURE-BRANCH>
 ```
 
