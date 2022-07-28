@@ -89,7 +89,7 @@ Learn how to improve the quality of your programs using code analysis.
 
       For example, the results tell us that there is a warning on line 20. To go directly to this line in the Editor, just click the message. Here, the code analysis says there is a ``bad-whitespace`` issue. To understand what this means, open the Pylint documentation. On the `Pylint docs page`_ , click on Pylint features and search for the code of the message.
 
-      .. _Pylint docs page: http://pylint.pycqa.org/en/stable/index.html
+      .. _Pylint docs page: https://pylint.pycqa.org/en/stable/index.html
 
       We can see that the docs say that we used the wrong number of spaces around an operator.
 
