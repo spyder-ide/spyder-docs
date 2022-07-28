@@ -13,6 +13,11 @@ rules:
     max-spaces-inside-empty: 0
   document-start: disable
   empty-values: enable
+  float-values:
+    forbid-inf: true
+    forbid-nan: true
+    forbid-scientific-notation: false
+    require-numeral-before-decimal: true
   indentation:
     spaces: 2
     indent-sequences: consistent

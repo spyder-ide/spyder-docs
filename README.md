@@ -2,7 +2,7 @@
 
 ![Spyder Docs - Documentation for the Scientific Python Development Environment](./doc/_static/images/spyder_readme_banner.png)
 
-*Copyright (c) 2009-2021 Spyder Doc Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-docs/blob/master/AUTHORS.txt))*
+*Copyright (c) 2009- Spyder Doc Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/spyder-docs/blob/master/AUTHORS.txt))*
 
 
 [![License](https://img.shields.io/pypi/l/spyder.svg)](./LICENSE.txt)
@@ -12,7 +12,7 @@
 [![Deploy](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](#backers)
+[![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
 [![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
 
 
