@@ -6,7 +6,7 @@ The **Code Analysis** pane detects style issues, bad practices, potential bugs, 
 Based on these results, it also gives your code an overall quality score.
 Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
 
-.. _Pylint: http://pylint.pycqa.org/
+.. _Pylint: https://pylint.pycqa.org/
 
 .. image:: /images/pylint/code-analysis-standard.png
    :alt: Spyder Pylint pane, showing numerous issues discovered in a file
@@ -68,9 +68,9 @@ Advanced options
 You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_.
 For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``.
 
-.. _scope: http://pylint.pycqa.org/en/stable/user_guide/message-control.html
+.. _scope: https://pylint.pycqa.org/en/stable/user_guide/message-control.html
 
-.. _Pylint message names: http://pylint.pycqa.org/en/latest/technical_reference/features.html#pylint-checkers-options-and-switches
+.. _Pylint message names: https://pylint.pycqa.org/en/latest/user_guide/checkers/features.html#pylint-checkers-options-and-switches
 
 .. image:: /images/pylint/code-analysis-pylint-disable.gif
    :alt: Spyder Pylint pane, showing disabling a message locally
@@ -79,7 +79,7 @@ Or, you can globally suppress specific messages and adjust other Pylint settings
 If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the `Pylint documentation`_.
 
-.. _Pylint documentation:  http://pylint.pycqa.org/en/stable/index.html
+.. _Pylint documentation:  https://pylint.pycqa.org/en/stable/index.html
 
 .. image:: /images/pylint/code-analysis-pylint-file.gif
    :alt: Spyder Pylint pane, disabling a message globally in the .pylintrc
