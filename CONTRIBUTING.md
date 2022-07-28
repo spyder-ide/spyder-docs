@@ -151,24 +151,14 @@ Once you're satisfied, ``git add .`` and commit again.
 
 ## Building the docs
 
-To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line (or the Anaconda prompt on Windows).
+To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line, or via running the appropriate Sphinx command.
 
-To build just the docs for the current version, run the following if on macOS/Linux:
+To build just the docs for the current version, run the following on a system with ``make`` (macOS/Linux):
 
 ```bash
 make docs
 make serve
 ```
-
-or, if on Windows:
-
-```cmd
-cd doc
-make.bat html
-cd ..
-```
-
-**NOTE:** You can try to use the `make` commands on Windows if you have `make` installed and something like `Cygwin`, `MSYS2` or `MYSYS`, or by using Windows Subsystem for Linux (`WSL`).
 
 To build the full site with the documentation for all Spyder versions, run:
 
@@ -176,7 +166,13 @@ To build the full site with the documentation for all Spyder versions, run:
 make multidocs
 ```
 
-Either way, you should be able to view the HTML output inside the resulting ``_build`` directory the build commands produce; ``index.html`` is the main page.
+On a system without ``make`` (like Windows, by default), or to build the docs manually, run:
+
+```bash
+python -m sphinx -n -W --keep-going -b html doc doc/_build/html
+```
+
+If not opened automatically with ``make serve``, you should be able to view the HTML output inside the resulting ``_build/html`` directory the build commands produce; ``index.html`` is the main page.
 
 
 
