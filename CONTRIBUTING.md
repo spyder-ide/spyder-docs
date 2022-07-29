@@ -75,6 +75,10 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 
 We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
 Of course, you're free to use any environment management tool of your choice (conda, virtualenvwrapper, pyenv, etc).
+Regardless of the tool you use, make sure to remember to always activate your environment before using it.
+
+
+#### Conda
 
 To do so with Conda (recommended), simply execute the following:
 
@@ -88,6 +92,9 @@ And activate it with
 conda activate spyder-docs-env
 ```
 
+
+#### Pip/Venv
+
 With pip/venv, you can create a virtual environment with
 
 ```shell
@@ -100,13 +107,12 @@ And activate it with the following on Linux and macOS,
 source spyder-docs-env/bin/activate
 ```
 
-or on Windows (cmd),
+or on Windows (``cmd.exe``),
 
 ```cmd
 .\spyder-docs-env\Scripts\activate.bat
 ```
 
-Regardless of the tool you use, make sure to remember to always activate your environment before using it.
 
 
 ### Install dependencies
