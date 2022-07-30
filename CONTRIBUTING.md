@@ -80,13 +80,13 @@ Regardless of the tool you use, make sure to remember to always activate your en
 
 #### Conda
 
-To do so with Conda (recommended), simply execute the following:
+To create an environment with Conda (recommended), simply execute the following:
 
 ```shell
 conda create -c conda-forge -n spyder-docs-env python=3.9
 ```
 
-And activate it with
+Then, activate it with
 
 ```shell
 conda activate spyder-docs-env
@@ -135,8 +135,9 @@ python -m pip install -r requirements-dev.txt
 ### Install the required Pre-Commit hooks
 
 This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
-You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide; they are also run in CI, and will fail the build if any don't pass or modify any files.
-Pre-commit itself is installed with the above command, and the hooks should be enabled by running the following from the root of this repo:
+You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide.
+They are also run on all pull requests, and will need to pass before your changes can be merged.
+Pre-commit itself is installed with the [above commands](#install-dependencies), and its hooks should be enabled by running the following from the root of this repo:
 
 ```shell
 pre-commit install --hook-type pre-commit --hook-type commit-msg
@@ -150,7 +151,7 @@ If you made one or more commits before installing the hooks (not recommended), y
 pre-commit run --all-files
 ```
 
-**Note**: Many of the hooks fix the problems they detect automatically (the hook output will say ``Files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
+**Note**: Many of the hooks fix the problems they detect automatically (the hook output will say ``Files were modified by this hook``, and no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
 Once you're satisfied, ``git add .`` and commit again.
 
 
@@ -159,7 +160,7 @@ Once you're satisfied, ``git add .`` and commit again.
 
 To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line, or via running the appropriate Sphinx command.
 
-To build just the docs for the current version, run the following on a system with ``make`` (macOS/Linux):
+To build just the docs for the current version, run the following on a system terminal with ``make`` (macOS/Linux):
 
 ```bash
 make docs
@@ -178,7 +179,8 @@ On a system without ``make`` (like Windows, by default), or to build the docs ma
 python -m sphinx -n -W --keep-going -b html doc doc/_build/html
 ```
 
-If not opened automatically with ``make serve``, you should be able to view the HTML output inside the resulting ``_build/html`` directory the build commands produce; ``index.html`` is the main page.
+If you've run ``make serve``, the rendered documentation should open automatically in your default web browser.
+Otherwise, navigate to the ``_build/html`` directory inside the ``spyder-docs`` repository and open ``index.html`` (the main page of the docs) in your browser.
 
 
 
@@ -209,7 +211,7 @@ git checkout -b <FEATURE-BRANCH>
 ```
 
 Once you've made and tested your changes, commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
-Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the diffs.
+Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the full diff output.
 For example:
 
 ```shell
@@ -217,7 +219,7 @@ git commit -am "Add new guide on developing plugins for Spyder"
 ```
 
 If your changes are complex (more than a few dozen lines) and can be broken into discrete steps/parts, its often a good idea to make multiple commits as you work.
-On the other hand, if your changes are fairly small (less than a dozen lines), its usually better to make them as a single commit, and then use the ``git -a --amend`` (followed by ``git push -f``, if you've already pushed your work) if you spot a bug or a reviewer requests a change.
+On the other hand, if your changes are fairly small (less than a dozen lines), its usually better to make them as a single commit, and then use the ``git -a --amend`` (followed by ``git push -f``, if you've already pushed your work) if you spot a bug or a reviewer requests a small change.
 
 These aren't hard and fast rules, so just use your best judgment, and if there does happen to be a significant issue we'll be happy to help.
 
@@ -267,7 +269,7 @@ Make sure you follow these to ensure clarity, consistency and correctness throug
 This section summarizes the important points for doc authors to actively keep in mind while writing the documentation.
 See the [Style Guide](https://github.com/spyder-ide/spyder-docs/blob/master/STYLEGUIDE.md) for a comprehensive reference on a wide variety of topics that may be pertinent to specific situations encountered when working on the docs.
 If you're not sure about something, don't worry about it!
-Feel free to ask, or request a maintainer take care of the style nits for you.
+Feel free to ask, or request a maintainer take care of the style details for you.
 
 * **Admonitions**: ``important::`` for key points, ``warnings`` for things to avoid, and ``note::`` for everything else.
 * **Blank lines**: One after all headings and before and after paragraphs, directives and ``|``s
