@@ -9,6 +9,10 @@ In addition, it uniquely integrates a number of powerful tools for an easy to us
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
+===========================
+The Editor's key components
+===========================
+
 The editor pane consists of the following areas:
 
 .. image:: /images/editor/editor-pane.png
@@ -17,11 +21,20 @@ The editor pane consists of the following areas:
 
 1. The left sidebar shows line numbers and displays any code analysis errors/warnings that exist in the current file.
    Clicking a line number highlights the code in that line.
+
+.. image:: /images/editor/editor-pane-code-error.png
+   :alt: Spyder outline panel, showing an example of a code error
+
 2. The right and bottom scrollbars help navigate the code in the current file vertically and horizontally.
-3. The Context menu displays actions relevant to the editor pane. To display the context menu for the editor, right-click anywhere over it and a list of possible options appears under the cursor.
-4. The options menu appears when clicking the "Hamburger" icon at the top right containing useful settings and actions relevant to the editor.
-5. The location-based breadcrumbs on the top of the editor pane show the exact location of the current file in your machine.
-6. The tabs bar displays the names of all active/opened files. It also offers a “Browse tabs” ability to effortlessly switch between tabs and see which file is currently under selection, especially when there is large number of active files.
+3. The Context menu displays actions relevant to the editor pane. To display the editor's context menu, right-click anywhere over it and a list of possible options will appear under the cursor.
+4. Another menu called the Options menu appears when clicking the "Hamburger" icon at the top right, which includes useful settings and actions relevant to the editor.
+
+.. image:: /images/editor/editor-pane-options-menu.png
+   :alt: Spyder outline panel with the options menu expanded
+
+5. The location-based breadcrumbs on the top left of the editor pane show the exact location of the current file in your system.
+6. The tabs bar displays the names of all opened files. It also offers a “Browse tabs” ability to effortlessly switch between current tabs and see which file is currently under selection. This feature comes handy when there is a large number of opened files.
+   By default, the active/in-use tab is usually underlined in blue and shows with a check mark on its left when you click "Brows tabs".
 
 
 ===================
