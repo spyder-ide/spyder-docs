@@ -33,7 +33,9 @@ The editor pane consists of the following areas:
    :alt: Spyder outline panel with the options menu expanded
 
 5. The location-based breadcrumbs on the top left of the editor pane show the exact location of the current file in your system.
-6. The tabs bar displays the names of all opened files. It also offers a “Browse tabs” ability to effortlessly switch between current tabs and see which file is currently under selection. This feature comes handy when there is a large number of opened files.
+6. The tabs bar displays the names of all opened files.
+   It also offers a "Browse tabs" ability to effortlessly switch between current tabs and see which file is currently under selection.
+   This feature comes handy when there is a large number of opened files.
    By default, the active/in-use tab is usually underlined in blue and shows with a check mark on its left when you click "Brows tabs".
 
 
