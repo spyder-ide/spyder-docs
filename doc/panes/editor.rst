@@ -15,23 +15,19 @@ The Editor's key components
 
 The editor pane consists of the following areas:
 
-.. image:: /images/editor/editor-pane.png
-   :alt: Spyder's Editor panel, showing the different areas of the editor
+.. image:: /images/editor/editor-components.png
+   :alt: Spyder's Editor pane, showing its different areas (described below)
 
 
 1. The left sidebar shows line numbers and displays any code analysis errors/warnings that exist in the current file.
    Clicking a line number highlights the code in that line.
 
-.. image:: /images/editor/editor-pane-code-error.png
-   :alt: Spyder outline panel, showing an example of a code error
+.. image:: /images/editor/editor-code-error.png
+   :alt: Spyder Editor, showing an example of a code error popup message
 
 2. The right and bottom scrollbars help navigate the code in the current file vertically and horizontally.
 3. The Context menu displays actions relevant to the editor pane. To display the editor's context menu, right-click anywhere over it and a list of possible options will appear under the cursor.
 4. Another menu called the Options menu appears when clicking the "Hamburger" icon at the top right, which includes useful settings and actions relevant to the editor.
-
-.. image:: /images/editor/editor-pane-options-menu.png
-   :alt: Spyder outline panel with the options menu expanded
-
 5. The location-based breadcrumbs on the top left of the editor pane show the exact location of the current file in your system.
 6. The tabs bar displays the names of all opened files.
    It also offers a "Browse tabs" ability to effortlessly switch between current tabs and see which file is currently under selection.
