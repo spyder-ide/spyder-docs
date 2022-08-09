@@ -60,9 +60,9 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`fileexplorer`
