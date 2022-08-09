@@ -94,9 +94,9 @@ Additionally, when you right-click a file, you will find an :guilabel:`Open with
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`findinfiles`

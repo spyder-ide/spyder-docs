@@ -80,9 +80,9 @@ Finally, you can use the "remove" and "remove all" buttons in the toolbar to cle
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`ipythonconsole`
 * :doc:`variableexplorer`

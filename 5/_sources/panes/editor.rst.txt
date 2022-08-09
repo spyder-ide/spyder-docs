@@ -49,9 +49,9 @@ Note that this only affects how the outline is displayed; it has no impact on th
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`fileexplorer`
 * :doc:`findinfiles`

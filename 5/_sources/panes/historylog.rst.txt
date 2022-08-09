@@ -46,8 +46,8 @@ While there is currently no built-in way to clear history from the Spyder interf
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`ipythonconsole`

@@ -86,9 +86,9 @@ For more details on configuring Pylint, see the `Pylint documentation`_.
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`profiler`

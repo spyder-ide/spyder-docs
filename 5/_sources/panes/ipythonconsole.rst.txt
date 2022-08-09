@@ -180,9 +180,9 @@ If desired, you can turn it on or off, and prevent specific modules from being r
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`debugging`
 * :doc:`editor`

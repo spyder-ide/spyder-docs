@@ -181,9 +181,9 @@ Finally, we added a context-menu action to open any object using the new Object 
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`debugging`
 * :doc:`ipythonconsole`

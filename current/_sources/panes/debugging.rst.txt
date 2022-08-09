@@ -116,9 +116,9 @@ To avoid showing plots while debugging, deactivate the :guilabel:`Process execut
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`ipythonconsole`

@@ -94,9 +94,9 @@ For more information, go to the `spyder-memory-profiler git repository`_.
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`ipythonconsole`
 * :doc:`pylint`

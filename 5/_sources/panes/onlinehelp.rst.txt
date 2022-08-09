@@ -81,8 +81,8 @@ To cancel searching or page loading, click the stop button (red square), and to 
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`help`
