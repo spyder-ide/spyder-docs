@@ -74,9 +74,9 @@ This can be disabled in the :guilabel:`Help` pane's top-right options menu so th
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`ipythonconsole`

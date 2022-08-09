@@ -41,8 +41,8 @@ Must (not), should (not), recommended, suggested, may, and can generally follow 
 * L2 Headings for section heads: Use ========= with overline; 3 blank lines before them
 * L3 headings for subheads: Use ~~~~~~; 2 blank lines
 * L4 Headings for sub-subheads if truly necessary: Use ---------; 1 blank line; keep to a minimum (consider a flatter structure or breaking into multiple files)
-* Related components at the bottom: L2 heading; bullets; try for 2-4 links if included
-* All files with Related components should contain at least one L2 section; if only one, can be entitled Overview
+* Related panes at the bottom: L2 heading; bullets; try for 2-4 links if included
+* All files with ``Related panes`` should contain at least one L2 section; if only one, can be entitled Overview
 * Typically, for files with multiple sections or longer than one page, a summary section of a few lines length is helpful before the first section, summarizing the functionality discussed in the section and its purpose
 * Name of component/topic should be in first sentence, Title Case, bold on first use
 

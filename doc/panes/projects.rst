@@ -57,9 +57,9 @@ To use this functionality, the :guilabel:`Project` must be located in a ``git`` 
 
 
 
-==================
-Related components
-==================
+=============
+Related panes
+=============
 
 * :doc:`editor`
 * :doc:`fileexplorer`
