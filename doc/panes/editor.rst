@@ -26,7 +26,7 @@ The Editor pane consists of the following areas:
 4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
 5. The location bar at the top of the Editor pane shows the full path of the current file.
 6. The tab bar displays the names of all opened files.
-  It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
+   It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
 ===================
 Defining code cells
