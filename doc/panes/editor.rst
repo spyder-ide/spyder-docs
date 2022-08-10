@@ -2,38 +2,31 @@
 Editor
 ######
 
-Spyder's multi-language **Editor** pane is the key element of the IDE where users can create, open, and modify code files.
-The Editor offers a variety of core features like autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
-In addition, it uniquely integrates a number of powerful tools for an easy to use, efficient editing experience.
+Spyder's multi-language **Editor** pane is the key element of the IDE, where you can create, open, and modify source files.
+The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
+In addition, it  integrates a number of powerful tools for an easy to use, efficient editing experience.
 
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
-===========================
-The Editor's key components
-===========================
+==============
+Key components
+==============
 
-The editor pane consists of the following areas:
+The Editor pane consists of the following areas:
 
 .. image:: /images/editor/editor-components.png
    :alt: Spyder's Editor pane, showing its different areas (described below)
 
+
 1. The left sidebar shows line numbers and displays any code analysis errors/warnings that exist in the current file.
-   Clicking a line number highlights the code in that line.
-
-.. image:: /images/editor/editor-code-error.png
-   :alt: Spyder Editor, showing an example of a code error popup message
-
-2. The right and bottom scrollbars help navigate the code in the current file vertically and horizontally.
-3. The Context menu displays actions relevant to the editor pane.
-   To display the editor's context menu, right-click anywhere over it and a list of possible options will appear under the cursor.
-4. Another menu called the Options menu appears when clicking the "Hamburger" icon at the top right, which includes useful settings and actions relevant to the editor.
-5. The location-based breadcrumbs on the top left of the editor pane show the exact location of the current file in your system.
-6. The tabs bar displays the names of all opened files.
-   It also offers a "Browse tabs" ability to effortlessly switch between current tabs and see which file is currently under selection.
-   This feature comes handy when there is a large number of opened files.
-   By default, the active/in-use tab is usually underlined in blue and shows with a check mark on its left when you click "Brows tabs".
-
+   Clicking a line number selects the code/text on that line.
+2. The scrollbars allow vertical and horizontal navigation in a file.
+3. The context (right-click) menu displays actions relevant to whatever was clicked.
+4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
+5. The location bar at the top of the Editor pane shows the full path of the current file.
+6. The tab bar displays the names of all opened files.
+  It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
 ===================
 Defining code cells
