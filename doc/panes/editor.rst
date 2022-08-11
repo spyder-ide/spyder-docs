@@ -27,6 +27,8 @@ The Editor pane consists of the following areas:
 6. The tab bar displays the names of all opened files.
    It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
+
+
 ===================
 Defining code cells
 ===================
