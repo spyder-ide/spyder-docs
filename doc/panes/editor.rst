@@ -18,7 +18,6 @@ The Editor pane consists of the following areas:
 .. image:: /images/editor/editor-components.png
    :alt: Spyder's Editor pane, showing its different areas (described below)
 
-
 1. The left sidebar shows line numbers and displays any code analysis errors/warnings that exist in the current file.
    Clicking a line number selects the code/text on that line.
 2. The scrollbars allow vertical and horizontal navigation in a file.
