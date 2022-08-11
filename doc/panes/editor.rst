@@ -4,7 +4,7 @@ Editor
 
 Spyder's multi-language **Editor** pane is the key element of the IDE, where you can create, open, and modify source files.
 The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
-In addition, it  integrates a number of powerful tools for an easy to use, efficient editing experience.
+In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.
 
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
