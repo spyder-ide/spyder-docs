@@ -47,6 +47,7 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
    :alt: Debugger showing multiline debugger
 
 
+.. _debugging-breakpoints:
 
 ===========
 Breakpoints
