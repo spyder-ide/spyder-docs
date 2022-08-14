@@ -541,13 +541,25 @@
                 
   <div class="section" id="editor">
 <h1>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h1>
-<p>Spyder’s multi-language <strong>Editor</strong> integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
-The Editor’s key features include syntax highlighting (<code class="docutils literal notranslate"><span class="pre">pygments</span></code>); real-time code and style analysis (<code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>); on-demand completion, calltips and go-to-definition features (<code class="docutils literal notranslate"><span class="pre">rope</span></code> and <code class="docutils literal notranslate"><span class="pre">jedi</span></code>); a function/class browser, horizontal and vertical splitting, and much more.</p>
+<p>Spyder’s multi-language <strong>Editor</strong> pane is the key element of the IDE, where you can create, open, and modify source files.
+The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
+In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.</p>
 <img alt="Spyder's Editor panel, split horizontally and with style analysis" src="../_images/editor-standard.png" />
-<p><span class="guilabel">Outline Explorer</span> (function/class/method browser) and horizontal/vertical splitting capabilities:</p>
-<img alt="Spyder outline panel, showing the functions/classes/methods in a file" src="../_images/editor-outline-standard.png" />
-<p>Real-time code and style analysis with <code class="docutils literal notranslate"><span class="pre">pyflakes</span></code> and <code class="docutils literal notranslate"><span class="pre">pycodestyle</span></code>:</p>
-<img alt="A snippit of code in the Spyder Editor, showing code style warnings" src="../_images/editor-inset-code-analysis.png" />
+<div class="section" id="key-components">
+<h2>Key components<a class="headerlink" href="#key-components" title="Permalink to this headline">¶</a></h2>
+<p>The Editor pane consists of the following areas:</p>
+<img alt="Spyder's Editor pane, showing its different areas (described below)" src="../_images/editor-components.png" />
+<ol class="arabic simple">
+<li><p>The left sidebar shows line numbers and displays any code analysis warnings that exist in the current file.
+Clicking a line number selects the text on that line, and clicking to the right of it sets a <a class="reference internal" href="debugging.html#debugging-breakpoints"><span class="std std-ref">breakpoint</span></a>.</p></li>
+<li><p>The scrollbars allow vertical and horizontal navigation in a file.</p></li>
+<li><p>The context (right-click) menu displays actions relevant to whatever was clicked.</p></li>
+<li><p>The options menu (“Hamburger” icon at top right) includes useful settings and actions relevant to the Editor.</p></li>
+<li><p>The location bar at the top of the Editor pane shows the full path of the current file.</p></li>
+<li><p>The tab bar displays the names of all opened files.
+It also has a <span class="guilabel">Browse tabs</span> button (at left) to show every open tab and switch between them—which comes in handy if many are open.</p></li>
+</ol>
+</div>
 <div class="section" id="defining-code-cells">
 <h2>Defining code cells<a class="headerlink" href="#defining-code-cells" title="Permalink to this headline">¶</a></h2>
 <p>A “code cell” in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.
@@ -607,6 +619,10 @@ This displays multiple levels in the the <span class="guilabel">Outline Explorer
         <ul class="nav section-nav flex-column">
         
             <li class="nav-item toc-entry toc-h2">
+                <a href="#key-components" class="nav-link">Key components</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
                 <a href="#defining-code-cells" class="nav-link">Defining code cells</a>
             </li>
         
@@ -635,6 +651,10 @@ This displays multiple levels in the the <span class="guilabel">Outline Explorer
             </div>
         <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
             <ul class="nav section-nav flex-column">
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#key-components" class="nav-link">Key components</a>
+                </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
                     <a href="#defining-code-cells" class="nav-link">Defining code cells</a>

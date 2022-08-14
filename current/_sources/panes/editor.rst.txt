@@ -2,21 +2,30 @@
 Editor
 ######
 
-Spyder's multi-language **Editor** integrates a number of powerful tools right out of the box for an easy to use, efficient editing experience.
-The Editor's key features include syntax highlighting (``pygments``); real-time code and style analysis (``pyflakes`` and ``pycodestyle``); on-demand completion, calltips and go-to-definition features (``rope`` and ``jedi``); a function/class browser, horizontal and vertical splitting, and much more.
+Spyder's multi-language **Editor** pane is the key element of the IDE, where you can create, open, and modify source files.
+The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
+In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.
 
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
-:guilabel:`Outline Explorer` (function/class/method browser) and horizontal/vertical splitting capabilities:
+==============
+Key components
+==============
 
-.. image:: /images/editor/editor-outline-standard.png
-   :alt: Spyder outline panel, showing the functions/classes/methods in a file
+The Editor pane consists of the following areas:
 
-Real-time code and style analysis with ``pyflakes`` and ``pycodestyle``:
+.. image:: /images/editor/editor-components.png
+   :alt: Spyder's Editor pane, showing its different areas (described below)
 
-.. image:: /images/editor/editor-inset-code-analysis.png
-   :alt: A snippit of code in the Spyder Editor, showing code style warnings
+1. The left sidebar shows line numbers and displays any code analysis warnings that exist in the current file.
+   Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <debugging-breakpoints>`.
+2. The scrollbars allow vertical and horizontal navigation in a file.
+3. The context (right-click) menu displays actions relevant to whatever was clicked.
+4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
+5. The location bar at the top of the Editor pane shows the full path of the current file.
+6. The tab bar displays the names of all opened files.
+   It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
 
 
