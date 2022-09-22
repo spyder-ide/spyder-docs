@@ -1,14 +1,6 @@
-:orphan:
-
 ###############
 Spyder Notebook
 ###############
-
-.. warning::
-
-   Currently, this plugin is still being ported to Spyder 5, and will likely not yet work or experience serious issues on this version of Spyder.
-   A compatible version is expected soon.
-   Thanks for your patience!
 
 **Spyder-notebook** is a plugin that allows you to open, edit and interact with Jupyter Notebooks right inside Spyder.
 
