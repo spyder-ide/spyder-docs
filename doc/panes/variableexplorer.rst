@@ -125,6 +125,14 @@ For example, you can save the current session's data as a ``.spydata`` file, whi
 .. image:: /images/variable_explorer/variable-explorer-import-data.gif
    :alt: Variable Explorer showing how to save and import data
 
+.. warning::
+
+   You should **not** load any ``.spydata`` file from any source you don't fully trust (ideally, only those files you've saved yourself).
+   Like with any `Python pickle`_, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
+   Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange.
+
+.. _Python pickle: https://docs.python.org/3/library/pickle.html
+
 There is also a button to remove all displayed variables, and a search box to find objects by  name or type.
 
 .. image:: /images/variable_explorer/variable-explorer-search.gif
