@@ -1,14 +1,6 @@
-:orphan:
-
 ####################
 Spyder Line Profiler
 ####################
-
-.. warning::
-
-   Currently, this plugin is still being ported to Spyder 5, and will likely not yet work or experience serious issues on this version of Spyder.
-   A compatible version will be released soon.
-   Thanks for your patience!
 
 **Spyder-Line-Profiler** is a plugin to run the Python `line profiler`_.
 This package profiles the time that individual lines of code take to execute.
