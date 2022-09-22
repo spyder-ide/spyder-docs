@@ -20,7 +20,7 @@ The options menu in the top-right of the pane allows customizing how the outline
 * :guilabel:`Group code cells`: Groups code cells in multiple nested levels in the Outline rather than showing all cells in one level. You can create subsections by adding more ``%`` signs to the cell separator.
 * :guilabel:`Display variables and attributes`: Displays top-level variable/constant definitions and class attributes in the outline.
 * :guilabel:`Follow cursor position`: Automatically highlights and expands the entry corresponding to the current cursor position in the Editor.
-* :guilabel:`Show special comments`: Shows special comments in the outline, which start with # ---- and use specific keywords specified in :menuselection:`Tools –> Preferences -> Editor -> Advanced settings –> Annotations`. For example, TODO, FIXME, BUG, etc.
+* :guilabel:`Show special comments`: Shows special comments in the outline, which start with ``# ----`` and use specific keywords specified in :menuselection:`Tools –> Preferences -> Editor -> Advanced settings –> Annotations`. For example, ``TODO``, ``FIXME``, ``BUG``, etc.
 * :guilabel:`Sort files alphabetically`: Sorts the file list in alphabetical order. When disabled, all tabs will be sorted by the tab order of the currently selected Editor panel.
 
 .. image:: /images/outline/outline-options-menu.png
