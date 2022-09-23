@@ -21,13 +21,13 @@ These customization settings include:
 * :guilabel:`Show absolute path`: Display the full path to each file instead of just the name.
 * :guilabel:`Show all files`: List every open file rather than just the current one.
   This allows using the Outline as a file switcher.
-* :guilabel:`Group code cells`: Groups code cells in multiple nested levels in the outline rather than showing all cells in one level.
+* :guilabel:`Group code cells`: Group code cells in multiple nested levels in the outline rather than showing all cells in one level.
   You can create subsections by adding more ``%`` signs to the cell separator.
-* :guilabel:`Display variables and attributes`: Displays top-level variable/constant definitions and class attributes in the outline.
-* :guilabel:`Follow cursor position`: Automatically highlights and expands the entry corresponding to the current cursor position in the :doc:`editor`.
-* :guilabel:`Show special comments`: Shows special comments in the outline, which start with ``# ----`` and use specific keywords specified in :menuselection:`Preferences --> Editor --> Advanced settings --> Annotations`.
+* :guilabel:`Display variables and attributes`: Display top-level variable/constant definitions and class attributes in the outline.
+* :guilabel:`Follow cursor position`: Automatically highlight and expand the entry corresponding to the current cursor position in the :doc:`editor`.
+* :guilabel:`Show special comments`: List special comments in the outline, which start with ``# ----`` and use specific keywords specified in :menuselection:`Preferences --> Editor --> Advanced settings --> Annotations`.
   For example, ``TODO``, ``FIXME``, ``BUG``, etc.
-* :guilabel:`Sort files alphabetically`: Sorts the file list in alphabetical order.
+* :guilabel:`Sort files alphabetically`: Sort the file list in alphabetical order.
   When disabled, all tabs will be sorted by the tab order of the currently selected Editor panel.
 
 .. image:: /images/outline/outline-options-menu.png
