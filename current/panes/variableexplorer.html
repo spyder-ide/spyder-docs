@@ -621,6 +621,12 @@ Clicking the <span class="guilabel">Resize</span> button will set it automatical
 <p>The Variable Explorer’s toolbar includes several useful features that affect the entire namespace.
 For example, you can save the current session’s data as a <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file, which can be loaded later to recover all the variables stored.</p>
 <img alt="Variable Explorer showing how to save and import data" src="../_images/variable-explorer-import-data.gif" />
+<div class="alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>You should <strong>not</strong> load any <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file from any source you don’t fully trust (ideally, only those files you’ve saved yourself).
+Like with any <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
+Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange.</p>
+</div>
 <p>There is also a button to remove all displayed variables, and a search box to find objects by  name or type.</p>
 <img alt="Variable Explorer showing how to search variables" src="../_images/variable-explorer-search.gif" />
 <p>Finally, there is a button to refresh the Variable Explorer’s contents, which will update it to show the current state of the code running in the IPython console.</p>
