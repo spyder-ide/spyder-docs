@@ -13,7 +13,12 @@ Click an entry in the Outline to jump to its source file location, and use the :
 Options menu
 ============
 
-The options menu in the top-right of the pane allows customizing how the outline is displayed. These customization settings include:
+The options menu in the top-right of the pane allows customizing how the outline is displayed.
+
+.. image:: /images/outline/outline-options-menu.png
+   :alt: Outline options menu
+
+These customization settings include:
 
 * :guilabel:`Show absolute path`: Display the full path to each file instead of just the name.
 * :guilabel:`Show all files`: List every open file rather than just the current one. This allows using the Outline as a file switcher.
@@ -22,9 +27,6 @@ The options menu in the top-right of the pane allows customizing how the outline
 * :guilabel:`Follow cursor position`: Automatically highlights and expands the entry corresponding to the current cursor position in the Editor.
 * :guilabel:`Show special comments`: Shows special comments in the outline, which start with # ---- and use specific keywords specified in :menuselection:`Tools –> Preferences -> Editor -> Advanced settings –> Annotations`. For example, TODO, FIXME, BUG, etc.
 * :guilabel:`Sort files alphabetically`: Sorts the file list in alphabetical order. When disabled, all tabs will be sorted by the tab order of the currently selected Editor panel.
-
-.. image:: /images/outline/outline-options-menu.png
-   :alt: Outline options menu
 
 =====
 Icons
@@ -37,3 +39,14 @@ Icons
 * :guilabel:`c` for classes
 * :guilabel:`%` for code cells
 * :guilabel:`#` for comments
+
+
+
+
+=============
+Related panes
+=============
+
+* :doc:`fileexplorer`
+* :doc:`editor`
+* :doc:`projects`
