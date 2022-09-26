@@ -25,8 +25,7 @@ These customization settings include:
   You can create subsections by adding more ``%`` signs to the cell separator.
 * :guilabel:`Display variables and attributes`: Display top-level variable/constant definitions and class attributes in the outline.
 * :guilabel:`Follow cursor position`: Automatically highlight and expand the entry corresponding to the current cursor position in the :doc:`editor`.
-* :guilabel:`Show special comments`: List special comments in the outline, which start with ``# ----`` and use specific keywords specified in :menuselection:`Preferences --> Editor --> Advanced settings --> Annotations`.
-  For example, ``TODO``, ``FIXME``, ``BUG``, etc.
+* :guilabel:`Show special comments`: List special comments in the outline, which start with ``# ----``.
 * :guilabel:`Sort files alphabetically`: Sort the file list in alphabetical order.
   When disabled, all tabs will be sorted by the tab order of the currently selected Editor panel.
 
