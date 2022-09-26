@@ -2,7 +2,7 @@
 Outline
 #######
 
-The **Outline** pane allows you to view and navigate the functions, classes, methods, cells and comments in open files.
+The **Outline** pane allows you to view and navigate the functions, classes, methods, cells and comments in open Python files.
 To show or hide the Outline pane, use :menuselection:`View --> Panes --> Outline` or :kbd:`Ctrl-Shift-O` / :kbd:`Cmd-Shift-O`.
 Click an entry in the outline to jump to its source file location, and use the :guilabel:`Go to cursor position` toolbar button to highlight the item corresponding to the current :doc:`editor` position.
 
