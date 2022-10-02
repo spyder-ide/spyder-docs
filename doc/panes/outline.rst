@@ -52,6 +52,6 @@ The following icons are used for outline elements:
 Related panes
 =============
 
-* :doc:`fileexplorer`
 * :doc:`editor`
+* :doc:`fileexplorer`
 * :doc:`projects`
