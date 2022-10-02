@@ -47,7 +47,6 @@ The following icons are used for outline elements:
 
 
 
-
 =============
 Related panes
 =============
