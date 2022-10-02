@@ -33,6 +33,8 @@ These customization settings include:
 * :guilabel:`Sort files alphabetically`: Sort the file list in alphabetical order.
   When disabled, all tabs will be sorted by the tab order of the currently selected Editor panel.
 
+
+
 =====
 Icons
 =====
