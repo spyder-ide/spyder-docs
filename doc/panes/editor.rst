@@ -39,7 +39,8 @@ You can browse and navigate between open files in the Editor with tabs.
 Click the :guilabel:`Browse tabs` button on the left of the Tabs bar to display a list of open files, with the active tab checked.
 Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.
 
-Image Place Holder if needed
+.. image:: /images/editor/editor-tabs-browser.png
+   :alt: Spyder's Editor pane, showing the tabs browser
 
 -------------
 File switcher
@@ -50,6 +51,9 @@ The file switcher is helpful for locating any file when there are several files 
 It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P` and includes a search function.
 You can type in any part of an open file's name and -if exists- it can be switched to by pressing Enter.
 
+.. image:: /images/editor/editor-file-switcher.png
+   :alt: Spyder's Editor pane, showing the file switcher
+
 ------------
 Split panels
 ------------
@@ -57,7 +61,7 @@ Split panels
 The Editor can be split horizontally and vertically into as many distinct panels as desired.
 This allows viewing and editing the contents of several files (or different parts of the same file) at the same time.
 
-Image Place Holder if needed
+GIF needed
 
 Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift–`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel.
 .. note: :menuselection:`Close this panel` closes a split panel, while :menuselection:`Close` hides the entire Editor *pane* (including all splits, which are restored when the Editor is re-opened).
@@ -72,15 +76,12 @@ Syntax highlighting
 -------------------
 
 To improve the readability of your code, Spyder has a syntax highlighting feature that determines the colour and style of text in the Editor, as well as in the :doc:`ipythonconsole`..
-
-Image (new)
-
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the colour theme of the syntax elements and background to match your preferences.
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
 The :guilabel:`Fonts` section lets you change the plain text font and size.
 
-Image (new)
+GIF new
 
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language
 
@@ -120,12 +121,13 @@ Automatic formatting
 The Editor has built-in support for automatically formatting your code using several popular tools, including Autopep8, Yapf, and Black.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
-Image Place Holder if needed
+GIF new
 
 You can have the Editor automatically autoformat a file every time you save your work.
 To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code style and formatting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
 
-Screenshot of Preferences dialog here
+.. image:: /images/editor/editor-autoformat-setting.png
+   :alt: Spyder's preferences dialog, showing checking the autoformat files on save setting
 
 ============
 Running code
@@ -194,13 +196,14 @@ Find panel
 ----------
 
 The Editor features a find and replace functionality to find and replace a given text in the current file.
-You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using the :kbd:`Ctrl+F`.
+You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl+F`.
 Similarly, you can to find and replace a string by selecting :menuselection:`Search --> Replace text` from the Spyder IDE main menu or using the :kbd:`Ctrl+R` shortcut.
 The :guilabel:`Find and Replace` panel appears in the Editor’s bottom left corner highlighting each occurrence of the desired text in the current file and showing the total number of occurrences.
 The panel allows you to navigate from one occurrence to another by choosing the :guilabel:`Find Next` or the :guilabel:`Find Previous` buttons.
 It also lets you run a case-sensitive regex search using the Case Sensitive and Regular expressions controls.
 
-Image/GIF place holder
+.. image:: /images/editor/editor-find-replace-panel.png
+   :alt: Spyder's Editor pane, showing the find and replace panel
 
 ----------
 Go to line
@@ -250,17 +253,20 @@ Linting and code style
 
 Spyder can optionally highlight syntax errors, style issues, and other potential problems with your code in the Editor, which can help you spot bugs quickly and make your code easier to read and understand.
 
-Image (new)
+.. image:: /images/editor/editor-pane-code-error.png
+   :alt: Spyder's Editor pane, showing an example of a highlighted code error
 
 The Editor’s basic linting, powered by `Pyflakes <https://github.com/PyCQA/pyflakes>`_, warns of syntax errors and likely bugs in your code.
 It is on by default, and can be disabled or customized under :menuselection:`Preferences --> Completion and Linting --> Linting`.
 
-Image (new)
+.. image:: /images/editor/editor-linting-setting.png
+   :alt: Spyder's preferences dialog, showing linting settings
 
 Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/latest/>`_, flags deviations from the style conventions in :pep:`8`.
 It is not active by default; you can enable it and customize the `pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`.
 
-Image (new)
+.. image:: /images/editor/editor-code-style-setting.png
+   :alt: Spyder's preferences dialog, showing code style and formatting settings
 
 ----------------------
 Introspection features
