@@ -212,7 +212,7 @@ Go to line
 The :guilabel:`Go to line` dialog box allows you to navigate your source code and move to a specific line in the active file.
 You can view and use this box under the :menuselection:`search --> Go to line` menu item or alternatively press :kbd:`Ctrl+L`.
 
-Image/GIF place holder
+Image/GIF placeholder
 
 You can enter your desired line number in the :guilabel:`Go to line` input field, which should fall between 1 and the line count shown in the dialog box.
 
@@ -222,7 +222,7 @@ Class/function selector
 
 When you activate the class and function selector under :menuselection:`Source --> Show` selector for classes and functions, the name of the selected class will be shown at the top of the Editor while you are exploring any object inside this class such as methods.
 
-Image/GIF place holder
+Image/GIF placeholder
 
 =============================
 Code analysis and completions
@@ -242,7 +242,8 @@ Automatic code completion as you type is enabled by default in the Editor, and c
 For example, typing ``cla`` will display the keyword ``class``, the decorator ``classmethod`` and two built-in snippets with class templates.
 Select the desired completion with the arrow keys and :kbd:`Enter`, or by double clicking.
 
-Image of the example (new)
+.. image:: /images/editor/editor-code-completion.png
+   :alt: Spyder's Editor pane, showing a code completion example
 
 You can enable or disable on-the-fly code completion as you type, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
 Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
@@ -274,9 +275,14 @@ Introspection features
 
 If there’s a function, class or variable that you want to jump to the definition of, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is defined.
 
-GIF (new)
+.. image:: /images/editor/editor-go-to-definition.gif
+   :alt: Spyder's Editor pane, showing the go to definition feature
 
 If you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function’s parameters as you type them, as well as a summary of its documentation.
+
+.. image:: /images/editor/editor-calltip.png
+   :alt: Spyder's Editor pane, showing an example of a calltip
+
 Finally, you can also hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
 These features can be enabled and customized under :menuselection:`Preferences --> Completion and Linting --> Introspection`.
 
