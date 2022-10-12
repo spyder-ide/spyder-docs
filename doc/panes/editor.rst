@@ -66,7 +66,7 @@ This allows viewing and editing the contents of several files (or different part
 
 GIF needed
 
-Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift–`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel.
+Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift--`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel.
 .. note: :menuselection:`Close this panel` closes a split panel, while :menuselection:`Close` hides the entire Editor *pane* (including all splits, which are restored when the Editor is re-opened).
 
 
@@ -112,7 +112,7 @@ This displays multiple levels in the :guilabel:`Outline Explorer`.
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline panel, showing an example of sub sections
 
-.. note::  This only affects how the cell is displayed in the :guilabel:`Outline Explorer`, and doesn’t affect running it in the Editor.
+.. note::  This only affects how the cell is displayed in the :guilabel:`Outline Explorer`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using  :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
@@ -153,14 +153,14 @@ As your code is running,
 Run file
 ~~~~~~~~
 
-You can run any source file in the Editor by simply using the Run file button in Spyder’s toolbar or by pressing the F5 key.
+You can run any source file in the Editor by simply using the Run file button in Spyder's toolbar or by pressing the F5 key.
 You can also run your code by selecting  :menuselection:`Run --> Run` menu item.
 
 
 Run line
 ~~~~~~~~
 
-You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder’s toolbar.
+You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing your selected line of code, the cursor automatically advances to the next line.
 This helps you run your code in sequential order with a single line step.
@@ -175,7 +175,7 @@ In addition to executing your entire source file at once or just a single line, 
 Multiple lines
 --------------
 
-You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder’s toolbar.
+You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing a selection of code, use the :guilabel:`Re-Run last script` command from the :menuselection:`Run` menu to execute the same selection again.
 The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
@@ -184,13 +184,13 @@ The main difference between running a selection of lines and an entire file is t
 Code cells
 ----------
 
-To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder’s toolbar.
+To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
 
 Run configuration
 -----------------
 
-You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file…` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl+F6`.
+You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file...` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl+F6`.
 For example, you could execute the current file in a dedicated console, remove all variable before executing, or even change the working directory settings.
 
 
@@ -205,7 +205,7 @@ Find panel
 The Editor features a find and replace functionality to find and replace a given text in the current file.
 You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl+F`.
 Similarly, you can to find and replace a string by selecting :menuselection:`Search --> Replace text` from the Spyder IDE main menu or using the :kbd:`Ctrl+R` shortcut.
-The :guilabel:`Find and Replace` panel appears in the Editor’s bottom left corner highlighting each occurrence of the desired text in the current file and showing the total number of occurrences.
+The :guilabel:`Find and Replace` panel appears in the Editor's bottom left corner highlighting each occurrence of the desired text in the current file and showing the total number of occurrences.
 The panel allows you to navigate from one occurrence to another by choosing the :guilabel:`Find Next` or the :guilabel:`Find Previous` buttons.
 It also lets you run a case-sensitive regex search using the Case Sensitive and Regular expressions controls.
 
@@ -241,7 +241,7 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 
 .. note::
 
-   Many issues with completion and linting are outside of Spyder’s control, and are either limitation with LSP or the code that is being introspected, but some can be worked around.
+   Many issues with completion and linting are outside of Spyder's control, and are either limitation with LSP or the code that is being introspected, but some can be worked around.
    See :ref:`troubleshooting-completion <code-completion-problems-ref>` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under  :menuselection:`Preferences --> Completion and Linting --> Other languages`.
@@ -269,7 +269,7 @@ Spyder can optionally highlight syntax errors, style issues, and other potential
 .. image:: /images/editor/editor-pane-code-error.png
    :alt: Spyder's Editor pane, showing an example of a highlighted code error
 
-The Editor’s basic linting, powered by `Pyflakes <https://github.com/PyCQA/pyflakes>`_, warns of syntax errors and likely bugs in your code.
+The Editor's basic linting, powered by `Pyflakes <https://github.com/PyCQA/pyflakes>`_, warns of syntax errors and likely bugs in your code.
 It is on by default, and can be disabled or customized under :menuselection:`Preferences --> Completion and Linting --> Linting`.
 
 .. image:: /images/editor/editor-linting-setting.png
@@ -285,12 +285,12 @@ It is not active by default; you can enable it and customize the `pycodestyle er
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If there’s a function, class or variable that you want to jump to the definition of, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is defined.
+If there's a function, class or variable that you want to jump to the definition of, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is defined.
 
 .. image:: /images/editor/editor-go-to-definition.gif
    :alt: Spyder's Editor pane, showing the go to definition feature
 
-If you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function’s parameters as you type them, as well as a summary of its documentation.
+If you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function's parameters as you type them, as well as a summary of its documentation.
 
 .. image:: /images/editor/editor-calltip.png
    :alt: Spyder's Editor pane, showing an example of a calltip
