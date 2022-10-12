@@ -141,7 +141,8 @@ As your code is running,
 * The :doc:`ipythonconsole` will display the results and errors when applicable
 * The :doc:`variableexplorer` allows you to browse and interact with the objects generated when running your code.
 * The :doc:`plots` pane shows the figures and images created during your code execution.
-* The :doc:`profiler` helps you optimize your code by determining the run time and number of calls for every function and method used in a file. It also allows you to save and compare your results between runs.
+* The :doc:`profiler` helps you optimize your code by determining the run time and number of calls for every function and method used in a file.
+  It also allows you to save and compare your results between runs.
 
 --------
 Run file
@@ -230,7 +231,10 @@ Code analysis and completions
 
 Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`_ (LSP) to provide code completion and linting for the Editor, similar to VSCode, Atom, and other popular editors/IDEs.
 
-.. note:: Many issues with completion and linting are outside of Spyder’s control, and are either limitation with LSP or the code that is being introspected, but some can be worked around. See :ref:`troubleshooting-completion <code-completion-problems-ref>` for troubleshooting steps.
+.. note::
+
+   Many issues with completion and linting are outside of Spyder’s control, and are either limitation with LSP or the code that is being introspected, but some can be worked around.
+   See :ref:`troubleshooting-completion <code-completion-problems-ref>` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under  :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
