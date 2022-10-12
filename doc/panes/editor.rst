@@ -143,11 +143,10 @@ The Editor lets you run an entire file as well as specific lines, selections or 
 
 As your code is running,
 
-* The :doc:`ipythonconsole` will display the results and errors when applicable
-* The :doc:`variableexplorer` allows you to browse and interact with the objects generated when running your code.
-* The :doc:`plots` pane shows the figures and images created during your code execution.
-* The :doc:`profiler` helps you optimize your code by determining the run time and number of calls for every function and method used in a file.
-  It also allows you to save and compare your results between runs.
+* The :doc:`ipythonconsole` will display output and errors.
+* The :doc:`variableexplorer` allows you to browse and interact with the objects generated.
+* The :doc:`plots` pane renders the figures and images created.
+* The :doc:`profiler` helps you optimize your code's run time.
 
 
 Run file
