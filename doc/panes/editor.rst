@@ -9,6 +9,8 @@ In addition, it integrates a number of powerful tools for an easy to use, effici
 .. image:: /images/editor/editor-standard.png
    :alt: Spyder's Editor panel, split horizontally and with style analysis
 
+
+
 ==============
 Key components
 ==============
@@ -27,13 +29,14 @@ The Editor pane consists of the following areas:
 6. The tab bar displays the names of all opened files.
    It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
+
+
 =========
 Interface
 =========
 
-----
 Tabs
-----
+~~~~
 
 You can browse and navigate between open files in the Editor with tabs.
 Click the :guilabel:`Browse tabs` button on the left of the Tabs bar to display a list of open files, with the active tab checked.
@@ -42,9 +45,9 @@ Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetica
 .. image:: /images/editor/editor-tabs-browser.png
    :alt: Spyder's Editor pane, showing the tabs browser
 
--------------
+
 File switcher
--------------
+~~~~~~~~~~~~~
 
 The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
 The file switcher is helpful for locating any file when there are several files opened.
@@ -54,9 +57,9 @@ You can type in any part of an open file's name and -if exists- it can be switch
 .. image:: /images/editor/editor-file-switcher.png
    :alt: Spyder's Editor pane, showing the file switcher
 
-------------
+
 Split panels
-------------
+~~~~~~~~~~~~
 
 The Editor can be split horizontally and vertically into as many distinct panels as desired.
 This allows viewing and editing the contents of several files (or different parts of the same file) at the same time.
@@ -67,13 +70,13 @@ Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and
 .. note: :menuselection:`Close this panel` closes a split panel, while :menuselection:`Close` hides the entire Editor *pane* (including all splits, which are restored when the Editor is re-opened).
 
 
+
 ================
 Editing features
 ================
 
--------------------
 Syntax highlighting
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 To improve the readability of your code, Spyder has a syntax highlighting feature that determines the colour and style of text in the Editor, as well as in the :doc:`ipythonconsole`..
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
@@ -85,9 +88,9 @@ GIF new
 
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language
 
-----------
+
 Code cells
-----------
+~~~~~~~~~~
 
 A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`.
 
@@ -114,9 +117,9 @@ This displays multiple levels in the :guilabel:`Outline Explorer`.
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using  :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
 
---------------------
+
 Automatic formatting
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The Editor has built-in support for automatically formatting your code using several popular tools, including Autopep8, Yapf, and Black.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
@@ -128,6 +131,8 @@ To set this up, go to :menuselection:`Preferences --> Completion and linting -->
 
 .. image:: /images/editor/editor-autoformat-setting.png
    :alt: Spyder's preferences dialog, showing checking the autoformat files on save setting
+
+
 
 ============
 Running code
@@ -144,57 +149,58 @@ As your code is running,
 * The :doc:`profiler` helps you optimize your code by determining the run time and number of calls for every function and method used in a file.
   It also allows you to save and compare your results between runs.
 
---------
+
 Run file
---------
+~~~~~~~~
 
 You can run any source file in the Editor by simply using the Run file button in Spyder’s toolbar or by pressing the F5 key.
 You can also run your code by selecting  :menuselection:`Run --> Run` menu item.
 
---------
+
 Run line
---------
+~~~~~~~~
 
 You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder’s toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing your selected line of code, the cursor automatically advances to the next line.
 This helps you run your code in sequential order with a single line step.
 
------------------
+
 Other run options
------------------
+~~~~~~~~~~~~~~~~~
 
 In addition to executing your entire source file at once or just a single line, the Editor allows you to run your code in other options.
 
-^^^^^^^^^^^^^^
+
 Multiple lines
-^^^^^^^^^^^^^^
+--------------
 
 You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder’s toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing a selection of code, use the :guilabel:`Re-Run last script` command from the :menuselection:`Run` menu to execute the same selection again.
 The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
 
-^^^^^^^^^^
+
 Code cells
-^^^^^^^^^^
+----------
 
 To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder’s toolbar.
 
-^^^^^^^^^^^^^^^^^
+
 Run configuration
-^^^^^^^^^^^^^^^^^
+-----------------
 
 You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file…` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl+F6`.
 For example, you could execute the current file in a dedicated console, remove all variable before executing, or even change the working directory settings.
+
+
 
 ===============
 Code navigation
 ===============
 
-----------
 Find panel
-----------
+~~~~~~~~~~
 
 The Editor features a find and replace functionality to find and replace a given text in the current file.
 You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl+F`.
@@ -206,9 +212,9 @@ It also lets you run a case-sensitive regex search using the Case Sensitive and 
 .. image:: /images/editor/editor-find-replace-panel.png
    :alt: Spyder's Editor pane, showing the find and replace panel
 
-----------
+
 Go to line
-----------
+~~~~~~~~~~
 
 The :guilabel:`Go to line` dialog box allows you to navigate your source code and move to a specific line in the active file.
 You can view and use this box under the :menuselection:`search --> Go to line` menu item or alternatively press :kbd:`Ctrl+L`.
@@ -217,13 +223,15 @@ Image/GIF placeholder
 
 You can enter your desired line number in the :guilabel:`Go to line` input field, which should fall between 1 and the line count shown in the dialog box.
 
------------------------
+
 Class/function selector
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 When you activate the class and function selector under :menuselection:`Source --> Show` selector for classes and functions, the name of the selected class will be shown at the top of the Editor while you are exploring any object inside this class such as methods.
 
 Image/GIF placeholder
+
+
 
 =============================
 Code analysis and completions
@@ -238,9 +246,9 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under  :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
----------------
+
 Code completion
----------------
+~~~~~~~~~~~~~~~
 
 Automatic code completion as you type is enabled by default in the Editor, and can also be triggered manually with :kbd:`Ctrl-Space`/:kbd:`Cmd-Space`, showing you help, possible completions, and available code snippets.
 For example, typing ``cla`` will display the keyword ``class``, the decorator ``classmethod`` and two built-in snippets with class templates.
@@ -252,9 +260,9 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
 You can enable or disable on-the-fly code completion as you type, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
 Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
 
-----------------------
+
 Linting and code style
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Spyder can optionally highlight syntax errors, style issues, and other potential problems with your code in the Editor, which can help you spot bugs quickly and make your code easier to read and understand.
 
@@ -273,9 +281,9 @@ It is not active by default; you can enable it and customize the `pycodestyle er
 .. image:: /images/editor/editor-code-style-setting.png
    :alt: Spyder's preferences dialog, showing code style and formatting settings
 
-----------------------
+
 Introspection features
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 If there’s a function, class or variable that you want to jump to the definition of, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is defined.
 
@@ -290,6 +298,8 @@ If you type the name of a function, method or class constructor and then an open
 Finally, you can also hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
 These features can be enabled and customized under :menuselection:`Preferences --> Completion and Linting --> Introspection`.
 
+
+
 ==================
 Keyboard shortcuts
 ==================
@@ -298,6 +308,7 @@ The Editor offers a useful set of default keyboard shortcuts that can help you p
 For an exhaustive list of keyboard shortcuts, navigate to :menuselection:`Help --> Shortcuts Summary --> Editor` menu option.
 You can also navigate to :menuselection:`Preferences --> Keyboard shortcuts` for the full list of Spyder shortcuts.
 All default shortcuts in the list are customizable when double clicked.
+
 
 
 =============
