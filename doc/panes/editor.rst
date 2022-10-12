@@ -152,8 +152,7 @@ As your code is running,
 Run file
 ~~~~~~~~
 
-You can run any source file in the Editor by simply using the Run file button in Spyder's toolbar or by pressing the :kbd:`F5` key.
-You can also run your code by selecting :menuselection:`Run --> Run` menu item.
+Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the :guilabel:`Run file` toolbar button or the :kbd:`F5` key.
 
 
 Run line
