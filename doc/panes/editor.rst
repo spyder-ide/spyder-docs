@@ -167,7 +167,8 @@ Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonco
 Code cells
 ~~~~~~~~~~
 
-To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
+To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run current cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
+Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
 
 
 Run configuration
