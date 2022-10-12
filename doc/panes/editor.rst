@@ -156,21 +156,12 @@ Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the 
 Use :guilabel:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
 
 
-Run line
-~~~~~~~~
+Run line/selection
+~~~~~~~~~~~~~~~~~~
 
-You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
-Alternatively, you can use the :kbd:`F9` key to run any line.
-After executing your selected line of code, the cursor automatically advances to the next line.
-This helps you run your code in sequential order with a single line step.
-
-
-Multiple lines
-~~~~~~~~~~~~~~
-
-You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
-Alternatively, you can use the :kbd:`F9` key to run any line.
-The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
+You can execute the current line—or multiple selected lines—using the :guilabel:`Run selection or current line` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key.
+After running the current line, the cursor automatically advances to the next, so you can step through your code line by line.
+Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
 
 
 Code cells
