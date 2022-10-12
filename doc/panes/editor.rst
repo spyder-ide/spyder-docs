@@ -167,14 +167,8 @@ After executing your selected line of code, the cursor automatically advances to
 This helps you run your code in sequential order with a single line step.
 
 
-Other run options
-~~~~~~~~~~~~~~~~~
-
-In addition to executing your entire source file at once or just a single line, the Editor allows you to run your code in other options.
-
-
 Multiple lines
---------------
+~~~~~~~~~~~~~~
 
 You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the :kbd:`F9` key to run any line.
@@ -183,13 +177,13 @@ The main difference between running a selection of lines and an entire file is t
 
 
 Code cells
-----------
+~~~~~~~~~~
 
 To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
 
 Run configuration
------------------
+~~~~~~~~~~~~~~~~~
 
 You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file...` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl-F6`.
 For example, you could execute the current file in a dedicated console, remove all variable before executing, or even change the working directory settings.
