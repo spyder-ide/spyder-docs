@@ -198,12 +198,12 @@ Use the :guilabel:`.*` button to process search text as a `regular expression <h
 Go to line
 ~~~~~~~~~~
 
-The :guilabel:`Go to line` dialog box allows you to navigate your source code and move to a specific line in the active file.
-You can view and use this box under the :menuselection:`search --> Go to line` menu item or alternatively press :kbd:`Ctrl-L`.
+The :guilabel:`Go to line` dialog allows jumping to a specific line in the active file.
+Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd-L`, type the line you want and press :kbd:`Enter` (or click :guilabel:`OK`).
 
 Image/GIF placeholder
 
-You can enter your desired line number in the :guilabel:`Go to line` input field, which should fall between 1 and the line count shown in the dialog box.
+It also shows the current line number and total line count in the file.
 
 
 Class/function selector
