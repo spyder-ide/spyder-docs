@@ -112,10 +112,10 @@ This displays multiple levels in the :guilabel:`Outline Explorer`.
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline panel, showing an example of sub sections
 
-.. note::  This only affects how the cell is displayed in the :guilabel:`Outline Explorer`, and doesn't affect running it in the Editor.
+.. note:: This only affects how the cell is displayed in the :guilabel:`Outline Explorer`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
-You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using  :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
+You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
 
 
 Automatic formatting
@@ -154,13 +154,13 @@ Run file
 ~~~~~~~~
 
 You can run any source file in the Editor by simply using the Run file button in Spyder's toolbar or by pressing the F5 key.
-You can also run your code by selecting  :menuselection:`Run --> Run` menu item.
+You can also run your code by selecting :menuselection:`Run --> Run` menu item.
 
 
 Run line
 ~~~~~~~~
 
-You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder's toolbar.
+You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing your selected line of code, the cursor automatically advances to the next line.
 This helps you run your code in sequential order with a single line step.
@@ -175,7 +175,7 @@ In addition to executing your entire source file at once or just a single line, 
 Multiple lines
 --------------
 
-You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the  :menuselection:`Run` menu or Spyder's toolbar.
+You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the F9 key to run any line.
 After executing a selection of code, use the :guilabel:`Re-Run last script` command from the :menuselection:`Run` menu to execute the same selection again.
 The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
@@ -244,7 +244,7 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
    Many issues with completion and linting are outside of Spyder's control, and are either limitation with LSP or the code that is being introspected, but some can be worked around.
    See :ref:`troubleshooting-completion <code-completion-problems-ref>` for troubleshooting steps.
 
-Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under  :menuselection:`Preferences --> Completion and Linting --> Other languages`.
+Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
 
 Code completion
