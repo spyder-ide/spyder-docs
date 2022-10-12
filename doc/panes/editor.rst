@@ -209,7 +209,8 @@ It also shows the current line number and total line count in the file.
 Class/function selector
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When you activate the class and function selector under :menuselection:`Source --> Show` selector for classes and functions, the name of the selected class will be shown at the top of the Editor while you are exploring any object inside this class such as methods.
+This panel, activated under :menuselection:`Source --> Show selector for classes and functions`, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside.
+Use its dropdowns to view and jump to the functions, methods and classes in the current file.
 
 Image/GIF placeholder
 
