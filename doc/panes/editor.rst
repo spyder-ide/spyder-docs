@@ -139,9 +139,8 @@ To set this up, go to :menuselection:`Preferences --> Completion and linting -->
 Running code
 ============
 
-As previously mentioned, the Editor is the place where you easily manage your work.
-It allows you to create a new file or open an existing one.
-It also lets you run an entire file as well as certain lines or selections.
+The Editor lets you run an entire file as well as specific lines, selections or cells.
+
 As your code is running,
 
 * The :doc:`ipythonconsole` will display the results and errors when applicable
