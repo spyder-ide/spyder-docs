@@ -153,6 +153,7 @@ Run file
 ~~~~~~~~
 
 Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the :guilabel:`Run file` toolbar button or the :kbd:`F5` key.
+Use :guilabel:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
 
 
 Run line
@@ -169,7 +170,6 @@ Multiple lines
 
 You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
 Alternatively, you can use the :kbd:`F9` key to run any line.
-After executing a selection of code, use the :guilabel:`Re-Run last script` command from the :menuselection:`Run` menu to execute the same selection again.
 The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
 
 
