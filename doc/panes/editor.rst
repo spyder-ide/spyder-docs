@@ -287,10 +287,8 @@ These features can be enabled and customized under :menuselection:`Preferences -
 Keyboard shortcuts
 ==================
 
-The Editor offers a useful set of default keyboard shortcuts that can help you perform your tasks faster, increase your productivity, and stay focused by keeping your hands on the keyboard.
-For an exhaustive list of keyboard shortcuts, navigate to :menuselection:`Help --> Shortcuts Summary --> Editor` menu option.
-You can also navigate to :menuselection:`Preferences --> Keyboard shortcuts` for the full list of Spyder shortcuts.
-All default shortcuts in the list are customizable when double clicked.
+To view the Editor's primary keyboard shortcuts, consult its section under :menuselection:`Help --> Shortcuts Summary`.
+The full list can be browsed, searched and customized (on double-click) in :menuselection:`Preferences --> Keyboard shortcuts`.
 
 
 
