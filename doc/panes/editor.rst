@@ -52,7 +52,7 @@ File switcher
 The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
 The file switcher is helpful for locating any file when there are several files opened.
 It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P` and includes a search function.
-You can type in any part of an open file's name and -if exists- it can be switched to by pressing Enter.
+You can type in any part of an open file's name and -if exists- it can be switched to by pressing :kbd:`Enter`.
 
 .. image:: /images/editor/editor-file-switcher.png
    :alt: Spyder's Editor pane, showing the file switcher
@@ -67,7 +67,8 @@ This allows viewing and editing the contents of several files (or different part
 GIF needed
 
 Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift--`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel.
-.. note: :menuselection:`Close this panel` closes a split panel, while :menuselection:`Close` hides the entire Editor *pane* (including all splits, which are restored when the Editor is re-opened).
+
+.. note:: :menuselection:`Close this panel` closes a split panel, while :menuselection:`Close` hides the entire Editor *pane* (including all splits, which are restored when the Editor is re-opened).
 
 
 
@@ -78,7 +79,8 @@ Editing features
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
 
-To improve the readability of your code, Spyder has a syntax highlighting feature that determines the colour and style of text in the Editor, as well as in the :doc:`ipythonconsole`..
+To improve the readability of your code, Spyder has a syntax highlighting feature that determines the colour and style of text in the Editor, as well as in the :doc:`ipythonconsole`.
+
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the colour theme of the syntax elements and background to match your preferences.
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
@@ -86,7 +88,7 @@ The :guilabel:`Fonts` section lets you change the plain text font and size.
 
 GIF new
 
-.. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language
+.. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
 
 
 Code cells
@@ -153,7 +155,7 @@ As your code is running,
 Run file
 ~~~~~~~~
 
-You can run any source file in the Editor by simply using the Run file button in Spyder's toolbar or by pressing the F5 key.
+You can run any source file in the Editor by simply using the Run file button in Spyder's toolbar or by pressing the :kbd:`F5` key.
 You can also run your code by selecting :menuselection:`Run --> Run` menu item.
 
 
@@ -161,7 +163,7 @@ Run line
 ~~~~~~~~
 
 You can execute just a single line of your source code where the cursor currently resides by selecting the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
-Alternatively, you can use the F9 key to run any line.
+Alternatively, you can use the :kbd:`F9` key to run any line.
 After executing your selected line of code, the cursor automatically advances to the next line.
 This helps you run your code in sequential order with a single line step.
 
@@ -176,7 +178,7 @@ Multiple lines
 --------------
 
 You can execute multiple lines from within the editor by highlighting these lines and using the :guilabel:`Run selection or current line` option from the :menuselection:`Run` menu or Spyder's toolbar.
-Alternatively, you can use the F9 key to run any line.
+Alternatively, you can use the :kbd:`F9` key to run any line.
 After executing a selection of code, use the :guilabel:`Re-Run last script` command from the :menuselection:`Run` menu to execute the same selection again.
 The main difference between running a selection of lines and an entire file is that in the former all lines are inserted directly into the :doc:`ipythonconsole` whereas in the latter only the results are shown in the console.
 
@@ -190,7 +192,7 @@ To run a cell, press :kbd:`Ctrl-Return` (while your cursor is focused on it) or 
 Run configuration
 -----------------
 
-You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file...` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl+F6`.
+You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file...` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl-F6`.
 For example, you could execute the current file in a dedicated console, remove all variable before executing, or even change the working directory settings.
 
 
@@ -203,8 +205,8 @@ Find panel
 ~~~~~~~~~~
 
 The Editor features a find and replace functionality to find and replace a given text in the current file.
-You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl+F`.
-Similarly, you can to find and replace a string by selecting :menuselection:`Search --> Replace text` from the Spyder IDE main menu or using the :kbd:`Ctrl+R` shortcut.
+You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl-F`.
+Similarly, you can to find and replace a string by selecting :menuselection:`Search --> Replace text` from the Spyder IDE main menu or using the :kbd:`Ctrl-R` shortcut.
 The :guilabel:`Find and Replace` panel appears in the Editor's bottom left corner highlighting each occurrence of the desired text in the current file and showing the total number of occurrences.
 The panel allows you to navigate from one occurrence to another by choosing the :guilabel:`Find Next` or the :guilabel:`Find Previous` buttons.
 It also lets you run a case-sensitive regex search using the Case Sensitive and Regular expressions controls.
@@ -217,7 +219,7 @@ Go to line
 ~~~~~~~~~~
 
 The :guilabel:`Go to line` dialog box allows you to navigate your source code and move to a specific line in the active file.
-You can view and use this box under the :menuselection:`search --> Go to line` menu item or alternatively press :kbd:`Ctrl+L`.
+You can view and use this box under the :menuselection:`search --> Go to line` menu item or alternatively press :kbd:`Ctrl-L`.
 
 Image/GIF placeholder
 
