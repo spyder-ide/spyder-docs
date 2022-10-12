@@ -39,7 +39,7 @@ Tabs
 ~~~~
 
 You can browse and navigate between open files in the Editor with tabs.
-Click the :guilabel:`Browse tabs` button on the left of the Tabs bar to display a list of open files, with the active tab checked.
+Click the :guilabel:`Browse tabs` button on the left of the tab bar to display a list of open files, with the active tab checked.
 Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.
 
 .. image:: /images/editor/editor-tabs-browser.png
@@ -51,8 +51,8 @@ File switcher
 
 The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
 The file switcher is helpful for locating any file when there are several files opened.
-It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P` and includes a search function.
-You can type in any part of an open file's name and -if exists- it can be switched to by pressing :kbd:`Enter`.
+It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P`, and includes a search function.
+You can type in any part of an open file's name and—if exists—it can be switched to by pressing :kbd:`Enter`.
 
 .. image:: /images/editor/editor-file-switcher.png
    :alt: Spyder's Editor pane, showing the file switcher
@@ -79,12 +79,12 @@ Editing features
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
 
-To improve the readability of your code, Spyder has a syntax highlighting feature that determines the colour and style of text in the Editor, as well as in the :doc:`ipythonconsole`.
+To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the :doc:`ipythonconsole`.
 
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
-The :guilabel:`Syntax highlighting theme` section allows you to change the colour theme of the syntax elements and background to match your preferences.
+The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences.
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
-The :guilabel:`Fonts` section lets you change the plain text font and size.
+The :guilabel:`Fonts` section lets you change the text font and size.
 
 GIF new
 
@@ -95,8 +95,7 @@ Code cells
 ~~~~~~~~~~
 
 A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`.
-
-This is similar to "cell" behaviour in Jupyter Notebook and MATLAB.
+This is similar to "cell" behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
 .. image:: /images/editor/editor-cells.png
@@ -107,14 +106,14 @@ You can separate cells by lines starting with either:
 * ``# %%`` (standard cell separator), or
 * ``# <codecell>`` (IPython notebook cell separator)
 
-Providing a description to the right of the separator will give that cell its own name in the :guilabel:`Outline Explorer`.
+Providing a description to the right of the separator will give that cell its own name in the :doc:`outline`.
 You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
-This displays multiple levels in the :guilabel:`Outline Explorer`.
+This displays multiple levels in the :doc:`outline`.
 
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline panel, showing an example of sub sections
 
-.. note:: This only affects how the cell is displayed in the :guilabel:`Outline Explorer`, and doesn't affect running it in the Editor.
+.. note:: This only affects how the cell is displayed in the :doc:`outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
@@ -123,7 +122,7 @@ You can also run a cell and then jump to the next one, letting you quickly step 
 Automatic formatting
 ~~~~~~~~~~~~~~~~~~~~
 
-The Editor has built-in support for automatically formatting your code using several popular tools, including Autopep8, Yapf, and Black.
+The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_, `Yapf <https://github.com/google/yapf>`_, and `Black <https://black.readthedocs.io/en/stable/>`_.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
 GIF new
@@ -243,8 +242,8 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 
 .. note::
 
-   Many issues with completion and linting are outside of Spyder's control, and are either limitation with LSP or the code that is being introspected, but some can be worked around.
-   See :ref:`troubleshooting-completion <code-completion-problems-ref>` for troubleshooting steps.
+   Many issues with completion and linting are outside of Spyder's control, and are either limitations with LSP or the code that is being introspected, but some can be worked around.
+   See :ref:`code-completion-problems-ref` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
@@ -259,7 +258,7 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
 .. image:: /images/editor/editor-code-completion.png
    :alt: Spyder's Editor pane, showing a code completion example
 
-You can enable or disable on-the-fly code completion as you type, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
+You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
 Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
 
 
@@ -277,7 +276,7 @@ It is on by default, and can be disabled or customized under :menuselection:`Pre
 .. image:: /images/editor/editor-linting-setting.png
    :alt: Spyder's preferences dialog, showing linting settings
 
-Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/latest/>`_, flags deviations from the style conventions in :pep:`8`.
+Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/stable/>`_, flags deviations from the style conventions in :pep:`8`.
 It is not active by default; you can enable it and customize the `pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`.
 
 .. image:: /images/editor/editor-code-style-setting.png
