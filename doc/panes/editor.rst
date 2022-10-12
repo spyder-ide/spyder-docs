@@ -174,8 +174,8 @@ Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd
 Run configuration
 ~~~~~~~~~~~~~~~~~
 
-You can configure the :guilabel:`Run per file` settings to control where and how this file runs in the :guilabel:`Configuration per file...` dialog under the :menuselection:`Run` menu or pressing :kbd:`Ctrl-F6`.
-For example, you could execute the current file in a dedicated console, remove all variable before executing, or even change the working directory settings.
+You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), CLI arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
+To access it, click :menuselection:`Run --> Configuration per file...` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
 
 
 
