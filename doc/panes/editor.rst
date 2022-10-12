@@ -183,15 +183,13 @@ To access it, click :menuselection:`Run --> Configuration per file...` or press 
 Code navigation
 ===============
 
-Find panel
-~~~~~~~~~~
+Find and replace
+~~~~~~~~~~~~~~~~
 
-The Editor features a find and replace functionality to find and replace a given text in the current file.
-You can find a string in the current file by selecting :menuselection:`Search --> Find text` from the Spyder IDE main menu or simply using :kbd:`Ctrl-F`.
-Similarly, you can to find and replace a string by selecting :menuselection:`Search --> Replace text` from the Spyder IDE main menu or using the :kbd:`Ctrl-R` shortcut.
-The :guilabel:`Find and Replace` panel appears in the Editor's bottom left corner highlighting each occurrence of the desired text in the current file and showing the total number of occurrences.
-The panel allows you to navigate from one occurrence to another by choosing the :guilabel:`Find Next` or the :guilabel:`Find Previous` buttons.
-It also lets you run a case-sensitive regex search using the Case Sensitive and Regular expressions controls.
+To search for text in the current file, use :menuselection:`Search --> Find text` or :kbd:`Ctrl-F` / :kbd:`Cmd-F`, and to replace it, use :menuselection:`Search --> Replace text` or :kbd:`Ctrl-R` / :kbd:`Cmd-R`.
+Typing your search string in the resulting panel below the Editor highlights each result and counts the total.
+Navigate between matches with :guilabel:`Find Previous` and :guilabel:`Find Next` in the find/replace panel and the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys.
+Use the :guilabel:`.*` button to process search text as a `regular expression <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` to treat it as case-sensitive and :guilabel:`[–]` to only match whole words (e.g. for ``data``, match ``data()`` but not ``dataframe``).
 
 .. image:: /images/editor/editor-find-replace-panel.png
    :alt: Spyder's Editor pane, showing the find and replace panel
