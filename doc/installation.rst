@@ -338,18 +338,28 @@ To launch Spyder after installing, ensure your environment is activated and run 
 Updating Spyder
 ===============
 
-To update Spyder installed via our :ref:`standalone packages<standalone_installers_ref>` on Windows and macOS, you'll currently need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
+By default, Spyder checks for updates automatically on startup.
+You can also do manually with :menuselection:`Help --> Check for updates` on Windows and Linux, or :menuselection:`Spyder --> Check for updates` on macOS.
 
-If you installed Spyder through Anaconda, WinPython, MacPorts, or your system package manager, update using those same methods.
-With Anaconda, just run (in Anaconda Prompt if on Windows, otherwise in your system terminal):
+The :ref:`standalone_installers_ref` for Spyder 5.4.0+ also include update functionality built right into Spyder, which after checking for updates as above will display a prompt to automatically download and install the current version.
+On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
 
-.. code-block:: bash
+If you installed Spyder through Conda, WinPython, Homebrew, MacPorts, or your system package manager, update using those same methods, as described in their respective documentation.
+With Conda-based installs, just run (in Anaconda Prompt if on Windows, otherwise in your system terminal):
 
-   conda update anaconda
+.. code-block:: shell
+
    conda update spyder
 
-If you installed Spyder via the advanced/cross-platform method, ``pip``, run ``pip install --upgrade spyder``.
-This command will also update all Spyder dependencies, so we recommend you use an isolated virtual environment to avoid any potential unintended effects on other installed packages.
+.. note::
+
+   This command will also update all Spyder dependencies, so we recommend you use an isolated virtual environment to avoid any potential unintended effects on other installed packages.
+
+If you installed Spyder with ``pip``, run:
+
+.. code-block:: shell
+
+   pip install --upgrade spyder
 
 
 
