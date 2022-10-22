@@ -11,10 +11,10 @@ Thanks!
 
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
-.. important::
+.. note::
 
-   Spyder now offers :ref:`standalone installers<standalone_installers_ref>` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
-   While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.
+   For most users on Windows and macOS, we recommend using our :ref:`standalone_installers_ref`, and for those on Linux or who need third-party Spyder plugins, which the standalone installers currently do not support, we advise using :ref:`anaconda_install_ref`.
+   Linux, plugin and package/environment management support in the standalone installers are currently under active development for future Spyder versions.
 
 
 
@@ -40,8 +40,19 @@ Just visit the `Spyder page on Binder`_ to get started using Spyder now.
 Standalone installers
 =====================
 
-Our standalone installers for Windows and macOS are available from Spyder 4.2 onwards.
-We recommend using this installation method on those platforms, but we offer several other options for Linux, advanced users and specific needs, so keep reading if that's the case for you.
+The standalone installers are our recommended method for most users on Windows and macOS, with experimental Linux support under active development.
+They work much like installing any other IDE, where Spyder can be installed and updated independently of the Python environments you use to run your code, avoiding problems with incompatible packages and botched installations that users often face when doing so within their own Python installation.
+
+The installers include a built-in Python environment with the most common scientific libraries, which can be used out of the box for basic data analysis tasks.
+However, to install and manage your own packages and environments, you'll currently need to use an external Python installation (such as `Anaconda`_, `Miniconda`_, `WinPython`_ or `Python.org <Python_>`__) with Spyder.
+For more information on this, see our :ref:`FAQ entry on the subject <using-packages-installer>`.
+
+.. _Miniconda: https://conda.io/miniconda.html
+
+.. note::
+
+   The standalone installers currently do not yet support installing third-party Spyder plugins not already bundled with them, though this feature is currently under development.
+   For now, if you need this capability, we recommend :ref:`installing Spyder with Anaconda/Miniconda <anaconda_install_ref>`.
 
 
 Downloading and installing
@@ -85,8 +96,6 @@ On macOS, the first time you open Spyder, you may see a message that it cannot b
 If so, right-click on the application, select :guilabel:`Open`, then click :guilabel:`Open` in the resulting dialog, and the warning will no longer be shown.
 You can also click :guilabel:`Open Anyway` under :menuselection:`Security & Privacy --> General` in System Preferences.
 
-For more information on installing your own packages and using standalone Spyder with your existing Python environments, see our :ref:`FAQ<using_spyder_faqs_ref>`.
-
 
 
 .. _anaconda_install_ref:
@@ -95,9 +104,9 @@ For more information on installing your own packages and using standalone Spyder
 Anaconda
 ========
 
-Spyder is included by default in the `Anaconda Python distribution`_, which comes with everything you need to get started in an all-in-one package, and is our recommended installation method on Linux (and supported on the other platforms too).
+Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package, and is our recommended installation method on Linux (and supported on the other platforms too).
 
-.. _Anaconda Python distribution: https://www.anaconda.com/products/distribution
+.. _Anaconda: https://www.anaconda.com/products/distribution
 
 
 Running with Anaconda

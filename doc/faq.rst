@@ -196,6 +196,8 @@ Using Spyder
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
 
+.. _using-packages-installer:
+
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
 
