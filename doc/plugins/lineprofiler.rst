@@ -24,7 +24,7 @@ If you installed Spyder using conda, the best way to obtain Spyder-Line-Profiler
 
 .. important::
 
-   At the moment it is not possible to use this plugin with the Spyder :ref:`standalone_installers_ref` for Windows and macOS.
+   At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS.
    We're working to add support for them in the future.
 
 Restart Spyder in order to be able to use the plugin.

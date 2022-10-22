@@ -18,7 +18,7 @@ You will also need to have `Anaconda <https://www.anaconda.com/products/individu
 
 .. important::
 
-   Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+   Spyder now offers :ref:`install-standalone` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
    While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.
 
 
@@ -153,7 +153,7 @@ To install Spyder's optional dependencies as well for full functionality, use th
 
 .. important::
 
-   Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+   Spyder now offers :ref:`install-standalone` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 
 
 Download the datasets
