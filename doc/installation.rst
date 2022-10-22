@@ -187,15 +187,18 @@ Alternative methods
 
 .. caution::
 
-   While we offer alternative Spyder installation options for users who desire them, we currently lack the resources to offer individual assistance for problems specific to installing via these alternative distributions.
-   Therefore, we recommend you switch to our :ref:`standalone installers<standalone_installers_ref>` (Windows and macOS) or a :ref:`installation-conda` if you encounter installation issues you are unable to solve on your own.
+   While we describe alternative Spyder installation options for users who prefer them, as these are third-party distributions that we have no direct involvement in, we are usually not able to offer useful individual assistance for problems specific to installing via these alternative methods.
+
+   Also, the Spyder versions they install may be out of date relative to the current release, and thus be missing the latest features and bug fixes.
+
+   Therefore, we recommend you switch to our :ref:`standalone_installers_ref` (Windows and macOS) or a :ref:`installation-conda` if you encounter installation issues you are unable to solve on your own.
 
 
 Windows
 ~~~~~~~
 
-Spyder is included in the `WinPython`_ scientific Python distribution (although Anaconda's ``conda`` package and environment manager is not).
-You can use Spyder immediately after installing, just like with Anaconda.
+Spyder is included in the `WinPython`_ scientific Python distribution, along with many other common numerical computing and data analysis packages.
+You can use Spyder immediately after installing, similar to Anaconda.
 
 .. _WinPython: https://winpython.github.io/
 
@@ -203,22 +206,31 @@ You can use Spyder immediately after installing, just like with Anaconda.
 macOS
 ~~~~~
 
-Thanks to the `MacPorts project`_, Spyder can be installed using its ``port`` package manager; however, the included Spyder version may be out of date or have MacPorts-specific issues outside of Spyder's control.
+Spyder is available as `a cask`_ through `Homebrew`_.
 
-.. _MacPorts project: https://www.macports.org/
+.. _a cask: https://formulae.brew.sh/cask/spyder
+.. _Homebrew: https://brew.sh/
 
-There are `several versions`_ available from which you can choose.
+To install it using the ``brew`` package manager, run:
 
-.. _several versions: https://ports.macports.org/search/?q=spyder&name=on
+.. code-block:: shell
+
+   brew install --cask spyder
+
+It is also available as a `a port`_ through `MacPorts`_.
+
+.. _a port: https://ports.macports.org/port/py-spyder/
+.. _MacPorts: https://www.macports.org/
+
+To install it using the ``port`` package manager, run:
+
+.. code-block:: shell
+
+   sudo port install py39-spyder
 
 
 Linux
 ~~~~~
-
-.. warning::
-
-   Distribution packages are created by third parties, are often outdated relative to the current Spyder release, and may contain bugs and be missing features relative to the current supported version.
-   As such, given we are not able to provide official support for them, we strongly recommend using a :ref:`installation-conda` on Linux whenever practical (or :ref:`pip<pip_install_spyder_ref>`, for advanced users).
 
 Spyder can be installed via third-party distro packages on most common Linux distributions.
 
@@ -226,38 +238,25 @@ Running Spyder installed this way will generally be the same as any other distro
 Alternatively, it can be launched from the terminal with ``spyder`` (or ``spyder3``, on older versions of some distros).
 
 
-Ubuntu
-------
+Ubuntu/Debian
+-------------
 
-Using the package manager:
+Spyder is available as `a Ubuntu package`_ and `a Debian package`_.
 
-.. code-block:: bash
+.. _a Ubuntu package: https://packages.ubuntu.com/search?keywords=spyder
+.. _a Debian package: https://packages.debian.org/search?searchon=names&keywords=spyder
 
-   sudo apt install spyder
+To install it using the ``apt`` package manager, run:
 
-Spyder's Ubuntu package is available on the `Ubuntu package repository`_.
-
-.. _Ubuntu package repository: https://packages.ubuntu.com/search?keywords=spyder
-
-
-Debian
-------
-
-Using the package manager:
-
-.. code-block:: bash
+.. code-block:: shell
 
    sudo apt install spyder
-
-Spyder's Debian package is available on the `Debian package repository`_.
-
-.. _Debian package repository: https://packages.debian.org/stable/spyder
 
 
 Other distributions
 -------------------
 
-Spyder is also available in other GNU/Linux distributions, like
+Spyder is also available in other GNU/Linux distributions, including:
 
 * `Arch Linux`_
 * `Fedora`_
@@ -269,7 +268,7 @@ Spyder is also available in other GNU/Linux distributions, like
 .. _Gentoo: https://packages.gentoo.org/packages/dev-python/spyder
 .. _openSUSE: https://software.opensuse.org/package/spyder
 
-Please refer to your distribution's documentation for how to install Spyder.
+Please refer to the links or your distribution's documentation for how to install Spyder.
 
 
 
