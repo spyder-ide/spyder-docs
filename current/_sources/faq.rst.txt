@@ -105,7 +105,7 @@ Running Spyder
    Try it `here`_.
 
    .. _Binder: https://mybinder.org/
-   .. _here: https://mybinder.org/v2/gh/spyder-ide/spyder/5.x?urlpath=/desktop
+   .. _here: https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster
 
 
 .. dropdown:: Q: What are the system requirements for Spyder? How resource-intensive is it?
