@@ -24,10 +24,10 @@ Try Spyder online
 
 Want to try out Spyder without installing it?
 With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
-Just visit the `Spyder page on Binder`_ to get started using Spyder now.
+Visit the `Spyder Binder`_ to get started using Spyder.
 
 .. _Binder: https://mybinder.org/
-.. _Spyder page on Binder: https://mybinder.org/v2/gh/spyder-ide/spyder/5.x?urlpath=/desktop
+.. _Spyder Binder: https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster
 
 .. image:: /images/installation/installation-spyder-binder.png
    :alt: Spyder running on Binder
