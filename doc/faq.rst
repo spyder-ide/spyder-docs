@@ -176,6 +176,8 @@ Using Spyder
       :start: 306
 
 
+.. _using-existing-environment:
+
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
    :container: + dropdown-id-using-existing-environment
 
