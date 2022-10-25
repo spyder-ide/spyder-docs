@@ -255,6 +255,74 @@ In case you get an error resolving dependencies, try uninstalling Spyder and re-
 
 
 
+.. _install-pip:
+
+=========
+Using pip
+=========
+
+.. caution::
+
+   While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with pip can sometimes lead to tricky issues, particularly on Windows and macOS.
+   While you are welcome to try it on your own, we are typically not able to provide individual support for installation problems with pip, except to recommend our :ref:`install-standalone` (Windows and macOS) or a :ref:`install-conda`.
+
+You can install Spyder with the pip package manager, which is included by default with most Python installations.
+Before installing Spyder itself by this method, you need to download the `Python`_ programming language.
+
+.. _Python: https://www.python.org/
+
+.. note::
+
+   Due to a known issue with some DEB-based Linux distributions (Debian, Ubuntu, Mint), you might also need to install the ``pyqt5-dev-tools`` package first, with ``sudo apt install pyqt5-dev-tools``.
+
+You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.
+
+With ``virtualenvwrapper``:
+
+.. code-block:: shell
+
+   mkvirtualenv spyder-env
+   workon spyder-env
+
+Otherwise, on macOS/Linux/Unix:
+
+.. code-block:: shell
+
+   python3 -m venv spyder-env
+   source spyder-env/bin/activate
+
+or on Windows:
+
+.. code-block:: batch
+
+   python -m venv spyder-env
+   spyder-env\Scripts\activate.bat
+
+After activating your environment, to install Spyder and its optional dependencies, run:
+
+.. code-block:: shell
+
+   pip install spyder numpy scipy pandas matplotlib sympy cython
+
+Or for a minimal installation, run:
+
+.. code-block:: shell
+
+   pip install spyder
+
+.. image:: /images/installation/installation-pip-install.gif
+   :alt: Running Spyder installation with pip
+
+To launch Spyder after installing it, ensure your environment is activated and run the ``spyder`` or ``spyder3`` command.
+
+And to update Spyder, with your Spyder environment activated, run:
+
+.. code-block:: shell
+
+   pip install --upgrade spyder
+
+
+
 .. _install-alternatives:
 
 ===================
@@ -355,74 +423,6 @@ Spyder is also available in other GNU/Linux distributions, including:
 .. _openSUSE: https://software.opensuse.org/package/spyder
 
 Please refer to the links or your distribution's documentation for how to install Spyder.
-
-
-
-.. _install-pip:
-
-=========
-Using pip
-=========
-
-.. caution::
-
-   While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with pip can sometimes lead to tricky issues, particularly on Windows and macOS.
-   While you are welcome to try it on your own, we are typically not able to provide individual support for installation problems with pip, except to recommend our :ref:`install-standalone` (Windows and macOS) or a :ref:`install-conda`.
-
-You can install Spyder with the pip package manager, which is included by default with most Python installations.
-Before installing Spyder itself by this method, you need to download the `Python`_ programming language.
-
-.. _Python: https://www.python.org/
-
-.. note::
-
-   Due to a known issue with some DEB-based Linux distributions (Debian, Ubuntu, Mint), you might also need to install the ``pyqt5-dev-tools`` package first, with ``sudo apt install pyqt5-dev-tools``.
-
-You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.
-
-With ``virtualenvwrapper``:
-
-.. code-block:: shell
-
-   mkvirtualenv spyder-env
-   workon spyder-env
-
-Otherwise, on macOS/Linux/Unix:
-
-.. code-block:: shell
-
-   python3 -m venv spyder-env
-   source spyder-env/bin/activate
-
-or on Windows:
-
-.. code-block:: batch
-
-   python -m venv spyder-env
-   spyder-env\Scripts\activate.bat
-
-After activating your environment, to install Spyder and its optional dependencies, run:
-
-.. code-block:: shell
-
-   pip install spyder numpy scipy pandas matplotlib sympy cython
-
-Or for a minimal installation, run:
-
-.. code-block:: shell
-
-   pip install spyder
-
-.. image:: /images/installation/installation-pip-install.gif
-   :alt: Running Spyder installation with pip
-
-To launch Spyder after installing it, ensure your environment is activated and run the ``spyder`` or ``spyder3`` command.
-
-And to update Spyder, with your Spyder environment activated, run:
-
-.. code-block:: shell
-
-   pip install --upgrade spyder
 
 
 
