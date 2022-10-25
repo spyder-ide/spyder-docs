@@ -99,6 +99,15 @@ Running from a standalone install
 To run Spyder when installed standalone, you can simply use your operating system's typical method of launching applications, such as opening it from the :guilabel:`Start` menu on Windows (or the Taskbar, if you've pinned it there), or from Launchpad, Spotlight or the :guilabel:`Applications` folder on macOS (or the Dock, if you've added it there).
 
 
+.. _install-standalone-update:
+
+Updating a standalone install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, Spyder checks for updates automatically on startup, and you can also check manually with :menuselection:`Help --> Check for updates`.
+The standalone installers for Spyder 5.4.0+ include update functionality built right into Spyder, which after checking for updates will display a prompt to automatically download and install the current version.
+On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
+
 
 
 .. _install-conda:
@@ -182,6 +191,54 @@ You can then run Spyder by the same methods :ref:`as above <install-anaconda-run
 For more information on this approach, and using Spyder with your existing Python environments and packages, see our `Guide to working with packages and environments in Spyder`_.
 
 .. _Guide to working with packages and environments in Spyder: https://github.com/spyder-ide/spyder/wiki/Working-with-packages-and-environments-in-Spyder
+
+
+.. _install-anaconda-update:
+
+Updating with Anaconda
+~~~~~~~~~~~~~~~~~~~~~~
+
+With Spyder installed in Anaconda's ``base`` environment, first update the ``anaconda`` meta-package, and then Spyder itself (in case there is a newer version than that pinned to the ``anaconda`` metapackage).
+In your system terminal (or Anaconda Prompt if on Windows), run:
+
+.. code-block:: shell
+
+   conda update anaconda
+   conda install spyder
+
+.. note::
+
+   These commands also update all your other packages, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on other installed packages.
+
+In case you get an error resolving dependencies, try uninstalling Spyder and re-installing it:
+
+.. code-block:: shell
+
+   conda remove spyder
+   conda install spyder
+
+
+.. _install-conda-update:
+
+Updating with Conda
+~~~~~~~~~~~~~~~~~~~
+
+With any Conda-based distribution and Spyder installed in its own environment (recommended), update Conda itself, active the environment then update Spyder.
+In your system terminal (or Anaconda Prompt if on Windows), run:
+
+.. code-block:: shell
+
+   conda update -n base conda
+   conda activate spyder-env
+   conda update spyder
+
+In case you get an error trying to update, just remove the existing environment (if using one other than ``base``):
+
+.. code-block:: shell
+
+   conda remove -n spyder-env --all
+
+And :ref:`recreate a fresh one <install-conda-installing>`.
 
 
 
@@ -348,86 +405,11 @@ Or for a minimal installation, run:
 
 To launch Spyder after installing it, ensure your environment is activated and run the ``spyder`` or ``spyder3`` command.
 
-
-
-.. _install-update:
-
-===============
-Updating Spyder
-===============
-
-By default, Spyder checks for updates automatically on startup, and you can also check manually with :menuselection:`Help --> Check for updates`.
-
-
-.. _install-update-standalone:
-
-Standalone installers
-~~~~~~~~~~~~~~~~~~~~~
-
-The :ref:`install-standalone` for Spyder 5.4.0+ also include update functionality built right into Spyder, which after checking for updates as above will display a prompt to automatically download and install the current version.
-On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
-
-
-.. _install-update-conda:
-
-Conda-based distributions
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**With Spyder installed in Anaconda's ``base`` environment**, first update the ``anaconda`` meta-package, and then Spyder itself (in case there is a newer version than that pinned to the ``anaconda`` metapackage).
-In your system terminal (or Anaconda Prompt if on Windows), run:
-
-.. code-block:: shell
-
-   conda update anaconda
-   conda install spyder
-
-**With any Conda-based distribution and Spyder installed in its own environment** (recommended), update Conda itself, active the environment then update Spyder
-In your system terminal (or Anaconda Prompt if on Windows), run:
-
-.. code-block:: shell
-
-   conda update -n base conda
-   conda activate spyder-env
-   conda update spyder
-
-.. note::
-
-   These commands also update all Spyder dependencies, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on other installed packages.
-
-Either way, in case you get an error resolving dependencies, you can try uninstalling Spyder and re-installing it:
-
-.. code-block:: shell
-
-   conda remove spyder
-   conda install spyder
-
-If that doesn't work, remove the existing environment (if using one other than ``base``):
-
-.. code-block:: shell
-
-   conda remove -n spyder-env --all
-
-Then, :ref:`recreate it <install-conda-installing>`.
-
-
-.. _install-update-pip:
-
-Pip installations
-~~~~~~~~~~~~~~~~~
-
-**With Spyder installed through pip**, after activating your Spyder environment, run:
+And to update Spyder, with your Spyder environment activated, run:
 
 .. code-block:: shell
 
    pip install --upgrade spyder
-
-
-.. _install-update-alternative:
-
-Other methods
-~~~~~~~~~~~~~
-
-If you installed Spyder through :ref:`WinPython <install-windows>`, :ref:`Homebrew/MacPorts <install-macos>`, or :ref:`a Linux package manager <install-linux>`, update using those same methods, as described in their respective documentation.
 
 
 
