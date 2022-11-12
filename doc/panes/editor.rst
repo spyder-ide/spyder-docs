@@ -40,22 +40,29 @@ Tabs
 
 You can browse and navigate between open files in the Editor with tabs.
 Click the :guilabel:`Browse tabs` button on the left of the tab bar to display a list of open files, with the active tab checked.
-Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.
 
 .. image:: /images/editor/editor-tabs-browser.png
    :alt: Spyder's Editor pane, showing the tabs browser
 
+Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.
+
+.. image:: /images/editor/editor-tabs-sorting.gif
+   :alt: Spyder's Editor pane, showing how to browse and sort open tabs alphabetically
 
 File switcher
 ~~~~~~~~~~~~~
 
 The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
 The file switcher is helpful for locating any file when there are several files opened.
-It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P`, and includes a search function.
-You can type in any part of an open file's name and—if exists—it can be switched to by pressing :kbd:`Enter`.
 
 .. image:: /images/editor/editor-file-switcher.png
    :alt: Spyder's Editor pane, showing the file switcher
+
+It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P`, and includes a search function.
+You can type in any part of an open file's name and—if exists—it can be switched to by pressing :kbd:`Enter`.
+
+.. image:: /images/editor/editor-file-switcher.gif
+   :alt: Spyder's Editor pane, showing searching and switching to an existing file
 
 
 Split panels
@@ -64,7 +71,8 @@ Split panels
 The Editor can be split horizontally and vertically into as many distinct panels as desired.
 This allows viewing and editing the contents of several files (or different parts of the same file) at the same time.
 
-GIF needed
+.. image:: /images/editor/editor-split-panels.gif
+   :alt: Spyder's Editor pane, showing how to split panels
 
 Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift--`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel.
 
@@ -86,7 +94,8 @@ The :guilabel:`Syntax highlighting theme` section allows you to change the color
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
 The :guilabel:`Fonts` section lets you change the text font and size.
 
-GIF new
+.. image:: /images/editor/editor-syntax-highlighting.gif
+   :alt: Spyder's Editor panel, showing how to switch between syntax highlighting themes
 
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
 
@@ -125,7 +134,8 @@ Automatic formatting
 The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_, `Yapf <https://github.com/google/yapf>`_, and `Black <https://black.readthedocs.io/en/stable/>`_.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
-GIF new
+.. image:: /images/editor/editor-automatic-formatting.gif
+   :alt: Spyder editor panel, showing an example of code selection formatting
 
 You can have the Editor automatically autoformat a file every time you save your work.
 To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code style and formatting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
@@ -201,7 +211,8 @@ Go to line
 The :guilabel:`Go to line` dialog allows jumping to a specific line in the active file.
 Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd-L`, type the line you want and press :kbd:`Enter` (or click :guilabel:`OK`).
 
-Image/GIF placeholder
+.. image:: /images/editor/editor-go-to-line.gif
+   :alt: Spyder's Editor pane, showing the go to line feature
 
 It also shows the current line number and total line count in the file.
 
@@ -212,8 +223,8 @@ Class/function selector
 This panel, activated under :menuselection:`Source --> Show selector for classes and functions`, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside.
 Use its dropdowns to view and jump to the functions, methods and classes in the current file.
 
-Image/GIF placeholder
-
+.. image:: /images/editor/editor-class-function-selector.gif
+   :alt: Spyder's Editor pane, showing the class and function selector panel
 
 
 =============================
