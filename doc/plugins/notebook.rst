@@ -21,7 +21,7 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
 
 .. important::
 
-   At the moment it is not possible to use this plugin with the Spyder :ref:`standalone_installers_ref` for Windows and macOS. We're working to make that possible in the future.
+   At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future.
 
 Restart Spyder in order to be able to use the plugin.
 
