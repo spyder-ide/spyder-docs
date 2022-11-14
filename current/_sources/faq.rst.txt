@@ -176,6 +176,8 @@ Using Spyder
       :start: 306
 
 
+.. _using-existing-environment:
+
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
    :container: + dropdown-id-using-existing-environment
 
@@ -195,6 +197,8 @@ Using Spyder
 
    Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
 
+
+.. _using-packages-installer:
 
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
@@ -435,7 +439,7 @@ About Spyder
    If you use Spyder with the Anaconda distribution, they `recently changed`_ their `Terms of Service`_ to add restrictions on large (> 200 employee) for-profit companies using Anaconda on a large scale.
    However, these terms only apply to the package infrastructure (the full Anaconda distribution and the ``defaults`` conda channel).
    Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
-   Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`standalone_installers_ref`) with ``conda`` as you usually do.
+   Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`install-standalone`) with ``conda`` as you usually do.
    Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
    For more, see our :doc:`/installation`.
 

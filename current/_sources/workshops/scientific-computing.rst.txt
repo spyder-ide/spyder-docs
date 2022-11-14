@@ -14,7 +14,7 @@ You will need to have Spyder installed. Visit our :doc:`installation guide<../in
 
 .. important::
 
-   Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+   Spyder now offers :ref:`install-standalone` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
    While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.
 
 It is also desirable to have the following prior knowledge:
@@ -173,7 +173,7 @@ To install Spyder's optional dependencies as well for full functionality, use th
 
 .. warning::
 
-   Spyder now offers :ref:`standalone_installers_ref` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment. If you use the standalone installer, there is no need to install ``spyder=5`` with conda.
+   Spyder now offers :ref:`install-standalone` for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment. If you use the standalone installer, there is no need to install ``spyder=5`` with conda.
 
 
 2. From an environment.yml file

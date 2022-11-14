@@ -747,7 +747,7 @@ In your system terminal (or Anaconda Prompt on Windows), type:</p>
 </div>
 <p class="card-text">If your installation is not successful, follow steps 3 through 5 of Part 2 in our video on solving and avoiding problems with pip, Conda and Conda-Forge.</p>
 <div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/Ul79ihg41Rs?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div></div>
-</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-existing-environment">
+</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-existing-environment" id="using-existing-environment">
 <summary class="summary-title card-header">
 Q: How do I get Spyder to work with my existing Python packages/environment?<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -764,7 +764,7 @@ See the <a class="reference internal" href="panes/ipythonconsole.html"><span cla
 <img alt="Preferences showing changing Python interpreter" src="_images/faq-python-interpreter.png" />
 <p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-packages-installer">
+</details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-packages-installer" id="using-packages-installer">
 <summary class="summary-title card-header">
 Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -1018,7 +1018,7 @@ Q: What do the Anaconda licensing changes mean for Spyder?<div class="summary-do
 <p class="card-text">If you use Spyder with the Anaconda distribution, they <a class="reference external" href="https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community">recently changed</a> their <a class="reference external" href="https://www.anaconda.com/terms-of-service">Terms of Service</a> to add restrictions on large (&gt; 200 employee) for-profit companies using Anaconda on a large scale.
 However, these terms only apply to the package infrastructure (the full Anaconda distribution and the <code class="docutils literal notranslate"><span class="pre">defaults</span></code> conda channel).
 Instead, you can simply download the similar <a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest">Miniforge distribution</a>, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
-Then, simply install the packages you need (including Spyder, if you aren’t using our recommended <a class="reference internal" href="installation.html#standalone-installers-ref"><span class="std std-ref">Standalone installers</span></a>) with <code class="docutils literal notranslate"><span class="pre">conda</span></code> as you usually do.
+Then, simply install the packages you need (including Spyder, if you aren’t using our recommended <a class="reference internal" href="installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>) with <code class="docutils literal notranslate"><span class="pre">conda</span></code> as you usually do.
 Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
 For more, see our <a class="reference internal" href="installation.html"><span class="doc">Installation Guide</span></a>.</p>
 </div>
