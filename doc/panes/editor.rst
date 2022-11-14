@@ -163,7 +163,7 @@ Run file
 ~~~~~~~~
 
 Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the :guilabel:`Run file` toolbar button or the :kbd:`F5` key.
-Use :guilabel:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
+Use :menuselection:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
 
 
 Run line/selection
