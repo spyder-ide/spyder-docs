@@ -7,7 +7,7 @@ The Editor offers a variety of core features, such as autocompletion, real-time 
 In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.
 
 .. image:: /images/editor/editor-standard.png
-   :alt: Spyder's Editor panel, split horizontally and with style analysis
+   :alt: Spyder's Editor pane, split horizontally and with style analysis
 
 
 
@@ -48,6 +48,7 @@ Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetica
 
 .. image:: /images/editor/editor-tabs-sorting.gif
    :alt: Spyder's Editor pane, showing how to browse and sort open tabs alphabetically
+
 
 File switcher
 ~~~~~~~~~~~~~
@@ -95,7 +96,7 @@ You can switch between available themes in the drop-down menu, modify the select
 The :guilabel:`Fonts` section lets you change the text font and size.
 
 .. image:: /images/editor/editor-syntax-highlighting.gif
-   :alt: Spyder's Editor panel, showing how to switch between syntax highlighting themes
+   :alt: Spyder's Editor pane, showing how to switch between syntax highlighting themes
 
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
 
@@ -108,7 +109,7 @@ This is similar to "cell" behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
 .. image:: /images/editor/editor-cells.png
-   :alt: Spyder's Editor panel, showing an example of a code cell
+   :alt: Spyder's Editor pane, showing an example of a code cell
 
 You can separate cells by lines starting with either:
 
@@ -120,7 +121,7 @@ You can also create "subsections" by adding more ``%`` signs to the cell separat
 This displays multiple levels in the :doc:`outline` pane.
 
 .. image:: /images/editor/editor-subsections.png
-   :alt: Spyder outline panel, showing an example of sub sections
+   :alt: Spyder outline pane, showing an example of sub sections
 
 .. note:: This only affects how the cell is displayed in the :doc:`outline`, and doesn't affect running it in the Editor.
 
@@ -135,7 +136,7 @@ The Editor has built-in support for automatically formatting your code using sev
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
 .. image:: /images/editor/editor-automatic-formatting.gif
-   :alt: Spyder editor panel, showing an example of code selection formatting
+   :alt: Spyder Editor pane, showing an example of code selection formatting
 
 You can have the Editor automatically autoformat a file every time you save your work.
 To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code style and formatting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
@@ -173,8 +174,8 @@ After running the current line, the cursor automatically advances to the next on
 Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
 
 
-Code cells
-~~~~~~~~~~
+Run cell
+~~~~~~~~
 
 To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run current cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
@@ -228,6 +229,7 @@ Use its dropdowns to view and jump to the functions, methods and classes in the 
 
 .. image:: /images/editor/editor-class-function-selector.gif
    :alt: Spyder's Editor pane, showing the class and function selector panel
+
 
 
 =============================
