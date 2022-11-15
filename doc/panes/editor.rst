@@ -184,6 +184,10 @@ Run configuration
 ~~~~~~~~~~~~~~~~~
 
 You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
+
+.. image:: /images/editor/editor-run-configuration.png
+   :alt: Spyder's Editor pane, showing the Run Configuration dialog
+
 To access it, click :menuselection:`Run --> Configuration per file...` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
 
 
