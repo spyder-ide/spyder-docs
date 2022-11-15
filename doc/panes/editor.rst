@@ -287,12 +287,12 @@ If there's a function, class or variable for which you would like to check its d
 .. image:: /images/editor/editor-go-to-definition.gif
    :alt: Spyder's Editor pane, showing the go to definition feature
 
-If you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function's parameters as you type them, as well as a summary of its documentation.
+You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
 
-.. image:: /images/editor/editor-calltip.png
-   :alt: Spyder's Editor pane, showing an example of a calltip
+.. image:: /images/editor/editor-hoverhint.png
+   :alt: Spyder's Editor pane, showing an example of a hover hint
 
-Finally, you can also hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
+Finally, if you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function's parameters as you type them, as well as a summary of its documentation.
 These features can be enabled and customized under :menuselection:`Preferences --> Completion and Linting --> Introspection`.
 
 
