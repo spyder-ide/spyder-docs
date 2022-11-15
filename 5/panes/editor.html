@@ -574,7 +574,7 @@
 <p>Spyder’s multi-language <strong>Editor</strong> pane is the key element of the IDE, where you can create, open, and modify source files.
 The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
 In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.</p>
-<img alt="Spyder's Editor panel, split horizontally and with style analysis" src="../_images/editor-standard.png" />
+<img alt="Spyder's Editor pane, split horizontally and with style analysis" src="../_images/editor-standard.png" />
 <div class="section" id="key-components">
 <h2>Key components<a class="headerlink" href="#key-components" title="Permalink to this headline">¶</a></h2>
 <p>The Editor pane consists of the following areas:</p>
@@ -590,23 +590,183 @@ Clicking a line number selects the text on that line, and clicking to the right 
 It also has a <span class="guilabel">Browse tabs</span> button (at left) to show every open tab and switch between them—which comes in handy if many are open.</p></li>
 </ol>
 </div>
-<div class="section" id="defining-code-cells">
-<h2>Defining code cells<a class="headerlink" href="#defining-code-cells" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tabs">
+<h3>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h3>
+<p>You can browse and navigate between open files in the Editor with tabs.
+Click the <span class="guilabel">Browse tabs</span> button on the left of the tab bar to display a list of open files, with the active tab checked.</p>
+<img alt="Spyder's Editor pane, showing the tabs browser" src="../_images/editor-tabs-browser.png" />
+<p>Reorder files by dragging and dropping, or with <span class="guilabel">Sort tabs alphabetically</span> in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.</p>
+<img alt="Spyder's Editor pane, showing how to browse and sort open tabs alphabetically" src="../_images/editor-tabs-sorting.gif" />
+</div>
+<div class="section" id="file-switcher">
+<h3>File switcher<a class="headerlink" href="#file-switcher" title="Permalink to this headline">¶</a></h3>
+<p>The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
+The file switcher is helpful for locating any file when there are several files opened.</p>
+<img alt="Spyder's Editor pane, showing the file switcher" src="../_images/editor-file-switcher.png" />
+<p>It can be accessed from the <span class="menuselection">File ‣ File Switcher</span> menu or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>, and includes a search function.
+You can type in any part of an open file’s name and—if exists—it can be switched to by pressing <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+<img alt="Spyder's Editor pane, showing searching and switching to an existing file" src="../_images/editor-file-switcher.gif" />
+</div>
+<div class="section" id="split-panels">
+<h3>Split panels<a class="headerlink" href="#split-panels" title="Permalink to this headline">¶</a></h3>
+<p>The Editor can be split horizontally and vertically into as many distinct panels as desired.
+This allows viewing and editing the contents of several files (or different parts of the same file) at the same time.</p>
+<img alt="Spyder's Editor pane, showing how to split panels" src="../_images/editor-split-panels.gif" />
+<p>Split the Editor with the <span class="guilabel">Split vertically</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">{</kbd></kbd>) and <span class="guilabel">Split horizontally</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">-</kbd></kbd>) commands in the options menu, and use <span class="guilabel">Close this panel</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">W</kbd></kbd>) to close the selected split panel.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p><span class="menuselection">Close this panel</span> closes a split panel, while <span class="menuselection">Close</span> hides the entire Editor <em>pane</em> (including all splits, which are restored when the Editor is re-opened).</p>
+</div>
+</div>
+</div>
+<div class="section" id="editing-features">
+<h2>Editing features<a class="headerlink" href="#editing-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="syntax-highlighting">
+<h3>Syntax highlighting<a class="headerlink" href="#syntax-highlighting" title="Permalink to this headline">¶</a></h3>
+<p>To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.</p>
+<p>You can configure and preview syntax highlighting themes and fonts under <span class="menuselection">Preferences ‣ Appearance</span>.
+The <span class="guilabel">Syntax highlighting theme</span> section allows you to change the color and style of the syntax elements and background to match your preferences.
+You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
+The <span class="guilabel">Fonts</span> section lets you change the text font and size.</p>
+<img alt="Spyder's Editor pane, showing how to switch between syntax highlighting themes" src="../_images/editor-syntax-highlighting.gif" />
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.</p>
+</div>
+</div>
+<div class="section" id="code-cells">
+<h3>Code cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h3>
 <p>A “code cell” in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.
-This is much like a “cell” in MATLAB (except without any need to enable a “cell mode”, since in Spyder, cells are detected automatically).
+This is similar to “cell” behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.</p>
-<img alt="Spyder's Editor panel, showing an example of a code cell" src="../_images/editor-cells.png" />
+<img alt="Spyder's Editor pane, showing an example of a code cell" src="../_images/editor-cells.png" />
 <p>You can separate cells by lines starting with either:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">#%%</span></code> (standard cell separator)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (standard cell separator, when file has been edited with Eclipse)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (standard cell separator), or</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;codecell&gt;</span></code> (IPython notebook cell separator)</p></li>
 </ul>
-<p>Providing a description to the right of the separator will give that cell its own name in the <span class="guilabel">Outline Explorer</span>.
+<p>Providing a description to the right of the separator will give that cell its own name in the <a class="reference internal" href="outline.html"><span class="doc">Outline</span></a>.
 You can also create “subsections” by adding more <code class="docutils literal notranslate"><span class="pre">%</span></code> signs to the cell separator, e.g. <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%</span></code> to create a level 2 subsection, <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%%</span></code> for level 3, etc.
-This displays multiple levels in the the <span class="guilabel">Outline Explorer</span>.</p>
-<img alt="Spyder outline panel, showing an example of sub sections" src="../_images/editor-subsections.png" />
-<p>Note that this only affects how the outline is displayed; it has no impact on the functioning of the code cells.</p>
+This displays multiple levels in the <a class="reference internal" href="outline.html"><span class="doc">Outline</span></a> pane.</p>
+<img alt="Spyder outline pane, showing an example of sub sections" src="../_images/editor-subsections.png" />
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>This only affects how the cell is displayed in the <a class="reference internal" href="outline.html"><span class="doc">Outline</span></a>, and doesn’t affect running it in the Editor.</p>
+</div>
+<p>To run the code in a cell, use <span class="menuselection">Run ‣ Run cell</span>, the <span class="guilabel">Run cell</span> button in the toolbar or the keyboard shortcut (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd></kbd> by default).
+You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using <span class="menuselection">Run ‣ Run cell and advance</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> by default).</p>
+</div>
+<div class="section" id="automatic-formatting">
+<h3>Automatic formatting<a class="headerlink" href="#automatic-formatting" title="Permalink to this headline">¶</a></h3>
+<p>The Editor has built-in support for automatically formatting your code using several popular tools, including <a class="reference external" href="https://github.com/hhatto/autopep8">Autopep8</a> and <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>.
+The <span class="guilabel">Format file or selection with {tool}</span> command in the <span class="guilabel">Source</span> or context menu will format either the selected fragment (if text is selected) or the entire active file.</p>
+<img alt="Spyder Editor pane, showing an example of code selection formatting" src="../_images/editor-automatic-formatting.gif" />
+<p>You can have the Editor automatically autoformat a file every time you save your work.
+To set this up, go to <span class="menuselection">Preferences ‣ Completion and linting ‣ Code style and formatting ‣ Code formatting</span> and check the <span class="guilabel">Autoformat files on save</span> option.</p>
+<img alt="Spyder's preferences dialog, showing checking the autoformat files on save setting" src="../_images/editor-autoformat-setting.png" />
+</div>
+</div>
+<div class="section" id="running-code">
+<h2>Running code<a class="headerlink" href="#running-code" title="Permalink to this headline">¶</a></h2>
+<p>The Editor lets you run an entire file as well as specific lines, selections or cells.</p>
+<p>As your code is running,</p>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a> will display output and errors.</p></li>
+<li><p>The <a class="reference internal" href="variableexplorer.html"><span class="doc">Variable Explorer</span></a> allows you to browse and interact with the objects generated.</p></li>
+<li><p>The <a class="reference internal" href="plots.html"><span class="doc">Plots</span></a> pane renders the figures and images created.</p></li>
+</ul>
+<div class="section" id="run-file">
+<h3>Run file<a class="headerlink" href="#run-file" title="Permalink to this headline">¶</a></h3>
+<p>Run an entire Editor file using the <span class="menuselection">Run ‣ Run</span> menu item, the <span class="guilabel">Run file</span> toolbar button or the <kbd class="kbd docutils literal notranslate">F5</kbd> key.
+Use <span class="menuselection">Run ‣ Re-Run last script</span> to re-run the most recent file executed with the above.</p>
+</div>
+<div class="section" id="run-line-selection">
+<h3>Run line/selection<a class="headerlink" href="#run-line-selection" title="Permalink to this headline">¶</a></h3>
+<p>You can execute the current line—or multiple selected lines—using the <span class="guilabel">Run selection or current line</span> option from the toolbar or the <span class="menuselection">Run</span> menu, as well as with the <kbd class="kbd docutils literal notranslate">F9</kbd> key.
+After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
+Unlike <span class="guilabel">Run file</span>, the executed lines are shown in the <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.</p>
+</div>
+<div class="section" id="run-cell">
+<h3>Run cell<a class="headerlink" href="#run-cell" title="Permalink to this headline">¶</a></h3>
+<p>To run a cell, place your cursor inside it and use the <span class="menuselection">Run ‣ Run cell</span> menu item, the <span class="guilabel">Run current cell</span> toolbar button or the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd></kbd> keyboard shortcut.
+Use <span class="guilabel">Run cell and advance</span> in the <span class="guilabel">Run</span> menu/toolbar or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> to jump to the next cell after running, useful for stepping through cells quickly.</p>
+</div>
+<div class="section" id="run-configuration">
+<h3>Run configuration<a class="headerlink" href="#run-configuration" title="Permalink to this headline">¶</a></h3>
+<p>You can use the <span class="guilabel">Run configuration per file</span> dialog to set each file’s working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.</p>
+<img alt="Spyder's Editor pane, showing the Run Configuration dialog" src="../_images/editor-run-configuration.png" />
+<p>To access it, click <span class="menuselection">Run ‣ Configuration per file…</span> or press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F6</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">F6</kbd></kbd>.</p>
+</div>
+</div>
+<div class="section" id="code-navigation">
+<h2>Code navigation<a class="headerlink" href="#code-navigation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="find-and-replace">
+<h3>Find and replace<a class="headerlink" href="#find-and-replace" title="Permalink to this headline">¶</a></h3>
+<p>To search for text in the current file, use <span class="menuselection">Search ‣ Find text</span> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd>, and to replace it, use <span class="menuselection">Search ‣ Replace text</span> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd>.
+Typing your search string in the resulting panel below the Editor highlights each result and counts the total.
+Navigate between matches with the <span class="guilabel">Find Previous</span> and <span class="guilabel">Find Next</span> buttons in the find/replace panel, their corresponding entries in the <span class="guilabel">Search</span> menu, or use the <kbd class="kbd docutils literal notranslate">F2</kbd> and <kbd class="kbd docutils literal notranslate">F3</kbd> keys.
+Use the <span class="guilabel">.*</span> button to process search text as a <a class="reference external" href="https://docs.python.org/3/library/re.html">regular expression</a>, <span class="guilabel">Aa</span> to treat it as case-sensitive and <span class="guilabel">[–]</span> to only match whole words (e.g. for <code class="docutils literal notranslate"><span class="pre">data</span></code>, match <code class="docutils literal notranslate"><span class="pre">data()</span></code> but not <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>).</p>
+<img alt="Spyder's Editor pane, showing the find and replace panel" src="../_images/editor-find-replace-panel.png" />
+</div>
+<div class="section" id="go-to-line">
+<h3>Go to line<a class="headerlink" href="#go-to-line" title="Permalink to this headline">¶</a></h3>
+<p>The <span class="guilabel">Go to line</span> dialog allows jumping to a specific line in the active file.
+Open it with <span class="menuselection">Search ‣ Go to line</span> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd>, type the line number you want to scroll to and press <kbd class="kbd docutils literal notranslate">Enter</kbd> (or click <span class="guilabel">OK</span>).</p>
+<img alt="Spyder's Editor pane, showing the go to line feature" src="../_images/editor-go-to-line.gif" />
+<p>It also shows the current line number and total line count in the file.</p>
+</div>
+<div class="section" id="class-function-selector">
+<h3>Class/function selector<a class="headerlink" href="#class-function-selector" title="Permalink to this headline">¶</a></h3>
+<p>This panel, activated under <span class="menuselection">Source ‣ Show selector for classes and functions</span>, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside.
+Use its dropdowns to view and jump to the functions, methods and classes in the current file.</p>
+<img alt="Spyder's Editor pane, showing the class and function selector panel" src="../_images/editor-class-function-selector.gif" />
+</div>
+</div>
+<div class="section" id="code-analysis-and-completions">
+<h2>Code analysis and completions<a class="headerlink" href="#code-analysis-and-completions" title="Permalink to this headline">¶</a></h2>
+<p>Spyder uses the <a class="reference external" href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a> (LSP) to provide code completion and linting for the Editor, similar to VSCode, Neovim, and other popular editors/IDEs.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Many issues with completion and linting are outside of Spyder’s control, and are either limitations with the LSP or the code that is being introspected, but some can be worked around.
+See <a class="reference internal" href="../troubleshooting/common-illnesses.html#code-completion-problems-ref"><span class="std std-ref">Completion/help not working</span></a> for troubleshooting steps.</p>
+</div>
+<p>Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under <span class="menuselection">Preferences ‣ Completion and Linting ‣ Other languages</span>.</p>
+<div class="section" id="code-completion">
+<h3>Code completion<a class="headerlink" href="#code-completion" title="Permalink to this headline">¶</a></h3>
+<p>Automatic code completion as you type is enabled by default in the Editor, and can also be triggered manually with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Space</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Space</kbd></kbd>, showing you possible completions (with pop-up help for each) and available code snippets.
+For example, typing <code class="docutils literal notranslate"><span class="pre">cla</span></code> will display the keyword <code class="docutils literal notranslate"><span class="pre">class</span></code>, the decorator <code class="docutils literal notranslate"><span class="pre">classmethod</span></code> and two built-in snippets with class templates.
+Select the desired completion with the arrow keys and <kbd class="kbd docutils literal notranslate">Enter</kbd>, or by double clicking.</p>
+<img alt="Spyder's Editor pane, showing a code completion example" src="../_images/editor-code-completion.png" />
+<p>You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under <span class="menuselection">Preferences ‣ Completion and Linting ‣ General ‣ Completions</span>.
+Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under <span class="menuselection">Preferences ‣ Completion and Linting ‣ Advanced</span>.</p>
+</div>
+<div class="section" id="linting-and-code-style">
+<h3>Linting and code style<a class="headerlink" href="#linting-and-code-style" title="Permalink to this headline">¶</a></h3>
+<p>Spyder can optionally highlight syntax errors, style issues, and other potential problems with your code in the Editor, which can help you spot bugs quickly and make your code easier to read and understand.</p>
+<img alt="Spyder's Editor pane, showing an example of a highlighted code error" src="../_images/editor-pane-code-error.png" />
+<p>The Editor’s basic linting, powered by <a class="reference external" href="https://github.com/PyCQA/pyflakes">Pyflakes</a>, warns of syntax errors and likely bugs in your code.
+It is on by default, and can be disabled or customized under <span class="menuselection">Preferences ‣ Completion and Linting ‣ Linting</span>.</p>
+<img alt="Spyder's preferences dialog, showing linting settings" src="../_images/editor-linting-setting.png" />
+<p>Code style analysis, powered by <a class="reference external" href="https://pycodestyle.pycqa.org/en/stable/">Pycodestyle</a>, flags deviations from the style conventions in <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a>.
+It is not active by default, but you can enable it and customize the <a class="reference external" href="https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes">Pycodestyle error codes</a> shown with the options under <span class="menuselection">Preferences ‣ Completion and Linting ‣ Code style and formatting ‣ Code Style</span>.</p>
+<img alt="Spyder's preferences dialog, showing code style and formatting settings" src="../_images/editor-code-style-setting.png" />
+</div>
+<div class="section" id="introspection-features">
+<h3>Introspection features<a class="headerlink" href="#introspection-features" title="Permalink to this headline">¶</a></h3>
+<p>If there’s a function, class or variable for which you would like to check its definition, you need to <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>-click its name in the Editor (or click its name and press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> to jump to the file and line where it is declared.</p>
+<img alt="Spyder's Editor pane, showing the go to definition feature" src="../_images/editor-go-to-definition.gif" />
+<p>You can hover over the name of an object for pop-up help, as <a class="reference internal" href="help.html#help-hover-hints"><span class="std std-ref">described in the Help pane docs</span></a>.</p>
+<img alt="Spyder's Editor pane, showing an example of a hover hint" src="../_images/editor-hoverhint.png" />
+<p>Finally, if you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function’s parameters as you type them, as well as a summary of its documentation.
+These features can be enabled and customized under <span class="menuselection">Preferences ‣ Completion and Linting ‣ Introspection</span>.</p>
+</div>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>To view the Editor’s primary keyboard shortcuts, consult its section under <span class="menuselection">Help ‣ Shortcuts Summary</span>.
+The full list can be browsed, searched and customized (on double-click) in <span class="menuselection">Preferences ‣ Keyboard shortcuts</span>.</p>
 </div>
 <div class="section" id="related-panes">
 <h2>Related panes<a class="headerlink" href="#related-panes" title="Permalink to this headline">¶</a></h2>
@@ -653,7 +813,101 @@ This displays multiple levels in the the <span class="guilabel">Outline Explorer
             </li>
         
             <li class="nav-item toc-entry toc-h2">
-                <a href="#defining-code-cells" class="nav-link">Defining code cells</a>
+                <a href="#interface" class="nav-link">Interface</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#tabs" class="nav-link">Tabs</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#file-switcher" class="nav-link">File switcher</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#split-panels" class="nav-link">Split panels</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#editing-features" class="nav-link">Editing features</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#syntax-highlighting" class="nav-link">Syntax highlighting</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#code-cells" class="nav-link">Code cells</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#automatic-formatting" class="nav-link">Automatic formatting</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#running-code" class="nav-link">Running code</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#run-file" class="nav-link">Run file</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#run-line-selection" class="nav-link">Run line/selection</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#run-cell" class="nav-link">Run cell</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#run-configuration" class="nav-link">Run configuration</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#code-navigation" class="nav-link">Code navigation</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#find-and-replace" class="nav-link">Find and replace</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#go-to-line" class="nav-link">Go to line</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#class-function-selector" class="nav-link">Class/function selector</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#code-analysis-and-completions" class="nav-link">Code analysis and completions</a><ul class="nav section-nav flex-column">
+                    
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#code-completion" class="nav-link">Code completion</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#linting-and-code-style" class="nav-link">Linting and code style</a>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h3">
+                <a href="#introspection-features" class="nav-link">Introspection features</a>
+            </li>
+        
+                </ul>
+            </li>
+        
+            <li class="nav-item toc-entry toc-h2">
+                <a href="#keyboard-shortcuts" class="nav-link">Keyboard shortcuts</a>
             </li>
         
             <li class="nav-item toc-entry toc-h2">
@@ -687,7 +941,101 @@ This displays multiple levels in the the <span class="guilabel">Outline Explorer
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#defining-code-cells" class="nav-link">Defining code cells</a>
+                    <a href="#interface" class="nav-link">Interface</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#tabs" class="nav-link">Tabs</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#file-switcher" class="nav-link">File switcher</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#split-panels" class="nav-link">Split panels</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#editing-features" class="nav-link">Editing features</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#syntax-highlighting" class="nav-link">Syntax highlighting</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#code-cells" class="nav-link">Code cells</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#automatic-formatting" class="nav-link">Automatic formatting</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#running-code" class="nav-link">Running code</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#run-file" class="nav-link">Run file</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#run-line-selection" class="nav-link">Run line/selection</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#run-cell" class="nav-link">Run cell</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#run-configuration" class="nav-link">Run configuration</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#code-navigation" class="nav-link">Code navigation</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#find-and-replace" class="nav-link">Find and replace</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#go-to-line" class="nav-link">Go to line</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#class-function-selector" class="nav-link">Class/function selector</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#code-analysis-and-completions" class="nav-link">Code analysis and completions</a><ul class="nav section-nav flex-column">
+                        
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#code-completion" class="nav-link">Code completion</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#linting-and-code-style" class="nav-link">Linting and code style</a>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#introspection-features" class="nav-link">Introspection features</a>
+                </li>
+            
+                    </ul>
+                </li>
+            
+                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="#keyboard-shortcuts" class="nav-link">Keyboard shortcuts</a>
                 </li>
             
                 <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
