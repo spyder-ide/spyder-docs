@@ -117,7 +117,7 @@ You can separate cells by lines starting with either:
 
 Providing a description to the right of the separator will give that cell its own name in the :doc:`outline`.
 You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
-This displays multiple levels in the :doc:`outline`.
+This displays multiple levels in the :doc:`outline` pane.
 
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline panel, showing an example of sub sections
@@ -131,7 +131,7 @@ You can also run a cell and then jump to the next one, letting you quickly step 
 Automatic formatting
 ~~~~~~~~~~~~~~~~~~~~
 
-The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_, `Yapf <https://github.com/google/yapf>`_, and `Black <https://black.readthedocs.io/en/stable/>`_.
+The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_ and `Black <https://black.readthedocs.io/en/stable/>`_.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
 .. image:: /images/editor/editor-automatic-formatting.gif
@@ -156,7 +156,6 @@ As your code is running,
 * The :doc:`ipythonconsole` will display output and errors.
 * The :doc:`variableexplorer` allows you to browse and interact with the objects generated.
 * The :doc:`plots` pane renders the figures and images created.
-* The :doc:`profiler` helps you optimize your code's run time.
 
 
 Run file
@@ -170,7 +169,7 @@ Run line/selection
 ~~~~~~~~~~~~~~~~~~
 
 You can execute the current line—or multiple selected lines—using the :guilabel:`Run selection or current line` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key.
-After running the current line, the cursor automatically advances to the next, so you can step through your code line by line.
+After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
 Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
 
 
@@ -184,7 +183,7 @@ Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd
 Run configuration
 ~~~~~~~~~~~~~~~~~
 
-You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), CLI arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
+You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
 To access it, click :menuselection:`Run --> Configuration per file...` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
 
 
@@ -198,7 +197,7 @@ Find and replace
 
 To search for text in the current file, use :menuselection:`Search --> Find text` or :kbd:`Ctrl-F` / :kbd:`Cmd-F`, and to replace it, use :menuselection:`Search --> Replace text` or :kbd:`Ctrl-R` / :kbd:`Cmd-R`.
 Typing your search string in the resulting panel below the Editor highlights each result and counts the total.
-Navigate between matches with :guilabel:`Find Previous` and :guilabel:`Find Next` in the find/replace panel and the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys.
+Navigate between matches with the :guilabel:`Find Previous` and :guilabel:`Find Next` buttons in the find/replace panel, their corresponding entries in the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys.
 Use the :guilabel:`.*` button to process search text as a `regular expression <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` to treat it as case-sensitive and :guilabel:`[–]` to only match whole words (e.g. for ``data``, match ``data()`` but not ``dataframe``).
 
 .. image:: /images/editor/editor-find-replace-panel.png
@@ -209,7 +208,7 @@ Go to line
 ~~~~~~~~~~
 
 The :guilabel:`Go to line` dialog allows jumping to a specific line in the active file.
-Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd-L`, type the line you want and press :kbd:`Enter` (or click :guilabel:`OK`).
+Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd-L`, type the line number you want to scroll to and press :kbd:`Enter` (or click :guilabel:`OK`).
 
 .. image:: /images/editor/editor-go-to-line.gif
    :alt: Spyder's Editor pane, showing the go to line feature
@@ -231,11 +230,11 @@ Use its dropdowns to view and jump to the functions, methods and classes in the 
 Code analysis and completions
 =============================
 
-Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`_ (LSP) to provide code completion and linting for the Editor, similar to VSCode, Atom, and other popular editors/IDEs.
+Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`_ (LSP) to provide code completion and linting for the Editor, similar to VSCode, Neovim, and other popular editors/IDEs.
 
 .. note::
 
-   Many issues with completion and linting are outside of Spyder's control, and are either limitations with LSP or the code that is being introspected, but some can be worked around.
+   Many issues with completion and linting are outside of Spyder's control, and are either limitations with the LSP or the code that is being introspected, but some can be worked around.
    See :ref:`code-completion-problems-ref` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
@@ -244,7 +243,7 @@ Python is supported out of the box, and advanced users can add completion and li
 Code completion
 ~~~~~~~~~~~~~~~
 
-Automatic code completion as you type is enabled by default in the Editor, and can also be triggered manually with :kbd:`Ctrl-Space`/:kbd:`Cmd-Space`, showing you help, possible completions, and available code snippets.
+Automatic code completion as you type is enabled by default in the Editor, and can also be triggered manually with :kbd:`Ctrl-Space`/:kbd:`Cmd-Space`, showing you possible completions (with pop-up help for each) and available code snippets.
 For example, typing ``cla`` will display the keyword ``class``, the decorator ``classmethod`` and two built-in snippets with class templates.
 Select the desired completion with the arrow keys and :kbd:`Enter`, or by double clicking.
 
@@ -252,7 +251,7 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
    :alt: Spyder's Editor pane, showing a code completion example
 
 You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
-Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
+Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
 
 
 Linting and code style
@@ -270,7 +269,7 @@ It is on by default, and can be disabled or customized under :menuselection:`Pre
    :alt: Spyder's preferences dialog, showing linting settings
 
 Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/stable/>`_, flags deviations from the style conventions in :pep:`8`.
-It is not active by default; you can enable it and customize the `pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`.
+It is not active by default, but you can enable it and customize the `Pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`.
 
 .. image:: /images/editor/editor-code-style-setting.png
    :alt: Spyder's preferences dialog, showing code style and formatting settings
@@ -279,7 +278,7 @@ It is not active by default; you can enable it and customize the `pycodestyle er
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If there's a function, class or variable that you want to jump to the definition of, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is defined.
+If there's a function, class or variable for which you would like to check its definition, you need to :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is declared.
 
 .. image:: /images/editor/editor-go-to-definition.gif
    :alt: Spyder's Editor pane, showing the go to definition feature
