@@ -19,6 +19,13 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
 
    conda install spyder-notebook -c spyder-ide
 
+
+for spyder 5 this command doesn't work. Use conda forge instead :
+
+.. code-block:: bash
+
+    conda install -c conda-forge spyder-notebook
+
 .. important::
 
    At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future.
