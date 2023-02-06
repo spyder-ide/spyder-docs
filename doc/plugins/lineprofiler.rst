@@ -20,7 +20,7 @@ If you installed Spyder using conda, the best way to obtain Spyder-Line-Profiler
 
 .. code-block:: bash
 
-   conda install spyder-line-profiler -c spyder-ide
+   conda install spyder-line-profiler -c conda-forge
 
 .. important::
 

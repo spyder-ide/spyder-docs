@@ -17,7 +17,7 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
 
 .. code-block:: bash
 
-   conda install spyder-notebook -c spyder-ide
+   conda install spyder-notebook -c conda-forge
 
 .. important::
 
