@@ -295,12 +295,12 @@ Using Spyder
 .. dropdown:: Q: How do I use plugins with Spyder (e.g. Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?
    :container: + dropdown-id-using-plugins
 
-   Spyder plugins are available in the ``spyder-ide`` conda channel.
+   Spyder plugins are available in the ``conda-forge`` conda channel.
    To install one, type on the command line (or Anaconda Prompt on Windows):
 
    .. code-block:: bash
 
-      conda install -c spyder-ide <PLUGIN>
+      conda install -c conda-forge <PLUGIN>
 
    Replace ``<PLUGIN>`` with the name of the plugin you want to use.
    For more information on a specific plugin, go to the its repository:
