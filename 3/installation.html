@@ -358,8 +358,8 @@ You can use it immediately after installing, just like with Anaconda.</p>
 <p class="admonition-title">Attention</p>
 <p>The MacPorts version of Spyder may currently be raising <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">unknown</span> <span class="pre">locale:</span> <span class="pre">UTF-8</span></code>, which doesn’t let it start correctly.
 To fix it you will have to set these environment variables in your <code class="file docutils literal notranslate"><span class="pre">~/.profile</span></code> (or <code class="file docutils literal notranslate"><span class="pre">~/.bashrc</span></code>) file manually:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
-<span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export</span><span class="w"> </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
 </pre></div>
 </div>
 </div>
@@ -370,7 +370,7 @@ To fix it you will have to set these environment variables in your <code class="
 <div class="section" id="ubuntu">
 <h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
 <p>Using the official package manager:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install spyder3
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>spyder3
 </pre></div>
 </div>
 <div class="alert alert-info">
@@ -381,7 +381,7 @@ To fix it you will have to set these environment variables in your <code class="
 <div class="section" id="debian-unstable">
 <h4>Debian Unstable<a class="headerlink" href="#debian-unstable" title="Permalink to this headline">¶</a></h4>
 <p>Using the package manager:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install spyder3
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>spyder3
 </pre></div>
 </div>
 <p>Spyder’s official Debian package is available on the <a class="reference external" href="https://packages.debian.org/unstable/spyder3">Debian package repository</a>.</p>
@@ -455,12 +455,12 @@ You may need to install a Qt binding (PyQt5) separately with <code class="docuti
 <li><p>Unzip the source package available for download on the <a class="reference external" href="https://github.com/spyder-ide/spyder">Spyder Github repository</a> (or <a class="reference internal" href="#install-from-source"><span class="std std-ref">clone it from Github</span></a>)</p></li>
 <li><p>Change current directory to the unzipped directory</p></li>
 <li><p>Install Spyder’s requirements with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements/requirements.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/requirements.txt
 </pre></div>
 </div>
 </li>
 <li><p>Run Spyder with the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python bootstrap.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>bootstrap.py
 </pre></div>
 </div>
 </li>
@@ -484,9 +484,9 @@ For more information, please see the <a class="reference external" href="https:/
 <ol class="arabic">
 <li><p>Install the Spyder <a class="reference internal" href="#requirements">requirements</a>.</p>
 <p>The recommended and easiest way to do this is with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (although experts may prefer <code class="docutils literal notranslate"><span class="pre">pip</span></code>). In a fresh environment (<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">your-name-here</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">python=3</span></code>, then <code class="docutils literal notranslate"><span class="pre">activate</span></code> it), run the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge/label/beta <span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>.0.0b1
-conda install -c conda-forge python-language-server
-conda remove spyder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge/label/beta<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>.0.0b1
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>python-language-server
+conda<span class="w"> </span>remove<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p>This installs all of Spyder’s dependencies into the environment along with the stable/packaged version of Spyder, and then removes Spyder itself.</p>
@@ -495,11 +495,11 @@ conda remove spyder
 <p>Following the separation in v3.3 of Spyder’s console code into its own package, <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>, you’ll need to have the corresponding version of it available—<code class="docutils literal notranslate"><span class="pre">0.x</span></code> for Spyder 3 (<code class="docutils literal notranslate"><span class="pre">3.x</span></code> branch), and <code class="docutils literal notranslate"><span class="pre">1.x</span></code> for Spyder 4 (<code class="docutils literal notranslate"><span class="pre">master</span></code> branch).
 The above procedure will install the <code class="docutils literal notranslate"><span class="pre">0.x</span></code> version; to test the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch (Spyder 4), you’ll need to install the corresponding <code class="docutils literal notranslate"><span class="pre">1.x</span></code> version of <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>.
 This can be done via two methods: installing the <code class="docutils literal notranslate"><span class="pre">1.x</span></code> version via <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c spyder-ide spyder-kernels<span class="o">=</span><span class="m">1</span>.*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>spyder-ide<span class="w"> </span>spyder-kernels<span class="o">=</span><span class="m">1</span>.*
 </pre></div>
 </div>
 <p>or <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install spyder-kernels<span class="o">==</span><span class="m">1</span>.*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">==</span><span class="m">1</span>.*
 </pre></div>
 </div>
 <p>(and using the same respective command, replacing <code class="docutils literal notranslate"><span class="pre">1</span></code> with <code class="docutils literal notranslate"><span class="pre">0</span></code>, to switch back to the Spyder 3 version), or by <code class="docutils literal notranslate"><span class="pre">clone</span></code>-ing the <a class="reference external" href="https://github.com/spyder-ide/spyder-kernels">spyder-kernels git repository</a> to somewhere on your path and checking out the appropriate branch (<code class="docutils literal notranslate"><span class="pre">0.x</span></code> or <code class="docutils literal notranslate"><span class="pre">master</span></code>) corresponding to the version of Spyder (3 or 4) you would like to run, and running the commend <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span></code> at the root.
@@ -508,12 +508,12 @@ For any non-trivial development work, keeping two separate virtual environments 
 </li>
 <li><p>Install <a class="reference external" href="https://git-scm.com/downloads">Git</a>, a powerful source control management tool.</p></li>
 <li><p>Clone the Spyder source code repository with the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/spyder-ide/spyder.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spyder-ide/spyder.git
 </pre></div>
 </div>
 </li>
 <li><p>Run Spyder with the <code class="file docutils literal notranslate"><span class="pre">bootstrap.py</span></code> script from within the cloned <code class="file docutils literal notranslate"><span class="pre">spyder/</span></code> directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python bootstrap.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>bootstrap.py
 </pre></div>
 </div>
 </li>
@@ -768,7 +768,7 @@ For any non-trivial development work, keeping two separate virtual environments 
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

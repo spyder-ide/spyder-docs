@@ -581,21 +581,21 @@ Minor releases come out every couple months, so unless you’ve updated recently
 You can find out with the <span class="guilabel">Check for updates</span> command under the <span class="guilabel">Help</span> menu.</p>
 <img alt="Spyder showing view internal console option" src="../_images/basic-first-aid-updates.png" />
 <p>To perform the update with Conda (strongly recommended), from your terminal (or Anaconda Prompt on Windows) run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update anaconda
-conda update spyder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+conda<span class="w"> </span>update<span class="w"> </span>spyder
 </pre></div>
 </div>
 </li>
 <li><p><strong>Update Spyder’s dependencies and environment</strong>, either by installing the latest version of your distribution (e.g. the recommended Anaconda), or with the relevant “update all” command in your terminal (or Anaconda Prompt on Windows).
 To get the latest stable version of everything using Conda, you can run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update qt pyqt spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>qt<span class="w"> </span>pyqt<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq
 </pre></div>
 </div>
 </li>
 <li><p><strong>Restart your machine</strong>, in case the problem lies with a lingering process or another such issue.</p></li>
 <li><p><strong>Restore Spyder’s config files</strong> to their defaults, which solves a huge variety of Spyder issues.
 From your terminal (or Anaconda Prompt on Windows), run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spyder --reset
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spyder<span class="w"> </span>--reset
 </pre></div>
 </div>
 <div class="alert alert-info">
@@ -607,8 +607,8 @@ If you particularly care about any of those, you should make a copy of the <code
 <li><p><strong>Try installing Spyder into a new Conda environment</strong> (recommended) or <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">venv</span></code>, and see if the issue reoccurs.</p></li>
 </ol>
 <p>In your system terminal (or Anaconda Prompt on Windows), run the following commands to create an a fresh, clean environment and start Spyder in it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-env spyder -y
-conda activate spyder-env
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
 spyder
 </pre></div>
 </div>
@@ -820,7 +820,7 @@ You can explore the error messages you’re receiving and Spyder’s inner worki
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

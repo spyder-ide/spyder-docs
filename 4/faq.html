@@ -525,12 +525,12 @@ Q: How do I update Spyder using conda?<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">From the command line (or Anaconda prompt on Windows), run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update anaconda
-conda update spyder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+conda<span class="w"> </span>update<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p class="card-text">If this results in an error or does not update Spyder to the latest version, try:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install <span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>
 </pre></div>
 </div>
 </div>
@@ -632,7 +632,7 @@ Q: How do I run Spyder installed in a conda environment using the command line?<
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Activate your conda environment by typing the following in your terminal (or Anaconda Prompt on Windows):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate &lt;ENVIRONMENT-NAME&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;ENVIRONMENT-NAME&gt;
 </pre></div>
 </div>
 <p class="card-text">Then, type <code class="docutils literal notranslate"><span class="pre">spyder</span></code> to launch the version installed in that environment.</p>
@@ -649,7 +649,7 @@ Q: How do I install Python packages to use within Spyder?<div class="summary-dow
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The first approach for installing a package should be using conda.
 In your system terminal (or Anaconda Prompt on Windows), type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install &lt;PACKAGE-NAME&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>&lt;PACKAGE-NAME&gt;
 </pre></div>
 </div>
 <p class="card-text">If your installation is not successful, follow steps 3 through 5 of Part 2 in our video on solving and avoiding problems with pip, Conda and Conda-Forge.</p>
@@ -712,7 +712,7 @@ Q: How do I use plugins with Spyder (e.g. Spyder-Notebook, Spyder-Terminal, Spyd
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Spyder plugins are available in the <code class="docutils literal notranslate"><span class="pre">spyder-ide</span></code> conda channel.
 To install one, type on the command line (or Anaconda Prompt on Windows):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c spyder-ide &lt;PLUGIN&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>spyder-ide<span class="w"> </span>&lt;PLUGIN&gt;
 </pre></div>
 </div>
 <p class="card-text">Replace <code class="docutils literal notranslate"><span class="pre">&lt;PLUGIN&gt;</span></code> with the name of the plugin you want to use.
@@ -833,7 +833,7 @@ Q: I get the message “An error occurred while starting the kernel”. How do I
 </table>
 </div></blockquote>
 <p class="card-text">To install the right version, type the following on the command line (or Anaconda Prompt on Windows)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
 </pre></div>
 </div>
 <p class="card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">Errors starting the kernel</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html"><span class="doc">Common Illnesses</span></a> page of our troubleshooting guide.</p>
@@ -849,15 +849,15 @@ Q: Spyder doesn’t launch or is slow on macOS Big Sur. How can I get it working
 However, you can get it working right now with the workaround below.
 Make sure you have the Anaconda or Miniconda distribution installed, and run the following commands in the Terminal to install Spyder from Conda-Forge in a clean environment:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n spyder-dev <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
-conda activate spyder-dev
-conda install -c conda-forge spyder
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-dev<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>spyder
 </pre></div>
 </div>
 </div></blockquote>
 <p class="card-text">Then, whenever you want to start Spyder, run the following from the Terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate spyder-dev
-<span class="nb">export</span> <span class="nv">QT_MAC_WANTS_LAYER</span><span class="o">=</span><span class="m">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">QT_MAC_WANTS_LAYER</span><span class="o">=</span><span class="m">1</span>
 spyder
 </pre></div>
 </div>
@@ -1056,7 +1056,7 @@ For more, see our <a class="reference internal" href="installation.html"><span c
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

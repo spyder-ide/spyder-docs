@@ -722,11 +722,11 @@ This involves spending considerable time understanding its inner workings.</p>
 <p>However, if you use a working environment that has other dependencies and you want to keep your plugin development independent of them, it is recommended to create a new environment which only has Spyder with the minimum dependencies needed for your plugin.</p>
 <img alt="Spyder development environment." src="../_images/pd_dev_environment.png" />
 <p>We can install it in the following way:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate base
-$ conda install -c conda-forge mamba <span class="c1"># A personal recommendation</span>
-$ mamba create -n spyder-dev -c conda-forge <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
-$ mamba activate spyder-dev
-$ mamba install spyder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>base
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba<span class="w"> </span><span class="c1"># A personal recommendation</span>
+$<span class="w"> </span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-dev<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+$<span class="w"> </span>mamba<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
 <div class="alert alert-info">
@@ -758,75 +758,75 @@ $ mamba install spyder
 <h2>Let’s get started<a class="headerlink" href="#let-s-get-started" title="Permalink to this headline">¶</a></h2>
 <p>We already have a git repository and a virtual environment where Spyder 5 is installed.</p>
 <p>Let’s activate our environment and go into the local folder of our repository.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mamba activate spyder-dev
-<span class="nb">cd</span> /path/to/your/repository
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+<span class="nb">cd</span><span class="w"> </span>/path/to/your/repository
 </pre></div>
 </div>
 <p>Then we need to use <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> to create the initial structure of our plugin. <a class="reference external" href="https://cookiecutter.readthedocs.io">cookiecutter</a> is a tool made in Python specifically designed to create project templates.
 We have developed one of these templates to generate the basic structure of a plugin, it can be found at: <a class="reference external" href="https://github.com/spyder-ide/spyder5-plugin-cookiecutter">https://github.com/spyder-ide/spyder5-plugin-cookiecutter</a></p>
 <img alt="Folder structure of our plugin." src="../_images/pd_plugin_structure.png" />
 <p>Let’s run cookiecutter to generate our</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ cookiecutter https://github.com/spyder-ide/spyder5-plugin-cookiecutter
-You<span class="se">\&#39;</span>ve downloaded /home/mapologo/.cookiecutters/spyder5-plugin-cookiecutter before. Is it okay to delete and re-download it? <span class="o">[</span>yes<span class="o">]</span>:
-full_name <span class="o">[</span>Spyder Bot<span class="o">]</span>: Francisco Palm <span class="c1"># It&#39;s your name, better John Doe</span>
-email <span class="o">[</span>spyder.python@gmail.com<span class="o">]</span>: fpalm@qu4nt.com
-github_username <span class="o">[</span>spyder-bot<span class="o">]</span>: map0logo
-github_org <span class="o">[</span>spyder-ide<span class="o">]</span>:
-project_name <span class="o">[</span>Spyder Boilerplate<span class="o">]</span>: Spyder Pomodoro Timer
-project_short_description <span class="o">[</span>Boilerplate needed to create a Spyder Plugin.<span class="o">]</span>: A very simple pomodoro timer that shows <span class="k">in</span> the status bar.
-project_pypi_name <span class="o">[</span>spyder-pomodoro-timer<span class="o">]</span>:
-project_package_name <span class="o">[</span>spyder_pomodoro_timer<span class="o">]</span>:
-pypi_username <span class="o">[</span>map0logo<span class="o">]</span>:
-Select plugin_type:
-<span class="m">1</span> - Spyder Dockable Plugin
-<span class="m">2</span> - Spyder Plugin
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">2</span>
-Select open_source_license:
-<span class="m">1</span> - MIT license
-<span class="m">2</span> - BSD license
-<span class="m">3</span> - ISC license
-<span class="m">4</span> - Apache Software License <span class="m">2</span>.0
-<span class="m">5</span> - GNU General Public License v3
-<span class="m">6</span> - Not open <span class="nb">source</span>
-Choose from <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>, <span class="m">4</span>, <span class="m">5</span>, <span class="m">6</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">1</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cookiecutter<span class="w"> </span>https://github.com/spyder-ide/spyder5-plugin-cookiecutter
+You<span class="se">\&#39;</span>ve<span class="w"> </span>downloaded<span class="w"> </span>/home/mapologo/.cookiecutters/spyder5-plugin-cookiecutter<span class="w"> </span>before.<span class="w"> </span>Is<span class="w"> </span>it<span class="w"> </span>okay<span class="w"> </span>to<span class="w"> </span>delete<span class="w"> </span>and<span class="w"> </span>re-download<span class="w"> </span>it?<span class="w"> </span><span class="o">[</span>yes<span class="o">]</span>:
+full_name<span class="w"> </span><span class="o">[</span>Spyder<span class="w"> </span>Bot<span class="o">]</span>:<span class="w"> </span>Francisco<span class="w"> </span>Palm<span class="w"> </span><span class="c1"># It&#39;s your name, better John Doe</span>
+email<span class="w"> </span><span class="o">[</span>spyder.python@gmail.com<span class="o">]</span>:<span class="w"> </span>fpalm@qu4nt.com
+github_username<span class="w"> </span><span class="o">[</span>spyder-bot<span class="o">]</span>:<span class="w"> </span>map0logo
+github_org<span class="w"> </span><span class="o">[</span>spyder-ide<span class="o">]</span>:
+project_name<span class="w"> </span><span class="o">[</span>Spyder<span class="w"> </span>Boilerplate<span class="o">]</span>:<span class="w"> </span>Spyder<span class="w"> </span>Pomodoro<span class="w"> </span>Timer
+project_short_description<span class="w"> </span><span class="o">[</span>Boilerplate<span class="w"> </span>needed<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>Spyder<span class="w"> </span>Plugin.<span class="o">]</span>:<span class="w"> </span>A<span class="w"> </span>very<span class="w"> </span>simple<span class="w"> </span>pomodoro<span class="w"> </span>timer<span class="w"> </span>that<span class="w"> </span>shows<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>bar.
+project_pypi_name<span class="w"> </span><span class="o">[</span>spyder-pomodoro-timer<span class="o">]</span>:
+project_package_name<span class="w"> </span><span class="o">[</span>spyder_pomodoro_timer<span class="o">]</span>:
+pypi_username<span class="w"> </span><span class="o">[</span>map0logo<span class="o">]</span>:
+Select<span class="w"> </span>plugin_type:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Spyder<span class="w"> </span>Dockable<span class="w"> </span>Plugin
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Spyder<span class="w"> </span>Plugin
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">2</span>
+Select<span class="w"> </span>open_source_license:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>MIT<span class="w"> </span>license
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>BSD<span class="w"> </span>license
+<span class="m">3</span><span class="w"> </span>-<span class="w"> </span>ISC<span class="w"> </span>license
+<span class="m">4</span><span class="w"> </span>-<span class="w"> </span>Apache<span class="w"> </span>Software<span class="w"> </span>License<span class="w"> </span><span class="m">2</span>.0
+<span class="m">5</span><span class="w"> </span>-<span class="w"> </span>GNU<span class="w"> </span>General<span class="w"> </span>Public<span class="w"> </span>License<span class="w"> </span>v3
+<span class="m">6</span><span class="w"> </span>-<span class="w"> </span>Not<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span>
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <div class="section" id="the-plugin-structure">
 <h3>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Permalink to this headline">¶</a></h3>
 <p>After <code class="docutils literal notranslate"><span class="pre">cookicutter</span></code> finishes its job, you’ll get the following tree structure in your repository</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
-├── <span class="o">[</span>Some info files<span class="o">]</span>
-├── Makefile
-├── setup.py
-├── spyder_pomodoro_timer
-│   ├── __init__.py
-│   └── spyder
-│       ├── __init__.py
-│       ├── api.py
-│       ├── confpage.py
-│       ├── container.py
-│       ├── locale
-│       │   └── spyder_pomodoro_timer.pot
-│       ├── plugin.py
-│       └── widgets.py
-└── tests
+├──<span class="w"> </span><span class="o">[</span>Some<span class="w"> </span>info<span class="w"> </span>files<span class="o">]</span>
+├──<span class="w"> </span>Makefile
+├──<span class="w"> </span>setup.py
+├──<span class="w"> </span>spyder_pomodoro_timer
+│<span class="w">   </span>├──<span class="w"> </span>__init__.py
+│<span class="w">   </span>└──<span class="w"> </span>spyder
+│<span class="w">       </span>├──<span class="w"> </span>__init__.py
+│<span class="w">       </span>├──<span class="w"> </span>api.py
+│<span class="w">       </span>├──<span class="w"> </span>confpage.py
+│<span class="w">       </span>├──<span class="w"> </span>container.py
+│<span class="w">       </span>├──<span class="w"> </span>locale
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>spyder_pomodoro_timer.pot
+│<span class="w">       </span>├──<span class="w"> </span>plugin.py
+│<span class="w">       </span>└──<span class="w"> </span>widgets.py
+└──<span class="w"> </span>tests
 </pre></div>
 </div>
 <p>In the root folder you’ll find two important files:</p>
 <ul class="simple">
 <li><p>The Makefile, which has several useful commands:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean                remove all build, test, coverage and Python artifacts
-clean-build          remove build artifacts
-clean-pyc            remove Python file artifacts
-clean-test           remove <span class="nb">test</span> and coverage artifacts
-<span class="nb">test</span>                 run tests quickly with the default Python
-docs                 generate Sphinx HTML documentation, including API docs
-servedocs            compile the docs watching <span class="k">for</span> changes
-release              package and upload a release
-dist                 builds <span class="nb">source</span> and wheel package
-install              install the package to the active Python<span class="s1">&#39;s site-packages</span>
-<span class="s1">develop              install the package to the active Python&#39;</span>s site-packages
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean<span class="w">                </span>remove<span class="w"> </span>all<span class="w"> </span>build,<span class="w"> </span>test,<span class="w"> </span>coverage<span class="w"> </span>and<span class="w"> </span>Python<span class="w"> </span>artifacts
+clean-build<span class="w">          </span>remove<span class="w"> </span>build<span class="w"> </span>artifacts
+clean-pyc<span class="w">            </span>remove<span class="w"> </span>Python<span class="w"> </span>file<span class="w"> </span>artifacts
+clean-test<span class="w">           </span>remove<span class="w"> </span><span class="nb">test</span><span class="w"> </span>and<span class="w"> </span>coverage<span class="w"> </span>artifacts
+<span class="nb">test</span><span class="w">                 </span>run<span class="w"> </span>tests<span class="w"> </span>quickly<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>Python
+docs<span class="w">                 </span>generate<span class="w"> </span>Sphinx<span class="w"> </span>HTML<span class="w"> </span>documentation,<span class="w"> </span>including<span class="w"> </span>API<span class="w"> </span>docs
+servedocs<span class="w">            </span>compile<span class="w"> </span>the<span class="w"> </span>docs<span class="w"> </span>watching<span class="w"> </span><span class="k">for</span><span class="w"> </span>changes
+release<span class="w">              </span>package<span class="w"> </span>and<span class="w"> </span>upload<span class="w"> </span>a<span class="w"> </span>release
+dist<span class="w">                 </span>builds<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>wheel<span class="w"> </span>package
+install<span class="w">              </span>install<span class="w"> </span>the<span class="w"> </span>package<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>active<span class="w"> </span>Python<span class="s1">&#39;s site-packages</span>
+<span class="s1">develop              install the package to the active Python&#39;</span>s<span class="w"> </span>site-packages
 </pre></div>
 </div>
 <ul class="simple">
@@ -901,7 +901,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 </div>
 <p>With that, we can write our first widget like this</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerStatus</span><span class="p">(</span><span class="n">BaseTimerStatus</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Status bar widget to display the pomodoro timer&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Status bar widget to display the pomodoro timer&quot;&quot;&quot;</span>
 
     <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;pomodoro_timer_status&quot;</span>
     <span class="n">CONF_SECTION</span> <span class="o">=</span> <span class="s2">&quot;spyder_pomodoro_timer&quot;</span>
@@ -911,7 +911,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;25:00&quot;</span>
 
     <span class="k">def</span> <span class="nf">get_tooltip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Override api method.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Override api method.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s2">&quot;I am the Pomodoro timer!&quot;</span>
 
     <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -923,7 +923,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <p>Spyder needs <code class="docutils literal notranslate"><span class="pre">ID</span></code> to be defined for <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>. Its constructor calls the parent class constructor and initializes the label with <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 </div>
 <p>We add a tooltip to verify the presence of our widget. Since Spyder uses <code class="docutils literal notranslate"><span class="pre">qtawesome</span></code> (another of our projects that eases the incorporation of iconic fonts into PyQt applications), we can select an appropriate icon by running the <code class="docutils literal notranslate"><span class="pre">qta-browser</span></code> command on a terminal.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span> $ qta-browser
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>qta-browser
 </pre></div>
 </div>
 <p>From here we can select and copy the name of the icon of our preference.</p>
@@ -931,7 +931,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <p>To finish the implementation of our widget, we need to add the following method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---- BaseTimerStatus API</span>
 <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get current time of the timer&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get current time of the timer&quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
@@ -1001,7 +1001,7 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <li><p>Plugin class:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Spyder Pomodoro Timer plugin.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1098,13 +1098,13 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <h2>How to test our plugin<a class="headerlink" href="#how-to-test-our-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Now it is time to see how our plugin looks in the Spyder interface.</p>
 <p><strong>From the root folder of our plugin</strong>, we activate the environment where Spyder is installed, and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> $ conda activate spyder-dev
-<span class="o">(</span>spyder-dev<span class="o">)</span> $ pip install -e .
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+<span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </pre></div>
 </div>
 <p>Now we can see two outputs. The first one is shown in the command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span> $ spyder
-SpyderPomodoroTimer registered!
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>spyder
+SpyderPomodoroTimer<span class="w"> </span>registered!
 </pre></div>
 </div>
 <p>And in Spyder you’ll see our plugin in the status bar with the tooltip “I am the Pomodoro tooltip”.</p>
@@ -1144,14 +1144,14 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <p>The function of <code class="docutils literal notranslate"><span class="pre">self.timer</span></code> is to update our timer periodically. This is done through the method <code class="docutils literal notranslate"><span class="pre">timeout.connect()</span></code>, to which we pass as parameter the reference to the <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> function that will perform the required adjustments.</p>
 <p>Now let’s implement <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> at the end of the file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculate the time that should be displayed.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the time that should be displayed.&quot;&quot;&quot;</span>
 
     <span class="n">minutes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
     <span class="n">seconds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minutes</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="k">def</span> <span class="nf">update_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Updates the timer and the current widget. Also, update the</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates the timer and the current widget. Also, update the</span>
 <span class="sd">    task counter if a task is set.&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1178,7 +1178,7 @@ As for the update interval of the timer, we set it to to the value of <code clas
 </div>
 <p>And create an instance of it by adding the following code before the definition of <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerToolbar</span><span class="p">(</span><span class="n">ApplicationToolbar</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Toolbar to add buttons to control our timer.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Toolbar to add buttons to control our timer.&quot;&quot;&quot;</span>
 
     <span class="n">ID</span> <span class="o">=</span> <span class="s1">&#39;pomodoro_timer_toolbar&#39;</span>
 </pre></div>
@@ -1321,17 +1321,17 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <p>When creating the actions, we indicate by means of the <code class="docutils literal notranslate"><span class="pre">triggered</span></code> parameter the methods to be executed when they are activated, i.e. when the corresponding buttons on the toolbar are clicked.</p>
 <p>We can insert these methods at the end of the <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> declaration, in the section that our cookiecutter template indicates as <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">---</span> <span class="pre">Public</span> <span class="pre">API</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">start_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Start the timer.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="k">def</span> <span class="nf">pause_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Pause the timer.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pause the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">def</span> <span class="nf">stop_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Stop the timer.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stop the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">countdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pomodoro_limit</span>
@@ -1515,38 +1515,38 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <p>The first thing we have to do is to create an account on the <a class="reference external" href="https://pypi.org">PyPI</a> and <a class="reference external" href="https://test.pypi.org">TestPyPI</a> websites. Although our package will be finally published in PyPI, it is advisable to use TestPyPI to test that our package can be published properly without generating additional load to the PyPI servers or affecting their logs.</p>
 <p>Next, we need edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file at the root of our project with our own data. Fortunately, cookiecutter created one for us.</p>
 <p>To upload our package to PyPI we have to use a tool called <a class="reference external" href="https://twine.readthedocs.io">Twine</a> that makes this task much easier. And we can install it in our conda environment using:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ mamba install twine
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>twine
 </pre></div>
 </div>
 </div>
 <div class="section" id="build-and-check-the-package">
 <h3>Build and check the package<a class="headerlink" href="#build-and-check-the-package" title="Permalink to this headline">¶</a></h3>
 <p>Before publishing our plugin we must package it. To do it we must write the following from the root folder of our project (where <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is placed):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python setup.py sdist bdist_wheel
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>sdist<span class="w"> </span>bdist_wheel
 </pre></div>
 </div>
 <p>After that we will see that the following files are generated in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spyder_pomodoro_timer
-└── dist
-    ├── spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl
-    └── spyder-pomodoro-timer-0.0.1.dev0.tar.gz
+└──<span class="w"> </span>dist
+<span class="w">    </span>├──<span class="w"> </span>spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl
+<span class="w">    </span>└──<span class="w"> </span>spyder-pomodoro-timer-0.0.1.dev0.tar.gz
 </pre></div>
 </div>
 <p>On Linux and macOS we can check that the newly built distribution packages contain the expected files by inspecting the contents of the <code class="docutils literal notranslate"><span class="pre">tar</span></code> file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tar tzf dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>tzf<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz
 </pre></div>
 </div>
 <p>You can also use <code class="docutils literal notranslate"><span class="pre">twine</span></code> to run a check on the created files in <code class="docutils literal notranslate"><span class="pre">dist</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ twine check dist/*
-Checking dist/spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl: PASSED
-Checking dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz: PASSED
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>check<span class="w"> </span>dist/*
+Checking<span class="w"> </span>dist/spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl:<span class="w"> </span>PASSED
+Checking<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz:<span class="w"> </span>PASSED
 </pre></div>
 </div>
 </div>
 <div class="section" id="upload-to-pypi">
 <h3>Upload to PyPI<a class="headerlink" href="#upload-to-pypi" title="Permalink to this headline">¶</a></h3>
 <p>Now we can use twine to upload the distribution packages we have built. First, we will upload them to TestPyPI to make sure everything works:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>upload<span class="w"> </span>--repository-url<span class="w"> </span>https://test.pypi.org/legacy/<span class="w"> </span>dist/*
 </pre></div>
 </div>
 <p>This command will prompt you for the username and password with which you registered in TestPyPI.</p>
@@ -1569,12 +1569,12 @@ Checking dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz: PASSED
 <p>We can also change the classifiers of our package using the following site as a guide: <a class="reference external" href="https://pypi.org/classifiers">https://pypi.org/classifiers</a>. Here we can simply copy the classifiers we consider appropriate and then paste them into our code.
 Specifically in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, within the list that enters as the <code class="docutils literal notranslate"><span class="pre">classifier</span></code> argument in the call to function <code class="docutils literal notranslate"><span class="pre">setup</span></code>.</p>
 <p>With these changes, and by bumping our plugin’s version in the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">spyder_pomodoro_timer</span></code> folder, we can repeat the cycle of building a new version of our package, loading it into TestPyPI for checking, and finally loading it into PyPI by using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ twine upload dist/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>upload<span class="w"> </span>dist/
 </pre></div>
 </div>
 <p>And check the result in <a class="reference external" href="https://pypi.org/project/spyder-pomodoro-timer/">https://pypi.org/project/spyder-pomodoro-timer/</a></p>
 <p>Once this is done, anyone can install our plugin in their environments simply by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install spyder-pomodoro-timer
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>spyder-pomodoro-timer
 </pre></div>
 </div>
 </div>
@@ -2087,7 +2087,7 @@ Specifically in <code class="docutils literal notranslate"><span class="pre">set
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

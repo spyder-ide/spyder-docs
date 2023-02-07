@@ -596,12 +596,12 @@ Make sure to re-enable it if it doesn’t fix the problem, and if it does, add a
 <ol class="arabic">
 <li><p>Find the path to the Spyder <code class="file docutils literal notranslate"><span class="pre">app</span></code> directory from the command line.
 For this, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -c <span class="s1">&#39;import sysconfig; print(sysconfig.get_paths()[&quot;purelib&quot;])&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sysconfig; print(sysconfig.get_paths()[&quot;purelib&quot;])&#39;</span>
 </pre></div>
 </div>
 </li>
 <li><p>Go to the output path of the above command on your command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;OUTPUT-PATH&gt;/spyder/app
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;OUTPUT-PATH&gt;/spyder/app
 </pre></div>
 </div>
 </li>
@@ -613,13 +613,13 @@ For this, run:</p>
 Also run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">mainwindow.py</span></code>, and record your results as well.</p>
 <ol class="arabic">
 <li><p>(<em>Windows only</em>) In case the command window disappears immediately after the error, create a <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file in the <code class="file docutils literal notranslate"><span class="pre">app</span></code> directory with the following content:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PYTHON-PATH&gt; start.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PYTHON-PATH&gt;<span class="w"> </span>start.py
 
 pause
 </pre></div>
 </div>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;PYTHON-PATH&gt;</span></code> with the output of:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -c <span class="s1">&#39;import sys; print(sys.executable)&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sys; print(sys.executable)&#39;</span>
 </pre></div>
 </div>
 <p>Then, double click the batch file to run it, and you should see the error information you need.</p>
@@ -768,7 +768,7 @@ pause
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

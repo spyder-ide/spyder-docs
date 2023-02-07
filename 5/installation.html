@@ -653,18 +653,18 @@ This is our recommended installation method on Linux and for users with third-pa
 <div class="section" id="installing-with-conda">
 <span id="install-conda-installing"></span><h4>Installing with Conda<a class="headerlink" href="#installing-with-conda" title="Permalink to this headline">¶</a></h4>
 <p>For a full install of Spyder and all optional dependencies, run the following command in your Anaconda Prompt (Windows) or terminal:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -c conda-forge -n spyder-env spyder numpy scipy pandas matplotlib sympy cython
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sympy<span class="w"> </span>cython
 </pre></div>
 </div>
 <p>For a minimal install without the optional functionality and integration with the above packages, you can instead run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -c conda-forge -n spyder-env spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p>This installs Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code>, using the more up-to-date, community-run Conda-Forge channel.
 To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment’s default channel with strict channel priority enabled, if this isn’t the case already (as it is with Miniforge/Mambaforge or if you’ve manually configured it):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda activate spyder-env
-conda config --env --add channels conda-forge
-conda config --env --set channel_priority strict
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
+conda<span class="w"> </span>config<span class="w"> </span>--env<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+conda<span class="w"> </span>config<span class="w"> </span>--env<span class="w"> </span>--set<span class="w"> </span>channel_priority<span class="w"> </span>strict
 </pre></div>
 </div>
 <p>Here’s a summary of the main steps.</p>
@@ -679,13 +679,13 @@ conda config --env --set channel_priority strict
 <span id="install-conda-update"></span><h4>Updating with Conda<a class="headerlink" href="#updating-with-conda" title="Permalink to this headline">¶</a></h4>
 <p>With any Conda-based distribution and Spyder installed in its own environment (recommended), update Conda itself, active the environment, and finally update Spyder.
 In your system terminal (or Anaconda Prompt if on Windows), run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda update -n base conda
-conda activate spyder-env
-conda update spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda
+conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
+conda<span class="w"> </span>update<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p>In case you get an error trying to update, just remove the existing environment (if using one other than <code class="docutils literal notranslate"><span class="pre">base</span></code>):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda remove -n spyder-env --all
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>--all
 </pre></div>
 </div>
 <p>And then <a class="reference internal" href="#install-conda-installing"><span class="std std-ref">recreate a fresh one</span></a>.</p>
@@ -710,8 +710,8 @@ On other platforms, open Anaconda Navigator, scroll to Spyder under <span class=
 <span id="install-anaconda-update"></span><h4>Updating with Anaconda<a class="headerlink" href="#updating-with-anaconda" title="Permalink to this headline">¶</a></h4>
 <p>With Spyder installed in Anaconda’s <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, first update the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> meta-package, and then Spyder itself (in case there is a newer version than that pinned to the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> metapackage).
 In your system terminal (or Anaconda Prompt if on Windows), run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda update anaconda
-conda install <span class="nv">spyder</span><span class="o">=</span><span class="m">5</span>.3.3
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">5</span>.3.3
 </pre></div>
 </div>
 <div class="alert alert-info">
@@ -719,8 +719,8 @@ conda install <span class="nv">spyder</span><span class="o">=</span><span class=
 <p>These commands also update all your other packages, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on other installed packages.</p>
 </div>
 <p>In case you get an error resolving dependencies, try uninstalling Spyder and re-installing it:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda remove spyder
-conda install spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>spyder
+conda<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
 </div>
@@ -741,13 +741,13 @@ Before installing Spyder itself by this method, you need to download the <a clas
 </div>
 <p>You’ll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.</p>
 <p>With <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkvirtualenv spyder-env
-workon spyder-env
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkvirtualenv<span class="w"> </span>spyder-env
+workon<span class="w"> </span>spyder-env
 </pre></div>
 </div>
 <p>Otherwise, on macOS/Linux/Unix:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 -m venv spyder-env
-<span class="nb">source</span> spyder-env/bin/activate
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>spyder-env
+<span class="nb">source</span><span class="w"> </span>spyder-env/bin/activate
 </pre></div>
 </div>
 <p>or on Windows:</p>
@@ -756,17 +756,17 @@ spyder-env\Scripts\activate.bat
 </pre></div>
 </div>
 <p>After activating your environment, to install Spyder and its optional dependencies, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install spyder numpy scipy pandas matplotlib sympy cython
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>spyder<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sympy<span class="w"> </span>cython
 </pre></div>
 </div>
 <p>Or for a minimal installation, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
 <img alt="Running Spyder installation with pip" src="_images/installation-pip-install.gif" />
 <p>To launch Spyder after installing it, ensure your environment is activated and run the <code class="docutils literal notranslate"><span class="pre">spyder</span></code> or <code class="docutils literal notranslate"><span class="pre">spyder3</span></code> command.</p>
 <p>And to update Spyder, with your Spyder environment activated, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install --upgrade spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>spyder
 </pre></div>
 </div>
 </div>
@@ -787,12 +787,12 @@ You can use Spyder immediately after installing, similar to Anaconda.</p>
 <span id="install-macos"></span><h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
 <p>Spyder is available as <a class="reference external" href="https://formulae.brew.sh/cask/spyder">a cask</a> through <a class="reference external" href="https://brew.sh/">Homebrew</a>.</p>
 <p>To install it using the <code class="docutils literal notranslate"><span class="pre">brew</span></code> package manager, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install --cask spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p>It is also available as a <a class="reference external" href="https://ports.macports.org/port/py-spyder/">a port</a> through <a class="reference external" href="https://www.macports.org/">MacPorts</a>.</p>
 <p>To install it using the <code class="docutils literal notranslate"><span class="pre">port</span></code> package manager, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo port install py39-spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>port<span class="w"> </span>install<span class="w"> </span>py39-spyder
 </pre></div>
 </div>
 </div>
@@ -805,7 +805,7 @@ Alternatively, it can be launched from the terminal with <code class="docutils l
 <span id="install-debian"></span><h4>Ubuntu/Debian<a class="headerlink" href="#ubuntu-debian" title="Permalink to this headline">¶</a></h4>
 <p>Spyder is available as <a class="reference external" href="https://packages.ubuntu.com/search?keywords=spyder">a Ubuntu package</a> and <a class="reference external" href="https://packages.debian.org/search?searchon=names&amp;keywords=spyder">a Debian package</a>.</p>
 <p>To install it using the <code class="docutils literal notranslate"><span class="pre">apt</span></code> package manager, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
 </div>
@@ -1095,7 +1095,7 @@ For more information, please see the <a class="reference external" href="https:/
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

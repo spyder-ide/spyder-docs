@@ -550,12 +550,12 @@ There are a number of problems that can cause this, but most can be fixed fairly
 </table>
 <p>To do so, activate the environment, then install <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>.
 If using Anaconda, open a terminal (Anaconda Prompt on Windows) and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate ENVIRONEMENT-NAME
-conda install spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONEMENT-NAME
+conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
 </pre></div>
 </div>
 <p>Otherwise, activate your environment by whatever means you created it, and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install spyder-kernels<span class="o">==</span>&lt;VERSION&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">==</span>&lt;VERSION&gt;
 </pre></div>
 </div>
 <p>For both of the previous commands, replace <code class="docutils literal notranslate"><span class="pre">&lt;VERSION&gt;</span></code> with the corresponding version in the table.</p>
@@ -565,12 +565,12 @@ conda install spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
 <p>If the kernel displays a long error traceback that mentions other packages like <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter_client</span></code>, <code class="docutils literal notranslate"><span class="pre">traitlets</span></code> or <code class="docutils literal notranslate"><span class="pre">pyzmq</span></code>, the problem may be an out of date or incompatible version of a dependency package.
 To fix this, activate the environment and update the key dependencies.</p>
 <p>In an Anaconda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate ENVIRONMENT-NAME
-conda update spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONMENT-NAME
+conda<span class="w"> </span>update<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
 <p>Otherwise, activate your environment by whatever means you created it, and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
 </div>
@@ -610,7 +610,7 @@ If this is the case, you can check LSP status with the <span class="guilabel">LS
 <p>Given the variety of dependencies involved in making LSP work, an incompatible or out of date version in your environment can result in error messages, incomplete results, or help/analysis not working at all.</p>
 <p>To address this, first try updating Anaconda and Spyder as described in <a class="reference internal" href="basic-first-aid.html"><span class="doc">Basic First Aid</span></a>.
 If the issue still isn’t resolved, update the various relevant dependencies with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update python-language-server
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>python-language-server
 </pre></div>
 </div>
 </div>
@@ -867,7 +867,7 @@ Test whether you can import the plug-in manually by opening a Python console in 
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">

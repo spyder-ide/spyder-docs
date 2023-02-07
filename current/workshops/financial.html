@@ -660,14 +660,14 @@ While we still support Anaconda, we recommend this install method on those platf
 <div class="section" id="with-commands">
 <h4>With commands<a class="headerlink" href="#with-commands" title="Permalink to this headline">¶</a></h4>
 <p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), to create a new environment called <code class="docutils literal notranslate"><span class="pre">financial-analysis</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n financial-analysis
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>financial-analysis
 </pre></div>
 </div>
 <p>To install Spyder’s optional dependencies as well for full functionality, use the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate financial-analysis
-$ conda install -c conda-forge numpy scipy pandas matplotlib sympy cython spyder-kernels requests multitasking lxml tqdm
-$ pip install -i https://pypi.anaconda.org/ranaroussi/simple yfinance
-$ pip install Historic-Crypto
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>financial-analysis
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sympy<span class="w"> </span>cython<span class="w"> </span>spyder-kernels<span class="w"> </span>requests<span class="w"> </span>multitasking<span class="w"> </span>lxml<span class="w"> </span>tqdm
+$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://pypi.anaconda.org/ranaroussi/simple<span class="w"> </span>yfinance
+$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>Historic-Crypto
 </pre></div>
 </div>
 <div class="alert alert-primary">
@@ -1008,7 +1008,7 @@ $ pip install Historic-Crypto
     <span class="n">_rets</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
         <span class="n">prev_year</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
-        <span class="n">current_year</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
+        <span class="n">current_year</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">-01-01&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">-12-31&quot;</span><span class="p">]</span>
         <span class="n">expected_pr</span> <span class="o">=</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">prev_year</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">[</span><span class="n">year</span><span class="p">])</span>
         <span class="n">realized_pr</span> <span class="o">=</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">current_year</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">[</span><span class="n">year</span><span class="p">])</span>
         <span class="n">_rets</span><span class="p">[</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">expected_pr</span><span class="p">,</span> <span class="n">realized_pr</span><span class="p">]</span>
@@ -1115,9 +1115,9 @@ $ pip install Historic-Crypto
 <p>To confirm what was said in the previous section, let’s calculate returns, volatility and Sharpe ratio.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights_2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 returns: </span><span class="si">{</span><span class="n">portfolio_return</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 volatility: </span><span class="si">{</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;portfolio 2 Sharpe: </span><span class="si">{</span><span class="n">portfolio_sharpe</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 returns: </span><span class="si">{</span><span class="n">portfolio_return</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span><span class="w"> </span><span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Portfolio 2 volatility: </span><span class="si">{</span><span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span><span class="w"> </span><span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;portfolio 2 Sharpe: </span><span class="si">{</span><span class="n">portfolio_sharpe</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span><span class="w"> </span><span class="n">weights_2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Portfolio 2 returns: 0.0809</span>
 <span class="c1"># Portfolio 2 volatility: 0.1637</span>
@@ -1769,7 +1769,7 @@ $ pip install Historic-Crypto
               <small>
                 
                 <div class="text-center">
-                  &copy; 2009-2022 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
+                  &copy; 2009-2023 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
                 </div>
                 
                 <div class="text-center">
