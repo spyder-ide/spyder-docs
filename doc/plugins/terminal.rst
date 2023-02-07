@@ -18,7 +18,7 @@ If you installed Spyder using conda, the best way to install Spyder-terminal is 
 
 .. code-block:: bash
 
-   conda install spyder-terminal -c spyder-ide
+   conda install spyder-terminal -c conda-forge
 
 .. important::
 
