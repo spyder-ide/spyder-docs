@@ -223,41 +223,11 @@ Using Spyder
       :start: 306
 
    If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniconda`_ or another Conda-based option.
-   For Spyder to recognize it, the installation should be done in one of the following default paths:
-
-   .. table::
-
-       +------------------------------------+---------------------------------+
-       |Windows                             | macOS                           |
-       +====================================+=================================+
-       |C:\\Users\\<username>\\Anaconda     | /Users/<username>/opt/anaconda  |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Miniconda    | /Users/<username>/opt/miniconda |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Anaconda3    | /Users/<username>/opt/anaconda3 |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Miniconda3   | /Users/<username>/opt/miniconda3|
-       +------------------------------------+---------------------------------+
-       |C:\\Anaconda                        |   /opt/anaconda                 |
-       +------------------------------------+---------------------------------+
-       |C:\\Miniconda                       |   /opt/miniconda                |
-       +------------------------------------+---------------------------------+
-       |C:\\Anaconda3                       |   /opt/anaconda3                |
-       +------------------------------------+---------------------------------+
-       |C:\\Miniconda3                      |   /opt/miniconda3               |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Anaconda           |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Miniconda          |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Anaconda3          |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Miniconda3         |                                 |
-       +------------------------------------+---------------------------------+
+   For Spyder to recognize it automatically, you should use a Conda-based distribution with its default install path.
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Then, create a new conda environment with ``spyder-kernels`` and the packages that you want to use installed.
+   Create a new conda environment with ``spyder-kernels`` and the packages that you want to use installed.
    For example, if you want to use ``scikit-learn``, open your terminal (or Anaconda prompt on Windows) and run the following commands:
 
    .. code-block:: shell
