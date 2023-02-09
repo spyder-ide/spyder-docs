@@ -214,7 +214,7 @@ Using Spyder
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
 
-   Watch our video on using additional modules or follow the instructions below it.
+   Watch our video on using additional packages or follow the instructions below.
 
    .. youtube:: i7Njb3xO4Fw
       :height: 360
@@ -222,7 +222,7 @@ Using Spyder
       :align: left
       :start: 306
 
-   If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**).
+   If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniconda`_ or another Conda-based option.
    For Spyder to recognize it, the installation should be done in one of the following default paths:
 
    .. table::
@@ -257,21 +257,14 @@ Using Spyder
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Then, you need to create a new conda environment with the modules that you want to use with Spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-learn``, open your terminal or the Anaconda prompt on Windows and run the following commands:
+   Then, create a new conda environment with ``spyder-kernels`` and the packages that you want to use installed.
+   For example, if you want to use ``scikit-learn``, open your terminal (or Anaconda prompt on Windows) and run the following commands:
 
-   .. code-block:: bash
+   .. code-block:: shell
 
-      conda create -n spyder-env -y
-      conda activate spyder-env
-      conda install spyder-kernels scikit-learn -y
+      conda create -n scikit-learn-env -c conda-forge -y spyder-kernels scikit-learn
 
-   Finally, you need to connect Spyder to this environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
-
-   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section. Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment. If it is not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use.
-
-   **Your new environment will only be listed here if you installed Miniconda (or Anaconda) in the default path as shown in the table above.**
-
-   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   Finally, connect Spyder to this ``scikit-learn-env`` environment by changing Spyder's default Python interpreter, following the instructions in :ref:`the above answer <using-existing-environment>`.
 
 
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
