@@ -181,21 +181,32 @@ Using Spyder
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
    :container: + dropdown-id-using-existing-environment
 
-   To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
+   To work with an existing environment in Spyder, change the default Python interpreter for new :doc:`/panes/ipythonconsole`\s to point to this environment.
    To do so, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
 
    .. image:: /images/faq/faq-change-environment.png
       :alt: Change default environment in Preferences option in status bar
 
-   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section.
-   Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
-   If its not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interepreter you want to use.
-   See the :doc:`/panes/ipythonconsole` for more information.
+   This will open the :guilabel:`Python interpreter` pane of Spyder's preferences.
+   Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment, or paste/browse for the path to your desired Python interpreter.
 
    .. image:: /images/faq/faq-python-interpreter.png
       :alt: Preferences showing changing Python interpreter
 
-   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   .. note::
+
+      If you installed Miniconda (or another Conda-based distribution) to a non-default path, or are using a virtual environment managed by a tool other than ``pyenv``, your environments likely won't be listed.
+
+      Instead, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use.
+      You can find this path by activating the venv or Conda env you want to use in your terminal/Anaconda Prompt, and running the shell command:
+
+      .. code-block:: shell
+
+         python -c "import sys; print(sys.executable)"
+
+   Finally, click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   If ``spyder-kernels`` is not already installed, the :doc:`/panes/ipythonconsole` will display instructions on how to install the right version.
+   Execute the given command in your terminal/Anaconda prompt with the environment activated, and finally restart the kernel once more.
 
 
 .. _using-packages-installer:
