@@ -240,7 +240,7 @@ In your system terminal (or Anaconda Prompt if on Windows), run:
 .. code-block:: shell
 
    conda update anaconda
-   conda install spyder=5.3.3
+   conda install spyder=5.4.2
 
 .. note::
 
