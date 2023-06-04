@@ -181,21 +181,31 @@ Using Spyder
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
    :container: + dropdown-id-using-existing-environment
 
-   To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
-   To do so, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
+   To work with an existing environment in Spyder, change the default Python interpreter for new :doc:`/panes/ipythonconsole`\s to point to this environment.
 
-   .. image:: /images/faq/faq-change-environment.png
-      :alt: Change default environment in Preferences option in status bar
-
-   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section.
+   To do so, open the :guilabel:`Python interpreter` section of Spyder's preferences (:menuselection:`Tools --> Preferences`, or :menuselection:`Spyder --> Preferences` on macOS).
    Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
-   If its not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interepreter you want to use.
-   See the :doc:`/panes/ipythonconsole` for more information.
+   If it's not listed, see :ref:`the note below <faq-env-not-listed>`.
 
    .. image:: /images/faq/faq-python-interpreter.png
       :alt: Preferences showing changing Python interpreter
 
-   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   .. _faq-env-not-listed:
+
+   .. note::
+
+      If you installed Miniconda (or another Conda-based distribution) to a non-default path, or are using a virtual environment managed by a tool other than ``pyenv``, your environments likely won't be listed.
+
+      Instead, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use.
+      You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:
+
+      .. code-block:: shell
+
+         python -c "import sys; print(sys.executable)"
+
+   Finally, click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   If ``spyder-kernels`` is not already installed, the :doc:`/panes/ipythonconsole` will display instructions on how to install the right version.
+   Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.
 
 
 .. _using-packages-installer:
@@ -203,7 +213,7 @@ Using Spyder
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
    :container: + dropdown-id-using-packages-installer
 
-   Watch our video on using additional modules or follow the instructions below it.
+   Watch our video on using additional packages or follow the instructions below.
 
    .. youtube:: i7Njb3xO4Fw
       :height: 360
@@ -211,56 +221,19 @@ Using Spyder
       :align: left
       :start: 306
 
-   If you want to use other modules in Spyder that don't come with our installer, you need to install `Miniconda`_ (**only if you don't have Anaconda or Miniconda yet!**).
-   For Spyder to recognize it, the installation should be done in one of the following default paths:
-
-   .. table::
-
-       +------------------------------------+---------------------------------+
-       |Windows                             | macOS                           |
-       +====================================+=================================+
-       |C:\\Users\\<username>\\Anaconda     | /Users/<username>/opt/anaconda  |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Miniconda    | /Users/<username>/opt/miniconda |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Anaconda3    | /Users/<username>/opt/anaconda3 |
-       +------------------------------------+---------------------------------+
-       |C:\\Users\\<username>\\Miniconda3   | /Users/<username>/opt/miniconda3|
-       +------------------------------------+---------------------------------+
-       |C:\\Anaconda                        |   /opt/anaconda                 |
-       +------------------------------------+---------------------------------+
-       |C:\\Miniconda                       |   /opt/miniconda                |
-       +------------------------------------+---------------------------------+
-       |C:\\Anaconda3                       |   /opt/anaconda3                |
-       +------------------------------------+---------------------------------+
-       |C:\\Miniconda3                      |   /opt/miniconda3               |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Anaconda           |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Miniconda          |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Anaconda3          |                                 |
-       +------------------------------------+---------------------------------+
-       |C:\\ProgramData\\Miniconda3         |                                 |
-       +------------------------------------+---------------------------------+
+   If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniconda`_ or another Conda-based option.
+   For Spyder to recognize it automatically, you should use a Conda-based distribution with its default install path.
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Then, you need to create a new conda environment with the modules that you want to use with Spyder and include ``spyder-kernels`` in it. For example, if you want to use ``scikit-learn``, open your terminal or the Anaconda prompt on Windows and run the following commands:
+   Create a new conda environment containing ``spyder-kernels`` and the packages that you want to use.
+   For example, if you want to use ``scikit-learn``, open your terminal (or Anaconda prompt on Windows) and run the following command:
 
-   .. code-block:: bash
+   .. code-block:: shell
 
-      conda create -n spyder-env -y
-      conda activate spyder-env
-      conda install spyder-kernels scikit-learn -y
+      conda create -n my-env -c conda-forge spyder-kernels scikit-learn
 
-   Finally, you need to connect Spyder to this environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click :guilabel:`Change default environment in Preferences`.
-
-   This will open the :guilabel:`Preferences` dialog in the :guilabel:`Python interpreter` section. Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment. If it is not listed, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use.
-
-   **Your new environment will only be listed here if you installed Miniconda (or Anaconda) in the default path as shown in the table above.**
-
-   Click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
+   Finally, connect Spyder to this ``my-env`` environment by changing Spyder's default Python interpreter, following the instructions in :ref:`the above answer <using-existing-environment>`.
 
 
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?

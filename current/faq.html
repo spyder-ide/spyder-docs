@@ -754,15 +754,23 @@ Q: How do I get Spyder to work with my existing Python packages/environment?<div
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">To work with an existing environment in Spyder, you need to change Spyder’s default Python interpreter.
-To do so, click the name of the current environment in the status bar, and then click <span class="guilabel">Change default environment in Preferences</span>.</p>
-<img alt="Change default environment in Preferences option in status bar" src="_images/faq-change-environment.png" />
-<p class="card-text">This will open the <span class="guilabel">Preferences</span> dialog in the <span class="guilabel">Python interpreter</span> section.
+<p class="card-text">To work with an existing environment in Spyder, change the default Python interpreter for new <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>s to point to this environment.</p>
+<p class="card-text">To do so, open the <span class="guilabel">Python interpreter</span> section of Spyder’s preferences (<span class="menuselection">Tools ‣ Preferences</span>, or <span class="menuselection">Spyder ‣ Preferences</span> on macOS).
 Here, select the option <span class="guilabel">Use the following Python interpreter</span>, and use the dropdown below to select your preferred environment.
-If its not listed, use the text box or the <span class="guilabel">Select file</span> button to enter the path to the Python interepreter you want to use.
-See the <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> for more information.</p>
+If it’s not listed, see <a class="reference internal" href="#faq-env-not-listed"><span class="std std-ref">the note below</span></a>.</p>
 <img alt="Preferences showing changing Python interpreter" src="_images/faq-python-interpreter.png" />
-<p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
+<div class="alert alert-info" id="faq-env-not-listed">
+<p class="admonition-title">Note</p>
+<p class="card-text">If you installed Miniconda (or another Conda-based distribution) to a non-default path, or are using a virtual environment managed by a tool other than <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>, your environments likely won’t be listed.</p>
+<p class="card-text">Instead, use the text box or the <span class="guilabel">Select file</span> button to enter the path to the Python interpreter you want to use.
+You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys; print(sys.executable)&quot;</span>
+</pre></div>
+</div>
+</div>
+<p class="card-text">Finally, click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.
+If <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> is not already installed, the <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> will display instructions on how to install the right version.
+Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-packages-installer" id="using-packages-installer">
 <summary class="summary-title card-header">
@@ -771,68 +779,15 @@ Q: How do I install Python packages to use within Spyder if I downloaded Spyder 
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Watch our video on using additional modules or follow the instructions below it.</p>
-<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/i7Njb3xO4Fw?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><p class="card-text">If you want to use other modules in Spyder that don’t come with our installer, you need to install <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> (<strong>only if you don’t have Anaconda or Miniconda yet!</strong>).
-For Spyder to recognize it, the installation should be done in one of the following default paths:</p>
-<table class="table">
-<colgroup>
-<col style="width: 52%" />
-<col style="width: 48%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p class="card-text">Windows</p></th>
-<th class="head"><p class="card-text">macOS</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="card-text">C:\Users\&lt;username&gt;\Anaconda</p></td>
-<td><p class="card-text">/Users/&lt;username&gt;/opt/anaconda</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\Users\&lt;username&gt;\Miniconda</p></td>
-<td><p class="card-text">/Users/&lt;username&gt;/opt/miniconda</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">C:\Users\&lt;username&gt;\Anaconda3</p></td>
-<td><p class="card-text">/Users/&lt;username&gt;/opt/anaconda3</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\Users\&lt;username&gt;\Miniconda3</p></td>
-<td><p class="card-text">/Users/&lt;username&gt;/opt/miniconda3</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">C:\Anaconda</p></td>
-<td><p class="card-text">/opt/anaconda</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\Miniconda</p></td>
-<td><p class="card-text">/opt/miniconda</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">C:\Anaconda3</p></td>
-<td><p class="card-text">/opt/anaconda3</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\Miniconda3</p></td>
-<td><p class="card-text">/opt/miniconda3</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">C:\ProgramData\Anaconda</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\ProgramData\Miniconda</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">C:\ProgramData\Anaconda3</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">C:\ProgramData\Miniconda3</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p class="card-text">Then, you need to create a new conda environment with the modules that you want to use with Spyder and include <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> in it. For example, if you want to use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, open your terminal or the Anaconda prompt on Windows and run the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>-y
-conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
-conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="w"> </span>scikit-learn<span class="w"> </span>-y
+<p class="card-text">Watch our video on using additional packages or follow the instructions below.</p>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/i7Njb3xO4Fw?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><p class="card-text">If you want to use other packages in Spyder that don’t come with our installer, you need to have your own Python distribution installed; we recommend <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> or another Conda-based option.
+For Spyder to recognize it automatically, you should use a Conda-based distribution with its default install path.</p>
+<p class="card-text">Create a new conda environment containing <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> and the packages that you want to use.
+For example, if you want to use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, open your terminal (or Anaconda prompt on Windows) and run the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>my-env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>spyder-kernels<span class="w"> </span>scikit-learn
 </pre></div>
 </div>
-<p class="card-text">Finally, you need to connect Spyder to this environment by changing Spyder’s default Python interpreter. To do this, click the name of the current environment in the status bar, and then click <span class="guilabel">Change default environment in Preferences</span>.</p>
-<p class="card-text">This will open the <span class="guilabel">Preferences</span> dialog in the <span class="guilabel">Python interpreter</span> section. Here, select the option <span class="guilabel">Use the following Python interpreter</span>, and use the dropdown below to select your preferred environment. If it is not listed, use the text box or the <span class="guilabel">Select file</span> button to enter the path to the Python interpreter you want to use.</p>
-<p class="card-text"><strong>Your new environment will only be listed here if you installed Miniconda (or Anaconda) in the default path as shown in the table above.</strong></p>
-<p class="card-text">Click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.</p>
+<p class="card-text">Finally, connect Spyder to this <code class="docutils literal notranslate"><span class="pre">my-env</span></code> environment by changing Spyder’s default Python interpreter, following the instructions in <a class="reference internal" href="#using-existing-environment"><span class="std std-ref">the above answer</span></a>.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3 dropdown-id-using-reset-prefs">
 <summary class="summary-title card-header">
