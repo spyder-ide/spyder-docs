@@ -21,7 +21,7 @@ You can fully control debugger execution from the :guilabel:`Debug` menu, :guila
 
 Additionally, the  :doc:`editor` shows the line of code the debugger is currently stopped on with an arrow.
 
-.. _console commands: https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
+.. _console commands: https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html
 
 .. image:: /images/debugging/debugging-arrow.png
    :alt: Spyder Editor showing the debugging panel
