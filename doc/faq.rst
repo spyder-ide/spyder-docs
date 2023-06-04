@@ -197,7 +197,7 @@ Using Spyder
       If you installed Miniconda (or another Conda-based distribution) to a non-default path, or are using a virtual environment managed by a tool other than ``pyenv``, your environments likely won't be listed.
 
       Instead, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use.
-      You can find this path by activating the venv or Conda env you want to use in your terminal/Anaconda Prompt, and running the shell command:
+      You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:
 
       .. code-block:: shell
 
@@ -205,7 +205,7 @@ Using Spyder
 
    Finally, click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
    If ``spyder-kernels`` is not already installed, the :doc:`/panes/ipythonconsole` will display instructions on how to install the right version.
-   Execute the given command in your terminal/Anaconda prompt with the environment activated, and finally restart the kernel once more.
+   Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.
 
 
 .. _using-packages-installer:
@@ -226,14 +226,14 @@ Using Spyder
 
    .. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
 
-   Create a new conda environment with ``spyder-kernels`` and the packages that you want to use installed.
+   Create a new conda environment containing ``spyder-kernels`` and the packages that you want to use.
    For example, if you want to use ``scikit-learn``, open your terminal (or Anaconda prompt on Windows) and run the following command:
 
    .. code-block:: shell
 
-      conda create -n scikit-learn-env -c conda-forge spyder-kernels scikit-learn
+      conda create -n my-env -c conda-forge spyder-kernels scikit-learn
 
-   Finally, connect Spyder to this ``scikit-learn-env`` environment by changing Spyder's default Python interpreter, following the instructions in :ref:`the above answer <using-existing-environment>`.
+   Finally, connect Spyder to this ``my-env`` environment by changing Spyder's default Python interpreter, following the instructions in :ref:`the above answer <using-existing-environment>`.
 
 
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
