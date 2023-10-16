@@ -483,4 +483,4 @@ Additional help
 .. _Github wiki: https://github.com/spyder-ide/spyder/wiki
 .. _Google Group: https://groups.google.com/g/spyderlib
 .. _Gitter chatroom: https://gitter.im/spyder-ide/public
-.. _OpenTeams: https://www.openteams.com/app/marketplace/project-page-2/3502
+.. _OpenTeams: https://www.openteams.com/oss-spyder/
