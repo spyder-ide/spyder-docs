@@ -168,7 +168,7 @@ repos:
 
 # Lint RST
 - repo: https://github.com/sphinx-contrib/sphinx-lint
-  rev: 'v0.6.1'
+  rev: v0.8.1
   hooks:
   - id: sphinx-lint
     name: Lint RST
