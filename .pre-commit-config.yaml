@@ -173,6 +173,7 @@ repos:
   - id: sphinx-lint
     name: Lint RST
     args: [--enable, all, --disable, line-too-long]
+    require_serial: true  # sphinx-lint already uses multiprocessing
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
