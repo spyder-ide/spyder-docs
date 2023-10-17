@@ -19,13 +19,13 @@ You will need to have Spyder installed. Visit our :doc:`installation guide<../in
 
 It is also desirable to have the following prior knowledge:
 
-   * Basic level of Python. You can visit `The Python Tutorial`_ to learn the basics of this programming language.
-   * Some knowledge of Statistics (`hypothesis testing`_ , `ANOVA`_, `p-value`_)
+* Basic level of Python. You can visit `The Python Tutorial`_ to learn the basics of this programming language.
+* Some knowledge of Statistics (`hypothesis testing`_ , `ANOVA`_, `p-value`_)
 
-   .. _The Python Tutorial: https://docs.python.org/3/tutorial/
-   .. _hypothesis testing: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
-   .. _ANOVA: https://en.wikipedia.org/wiki/Analysis_of_variance
-   .. _p-value: https://en.wikipedia.org/wiki/P-value
+.. _The Python Tutorial: https://docs.python.org/3/tutorial/
+.. _hypothesis testing: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
+.. _ANOVA: https://en.wikipedia.org/wiki/Analysis_of_variance
+.. _p-value: https://en.wikipedia.org/wiki/P-value
 
 
 

@@ -60,27 +60,27 @@ The key items, in order of priority:
 
 * The full, **complete error message or traceback** copy/pasted or automatically entered exactly as displayed by Spyder:
 
-    - Auto-generated reports directly from the error dialog should include this automatically, but double check to make sure.
-    - You can copy and paste this from the the :guilabel:`Show Details` section of the error dialog.
-    - If not present, or a dialog is not displayed, you can also find it printed to Spyder's :guilabel:`Internal Console`, located under the :guilabel:`View` menu at :menuselection:`Panes --> Internal Console`.
-    - If you prefer, or if Spyder won't start, you can start Spyder from your command line (or Anaconda prompt on windows) with ``spyder`` and copy the output printed there.
+  - Auto-generated reports directly from the error dialog should include this automatically, but double check to make sure.
+  - You can copy and paste this from the the :guilabel:`Show Details` section of the error dialog.
+  - If not present, or a dialog is not displayed, you can also find it printed to Spyder's :guilabel:`Internal Console`, located under the :guilabel:`View` menu at :menuselection:`Panes --> Internal Console`.
+  - If you prefer, or if Spyder won't start, you can start Spyder from your command line (or Anaconda prompt on windows) with ``spyder`` and copy the output printed there.
 
-   .. note::
+  .. note::
 
-      If you are reporting a specific behavior rather than an error, or the message does not fully explain what occurs, please describe in detail what actually happened, and what you expected Spyder to do.
+     If you are reporting a specific behavior rather than an error, or the message does not fully explain what occurs, please describe in detail what actually happened, and what you expected Spyder to do.
 
 * A **detailed, step by step description of exactly what you did** leading up to the error occurring, complete with sample code that triggers it, if applicable.
 
 * **Information about Spyder and its environment** as listed in the error report template, which you can find under :guilabel:`About Spyder` in the :guilabel:`Help` menu; along with its key dependencies, shown in the dialog under :menuselection:`Help --> Dependencies` (there's a button to copy-paste them).
 
-   .. image:: /images/submit-a-report/submit-a-report-spyder-info.png
-      :alt: Spyder showing Spyder's info and dependencies
+  .. image:: /images/submit-a-report/submit-a-report-spyder-info.png
+     :alt: Spyder showing Spyder's info and dependencies
 
-   If Spyder won't launch, paste the output of ``conda list`` from your command line (or Anaconda prompt on Windows) in the :guilabel:`Dependencies` section of the issue template.
+  If Spyder won't launch, paste the output of ``conda list`` from your command line (or Anaconda prompt on Windows) in the :guilabel:`Dependencies` section of the issue template.
 
-   .. image:: /images/submit-a-report/submit-a-report-conda-list.png
-      :alt: Command line showing output of conda list
-      :width: 500px
+  .. image:: /images/submit-a-report/submit-a-report-conda-list.png
+     :alt: Command line showing output of conda list
+     :width: 500px
 
 * **How you installed Spyder** and any other relevant packages, *e.g.* Anaconda, MacPorts or pip and **whether Spyder has worked before** since you installed it.
 

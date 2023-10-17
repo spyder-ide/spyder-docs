@@ -606,28 +606,22 @@ Unlike the above, you’ll need to manually provide the versions of everything (
 <p>The key items, in order of priority:</p>
 <ul>
 <li><p>The full, <strong>complete error message or traceback</strong> copy/pasted or automatically entered exactly as displayed by Spyder:</p>
-<blockquote>
-<div><blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Auto-generated reports directly from the error dialog should include this automatically, but double check to make sure.</p></li>
 <li><p>You can copy and paste this from the the <span class="guilabel">Show Details</span> section of the error dialog.</p></li>
 <li><p>If not present, or a dialog is not displayed, you can also find it printed to Spyder’s <span class="guilabel">Internal Console</span>, located under the <span class="guilabel">View</span> menu at <span class="menuselection">Panes ‣ Internal Console</span>.</p></li>
 <li><p>If you prefer, or if Spyder won’t start, you can start Spyder from your command line (or Anaconda prompt on windows) with <code class="docutils literal notranslate"><span class="pre">spyder</span></code> and copy the output printed there.</p></li>
 </ul>
-</div></blockquote>
 <div class="alert alert-info">
 <p class="admonition-title">Note</p>
 <p>If you are reporting a specific behavior rather than an error, or the message does not fully explain what occurs, please describe in detail what actually happened, and what you expected Spyder to do.</p>
 </div>
-</div></blockquote>
 </li>
 <li><p>A <strong>detailed, step by step description of exactly what you did</strong> leading up to the error occurring, complete with sample code that triggers it, if applicable.</p></li>
 <li><p><strong>Information about Spyder and its environment</strong> as listed in the error report template, which you can find under <span class="guilabel">About Spyder</span> in the <span class="guilabel">Help</span> menu; along with its key dependencies, shown in the dialog under <span class="menuselection">Help ‣ Dependencies</span> (there’s a button to copy-paste them).</p>
-<blockquote>
-<div><img alt="Spyder showing Spyder's info and dependencies" src="../_images/submit-a-report-spyder-info.png" />
+<img alt="Spyder showing Spyder's info and dependencies" src="../_images/submit-a-report-spyder-info.png" />
 <p>If Spyder won’t launch, paste the output of <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> from your command line (or Anaconda prompt on Windows) in the <span class="guilabel">Dependencies</span> section of the issue template.</p>
 <a class="reference internal image-reference" href="../_images/submit-a-report-conda-list.png"><img alt="Command line showing output of conda list" src="../_images/submit-a-report-conda-list.png" style="width: 500px;" /></a>
-</div></blockquote>
 </li>
 <li><p><strong>How you installed Spyder</strong> and any other relevant packages, <em>e.g.</em> Anaconda, MacPorts or pip and <strong>whether Spyder has worked before</strong> since you installed it.</p></li>
 <li><p><strong>What else you’ve tried to fix it</strong>, <em>e.g.</em> from this guide or elsewhere on the web, and if you’ve <strong>tried to reproduce it in standalone QtConsole, IPython, and/or the plain Python</strong> interpreter.</p></li>
