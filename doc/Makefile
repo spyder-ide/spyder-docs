@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -n -W --keep-going
+SPHINXOPTS    = -n -W --keep-going --color
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Spyder
 SOURCEDIR     = .
