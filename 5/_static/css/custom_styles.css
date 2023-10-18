@@ -354,3 +354,13 @@ a.dropdown-link:focus {
   color: #fff;
   text-decoration: none;
 }
+
+/* Temporary fix for invisible heading :before blocking clicks */
+
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  pointer-events: none;
+}
