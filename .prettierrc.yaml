@@ -1,0 +1,13 @@
+# Configuration file for Prettier
+
+tabWidth: 2
+useTabs: false
+proseWrap: 'preserve'
+endOfLine: 'lf'
+singleAttributePerLine: false
+
+overrides:
+- files: '*.css'
+  options:
+    printWidth: 120
+    singleQuote: false

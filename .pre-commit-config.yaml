@@ -60,6 +60,14 @@ repos:
     exclude: '\.gitattributes|\bworkshops\b'
     args: [--write-changes]
 
+# Format CSS with Prettier
+- repo: https://github.com/pre-commit/mirrors-prettier
+  rev: v3.0.3
+  hooks:
+  - id: prettier
+    name: Format CSS (Prettier)
+    types: [css]
+
 # Lint and fix CSS with stylelint
 - repo: https://github.com/awebdeveloper/pre-commit-stylelint
   rev: '0.0.2'
