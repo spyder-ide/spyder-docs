@@ -160,7 +160,6 @@ div.openteams-icon::before {
 }
 
 @media (max-width: 767px) {
-
   .tour-overlay .highlight-rect {
     stroke-width: 10;
   }
@@ -327,7 +326,6 @@ table.installer-table tbody td:nth-child(2) p::before {
 }
 
 @media screen and (max-width: 991px) {
-
   table.installer-table td {
     display: block;
   }
