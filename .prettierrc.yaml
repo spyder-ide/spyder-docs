@@ -1,7 +1,12 @@
 # Configuration file for Prettier
 
+printWidth: 120
 tabWidth: 2
 useTabs: false
+semi: false
+trailingComma: 'none'
+bracketSpacing: false
+arrowParens: 'always'
 proseWrap: 'preserve'
 endOfLine: 'lf'
 singleAttributePerLine: false
@@ -11,3 +16,6 @@ overrides:
   options:
     printWidth: 120
     singleQuote: false
+- files: '*.js'
+  options:
+    singleQuote: true
