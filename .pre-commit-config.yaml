@@ -73,13 +73,6 @@ repos:
     - 'stylelint-no-unsupported-browser-features@5.0.3'
     - 'stylelint-order@5.0.0'
 
-# Lint CSS with CSSlint
-- repo: https://github.com/pre-commit/mirrors-csslint
-  rev: v1.0.5
-  hooks:
-  - id: csslint
-    name: Check CSS (CSSlint)
-
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.4.0
