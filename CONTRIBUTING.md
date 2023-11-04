@@ -122,13 +122,13 @@ You can install them into your current Conda environment with:
 
 ```shell
 conda install -c conda-forge --file requirements-conda.txt
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt
 ```
 
 Or, if using ``pip``, you can grab them with just:
 
 ```shell
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt
 ```
 
 

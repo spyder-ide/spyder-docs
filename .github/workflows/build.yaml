@@ -1,6 +1,4 @@
-# Build the docs to test that they work correctly
-# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
+# Build the site and deploy it to GitHub pages
 name: Build
 
 on:  # yamllint disable-line rule:truthy
@@ -19,13 +17,13 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   build:
-    name: Build Docs
+    name: Build and Deploy
 
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Set up Python
@@ -38,6 +36,12 @@ jobs:
     - name: List dependencies
       shell: bash
       run: pip list
-    - name: Build with Sphinx
+    - name: Build site
       shell: bash
       run: ./ci/build.sh
+    - name: Deploy to GitHub Pages
+      if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        FOLDER: ./doc/_build/html
+        CLEAN: true  # Remove deleted files from the deploy branch
