@@ -382,6 +382,7 @@ texinfo_documents = [
 linkcheck_ignore = [
     r"https://(www\.)?github\.com/.+/compare/.+#diff-.+",
     r"https://(www\.)?packages\.gentoo\.org.*",
+    r"https://(www\.)?software\.opensuse\.org.*",
     ]
 
 
