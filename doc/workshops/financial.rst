@@ -704,7 +704,7 @@ And this result is less encouraging if we calculate the correlations between exp
 
 .. code-block:: python
 
-   port_1_exp_real[["expected", "realized"]].corr()
+   print(port_1_exp_real.corr())
 
    #           expected  realized
    # expected  1.000000 -0.324053
