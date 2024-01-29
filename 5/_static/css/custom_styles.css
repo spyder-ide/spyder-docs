@@ -160,7 +160,6 @@ div.openteams-icon::before {
 }
 
 @media (max-width: 767px) {
-
   .tour-overlay .highlight-rect {
     stroke-width: 10;
   }
@@ -268,8 +267,7 @@ div.scroll {
   font-size: 0.8em;
   height: 250px;
   margin: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }
@@ -328,7 +326,6 @@ table.installer-table tbody td:nth-child(2) p::before {
 }
 
 @media screen and (max-width: 991px) {
-
   table.installer-table td {
     display: block;
   }
