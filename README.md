@@ -9,11 +9,9 @@
 [![Build](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/build.yaml)
 [![Check](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml)
 [![Lint](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml)
-[![Deploy](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/deploy.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
-[![Join the chat at https://gitter.im/spyder-ide/public](https://badges.gitter.im/spyder-ide/spyder.svg)](https://gitter.im/spyder-ide/public)
 
 
 ![Screenshot of documentation index page](./doc/_static/images/index-docs.gif)
@@ -58,8 +56,6 @@ Thanks for your interest in Spyder and its documentation, and we appreciate your
 
 [Main Website](https://www.spyder-ide.org/)
 
-[Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
-
 [Online Documentation](https://docs.spyder-ide.org/)
 
 [Spyder Github](https://github.com/spyder-ide/spyder)
@@ -68,8 +64,6 @@ Thanks for your interest in Spyder and its documentation, and we appreciate your
 https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ)
 
 [Development Wiki](https://github.com/spyder-ide/spyder/wiki/Dev:-Index)
-
-[Gitter Chatroom](https://gitter.im/spyder-ide/public)
 
 [Google Group](https://groups.google.com/group/spyderlib)
 

@@ -3,5 +3,6 @@ builtin = clear,rare,informal,code,names
 check-filenames =
 check-hidden =
 enable-colors =
-ignore-words-list = sur
+ignore-words-list = jupyter,lite,sur
+quiet-level = 32
 skip = .codespellrc,.gitattributes

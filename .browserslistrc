@@ -1,6 +1,13 @@
 # Browsers that we support
 
+>0.25%
+last 3 versions
 defaults
-not IE 11
-not last 0 OperaMini version
-not last 0 OperaMobile version
+not Android < 5
+not Edge < 19
+not KaiOS < 3
+not OperaMini all
+not OperaMobile < 13
+not QQAndroid >= 0
+not UCAndroid >= 0
+not dead

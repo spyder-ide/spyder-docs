@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 python3 -m pip install --upgrade pip setuptools wheel
-python3 -m pip install --upgrade -r requirements-dev.txt
+python3 -m pip install --upgrade -r requirements.txt
 
 # You can uncomment the command below to use a different version of the theme (but return it to the correct one before merging)
 # python3 -m pip install --upgrade --force-reinstall --no-deps git+https://github.com/spyder-ide/spyder-docs-sphinx-theme.git@develop_spyder

@@ -1,5 +1,4 @@
 # Build the docs and run checks on them
-# Based on https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: Check
 
@@ -25,7 +24,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v4
       with:

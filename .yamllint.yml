@@ -5,6 +5,10 @@ extends: default
 locale: en_US.UTF-8
 
 rules:
+  anchors:
+    forbid-undeclared-aliases: true
+    forbid-duplicated-anchors: true
+    forbid-unused-anchors: true
   braces:
     min-spaces-inside-empty: 0
     max-spaces-inside-empty: 0
@@ -28,3 +32,4 @@ rules:
   quoted-strings:
     quote-type: single
     required: false
+    allow-quoted-quotes: true
