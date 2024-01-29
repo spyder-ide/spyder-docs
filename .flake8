@@ -1,4 +1,6 @@
 [flake8]
+count = True
 ignore = E123, W504
 max-doc-length = 79
 max-complexity = 15
+jobs = 1

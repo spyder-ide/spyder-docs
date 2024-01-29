@@ -49,14 +49,14 @@ load-plugins = pylint.extensions.bad_builtin,
                pylint.extensions.broad_try_clause,
                pylint.extensions.check_elif,
                pylint.extensions.code_style,
-               pylint.extensions.comparetozero,
                pylint.extensions.comparison_placement,
                pylint.extensions.confusing_elif,
                pylint.extensions.consider_ternary_expression,
+               pylint.extensions.dict_init_mutate,
                pylint.extensions.docparams,
                pylint.extensions.docstyle,
+               pylint.extensions.dunder,
                pylint.extensions.empty_comment,
-               pylint.extensions.emptystring,
                pylint.extensions.for_any_all,
                pylint.extensions.no_self_use,
                pylint.extensions.overlapping_exceptions,
@@ -547,4 +547,4 @@ preferred-modules =
 
 # Exceptions that will emit a warning when being caught. Defaults to
 # "BaseException, Exception".
-overgeneral-exceptions = BaseException,
+overgeneral-exceptions = builtins.BaseException,

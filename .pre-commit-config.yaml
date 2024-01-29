@@ -1,7 +1,10 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 
-# Hooks and config updated 2023-11-01
+# Baseline hooks and config updated 2023-11-01
+# Web hooks and config updated 2023-11-01
+# Docs hooks and config updated 2024-01-29
+# Python hooks and config updated 2024-01-29
 
 minimum_pre_commit_version: '2.10.0'
 
@@ -148,21 +151,21 @@ repos:
 
 # Check Python
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.3.0
+  rev: v4.5.0
   hooks:
   - id: check-ast
     name: Check Python AST
 
 # Lint Python
 - repo: https://github.com/pycqa/flake8
-  rev: '4.0.1'
+  rev: '7.0.0'
   hooks:
   - id: flake8
     name: Lint Python with Flake8
     exclude: '\bworkshops\b'
 
 - repo: https://github.com/pycqa/pylint
-  rev: v2.14.5
+  rev: v3.0.3
   hooks:
   - id: pylint
     name: Lint Python with Pylint
@@ -179,7 +182,7 @@ repos:
 
 # Check RST
 - repo: https://github.com/pre-commit/pygrep-hooks
-  rev: v1.9.0
+  rev: v1.10.0
   hooks:
   - id: rst-backticks
     name: Check RST backticks
@@ -190,7 +193,7 @@ repos:
 
 # Lint RST
 - repo: https://github.com/sphinx-contrib/sphinx-lint
-  rev: v0.8.1
+  rev: v0.9.1
   hooks:
   - id: sphinx-lint
     name: Lint RST
