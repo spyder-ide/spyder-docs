@@ -3,5 +3,11 @@ jinja2>=2,<3  # Sphinx <4 is not compatible with Jinja >=3
 MarkupSafe>=1,<2  # Sphinx <4 is not compatible with MarkupSafe >=2
 pre-commit>=2.10.0,<4  # For pre-commit hooks
 sphinx>=3,<4  # Sphinx-Multiversion is not compatible with Sphinx 4
+sphinxcontrib-applehelp<1.0.5  # Version 1.0.5 drops support for Sphinx <5
+sphinxcontrib-devhelp<1.0.3  # Version 1.0.3 drops support for Sphinx <5
+sphinxcontrib-jsmath<1.0.2  # Version 1.0.2 drops support for Sphinx <5
+sphinxcontrib-htmlhelp<2.0.2  # Version 2.0.2 drops support for Sphinx <5
+sphinxcontrib-serializinghtml<1.1.6  # Version 1.1.6 drops support for Sphinx <5
+sphinxcontrib-qthelp<1.0.4  # Version 1.0.4 drops support for Sphinx <5
 sphinx-multiversion  # For version selector support
 sphinx-panels  # For dropdowns and other fancy UI elements
