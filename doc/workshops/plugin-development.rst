@@ -161,7 +161,7 @@ steps:
 5. If you have less than 3 checkmarks take a short break (by default, 5 minutes), and return to step 2.
 6. When you have completed four Pomodoro cycles, you deserve a longer break (our default is 15 minutes). Checkmarks are reset to zero, go back to step 1.
 
-.. _Pomodoro Technique: https://francescocirillo.com/pages/pomodoro-technique
+.. _Pomodoro Technique: https://www.pomodorotechnique.com/
 
 
 Steps
