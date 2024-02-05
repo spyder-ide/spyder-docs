@@ -7,7 +7,7 @@ For more information about Spyder, please see the [website](https://www.spyder-i
 You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
 
 Spyder-Docs is part of the Spyder IDE Github org, and is developed with standard Github flow.
-If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://guides.github.com/introduction/git-handbook/#basic-git) and its [guide to the fork workflow](https://guides.github.com/activities/forking/), or (if you prefer) their [video equivalents](https://www.youtube.com/githubguides).
+If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://docs.github.com/en/get-started/using-git/about-git#basic-git) and its [guide to the fork workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 However, this contributing guide should fill you in on most of the basics you need to know.
 
 For an introduction to the basics of reST syntax, the source format in which Spyder's documentation is written, see the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
@@ -64,6 +64,12 @@ Then, click the ``Clone or Download`` button on your repository, copy the link a
 git clone <LINK-TO-YOUR-REPO>
 ```
 
+After cloning the repository, navigate to the newly created folder using the `cd` command.
+
+```shell
+cd folder_name
+```
+
 Finally, set the upstream remote to the official Spyder-Docs repo with:
 
 ```shell
@@ -74,7 +80,7 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 ### Create and activate a fresh environment
 
 We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
-Of course, you're free to use any environment management tool of your choice (conda, virtualenvwrapper, pyenv, etc).
+Of course, you're free to use any environment management tool of your choice ([conda](https://docs.conda.io/en/latest/), [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv), etc).
 Regardless of the tool you use, make sure to remember to always activate your environment before using it.
 
 
@@ -122,7 +128,6 @@ You can install them into your current Conda environment with:
 
 ```shell
 conda install -c conda-forge --file requirements-conda.txt
-python -m pip install -r requirements.txt
 ```
 
 Or, if using ``pip``, you can grab them with just:
