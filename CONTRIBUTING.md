@@ -215,11 +215,12 @@ git pull upstream <BASE-BRANCH>
 git checkout -b <FEATURE-BRANCH>
 ```
 
-Once you've made and tested your changes, commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
+Once you've made and tested your changes, add them to the staging area with `git add .`, and then commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
 Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the full diff output.
 For example:
 
 ```shell
+git add .
 git commit -am "Add new guide on developing plugins for Spyder"
 ```
 
