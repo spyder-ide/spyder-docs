@@ -221,7 +221,7 @@ For example:
 
 ```shell
 git add .
-git commit -am "Add new guide on developing plugins for Spyder"
+git commit -m "Add new guide on developing plugins for Spyder"
 ```
 
 If your changes are complex (more than a few dozen lines) and can be broken into discrete steps/parts, its often a good idea to make multiple commits as you work.
