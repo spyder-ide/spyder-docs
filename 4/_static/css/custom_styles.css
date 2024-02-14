@@ -318,7 +318,8 @@ table.installer-table tbody td:nth-child(1) p::before {
   vertical-align: middle;
 }
 
-table.installer-table tbody td:nth-child(2) p::before {
+table.installer-table tbody td:nth-child(2) p::before,
+table.installer-table tbody td:nth-child(3) p::before {
   content: "\f179";
   font-size: 2em;
   padding-right: 0.5em;
