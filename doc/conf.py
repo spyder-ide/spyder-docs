@@ -380,10 +380,14 @@ texinfo_documents = [
 # -- Options for Linkcheck --------------------------------------------------
 
 linkcheck_ignore = [
-    r"https://(www\.)?github\.com/.+/compare/.+#diff-.+",  # Virtual ids
-    r"https://(www\.)?packages\.gentoo\.org/?.*",  # Flaky
-    r"https://(www\.)?software\.opensuse\.org/?.*",  # Flaky
-    r"https://(www\.)?reddit\.com/?.*",  # Blocks GitHub
+    # Virtual fragment ids
+    r"https://(www\.)?github\.com/.+/compare/.+#diff-.+",
+    # Flaky
+    r"https://(www\.)?packages\.gentoo\.org/?.*",
+    r"https://(www\.)?software\.opensuse\.org/?.*",
+    # Blocks GitHub Actions
+    r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
+    r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
     ]
 
 
