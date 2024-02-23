@@ -64,10 +64,10 @@ Then, click the ``Clone or Download`` button on your repository, copy the link a
 git clone <LINK-TO-YOUR-REPO>
 ```
 
-After cloning the repository, navigate to the newly created folder using the `cd` command.
+After cloning the repository, navigate to its new directory using the `cd` command:
 
 ```shell
-cd folder_name
+cd spyder-docs
 ```
 
 Finally, set the upstream remote to the official Spyder-Docs repo with:
@@ -80,7 +80,7 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 ### Create and activate a fresh environment
 
 We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
-Of course, you're free to use any environment management tool of your choice ([conda](https://docs.conda.io/en/latest/), [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [pyenv](https://github.com/pyenv/pyenv), etc).
+Of course, you're free to use any environment management tool of your choice ([conda](https://docs.conda.io/), [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/), [pyenv](https://github.com/pyenv/pyenv), etc).
 Regardless of the tool you use, make sure to remember to always activate your environment before using it.
 
 
@@ -215,7 +215,7 @@ git pull upstream <BASE-BRANCH>
 git checkout -b <FEATURE-BRANCH>
 ```
 
-Once you've made and tested your changes, add them to the staging area with ``git add .``, and then commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
+Once you've made and tested your changes, add them to the staging area, and then commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
 Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the full diff output.
 For example:
 
