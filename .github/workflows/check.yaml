@@ -3,12 +3,16 @@
 name: Check
 
 on:  # yamllint disable-line rule:truthy
+  schedule:
+  - cron: '49 18 * * 5'  # 18:49 UTC every Friday, to avoid GHA load spikes
+
   push:
     branches:
     - master
     - main
     - '*.*'
     - 'staging*'
+
   pull_request:
     branches:
     - master
@@ -16,9 +20,11 @@ on:  # yamllint disable-line rule:truthy
     - '*.*'
     - 'staging*'
 
+  workflow_dispatch:  # yamllint disable-line rule:empty-values
+
 jobs:
   check:
-    name: Check Docs
+    name: Check Links
 
     runs-on: ubuntu-latest
 
