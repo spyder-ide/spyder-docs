@@ -7,7 +7,7 @@ For more information about Spyder, please see the [website](https://www.spyder-i
 You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
 
 Spyder-Docs is part of the Spyder IDE Github org, and is developed with standard Github flow.
-If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://guides.github.com/introduction/git-handbook/#basic-git) and its [guide to the fork workflow](https://guides.github.com/activities/forking/), or (if you prefer) their [video equivalents](https://www.youtube.com/githubguides).
+If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://docs.github.com/en/get-started/using-git/about-git#basic-git) and its [guide to the fork workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 However, this contributing guide should fill you in on most of the basics you need to know.
 
 For an introduction to the basics of reST syntax, the source format in which Spyder's documentation is written, see the [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
@@ -64,6 +64,12 @@ Then, click the ``Clone or Download`` button on your repository, copy the link a
 git clone <LINK-TO-YOUR-REPO>
 ```
 
+After cloning the repository, navigate to its new directory using the `cd` command:
+
+```shell
+cd spyder-docs
+```
+
 Finally, set the upstream remote to the official Spyder-Docs repo with:
 
 ```shell
@@ -74,7 +80,7 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 ### Create and activate a fresh environment
 
 We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
-Of course, you're free to use any environment management tool of your choice (conda, virtualenvwrapper, pyenv, etc).
+Of course, you're free to use any environment management tool of your choice ([conda](https://docs.conda.io/), [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/), [pyenv](https://github.com/pyenv/pyenv), etc).
 Regardless of the tool you use, make sure to remember to always activate your environment before using it.
 
 
@@ -210,12 +216,13 @@ git pull upstream <BASE-BRANCH>
 git checkout -b <FEATURE-BRANCH>
 ```
 
-Once you've made and tested your changes, commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
+Once you've made and tested your changes, add them to the staging area, and then commit them with a descriptive, unique message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end.
 Try to make your commit message understandable on its own, giving the reader a high-level idea of what your changes accomplished without having to dig into the full diff output.
 For example:
 
 ```shell
-git commit -am "Add new guide on developing plugins for Spyder"
+git add .
+git commit -m "Add new guide on developing plugins for Spyder"
 ```
 
 If your changes are complex (more than a few dozen lines) and can be broken into discrete steps/parts, its often a good idea to make multiple commits as you work.
