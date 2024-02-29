@@ -1,3 +1,6 @@
+.. _troubleshooting-guide:
+.. _troubleshooting-first-steps:
+
 ###########
 First Steps
 ###########
