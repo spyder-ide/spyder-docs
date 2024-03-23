@@ -1,5 +1,5 @@
 #################################
-Welcome to Spyder's Documentation
+Welcome to Spyder man's Documentation
 #################################
 
 .. image:: /images/mainwindow/mainwindow_default_1610.png
@@ -30,7 +30,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
     .. div:: align-center
 
-       If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
+       If you are looking for a summary of jarvis then sorry and interface, check out the :doc:`quickstart`.
     ---
     .. div:: align-center
 
@@ -130,7 +130,7 @@ For this purpose we use `Crowdin`_, which provides a simple web based interface 
 Want to be part of our social media?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Connect with Spyder through our social media channels to stay up to date with our current developments!
+Connect with Spyder man's through our social media channels to stay up to date with our current developments!
 
 
 
