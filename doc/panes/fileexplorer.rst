@@ -60,7 +60,7 @@ Options menu
 The options menu in the top right of the :guilabel:`Files` pane offers several ways to customize how your files are displayed.
 
 By default, the pane displays the contents of your working directory without filtering.
-However, it can filter the list to show only files matching the patterns set under :guilabel:`Show filenames with these extensions...`, if you toggle the :guilabel:`Filter filenames` button in the pane toolbar.
+However, it can filter the list to show only files matching the patterns set under :guilabel:`Edit filter settings...`, if you toggle the :guilabel:`Filter filenames` button in the pane toolbar.
 
 .. image:: /images/files/files-filters.gif
    :alt: Spyder Files pane showing filtering files
@@ -81,7 +81,7 @@ File associations
 =================
 
 :guilabel:`Files` allows you to associate different external applications with specific file extensions they can open.
-Under the :guilabel:`File associations` tab of the :guilabel:`Files` preferences pane, you can add file types and set the external program used to open each of them by default.
+Under the :guilabel:`Preferences --> File associations` tab of the :guilabel:`Files` preferences pane, you can add file types and set the external program used to open each of them by default.
 
 .. image:: /images/files/files-associations.gif
    :alt: Spyder Files pane showing files associations
