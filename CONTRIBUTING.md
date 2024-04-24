@@ -127,11 +127,10 @@ Then, you need to install the appropriate dependencies in your active Python env
 You can install them into your current Conda environment with:
 
 ```shell
-conda install -c conda-forge --file requirements-conda.txt
-python -m pip install -r requirements.txt
+conda install -c conda-forge --file requirements.txt
 ```
 
-Or, if using ``pip``, you can grab them with just:
+Or if using ``pip``, you can grab them with:
 
 ```shell
 python -m pip install -r requirements.txt
