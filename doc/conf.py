@@ -51,14 +51,13 @@ UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     "sphinx.ext.githubpages",
-    "sphinx_panels",
-    "sphinx_multiversion",
+    "sphinx_design",
 ]
 
 panels_add_bootstrap_css = False
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+templates_path = []
 
 # The suffix of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -145,52 +144,9 @@ pygments_style = "sphinx"
 #
 # CI = True
 # TRAVIS_BRANCH = 'master'
-html_theme = "pandas_sphinx_theme"
+html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.png"
-html_theme_options = {
-    "external_links": [
-        {
-            "url": "https://www.spyder-ide.org/blog",
-            "name": "Blog",
-        },
-        {
-            "url": "/",
-            "name": "Docs",
-        },
-    ],
-    "use_edit_page_button": True,
-    "show_powered_by": True,
-    "gitter_room": "spyder-ide/public",
-    "open_collective": "spyder",
-    "footer_links": [
-        {
-            "url": "https://github.com/spyder-ide/spyder",
-            "name": "GitHub",
-        },
-        {
-            "url": "https://twitter.com/Spyder_IDE",
-            "name": "Twitter",
-        },
-        {
-            "url": "https://www.facebook.com/SpyderIDE/",
-            "name": "Facebook",
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg",
-            "name": "YouTube",
-        },
-        {
-            "url": "https://instagram.com/spyderide",
-            "name": "Instagram",
-        },
-        {
-            "url": "https://groups.google.com/group/spyderlib",
-            "name": "Google Groups",
-        },
-    ],
-    "page_toc_limit": 1,
-    "logo_link": "https://www.spyder-ide.org/",
-}
+html_theme_options = {}
 html_context = {
     "github_user": "spyder-ide",
     "github_repo": "spyder-docs",
@@ -253,11 +209,7 @@ html_js_files = [
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-html_sidebars = {
-    "**": [
-        "versioning.html",
-    ]
-}
+html_sidebars = {}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
