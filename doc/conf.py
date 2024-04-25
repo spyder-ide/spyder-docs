@@ -96,7 +96,7 @@ release = "5"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -146,7 +146,9 @@ pygments_style = "sphinx"
 # TRAVIS_BRANCH = 'master'
 html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.png"
-html_theme_options = {}
+html_theme_options = {
+    "navigation_with_keys": False,
+}
 html_context = {
     "github_user": "spyder-ide",
     "github_repo": "spyder-docs",
