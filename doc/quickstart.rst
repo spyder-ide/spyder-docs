@@ -1,6 +1,6 @@
-##########
-Quickstart
-##########
+####
+Tour
+####
 
 Welcome to our Quickstart!
 Here you will find an interactive tour that will guide you through Spyder's interface.

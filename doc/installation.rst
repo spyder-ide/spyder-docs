@@ -1,8 +1,8 @@
 .. _install-guide:
 
-##################
-Installation Guide
-##################
+#############
+Install Guide
+#############
 
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.

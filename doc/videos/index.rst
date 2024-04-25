@@ -1,6 +1,6 @@
-============
-Intro Videos
-============
+=========
+Tutorials
+=========
 
 .. toctree::
     :maxdepth: 2

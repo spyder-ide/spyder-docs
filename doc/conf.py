@@ -147,6 +147,7 @@ pygments_style = "sphinx"
 html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.png"
 html_theme_options = {
+    "header_links_before_dropdown": 8,
     "navigation_with_keys": False,
 }
 html_context = {
@@ -211,7 +212,9 @@ html_js_files = [
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-html_sidebars = {}
+html_sidebars = {
+    "**": ["sidebar-nav-bs"],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

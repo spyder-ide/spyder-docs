@@ -154,12 +154,11 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :maxdepth: 2
     :hidden:
 
-    Welcome<self>
     quickstart
     installation
+    FAQ<faq>
     videos/index
     panes/index
     plugins/index
-    troubleshooting/index
     workshops/index
-    FAQ<faq>
+    troubleshooting/index
