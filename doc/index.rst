@@ -20,57 +20,73 @@ Where to go now?
 Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
 These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.
 
-.. panels::
-    :container: container-lg pb-3 px-md-0 px-5
-    :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+.. grid:: 1 2 3 3
+   :gutter: 3
 
-    .. div:: align-center
+   .. grid-item-card::
 
-       .. rst-class:: fasb fa-book-open
+      .. div:: align-center
 
-    .. div:: align-center
+         .. rst-class:: fasb fa-book-open
 
-       If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
-    ---
-    .. div:: align-center
+      .. div:: align-center
 
-       .. rst-class:: fasb fa-download
+         If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
 
-    .. div:: align-center
 
-       If you don't have Spyder installed and want to get started, follow the :doc:`/installation`.
-    ---
-    .. div:: align-center
+   .. grid-item-card::
 
-       .. rst-class:: fasb fa-walking
+      .. div:: align-center
 
-    .. div:: align-center
+         .. rst-class:: fasb fa-download
 
-       If you are completely new to Spyder, watch our basic tutorial series, :doc:`videos/first-steps-with-spyder`.
-    ---
-    .. div:: align-center
+      .. div:: align-center
 
-       .. rst-class:: fasb fa-columns
+         If you don't have Spyder installed and want to get started, follow the :doc:`/installation`.
 
-    .. div:: align-center
 
-       If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`panes/index`.
-    ---
-    .. div:: align-center
+   .. grid-item-card::
 
-       .. rst-class:: fasb fa-first-aid
+      .. div:: align-center
 
-    .. div:: align-center
+         .. rst-class:: fasb fa-walking
 
-       If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<troubleshooting/first-steps>`.
-    ---
-    .. div:: align-center
+      .. div:: align-center
 
-       .. rst-class:: fasb fa-question-circle
+         If you are completely new to Spyder, watch our basic tutorial series, :doc:`videos/first-steps-with-spyder`.
 
-    .. div:: align-center
 
-       If you have a question about Spyder, visit the :doc:`faq` section.
+   .. grid-item-card::
+
+      .. div:: align-center
+
+         .. rst-class:: fasb fa-columns
+
+      .. div:: align-center
+
+         If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`panes/index`.
+
+
+   .. grid-item-card::
+
+      .. div:: align-center
+
+         .. rst-class:: fasb fa-first-aid
+
+      .. div:: align-center
+
+         If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<troubleshooting/first-steps>`.
+
+
+   .. grid-item-card::
+
+      .. div:: align-center
+
+         .. rst-class:: fasb fa-question-circle
+
+      .. div:: align-center
+
+         If you have a question about Spyder, visit the :doc:`faq` section.
 
 
 
@@ -138,12 +154,11 @@ Connect with Spyder through our social media channels to stay up to date with ou
     :maxdepth: 2
     :hidden:
 
-    Welcome<self>
     quickstart
     installation
+    FAQ<faq>
     videos/index
     panes/index
     plugins/index
-    troubleshooting/index
     workshops/index
-    FAQ<faq>
+    troubleshooting/index

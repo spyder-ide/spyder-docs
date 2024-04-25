@@ -7,7 +7,7 @@ Installing and updating
 =======================
 
 .. dropdown:: Q: How do I install Spyder?
-   :container: + dropdown-id-install-spyder
+   :name: install-spyder
 
    The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
    Download it from its `webpage`_.
@@ -18,7 +18,7 @@ Installing and updating
 
 
 .. dropdown:: Q: How do I install Spyder on Windows Subsystem for Linux 2 (WSL2)?
-   :container: + dropdown-id-install-wsl2
+   :name: install-wsl2
 
    If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment if your code must run there.
 
@@ -47,7 +47,7 @@ Installing and updating
 
 
 .. dropdown:: Q: How do I update Spyder using conda?
-   :container: + dropdown-id-update-conda
+   :name: update-conda
 
    From the command line (or Anaconda prompt on Windows), run:
 
@@ -64,7 +64,7 @@ Installing and updating
 
 
 .. dropdown:: Q: How do update I Spyder using Anaconda Navigator?
-   :container: + dropdown-id-update-navigator
+   :name: update-navigator
 
    Open the "gear" menu in Spyder's section under :guilabel:`Home` in Navigator.
    Go to :guilabel:`Install specific version` and select the version of Spyder you want to use.
@@ -80,7 +80,7 @@ Running Spyder
 ==============
 
 .. dropdown:: Q: How do I run Spyder?
-   :container: + dropdown-id-run-spyder
+   :name: run-spyder
 
    You can launch it in any of the following ways:
 
@@ -98,7 +98,7 @@ Running Spyder
 
 
 .. dropdown:: Q: Can I try Spyder without installing it?
-   :container: + dropdown-id-run-binder
+   :name: run-binder
 
    Yes!
    With `Binder`_, you can work with a fully functional copy of Spyder that runs right in your web browser.
@@ -109,7 +109,7 @@ Running Spyder
 
 
 .. dropdown:: Q: What are the system requirements for Spyder? How resource-intensive is it?
-   :container: + dropdown-id-run-system-reqs
+   :name: run-system-reqs
 
    Spyder works on modern versions of Windows, macOS and Linux (see the table below for recommended versions) via Anaconda, as well as other methods.
    It typically uses relatively minimal CPU when idle, and 0.5 GB - 1 GB of RAM, depending on how long you've been using it and how many files, projects, panes and consoles you have open.
@@ -128,7 +128,7 @@ Running Spyder
 
 
 .. dropdown:: Q: How do I run Spyder installed in a conda environment using Anaconda Navigator?
-   :container: + dropdown-id-run-navigator
+   :name: run-navigator
 
    Select the environment you want to launch Spyder from under :guilabel:`Applications on`.
    If Spyder is installed in this environment, you will see it in Navigator's :guilabel:`Home` window.
@@ -139,7 +139,7 @@ Running Spyder
 
 
 .. dropdown:: Q: How do I run Spyder installed in a conda environment using the command line?
-   :container: + dropdown-id-run-terminal
+   :name: run-terminal
 
    Activate your conda environment by typing the following in your terminal (or Anaconda Prompt on Windows):
 
@@ -158,7 +158,7 @@ Using Spyder
 ============
 
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I installed Spyder with conda?
-   :container: + dropdown-id-using-install-packages
+   :name: using-install-packages
 
    The first approach for installing a package should be using conda.
    In your system terminal (or Anaconda Prompt on Windows), type:
@@ -176,10 +176,8 @@ Using Spyder
       :start: 306
 
 
-.. _using-existing-environment:
-
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
-   :container: + dropdown-id-using-existing-environment
+   :name: using-existing-environment
 
    To work with an existing environment in Spyder, change the default Python interpreter for new :doc:`/panes/ipythonconsole`\s to point to this environment.
 
@@ -208,10 +206,8 @@ Using Spyder
    Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.
 
 
-.. _using-packages-installer:
-
 .. dropdown:: Q: How do I install Python packages to use within Spyder if I downloaded Spyder from the standalone installers?
-   :container: + dropdown-id-using-packages-installer
+   :name: using-packages-installer
 
    Watch our video on using additional packages or follow the instructions below.
 
@@ -237,7 +233,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I reset Spyder's preferences to the defaults?
-   :container: + dropdown-id-using-reset-prefs
+   :name: using-reset-prefs
 
    Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the :guilabel:`Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows).
 
@@ -246,7 +242,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I change Spyder's language?
-   :container: + dropdown-id-using-change-language
+   :name: using-change-language
 
    Under :guilabel:`General` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
 
@@ -255,7 +251,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I use code cells in Spyder?
-   :container: + dropdown-id-using-code-cells
+   :name: using-code-cells
 
    To create a cell in Spyder's :doc:`/panes/editor`, type ``#%%`` in your script.
    Each ``#%%`` will make a new cell.
@@ -266,7 +262,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I use plugins with Spyder (e.g. Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?
-   :container: + dropdown-id-using-plugins
+   :name: using-plugins
 
    Spyder plugins are available in the ``conda-forge`` conda channel.
    To install one, type on the command line (or Anaconda Prompt on Windows):
@@ -292,7 +288,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I clear all variables before executing my code?
-   :container: + dropdown-id-using-clear-variables
+   :name: using-clear-variables
 
    Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
@@ -301,7 +297,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I run my code in a dedicated console or an external system terminal?
-   :container: + dropdown-id-using-dedicated-console
+   :name: using-dedicated-console
 
    Select the appropriate option in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu.
 
@@ -310,7 +306,7 @@ Using Spyder
 
 
 .. dropdown:: Q: How do I change the syntax highlighting theme in the Editor?
-   :container: + dropdown-id-using-syntax-theme
+   :name: using-syntax-theme
 
    Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
 
@@ -324,14 +320,14 @@ Troubleshooting
 ===============
 
 .. dropdown:: Q: I've found a bug or issue with Spyder. What do I do?
-   :container: + dropdown-id-troubleshooting-spyder
+   :name: troubleshooting-spyder
 
    You should first follow the steps in our :doc:`troubleshooting guide</troubleshooting/first-steps>`.
    If you can't solve your problem, open an issue by following the instructions in our :doc:`/troubleshooting/submit-a-report` section.
 
 
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
-   :container: + dropdown-id-troubleshooting-running-code
+   :name: troubleshooting-running-code
 
    First, make sure the error you are seeing is not a bug in your code.
    To confirm this, try running it in any standard Python interpreter.
@@ -342,7 +338,7 @@ Troubleshooting
 
 
 .. dropdown:: Q: Code completion/help doesn't work; what can I do?
-   :container: + dropdown-id-troubleshooting-completion
+   :name: troubleshooting-completion
 
    If nothing is displayed in the calltip, hover hint or :doc:`/panes/help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`/panes/ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
@@ -351,7 +347,7 @@ Troubleshooting
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
-   :container: + dropdown-id-troubleshooting-starting-kernel
+   :name: troubleshooting-starting-kernel
 
    First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
    See the table in the :ref:`spyder-kernels-version-ref` section of the troubleshooting guide to check.
@@ -366,7 +362,7 @@ Troubleshooting
 
 
 .. dropdown:: Q: Spyder doesn't launch or is slow on macOS Big Sur. How can I get it working?
-   :container: + dropdown-id-troubleshooting-macos-bigsur
+   :name: troubleshooting-macos-bigsur
 
    Spyder is in the final stages of being updated for full compatibility with macOS 11 Big Sur, which will be released by the end of 2020 as part of version 4.2.1.
    However, you can get it working right now with the workaround below.
@@ -393,7 +389,7 @@ About Spyder
 ============
 
 .. dropdown:: Q: What's Spyder's licensing situation? Is commercial use allowed?
-   :container: + dropdown-id-commercial-use
+   :name: commercial-use
 
    Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
    It is developed by its international user community, and supported by its users through `OpenCollective`_ and by its generous sponsoring organizations, including `Quansight`_ and `NumFOCUS`_.
@@ -407,7 +403,7 @@ About Spyder
 
 
 .. dropdown:: Q: What do the Anaconda licensing changes mean for Spyder?
-   :container: + dropdown-id-anaconda-license
+   :name: anaconda-license
 
    If you use Spyder with the Anaconda distribution, they `recently changed`_ their `Terms of Service`_ to add restrictions on large (> 200 employee) for-profit companies using Anaconda on a large scale.
    However, these terms only apply to the package infrastructure (the full Anaconda distribution and the ``defaults`` conda channel).

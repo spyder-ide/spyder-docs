@@ -1,6 +1,6 @@
-==============
-Panes in Depth
-==============
+=====
+Panes
+=====
 
 .. toctree::
     :maxdepth: 2
