@@ -45,8 +45,8 @@ strong {
 
 /* Ensure FA icons applied to section divs display inline */
 
-div.fasb h3,
-div.fabb h3 {
+section.fasb h3,
+section.fabb h3 {
   display: inline-block;
 }
 
@@ -81,19 +81,19 @@ iframe {
 
 /*** Custom colors for specific FA icons in the index page ***/
 
-div.fa-laptop-code::before {
+section.fa-laptop-code::before {
   color: #4e4e4e;
 }
 
-div.fa-book::before {
+section.fa-book::before {
   color: #6a3514;
 }
 
-div.fa-globe-americas::before {
+section.fa-globe-americas::before {
   color: #1c4489;
 }
 
-div.fa-user-friends::before {
+section.fa-user-friends::before {
   color: #f6951f;
 }
 
@@ -105,7 +105,7 @@ div.fa-user-friends::before {
   width: 1.3em;
 }
 
-div.openteams-icon::before {
+section.openteams-icon::before {
   margin-right: 0;
   padding-bottom: 0;
 }
