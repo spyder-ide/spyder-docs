@@ -74,12 +74,7 @@ master_doc = "index"
 # General information about the project.
 project = "Spyder"
 copyright = (  # pylint: disable = redefined-builtin
-    f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
-    "<span class='pipe-red'>|</span> "
-    "<a href="
-    "'https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
-    "target='_blank' rel='noopener noreferrer'>MIT License</a>"
-    )
+    f" 2009-{UTC_DATE.year} Spyder Doc Contributors; MIT License")
 author = "The Spyder Doc Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -145,7 +140,7 @@ pygments_style = "sphinx"
 # CI = True
 # TRAVIS_BRANCH = 'master'
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/spyder_logo.png"
+html_logo = "_static/images/spyder_logo.svg"
 html_theme_options = {
     "header_links_before_dropdown": 8,
     "navigation_with_keys": False,

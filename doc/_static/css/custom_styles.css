@@ -7,6 +7,10 @@ strong {
 
 /* Center all images by default */
 
+section img {
+  margin-bottom: 1rem;
+}
+
 .section img:not([class]) {
   display: block;
   margin-left: auto;
