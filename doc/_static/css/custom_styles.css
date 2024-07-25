@@ -205,27 +205,11 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   display: none;
 }
 
-/* Version selector and header */
+/* Version selector using PyData Sphinx Theme features */
 
-#versions-header {
-  color: rgb(0 0 0 / 65%);
-  font-size: 0.8rem;
-  margin-top: 1.1rem;
-  text-transform: uppercase;
-}
-
-#select-versions {
-  background-color: transparent;
-  border: 1px solid rgb(0 0 0 / 15%);
-  color: rgb(0 0 0 / 65%);
-  font-size: 90%;
-  margin-bottom: 7px;
-  padding: 2px;
-}
-
-#select-versions,
-#select-versions option {
-  width: 98%;
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.version-switcher__button {
+  margin-bottom: 0 !important;
 }
 
 /*** Styles for video transcript dropdown elements ***/

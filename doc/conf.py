@@ -143,7 +143,13 @@ html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.svg"
 html_theme_options = {
     "header_links_before_dropdown": 8,
+    "navbar_start": ["navbar-logo", "version-switcher"],
     "navigation_with_keys": False,
+    "show_version_warning_banner": True,
+    "switcher": {
+        "json_url": "https://docs.spyder-ide.org/versions.json",
+        "version_match": version,
+    },
 }
 html_context = {
     "github_user": "spyder-ide",
