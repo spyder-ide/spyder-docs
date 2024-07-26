@@ -385,6 +385,7 @@ linkcheck_ignore = [
     # Flaky
     r"https://(www\.)?packages\.gentoo\.org/?.*",
     r"https://(www\.)?software\.opensuse\.org/?.*",
+    r"https://(www\.)?packages\.ubuntu\.com/?.*",
     # Blocks GitHub Actions
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
