@@ -15,33 +15,47 @@ on:  # yamllint disable-line rule:truthy
     - '*.*'
     - 'staging*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build and Deploy
 
     runs-on: ubuntu-latest
 
+    env:
+      IS_DEPLOY: ${{ (github.event_name == 'push' && '1') || '0' }}
+      IS_STAGING: ${{ (github.ref == 'refs/heads/staging' && '1') || '0' }}
+      IS_MAIN: ${{ ((github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && '1') || '0' }}
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.9'
+        python-version: '3.11'
     - name: Install dependencies
       shell: bash
       run: ./ci/install.sh
     - name: List dependencies
       shell: bash
-      run: pip list
+      run: |
+        echo $IS_DEPLOY
+        echo $IS_PROD
+        echo $IS_MAIN
+        pip list
     - name: Build site
       shell: bash
       run: ./ci/build.sh
+    - name: Build site
+      shell: bash
+      run: make multidocs
     - name: Deploy to GitHub Pages
-      if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && github.event_name != 'pull_request'
+      if: env.IS_DEPLOY
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        FOLDER: ./doc/_build/html
-        CLEAN: true  # Remove deleted files from the deploy branch
+        folder: ./doc/_build/html
+        clean: false  # Don't remove files from other branches
+        dry-run: ${{ (env.IS_STAGING && 'true') || 'false' }}

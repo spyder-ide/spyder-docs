@@ -147,7 +147,8 @@ html_theme_options = {
     "navigation_with_keys": False,
     "show_version_warning_banner": True,
     "switcher": {
-        "json_url": "https://docs.spyder-ide.org/versions.json",
+        "json_url": (
+            "https://docs.spyder-ide.org/current/_static/versions.json"),
         "version_match": version,
     },
 }
