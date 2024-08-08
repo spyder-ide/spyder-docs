@@ -30,15 +30,11 @@ from docutils.parsers.rst import Directive, directives
 
 # Standard library imports
 import datetime  # pylint: disable = wrong-import-order
-import os  # pylint: disable = wrong-import-order
-import subprocess  # pylint: disable = wrong-import-order
 
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 # Constants
-CI = os.environ.get("CI")
-TRAVIS_BRANCH = os.environ.get("TRAVIS_BRANCH")
 UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 
 # -- General configuration ---------------------------------------------------
@@ -136,9 +132,6 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
-# CI = True
-# TRAVIS_BRANCH = 'master'
 html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.svg"
 html_theme_options = {
@@ -182,9 +175,6 @@ html_favicon = "_static/favicon.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
-
-# Extra paths that contain files that should be included
-html_extra_path = ["_assets"]
 
 # Custom CSS for the site
 html_css_files = [
@@ -241,39 +231,6 @@ html_sidebars = {
 
 # If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = ''
-
-
-# -- Options for shpinx-multiversion -----------------------------------------
-
-# Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r"^current$"
-
-# Whitelist pattern for branches (set to None to ignore all branches)
-smv_branch_whitelist = r"^\d+\.\w|(master)$"
-
-# Whitelist pattern for remotes (set to None to use local branches only)
-smv_remote_whitelist = r"^(origin|upstream)$"
-
-# Pattern for released versions
-smv_released_pattern = r".*((3|4)\.[xX]|master)$"
-
-# Format for versioned output directories inside the build directory
-smv_outputdir_format = "{config.release}"
-
-# Determine whether remote or local git branches/tags are preferred
-# if their output dirs conflict
-smv_prefer_remote_refs = False
-
-# Use git ref naming if on a feature/PR branch
-try:
-    current_tag = subprocess.run(
-        ["git", "describe"], check=True, timeout=5,
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
-except subprocess.SubprocessError:  # Pass if we're not in a git repo
-    pass
-else:
-    if current_tag.stdout.strip() == "current":
-        smv_outputdir_format = "{ref.name}"
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
