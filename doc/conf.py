@@ -302,9 +302,12 @@ linkcheck_ignore = [
     r"https://(www\.)?packages\.gentoo\.org/?.*",
     r"https://(www\.)?software\.opensuse\.org/?.*",
     r"https://(www\.)?packages\.ubuntu\.com/?.*",
+    r"https://(www\.)?github\.com/.+/commit/.+",
     # Blocks GitHub Actions
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
+    # Temporary until removed (flaky/no longer used)
+    r"https://(www\.)?openteams\.com/?.*",
     ]
 
 
