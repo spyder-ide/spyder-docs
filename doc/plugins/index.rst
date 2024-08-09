@@ -1,6 +1,6 @@
-==============
-Spyder Plugins
-==============
+=======
+Plugins
+=======
 
 .. toctree::
     :maxdepth: 2

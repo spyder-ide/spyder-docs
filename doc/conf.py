@@ -30,15 +30,11 @@ from docutils.parsers.rst import Directive, directives
 
 # Standard library imports
 import datetime  # pylint: disable = wrong-import-order
-import os  # pylint: disable = wrong-import-order
-import subprocess  # pylint: disable = wrong-import-order
 
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 # Constants
-CI = os.environ.get("CI")
-TRAVIS_BRANCH = os.environ.get("TRAVIS_BRANCH")
 UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 
 # -- General configuration ---------------------------------------------------
@@ -51,14 +47,13 @@ UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     "sphinx.ext.githubpages",
-    "sphinx_panels",
-    "sphinx_multiversion",
+    "sphinx_design",
 ]
 
 panels_add_bootstrap_css = False
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+templates_path = []
 
 # The suffix of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -75,12 +70,7 @@ master_doc = "index"
 # General information about the project.
 project = "Spyder"
 copyright = (  # pylint: disable = redefined-builtin
-    f" 2009-{UTC_DATE.year} Spyder Doc Contributors "
-    "<span class='pipe-red'>|</span> "
-    "<a href="
-    "'https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' "
-    "target='_blank' rel='noopener noreferrer'>MIT License</a>"
-    )
+    f" 2009-{UTC_DATE.year} Spyder Doc Contributors; MIT License")
 author = "The Spyder Doc Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -97,7 +87,7 @@ release = "5"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -142,54 +132,18 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
-# CI = True
-# TRAVIS_BRANCH = 'master'
-html_theme = "pandas_sphinx_theme"
-html_logo = "_static/images/spyder_logo.png"
+html_theme = "pydata_sphinx_theme"
+html_logo = "_static/images/spyder_logo.svg"
 html_theme_options = {
-    "external_links": [
-        {
-            "url": "https://www.spyder-ide.org/blog",
-            "name": "Blog",
-        },
-        {
-            "url": "/",
-            "name": "Docs",
-        },
-    ],
-    "use_edit_page_button": True,
-    "show_powered_by": True,
-    "gitter_room": "spyder-ide/public",
-    "open_collective": "spyder",
-    "footer_links": [
-        {
-            "url": "https://github.com/spyder-ide/spyder",
-            "name": "GitHub",
-        },
-        {
-            "url": "https://twitter.com/Spyder_IDE",
-            "name": "Twitter",
-        },
-        {
-            "url": "https://www.facebook.com/SpyderIDE/",
-            "name": "Facebook",
-        },
-        {
-            "url": "https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg",
-            "name": "YouTube",
-        },
-        {
-            "url": "https://instagram.com/spyderide",
-            "name": "Instagram",
-        },
-        {
-            "url": "https://groups.google.com/group/spyderlib",
-            "name": "Google Groups",
-        },
-    ],
-    "page_toc_limit": 1,
-    "logo_link": "https://www.spyder-ide.org/",
+    "header_links_before_dropdown": 8,
+    "navbar_start": ["navbar-logo", "version-switcher"],
+    "navigation_with_keys": False,
+    "show_version_warning_banner": True,
+    "switcher": {
+        "json_url": (
+            "https://docs.spyder-ide.org/current/_static/versions.json"),
+        "version_match": version,
+    },
 }
 html_context = {
     "github_user": "spyder-ide",
@@ -222,9 +176,6 @@ html_favicon = "_static/favicon.ico"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-# Extra paths that contain files that should be included
-html_extra_path = ["_assets"]
-
 # Custom CSS for the site
 html_css_files = [
     "css/driver.min.css",
@@ -254,9 +205,7 @@ html_js_files = [
 # 'searchbox.html']``.
 #
 html_sidebars = {
-    "**": [
-        "versioning.html",
-    ]
+    "**": ["sidebar-nav-bs"],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
@@ -282,39 +231,6 @@ html_sidebars = {
 
 # If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = ''
-
-
-# -- Options for shpinx-multiversion -----------------------------------------
-
-# Whitelist pattern for tags (set to None to ignore all tags)
-smv_tag_whitelist = r"^current$"
-
-# Whitelist pattern for branches (set to None to ignore all branches)
-smv_branch_whitelist = r"^\d+\.\w|(master)$"
-
-# Whitelist pattern for remotes (set to None to use local branches only)
-smv_remote_whitelist = r"^(origin|upstream)$"
-
-# Pattern for released versions
-smv_released_pattern = r".*((3|4)\.[xX]|master)$"
-
-# Format for versioned output directories inside the build directory
-smv_outputdir_format = "{config.release}"
-
-# Determine whether remote or local git branches/tags are preferred
-# if their output dirs conflict
-smv_prefer_remote_refs = False
-
-# Use git ref naming if on a feature/PR branch
-try:
-    current_tag = subprocess.run(
-        ["git", "describe"], check=True, timeout=5,
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
-except subprocess.SubprocessError:  # Pass if we're not in a git repo
-    pass
-else:
-    if current_tag.stdout.strip() == "current":
-        smv_outputdir_format = "{ref.name}"
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
@@ -386,9 +302,12 @@ linkcheck_ignore = [
     r"https://(www\.)?packages\.gentoo\.org/?.*",
     r"https://(www\.)?software\.opensuse\.org/?.*",
     r"https://(www\.)?packages\.ubuntu\.com/?.*",
+    r"https://(www\.)?github\.com/.+/commit/.+",
     # Blocks GitHub Actions
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
+    # Temporary until removed (flaky/no longer used)
+    r"https://(www\.)?openteams\.com/?.*",
     ]
 
 
