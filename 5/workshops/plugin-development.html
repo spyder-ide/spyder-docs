@@ -1,582 +1,475 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Plugin Development with Spyder &#8212; Spyder 5 documentation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css" />
-    <link href="../_static/css/theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/driver.min.js"></script>
-    <script src="../_static/js/custom_scripts.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=601b7b68" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/plugin-development';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Qt Fundamentals" href="qt_fundamentals.html" />
     <link rel="prev" title="Financial Data Analysis with Spyder" href="financial.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
-    
-
-    
-
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
-<div class="container">
   
-  <a class="navbar-brand" href="https://www.spyder-ide.org/">
-    <img src="../_static/spyder_logo.png" class="logo" alt="logo">
-  </a>
   
-  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  <div id="navbar-menu" class="collapse navbar-collapse">
-    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
-        </li>
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external nav-link-active-section" href="/">Docs</a>
-        </li>
-      
-    </ul>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-</div>
-    </nav>
 
-    <div id="doc-content" class="container">
-      <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
-<div class="d-none d-xl-block">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="plugin-development.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-    <div class="input-group">
-      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
-      <div class="input-group-append">
-        <button class="btn btn-outline-danger" type="submit">
-          <span class="fas fa-search"></span>
-        </button>
-      </div>
-    </div>
-  </form>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
   
-  <ul class="nav bd-sidenav">
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../index.html">Welcome</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../quickstart.html">Quickstart</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../installation.html">Installation Guide</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Intro Videos
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/first-steps-with-spyder.html">First Steps with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/working-with-spyder.html">Working with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Panes in Depth
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/debugging.html">Debugger</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/editor.html">Editor</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/fileexplorer.html">Files</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/findinfiles.html">Find</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/help.html">Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/historylog.html">History</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/ipythonconsole.html">IPython Console</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/onlinehelp.html">Online Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/outline.html">Outline</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/plots.html">Plots</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/profiler.html">Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/projects.html">Projects</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/pylint.html">Code Analysis</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/variableexplorer.html">Variable Explorer</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Spyder Plugins
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/lineprofiler.html">Spyder Line Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/notebook.html">Spyder Notebook</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/terminal.html">Spyder Terminal</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Troubleshooting
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/first-steps.html">First Steps</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/basic-first-aid.html">Basic First Aid</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/emergency-cpr.html">Emergency CPR</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/common-illnesses.html">Common Illnesses</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/call-for-help.html">Calling for Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/submit-a-report.html">Submit a Report</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item active">
-                          
-              <details open>
-              
-                <summary>
-                    Workshops
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="financial.html">Financial Data Analysis with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item active">
-                            <a href="">Plugin Development with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="qt_fundamentals.html">Qt Fundamentals</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../faq.html">FAQ</a>
-            </li>
-        
-      
-    </ul>
-
-</nav>
-
-<nav class="d-block d-xl-none" aria-label="Main navigation">
-          <div class="bd-toc-item active row px-3">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="plugin-development.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-          </div>
-    <div class="bd-toc-item active row px-3">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
-      <h4 id="topics-header">Topics</h4>
-      <select id="small-dropdown" class="nav bd-sidenav">
-        
-          
-              <option value="../index.html">
-              Welcome
-              </option>
-          
-        
-          
-              <option value="../quickstart.html">
-              Quickstart
-              </option>
-          
-        
-          
-              <option value="../installation.html">
-              Installation Guide
-              </option>
-          
-        
-          
-            <optgroup label="Intro Videos">
-              
-                <option value="../videos/first-steps-with-spyder.html">
-                  First Steps with Spyder
-                </option>
-              
-                <option value="../videos/working-with-spyder.html">
-                  Working with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Panes in Depth">
-              
-                <option value="../panes/debugging.html">
-                  Debugger
-                </option>
-              
-                <option value="../panes/editor.html">
-                  Editor
-                </option>
-              
-                <option value="../panes/fileexplorer.html">
-                  Files
-                </option>
-              
-                <option value="../panes/findinfiles.html">
-                  Find
-                </option>
-              
-                <option value="../panes/help.html">
-                  Help
-                </option>
-              
-                <option value="../panes/historylog.html">
-                  History
-                </option>
-              
-                <option value="../panes/ipythonconsole.html">
-                  IPython Console
-                </option>
-              
-                <option value="../panes/onlinehelp.html">
-                  Online Help
-                </option>
-              
-                <option value="../panes/outline.html">
-                  Outline
-                </option>
-              
-                <option value="../panes/plots.html">
-                  Plots
-                </option>
-              
-                <option value="../panes/profiler.html">
-                  Profiler
-                </option>
-              
-                <option value="../panes/projects.html">
-                  Projects
-                </option>
-              
-                <option value="../panes/pylint.html">
-                  Code Analysis
-                </option>
-              
-                <option value="../panes/variableexplorer.html">
-                  Variable Explorer
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Spyder Plugins">
-              
-                <option value="../plugins/lineprofiler.html">
-                  Spyder Line Profiler
-                </option>
-              
-                <option value="../plugins/notebook.html">
-                  Spyder Notebook
-                </option>
-              
-                <option value="../plugins/terminal.html">
-                  Spyder Terminal
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Troubleshooting">
-              
-                <option value="../troubleshooting/first-steps.html">
-                  First Steps
-                </option>
-              
-                <option value="../troubleshooting/basic-first-aid.html">
-                  Basic First Aid
-                </option>
-              
-                <option value="../troubleshooting/emergency-cpr.html">
-                  Emergency CPR
-                </option>
-              
-                <option value="../troubleshooting/common-illnesses.html">
-                  Common Illnesses
-                </option>
-              
-                <option value="../troubleshooting/call-for-help.html">
-                  Calling for Help
-                </option>
-              
-                <option value="../troubleshooting/submit-a-report.html">
-                  Submit a Report
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Workshops">
-              
-                <option value="financial.html">
-                  Financial Data Analysis with Spyder
-                </option>
-              
-                <option value="">
-                  Plugin Development with Spyder
-                </option>
-              
-                <option value="qt_fundamentals.html">
-                  Qt Fundamentals
-                </option>
-              
-                <option value="scientific-computing.html">
-                  Scientific Computing and Visualization with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-              <option value="../faq.html">
-              FAQ
-              </option>
-          
-        
-      </select>
-    </div>
-</nav>
-          </div>
+      <div class="navbar-item">
 
-          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
-              <div>
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="financial.html">Financial Data Analysis with Spyder</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Plugin Development with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_fundamentals.html">Qt Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Workshops</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Plugin...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
                 
-  <div class="section" id="plugin-development-with-spyder">
-<h1>Plugin Development with Spyder<a class="headerlink" href="#plugin-development-with-spyder" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="plugin-development-with-spyder">
+<h1>Plugin Development with Spyder<a class="headerlink" href="#plugin-development-with-spyder" title="Link to this heading">#</a></h1>
 <p>This workshop reviews the features and possibilities of the API offered by <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> 5—the recently released version of our favorite IDE for scientific Python—for plugin development and to extend its functionality.</p>
 <p>As a practical exercise, we will develop a simple plugin that incorporates a configurable pomodoro timer in the status bar and some toolbar buttons to interact with it.</p>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p>You will need to have Spyder installed. Visit our <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a> for more information.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 However, readers of this workshop should install Spyder using Anaconda or Miniconda, as standalone installers currently do not allow to add extra packages like the plugin we are going to develop in this workshop.</p>
@@ -593,9 +486,9 @@ However, readers of this workshop should install Spyder using Anaconda or Minico
 <li><p><a class="reference external" href="https://www.guru99.com/pyqt-tutorial.html">Guru99 - PyQt tutorial</a></p></li>
 <li><p><a class="reference external" href="https://www.pythonguis.com/">Python GUIs - PyQt and PySide tutorials</a></p></li>
 </ul>
-</div>
-<div class="section" id="learning-goals">
-<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
 <p>By the end of this workshop participants will know:</p>
 <ul class="simple">
 <li><p>The basics to develop plugins for Spyder, and get a general idea of its inner workings.</p></li>
@@ -603,9 +496,9 @@ However, readers of this workshop should install Spyder using Anaconda or Minico
 <li><p>The structure of a plugin and the functionality of each component and how it connects to Spyder to extend its features.</p></li>
 <li><p>How to package and publish our plugin so that it can be easily installed and used by others.</p></li>
 </ul>
-</div>
-<div class="section" id="spyder-for-developers">
-<h2>Spyder for developers<a class="headerlink" href="#spyder-for-developers" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="spyder-for-developers">
+<h2>Spyder for developers<a class="headerlink" href="#spyder-for-developers" title="Link to this heading">#</a></h2>
 <p>The best place to find information about contributing to Spyder or developing for Spyder is its Github repository, in particular the <a class="reference external" href="https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md">contribution guide</a>.</p>
 <img alt="Spyder IDE components." src="../_images/pd_spyder_ide.png" />
 <ul class="simple">
@@ -614,53 +507,53 @@ However, readers of this workshop should install Spyder using Anaconda or Minico
 <li><p>Spyder uses <a class="reference external" href="https://github.com/spyder-ide/qtpy">qtpy</a> which is an abstraction layer that allows you to work with Qt from Python regardless of whether you use either of the two reference libraries: PyQt or PySide.</p></li>
 <li><p><a class="reference external" href="https://github.com/spyder-ide/spyder-kernels">spyder-kernels</a> provide Jupyter kernels to Spyder, for use within its consoles.</p></li>
 </ul>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Spyder is currently developed in such a way that most of its features are implemented as plugins.</p>
 </div>
-</div>
-<div class="section" id="types-of-plugins-we-can-develop-in-spyder">
-<h2>Types of plugins we can develop in Spyder<a class="headerlink" href="#types-of-plugins-we-can-develop-in-spyder" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="types-of-plugins-we-can-develop-in-spyder">
+<h2>Types of plugins we can develop in Spyder<a class="headerlink" href="#types-of-plugins-we-can-develop-in-spyder" title="Link to this heading">#</a></h2>
 <img alt="Types of Spyder plugins." src="../_images/pd_spyder_plugins.png" />
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A plugin is a component that adds functionality to an application, it can be a graphical component, for example, to display maps, or a non-graphical one that adds additional syntax coloring schemes.</p>
 </div>
 <p>Formally, plugins are instances of Qt classes that modify the behavior of Spyder.
 Aside from a few fundamental components, most of Spyder’s functionality arises from the interaction of plugins of two types:</p>
-<div class="section" id="spyderdockableplugin">
-<h3>SpyderDockablePlugin<a class="headerlink" href="#spyderdockableplugin" title="Permalink to this headline">¶</a></h3>
+<section id="spyderdockableplugin">
+<h3>SpyderDockablePlugin<a class="headerlink" href="#spyderdockableplugin" title="Link to this heading">#</a></h3>
 <p>It is a plugin that works as a <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QDockWidget.html">QDockWidget</a>, this is a Qt class that provides a graphical control that can be docked inside a <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QMainWindow.html">QMainWindow</a> or floated as a top-level window on the desktop.</p>
-</div>
-<div class="section" id="spyderpluginv2">
-<h3>SpyderPluginV2<a class="headerlink" href="#spyderpluginv2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spyderpluginv2">
+<h3>SpyderPluginV2<a class="headerlink" href="#spyderpluginv2" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> is a plugin that does not create a new dock widget on Spyder’s main window. In fact, <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> is the parent class of <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code>.</p>
-</div>
-<div class="section" id="discovering-spyder-plugins">
-<h3>Discovering Spyder plugins<a class="headerlink" href="#discovering-spyder-plugins" title="Permalink to this headline">¶</a></h3>
-<div class="topic">
+</section>
+<section id="discovering-spyder-plugins">
+<h3>Discovering Spyder plugins<a class="headerlink" href="#discovering-spyder-plugins" title="Link to this heading">#</a></h3>
+<aside class="topic">
 <p class="topic-title"><code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code></p>
 <p>If we look at the Spyder interface, we can find a number of different panes on the right side (with the default layout), such as <em>Help</em>, <em>Variable Explorer</em>, <em>Plots</em>, <em>Files</em> and <em>History</em>.</p>
 <ul class="simple">
 <li><p>Each of these panes is a <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code> that offers an <em>Undock</em> option by clicking the hamburger menu button in the upper right corner.</p></li>
 <li><p>These plugins can also be hidden or shown via their entry in the <em>View &gt; Panes</em> menu, or using its corresponding keyboard shortcut displayed there.</p></li>
 </ul>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title"><code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code></p>
 <p>High-level interface elements that do not offer an undocking option are basically instances of <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code>. These are typically used to handle more abstract functionality.</p>
 <ul class="simple">
 <li><p>Examples of this are the <em>appearance</em> and <em>layout</em> plugins that manage Spyder’s code color schemes and window layouts respectively.</p></li>
 <li><p>Other examples of this type of plugins are the <em>main menu</em> and keyboard <em>shortcuts</em>. Some graphical elements, such as the main toolbar and the status bar are also instances of the <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> class.</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="what-will-we-do">
-<h2>What will we do?<a class="headerlink" href="#what-will-we-do" title="Permalink to this headline">¶</a></h2>
+</aside>
+</section>
+</section>
+<section id="what-will-we-do">
+<h2>What will we do?<a class="headerlink" href="#what-will-we-do" title="Link to this heading">#</a></h2>
 <p>Our practical work will consist in the implementation of the Pomodoro technique for time management in the Spyder interface.</p>
 <img alt="Description of the pomodoro technique." src="../_images/pd_pomodoro_timer.png" />
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <a class="reference external" href="https://www.pomodorotechnique.com/">Pomodoro Technique</a>, designed by Francesco Cirillo, is a time management practice used to increase your focus and productivity when trying to complete assignments or meet deadlines.
 Choosing to use a Pomodoro Timer can help to give a task your full, undivided attention.</p>
@@ -675,8 +568,8 @@ steps:</p>
 <li><p>If you have less than 3 checkmarks take a short break (by default, 5 minutes), and return to step 2.</p></li>
 <li><p>When you have completed four Pomodoro cycles, you deserve a longer break (our default is 15 minutes). Checkmarks are reset to zero, go back to step 1.</p></li>
 </ol>
-<div class="section" id="steps">
-<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<section id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h3>
 <p>These are the general steps that we will be following throughout this workshop:</p>
 <ul class="simple">
 <li><p>Select the most suitable plugin type and create its initial structure using <a class="reference external" href="https://cookiecutter.readthedocs.io">cookiecutter</a>.</p></li>
@@ -684,17 +577,21 @@ steps:</p>
 <li><p>Implement the functionality of our plugin using the Spyder classes and following the guidelines indicated in the plugin structure.</p></li>
 <li><p>Build a configuration page for our plugin, which would appear in Tools &gt; Preferences.</p></li>
 </ul>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <img alt="Location of Spyder Pomodoro Timer widgets in Spyder." src="../_images/pd_spyder_wireframe.png" />
-<p class="caption"><span class="caption-text">Location of Spyder Pomodoro Timer widgets in Spyder.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id2">
+<figcaption>
+<p><span class="caption-text">Location of Spyder Pomodoro Timer widgets in Spyder.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
 <img alt="Spyder Pomodoro Timer in the preferences window." src="../_images/pd_preferences_wireframe.png" />
-<p class="caption"><span class="caption-text">Spyder Pomodoro Timer in the preferences window.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="features">
-<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Spyder Pomodoro Timer in the preferences window.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
 <p>A minimal planning to organize ideas.</p>
 <ul>
 <li><p>Pomodoro Timer</p>
@@ -714,10 +611,10 @@ steps:</p>
 This involves spending considerable time understanding its inner workings.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="set-up-a-development-environment">
-<h2>Set up a development environment<a class="headerlink" href="#set-up-a-development-environment" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="set-up-a-development-environment">
+<h2>Set up a development environment<a class="headerlink" href="#set-up-a-development-environment" title="Link to this heading">#</a></h2>
 <p>In principle, we could use any Spyder installed within a <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html#virtual-environments">conda environment</a> according to the instructions given in the <a class="reference external" href="https://docs.spyder-ide.org/5/installation.html">installation guide</a>.</p>
 <p>However, if you use a working environment that has other dependencies and you want to keep your plugin development independent of them, it is recommended to create a new environment which only has Spyder with the minimum dependencies needed for your plugin.</p>
 <img alt="Spyder development environment." src="../_images/pd_dev_environment.png" />
@@ -729,7 +626,7 @@ $<span class="w"> </span>mamba<span class="w"> </span>activate<span class="w"> <
 $<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Individual Edition</a> is a Python distribution for data science and machine learning to be used in a single machine.</p></li>
@@ -738,9 +635,9 @@ $<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </
 <li><p>Finally, <a class="reference external" href="https://github.com/mamba-org/mamba">mamba</a>, is an optimized implementation of conda’s package management features, that resolves dependencies and installs packages much faster than conda.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="create-a-repository">
-<h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="create-a-repository">
+<h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Link to this heading">#</a></h2>
 <p>Now that we have our local virtual environment, it is good practice to manage our source code with a version control system, and the most widely used web service for this purpose is currently Github. Here you can find, for example, the Spyder and Python repositories.</p>
 <img alt="Git and Github repository concepts." src="../_images/pd_github_repo.png" />
 <p>To create a git repository on Github, we need to follow these steps:</p>
@@ -753,9 +650,9 @@ $<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </
 <li><p>In your local command line run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">[repo-link]</span></code>. You must have git installed and configured on your computer. If you don’t have experience using git we recommend The Carpentries workshop <a class="reference external" href="https://swcarpentry.github.io/git-novice/">Version control with git</a>.</p></li>
 </ol>
 <p>A detailed description of <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/create-a-repo">repository creation</a> could be found in the official Github documentation, and a <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/hello-world">hello world</a> tutorial with basic git operations from the Github interface.</p>
-</div>
-<div class="section" id="let-s-get-started">
-<h2>Let’s get started<a class="headerlink" href="#let-s-get-started" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="let-s-get-started">
+<h2>Let’s get started<a class="headerlink" href="#let-s-get-started" title="Link to this heading">#</a></h2>
 <p>We already have a git repository and a virtual environment where Spyder 5 is installed.</p>
 <p>Let’s activate our environment and go into the local folder of our repository.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>activate<span class="w"> </span>spyder-dev
@@ -763,7 +660,7 @@ $<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </
 </pre></div>
 </div>
 <p>Then we need to use <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> to create the initial structure of our plugin. <a class="reference external" href="https://cookiecutter.readthedocs.io">cookiecutter</a> is a tool made in Python specifically designed to create project templates.
-We have developed one of these templates to generate the basic structure of a plugin, it can be found at: <a class="reference external" href="https://github.com/spyder-ide/spyder5-plugin-cookiecutter">https://github.com/spyder-ide/spyder5-plugin-cookiecutter</a></p>
+We have developed one of these templates to generate the basic structure of a plugin, it can be found at: <a class="github reference external" href="https://github.com/spyder-ide/spyder5-plugin-cookiecutter">spyder-ide/spyder5-plugin-cookiecutter</a></p>
 <img alt="Folder structure of our plugin." src="../_images/pd_plugin_structure.png" />
 <p>Let’s run cookiecutter to generate our</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cookiecutter<span class="w"> </span>https://github.com/spyder-ide/spyder5-plugin-cookiecutter
@@ -791,8 +688,8 @@ Select<span class="w"> </span>open_source_license:
 Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
-<div class="section" id="the-plugin-structure">
-<h3>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Permalink to this headline">¶</a></h3>
+<section id="the-plugin-structure">
+<h3>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Link to this heading">#</a></h3>
 <p>After <code class="docutils literal notranslate"><span class="pre">cookicutter</span></code> finishes its job, you’ll get the following tree structure in your repository</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
 ├──<span class="w"> </span><span class="o">[</span>Some<span class="w"> </span>info<span class="w"> </span>files<span class="o">]</span>
@@ -848,13 +745,13 @@ On this file the <code class="docutils literal notranslate"><span class="pre">en
 We can also place here the instance of <code class="docutils literal notranslate"><span class="pre">PluginMainWidget</span></code> necessary for <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code>, if we are developing that kind of plugin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">confpage.py</span></code>: this is where you specify the configuration page that will be displayed in <code class="docutils literal notranslate"><span class="pre">Preferences</span></code>, so that the user can adjust the options of our plugin.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="building-our-first-plugin">
-<h2>Building our first plugin<a class="headerlink" href="#building-our-first-plugin" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="building-our-first-plugin">
+<h2>Building our first plugin<a class="headerlink" href="#building-our-first-plugin" title="Link to this heading">#</a></h2>
 <p>From now on we will be building the plugin step by step. In the <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer">spyder pomodoro timer repository</a> you will find the final version of the code for you to take a look at it, in case we are missing any detail.</p>
-<div class="section" id="widgets">
-<h3>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h3>
+<section id="widgets">
+<h3>Widgets<a class="headerlink" href="#widgets" title="Link to this heading">#</a></h3>
 <p>The best way to start building our plugin is by implementing its graphical components first in <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code></p>
 <p>Let’s call the initial version, without any editing <code class="docutils literal notranslate"><span class="pre">INITIAL</span></code>.
 In <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a>, widgets.py is as follows:</p>
@@ -869,7 +766,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>The preset imports are a guide to what we will need in our plugin. The <code class="docutils literal notranslate"><span class="pre">on_conf_change</span></code> decorator will allow us to propagate the changes in configuration. <code class="docutils literal notranslate"><span class="pre">get_translation</span></code> helps us to generate translation strings for the plugin and <code class="docutils literal notranslate"><span class="pre">SpyderWidgetMixin</span></code> adds to any widget the attributes and methods needed to integrate it with Spyder (icon, style, translation, actions and extra options).</p>
 </div>
@@ -878,7 +775,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <li><p><code class="docutils literal notranslate"><span class="pre">StatusBarWidget</span></code>, a class derived from <code class="docutils literal notranslate"><span class="pre">QWidget</span></code> and <code class="docutils literal notranslate"><span class="pre">SpyderWidgetMixin</span></code>, which contains an icon, a label and a spinner (to show the plugin loading).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>, a class derived from <code class="docutils literal notranslate"><span class="pre">StatusBarWidget</span></code> with an internal <code class="docutils literal notranslate"><span class="pre">QTimer</span></code> to periodically update its content.</p></li>
 </ul>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Below, we will be indicating links in github with the diffs between the tags, this as an aid to check the progressive changes that will be made in the code.</p>
 </div>
@@ -918,7 +815,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
         <span class="k">return</span> <span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Spyder needs <code class="docutils literal notranslate"><span class="pre">ID</span></code> to be defined for <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>. Its constructor calls the parent class constructor and initializes the label with <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 </div>
@@ -937,9 +834,9 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code> requires this method to be implemented to update its content every time it is requested by the internal timer.</p>
-</div>
-<div class="section" id="the-container">
-<h3>The container<a class="headerlink" href="#the-container" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-container">
+<h3>The container<a class="headerlink" href="#the-container" title="Link to this heading">#</a></h3>
 <p>The next step in the development of our plugin is to create an instance of the widget we wrote above, so we can add it to Spyder’s status bar. For that, we need to use a container. Due to Qt specifics, we need an instance of <code class="docutils literal notranslate"><span class="pre">QWidget</span></code> (the container) to be the parent of all other widgets part of our plugin (as mentioned above).</p>
 <p>Thus, the <a class="reference external" href="https://cookiecutter.readthedocs.io">COOKIECUTTER</a> version of <code class="docutils literal notranslate"><span class="pre">container.py</span></code> is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
@@ -975,9 +872,9 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span> <span class="o">=</span> <span class="n">PomodoroTimerStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="plugin">
-<h3>Plugin<a class="headerlink" href="#plugin" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="plugin">
+<h3>Plugin<a class="headerlink" href="#plugin" title="Link to this heading">#</a></h3>
 <p>Finally, we define our plugin so that it is registered within Spyder.
 The <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a> version (i.e. the one created by cookiecutter)  for <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> is:</p>
 <ul class="simple">
@@ -1092,10 +989,10 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <p>In summary, we did the following:</p>
 <img alt="Basic structure of Pomodoro Timer Spyder plugin." src="../_images/pd_plugin_build.png" />
 <p>We created a widget, then we added it to the container, which is registered in the plugin through the <code class="docutils literal notranslate"><span class="pre">CONTAINER_CLASS</span></code> constant. In the plugin, we accessed the instance of that widget and added it to the status bar.</p>
-</div>
-</div>
-<div class="section" id="how-to-test-our-plugin">
-<h2>How to test our plugin<a class="headerlink" href="#how-to-test-our-plugin" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="how-to-test-our-plugin">
+<h2>How to test our plugin<a class="headerlink" href="#how-to-test-our-plugin" title="Link to this heading">#</a></h2>
 <p>Now it is time to see how our plugin looks in the Spyder interface.</p>
 <p><strong>From the root folder of our plugin</strong>, we activate the environment where Spyder is installed, and run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
@@ -1110,13 +1007,13 @@ SpyderPomodoroTimer<span class="w"> </span>registered!
 <p>And in Spyder you’ll see our plugin in the status bar with the tooltip “I am the Pomodoro tooltip”.</p>
 <img alt="First version of our plugin" src="../_images/pd_hello_world.png" />
 <p>Keep in mind that every time we make a change to our code, it is necessary to restart Spyder so that the plugin is reloaded and we can check the changes.</p>
-</div>
-<div class="section" id="enhancing-our-plugin">
-<h2>Enhancing our plugin<a class="headerlink" href="#enhancing-our-plugin" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="enhancing-our-plugin">
+<h2>Enhancing our plugin<a class="headerlink" href="#enhancing-our-plugin" title="Link to this heading">#</a></h2>
 <p>From now on we are going to go into details of how things are implemented in Qt. So in case you have any doubts, the Qt documentation will be your best guide.
 We created an annex to this workshop that quickly explains way the fundamental concepts of Qt for those in a hurry: <a class="reference internal" href="qt_fundamentals.html#qt-fundamentals"><span class="std std-ref">Qt Fundamentals</span></a></p>
-<div class="section" id="timer-updates">
-<h3>Timer updates<a class="headerlink" href="#timer-updates" title="Permalink to this headline">¶</a></h3>
+<section id="timer-updates">
+<h3>Timer updates<a class="headerlink" href="#timer-updates" title="Link to this heading">#</a></h3>
 <p>The first problem with our plugin is that its pomodoro timer is not being updated. To activate it we can use the <code class="docutils literal notranslate"><span class="pre">QTimer</span></code> in <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, which is present because it’s an instance of <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>.</p>
 <p>The second version where the value in the status bar is updated is called <code class="docutils literal notranslate"><span class="pre">TIMER</span></code>.</p>
 <p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and add this constant below the import lines (line 22).</p>
@@ -1163,13 +1060,13 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <p>Here we rely on the <code class="docutils literal notranslate"><span class="pre">display_time</span></code> method that converts the current <code class="docutils literal notranslate"><span class="pre">countdown</span></code> value, which is measured in milliseconds, into a human-readable format. And <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> simply keeps updating the countdown until it reaches zero.</p>
 <p>If we run Spyder again we will find that our timer has come to life.</p>
 <img alt="Timer countdown working." src="../_images/pd_timer_countdown.gif" />
-</div>
-</div>
-<div class="section" id="timer-controls">
-<h2>Timer controls<a class="headerlink" href="#timer-controls" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="timer-controls">
+<h2>Timer controls<a class="headerlink" href="#timer-controls" title="Link to this heading">#</a></h2>
 <p>Now we need a way to control our timer. We can achieve this by adding some buttons to Spyder’s toolbar, which will be useful to learn how to work with toolbars, menus and actions in Spyder.</p>
-<div class="section" id="pomodorotimertoolbar">
-<h3>PomodoroTimerToolbar<a class="headerlink" href="#pomodorotimertoolbar" title="Permalink to this headline">¶</a></h3>
+<section id="pomodorotimertoolbar">
+<h3>PomodoroTimerToolbar<a class="headerlink" href="#pomodorotimertoolbar" title="Link to this heading">#</a></h3>
 <p>The next version where actions are added to the toolbar is called <code class="docutils literal notranslate"><span class="pre">ACTIONS</span></code>.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/48a946fdbb934b9b85facd3c1b77fc8999e049a9">TIMER -&gt; ACTIONS widgets.py diff</a></p>
 <p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and import the Spyder application toolbar class:</p>
@@ -1199,9 +1096,9 @@ As for the update interval of the timer, we set it to to the value of <code clas
     <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-the-pomodoro-toolbar">
-<h3>Create the Pomodoro Toolbar<a class="headerlink" href="#create-the-pomodoro-toolbar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="create-the-pomodoro-toolbar">
+<h3>Create the Pomodoro Toolbar<a class="headerlink" href="#create-the-pomodoro-toolbar" title="Link to this heading">#</a></h3>
 <p>Now we are going to create a new section in our toolbar and associate some functionality to it by means of actions. This particular information is recommended to be included in the <code class="docutils literal notranslate"><span class="pre">api.py</span></code> file because this way we can offer endpoints to the rest of Spyder and new plugins for tweaking the behavior of our plugin.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/cf540f972f37aaf5d6ccc8524cbcc7aeae9c483b">TIMER -&gt; ACTIONS api.py diff</a></p>
 <p>Let’s add the following to the end of <code class="docutils literal notranslate"><span class="pre">api.py</span></code>:</p>
@@ -1220,9 +1117,9 @@ As for the update interval of the timer, we set it to to the value of <code clas
 </div>
 <p>With these we are telling the rest of Spyder, and our own plugin, that we are going to have a new toolbar section called “pomodoro_timer”. This section will consist of a button containing a menu (with a single section “main_section”) and actions identified as “start_timer”, “pause_timer” and “stop_timer”, to start, pause and stop (resetting) our timer, respectively.</p>
 <p>Note that these are simple class definitions with class constants, to ease the encapsulation and exchange of this information in a simple way.</p>
-</div>
-<div class="section" id="add-actions-to-the-toolbar">
-<h3>Add actions to the toolbar<a class="headerlink" href="#add-actions-to-the-toolbar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="add-actions-to-the-toolbar">
+<h3>Add actions to the toolbar<a class="headerlink" href="#add-actions-to-the-toolbar" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/492f30771285af937a8a75d69e4e879d21f9dc0f">TIMER -&gt; ACTIONS container.py diff</a></p>
 <p>Now let’s go to <code class="docutils literal notranslate"><span class="pre">container.py</span></code>, where we are going to implement the behavior of our new toolbar and its actions.
 In this case, we are not going to specify the internal behavior of our plugin, but the relationship between its widgets and other areas of Spyder, so it is more convenient to do it in the container.</p>
@@ -1338,9 +1235,9 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </pre></div>
 </div>
 <p>These methods simply manipulate the <code class="docutils literal notranslate"><span class="pre">pause</span></code> field of <code class="docutils literal notranslate"><span class="pre">pomodoro_timer_status</span></code>, and in the case of <code class="docutils literal notranslate"><span class="pre">stop_pomodoro_timer</span></code> the countdown is restarted.</p>
-</div>
-<div class="section" id="register-the-toolbar">
-<h3>Register the toolbar<a class="headerlink" href="#register-the-toolbar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="register-the-toolbar">
+<h3>Register the toolbar<a class="headerlink" href="#register-the-toolbar" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/012c5ef6568114ea945501d44efb30afeefbad98">TIMER -&gt; ACTIONS plugin.py diff</a></p>
 <p>A final mandatory step is to go to <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> and register this new toolbar component.</p>
 <p>To do this, add <code class="docutils literal notranslate"><span class="pre">Plugins.Toolbar</span></code> to the plugin requirements:</p>
@@ -1355,9 +1252,9 @@ In this case, we are not going to specify the internal behavior of our plugin, b
     <span class="n">toolbar</span><span class="o">.</span><span class="n">add_application_toolbar</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">pomodoro_timer_toolbar</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="review-the-changes">
-<h3>Review the changes<a class="headerlink" href="#review-the-changes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="review-the-changes">
+<h3>Review the changes<a class="headerlink" href="#review-the-changes" title="Link to this heading">#</a></h3>
 <p>The first thing we can notice is that we already have the corresponding buttons in the toolbar.</p>
 <img alt="Pomodoro timer toolbar buttons" src="../_images/pd_toolbar_actions.gif" />
 <p>The strings that were entered as the <code class="docutils literal notranslate"><span class="pre">tip</span></code> parameter in the creation of the actions are shown here as the buttons’ tooltips.</p>
@@ -1365,13 +1262,13 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <img alt="View &gt; Toolbars menu with &quot;Pomodoro Timer Toolbar&quot; option." src="../_images/pd_view_pomodoro_toolbar.png" />
 <p>Finally, let’s check how the new Pomodoro Timer control buttons in the toolbar interact with the component in the status bar.</p>
 <img alt="Interaction between the Pomodoro Timer toolbar and its status bar." src="../_images/pd_toolbar_statusbar_interact.gif" />
-</div>
-</div>
-<div class="section" id="add-a-configuration-page">
-<h2>Add a Configuration Page<a class="headerlink" href="#add-a-configuration-page" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="add-a-configuration-page">
+<h2>Add a Configuration Page<a class="headerlink" href="#add-a-configuration-page" title="Link to this heading">#</a></h2>
 <p>Another feature of Spyder plugins is that they can have configurable options that appear in Spyder’s Preferences window.</p>
-<div class="section" id="configuration-defaults">
-<h3>Configuration defaults<a class="headerlink" href="#configuration-defaults" title="Permalink to this headline">¶</a></h3>
+<section id="configuration-defaults">
+<h3>Configuration defaults<a class="headerlink" href="#configuration-defaults" title="Link to this heading">#</a></h3>
 <p>The final version in which we add a configurable parameter will be called <code class="docutils literal notranslate"><span class="pre">CONFPAGE</span></code>.</p>
 <p>The first step is to define what options we want to offer to our users. For this we must create a new file, which we can call <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. In this file we will write the following:</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b71457c96013dc0b9c27d588f46568a81e9a2f0c">ACTIONS -&gt; CONFPAGE config.py diff</a></p>
@@ -1408,9 +1305,9 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </pre></div>
 </div>
 <p>Note that we are moving the definition of <code class="docutils literal notranslate"><span class="pre">POMODORO_DEFAULT</span></code> from <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, since we now have a dedicated place for default configuration values.</p>
-</div>
-<div class="section" id="configuration-page">
-<h3>Configuration page<a class="headerlink" href="#configuration-page" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="configuration-page">
+<h3>Configuration page<a class="headerlink" href="#configuration-page" title="Link to this heading">#</a></h3>
 <p>Now, we need to build the page that will appear in the Preferences window. For this, we edit the <code class="docutils literal notranslate"><span class="pre">confpage.py</span></code> file generated by cokkiecutter as follows:</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/bd3bcf2ce895c440fb2d6b80233100c6d86822fe">ACTIONS -&gt; CONFPAGE confpage.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -1456,9 +1353,9 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </div>
 <p>This mostly corresponds to the regular code for user interfaces based on Qt widgets. In this case, our options section corresponds to a <code class="docutils literal notranslate"><span class="pre">QGroupBox</span></code>, where the parameters are organized vertically using a <code class="docutils literal notranslate"><span class="pre">QVBoxLayout</span></code>, and each parameter corresponds to a <code class="docutils literal notranslate"><span class="pre">QGridLayout</span></code> where labels and inputs are distributed (in this case a <code class="docutils literal notranslate"><span class="pre">QSpinBox</span></code>).</p>
 <p>Configuration pages in Spyder provide some helper methods to facilitate this work. For instance, <code class="docutils literal notranslate"><span class="pre">create_spinbox</span></code> allows to instantiate and initialize in a single step the widgets corresponding prefix an suffix labels together with the spinbox.</p>
-</div>
-<div class="section" id="propagate-configuration-changes">
-<h3>Propagate configuration changes<a class="headerlink" href="#propagate-configuration-changes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="propagate-configuration-changes">
+<h3>Propagate configuration changes<a class="headerlink" href="#propagate-configuration-changes" title="Link to this heading">#</a></h3>
 <p>Since we moved all the configuration information to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, now we have to import it from there into <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code>.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b94cee118bf887b52934230a35d67a0080551a68">ACTIONS -&gt; CONFPAGE widgets.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
@@ -1483,9 +1380,9 @@ In this case, we are not going to specify the internal behavior of our plugin, b
     <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_time</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="registering-preferences">
-<h3>Registering preferences<a class="headerlink" href="#registering-preferences" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="registering-preferences">
+<h3>Registering preferences<a class="headerlink" href="#registering-preferences" title="Link to this heading">#</a></h3>
 <p>Finally, it is necessary to activate the use of preferences in <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code>, by requiring the Preferences plugin</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b238b133d46a52e2d6e57ae938964094a45e7177">ACTIONS -&gt; CONFPAGE plugin.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
@@ -1503,24 +1400,24 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <p>Now we can access the Preferences window either from the toolbar or from the “Tools &gt; Preferences” menu. There we will find a section called <em>Spyder Pomodoro Timer</em> and inside it is the <em>Pomodoro timer limit</em> parameter. If we change that value, we will see how the corresponding label in the status bar changes.</p>
 <img alt="Pomodoro Timer toolbar configuration page." src="../_images/pd_plugin_confpage.gif" />
 <p>Now your plugin is in an initial version ready to publish…</p>
-</div>
-</div>
-<div class="section" id="publishing-your-plugin">
-<h2>Publishing your plugin<a class="headerlink" href="#publishing-your-plugin" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="publishing-your-plugin">
+<h2>Publishing your plugin<a class="headerlink" href="#publishing-your-plugin" title="Link to this heading">#</a></h2>
 <p>Since the recommended way to install Spyder is through conda, the obvious choice would be to publish our plugin through a channel like conda-forge, but this is a task that is beyond the scope of this workshop due to its complexity.</p>
 <p>However, the tools used to publish packages in conda are usually based on the packages published in PyPI. So let’s see how to publish our plugin there.</p>
 <img alt="Publish your plugin in PyPI." src="../_images/pd_plugin_publish.png" />
-<div class="section" id="pypi-and-testpypi">
-<h3>PyPI and TestPyPI<a class="headerlink" href="#pypi-and-testpypi" title="Permalink to this headline">¶</a></h3>
+<section id="pypi-and-testpypi">
+<h3>PyPI and TestPyPI<a class="headerlink" href="#pypi-and-testpypi" title="Link to this heading">#</a></h3>
 <p>The first thing we have to do is to create an account on the <a class="reference external" href="https://pypi.org">PyPI</a> and <a class="reference external" href="https://test.pypi.org">TestPyPI</a> websites. Although our package will be finally published in PyPI, it is advisable to use TestPyPI to test that our package can be published properly without generating additional load to the PyPI servers or affecting their logs.</p>
 <p>Next, we need edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file at the root of our project with our own data. Fortunately, cookiecutter created one for us.</p>
 <p>To upload our package to PyPI we have to use a tool called <a class="reference external" href="https://twine.readthedocs.io">Twine</a> that makes this task much easier. And we can install it in our conda environment using:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>twine
 </pre></div>
 </div>
-</div>
-<div class="section" id="build-and-check-the-package">
-<h3>Build and check the package<a class="headerlink" href="#build-and-check-the-package" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="build-and-check-the-package">
+<h3>Build and check the package<a class="headerlink" href="#build-and-check-the-package" title="Link to this heading">#</a></h3>
 <p>Before publishing our plugin we must package it. To do it we must write the following from the root folder of our project (where <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is placed):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>sdist<span class="w"> </span>bdist_wheel
 </pre></div>
@@ -1542,9 +1439,9 @@ Checking<span class="w"> </span>dist/spyder_pomodoro_timer-0.0.1.dev0-py3-none-a
 Checking<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz:<span class="w"> </span>PASSED
 </pre></div>
 </div>
-</div>
-<div class="section" id="upload-to-pypi">
-<h3>Upload to PyPI<a class="headerlink" href="#upload-to-pypi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="upload-to-pypi">
+<h3>Upload to PyPI<a class="headerlink" href="#upload-to-pypi" title="Link to this heading">#</a></h3>
 <p>Now we can use twine to upload the distribution packages we have built. First, we will upload them to TestPyPI to make sure everything works:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>upload<span class="w"> </span>--repository-url<span class="w"> </span>https://test.pypi.org/legacy/<span class="w"> </span>dist/*
 </pre></div>
@@ -1577,10 +1474,10 @@ Specifically in <code class="docutils literal notranslate"><span class="pre">set
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>spyder-pomodoro-timer
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="final-words">
-<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Link to this heading">#</a></h2>
 <p>The possibility of making a tool extensible through plugins, extensions or addons, as they are usually called, is a fundamental feature that allows taking advantage of the talent of third-party developers to respond to needs and enhancements that are beyond the scope of the application’s core development team.</p>
 <p>Similarly, a plugin-based system makes the application much easier to maintain. Eventually, the ability to enable and disable plugins makes it more adaptable to different use cases. For instance, at present it would be inconceivable to think of a web browser that does not have extensions to block advertising or organize links, even if those features don’t come by default on them.</p>
 <p>In Spyder we have put special interest in consolidating an API that allows the development of plugins in a consistent way. The main focus of the development effort between versions 4 and 5 was in this direction and we are at a key moment where we expect to capitalize on all this work.</p>
@@ -1604,506 +1501,187 @@ Specifically in <code class="docutils literal notranslate"><span class="pre">set
 <p>If you have ideas for plugin development feel free to contact us through the <a class="reference external" href="https://github.com/spyder-ide">Spyder-IDE</a> Github organization space.</p>
 <p>If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop <a class="reference internal" href="scientific-computing.html"><span class="doc">Scientific Computing and Visualization with Spyder</span></a>.</p>
 <p>If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop <a class="reference internal" href="financial.html"><span class="doc">Financial Data Analysis with Spyder</span></a>.</p>
-<div class="section" id="homework">
-<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<section id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h3>
 <p>As you may have noticed, there were some features left to implement such as notifications when pomodoros are completed. Try to implement them and do not hesitate to contact us if you have any doubts.</p>
-</div>
-</div>
-<div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <p>In the <a class="reference external" href="https://github.com/spyder-ide/plugin-examples">plugin-examples</a> repository you can find additional examples that will surely be useful for you to further understand Spyder plugin development.</p>
 <p>A more in-depth review of the Spyder repository itself, especially its simpler plugins, such as History, Plots or Working directory, may help you understand it better. As well as a review of the various helper functions, widgets and mixins present in <code class="docutils literal notranslate"><span class="pre">spyder.api</span></code>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-              <div class='prev-next-bottom'>
-                
-    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="financial.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Financial Data Analysis with Spyder</a>
-    <a class='prev-next-link right-next' id="next-link" href="qt_fundamentals.html" title="next page">Qt Fundamentals <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
-
-              </div>
               
-          </main>
-
-          <div class="col-md-3 col-xl-2">
               
-
-<div class="row d-none d-md-block bd-toc">
-    
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/workshops/plugin-development.rst">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="financial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Financial Data Analysis with Spyder</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="qt_fundamentals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Qt Fundamentals</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-
-    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
-    <nav id="bd-toc-nav">
-        <ul class="nav section-nav flex-column">
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#prerequisites" class="nav-link">Prerequisites</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#learning-goals" class="nav-link">Learning Goals</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#spyder-for-developers" class="nav-link">Spyder for developers</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#types-of-plugins-we-can-develop-in-spyder" class="nav-link">Types of plugins we can develop in Spyder</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#spyderdockableplugin" class="nav-link">SpyderDockablePlugin</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#spyderpluginv2" class="nav-link">SpyderPluginV2</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#discovering-spyder-plugins" class="nav-link">Discovering Spyder plugins</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#what-will-we-do" class="nav-link">What will we do?</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#steps" class="nav-link">Steps</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#features" class="nav-link">Features</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#set-up-a-development-environment" class="nav-link">Set up a development environment</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#create-a-repository" class="nav-link">Create a repository</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#let-s-get-started" class="nav-link">Let’s get started</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#the-plugin-structure" class="nav-link">The plugin structure</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#building-our-first-plugin" class="nav-link">Building our first plugin</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#widgets" class="nav-link">Widgets</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#the-container" class="nav-link">The container</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#plugin" class="nav-link">Plugin</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#how-to-test-our-plugin" class="nav-link">How to test our plugin</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#enhancing-our-plugin" class="nav-link">Enhancing our plugin</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#timer-updates" class="nav-link">Timer updates</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#timer-controls" class="nav-link">Timer controls</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#pomodorotimertoolbar" class="nav-link">PomodoroTimerToolbar</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#create-the-pomodoro-toolbar" class="nav-link">Create the Pomodoro Toolbar</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#add-actions-to-the-toolbar" class="nav-link">Add actions to the toolbar</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#register-the-toolbar" class="nav-link">Register the toolbar</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#review-the-changes" class="nav-link">Review the changes</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#add-a-configuration-page" class="nav-link">Add a Configuration Page</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#configuration-defaults" class="nav-link">Configuration defaults</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#configuration-page" class="nav-link">Configuration page</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#propagate-configuration-changes" class="nav-link">Propagate configuration changes</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#registering-preferences" class="nav-link">Registering preferences</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#publishing-your-plugin" class="nav-link">Publishing your plugin</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#pypi-and-testpypi" class="nav-link">PyPI and TestPyPI</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#build-and-check-the-package" class="nav-link">Build and check the package</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#upload-to-pypi" class="nav-link">Upload to PyPI</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#homework" class="nav-link">Homework</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#further-reading" class="nav-link">Further reading</a>
-            </li>
-        
-        </ul>
-    </nav>
-</div>
-
-<div class="row d-block d-md-none">
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
-        <div class="navbar-toggler-item">
-            <a class="navbar-toggler btn-outline-default" href="../search.html"><span class="fas fa-search"></span></a>
-        </div>
-        <div class="navbar-toggler-item">
-            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
-                <span class="fas fa-comment"></span>
-            </a>
-        </div>
-            <div class="navbar-toggler-item">
-                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars fa-2"></span>
-                </button>
-            </div>
-        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
-            <ul class="nav section-nav flex-column">
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#prerequisites" class="nav-link">Prerequisites</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#learning-goals" class="nav-link">Learning Goals</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#spyder-for-developers" class="nav-link">Spyder for developers</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#types-of-plugins-we-can-develop-in-spyder" class="nav-link">Types of plugins we can develop in Spyder</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#spyderdockableplugin" class="nav-link">SpyderDockablePlugin</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#spyderpluginv2" class="nav-link">SpyderPluginV2</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#discovering-spyder-plugins" class="nav-link">Discovering Spyder plugins</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#what-will-we-do" class="nav-link">What will we do?</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#steps" class="nav-link">Steps</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#features" class="nav-link">Features</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#set-up-a-development-environment" class="nav-link">Set up a development environment</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#create-a-repository" class="nav-link">Create a repository</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#let-s-get-started" class="nav-link">Let’s get started</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#the-plugin-structure" class="nav-link">The plugin structure</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#building-our-first-plugin" class="nav-link">Building our first plugin</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#widgets" class="nav-link">Widgets</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#the-container" class="nav-link">The container</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#plugin" class="nav-link">Plugin</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#how-to-test-our-plugin" class="nav-link">How to test our plugin</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#enhancing-our-plugin" class="nav-link">Enhancing our plugin</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#timer-updates" class="nav-link">Timer updates</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#timer-controls" class="nav-link">Timer controls</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#pomodorotimertoolbar" class="nav-link">PomodoroTimerToolbar</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#create-the-pomodoro-toolbar" class="nav-link">Create the Pomodoro Toolbar</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#add-actions-to-the-toolbar" class="nav-link">Add actions to the toolbar</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#register-the-toolbar" class="nav-link">Register the toolbar</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#review-the-changes" class="nav-link">Review the changes</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#add-a-configuration-page" class="nav-link">Add a Configuration Page</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#configuration-defaults" class="nav-link">Configuration defaults</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#configuration-page" class="nav-link">Configuration page</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#propagate-configuration-changes" class="nav-link">Propagate configuration changes</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#registering-preferences" class="nav-link">Registering preferences</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#publishing-your-plugin" class="nav-link">Publishing your plugin</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#pypi-and-testpypi" class="nav-link">PyPI and TestPyPI</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#build-and-check-the-package" class="nav-link">Build and check the package</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#upload-to-pypi" class="nav-link">Upload to PyPI</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#homework" class="nav-link">Homework</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#further-reading" class="nav-link">Further reading</a>
-                </li>
-            
-            </ul>
-        </div>
-    </nav>
-</div>
+                </footer>
               
-          </div>
-      </div>
-    </div>
-
-    <script src="../_static/js/theme.js"></script>
-    <script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'spyder-ide/public',
-        activationElement: '#open_chat',
-    };
-</script>
-
-<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
-    Open chat
-</a>
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-
-
-
-<div class="footer pb-5 pb-md-0">
-    <div class="container pb-3">
-        
-        <div class="row justify-content-center">
-            <a href="https://opencollective.com/spyder/donate" target="_blank">
-              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
-            </a>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="text-center pb-3">
-                 Connect with us on: 
-                 
-                  
-                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://instagram.com/spyderide">Instagram</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
-                
             </div>
-        </div>
-        <div class="row justify-content-center">
-              <small>
-                
-                <div class="text-center">
-                  &copy; 2009-2024 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
-                </div>
-                
-                <div class="text-center">
-                    
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
-                    
-                    
-                      <span class="pipe-red">|</span>
-                      <a href="../_sources/workshops/plugin-development.rst.txt"
-                          rel="nofollow">Page source</a>
-                    
-                </div>
-              </small>
-            </div>
-        </div>
-    </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-for-developers">Spyder for developers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-plugins-we-can-develop-in-spyder">Types of plugins we can develop in Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyderdockableplugin">SpyderDockablePlugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyderpluginv2">SpyderPluginV2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovering-spyder-plugins">Discovering Spyder plugins</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-we-do">What will we do?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-development-environment">Set up a development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-repository">Create a repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-plugin-structure">The plugin structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-our-first-plugin">Building our first plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#widgets">Widgets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-container">The container</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plugin">Plugin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-test-our-plugin">How to test our plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enhancing-our-plugin">Enhancing our plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-updates">Timer updates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-controls">Timer controls</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pomodorotimertoolbar">PomodoroTimerToolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-pomodoro-toolbar">Create the Pomodoro Toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-actions-to-the-toolbar">Add actions to the toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-toolbar">Register the toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-changes">Review the changes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-configuration-page">Add a Configuration Page</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-defaults">Configuration defaults</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-page">Configuration page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propagate-configuration-changes">Propagate configuration changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-preferences">Registering preferences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-your-plugin">Publishing your plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-and-testpypi">PyPI and TestPyPI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-check-the-package">Build and check the package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-to-pypi">Upload to PyPI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-words">Final words</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/workshops/plugin-development.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
 </div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

@@ -1,581 +1,474 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Scientific Computing and Visualization with Spyder &#8212; Spyder 5 documentation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css" />
-    <link href="../_static/css/theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/driver.min.js"></script>
-    <script src="../_static/js/custom_scripts.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=601b7b68" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/scientific-computing';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="../faq.html" />
+    <link rel="next" title="Troubleshooting" href="../troubleshooting/index.html" />
     <link rel="prev" title="Qt Fundamentals" href="qt_fundamentals.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
-    
-
-    
-
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
-<div class="container">
   
-  <a class="navbar-brand" href="https://www.spyder-ide.org/">
-    <img src="../_static/spyder_logo.png" class="logo" alt="logo">
-  </a>
   
-  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  <div id="navbar-menu" class="collapse navbar-collapse">
-    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
-        </li>
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external nav-link-active-section" href="/">Docs</a>
-        </li>
-      
-    </ul>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-</div>
-    </nav>
 
-    <div id="doc-content" class="container">
-      <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
-<div class="d-none d-xl-block">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="scientific-computing.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-    <div class="input-group">
-      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
-      <div class="input-group-append">
-        <button class="btn btn-outline-danger" type="submit">
-          <span class="fas fa-search"></span>
-        </button>
-      </div>
-    </div>
-  </form>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
   
-  <ul class="nav bd-sidenav">
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../index.html">Welcome</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../quickstart.html">Quickstart</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../installation.html">Installation Guide</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Intro Videos
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/first-steps-with-spyder.html">First Steps with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/working-with-spyder.html">Working with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Panes in Depth
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/debugging.html">Debugger</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/editor.html">Editor</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/fileexplorer.html">Files</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/findinfiles.html">Find</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/help.html">Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/historylog.html">History</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/ipythonconsole.html">IPython Console</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/onlinehelp.html">Online Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/outline.html">Outline</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/plots.html">Plots</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/profiler.html">Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/projects.html">Projects</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/pylint.html">Code Analysis</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/variableexplorer.html">Variable Explorer</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Spyder Plugins
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/lineprofiler.html">Spyder Line Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/notebook.html">Spyder Notebook</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/terminal.html">Spyder Terminal</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Troubleshooting
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/first-steps.html">First Steps</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/basic-first-aid.html">Basic First Aid</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/emergency-cpr.html">Emergency CPR</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/common-illnesses.html">Common Illnesses</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/call-for-help.html">Calling for Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/submit-a-report.html">Submit a Report</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item active">
-                          
-              <details open>
-              
-                <summary>
-                    Workshops
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="financial.html">Financial Data Analysis with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="plugin-development.html">Plugin Development with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="qt_fundamentals.html">Qt Fundamentals</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item active">
-                            <a href="">Scientific Computing and Visualization with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../faq.html">FAQ</a>
-            </li>
-        
-      
-    </ul>
-
-</nav>
-
-<nav class="d-block d-xl-none" aria-label="Main navigation">
-          <div class="bd-toc-item active row px-3">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="scientific-computing.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-          </div>
-    <div class="bd-toc-item active row px-3">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
-      <h4 id="topics-header">Topics</h4>
-      <select id="small-dropdown" class="nav bd-sidenav">
-        
-          
-              <option value="../index.html">
-              Welcome
-              </option>
-          
-        
-          
-              <option value="../quickstart.html">
-              Quickstart
-              </option>
-          
-        
-          
-              <option value="../installation.html">
-              Installation Guide
-              </option>
-          
-        
-          
-            <optgroup label="Intro Videos">
-              
-                <option value="../videos/first-steps-with-spyder.html">
-                  First Steps with Spyder
-                </option>
-              
-                <option value="../videos/working-with-spyder.html">
-                  Working with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Panes in Depth">
-              
-                <option value="../panes/debugging.html">
-                  Debugger
-                </option>
-              
-                <option value="../panes/editor.html">
-                  Editor
-                </option>
-              
-                <option value="../panes/fileexplorer.html">
-                  Files
-                </option>
-              
-                <option value="../panes/findinfiles.html">
-                  Find
-                </option>
-              
-                <option value="../panes/help.html">
-                  Help
-                </option>
-              
-                <option value="../panes/historylog.html">
-                  History
-                </option>
-              
-                <option value="../panes/ipythonconsole.html">
-                  IPython Console
-                </option>
-              
-                <option value="../panes/onlinehelp.html">
-                  Online Help
-                </option>
-              
-                <option value="../panes/outline.html">
-                  Outline
-                </option>
-              
-                <option value="../panes/plots.html">
-                  Plots
-                </option>
-              
-                <option value="../panes/profiler.html">
-                  Profiler
-                </option>
-              
-                <option value="../panes/projects.html">
-                  Projects
-                </option>
-              
-                <option value="../panes/pylint.html">
-                  Code Analysis
-                </option>
-              
-                <option value="../panes/variableexplorer.html">
-                  Variable Explorer
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Spyder Plugins">
-              
-                <option value="../plugins/lineprofiler.html">
-                  Spyder Line Profiler
-                </option>
-              
-                <option value="../plugins/notebook.html">
-                  Spyder Notebook
-                </option>
-              
-                <option value="../plugins/terminal.html">
-                  Spyder Terminal
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Troubleshooting">
-              
-                <option value="../troubleshooting/first-steps.html">
-                  First Steps
-                </option>
-              
-                <option value="../troubleshooting/basic-first-aid.html">
-                  Basic First Aid
-                </option>
-              
-                <option value="../troubleshooting/emergency-cpr.html">
-                  Emergency CPR
-                </option>
-              
-                <option value="../troubleshooting/common-illnesses.html">
-                  Common Illnesses
-                </option>
-              
-                <option value="../troubleshooting/call-for-help.html">
-                  Calling for Help
-                </option>
-              
-                <option value="../troubleshooting/submit-a-report.html">
-                  Submit a Report
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Workshops">
-              
-                <option value="financial.html">
-                  Financial Data Analysis with Spyder
-                </option>
-              
-                <option value="plugin-development.html">
-                  Plugin Development with Spyder
-                </option>
-              
-                <option value="qt_fundamentals.html">
-                  Qt Fundamentals
-                </option>
-              
-                <option value="">
-                  Scientific Computing and Visualization with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-              <option value="../faq.html">
-              FAQ
-              </option>
-          
-        
-      </select>
-    </div>
-</nav>
-          </div>
+      <div class="navbar-item">
 
-          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
-              <div>
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="financial.html">Financial Data Analysis with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-development.html">Plugin Development with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_fundamentals.html">Qt Fundamentals</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Computing and Visualization with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Workshops</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Scientific...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
                 
-  <div class="section" id="scientific-computing-and-visualization-with-spyder">
-<h1>Scientific Computing and Visualization with Spyder<a class="headerlink" href="#scientific-computing-and-visualization-with-spyder" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="scientific-computing-and-visualization-with-spyder">
+<h1>Scientific Computing and Visualization with Spyder<a class="headerlink" href="#scientific-computing-and-visualization-with-spyder" title="Link to this heading">#</a></h1>
 <p>This workshop allows you to explore some of Spyder’s features that make Spyder an ideal IDE for using the scientific tools offered by Python. Throughout the workshop, we will apply the scientific method to answer some questions related to our preferences and cognitive abilities. By the end of this workshop participants will be able to use Spyder to explore data, analyze it with some statistical tools and plot the relationship between variables.</p>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p>You will need to have Spyder installed. Visit our <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a> for more information.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.</p>
@@ -585,24 +478,24 @@ While we still support Anaconda, we recommend this install method on those platf
 <li><p>Basic level of Python. You can visit <a class="reference external" href="https://docs.python.org/3/tutorial/">The Python Tutorial</a> to learn the basics of this programming language.</p></li>
 <li><p>Some knowledge of Statistics (<a class="reference external" href="https://en.wikipedia.org/wiki/Statistical_hypothesis_testing">hypothesis testing</a> , <a class="reference external" href="https://en.wikipedia.org/wiki/Analysis_of_variance">ANOVA</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/P-value">p-value</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="learning-goals">
-<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="learning-goals">
+<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
 <p>After completing this workshop, you should be able to:</p>
 <ul class="simple">
 <li><p>Apply the scientific method to answer questions related to psychometric variables</p></li>
 <li><p>Understand how to use Spyder’s built-in scientific computing tools</p></li>
 </ul>
-</div>
-<div class="section" id="learner-profile">
-<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="learner-profile">
+<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Link to this heading">#</a></h2>
 <p>This workshop is intended for people who want to learn how to answer questions scientifically from a dataset. We have also designed it to serve as a tutorial for learning how to use Spyder as a research tool.</p>
-</div>
-<div class="section" id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
 <p>In this workshop we will explore a data set and use it to answer some questions using the scientific method.</p>
-<div class="section" id="why-do-scientific-research-with-python">
-<h3>Why do scientific research with Python?<a class="headerlink" href="#why-do-scientific-research-with-python" title="Permalink to this headline">¶</a></h3>
+<section id="why-do-scientific-research-with-python">
+<h3>Why do scientific research with Python?<a class="headerlink" href="#why-do-scientific-research-with-python" title="Link to this heading">#</a></h3>
 <p>Python is a mature programming language that has been chosen by much of the scientific community to support the research process. There are a few reasons for this:</p>
 <ul class="simple">
 <li><p>It is versatile and easy to learn and use</p></li>
@@ -613,13 +506,13 @@ While we still support Anaconda, we recommend this install method on those platf
 <li><p>It has excellent libraries for plotting</p></li>
 <li><p>It can be integrated with <a class="reference external" href="https://jupyter.org">Jupyter Notebooks</a> and implementations of these in the cloud (<a class="reference external" href="https://colab.research.google.com">Google Colab</a> or <a class="reference external" href="https://mybinder.org">Binder</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="how-can-spyder-help-me-in-my-scientific-research">
-<h3>How can Spyder help me in my scientific research?<a class="headerlink" href="#how-can-spyder-help-me-in-my-scientific-research" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="how-can-spyder-help-me-in-my-scientific-research">
+<h3>How can Spyder help me in my scientific research?<a class="headerlink" href="#how-can-spyder-help-me-in-my-scientific-research" title="Link to this heading">#</a></h3>
 <p>Spyder is a Scientific Integrated Development Environment written in Python, and designed by and for scientists, engineers, and data analysts. It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package. Together with Python, it provides a very complete set of tools for scientific computing.</p>
-</div>
-<div class="section" id="the-basic-steps-of-the-scientific-method">
-<h3>The basic steps of the scientific method<a class="headerlink" href="#the-basic-steps-of-the-scientific-method" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="the-basic-steps-of-the-scientific-method">
+<h3>The basic steps of the scientific method<a class="headerlink" href="#the-basic-steps-of-the-scientific-method" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">scientific method</a> is a set of good practices used to achieve new knowledge in a valid way. Broadly speaking, the stages of the scientific method are as follows:</p>
 <ol class="arabic simple">
 <li><p>Observation: first find something that needs an explanation</p></li>
@@ -630,51 +523,51 @@ While we still support Anaconda, we recommend this install method on those platf
 <li><p>Reporting: share new findings</p></li>
 </ol>
 <p>Throughout this workshop, we will be developing each of these steps in a practical way. We will use Spyder as a research tool and psychometric data from an online dating site to make it easy and fun.</p>
-</div>
-<div class="section" id="introduction-to-scientific-research-with-spyder">
-<h3>Introduction to scientific research with Spyder<a class="headerlink" href="#introduction-to-scientific-research-with-spyder" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="introduction-to-scientific-research-with-spyder">
+<h3>Introduction to scientific research with Spyder<a class="headerlink" href="#introduction-to-scientific-research-with-spyder" title="Link to this heading">#</a></h3>
 <p>If you’re not familiar with Spyder, we recommend you start with our <a class="reference internal" href="../quickstart.html"><span class="doc">Quickstart</span></a>. But if you want a  summary, here’s a quick overview.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you already have experience with Spyder, you can skip to <a class="reference internal" href="#preparation-work">Preparation work</a> section.</p>
 </div>
-<div class="section" id="editor">
-<h4>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h4>
+<section id="editor">
+<h4>Editor<a class="headerlink" href="#editor" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> is the place where you write your code and save it as a file (script). It allows you to easily persist your work. This is where you write the code you want to keep from the data analysis you do in IPython Console. <strong>Here you will also be able to read, edit and run the code from this workshop</strong>.</p>
-</div>
-<div class="section" id="ipython-console">
-<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ipython-console">
+<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> is the Spyder’s component where you write chunks of code that you want to experiment with. <strong>In this workshop, we are going to give you pieces of code that you can copy and run in this console</strong>.</p>
 <p>In essence, the IPython Console allows you to execute commands and interact with data using Python.</p>
-</div>
-<div class="section" id="variable-explorer">
-<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="variable-explorer">
+<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Variable Explorer</span></a> is one of Spyder’s best features. It allows you to interactively browse and manage the objects generated in the code of the currently selected <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> session.</p>
 <p>The Variable Explorer is one of the most frequently used components in this workshop. <strong>This is the pane where we will observe the data and most of the results of the scientific analysis, except for the plots</strong>.</p>
-</div>
-<div class="section" id="plots-pane">
-<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="plots-pane">
+<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/plots.html"><span class="doc">Plots pane</span></a> shows all the static graphs and images created in your IPython Console session. <strong>All plots generated by the code will appear in this component</strong>. You will also be able to save each graphic in a local file or copy it to the clipboard to share it with other researchers.</p>
-</div>
-<div class="section" id="code-analysis-share-a-stylish-code">
-<h4>Code Analysis (share a stylish code!)<a class="headerlink" href="#code-analysis-share-a-stylish-code" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="code-analysis-share-a-stylish-code">
+<h4>Code Analysis (share a stylish code!)<a class="headerlink" href="#code-analysis-share-a-stylish-code" title="Link to this heading">#</a></h4>
 <p>Wouldn’t it be great to have a tool to be able to detect code errors, stylistic problems, bad practices, inconsistencies and other issues? This is precisely the task of the  <a class="reference internal" href="../panes/pylint.html"><span class="doc">Code Analysis</span></a>. Your code can run, but if you are going to share it with other researchers it would be great if it is both readable and neat as well.</p>
-</div>
-</div>
-</div>
-<div class="section" id="preparation-work">
-<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="preparation-work">
+<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Link to this heading">#</a></h2>
 <p>Before starting, you must have installed some packages and libraries needed to run the code. We recommend you to install these requirements in a virtual environment. Here we explain step by step how to do it.</p>
-<div class="section" id="setting-up-the-conda-environment">
-<h3>Setting up the Conda environment<a class="headerlink" href="#setting-up-the-conda-environment" title="Permalink to this headline">¶</a></h3>
+<section id="setting-up-the-conda-environment">
+<h3>Setting up the Conda environment<a class="headerlink" href="#setting-up-the-conda-environment" title="Link to this heading">#</a></h3>
 <p>If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.</p>
 <p>You can set up your environment in two different ways.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>We recommend creating the virtual environment with <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> (or <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>) as it integrates seamlessly with Spyder. You can find installation instructions in <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda documentation</a>.</p>
 </div>
-<div class="section" id="with-commands">
-<h4>1. With commands<a class="headerlink" href="#with-commands" title="Permalink to this headline">¶</a></h4>
+<section id="with-commands">
+<h4>1. With commands<a class="headerlink" href="#with-commands" title="Link to this heading">#</a></h4>
 <p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">scientific-computing</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>scientific-computing
 </pre></div>
@@ -683,33 +576,33 @@ While we still support Anaconda, we recommend this install method on those platf
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>scientific-computing<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">5</span><span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sympy<span class="w"> </span>cython<span class="w"> </span>seaborn<span class="w"> </span>spyder-kernels<span class="w"> </span>pyarrow
 </pre></div>
 </div>
-<div class="alert alert-warning">
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment. If you use the standalone installer, there is no need to install <code class="docutils literal notranslate"><span class="pre">spyder=5</span></code> with conda.</p>
 </div>
-</div>
-<div class="section" id="from-an-environment-yml-file">
-<h4>2. From an environment.yml file<a class="headerlink" href="#from-an-environment-yml-file" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="from-an-environment-yml-file">
+<h4>2. From an environment.yml file<a class="headerlink" href="#from-an-environment-yml-file" title="Link to this heading">#</a></h4>
 <p>You can also install the virtual environment easily using the environment file (<code class="docutils literal notranslate"><span class="pre">scientific-computing.yml</span></code>) that we share with you. Just run the following command in the terminal (you must have the environment file in the current directory):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>scientific-computing.yml
 </pre></div>
 </div>
-</div>
-<div class="section" id="activate-environment">
-<h4>Activate environment<a class="headerlink" href="#activate-environment" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="activate-environment">
+<h4>Activate environment<a class="headerlink" href="#activate-environment" title="Link to this heading">#</a></h4>
 <p>You can now enter the newly created virtual environment in this way:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>scientific-computing
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="downloading-the-dataset">
-<h3>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="downloading-the-dataset">
+<h3>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Link to this heading">#</a></h3>
 <p>We are going to work with a public dataset called OKCupid, collected by Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and 2,626 variables.</p>
 <p>Download the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a> to a directory of your choice.</p>
-</div>
-<div class="section" id="setting-up-the-working-directory">
-<h3>Setting up the working directory<a class="headerlink" href="#setting-up-the-working-directory" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="setting-up-the-working-directory">
+<h3>Setting up the working directory<a class="headerlink" href="#setting-up-the-working-directory" title="Link to this heading">#</a></h3>
 <p>The virtual environment and the data file are now ready. The only thing that remains is to create a directory to work in. In your operating system, create a new directory with the name of your choice. Then copy and unzip the dataset file there.</p>
 <p>Here is an example (on Linux or macOS):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>scientific-computing
@@ -726,14 +619,14 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <p>Second, let’s check that the virtual environment we created is enabled in Spyder. Go to <span class="guilabel">Preferences</span> &gt; <span class="guilabel">Python interpreter</span>, and use the dropdown under <span class="guilabel">Use the following Python interpreter</span> to select the path to your virtual environment. You should see something like this:</p>
 <img alt="Set up environment in Spyder's Preferences" src="../_images/set-up-environment1.png" />
 <p>Now, you have everything ready to proceed with the workshop.</p>
-</div>
-<div class="section" id="download-the-code">
-<h3>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="download-the-code">
+<h3>Download the code<a class="headerlink" href="#download-the-code" title="Link to this heading">#</a></h3>
 <p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can <a class="reference download internal" download="" href="../_downloads/0a85bf6b6f5c0377014b2035ca60c31e/scientific-computing.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
-</div>
-</div>
-<div class="section" id="the-dataset">
-<h2>The dataset<a class="headerlink" href="#the-dataset" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="the-dataset">
+<h2>The dataset<a class="headerlink" href="#the-dataset" title="Link to this heading">#</a></h2>
 <p>OKCupid is a dataset that gathers information obtained from the online dating site OKCupid. It consists of 68,371 records collected automatically employing a scraper that extracted public information.</p>
 <p>The dataset contains demographic data (e.g., gender, sexual orientation and age). It also includes answers to general questions used by the website’s algorithm to calculate some personality indicators to help find compatible matches.</p>
 <p>If you want more information about how this dataset was collected and what kind of information it contains you can get it in this paper: <a class="reference external" href="https://doi.org/10.26775/ODP.2016.11.03">The OKCupid dataset</a>.</p>
@@ -756,13 +649,13 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <p>You should now be able to see the data you have imported in the Variable Explorer.</p>
 <img alt="Dataset in the Variable Explorer" src="../_images/first-object-in-variable-explorer.png" />
 <p>You can see that the object is of type DataFrame and the number of rows and columns of the object.</p>
-</div>
-<div class="section" id="explore-the-dataset">
-<h2>Explore the dataset<a class="headerlink" href="#explore-the-dataset" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="age">
-<h3>Age<a class="headerlink" href="#age" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="explore-the-dataset">
+<h2>Explore the dataset<a class="headerlink" href="#explore-the-dataset" title="Link to this heading">#</a></h2>
+<section id="age">
+<h3>Age<a class="headerlink" href="#age" title="Link to this heading">#</a></h3>
 <p>Now, let’s explore one of the variables, in this case, the numeric variable age (<code class="docutils literal notranslate"><span class="pre">d_age</span></code>).</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the OKCupid dataset, all demographic variables are prefixed with “d_” and profile variables with “p_”.</p>
 </div>
@@ -778,7 +671,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <img alt="More variables in Variable Explorer" src="../_images/min-age-max-age-variables.png" />
 <p>The values are floats. The lowest age is 18.0 years and the highest is 100.0 years.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Notice also that each type of variable has a different color to quickly distinguish them.</p>
 </div>
@@ -819,9 +712,9 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </pre></div>
 </div>
 <img alt="Age histogram with mean line" src="../_images/age-histogram-3.png" />
-</div>
-<div class="section" id="religion-seriosity">
-<h3>Religion seriosity<a class="headerlink" href="#religion-seriosity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="religion-seriosity">
+<h3>Religion seriosity<a class="headerlink" href="#religion-seriosity" title="Link to this heading">#</a></h3>
 <p>We know the extent of the dataframe and we have seen how to explore a quantitative variable. Now let’s move on to a qualitative variable. The <code class="docutils literal notranslate"><span class="pre">columns</span></code> attribute shows a list of column names in the dataframe. We also know that demographic variables are prefixed with “d_”, so we can look for variable names that correspond to this prefix.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">demograph</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;d_&quot;</span><span class="p">)]</span>
 </pre></div>
@@ -846,10 +739,10 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <p>Double click on “question_data” in the Variable Explorer to display each question aligned with its code (“q” + number).</p>
 <p>Now that we have learned how to explore the data we can ask interesting questions and try to answer them with the help of the dataset and Spyder.</p>
-</div>
-</div>
-<div class="section" id="think-of-a-theory-and-write-a-hypothesis">
-<h2>Think of a theory and write a hypothesis<a class="headerlink" href="#think-of-a-theory-and-write-a-hypothesis" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="think-of-a-theory-and-write-a-hypothesis">
+<h2>Think of a theory and write a hypothesis<a class="headerlink" href="#think-of-a-theory-and-write-a-hypothesis" title="Link to this heading">#</a></h2>
 <p>A theory is nothing more than an explanation of something. For example, we could get involved in the eternal conflict between cats and dogs. I, as a dog person, might have a theory (unscientific, of course) that those who prefer to have the companionship of a dog are smarter people than those who prefer a wicked (but lovable) kitty. To test the support of a theory, one can make a prediction based on it and see how this prediction behaves in an experiment or a concrete situation. We call this prediction a hypothesis.</p>
 <p>A hypothesis is a statement that can be tested employing the scientific method. They must be verifiable using empirical evidence or data. For example, <em>green is the best color</em> is not a hypothesis since it cannot be proven or disproven.</p>
 <p>Concerning the above theory of a person’s pet preferences, to explore it we should find two variables to relate. The first variable would be related to a <strong>self-identification as a cat person or dog person</strong>. The second variable would be related to a person’s <strong>ability to solve problems and situations</strong>.</p>
@@ -859,13 +752,13 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <p>So, let’s try to see if there is any evidence in the OKCupid dataset to support the following hypothesis:</p>
 <p><em>People who prefer dogs to cats would score higher on tests of cognitive ability</em>.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>SPOILER ALERT: If you are a cat person, and feel you should immediately leave this workshop, I suggest you stay. If you’re not a cat person, stay too.</p>
 </div>
-</div>
-<div class="section" id="build-the-test">
-<h2>Build the test<a class="headerlink" href="#build-the-test" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="build-the-test">
+<h2>Build the test<a class="headerlink" href="#build-the-test" title="Link to this heading">#</a></h2>
 <p>We already know which questions will be part of the cognitive ability test. Now we are going to process this data to obtain the scores for each person.</p>
 <p>First, we make a copy of the original dataset:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ca_test</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -890,7 +783,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">QUESTION</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Some <code class="docutils literal notranslate"><span class="pre">test_items</span></code> questions are not in the data but don’t worry about that. We use a <code class="docutils literal notranslate"><span class="pre">try...</span> <span class="pre">except</span></code> block to ignore these errors. Answering these questions was optional, so many OkCupid site users did not answer all of them. So we have removed from the records the users who did not answer the 14 questions we have chosen for the cognitive ability test. This reduced the sample size considerably. There are other ways to avoid this reduction, but they are outside the scope of this workshop.</p>
 </div>
@@ -911,8 +804,8 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <p>How do we add up these responses? Remember that each answer was stored as a boolean (True or False) with the prefix “resp_”. So we search in the <code class="docutils literal notranslate"><span class="pre">ca_test</span></code> dataframe for the answers of each column starting with “resp” (we use the regular expression <code class="docutils literal notranslate"><span class="pre">regex=&quot;^resp&quot;</span></code> and the method <code class="docutils literal notranslate"><span class="pre">filter</span></code>) and sum the True values of each row with <code class="docutils literal notranslate"><span class="pre">sum(axis=1)</span></code>. Then we store these results in the “cognitive_score” column of the <code class="docutils literal notranslate"><span class="pre">ca_test</span></code> dataset.</p>
 <p>You can see the results of these operations by typing in the IPython Console <code class="docutils literal notranslate"><span class="pre">ca_test.cognitive_score.describe()</span></code>. If you do so, in <em>count</em> you will see that the new number of records has been reduced to 479 (the rest of the 68,371 users did not answer all of these questions).</p>
-<div class="section" id="cognitive-ability-distribution">
-<h3>Cognitive ability distribution<a class="headerlink" href="#cognitive-ability-distribution" title="Permalink to this headline">¶</a></h3>
+<section id="cognitive-ability-distribution">
+<h3>Cognitive ability distribution<a class="headerlink" href="#cognitive-ability-distribution" title="Link to this heading">#</a></h3>
 <p>Let’s draw a histogram of this variable to see the frequency distribution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">cognitive_score</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
@@ -920,21 +813,21 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <img alt="Cognitive test score histogram" src="../_images/cognitive-score-histogram.png" />
 <p>As you can see, in this case, the distribution is not symmetrical but has a long “tail” on the left (negatively skewed). This means that most of the users who answered all the questions did quite well and that only a few users answered most of the questions in the wrong way.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The values we have calculated in this section were already in the data (<code class="docutils literal notranslate"><span class="pre">data.CA_items</span></code>). However, we have chosen to obtain these results again using code because it is a good way to learn how to use the tools provided by Python and Pandas for data manipulation.</p>
 </div>
-</div>
-</div>
-<div class="section" id="relate-variables">
-<h2>Relate variables<a class="headerlink" href="#relate-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="relate-variables">
+<h2>Relate variables<a class="headerlink" href="#relate-variables" title="Link to this heading">#</a></h2>
 <p>Remember that the hypothesis relates two variables: which pet do you prefer and cognitive ability. The measurement of pet preferences will be made from question <strong>q997</strong> (categorical or qualitative variable) and cognitive ability will be measured from the sum of the correct answers on the test (quantitative interval variable). With this type of variable we can make some box plots to see if there are differences between the means.</p>
 <p>But first, let’s change the standard Seaborn palette, to get prettier plots.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">palplot</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Seaborn allows you to choose from different styles of graphics and color palettes. More information is available at <a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html">https://seaborn.pydata.org/tutorial/color_palettes.html</a></p>
 </div>
@@ -946,7 +839,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <img alt="Pet preferences and cognitive score relationship (boxplot)" src="../_images/pet-preferences-cognitive-score-boxplot.png" />
 <p>Box plots or box-whisker diagrams display, near the center of the box, the <strong>mean</strong> of the data as a horizontal line. The lines bordering the box represent <strong>50% of the observations</strong> (<em>interquartile range</em> ). Outside the box, upwards and downwards, we find two whiskers: the lower one represents the <strong>mean of the values in the lower part of the dataset</strong>, and the upper one represents the <strong>mean of the values in the upper part of the dataset</strong>. The points beyond the whiskers are <strong>outliers</strong>.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>An outlier is a value that is very different from the rest of the data values. They must be taken into account because they can often create a bias in the model we are trying to fit to the data.</p>
 </div>
@@ -958,7 +851,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <li><p>Those who like neither cats nor dogs.</p></li>
 </ol>
 <p>The lowest mean is that of those who prefer dogs only, but by very little. The box (and boundaries) representing dog lovers is also “wider,” implying a larger variability in the individual test results for this group. But this is not a very different dispersion from that of those who prefer cats. All the means are within the limits of the other boxes (interquartiles), which seems to indicate that, in fact, there are not really important differences in the intelligence test scores for these groups. This seems to undermine support for the initial hypothesis we posed above.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to see the figures, enter <code class="docutils literal notranslate"><span class="pre">dog_or_cat</span> <span class="pre">=</span> <span class="pre">ca_test.groupby(&quot;q997&quot;)[&quot;cognitive_score&quot;].describe()</span></code> in the IPython Console and look at the results in the Variable Explorer. This way you can see how many people prefer cats or dogs, and the means and standard deviation of the cognitive ability test results for each group.</p>
 </div>
@@ -973,20 +866,20 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <img alt="Pet preferences and cognitive score mean representation (box graph)" src="../_images/pet-preferences-cognitive-score-bar-graph.png" />
 <p>If the box plots indicated that the means did not show significant differences (possibly due to chance), the bar plot confirms that these differences are, in proportion, quite modest.</p>
-</div>
-<div class="section" id="anova-test">
-<h2>ANOVA test<a class="headerlink" href="#anova-test" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="anova-test">
+<h2>ANOVA test<a class="headerlink" href="#anova-test" title="Link to this heading">#</a></h2>
 <p>To make sure that the differences between the means are statistically significant, we will perform an ANOVA (analysis of variance) because we are going to compare the means of more than two groups.</p>
 <p>How does ANOVA work? This analysis tells us whether three or more means are equal. If so, this would support the null hypothesis.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <em>null hypothesis</em> is an alternative prediction to the one we have stated in our hypothesis. The null hypothesis simply states that the observed differences in means are due to random variations that occur when samples are collected.</p>
 </div>
 <p>An ANOVA produces an <em>F-ratio</em> (also called F-statistic) that compares the amount of systematic variation in the data (variation that can be explained by the model or hypothesis) with the amount of unsystematic variance (variation that cannot be explained by our hypothesis or model). This means that F is the ratio of the model to its error. ANOVA also produces a <em>p-value</em> that indicates the probability that the variation can be attributed to the null hypothesis. The smaller the p-value, the less likely it is that the observed variation is due to chance.</p>
-<div class="section" id="formatting-the-data">
-<h3>Formatting the data<a class="headerlink" href="#formatting-the-data" title="Permalink to this headline">¶</a></h3>
+<section id="formatting-the-data">
+<h3>Formatting the data<a class="headerlink" href="#formatting-the-data" title="Link to this heading">#</a></h3>
 <p>To perform an ANOVA, let’s start by pivoting the dataset with the cognitive ability test results. The pet preferences values will now be the column names, and each row will represent a person.</p>
-<div class="alert alert-warning">
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>To perform an ANOVA, certain requirements or assumptions must be met. For example, the distributions of the residuals must be normal. This is not the case here. There are more appropriate statistical tests for this example, and the possibility of performing certain transformations on the data in order to apply ANOVA in this case. However, we use ANOVA because it is a fairly popular test, and because the purpose of this workshop is to serve as an introduction to scientific computing with Spyder. We do not intend here to obtain scientific results for publication.</p>
 </div>
@@ -1004,7 +897,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the variable <code class="docutils literal notranslate"><span class="pre">dog_or_cat_col_names</span></code> we have stored the names of the values in order. This implies that: A = Both, B = Cats, C = Dogs, and D = Neither.</p>
 </div>
@@ -1015,15 +908,15 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </pre></div>
 </div>
 <p>In the above line of code we are creating a list with 4 elements: the test results of each column A, B, C, and D, without the missing values (they are removed with <code class="docutils literal notranslate"><span class="pre">dropna()</span></code>).</p>
-</div>
-<div class="section" id="run-anova">
-<h3>Run ANOVA<a class="headerlink" href="#run-anova" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="run-anova">
+<h3>Run ANOVA<a class="headerlink" href="#run-anova" title="Link to this heading">#</a></h3>
 <p>Now, let’s run ANOVA and store the output in two variables: <code class="docutils literal notranslate"><span class="pre">f_value</span></code> and <code class="docutils literal notranslate"><span class="pre">p_value</span></code>. Notice that since <code class="docutils literal notranslate"><span class="pre">dog_or_cat_samples</span></code> is a list, we must pass the argument with an asterisk (<code class="docutils literal notranslate"><span class="pre">*dog_or_cat_samples</span></code>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f_value</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="o">*</span><span class="n">dog_or_cat_samples</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>With the help of <code class="docutils literal notranslate"><span class="pre">stats.f_oneway</span></code> in the Help Pane you can read a description of the output of this function, some interesting notes about the test, and some references that you can use to better understand the nature of this analysis.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>In the Help pane you will read that ANOVA requires certain assumptions to be satisfied. In this workshop we have not checked those assumptions because our goal is merely to show some Spyder functions that make the research work easier. Thus, the results obtained in this example with ANOVA should not be taken too rigorously.</p>
 </div>
@@ -1038,13 +931,13 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </div>
 <p>The value of <code class="docutils literal notranslate"><span class="pre">f_critical</span></code> (2.6241) is larger than that of <code class="docutils literal notranslate"><span class="pre">f_value</span></code> (0.5813). This means that the variance between the means of these groups is not significantly different. Since the <em>p</em> value indicates that we cannot rule out random variations, then we have to discard our hypothesis.</p>
 <p>What is the conclusion of all this? There seems to be little or no evidence in our data to think that there is indeed a correlation between a person’s pet preferences and his or her ability to solve practical or abstract problems. Cat and dog owners, rejoice!</p>
-</div>
-</div>
-<div class="section" id="report-and-share">
-<h2>Report and share<a class="headerlink" href="#report-and-share" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="report-and-share">
+<h2>Report and share<a class="headerlink" href="#report-and-share" title="Link to this heading">#</a></h2>
 <p>In science, sharing results, good and bad, is critical. Today, in scientific computing, it is also crucial to share data, and the code used to process and analyze it. To help with this, we will use Spyder’s Code Analysis.</p>
-<div class="section" id="code-analysis">
-<h3>Code Analysis<a class="headerlink" href="#code-analysis" title="Permalink to this headline">¶</a></h3>
+<section id="code-analysis">
+<h3>Code Analysis<a class="headerlink" href="#code-analysis" title="Link to this heading">#</a></h3>
 <p>When you share code, you want it to be readable, clean, and not overly complex. The Code Analysis component can help us detect these issues and even bugs that can affect the performance of our code.</p>
 <p>To see an example, you can open the <a class="reference download internal" download="" href="../_downloads/5094c1817ea6459cc1ea9e5ec793a6b0/scientific-computing-astro.py"><code class="xref download docutils literal notranslate"><span class="pre">scientific-computing-astro.py</span></code></a> file and run the <span class="guilabel">Code Analysis</span> (open the file in the pane and click on the green triangular button in the upper right corner).</p>
 <img alt="Code Analysis pane Example for astrological sign and cognitive ability" src="../_images/code-analysis-pane-workshop-2.png" />
@@ -1057,10 +950,10 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 </ul>
 <p>Each of these categories indicates the type of alert and the line on which the potential issue occurs. For example, it tells us that line 129 is too long, or that we imported numpy but did not use it at all in the code.</p>
 <p>These suggestions can contribute to sharing clean code. We recommend using this panel to polish your code before publishing it.</p>
-</div>
-</div>
-<div class="section" id="final-words">
-<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Link to this heading">#</a></h2>
 <p>In this workshop we have taken the first steps to use Spyder for scientific computing. We have seen how from a question or doubt a hypothesis is raised. This question can also emerge from the exploration of some data, which can be done by calculating some measures (such as mean, median, standard deviation) or by drawing some plots.</p>
 <p>Often, in order to answer the question, we must process some data (for example, for the construction of a cognitive ability test).</p>
 <p>Finally, we try to establish a relationship between variables with some statistical tests. The results of these tests will support or not our initial hypothesis.</p>
@@ -1080,13 +973,13 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <p>Spyder has many features that can help you do data analysis. You can find more information in our <a class="reference external" href="https://docs.spyder-ide.org/5/index.html">official documentation</a>.</p>
 <p>Thank you for reaching the end of this workshop! We hope you found it helpful and informative.</p>
 <p>If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop <a class="reference internal" href="financial.html"><span class="doc">Financial Data Analysis with Spyder</span></a>.</p>
-<div class="section" id="homework">
-<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<section id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h3>
 <p>If you want to check what you have learned, we suggest you analyze the data to try to answer the following question: <em>Do the different zodiac signs influence the results of a cognitive ability test?,</em> you can check the Python script <a class="reference download internal" download="" href="../_downloads/5094c1817ea6459cc1ea9e5ec793a6b0/scientific-computing-astro.py"><code class="xref download docutils literal notranslate"><span class="pre">scientific-computing-astro.py</span></code></a> if you have any doubts.</p>
-</div>
-</div>
-<div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <p>For a description of the dataset used, see the following <a class="reference external" href="https://openpsych.net/paper/46/">paper</a>:</p>
 <ul class="simple">
 <li><p>Kirkegaard, E. O. W., &amp; Bjerrekær, J. D. (2016). <em>The OKCupid dataset: A very large public dataset of dating site users</em>. Open Differential Psychology. doi:10.26775/odp.2016.11.03*</p></li>
@@ -1095,409 +988,176 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scien
 <ul class="simple">
 <li><p>Field, A., Miles, J., &amp; Field, Z. (2012). <em>Discovering statistics using R</em>. SAGE Publications.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-              <div class='prev-next-bottom'>
-                
-    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="qt_fundamentals.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Qt Fundamentals</a>
-    <a class='prev-next-link right-next' id="next-link" href="../faq.html" title="next page">Frequently Asked Questions <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
-
-              </div>
               
-          </main>
-
-          <div class="col-md-3 col-xl-2">
               
-
-<div class="row d-none d-md-block bd-toc">
-    
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/workshops/scientific-computing.rst">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="qt_fundamentals.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Qt Fundamentals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../troubleshooting/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Troubleshooting</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-
-    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
-    <nav id="bd-toc-nav">
-        <ul class="nav section-nav flex-column">
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#prerequisites" class="nav-link">Prerequisites</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#learning-goals" class="nav-link">Learning goals</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#learner-profile" class="nav-link">Learner profile</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#why-do-scientific-research-with-python" class="nav-link">Why do scientific research with Python?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#how-can-spyder-help-me-in-my-scientific-research" class="nav-link">How can Spyder help me in my scientific research?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#the-basic-steps-of-the-scientific-method" class="nav-link">The basic steps of the scientific method</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#introduction-to-scientific-research-with-spyder" class="nav-link">Introduction to scientific research with Spyder</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#setting-up-the-conda-environment" class="nav-link">Setting up the Conda environment</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#downloading-the-dataset" class="nav-link">Downloading the dataset</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#setting-up-the-working-directory" class="nav-link">Setting up the working directory</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#download-the-code" class="nav-link">Download the code</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#the-dataset" class="nav-link">The dataset</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#explore-the-dataset" class="nav-link">Explore the dataset</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#age" class="nav-link">Age</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#religion-seriosity" class="nav-link">Religion seriosity</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#think-of-a-theory-and-write-a-hypothesis" class="nav-link">Think of a theory and write a hypothesis</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#build-the-test" class="nav-link">Build the test</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#cognitive-ability-distribution" class="nav-link">Cognitive ability distribution</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#relate-variables" class="nav-link">Relate variables</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#anova-test" class="nav-link">ANOVA test</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#formatting-the-data" class="nav-link">Formatting the data</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#run-anova" class="nav-link">Run ANOVA</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#report-and-share" class="nav-link">Report and share</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#code-analysis" class="nav-link">Code Analysis</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#homework" class="nav-link">Homework</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#further-reading" class="nav-link">Further reading</a>
-            </li>
-        
-        </ul>
-    </nav>
-</div>
-
-<div class="row d-block d-md-none">
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
-        <div class="navbar-toggler-item">
-            <a class="navbar-toggler btn-outline-default" href="../search.html"><span class="fas fa-search"></span></a>
-        </div>
-        <div class="navbar-toggler-item">
-            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
-                <span class="fas fa-comment"></span>
-            </a>
-        </div>
-            <div class="navbar-toggler-item">
-                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars fa-2"></span>
-                </button>
-            </div>
-        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
-            <ul class="nav section-nav flex-column">
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#prerequisites" class="nav-link">Prerequisites</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#learning-goals" class="nav-link">Learning goals</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#learner-profile" class="nav-link">Learner profile</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#why-do-scientific-research-with-python" class="nav-link">Why do scientific research with Python?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#how-can-spyder-help-me-in-my-scientific-research" class="nav-link">How can Spyder help me in my scientific research?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#the-basic-steps-of-the-scientific-method" class="nav-link">The basic steps of the scientific method</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#introduction-to-scientific-research-with-spyder" class="nav-link">Introduction to scientific research with Spyder</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#setting-up-the-conda-environment" class="nav-link">Setting up the Conda environment</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#downloading-the-dataset" class="nav-link">Downloading the dataset</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#setting-up-the-working-directory" class="nav-link">Setting up the working directory</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#download-the-code" class="nav-link">Download the code</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#the-dataset" class="nav-link">The dataset</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#explore-the-dataset" class="nav-link">Explore the dataset</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#age" class="nav-link">Age</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#religion-seriosity" class="nav-link">Religion seriosity</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#think-of-a-theory-and-write-a-hypothesis" class="nav-link">Think of a theory and write a hypothesis</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#build-the-test" class="nav-link">Build the test</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#cognitive-ability-distribution" class="nav-link">Cognitive ability distribution</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#relate-variables" class="nav-link">Relate variables</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#anova-test" class="nav-link">ANOVA test</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#formatting-the-data" class="nav-link">Formatting the data</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#run-anova" class="nav-link">Run ANOVA</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#report-and-share" class="nav-link">Report and share</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#code-analysis" class="nav-link">Code Analysis</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#homework" class="nav-link">Homework</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#further-reading" class="nav-link">Further reading</a>
-                </li>
-            
-            </ul>
-        </div>
-    </nav>
-</div>
+                </footer>
               
-          </div>
-      </div>
-    </div>
-
-    <script src="../_static/js/theme.js"></script>
-    <script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'spyder-ide/public',
-        activationElement: '#open_chat',
-    };
-</script>
-
-<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
-    Open chat
-</a>
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-
-
-
-<div class="footer pb-5 pb-md-0">
-    <div class="container pb-3">
-        
-        <div class="row justify-content-center">
-            <a href="https://opencollective.com/spyder/donate" target="_blank">
-              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
-            </a>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="text-center pb-3">
-                 Connect with us on: 
-                 
-                  
-                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://instagram.com/spyderide">Instagram</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
-                
             </div>
-        </div>
-        <div class="row justify-content-center">
-              <small>
-                
-                <div class="text-center">
-                  &copy; 2009-2024 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
-                </div>
-                
-                <div class="text-center">
-                    
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
-                    
-                    
-                      <span class="pipe-red">|</span>
-                      <a href="../_sources/workshops/scientific-computing.rst.txt"
-                          rel="nofollow">Page source</a>
-                    
-                </div>
-              </small>
-            </div>
-        </div>
-    </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learner-profile">Learner profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-scientific-research-with-python">Why do scientific research with Python?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-spyder-help-me-in-my-scientific-research">How can Spyder help me in my scientific research?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-basic-steps-of-the-scientific-method">The basic steps of the scientific method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-scientific-research-with-spyder">Introduction to scientific research with Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#editor">Editor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipython-console">IPython Console</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-explorer">Variable Explorer</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plots-pane">Plots pane</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-analysis-share-a-stylish-code">Code Analysis (share a stylish code!)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-work">Preparation work</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-conda-environment">Setting up the Conda environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#with-commands">1. With commands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-an-environment-yml-file">2. From an environment.yml file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-environment">Activate environment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-dataset">Downloading the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-working-directory">Setting up the working directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#age">Age</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#religion-seriosity">Religion seriosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#think-of-a-theory-and-write-a-hypothesis">Think of a theory and write a hypothesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-test">Build the test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cognitive-ability-distribution">Cognitive ability distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-variables">Relate variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anova-test">ANOVA test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-the-data">Formatting the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-anova">Run ANOVA</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#report-and-share">Report and share</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-analysis">Code Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-words">Final words</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/workshops/scientific-computing.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
 </div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

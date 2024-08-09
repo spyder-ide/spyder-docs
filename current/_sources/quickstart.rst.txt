@@ -1,6 +1,6 @@
-##########
-Quickstart
-##########
+####
+Tour
+####
 
 Welcome to our Quickstart!
 Here you will find an interactive tour that will guide you through Spyder's interface.
@@ -10,15 +10,15 @@ Finally, you'll get to walk through some of Spyder's key panes and functionality
 .. raw:: html
 
    <div class="interactive-tour-container">
-      <img id="tour-default-layout-main" class="tour-screenshot tour-screenshot-active" src="assets/5/tour/tour-default-layout-main.png">
-      <img id="tour-options-menu" class="tour-screenshot" src="assets/5/tour/tour-options-menu.png">
-      <img id="tour-context-menu" class="tour-screenshot" src="assets/5/tour/tour-context-menu.png">
-      <img id="tour-variable-explorer" class="tour-screenshot" src="assets/5/tour/tour-variable-explorer.png">
-      <img id="tour-plots" class="tour-screenshot" src="assets/5/tour/tour-plots.png">
-      <img id="tour-files" class="tour-screenshot" src="assets/5/tour/tour-files.png">
-      <img id="tour-find" class="tour-screenshot" src="assets/5/tour/tour-find.png">
-      <img id="tour-profiler" class="tour-screenshot" src="assets/5/tour/tour-profiler.png">
-      <img id="tour-code-analysis" class="tour-screenshot" src="assets/5/tour/tour-code-analysis.png">
+      <img id="tour-default-layout-main" class="tour-screenshot tour-screenshot-active" src="_static/images/tour/tour-default-layout-main.png">
+      <img id="tour-options-menu" class="tour-screenshot" src="_static/images/tour/tour-options-menu.png">
+      <img id="tour-context-menu" class="tour-screenshot" src="_static/images/tour/tour-context-menu.png">
+      <img id="tour-variable-explorer" class="tour-screenshot" src="_static/images/tour/tour-variable-explorer.png">
+      <img id="tour-plots" class="tour-screenshot" src="_static/images/tour/tour-plots.png">
+      <img id="tour-files" class="tour-screenshot" src="_static/images/tour/tour-files.png">
+      <img id="tour-find" class="tour-screenshot" src="_static/images/tour/tour-find.png">
+      <img id="tour-profiler" class="tour-screenshot" src="_static/images/tour/tour-profiler.png">
+      <img id="tour-code-analysis" class="tour-screenshot" src="_static/images/tour/tour-code-analysis.png">
 
       <svg class="tour-overlay" viewBox="0 0 1280 720">
         <rect id="introduction-rect" class="highlight-rect tour-default-layout-main" x="2.5" y="2.5" width="1275.5" height="715" />

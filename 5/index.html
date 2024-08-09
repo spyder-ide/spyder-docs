@@ -1,873 +1,644 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Welcome to Spyder’s Documentation &#8212; Spyder 5 documentation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/driver.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css" />
-    <link href="_static/css/theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link href="_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/js/driver.min.js"></script>
-    <script src="_static/js/custom_scripts.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=601b7b68" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Quickstart" href="quickstart.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="next" title="Tour" href="quickstart.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
-    
-
-    
-
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
-<div class="container">
   
-  <a class="navbar-brand" href="https://www.spyder-ide.org/">
-    <img src="_static/spyder_logo.png" class="logo" alt="logo">
-  </a>
   
-  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  <div id="navbar-menu" class="collapse navbar-collapse">
-    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
-        </li>
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external nav-link-active-section nav-link-active-page" href="/">Docs</a>
-        </li>
-      
-    </ul>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-</div>
-    </nav>
 
-    <div id="doc-content" class="container">
-      <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
-<div class="d-none d-xl-block">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="index.html" selected>Spyder 5</option>
-  <option value="../3/index.html">Spyder 3</option>
-  <option value="../4/index.html">Spyder 4</option>
-</select>
-
-  <form class="bd-search d-flex align-items-center" action="search.html" method="get">
-    <div class="input-group">
-      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
-      <div class="input-group-append">
-        <button class="btn btn-outline-danger" type="submit">
-          <span class="fas fa-search"></span>
-        </button>
-      </div>
-    </div>
-  </form>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
   
-  <ul class="nav bd-sidenav">
-      
-       
-            <li class="nav-item active">
-              <a class="nav-link" href="">Welcome</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="quickstart.html">Quickstart</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="installation.html">Installation Guide</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Intro Videos
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="videos/first-steps-with-spyder.html">First Steps with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="videos/working-with-spyder.html">Working with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Panes in Depth
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/debugging.html">Debugger</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/editor.html">Editor</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/fileexplorer.html">Files</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/findinfiles.html">Find</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/help.html">Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/historylog.html">History</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/ipythonconsole.html">IPython Console</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/onlinehelp.html">Online Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/outline.html">Outline</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/plots.html">Plots</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/profiler.html">Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/projects.html">Projects</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/pylint.html">Code Analysis</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="panes/variableexplorer.html">Variable Explorer</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Spyder Plugins
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="plugins/lineprofiler.html">Spyder Line Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="plugins/notebook.html">Spyder Notebook</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="plugins/terminal.html">Spyder Terminal</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Troubleshooting
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/first-steps.html">First Steps</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/basic-first-aid.html">Basic First Aid</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/emergency-cpr.html">Emergency CPR</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/common-illnesses.html">Common Illnesses</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/call-for-help.html">Calling for Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="troubleshooting/submit-a-report.html">Submit a Report</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Workshops
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="workshops/financial.html">Financial Data Analysis with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="workshops/plugin-development.html">Plugin Development with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="workshops/qt_fundamentals.html">Qt Fundamentals</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="workshops/scientific-computing.html">Scientific Computing and Visualization with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="faq.html">FAQ</a>
-            </li>
-        
-      
-    </ul>
-
-</nav>
-
-<nav class="d-block d-xl-none" aria-label="Main navigation">
-          <div class="bd-toc-item active row px-3">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="index.html" selected>Spyder 5</option>
-  <option value="../3/index.html">Spyder 3</option>
-  <option value="../4/index.html">Spyder 4</option>
-</select>
-
-          </div>
-    <div class="bd-toc-item active row px-3">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
-      <h4 id="topics-header">Topics</h4>
-      <select id="small-dropdown" class="nav bd-sidenav">
-        
-          
-              <option value="">
-              Welcome
-              </option>
-          
-        
-          
-              <option value="quickstart.html">
-              Quickstart
-              </option>
-          
-        
-          
-              <option value="installation.html">
-              Installation Guide
-              </option>
-          
-        
-          
-            <optgroup label="Intro Videos">
-              
-                <option value="videos/first-steps-with-spyder.html">
-                  First Steps with Spyder
-                </option>
-              
-                <option value="videos/working-with-spyder.html">
-                  Working with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Panes in Depth">
-              
-                <option value="panes/debugging.html">
-                  Debugger
-                </option>
-              
-                <option value="panes/editor.html">
-                  Editor
-                </option>
-              
-                <option value="panes/fileexplorer.html">
-                  Files
-                </option>
-              
-                <option value="panes/findinfiles.html">
-                  Find
-                </option>
-              
-                <option value="panes/help.html">
-                  Help
-                </option>
-              
-                <option value="panes/historylog.html">
-                  History
-                </option>
-              
-                <option value="panes/ipythonconsole.html">
-                  IPython Console
-                </option>
-              
-                <option value="panes/onlinehelp.html">
-                  Online Help
-                </option>
-              
-                <option value="panes/outline.html">
-                  Outline
-                </option>
-              
-                <option value="panes/plots.html">
-                  Plots
-                </option>
-              
-                <option value="panes/profiler.html">
-                  Profiler
-                </option>
-              
-                <option value="panes/projects.html">
-                  Projects
-                </option>
-              
-                <option value="panes/pylint.html">
-                  Code Analysis
-                </option>
-              
-                <option value="panes/variableexplorer.html">
-                  Variable Explorer
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Spyder Plugins">
-              
-                <option value="plugins/lineprofiler.html">
-                  Spyder Line Profiler
-                </option>
-              
-                <option value="plugins/notebook.html">
-                  Spyder Notebook
-                </option>
-              
-                <option value="plugins/terminal.html">
-                  Spyder Terminal
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Troubleshooting">
-              
-                <option value="troubleshooting/first-steps.html">
-                  First Steps
-                </option>
-              
-                <option value="troubleshooting/basic-first-aid.html">
-                  Basic First Aid
-                </option>
-              
-                <option value="troubleshooting/emergency-cpr.html">
-                  Emergency CPR
-                </option>
-              
-                <option value="troubleshooting/common-illnesses.html">
-                  Common Illnesses
-                </option>
-              
-                <option value="troubleshooting/call-for-help.html">
-                  Calling for Help
-                </option>
-              
-                <option value="troubleshooting/submit-a-report.html">
-                  Submit a Report
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Workshops">
-              
-                <option value="workshops/financial.html">
-                  Financial Data Analysis with Spyder
-                </option>
-              
-                <option value="workshops/plugin-development.html">
-                  Plugin Development with Spyder
-                </option>
-              
-                <option value="workshops/qt_fundamentals.html">
-                  Qt Fundamentals
-                </option>
-              
-                <option value="workshops/scientific-computing.html">
-                  Scientific Computing and Visualization with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-              <option value="faq.html">
-              FAQ
-              </option>
-          
-        
-      </select>
-    </div>
-</nav>
-          </div>
+      <div class="navbar-item">
 
-          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
-              <div>
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
                 
-  <div class="section" id="welcome-to-spyder-s-documentation">
-<h1>Welcome to Spyder’s Documentation<a class="headerlink" href="#welcome-to-spyder-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="welcome-to-spyder-s-documentation">
+<h1>Welcome to Spyder’s Documentation<a class="headerlink" href="#welcome-to-spyder-s-documentation" title="Link to this heading">#</a></h1>
 <img alt="Screenshot of the Spyder main window, with the default panel layout" class="align-center" src="_images/mainwindow_default_1610.png" />
 <p>Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.</p>
-<div class="blue-32px section" id="where-to-go-now">
-<h2>Where to go now?<a class="headerlink" href="#where-to-go-now" title="Permalink to this headline">¶</a></h2>
+<section class="blue-32px" id="where-to-go-now">
+<h2>Where to go now?<a class="headerlink" href="#where-to-go-now" title="Link to this heading">#</a></h2>
 <p>Spyder’s documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes.
 These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder.</p>
-<div class="sphinx-bs container-lg pb-3 px-md-0 px-5 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-book-open docutils">
-<p class="card-text">If you are looking for a summary of its features and interface, check out the <a class="reference internal" href="quickstart.html"><span class="doc">Quickstart</span></a>.</p>
+<p class="sd-card-text">If you are looking for a summary of its features and interface, check out the <a class="reference internal" href="quickstart.html"><span class="doc">Tour</span></a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-download docutils">
-<p class="card-text">If you don’t have Spyder installed and want to get started, follow the <a class="reference internal" href="installation.html"><span class="doc">Installation Guide</span></a>.</p>
+<p class="sd-card-text">If you don’t have Spyder installed and want to get started, follow the <a class="reference internal" href="installation.html"><span class="doc">Install Guide</span></a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-walking docutils">
-<p class="card-text">If you are completely new to Spyder, watch our basic tutorial series, <a class="reference internal" href="videos/first-steps-with-spyder.html"><span class="doc">First Steps with Spyder</span></a>.</p>
+<p class="sd-card-text">If you are completely new to Spyder, watch our basic tutorial series, <a class="reference internal" href="videos/first-steps-with-spyder.html"><span class="doc">First Steps with Spyder</span></a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-columns docutils">
-<p class="card-text">If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to <a class="reference internal" href="panes/index.html"><span class="doc">Panes in Depth</span></a>.</p>
+<p class="sd-card-text">If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to <a class="reference internal" href="panes/index.html"><span class="doc">Panes</span></a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-first-aid docutils">
-<p class="card-text">If you’ve run into a Spyder problem and need help solving it, take a look at our <a class="reference internal" href="troubleshooting/first-steps.html"><span class="doc">troubleshooting guide</span></a>.</p>
+<p class="sd-card-text">If you’ve run into a Spyder problem and need help solving it, take a look at our <a class="reference internal" href="troubleshooting/first-steps.html"><span class="doc">troubleshooting guide</span></a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="align-center docutils">
 </div>
 <div class="align-center fasb fa-question-circle docutils">
-<p class="card-text">If you have a question about Spyder, visit the <a class="reference internal" href="faq.html"><span class="doc">Frequently Asked Questions</span></a> section.</p>
+<p class="sd-card-text">If you have a question about Spyder, visit the <a class="reference internal" href="faq.html"><span class="doc">Frequently Asked Questions</span></a> section.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="fa-offset-h3 section" id="join-our-community">
-<h2>Join our community<a class="headerlink" href="#join-our-community" title="Permalink to this headline">¶</a></h2>
+</section>
+<section class="fa-offset-h3" id="join-our-community">
+<h2>Join our community<a class="headerlink" href="#join-our-community" title="Link to this heading">#</a></h2>
 <p>Spyder is open source software, which means that is free for everyone to use and anyone can contribute to it.
 We encourage everyone to become a part of our community and help develop Spyder!</p>
-<div class="fasb fa-laptop-code section" id="looking-to-contribute-your-code">
-<h3>Looking to contribute your code?<a class="headerlink" href="#looking-to-contribute-your-code" title="Permalink to this headline">¶</a></h3>
+<section class="fasb fa-laptop-code" id="looking-to-contribute-your-code">
+<h3>Looking to contribute your code?<a class="headerlink" href="#looking-to-contribute-your-code" title="Link to this heading">#</a></h3>
 <p>Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it.
 You can follow our <a class="reference external" href="https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md">contributing guide</a> to set up a development environment, and you can get involved with the project through our <a class="reference external" href="https://github.com/spyder-ide">Github repository</a>.
 The easiest way to get started is helping us resolve items on our <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issue tracker</a>, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn’t require writing any code).</p>
-</div>
-<div class="fasb fa-book section" id="want-to-help-writing-docs">
-<h3>Want to help writing docs?<a class="headerlink" href="#want-to-help-writing-docs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section class="fasb fa-book" id="want-to-help-writing-docs">
+<h3>Want to help writing docs?<a class="headerlink" href="#want-to-help-writing-docs" title="Link to this heading">#</a></h3>
 <p>We welcome your contributions of corrections, additions and enhancements to these docs.
 Check out the <a class="reference external" href="https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md">docs contributing guide</a> to learn how to submit a PR with your changes on our <a class="reference external" href="https://github.com/spyder-ide/spyder-docs">docs repo</a>.</p>
-</div>
-<div class="fasb fa-globe-americas section" id="interested-in-translating-spyder">
-<h3>Interested in translating Spyder?<a class="headerlink" href="#interested-in-translating-spyder" title="Permalink to this headline">¶</a></h3>
+</section>
+<section class="fasb fa-globe-americas" id="interested-in-translating-spyder">
+<h3>Interested in translating Spyder?<a class="headerlink" href="#interested-in-translating-spyder" title="Link to this heading">#</a></h3>
 <p>In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages.</p>
 <p>For this purpose we use <a class="reference external" href="https://crowdin.com/project/spyder">Crowdin</a>, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.</p>
-</div>
-<div class="fasb fa-user-friends section" id="want-to-be-part-of-our-social-media">
-<h3>Want to be part of our social media?<a class="headerlink" href="#want-to-be-part-of-our-social-media" title="Permalink to this headline">¶</a></h3>
+</section>
+<section class="fasb fa-user-friends" id="want-to-be-part-of-our-social-media">
+<h3>Want to be part of our social media?<a class="headerlink" href="#want-to-be-part-of-our-social-media" title="Link to this heading">#</a></h3>
 <p>Connect with Spyder through our social media channels to stay up to date with our current developments!</p>
 <div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-              <div class='prev-next-bottom'>
-                
-    <a class='prev-next-link right-next' id="next-link" href="quickstart.html" title="next page">Quickstart <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
-
-              </div>
               
-          </main>
-
-          <div class="col-md-3 col-xl-2">
               
-
-<div class="row d-none d-md-block bd-toc">
-    
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/index.rst">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="quickstart.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tour</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-
-    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
-    <nav id="bd-toc-nav">
-        <ul class="nav section-nav flex-column">
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#where-to-go-now" class="nav-link">Where to go now?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#join-our-community" class="nav-link">Join our community</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#looking-to-contribute-your-code" class="nav-link">Looking to contribute your code?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#want-to-help-writing-docs" class="nav-link">Want to help writing docs?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#interested-in-translating-spyder" class="nav-link">Interested in translating Spyder?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#want-to-be-part-of-our-social-media" class="nav-link">Want to be part of our social media?</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-        </ul>
-    </nav>
-</div>
-
-<div class="row d-block d-md-none">
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
-        <div class="navbar-toggler-item">
-            <a class="navbar-toggler btn-outline-default" href="search.html"><span class="fas fa-search"></span></a>
-        </div>
-        <div class="navbar-toggler-item">
-            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
-                <span class="fas fa-comment"></span>
-            </a>
-        </div>
-            <div class="navbar-toggler-item">
-                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars fa-2"></span>
-                </button>
-            </div>
-        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
-            <ul class="nav section-nav flex-column">
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#where-to-go-now" class="nav-link">Where to go now?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#join-our-community" class="nav-link">Join our community</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#looking-to-contribute-your-code" class="nav-link">Looking to contribute your code?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#want-to-help-writing-docs" class="nav-link">Want to help writing docs?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#interested-in-translating-spyder" class="nav-link">Interested in translating Spyder?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#want-to-be-part-of-our-social-media" class="nav-link">Want to be part of our social media?</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-            </ul>
-        </div>
-    </nav>
-</div>
+                </footer>
               
-          </div>
-      </div>
-    </div>
-
-    <script src="_static/js/theme.js"></script>
-    <script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'spyder-ide/public',
-        activationElement: '#open_chat',
-    };
-</script>
-
-<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
-    Open chat
-</a>
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-
-
-
-<div class="footer pb-5 pb-md-0">
-    <div class="container pb-3">
-        
-        <div class="row justify-content-center">
-            <a href="https://opencollective.com/spyder/donate" target="_blank">
-              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
-            </a>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="text-center pb-3">
-                 Connect with us on: 
-                 
-                  
-                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://instagram.com/spyderide">Instagram</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
-                
             </div>
-        </div>
-        <div class="row justify-content-center">
-              <small>
-                
-                <div class="text-center">
-                  &copy; 2009-2024 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
-                </div>
-                
-                <div class="text-center">
-                    
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
-                    
-                    
-                      <span class="pipe-red">|</span>
-                      <a href="_sources/index.rst.txt"
-                          rel="nofollow">Page source</a>
-                    
-                </div>
-              </small>
-            </div>
-        </div>
-    </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-go-now">Where to go now?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-our-community">Join our community</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-to-contribute-your-code">Looking to contribute your code?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#want-to-help-writing-docs">Want to help writing docs?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interested-in-translating-spyder">Interested in translating Spyder?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#want-to-be-part-of-our-social-media">Want to be part of our social media?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
 </div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

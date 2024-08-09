@@ -1,0 +1,15 @@
+[
+    {
+        "version": "5",
+        "preferred": true,
+        "url": "https://docs.spyder-ide.org/5/"
+    },
+    {
+        "version": "4",
+        "url": "https://docs.spyder-ide.org/4/"
+    },
+    {
+        "version": "3",
+        "url": "https://docs.spyder-ide.org/3/"
+    }
+]

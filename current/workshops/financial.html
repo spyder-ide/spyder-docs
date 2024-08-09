@@ -1,582 +1,475 @@
 
-
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Financial Data Analysis with Spyder &#8212; Spyder 5 documentation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css" />
-    <link href="../_static/css/theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link href="../_static/css/spyder.css" rel="stylesheet">
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/driver.min.js"></script>
-    <script src="../_static/js/custom_scripts.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=601b7b68" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/financial';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Plugin Development with Spyder" href="plugin-development.html" />
     <link rel="prev" title="Workshops" href="index.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
-    
-
-    
-
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
-<div class="container">
   
-  <a class="navbar-brand" href="https://www.spyder-ide.org/">
-    <img src="../_static/spyder_logo.png" class="logo" alt="logo">
-  </a>
   
-  <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  <div id="navbar-menu" class="collapse navbar-collapse">
-    <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://www.spyder-ide.org/blog">Blog</a>
-        </li>
-      
-        <li class="nav-item">
-            <a class="nav-link nav-external nav-link-active-section" href="/">Docs</a>
-        </li>
-      
-    </ul>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
-</div>
-    </nav>
 
-    <div id="doc-content" class="container">
-      <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
-<div class="d-none d-xl-block">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="financial.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-    <div class="input-group">
-      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
-      <div class="input-group-append">
-        <button class="btn btn-outline-danger" type="submit">
-          <span class="fas fa-search"></span>
-        </button>
-      </div>
-    </div>
-  </form>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
-
-  <div class="bd-toc-item active">
   
-  <ul class="nav bd-sidenav">
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../index.html">Welcome</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../quickstart.html">Quickstart</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../installation.html">Installation Guide</a>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Intro Videos
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/first-steps-with-spyder.html">First Steps with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../videos/working-with-spyder.html">Working with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Panes in Depth
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/debugging.html">Debugger</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/editor.html">Editor</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/fileexplorer.html">Files</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/findinfiles.html">Find</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/help.html">Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/historylog.html">History</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/ipythonconsole.html">IPython Console</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/onlinehelp.html">Online Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/outline.html">Outline</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/plots.html">Plots</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/profiler.html">Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/projects.html">Projects</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/pylint.html">Code Analysis</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../panes/variableexplorer.html">Variable Explorer</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Spyder Plugins
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/lineprofiler.html">Spyder Line Profiler</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/notebook.html">Spyder Notebook</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../plugins/terminal.html">Spyder Terminal</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              
-              <details>
-              
-                <summary>
-                    Troubleshooting
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/first-steps.html">First Steps</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/basic-first-aid.html">Basic First Aid</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/emergency-cpr.html">Emergency CPR</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/common-illnesses.html">Common Illnesses</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/call-for-help.html">Calling for Help</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="../troubleshooting/submit-a-report.html">Submit a Report</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item active">
-                          
-              <details open>
-              
-                <summary>
-                    Workshops
-                </summary>
-                <ul class="nav">
-                
-                    
-                        <li class="nav-item sub-nav-item active">
-                            <a href="">Financial Data Analysis with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="plugin-development.html">Plugin Development with Spyder</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="qt_fundamentals.html">Qt Fundamentals</a>
-                        </li>
-                    
-                  
-                    
-                        <li class="nav-item sub-nav-item ">
-                            <a href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a>
-                        </li>
-                    
-                  
-                </ul>
-              </details>
-            </li>
-        
-      
-       
-            <li class="nav-item ">
-              <a class="nav-link" href="../faq.html">FAQ</a>
-            </li>
-        
-      
-    </ul>
-
-</nav>
-
-<nav class="d-block d-xl-none" aria-label="Main navigation">
-          <div class="bd-toc-item active row px-3">
-<h4 id="versions-header">Version</h4>
-<select id="select-versions">
-  <option value="financial.html" selected>Spyder 5</option>
-  <option value="../../3/index.html">Spyder 3</option>
-  <option value="../../4/index.html">Spyder 4</option>
-</select>
-
-          </div>
-    <div class="bd-toc-item active row px-3">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
-      <h4 id="topics-header">Topics</h4>
-      <select id="small-dropdown" class="nav bd-sidenav">
-        
-          
-              <option value="../index.html">
-              Welcome
-              </option>
-          
-        
-          
-              <option value="../quickstart.html">
-              Quickstart
-              </option>
-          
-        
-          
-              <option value="../installation.html">
-              Installation Guide
-              </option>
-          
-        
-          
-            <optgroup label="Intro Videos">
-              
-                <option value="../videos/first-steps-with-spyder.html">
-                  First Steps with Spyder
-                </option>
-              
-                <option value="../videos/working-with-spyder.html">
-                  Working with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Panes in Depth">
-              
-                <option value="../panes/debugging.html">
-                  Debugger
-                </option>
-              
-                <option value="../panes/editor.html">
-                  Editor
-                </option>
-              
-                <option value="../panes/fileexplorer.html">
-                  Files
-                </option>
-              
-                <option value="../panes/findinfiles.html">
-                  Find
-                </option>
-              
-                <option value="../panes/help.html">
-                  Help
-                </option>
-              
-                <option value="../panes/historylog.html">
-                  History
-                </option>
-              
-                <option value="../panes/ipythonconsole.html">
-                  IPython Console
-                </option>
-              
-                <option value="../panes/onlinehelp.html">
-                  Online Help
-                </option>
-              
-                <option value="../panes/outline.html">
-                  Outline
-                </option>
-              
-                <option value="../panes/plots.html">
-                  Plots
-                </option>
-              
-                <option value="../panes/profiler.html">
-                  Profiler
-                </option>
-              
-                <option value="../panes/projects.html">
-                  Projects
-                </option>
-              
-                <option value="../panes/pylint.html">
-                  Code Analysis
-                </option>
-              
-                <option value="../panes/variableexplorer.html">
-                  Variable Explorer
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Spyder Plugins">
-              
-                <option value="../plugins/lineprofiler.html">
-                  Spyder Line Profiler
-                </option>
-              
-                <option value="../plugins/notebook.html">
-                  Spyder Notebook
-                </option>
-              
-                <option value="../plugins/terminal.html">
-                  Spyder Terminal
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Troubleshooting">
-              
-                <option value="../troubleshooting/first-steps.html">
-                  First Steps
-                </option>
-              
-                <option value="../troubleshooting/basic-first-aid.html">
-                  Basic First Aid
-                </option>
-              
-                <option value="../troubleshooting/emergency-cpr.html">
-                  Emergency CPR
-                </option>
-              
-                <option value="../troubleshooting/common-illnesses.html">
-                  Common Illnesses
-                </option>
-              
-                <option value="../troubleshooting/call-for-help.html">
-                  Calling for Help
-                </option>
-              
-                <option value="../troubleshooting/submit-a-report.html">
-                  Submit a Report
-                </option>
-              
-            </optgroup>
-          
-        
-          
-            <optgroup label="Workshops">
-              
-                <option value="">
-                  Financial Data Analysis with Spyder
-                </option>
-              
-                <option value="plugin-development.html">
-                  Plugin Development with Spyder
-                </option>
-              
-                <option value="qt_fundamentals.html">
-                  Qt Fundamentals
-                </option>
-              
-                <option value="scientific-computing.html">
-                  Scientific Computing and Visualization with Spyder
-                </option>
-              
-            </optgroup>
-          
-        
-          
-              <option value="../faq.html">
-              FAQ
-              </option>
-          
-        
-      </select>
-    </div>
-</nav>
-          </div>
+      <div class="navbar-item">
 
-          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
-              <div>
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Financial Data Analysis with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-development.html">Plugin Development with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_fundamentals.html">Qt Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Workshops</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Financial...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
                 
-  <div class="section" id="financial-data-analysis-with-spyder">
-<h1>Financial Data Analysis with Spyder<a class="headerlink" href="#financial-data-analysis-with-spyder" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="financial-data-analysis-with-spyder">
+<h1>Financial Data Analysis with Spyder<a class="headerlink" href="#financial-data-analysis-with-spyder" title="Link to this heading">#</a></h1>
 <p>By the end of this workshop participants will be able to use Spyder effectively for  applying some normative financial theories and models to assemble a portfolio of assets in a way that maximizes the expected return for a given level of risk. In this way, statistically-based tools are used to construct investment portfolios.</p>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p>To follow this workshop we recommend that you have a intermediate knowledge of Python. You can visit <a class="reference external" href="https://docs.python.org/3/tutorial/">The Python Tutorial</a> to learn the basics of this programming language or to refresh your knowledge of Python.</p>
 <p>You will also need to have <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> (or <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>) and Spyder installed. More information about Spyder installation in <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a>.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
 While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.</p>
@@ -587,24 +480,24 @@ While we still support Anaconda, we recommend this install method on those platf
 <li><p>Basic knowledge of Statistics</p></li>
 <li><p>Some knowledge of Financial Econometrics is desirable</p></li>
 </ul>
-</div>
-<div class="section" id="learning-goals">
-<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="learning-goals">
+<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
 <p>After completing this workshop, you should be able to:</p>
 <ul class="simple">
 <li><p>Apply elementary statistical analysis to stock and cryptocurrency portfolios to measure their performance</p></li>
 <li><p>Understand the advantages of programming with an IDE, such as inspecting variables using the Variable Explorer and interacting with plots leveraging the Plots Pane.</p></li>
 </ul>
-</div>
-<div class="section" id="learner-profile">
-<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="learner-profile">
+<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Link to this heading">#</a></h2>
 <p>This workshop is intended for people interested in finance who want to take their first steps in Financial Analysis using Python and Spyder.</p>
-</div>
-<div class="section" id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
 <p>In this workshop we will obtain financial data in real-time from <a class="reference external" href="https://finance.yahoo.com">Yahoo! Finance</a> API and explore financial portfolios using Econometrics and computational tools.</p>
-<div class="section" id="why-use-python-for-financial-analysis">
-<h3>Why use Python for financial analysis?<a class="headerlink" href="#why-use-python-for-financial-analysis" title="Permalink to this headline">¶</a></h3>
+<section id="why-use-python-for-financial-analysis">
+<h3>Why use Python for financial analysis?<a class="headerlink" href="#why-use-python-for-financial-analysis" title="Link to this heading">#</a></h3>
 <p>Real-time analysis of historical and current financial data is essential for those investing in financial instruments. Python has a number of features that make it ideal for financial tasks:</p>
 <ul class="simple">
 <li><p>It is easy to learn for anyone, whether they have previous programming experience or not</p></li>
@@ -614,51 +507,51 @@ While we still support Anaconda, we recommend this install method on those platf
 <li><p>It has excellent libraries for plotting</p></li>
 <li><p>You can use resources such as <a class="reference external" href="https://colab.research.google.com">Google Colab</a> or <a class="reference external" href="https://mybinder.org">Binder</a> to do your analysis in the cloud.</p></li>
 </ul>
-</div>
-<div class="section" id="why-should-i-use-an-ide">
-<h3>Why should I use an IDE?<a class="headerlink" href="#why-should-i-use-an-ide" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="why-should-i-use-an-ide">
+<h3>Why should I use an IDE?<a class="headerlink" href="#why-should-i-use-an-ide" title="Link to this heading">#</a></h3>
 <p>Although you can use Python without an IDE (Integrated Development Environment), you will work much better with one. Spyder is a Scientific Integrated Development Environment written in Python, and designed by and for scientists, engineers, and data analysts. Spyder’s capabilities and its integration with Python make it perfect for financial analysis.</p>
-</div>
-<div class="section" id="introduction-to-financial-analysis-with-spyder">
-<h3>Introduction to financial analysis with Spyder<a class="headerlink" href="#introduction-to-financial-analysis-with-spyder" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="introduction-to-financial-analysis-with-spyder">
+<h3>Introduction to financial analysis with Spyder<a class="headerlink" href="#introduction-to-financial-analysis-with-spyder" title="Link to this heading">#</a></h3>
 <p>If you’re not familiar with Spyder, we recommend you start with our <a class="reference internal" href="../quickstart.html"><span class="doc">Quickstart</span></a>. But if you want a  summary, here’s a quick overview.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you already have experience with Spyder, you can skip this section.</p>
 </div>
-<div class="section" id="editor">
-<h4>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h4>
+<section id="editor">
+<h4>Editor<a class="headerlink" href="#editor" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> is the place where you write your code and save it as a file (script). It allows you to easily persist your work. This is where you write the code you want to keep from the data analysis you do in IPython Console. <strong>Here you will also be able to read, edit and run the code from this workshop</strong>.</p>
-</div>
-<div class="section" id="ipython-console">
-<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ipython-console">
+<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> is the Spyder’s component where you write chunks of code that you want to experiment with. <strong>In this workshop, we are going to give you pieces of code that you can copy and run in this console</strong>.</p>
 <p>In essence, the IPython Console allows you to execute commands and interact with data using Python.</p>
-</div>
-<div class="section" id="variable-explorer">
-<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="variable-explorer">
+<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Variable Explorer</span></a> is one of Spyder’s best features. It allows you to interactively browse and manage the objects generated in the code of the currently selected <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> session.</p>
 <p>The Variable Explorer is one of the most frequently used components in this workshop. <strong>This is the pane where we will observe the data and most of the results of the analysis, except for the plots</strong>.</p>
-</div>
-<div class="section" id="plots-pane">
-<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="plots-pane">
+<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Link to this heading">#</a></h4>
 <p>The <a class="reference internal" href="../panes/plots.html"><span class="doc">Plots pane</span></a> shows all the static graphs and images created in your IPython Console session. <strong>All plots generated by the code will appear in this component</strong>.  This pane also allows you to save each graphic in a local file or copy it to the clipboard to share it with other people.</p>
-</div>
-</div>
-</div>
-<div class="section" id="preparation-work">
-<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="preparation-work">
+<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Link to this heading">#</a></h2>
 <p>Before starting, you must have installed some packages and libraries needed to run the code. We recommend you to install these requirements in a virtual environment. Here we explain step by step how to do it.</p>
-<div class="section" id="set-up-conda-environment">
-<h3>Set up Conda environment<a class="headerlink" href="#set-up-conda-environment" title="Permalink to this headline">¶</a></h3>
+<section id="set-up-conda-environment">
+<h3>Set up Conda environment<a class="headerlink" href="#set-up-conda-environment" title="Link to this heading">#</a></h3>
 <p>If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.</p>
 <p>You can set up your environment in two different ways.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>We recommend creating the virtual environment with Anaconda (or Miniconda) as it integrates seamlessly with Spyder. You can find installation instructions in <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda documentation</a>.</p>
 </div>
-<div class="section" id="with-commands">
-<h4>With commands<a class="headerlink" href="#with-commands" title="Permalink to this headline">¶</a></h4>
+<section id="with-commands">
+<h4>With commands<a class="headerlink" href="#with-commands" title="Link to this heading">#</a></h4>
 <p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), to create a new environment called <code class="docutils literal notranslate"><span class="pre">financial-analysis</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>financial-analysis
 </pre></div>
@@ -670,31 +563,31 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>Historic-Crypto
 </pre></div>
 </div>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.</p>
 </div>
-</div>
-</div>
-<div class="section" id="download-the-datasets">
-<h3>Download the datasets<a class="headerlink" href="#download-the-datasets" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="download-the-datasets">
+<h3>Download the datasets<a class="headerlink" href="#download-the-datasets" title="Link to this heading">#</a></h3>
 <p>Although during the workshop we will explain how to use some APIs to download up-to-date data, you can also download the datasets in csv format from <a class="reference external" href="https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215">this link</a>.</p>
 <p>To follow this workshop you do not need to create a new directory. However, if you have downloaded the data and want to use it instead of the APIs, you must set the directory that has the downloaded data as the working directory. In order to do this, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the downloaded data. Something like this:</p>
 <img alt="Spyder's Working Directory plugin showing the working directory downloaded-data-dir" src="../_images/working-directory.png" />
-</div>
-<div class="section" id="setting-up-the-virtual-environment-in-spyder">
-<h3>Setting up the virtual environment in Spyder<a class="headerlink" href="#setting-up-the-virtual-environment-in-spyder" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="setting-up-the-virtual-environment-in-spyder">
+<h3>Setting up the virtual environment in Spyder<a class="headerlink" href="#setting-up-the-virtual-environment-in-spyder" title="Link to this heading">#</a></h3>
 <p>Let’s check that the virtual environment we created is enabled in Spyder. Go to <span class="guilabel">Preferences &gt; Python interpreter</span>, and use the dropdown below <span class="guilabel">Use the following Python interpreter</span> to choose your virtual environment. You should see something like this:</p>
 <img alt="Screenshot on how to set up environment in Spyder's Preferences" src="../_images/set-up-environment.png" />
 <p>Now, you have everything ready to proceed with the workshop.</p>
-</div>
-<div class="section" id="download-the-code">
-<h3>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="download-the-code">
+<h3>Download the code<a class="headerlink" href="#download-the-code" title="Link to this heading">#</a></h3>
 <p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can download <a class="reference download internal" download="" href="../_downloads/468d7c76843772ae0fb48a15096383df/financial-analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
-</div>
-</div>
-<div class="section" id="obtain-financial-data">
-<h2>Obtain financial data<a class="headerlink" href="#obtain-financial-data" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="obtain-financial-data">
+<h2>Obtain financial data<a class="headerlink" href="#obtain-financial-data" title="Link to this heading">#</a></h2>
 <p>When it comes to finance, being up to date is very important. So we are going to use a Python library that allows us to get updated historical Stock Market records from <a class="reference external" href="https://finance.yahoo.com">Yahoo! Finance</a> API. In this way, we will be able to download data in the period of time we are interested in analyzing.</p>
 <p>Remember to type and run all code for this workshop in the “IPython Console” at the bottom right of Spyder.</p>
 <img alt="Screenshot IPython Console location in Spyder IDE" src="../_images/ipython-console-in-context.png" />
@@ -719,8 +612,8 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>We have used the <code class="docutils literal notranslate"><span class="pre">Ticker</span></code> class of the <code class="docutils literal notranslate"><span class="pre">yfinance</span></code> library to create a <code class="docutils literal notranslate"><span class="pre">netflix</span></code> object. This object contains attributes and methods that we can query to obtain various types of information.</p>
-<div class="section" id="general-stock-information">
-<h3>General stock information<a class="headerlink" href="#general-stock-information" title="Permalink to this headline">¶</a></h3>
+<section id="general-stock-information">
+<h3>General stock information<a class="headerlink" href="#general-stock-information" title="Link to this heading">#</a></h3>
 <p>If you want to know which methods and attributes you can query, you can do so with the built-in <code class="docutils literal notranslate"><span class="pre">help()</span></code> function.</p>
 <p>You can also type the name of the object (<code class="docutils literal notranslate"><span class="pre">netflix</span></code>) in the console, then type a period and hit the Tab key once. IPython suggestions will then appear to help you navigate the object:</p>
 <img alt="IPython Console auto-suggestions" src="../_images/ipython-auto-suggestions.png" />
@@ -738,9 +631,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <img alt="netflix_info output in IPython Console" src="../_images/pprint-output-netflix-info.png" />
 <p>Although <code class="docutils literal notranslate"><span class="pre">pprint</span></code> displays all the information, it is easier to view it in the Variable Explorer.</p>
-</div>
-<div class="section" id="historical-stock-data">
-<h3>Historical stock data<a class="headerlink" href="#historical-stock-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="historical-stock-data">
+<h3>Historical stock data<a class="headerlink" href="#historical-stock-data" title="Link to this heading">#</a></h3>
 <p>We can download in a dataset the history of a stock with the following line of code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">netflix</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
 </pre></div>
@@ -748,14 +641,14 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>We can see a summary and more details of this dataset in the Variable Explorer. It appears as a DataFrame object, with 7 columns and thousands of rows. If we double-click on it we will see the historical records of Netflix stock organized by ascending dates.</p>
 <img alt="Netflix historical operations" src="../_images/netflix-history.png" />
 <p>Throughout this workshop we will use this historical information to compare, with various normative financial theories, different types of financial portfolios.</p>
-</div>
-</div>
-<div class="section" id="first-portfolio">
-<h2>First portfolio<a class="headerlink" href="#first-portfolio" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="first-portfolio">
+<h2>First portfolio<a class="headerlink" href="#first-portfolio" title="Link to this heading">#</a></h2>
 <p>Let’s build our first stock investment portfolio! Say we are interested in investing in technology, and we want to know what performance can be obtained by putting money into some of the “heavyweights” in this industry.</p>
 <p>To measure the performance of our first portfolio we are going to use a classic theory in the world of finance: <a class="reference external" href="https://analystprep.com/study-notes/actuarial-exams/soa/ifm-investment-and-financial-markets/mean-variance-portfolio-theory/">mean-variance portfolio (MVP) theory</a>. This model assumes that investors only care about expected returns and the variance of such returns. The analysis is based entirely on statistical measures based on a time series of share prices, such as periodic mean returns and the variances of those returns with the same periodicity.</p>
-<div class="section" id="prepare-portfolio-data">
-<h3>Prepare portfolio data<a class="headerlink" href="#prepare-portfolio-data" title="Permalink to this headline">¶</a></h3>
+<section id="prepare-portfolio-data">
+<h3>Prepare portfolio data<a class="headerlink" href="#prepare-portfolio-data" title="Link to this heading">#</a></h3>
 <p>Before we start, let’s run some lines of code to style the plots.  These lines are optional, but we recommend that you run them so that the graphics look like the screenshots we present in this workshop.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;fivethirtyeight&quot;</span><span class="p">)</span>
 <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;savefig.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
@@ -767,7 +660,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SYMBOLS_1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GOOG&quot;</span><span class="p">,</span> <span class="s2">&quot;AAPL&quot;</span><span class="p">,</span> <span class="s2">&quot;MSFT&quot;</span><span class="p">,</span> <span class="s2">&quot;NFLX&quot;</span><span class="p">,</span> <span class="s2">&quot;AMZN&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you search for <code class="docutils literal notranslate"><span class="pre">SYMBOLS_1</span></code> in Variable Explorer you will not find it: Python interprets this element not as a variable, but as a <strong>constant</strong>. This is because the name is written with uppercase letters (no letter is lowercase). By default, the Variable Explorer doesn’t show this, but actually you can change the settings in the <span class="guilabel">Preferences</span> to be able to see these constants.</p>
 </div>
@@ -789,9 +682,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>You will notice that there is a new DataFrame in the Variable Explorer called <code class="docutils literal notranslate"><span class="pre">close_data_1</span></code> with 2,265 rows and 5 columns.</p>
-</div>
-<div class="section" id="a-first-glance-at-the-portfolio">
-<h3>A first glance at the portfolio<a class="headerlink" href="#a-first-glance-at-the-portfolio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="a-first-glance-at-the-portfolio">
+<h3>A first glance at the portfolio<a class="headerlink" href="#a-first-glance-at-the-portfolio" title="Link to this heading">#</a></h3>
 <p>We want to see how our portfolio would have performed if we had invested in it from 2012 to early 2021. How could we obtain this measurement? Let’s look at the monthly closing prices of each stock. To do this we will do an automatic resample of the data. And then we will calculate the change in relative frequencies (percentages).</p>
 <p>The resampling will be performed with the <code class="docutils literal notranslate"><span class="pre">resample(&quot;M&quot;)</span></code> method and the calculation of percentages with the <code class="docutils literal notranslate"><span class="pre">pct_change()</span></code> method. The result will be stored in the <code class="docutils literal notranslate"><span class="pre">monthly_data_1</span></code> variable.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_1</span> <span class="o">=</span> <span class="n">close_data_1</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
@@ -808,7 +701,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <span class="c1"># dtype: float64</span>
 </pre></div>
 </div>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Remember that this closing information represents the relative growth of each stock, not its closing price in any currency.</p>
 </div>
@@ -829,7 +722,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <img alt="Portfolio 1 daily stock price" src="../_images/portfolio-1-daily-stock-price.png" />
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>You will be able to see the graph in the Plots pane. On the left, you will see the plot in detail. On the right, a stack will be created with all the plots that are generated both in the Console and by running the code directly in the Editor. You can copy, delete or save the plot to disk by clicking on it with the right mouse button or trackpad.</p>
 </div>
@@ -840,11 +733,11 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <img alt="Portfolio 1 monthly stock price" src="../_images/portfolio-1-monthly-stock-price.png" />
 <p>This plot of the monthly data is “smoother” than the plot of the daily data.</p>
-</div>
-<div class="section" id="returns-and-volatility">
-<h3>Returns and volatility<a class="headerlink" href="#returns-and-volatility" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="returns-and-volatility">
+<h3>Returns and volatility<a class="headerlink" href="#returns-and-volatility" title="Link to this heading">#</a></h3>
 <p>Remember that in the <em>mean-variance portfolio theory</em> what matters are the expected returns and variances. To calculate these returns, we will divide the price of the stock on one day by the price of the same stock on the previous day. We will do this by dividing the <code class="docutils literal notranslate"><span class="pre">close_data_1</span></code> DataFrame by a version of itself in which we shift each record one date backwards (<code class="docutils literal notranslate"><span class="pre">shift(1)</span></code>). For example, if on the date 2012-01-03 a stock was valued at 1, and on the next day (2012-01-02), it was valued at 2, then in our shifted dataset, on the day 2012-01-03 the stock would be worth 1. In this way, we would divide 1 by 2. And so on with all the values of all the shares. We will also normalize the results by passing them to a logarithmic scale with <code class="docutils literal notranslate"><span class="pre">np.log()</span></code>.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Trend lines are more easily drawn in logarithmic scale because they tend to fit better to the minimums. In addition, the logarithmic scale gives a more realistic view of price movements.</p>
 </div>
@@ -854,7 +747,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>In the variable <code class="docutils literal notranslate"><span class="pre">rets_1</span></code> you can see the resulting DataFrame. If you double-click on the variable name in the Variable Explorer, you will see that there are positive values (the share price increased) and negative values (the price decreased at the time of closing).</p>
 <img alt="Portfolio 1 daily returns" src="../_images/portfolio-1-returns.png" />
 <p>In addition to the returns of each stock, we will need the specific weight of each stock in the portfolio, i.e., how many shares of each company are in the portfolio. In this workshop we will assume that there is one share of each company and, therefore, the weights will be distributed equally.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A stock is a financial security that represents that you own a part of a company (whatever the size of this part). A share, on the other hand, is the smallest unit of denomination of a stock. A stock is composed of one or several shares.</p>
 </div>
@@ -886,9 +779,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>If high return is desirable, high volatility is undesirable. The risk of this portfolio is relatively large.</p>
-</div>
-<div class="section" id="sharpe-ratio">
-<h3>Sharpe ratio<a class="headerlink" href="#sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sharpe-ratio">
+<h3>Sharpe ratio<a class="headerlink" href="#sharpe-ratio" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sharpe_ratio">Sharpe</a> ratio or index is a measure of portfolio performance. It relates the portfolio’s return to its volatility, comparing the expected/realized return with the expected/realized risk. It is calculated as the difference between the actual investment returns and the expected return in a zero-risk situation, divided by the volatility of the investment. <strong>It provides a model of the additional amount of returns received for each additional unit of risk</strong>.</p>
 <p>Let’s formalize this in a function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
@@ -901,7 +794,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <span class="c1"># 1.2061518063427656</span>
 </pre></div>
 </div>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The Sharpe ratio measure is best understood in context: when comparing two or more portfolios, the one with the higher Sharpe ratio provides more profit for the same amount of risk.</p>
 </div>
@@ -920,12 +813,12 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
     <span class="k">return</span> <span class="n">volat_ret</span><span class="p">,</span> <span class="n">sharpe_ratio</span>
 </pre></div>
 </div>
-<div class="alert alert-warning">
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>You do not need to type the following code in the IPython Console. If you write the function above it will be enough. It is just a code presentation to explain what is inside the function.</p>
 </div>
-<div class="section" id="monte-carlo-sharpe-function-explained">
-<h4><code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function explained<a class="headerlink" href="#monte-carlo-sharpe-function-explained" title="Permalink to this headline">¶</a></h4>
+<section id="monte-carlo-sharpe-function-explained">
+<h4><code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function explained<a class="headerlink" href="#monte-carlo-sharpe-function-explained" title="Link to this heading">#</a></h4>
 <p>Let’s now break the function down to understand what is happening. First, we create a numpy array of length 1,000 and width of the number of shares in the portfolio. Each row of the array has random weights that always add up to 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sim_weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)))</span>
 <span class="n">sim_weights</span> <span class="o">=</span> <span class="p">(</span><span class="n">sim_weights</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="n">sim_weights</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
@@ -940,15 +833,15 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sharpe_ratio</span> <span class="o">=</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">volat_ret</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="using-the-monte-carlo-sharpe-function">
-<h4>Using the <code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function<a class="headerlink" href="#using-the-monte-carlo-sharpe-function" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="using-the-monte-carlo-sharpe-function">
+<h4>Using the <code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function<a class="headerlink" href="#using-the-monte-carlo-sharpe-function" title="Link to this heading">#</a></h4>
 <p>We use the function to get the simulated returns and volatility of portfolio 1 (<code class="docutils literal notranslate"><span class="pre">port_1_vr</span></code>) and the related Sharpe ratios (<code class="docutils literal notranslate"><span class="pre">port_1_sr</span></code>).</p>
 <p>Enter the following code in the console.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port_1_vr</span><span class="p">,</span> <span class="n">port_1_sr</span> <span class="o">=</span> <span class="n">monte_carlo_sharpe</span><span class="p">(</span><span class="n">rets_1</span><span class="p">,</span> <span class="n">SYMBOLS_1</span><span class="p">,</span> <span class="n">weights_1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Remember that the weights are initialized randomly, so each time you run this code you will get different results.</p>
 </div>
@@ -966,10 +859,10 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <img alt="Portfolio 1 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-1.png" />
 <p>A roughly linear relationship can be observed between returns and volatility: the higher the volatility, the higher the gains. And the Sharpe ratio shows an important amount of variability (it is noticeable in the “width” of the line drawn).</p>
 <p>This seems to be a good portfolio because it has a good performance with a not very large variance.</p>
-</div>
-</div>
-<div class="section" id="optimal-portfolio-weights">
-<h3>Optimal portfolio weights<a class="headerlink" href="#optimal-portfolio-weights" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="optimal-portfolio-weights">
+<h3>Optimal portfolio weights<a class="headerlink" href="#optimal-portfolio-weights" title="Link to this heading">#</a></h3>
 <p>Can we use the data obtained to calculate the optimal weights for the portfolio by year? Of course we can. Let’s start by delimiting the previous years as variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 </pre></div>
@@ -999,9 +892,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <img alt="Portfolio 1 optimal weights by year" src="../_images/portfolio-1-optimal-weights.png" />
 <p>We set the number of decimal places to 4 and uncheck the <strong>Column min/max</strong> checkbox to better appreciate the contrasts in the row values (years).</p>
 <p>You can see, for example, how 2015 was a particularly good year for investing in Amazon and Netflix, while 2014 was the year of Apple. Despite Netflix’s rapid growth over the years, its high volatility means that its Sharpe Ratio is not very remarkable in any year, especially (as we said above) in 2014 and 2019. In the same respect, Apple and Microsoft seem to be safer bets in the return/volatility ratio.</p>
-</div>
-<div class="section" id="comparison-of-expected-and-realized-returns">
-<h3>Comparison of expected and realized returns<a class="headerlink" href="#comparison-of-expected-and-realized-returns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="comparison-of-expected-and-realized-returns">
+<h3>Comparison of expected and realized returns<a class="headerlink" href="#comparison-of-expected-and-realized-returns" title="Link to this heading">#</a></h3>
 <p>Finally, we will use the optimal weights to calculate the expected returns and compare them with the actual returns.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exp_real_rets</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
 
@@ -1050,13 +943,13 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>As we can see, the correlations are negative, which warns us that we should be cautious when using this type of modeling.</p>
-</div>
-</div>
-<div class="section" id="second-portfolio">
-<h2>Second portfolio<a class="headerlink" href="#second-portfolio" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="second-portfolio">
+<h2>Second portfolio<a class="headerlink" href="#second-portfolio" title="Link to this heading">#</a></h2>
 <p>We are now going to apply all the previous code with a portfolio of a different nature. Let’s assume that instead of technology companies, we are now interested in pharmaceuticals. We will build a portfolio with stocks of Pfizer, Astra Zeneca, Johnson &amp; Johnson.</p>
-<div class="section" id="download-the-data">
-<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this headline">¶</a></h3>
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Link to this heading">#</a></h3>
 <p>Let’s download the data and format it.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SYMBOLS_2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PFE&quot;</span><span class="p">,</span> <span class="s2">&quot;AZN&quot;</span><span class="p">,</span> <span class="s2">&quot;JNJ&quot;</span><span class="p">]</span>  <span class="c1"># Pfizer, Astra Zeneca, Johnson N Johnson</span>
 
@@ -1066,13 +959,13 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <span class="n">close_data_2</span> <span class="o">=</span> <span class="n">data_2</span><span class="p">[</span><span class="n">data_2</span><span class="o">.</span><span class="n">Ticker</span> <span class="o">==</span> <span class="s2">&quot;Close&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Ticker&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you do not want to use the yfinance API, you can download the <code class="docutils literal notranslate"><span class="pre">close_data_2.csv</span></code> file containing the closing information for this portfolio. Copy this file to your working directory. Load the data with the following instruction:  <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">close_data_2</span> <span class="pre">=</span> <span class="pre">pd.read_csv(&quot;close_data_2.csv&quot;)</span></code>.</p>
 </div>
-</div>
-<div class="section" id="mean-and-standard-deviation">
-<h3>Mean and standard deviation<a class="headerlink" href="#mean-and-standard-deviation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mean-and-standard-deviation">
+<h3>Mean and standard deviation<a class="headerlink" href="#mean-and-standard-deviation" title="Link to this heading">#</a></h3>
 <p>We are going to put the data in a monthly format and observe the mean and standard deviation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_data_2</span> <span class="o">=</span> <span class="n">close_data_2</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
 
@@ -1094,9 +987,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>As in portfolio 1, all means are positive. But its largest value (that of JNJ) barely reaches 1% per month, which is slower growth than that of portfolio 1. The variation is also smaller compared to that of the previous portfolio (here the largest deviation is 0.06) which makes it a lower risk investment.</p>
-</div>
-<div class="section" id="daily-and-monthly-timelines">
-<h3>Daily and monthly timelines<a class="headerlink" href="#daily-and-monthly-timelines" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="daily-and-monthly-timelines">
+<h3>Daily and monthly timelines<a class="headerlink" href="#daily-and-monthly-timelines" title="Link to this heading">#</a></h3>
 <p>Let’s better visualize the above with a couple of charts.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rets_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span> <span class="o">/</span> <span class="n">close_data_2</span><span class="p">[</span><span class="n">SYMBOLS_2</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 
@@ -1109,9 +1002,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <img alt="Portfolio 2 daily stock price" src="../_images/portfolio-2-daily-stock-price.png" />
 <img alt="Portfolio 2 monthly stock price" src="../_images/portfolio-2-monthly-stock-price.png" />
 <p>These two plots show a steady growth over the years, but also a high variability in each year. This seems to be a good portfolio only if taken as a long-term investment.</p>
-</div>
-<div class="section" id="returns-volatility-and-sharpe-ratio">
-<h3>Returns, volatility and Sharpe ratio<a class="headerlink" href="#returns-volatility-and-sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="returns-volatility-and-sharpe-ratio">
+<h3>Returns, volatility and Sharpe ratio<a class="headerlink" href="#returns-volatility-and-sharpe-ratio" title="Link to this heading">#</a></h3>
 <p>To confirm what was said in the previous section, let’s calculate returns, volatility and Sharpe ratio.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights_2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">close_data_2</span><span class="o">.</span><span class="n">columns</span><span class="p">)]</span>
 
@@ -1139,9 +1032,9 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <img alt="Portfolio 2 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-2.png" />
 <p>High volatility does not correspond in most cases with high returns. In fact, there are scenarios in the simulation in which higher expected returns are related to lower expected volatility.</p>
-</div>
-<div class="section" id="optimal-pharmaceutical-stock-weights">
-<h3>Optimal pharmaceutical stock weights<a class="headerlink" href="#optimal-pharmaceutical-stock-weights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="optimal-pharmaceutical-stock-weights">
+<h3>Optimal pharmaceutical stock weights<a class="headerlink" href="#optimal-pharmaceutical-stock-weights" title="Link to this heading">#</a></h3>
 <p>Let us now see what are the optimal weights for each stock using the <code class="docutils literal notranslate"><span class="pre">optimal_weights</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="n">opt_weights_2</span> <span class="o">=</span> <span class="n">optimal_weights</span><span class="p">(</span><span class="n">rets_2</span><span class="p">,</span> <span class="n">SYMBOLS_2</span><span class="p">,</span> <span class="n">weights_2</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)</span>
@@ -1178,14 +1071,14 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <p>As we can see, the model with optimal weights predicted a return close to 15% per year, but the realized return would have barely reached 6%. And the negative correlations show, as with portfolio 1, that there does not seem to be any correspondence between these values.</p>
 <p>The comparison is then favorable for portfolio 1. But what if we compare portfolio 1 with a “higher risk” investment such as cryptocurrencies? Let’s discuss it below.</p>
-</div>
-</div>
-<div class="section" id="third-portfolio">
-<h2>Third portfolio<a class="headerlink" href="#third-portfolio" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="download-cryptocurrencies-data">
-<h3>Download cryptocurrencies data<a class="headerlink" href="#download-cryptocurrencies-data" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="third-portfolio">
+<h2>Third portfolio<a class="headerlink" href="#third-portfolio" title="Link to this heading">#</a></h2>
+<section id="download-cryptocurrencies-data">
+<h3>Download cryptocurrencies data<a class="headerlink" href="#download-cryptocurrencies-data" title="Link to this heading">#</a></h3>
 <p>Our third portfolio will consist of three cryptocurrencies: bitcoin (BTC), ethereum (ETH) and litecoin (LTC). To access historical data, we are going to use a library called <strong>Historic-Crypto</strong>.</p>
-<div class="alert alert-primary">
+<div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>If you want to make use of the data without the Historic-Crypto library, you can <a class="reference external" href="https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215">download the dataset</a> “crypto_hist.csv” in your working directory, and load it in memory with the instruction <code class="docutils literal notranslate"><span class="pre">crypto_hist</span> <span class="pre">=</span> <span class="pre">pd.read_csv(&quot;crypto_hist.csv&quot;)</span></code>, and skip to section <a class="reference internal" href="#monthly-data">Monthly data</a>.</p>
 </div>
@@ -1198,7 +1091,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crypto_list</span> <span class="o">=</span> <span class="n">Cryptocurrencies</span><span class="p">(</span><span class="n">coin_search</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">extended_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">find_crypto_pairs</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want more information about the use of this library you can make a quick query using the Spyder Help panel (type in the console <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> and use <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> to display it). Or you can read the documentation in their <a class="reference external" href="https://github.com/David-Woroniuk/Historic_Crypto">official repository</a></p>
 </div>
@@ -1232,19 +1125,19 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>We will not present the procedures and code in this section, but only the results of the analysis. You can follow the steps in the previous sections to recreate these results.</p>
-<div class="alert alert-info">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use all this section on portfolio 3 to check your understanding of the concepts and code we have presented until now. If you have any questions, you can consult the <a class="reference download internal" download="" href="../_downloads/468d7c76843772ae0fb48a15096383df/financial-analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">code</span></code></a> code that accompanies this workshop. But we encourage you to try as much as possible to solve the code on your own.</p>
 </div>
-</div>
-<div class="section" id="monthly-data">
-<h3>Monthly data<a class="headerlink" href="#monthly-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="monthly-data">
+<h3>Monthly data<a class="headerlink" href="#monthly-data" title="Link to this heading">#</a></h3>
 <p>Let’s take a look at the monthly history of cryptocurrency price growth.</p>
 <img alt="Portfolio 3 daily stock price" src="../_images/portfolio-3-monthly-stock-price.png" />
 <p>We can note that the scale here is much larger. And the proportion of ETH growth over the other two coins is quite remarkable.</p>
-</div>
-<div class="section" id="return-volatility-and-sharpe-ratio">
-<h3>Return, volatility and Sharpe ratio<a class="headerlink" href="#return-volatility-and-sharpe-ratio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="return-volatility-and-sharpe-ratio">
+<h3>Return, volatility and Sharpe ratio<a class="headerlink" href="#return-volatility-and-sharpe-ratio" title="Link to this heading">#</a></h3>
 <p>Let’s consider the return, volatility and Sharpe ratio of this portfolio.</p>
 <ul class="simple">
 <li><p>Return: 0.6203</p></li>
@@ -1252,27 +1145,27 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <li><p>Sharpe: 0.8176</p></li>
 </ul>
 <p>These numbers are higher than those obtained for portfolios 1 and 2, except for the Sharpe ratio. This is a very volatile portfolio (in fact three times more volatile than that of the technology companies), and that makes it ultimately not as profitable as portfolio 1. The returns are higher (almost double) but the risk may not compensate for it.</p>
-</div>
-<div class="section" id="monte-carlo-simulation">
-<h3>Monte carlo simulation<a class="headerlink" href="#monte-carlo-simulation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="monte-carlo-simulation">
+<h3>Monte carlo simulation<a class="headerlink" href="#monte-carlo-simulation" title="Link to this heading">#</a></h3>
 <p>The Monte Carlo simulation also shows the non-linear correlation between risk and returns (as you can see, sometimes high risk involves only modest profits):</p>
 <img alt="Portfolio 3 Monte Carlo Sharpe simulation scatter plot" src="../_images/scatter-plot-sharpe-portfolio-3.png" />
 <p>As can be seen, there are points (bottom right) that show a very high volatility and yet have a very low expected return. In this sense, portfolio 1 represents a safer investment because the higher risk is consistently offset by higher returns.</p>
-</div>
-<div class="section" id="optimal-cryptocurrency-weights">
-<h3>Optimal cryptocurrency weights<a class="headerlink" href="#optimal-cryptocurrency-weights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="optimal-cryptocurrency-weights">
+<h3>Optimal cryptocurrency weights<a class="headerlink" href="#optimal-cryptocurrency-weights" title="Link to this heading">#</a></h3>
 <img alt="Portfolio 3 optimal weights by year" src="../_images/portfolio-3-optimal-weights.png" />
 <p>The optimal portfolio weights, if calculated annually, suggest that our portfolio should have been quite polarized in some years: the recommendation is to have bought only bitcoins before the start of 2016 and 2019, and only ethereum in 2018. Starting 2017 and 2020, on the other hand, our weights recommended a more balanced investment between bitcoin and ethereum. Litecoin is not recommended by our model.</p>
-</div>
-<div class="section" id="expected-and-realized-returns">
-<h3>Expected and realized returns<a class="headerlink" href="#expected-and-realized-returns" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="expected-and-realized-returns">
+<h3>Expected and realized returns<a class="headerlink" href="#expected-and-realized-returns" title="Link to this heading">#</a></h3>
 <img alt="Portfolio 3 expected and realized returns comparison" src="../_images/expected-vs-realized-portfolio-3-returns.png" />
 <p>In this graph we can see that in 2017 and 2020 the earnings obtained would have exceeded the expected earnings (with our calculated weights). In 2019 our model predicted a sharp drop in the portfolio, but in reality the portfolio did not make either annualized gains or losses that year. In contrast, in 2018, our model would have brought us heavy losses, as the value of cryptocurrencies declined sharply that year.</p>
 <p>The mean expected return for our portfolio is 0.6972, which is higher than the realized return of 0.4181 that we would have obtained. Having invested in this portfolio over the long term (from 2016 to the present) would have been a very good deal. Due to the high variability, investing in the short term would have been very risky. In terms of gross profits, the realized returns of this portfolio were more than double those of portfolio 1 (0.4181 &gt; 0.1997).</p>
-</div>
-</div>
-<div class="section" id="final-words">
-<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Link to this heading">#</a></h2>
 <p>The mean-variance portfolio (MVP) theory is one of the many tools available to financial analysis. In recent years, machine learning algorithms have even been used to predict the behavior of stock prices more accurately than can be achieved with any standard financial theory.</p>
 <p>The examples given during this workshop are not intended to serve as guidelines for you to invest your money. It is only a first step towards learning financial analysis using Python and a scientific IDE.</p>
 <p>In this workshop you have learned how to:</p>
@@ -1292,13 +1185,13 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>With the skills learned here, you will be able to approach more complex topics of financial analysis such as those you will find in the references in the next section.</p>
 <p>Thank you for reaching the end of this workshop! We hope you found it helpful and informative.</p>
 <p>If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop <a class="reference internal" href="scientific-computing.html"><span class="doc">Scientific Computing and Visualization with Spyder</span></a>.</p>
-<div class="section" id="homework">
-<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<section id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h3>
 <p>If you want to check what you have learned, we suggest you try to obtain the results presented for the third portfolio. If you have any questions, you can consult the code that accompanies this workshop in our repository.</p>
-</div>
-</div>
-<div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <p>Much of the math used to apply MVP was the mathematics outlined in Yves Hilpisch’s excellent book, which we recommend to you:</p>
 <ul class="simple">
 <li><p>Yves Hilpisch, Y. (2020). <em>Artificial Intelligence in Finance</em>. O’Reilly.*</p></li>
@@ -1311,481 +1204,186 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <ul class="simple">
 <li><p>Ma Weiming, J. (2019). <em>Mastering Python for Finance</em>. Packt</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
-              </div>
+                </article>
               
-              <div class='prev-next-bottom'>
-                
-    <a class='prev-next-link left-prev' id="prev-next-link prev-link" href="index.html" title="previous page"><span class="fas fa-chevron-left"></span><span class="fas fa-chevron-left"></span> Workshops</a>
-    <a class='prev-next-link right-next' id="next-link" href="plugin-development.html" title="next page">Plugin Development with Spyder <span class="fas fa-chevron-right"></span><span class="fas fa-chevron-right"></span></a>
-
-              </div>
               
-          </main>
-
-          <div class="col-md-3 col-xl-2">
               
-
-<div class="row d-none d-md-block bd-toc">
-    
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/spyder-ide/spyder-docs/edit/master/doc/workshops/financial.rst">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Workshops</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="plugin-development.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plugin Development with Spyder</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-
-    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
-    <nav id="bd-toc-nav">
-        <ul class="nav section-nav flex-column">
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#prerequisites" class="nav-link">Prerequisites</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#learning-goals" class="nav-link">Learning goals</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#learner-profile" class="nav-link">Learner profile</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#why-use-python-for-financial-analysis" class="nav-link">Why use Python for financial analysis?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#why-should-i-use-an-ide" class="nav-link">Why should I use an IDE?</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#introduction-to-financial-analysis-with-spyder" class="nav-link">Introduction to financial analysis with Spyder</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#set-up-conda-environment" class="nav-link">Set up Conda environment</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#download-the-datasets" class="nav-link">Download the datasets</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#setting-up-the-virtual-environment-in-spyder" class="nav-link">Setting up the virtual environment in Spyder</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#download-the-code" class="nav-link">Download the code</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#obtain-financial-data" class="nav-link">Obtain financial data</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#general-stock-information" class="nav-link">General stock information</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#historical-stock-data" class="nav-link">Historical stock data</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#first-portfolio" class="nav-link">First portfolio</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#prepare-portfolio-data" class="nav-link">Prepare portfolio data</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#a-first-glance-at-the-portfolio" class="nav-link">A first glance at the portfolio</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#returns-and-volatility" class="nav-link">Returns and volatility</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#sharpe-ratio" class="nav-link">Sharpe ratio</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#optimal-portfolio-weights" class="nav-link">Optimal portfolio weights</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#comparison-of-expected-and-realized-returns" class="nav-link">Comparison of expected and realized returns</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#second-portfolio" class="nav-link">Second portfolio</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#download-the-data" class="nav-link">Download the data</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#mean-and-standard-deviation" class="nav-link">Mean and standard deviation</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#daily-and-monthly-timelines" class="nav-link">Daily and monthly timelines</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#returns-volatility-and-sharpe-ratio" class="nav-link">Returns, volatility and Sharpe ratio</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#optimal-pharmaceutical-stock-weights" class="nav-link">Optimal pharmaceutical stock weights</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#third-portfolio" class="nav-link">Third portfolio</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#download-cryptocurrencies-data" class="nav-link">Download cryptocurrencies data</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#monthly-data" class="nav-link">Monthly data</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#return-volatility-and-sharpe-ratio" class="nav-link">Return, volatility and Sharpe ratio</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#monte-carlo-simulation" class="nav-link">Monte carlo simulation</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#optimal-cryptocurrency-weights" class="nav-link">Optimal cryptocurrency weights</a>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#expected-and-realized-returns" class="nav-link">Expected and realized returns</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                    
-            <li class="nav-item toc-entry toc-h3">
-                <a href="#homework" class="nav-link">Homework</a>
-            </li>
-        
-                </ul>
-            </li>
-        
-            <li class="nav-item toc-entry toc-h2">
-                <a href="#further-reading" class="nav-link">Further reading</a>
-            </li>
-        
-        </ul>
-    </nav>
-</div>
-
-<div class="row d-block d-md-none">
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
-        <div class="navbar-toggler-item">
-            <a class="navbar-toggler btn-outline-default" href="../search.html"><span class="fas fa-search"></span></a>
-        </div>
-        <div class="navbar-toggler-item">
-            <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="navbar-toggler btn-outline-default">
-                <span class="fas fa-comment"></span>
-            </a>
-        </div>
-            <div class="navbar-toggler-item">
-                <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars fa-2"></span>
-                </button>
-            </div>
-        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
-            <ul class="nav section-nav flex-column">
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#prerequisites" class="nav-link">Prerequisites</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#learning-goals" class="nav-link">Learning goals</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#learner-profile" class="nav-link">Learner profile</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#intro" class="nav-link">Intro</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#why-use-python-for-financial-analysis" class="nav-link">Why use Python for financial analysis?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#why-should-i-use-an-ide" class="nav-link">Why should I use an IDE?</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#introduction-to-financial-analysis-with-spyder" class="nav-link">Introduction to financial analysis with Spyder</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#preparation-work" class="nav-link">Preparation work</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#set-up-conda-environment" class="nav-link">Set up Conda environment</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#download-the-datasets" class="nav-link">Download the datasets</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#setting-up-the-virtual-environment-in-spyder" class="nav-link">Setting up the virtual environment in Spyder</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#download-the-code" class="nav-link">Download the code</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#obtain-financial-data" class="nav-link">Obtain financial data</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#general-stock-information" class="nav-link">General stock information</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#historical-stock-data" class="nav-link">Historical stock data</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#first-portfolio" class="nav-link">First portfolio</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#prepare-portfolio-data" class="nav-link">Prepare portfolio data</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#a-first-glance-at-the-portfolio" class="nav-link">A first glance at the portfolio</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#returns-and-volatility" class="nav-link">Returns and volatility</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#sharpe-ratio" class="nav-link">Sharpe ratio</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#optimal-portfolio-weights" class="nav-link">Optimal portfolio weights</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#comparison-of-expected-and-realized-returns" class="nav-link">Comparison of expected and realized returns</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#second-portfolio" class="nav-link">Second portfolio</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#download-the-data" class="nav-link">Download the data</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#mean-and-standard-deviation" class="nav-link">Mean and standard deviation</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#daily-and-monthly-timelines" class="nav-link">Daily and monthly timelines</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#returns-volatility-and-sharpe-ratio" class="nav-link">Returns, volatility and Sharpe ratio</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#optimal-pharmaceutical-stock-weights" class="nav-link">Optimal pharmaceutical stock weights</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#third-portfolio" class="nav-link">Third portfolio</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#download-cryptocurrencies-data" class="nav-link">Download cryptocurrencies data</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#monthly-data" class="nav-link">Monthly data</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#return-volatility-and-sharpe-ratio" class="nav-link">Return, volatility and Sharpe ratio</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#monte-carlo-simulation" class="nav-link">Monte carlo simulation</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#optimal-cryptocurrency-weights" class="nav-link">Optimal cryptocurrency weights</a>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#expected-and-realized-returns" class="nav-link">Expected and realized returns</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#final-words" class="nav-link">Final words</a><ul class="nav section-nav flex-column">
-                        
-                <li class="nav-item toc-entry toc-h3" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#homework" class="nav-link">Homework</a>
-                </li>
-            
-                    </ul>
-                </li>
-            
-                <li class="nav-item toc-entry toc-h2" data-target="#bd-toc-nav-small" data-toggle="collapse">
-                    <a href="#further-reading" class="nav-link">Further reading</a>
-                </li>
-            
-            </ul>
-        </div>
-    </nav>
-</div>
+                </footer>
               
-          </div>
-      </div>
-    </div>
-
-    <script src="../_static/js/theme.js"></script>
-    <script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'spyder-ide/public',
-        activationElement: '#open_chat',
-    };
-</script>
-
-<a href="https://gitter.im/spyder-ide/public" id="open_chat" class="d-none d-md-block d-xl-block gitter-open-chat-button">
-    Open chat
-</a>
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-
-
-
-<div class="footer pb-5 pb-md-0">
-    <div class="container pb-3">
-        
-        <div class="row justify-content-center">
-            <a href="https://opencollective.com/spyder/donate" target="_blank">
-              <img src="https://www.spyder-ide.org/collective.svg" class="center donate" />
-            </a>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="text-center pb-3">
-                 Connect with us on: 
-                 
-                  
-                  <a href="https://github.com/spyder-ide/spyder">GitHub</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://twitter.com/Spyder_IDE">Twitter</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.facebook.com/SpyderIDE/">Facebook</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://instagram.com/spyderide">Instagram</a>
-                
-                  
-                  <span class="pipe-red">|</span>
-                  
-                  <a href="https://groups.google.com/group/spyderlib">Google Groups</a>
-                
             </div>
-        </div>
-        <div class="row justify-content-center">
-              <small>
-                
-                <div class="text-center">
-                  &copy; 2009-2024 Spyder Doc Contributors <span class='pipe-red'>|</span> <a href='https://github.com/spyder-ide/spyder-docs/blob/master/LICENSE.txt' target='_blank' rel='noopener noreferrer'>MIT License</a>
-                </div>
-                
-                <div class="text-center">
-                    
-                    Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
-                    
-                    
-                      <span class="pipe-red">|</span>
-                      <a href="../_sources/workshops/financial.rst.txt"
-                          rel="nofollow">Page source</a>
-                    
-                </div>
-              </small>
-            </div>
-        </div>
-    </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learner-profile">Learner profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-for-financial-analysis">Why use Python for financial analysis?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-i-use-an-ide">Why should I use an IDE?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-financial-analysis-with-spyder">Introduction to financial analysis with Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#editor">Editor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipython-console">IPython Console</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-explorer">Variable Explorer</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plots-pane">Plots pane</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-work">Preparation work</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-conda-environment">Set up Conda environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#with-commands">With commands</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-datasets">Download the datasets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-virtual-environment-in-spyder">Setting up the virtual environment in Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obtain-financial-data">Obtain financial data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-stock-information">General stock information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-stock-data">Historical stock data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-portfolio">First portfolio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-portfolio-data">Prepare portfolio data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-glance-at-the-portfolio">A first glance at the portfolio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#returns-and-volatility">Returns and volatility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharpe-ratio">Sharpe ratio</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-sharpe-function-explained"><code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function explained</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-monte-carlo-sharpe-function">Using the <code class="docutils literal notranslate"><span class="pre">monte_carlo_sharpe</span></code> function</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-portfolio-weights">Optimal portfolio weights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-expected-and-realized-returns">Comparison of expected and realized returns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-portfolio">Second portfolio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-and-standard-deviation">Mean and standard deviation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-and-monthly-timelines">Daily and monthly timelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#returns-volatility-and-sharpe-ratio">Returns, volatility and Sharpe ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-pharmaceutical-stock-weights">Optimal pharmaceutical stock weights</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#third-portfolio">Third portfolio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-cryptocurrencies-data">Download cryptocurrencies data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monthly-data">Monthly data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-volatility-and-sharpe-ratio">Return, volatility and Sharpe ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-simulation">Monte carlo simulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimal-cryptocurrency-weights">Optimal cryptocurrency weights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-and-realized-returns">Expected and realized returns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-words">Final words</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/workshops/financial.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
 </div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
