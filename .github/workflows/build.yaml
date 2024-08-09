@@ -49,13 +49,13 @@ jobs:
     - name: Build site
       shell: bash
       run: ./ci/build.sh
-    - name: Build site
+    - name: Postprocess site
       shell: bash
       run: make multidocs
     - name: Deploy to GitHub Pages
-      if: env.IS_DEPLOY
+      if: env.IS_DEPLOY == '1'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: ./doc/_build/html
         clean: false  # Don't remove files from other branches
-        dry-run: ${{ (env.IS_STAGING && 'true') || 'false' }}
+        dry-run: ${{ (env.IS_STAGING == '1' && 'true') || 'false' }}
