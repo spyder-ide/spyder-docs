@@ -12,9 +12,10 @@ def copy_dir_if_not_existing(
     """Copy a directory to another path if the target doesn't already exist."""
     base_path = Path(base_path)
     source_dir = Path(source_dir)
+    target_dir = Path(target_dir)
+
     if not source_dir.is_absolute():
         source_dir = base_path / source_dir
-    target_dir = Path(target_dir)
     if not target_dir.is_absolute():
         target_dir = base_path / target_dir
 
