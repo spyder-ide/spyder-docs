@@ -11,6 +11,7 @@
 [![Lint](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Nox](https://img.shields.io/badge/%F0%9F%A6%8A-Nox-D85E00.svg)](https://github.com/wntrblm/nox)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
 
 
@@ -41,13 +42,15 @@ For more information about Spyder itself, please see our [website](https://www.s
 ## Building and Deploying
 
 The docs are built with [Sphinx](https://www.sphinx-doc.org/) and deployed with GitHub Actions to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
-The ``master`` branch contains the in-development docs for Spyder 5, while the ``4.x`` branch with the Spyder 4 docs is still maintained, and the frozen ``3.x`` branch retains the docs for the legacy Spyder 3.
+[Nox](https://nox.thea.codes/) is used to automate setup, building and numerous other project tasks.
+The ``master`` branch contains the in-development docs for Spyder 5, while the frozen ``4.x`` and ``3.x`` branches retain the docs for Spyder 4 and Spyder 3.
 
 
 ## Contributing
 
 We welcome your contributions of corrections, additions and enhancements to these docs, as they are very much a work in progress, and we appreciate getting our broad community involved wherever possible.
-To do so, simply submit a PR with your changes and we'll be happy to review it; make sure to read our [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md) in mind to ensure the process of getting your revisions integrated goes smoothly.
+Its easy to build a local copy in one or two steps with Nox, or you can also just check your changes with our live build previews on PRs.
+Simply submit a PR with your changes and we'll be happy to review it; make sure to read our [Contributing Guide](https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md) in mind to ensure the process of getting your revisions integrated goes smoothly.
 
 Thanks for your interest in Spyder and its documentation, and we appreciate your support of the project!
 
@@ -59,9 +62,6 @@ Thanks for your interest in Spyder and its documentation, and we appreciate your
 [Online Documentation](https://docs.spyder-ide.org/)
 
 [Spyder Github](https://github.com/spyder-ide/spyder)
-
-[Troubleshooting Guide and FAQ](
-https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ)
 
 [Development Wiki](https://github.com/spyder-ide/spyder/wiki/Dev:-Index)
 

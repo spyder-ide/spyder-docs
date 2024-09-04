@@ -42,4 +42,4 @@ jobs:
       shell: bash
       run: pip list
     - name: Run Linkcheck
-      run: make linkcheck
+      run: nox -s linkcheck

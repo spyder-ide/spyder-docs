@@ -20,11 +20,12 @@ Let us know if you have any further questions, and we look forward to your contr
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Reporting Issues](#reporting-issues)
-- [Setting Up a Development Environment](#setting-up-a-development-environment)
-  - [Fork and clone the repo](#fork-and-clone-the-repo)
+- [Cloning the repository](#cloning-the-repository)
+- [Setting Up a Development Environment with Nox (Recommended)](#setting-up-a-development-environment-with-nox-recommended)
+- [Setting Up a Development Environment Manually](#setting-up-a-development-environment-manually)
   - [Create and activate a fresh environment](#create-and-activate-a-fresh-environment)
   - [Install dependencies](#install-dependencies)
-  - [Install the required Pre-Commit hooks](#install-the-required-pre-commit-hooks)
+- [Installing the Pre-Commit Hooks](#installing-the-pre-commit-hooks)
 - [Building the docs](#building-the-docs)
 - [Deciding Which Branch to Use](#deciding-which-branch-to-use)
 - [Making Your Changes](#making-your-changes)
@@ -48,14 +49,7 @@ If referring to a particular word, line or section, please be sure to provide a 
 
 
 
-## Setting Up a Development Environment
-
-For non-trivial changes, its easy to work with Spyder-Docs locally by following a few simple steps.
-
-**Note**: You may need to substitute ``python3`` for ``python`` in the commands below on some Linux distros where ``python`` isn't mapped to ``python3`` (yet).
-
-
-### Fork and clone the repo
+## Cloning the repository
 
 First, navigate to the [project repository](https://github.com/spyder-ide/spyder-docs) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own Github account.
 Then, click the ``Clone or Download`` button on your repository, copy the link and run the following on the command line to clone the repo:
@@ -77,6 +71,45 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 ```
 
 
+
+## Setting Up a Development Environment with Nox (Recommended)
+
+Our [Nox](https://nox.thea.codes/) configuration makes it easy to get set up and building Spyder-Docs in just one or two steps!
+
+If you already have Nox installed, you're already done!
+Otherwise, you can easily install it as a standalone tool with [pipx](https://pipx.pypa.io/) (if you don't have that either, you'll need to install it first if you go that route):
+
+```shell
+pipx install nox
+```
+
+Alternatively, install it into your global (or preferred) Python environment with the usual:
+
+```shell
+conda install nox
+```
+
+or, if not using Conda,
+
+```shell
+python -m pip install nox
+```
+
+To check that Nox is installed and browse a list of commands (called "sessions") we provide through Nox and what they do, you can run
+
+```shell
+nox --list
+```
+
+
+
+## Setting Up a Development Environment Manually
+
+For advanced users, if you'd prefer to also have your own local environment with the docs dependencies that doesn't go through Nox, you can also set one up yourself.
+
+**Note**: You may need to substitute ``python3`` for ``python`` in the commands below on some Linux distros where ``python`` isn't mapped to ``python3`` (yet).
+
+
 ### Create and activate a fresh environment
 
 We highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
@@ -89,7 +122,7 @@ Regardless of the tool you use, make sure to remember to always activate your en
 To create an environment with Conda (recommended), simply execute the following:
 
 ```shell
-conda create -c conda-forge -n spyder-docs-env python=3.9
+conda create -c conda-forge -n spyder-docs-env python
 ```
 
 Then, activate it with
@@ -120,10 +153,9 @@ or on Windows (``cmd.exe``),
 ```
 
 
-
 ### Install dependencies
 
-Then, you need to install the appropriate dependencies in your active Python environment to develop and build the documentation.
+Then, since you're not using Nox, you need to install the appropriate dependencies in your active Python environment to develop and build the documentation.
 You can install them into your current Conda environment with:
 
 ```shell
@@ -137,12 +169,21 @@ python -m pip install -r requirements.txt
 ```
 
 
-### Install the required Pre-Commit hooks
+
+## Installing the Pre-Commit Hooks
 
 This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
 You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide.
 They are also run on all pull requests, and will need to pass before your changes can be merged.
-Pre-commit itself is installed with the [above commands](#install-dependencies), and its hooks should be enabled by running the following from the root of this repo:
+
+If you've [using Nox](#setting-up-a-development-environment-with-nox-recommended), it installs Pre-Commit in its own environment, and we provide our own simplified command to install the hooks:
+
+```shell
+nox -s install-hooks
+```
+
+If instead you've followed the [manual install approach](#install-dependencies), pre-commit will be installed directly in your local environment.
+To install the hooks, run the following from the root of this repo:
 
 ```shell
 pre-commit install --hook-type pre-commit --hook-type commit-msg
@@ -150,7 +191,13 @@ pre-commit install --hook-type pre-commit --hook-type commit-msg
 
 The hooks will be automatically run against any new/changed files every time you commit.
 It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
-If you made one or more commits before installing the hooks (not recommended), you can run them manually on all the files in the repo with:
+If you made one or more commits before installing the hooks, or would like to run them manually on everything in the repo, you can do so with:
+
+```shell
+nox -s lint
+```
+
+or
 
 ```shell
 pre-commit run --all-files
@@ -163,29 +210,31 @@ Once you're satisfied, ``git add .`` and commit again.
 
 ## Building the docs
 
-To build the docs locally with Sphinx, you can easily do so with our makefile from the Terminal/command line, or via running the appropriate Sphinx command.
-
-To build just the docs for the current version, run the following on a system terminal with ``make`` (macOS/Linux):
-
-```bash
-make docs
-make serve
-```
-
-To build the full site with the documentation for all Spyder versions, run:
-
-```bash
-make multidocs
-```
-
-On a system without ``make`` (like Windows, by default), or to build the docs manually, run:
+To build the docs locally with Sphinx, if you've installed Nox you can just run
 
 ```shell
-python -m sphinx -n -W --keep-going -b html doc doc/_build/html
+nox -s build
 ```
 
-If you've run ``make serve``, the rendered documentation should open automatically in your default web browser.
-Otherwise, navigate to the ``_build/html`` directory inside the ``spyder-docs`` repository and open ``index.html`` (the main page of the docs) in your browser.
+For manual installations, you can invoke Sphinx yourself with the appropriate options:
+
+```shell
+python -m sphinx -n -W --keep-going doc doc/_build/html
+```
+
+If using Nox, you can open the rendered documentation in your default web browser with
+
+```shell
+nox -s serve
+```
+
+and to additionally automatically keep rebuilding the docs when changes occur, you can invoke
+
+```shell
+nox -s autobuild
+```
+
+Otherwise, navigate to the ``_build/html`` directory inside the ``spyder-docs`` repository and open ``index.html`` (the main page of the docs) in your preferred browser.
 
 
 
@@ -193,12 +242,12 @@ Otherwise, navigate to the ``_build/html`` directory inside the ``spyder-docs`` 
 
 When you start to work on a new pull request (PR), you need to be sure that your work is done on top of the correct branch, and that you base your PR on Github against it.
 
-To guide you, issues on Github are marked with a milestone that indicates the correct branch to use.
+To guide you, issues on GitHub are marked with a milestone that indicates the correct branch to use.
 If not, follow these guidelines:
 
-* The ``master`` branch contains the in-development documentation for Spyder 5; most general changes and those specific to that version should be made against this branch.
-* The ``4.x`` branch contains the docs for Spyder 4 and is in bugfix-only mode; no substantial new content should be added here at this point.
-* The ``3.x`` branch is frozen, containing the docs for the legacy Spyder 3 version; no further PRs will be accepted
+* The ``master`` branch contains the in-development documentation for Spyder 6; changes specific to that version should be made against this branch.
+* The ``5.x`` branch contains the docs for Spyder 4 and is still maintained; general changes and those applicable to only this version should be made to this branch.
+* The ``4.x`` and ``3.x`` branch is frozen, containing the docs for the legacy Spyder 4 and Spyder 3 versions; no further PRs will be accepted
 
 Of course, if an issue is only present in a specific branch, please base your PR on that branch.
 If you are at all unsure which branch to use, we'll be happy to guide you.
@@ -247,7 +296,7 @@ Where ``<FEATURE-BRANCH>`` is the name of your feature branch, e.g. ``fix-docs-t
 
 ## Submitting a Pull Request
 
-Finally, create a pull request to the [spyder-ide/spyder-docs repository](https://github.com/spyder-ide/spyder-docs/) on Github.
+Finally, create a pull request to the [spyder-ide/spyder-docs repository](https://github.com/spyder-ide/spyder-docs/) on GitHub.
 Make sure to set the target branch to the one you based your PR off of (``master`` or ``X.x``).
 
 We'll then review your changes, and after they're ready to go, your work will become an official part of Spyder-Docs.
