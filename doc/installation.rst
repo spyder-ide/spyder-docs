@@ -76,13 +76,13 @@ On macOS, open the disk image and drag Spyder to your :guilabel:`Applications` f
 .. table::
 
    ================ ================ ================ ================
-   `Windows`_       `Linux`_         `macOS M1`_      `macOS Intel`_
+   `Windows`_       `macOS M1`_      `macOS Intel`_   `Linux`_
    ================ ================ ================ ================
 
 .. _Windows: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Windows-x86_64.exe
-.. _Linux: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Linux-x86_64.sh
 .. _macOS M1: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-arm64.pkg
 .. _macOS Intel: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-x86_64.pkg
+.. _Linux: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Linux-x86_64.sh
 
 .. note::
 
