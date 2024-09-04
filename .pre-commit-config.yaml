@@ -85,6 +85,10 @@ repos:
     - 'stylelint-declaration-block-no-ignored-properties@2.7.0'
     - 'stylelint-no-unsupported-browser-features@7.0.0'
     - 'stylelint-order@6.0.3'
+    # Pin to avoid no-unsupported-browser-features error breaking stylelint
+    # Should be fixed soon; see
+    # https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues/299
+    - 'caniuse-lite@1.0.30001653'
 
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
