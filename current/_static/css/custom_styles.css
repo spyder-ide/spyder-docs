@@ -295,7 +295,8 @@ table.installer-table tbody td p::before {
   font-family: "Font Awesome 5 Brands";
 }
 
-table.installer-table tbody td:nth-child(1) p {
+table.installer-table tbody td:nth-child(1) p,
+table.installer-table tbody td:nth-child(4) p {
   padding-top: 0.62em;
 }
 
@@ -312,6 +313,13 @@ table.installer-table tbody td:nth-child(3) p::before {
   font-size: 2em;
   padding-right: 0.5em;
   vertical-align: sub;
+}
+
+table.installer-table tbody td:nth-child(4) p::before {
+  content: "\f17c";
+  font-size: 1.6em;
+  padding-right: 0.5em;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 991px) {

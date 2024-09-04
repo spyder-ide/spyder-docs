@@ -32,7 +32,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
 
       Hello everyone! I'm Juanita, and in this video I'm going to show you how to open Spyder and go over the basics of Spyder's interface. We will learn about Spyder's four panes that you'll likely be using most often, as well as briefly explore the others that are open by default. If you don't have Spyder installed and would like to follow along, you can `download it here`_.
 
-      .. _download it here: https://www.spyder-ide.org/#section-download
+      .. _download it here: https://www.spyder-ide.org/
 
       The easiest way to open Spyder is by opening Anaconda Navigator and clicking on the Spyder application. In case you have an older version of Spyder in Anaconda, open the command line (or the Anaconda Prompt in the case of Windows) and type the commands:
 
