@@ -137,7 +137,7 @@ def _execute(session):
                     *CANARY_COMMAND, include_outer_env=False, silent=True)
         except nox.command.CommandFailed:
             print("Installing dependencies in isolated environment...")
-            _install(session)
+            _install(session, use_posargs=False)
 
     if session.posargs:
         for task in session.posargs[0]:
@@ -146,15 +146,16 @@ def _execute(session):
 
 # ---- Install ---- #
 
-def _install(session):
+def _install(session, use_posargs=True):
     """Execute the dependency installation."""
-    session.install("-r", "requirements.txt")
+    posargs = session.posargs[1:] if use_posargs else ()
+    session.install("-r", "requirements.txt", *posargs)
 
 
 @nox.session
 def install(session):
-    """Install the project's dependencies in a virtual environment."""
-    session.notify("_execute", posargs=([_install],))
+    """Install the project's dependencies (passes through args to pip)."""
+    session.notify("_execute", posargs=([_install], *session.posargs))
 
 
 # ---- Utility ---- #
