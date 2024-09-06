@@ -25,7 +25,7 @@ nox.options.default_venv_backend = "none"
 CI = "CI" in os.environ
 CANARY_COMMAND = ("sphinx-build", "--version")
 
-BUILD_INVOCATION = ("python", "-m", "sphinx", "--color")
+BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
 BUILD_OPTIONS = ("-n", "-W", "--keep-going")
@@ -73,6 +73,21 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
     return filenames
 
 
+def extract_builder_name(options):
+    """Extract the Sphinx builder name from a sequence of options."""
+    try:
+        builder_index = options.index("--builder")
+    except ValueError:
+        try:
+            builder_index = options.index("-b")
+        except ValueError:
+            return None
+
+    options.pop(builder_index)
+    builder = options.pop(builder_index)
+    return builder
+
+
 def construct_sphinx_invocation(
     posargs=(),
     builder=HTML_BUILDER,
@@ -82,16 +97,22 @@ def construct_sphinx_invocation(
     build_invocation=BUILD_INVOCATION,
 ):
     """Reusably build a Sphinx invocation string from the given arguments."""
-    extra_options, filenames = split_sequence(posargs)
+    extra_options, filenames = split_sequence(list(posargs))
     filenames = process_filenames(filenames, source_dir=source_dir)
+    builder = extract_builder_name(extra_options) or builder
+
+    if CI:
+        build_options = list(build_options) + ["--color"]
+
     sphinx_invocation = [
         *build_invocation,
         "-b",
         builder,
         *build_options,
         *extra_options,
+        "--",
         str(source_dir),
-        str(Path(build_dir) / builder),
+        str(build_dir / builder),
         *filenames,
     ]
     return sphinx_invocation
