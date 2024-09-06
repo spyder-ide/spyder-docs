@@ -181,18 +181,24 @@ def run(session):
     session.notify("_execute", posargs=([_run], *session.posargs))
 
 
-def _clean():
-    """Remove the Sphinx build directory."""
+def _clean(session):
+    """Remove the build directory."""
+    print(f"Removing build directory {BUILD_DIR.as_posix()!r}")
+    ignore = session.posargs and session.posargs[0] in {"-i", "--ignore"}
+
     try:
-        BUILD_DIR.unlink()
+        shutil.rmtree(BUILD_DIR, ignore_errors=ignore)
     except FileNotFoundError:
         pass
+    except Exception:
+        print("\nError removing files; pass '-i'/'--ignore' flag to ignore\n")
+        raise
 
 
 @nox.session
-def clean(_session):
-    """Clean build artifacts."""
-    _clean()
+def clean(session):
+    """Clean build artifacts (pass -i/--ignore to ignore errors)."""
+    _clean(session)
 
 
 # ---- Build ---- #
