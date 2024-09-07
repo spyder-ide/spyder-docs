@@ -1,6 +1,8 @@
 """Common tasks to build, check and publish Spyder-Docs."""
 
 # Standard library imports
+import contextlib
+import logging
 import os
 import tempfile
 import shutil
@@ -10,17 +12,20 @@ from pathlib import Path
 
 # Third party imports
 import nox  # pylint: disable=import-error
+import nox.logger  # pylint: disable=import-error
 
 
 # --- Global constants --- #
 
+nox.options.error_on_external_run = True
 nox.options.sessions = ["build"]
 nox.options.default_venv_backend = "none"
 
-LATEST_VERSION = 5
-BASE_URL = "https://docs.spyder-ide.org"
 
-BUILD_INVOCATION = ("python", "-m", "sphinx", "--color")
+CI = "CI" in os.environ
+CANARY_COMMAND = ("sphinx-build", "--version")
+
+BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
 BUILD_OPTIONS = ("-n", "-W", "--keep-going")
@@ -31,10 +36,22 @@ HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 
 SCRIPT_DIR = Path("scripts").resolve()
 
-CI = "CI" in os.environ
+LATEST_VERSION = 5
+BASE_URL = "https://docs.spyder-ide.org"
 
 
 # ---- Helpers ---- #
+
+@contextlib.contextmanager
+def set_log_level(logger=nox.logger.logger, level=logging.CRITICAL):
+    """Context manager to set a logger log level and reset it after."""
+    prev_level = logger.level
+    logger.setLevel(level)
+    try:
+        yield
+    finally:
+        logger.setLevel(prev_level)
+
 
 def split_sequence(seq, sep="--"):
     """Split a sequence by a single separator."""
@@ -56,6 +73,21 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
     return filenames
 
 
+def extract_builder_name(options):
+    """Extract the Sphinx builder name from a sequence of options."""
+    try:
+        builder_index = options.index("--builder")
+    except ValueError:
+        try:
+            builder_index = options.index("-b")
+        except ValueError:
+            return None
+
+    options.pop(builder_index)
+    builder = options.pop(builder_index)
+    return builder
+
+
 def construct_sphinx_invocation(
     posargs=(),
     builder=HTML_BUILDER,
@@ -65,16 +97,22 @@ def construct_sphinx_invocation(
     build_invocation=BUILD_INVOCATION,
 ):
     """Reusably build a Sphinx invocation string from the given arguments."""
-    extra_options, filenames = split_sequence(posargs)
+    extra_options, filenames = split_sequence(list(posargs))
     filenames = process_filenames(filenames, source_dir=source_dir)
+    builder = extract_builder_name(extra_options) or builder
+
+    if CI:
+        build_options = list(build_options) + ["--color"]
+
     sphinx_invocation = [
         *build_invocation,
         "-b",
         builder,
         *build_options,
         *extra_options,
+        "--",
         str(source_dir),
-        str(Path(build_dir) / builder),
+        str(build_dir / builder),
         *filenames,
     ]
     return sphinx_invocation
@@ -86,8 +124,21 @@ def construct_sphinx_invocation(
 # See: https://github.com/wntrblm/nox/issues/167
 @nox.session(venv_backend="virtualenv", reuse_venv=True)
 def _execute(session):
-    """Dispatch tasks to run in a common environment. Don not run directly."""
-    _install(session)
+    """Dispatch tasks to run in a common environment. Do not run directly."""
+    if not session.posargs or isinstance(session.posargs[0], str):
+        raise ValueError(
+            "Must pass a list of functions to execute as first posarg")
+
+    if not session.posargs or session.posargs[0] is not _install:
+        # pylint: disable=too-many-try-statements
+        try:
+            with set_log_level():
+                session.run(
+                    *CANARY_COMMAND, include_outer_env=False, silent=True)
+        except nox.command.CommandFailed:
+            print("Installing dependencies in isolated environment...")
+            _install(session, use_posargs=False)
+
     if session.posargs:
         for task in session.posargs[0]:
             task(session)
@@ -95,28 +146,29 @@ def _execute(session):
 
 # ---- Install ---- #
 
-def _install(session):
+def _install(session, use_posargs=True):
     """Execute the dependency installation."""
-    session.install("-r", "requirements.txt")
+    posargs = session.posargs[1:] if use_posargs else ()
+    session.install("-r", "requirements.txt", *posargs)
 
 
 @nox.session
 def install(session):
-    """Install the project's dependencies in a virtual environment."""
-    session.notify("_execute", posargs=())
+    """Install the project's dependencies (passes through args to pip)."""
+    session.notify("_execute", posargs=([_install], *session.posargs))
 
 
 # ---- Utility ---- #
 
-def _sphinx_help(session):
+def _build_help(session):
     """Print Sphinx --help."""
     session.run(*BUILD_INVOCATION, "--help")
 
 
 @nox.session(name="help")
-def sphinx_help(session):
-    """Get help with Sphinx."""
-    session.notify("_execute", posargs=([_sphinx_help],))
+def build_help(session):
+    """Get help with the project build."""
+    session.notify("_execute", posargs=([_build_help],))
 
 
 def _run(session):
@@ -130,18 +182,24 @@ def run(session):
     session.notify("_execute", posargs=([_run], *session.posargs))
 
 
-def _clean():
-    """Remove the Sphinx build directory."""
+def _clean(session):
+    """Remove the build directory."""
+    print(f"Removing build directory {BUILD_DIR.as_posix()!r}")
+    ignore = session.posargs and session.posargs[0] in {"-i", "--ignore"}
+
     try:
-        BUILD_DIR.unlink()
+        shutil.rmtree(BUILD_DIR, ignore_errors=ignore)
     except FileNotFoundError:
         pass
+    except Exception:
+        print("\nError removing files; pass '-i'/'--ignore' flag to ignore\n")
+        raise
 
 
 @nox.session
-def clean(_session):
-    """Clean build artifacts."""
-    _clean()
+def clean(session):
+    """Clean build artifacts (pass -i/--ignore to ignore errors)."""
+    _clean(session)
 
 
 # ---- Build ---- #

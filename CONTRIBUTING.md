@@ -6,7 +6,7 @@ First off, thanks for your interest in helping out with the documentation for Sp
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
 You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
 
-Spyder-Docs is part of the Spyder IDE Github org, and is developed with standard Github flow.
+Spyder-Docs is part of the Spyder IDE GitHub org, and is developed with standard GitHub flow.
 If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://docs.github.com/en/get-started/using-git/about-git#basic-git) and its [guide to the fork workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 However, this contributing guide should fill you in on most of the basics you need to know.
 
@@ -20,13 +20,15 @@ Let us know if you have any further questions, and we look forward to your contr
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Reporting Issues](#reporting-issues)
-- [Cloning the repository](#cloning-the-repository)
+- [Cloning the Repository](#cloning-the-repository)
 - [Setting Up a Development Environment with Nox (Recommended)](#setting-up-a-development-environment-with-nox-recommended)
 - [Setting Up a Development Environment Manually](#setting-up-a-development-environment-manually)
   - [Create and activate a fresh environment](#create-and-activate-a-fresh-environment)
   - [Install dependencies](#install-dependencies)
 - [Installing the Pre-Commit Hooks](#installing-the-pre-commit-hooks)
-- [Building the docs](#building-the-docs)
+- [Building the Docs](#building-the-docs)
+  - [Build with Nox](#build-with-nox)
+  - [Build manually](#build-manually)
 - [Deciding Which Branch to Use](#deciding-which-branch-to-use)
 - [Making Your Changes](#making-your-changes)
 - [Pushing your Branch](#pushing-your-branch)
@@ -49,9 +51,9 @@ If referring to a particular word, line or section, please be sure to provide a 
 
 
 
-## Cloning the repository
+## Cloning the Repository
 
-First, navigate to the [project repository](https://github.com/spyder-ide/spyder-docs) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own Github account.
+First, navigate to the [project repository](https://github.com/spyder-ide/spyder-docs) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own GitHub account.
 Then, click the ``Clone or Download`` button on your repository, copy the link and run the following on the command line to clone the repo:
 
 ```shell
@@ -208,13 +210,40 @@ Once you're satisfied, ``git add .`` and commit again.
 
 
 
-## Building the docs
+## Building the Docs
 
-To build the docs locally with Sphinx, if you've installed Nox you can just run
+The documentation is built with [Sphinx](https://www.sphinx-doc.org/), which you can invoke either using [Nox](https://nox.thea.codes/) or manually.
+
+
+### Build with Nox
+
+To build the docs using Nox, just run
 
 ```shell
 nox -s build
 ```
+
+and can then open the rendered documentation in your default web browser with
+
+```shell
+nox -s serve
+```
+
+Alternatively, to automatically rebuild the docs when changes occur, you can invoke
+
+```shell
+nox -s autobuild
+```
+
+You can also pass your own custom [Sphinx build options](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) after a ``--`` separator which are added to the default set.
+For example, to rebuild just the install guide and FAQ in verbose mode with the ``dirhtml`` builder (our noxfile automatically prepends the source directory for you, so typing the full relative path is optional):
+
+```shell
+nox -s build -- --verbose --builder dirhtml -- installation.rst faq.rst
+```
+
+
+### Build manually
 
 For manual installations, you can invoke Sphinx yourself with the appropriate options:
 
@@ -222,25 +251,13 @@ For manual installations, you can invoke Sphinx yourself with the appropriate op
 python -m sphinx -n -W --keep-going doc doc/_build/html
 ```
 
-If using Nox, you can open the rendered documentation in your default web browser with
-
-```shell
-nox -s serve
-```
-
-and to additionally automatically keep rebuilding the docs when changes occur, you can invoke
-
-```shell
-nox -s autobuild
-```
-
-Otherwise, navigate to the ``_build/html`` directory inside the ``spyder-docs`` repository and open ``index.html`` (the main page of the docs) in your preferred browser.
+Then, navigate to the ``_build/html`` directory inside the ``spyder-docs`` repository and open ``index.html`` (the main page of the docs) in your preferred browser.
 
 
 
 ## Deciding Which Branch to Use
 
-When you start to work on a new pull request (PR), you need to be sure that your work is done on top of the correct branch, and that you base your PR on Github against it.
+When you start to work on a new pull request (PR), you need to be sure that your work is done on top of the correct branch, and that you base your PR on GitHub against it.
 
 To guide you, issues on GitHub are marked with a milestone that indicates the correct branch to use.
 If not, follow these guidelines:
