@@ -218,7 +218,7 @@ repos:
   hooks:
   - id: pretty-format-yaml
     name: Format YAML
-    exclude: '\bworkshops\b'
+    exclude: '\bworkshops\b|crowdin.ya?ml'
     args: [--autofix, --indent, '2', --preserve-quotes]
 
 # Check YAML
