@@ -1,3 +1,3 @@
 #!/bin/bash -ex
 
-nox -s build
+nox -s build-multilanguage

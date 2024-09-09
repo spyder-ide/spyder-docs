@@ -51,7 +51,7 @@ jobs:
       run: ./ci/build.sh
     - name: Postprocess site
       shell: bash
-      run: nox -s deploy
+      run: nox -s prepare-multiversion
     - name: Deploy to GitHub Pages
       if: env.IS_DEPLOY == '1'
       uses: JamesIves/github-pages-deploy-action@v4
