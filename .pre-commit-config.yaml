@@ -13,7 +13,7 @@ default_language_version:
 
 default_stages: [commit]
 
-exclude: '\.min\.(js|css)$'
+exclude: '\.(min\.(js|css)|pot?)$'
 
 
 repos:
