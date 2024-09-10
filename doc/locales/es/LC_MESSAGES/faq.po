@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: spyder-documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"PO-Revision-Date: 2024-09-10 00:48\n"
+"Last-Translator: \n"
+"Language: es\n"
+"Language-Team: Spanish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Crowdin-Project: spyder-documentation\n"
+"X-Crowdin-Project-ID: 641502\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /doc/locales/en/LC_MESSAGES/faq.po\n"
+"X-Crowdin-File-ID: 16\n"
+
+#: ../../faq.rst:3
+msgid "Frequently Asked Questions"
+msgstr "Preguntas frecuentes (FAQ)"
+
+#: ../../faq.rst:7
+msgid "Installing and updating"
+msgstr "Instalar y actualizar"
+
+#: ../../faq.rst:12
+msgid "The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package. Download it from its `webpage`_."
+msgstr "La forma más fácil de instalar Spyder es con la distribución de Anaconda Python, que viene con todo lo que necesitas para empezar con un paquete todo en uno. Descárgalo de su `página web`_."
+
+#: ../../faq.rst:17
+msgid "For more information, visit our :doc:`/installation`."
+msgstr "Para más información, visita nuestro :doc:`/installation`."
+
+#: ../../faq.rst:23
+msgid "If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment if your code must run there."
+msgstr "Si ya has instalado Spyder en tu equipo Windows, no necesitas reinstalarlo en un entorno Linux basado en WSL2 si el código debe ejecutarse allí."
+
+#: ../../faq.rst:25
+msgid "Instead, just install `Miniconda`_ inside WSL2 and create a new conda environment (or use an existing conda- or virtualenv), then install Spyder-Kernels into that environment with e.g. ``conda install spyder-kernels``. You must manually install ``ipython_genutils`` with e.g. ``conda install ipython_genutils``."
+msgstr "En su lugar, simplemente instala `Miniconda`_ dentro de WSL2 y crea un nuevo entorno conda o también puedes usar un conda o virtualenv existente. Luego instala Spyder-Kernels en ese entorno con, por ejemplo, ``conda install spyder-kernels``. Debes instalar manualmente ``ipython_genutils`` con, por ejemplo, ``conda install ipython_genutils``."
+
+#: ../../faq.rst:30
+msgid "Windows creates a network path located at ``\\\\wsl$`` that points to the partitions of your WSL2 machines, e.g. ``\\\\wsl$\\Ubuntu-20.04``. You **must** map a network drive letter to your machine path, e.g. ``W:``, for Spyder to correctly see its files and folders."
+msgstr "Windows crea una ruta de red ubicada en ``\\\\wsl$`` que apunta a las particiones de sus máquinas WSL2, por ejemplo, ``\\\\wsl$\\Ubuntu-20. 4``. **Debes** mapear una letra de unidad de red a la ruta de su máquina, por ejemplo ``W:``, para que Spyder vea correctamente sus archivos y carpetas."
+
+#: ../../faq.rst:33
+msgid "To start a Spyder kernel, from your Linux terminal run"
+msgstr "Para iniciar un kernel de Spyder, desde tu terminal Linux ejecuta"
+
+#: ../../faq.rst:39
+msgid "It will run the kernel as a subprocess and create a file named :file:`remotemachine.json` in your WSL home folder."
+msgstr "Esto ejecutará el kernel como un subproceso y creará un archivo llamado :file:`remotemachine.json` en su carpeta de inicio WSL."
+
+#: ../../faq.rst:41
+msgid "Finally, under the options menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`connecting-external-kernel`. Insert the absolute path of :file:`remotemachine.json` into the :guilabel:`Connection file` field. If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`. A new console will open in Spyder, running in the Linux environment. Try running ``os.system('ls -la')`` and see if it lists your WSL home folder. If you run ``exit()`` from Spyder, the kernel running on Linux will be stopped."
+msgstr "Finalmente, bajo el menú de opciones de Spyder :doc:`panes/ipythonconsole`, selecciona :guilabel:`Conectarse a un núcleo existente` como se describe en :ref:`connecting-external-kernel`. Inserta la ruta absoluta de :file:`remotemachine.json` en el campo de :guilabel:`Archivo de conexión`. Si has mapeado ``W:``, como se menciona en la nota anterior, la ruta debería ser :file:`W:/home/{username}/remotemachine.json`. Una nueva consola se abrirá en Spyder, corriendo en el entorno Linux. Intenta ejecutar ``os.system('ls -la')`` y observa si se lista tu carpeta de inicio WSL. Si ejecutas ``exit()`` desde Spyder, se detendrá el núcleo corriendo en Linux."
+
+#: ../../faq.rst:52
+msgid "From the command line (or Anaconda prompt on Windows), run:"
+msgstr "Desde la línea de comandos (o el prompt de Anaconda en Windows), ejecuta:"
+
+#: ../../faq.rst:59
+msgid "If this results in an error or does not update Spyder to the latest version, try:"
+msgstr "Si esto da como resultado un error o no actualiza Spyder a la última versión, intenta:"
+
+#: ../../faq.rst:69
+msgid "Open the \"gear\" menu in Spyder's section under :guilabel:`Home` in Navigator. Go to :guilabel:`Install specific version` and select the version of Spyder you want to use. We strongly recommend the latest available, to benefit from new features, bug fixes, performance improvements and usability enhancements."
+msgstr "Abre el menú \"engranaje\" en la sección de Spyder bajo :guilabel:`Home` en Navigator. Ve a :guilabel:`Install specific version` y selecciona la versión de Spyder que quieres usar. Recomendamos encarecidamente que uses las últimas disponibles, para beneficiarte de nuevas características, correcciones de errores, mejoras de rendimiento y de usabilidad."
+
+#: ../../faq.rst:80
+msgid "Running Spyder"
+msgstr "Lanzar Spyder"
+
+#: ../../faq.rst:85
+msgid "You can launch it in any of the following ways:"
+msgstr "Puedes lanzarlo de cualquiera de las siguientes formas:"
+
+#: ../../faq.rst:87
+msgid "**From the command line**: Type ``spyder`` in your terminal (or Anaconda prompt on Windows)."
+msgstr "**Desde la línea de comandos**: Escribe ``spyder`` en tu terminal (o en el Anaconda prompt en Windows)."
+
+#: ../../faq.rst:89
+msgid "**From Anaconda Navigator**: Scroll to :guilabel:`Spyder` under :guilabel:`Home`, and click :guilabel:`Launch`."
+msgstr "**Desde Anaconda Navigator**: desplázete hasta :guilabel:`Spyder` en :guilabel:`Home`, y haz clic en :guilabel:`Launch`."
+
+#: ../../faq.rst:94
+msgid "***Windows Only***: Launch it via the Start menu shortcut."
+msgstr "***Solo para Windows***: Lánzalo a través del acceso directo al menú Inicio."
+
+#: ../../faq.rst:103
+msgid "Yes! With `Binder`_, you can work with a fully functional copy of Spyder that runs right in your web browser. Try it `here`_."
+msgstr "¡Sí! Con `Binder`_ puedes trabajar con una copia totalmente funcional de Spyder que se ejecuta en tu navegador web. Pruébalo `aquí`_."
+
+#: ../../faq.rst:114
+msgid "Spyder works on modern versions of Windows, macOS and Linux (see the table below for recommended versions) via Anaconda, as well as other methods. It typically uses relatively minimal CPU when idle, and 0.5 GB - 1 GB of RAM, depending on how long you've been using it and how many files, projects, panes and consoles you have open. It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is *strongly* recommended for best performance when running other applications. However, the code you run, such as scientific computation and deep learning models, may require additional resources beyond this baseline for Spyder itself."
+msgstr "Spyder funciona con versiones modernas de Windows, macOS y Linux (ver la tabla de abajo para ver las versiones recomendadas) mediante Anaconda, así como con otros métodos. Normalmente usa una CPU relativamente mínima cuando está inactiva, y 0.5 GB - 1 GB de RAM, dependiendo del tiempo que lo has estado usando y cuántos archivos, proyectos, paneles y consolas que has abierto. Debería funcionar en cualquier sistema con un procesador de núcleo dual o mejor con x64, y al menos 4 GB de RAM, aunque 8 GB es *altamente* recomendado para un mejor rendimiento al ejecutar otras aplicaciones. Sin embargo, el código que ejecutas, como la computación científica y los modelos de aprendizaje profundo, puede requerir recursos adicionales más allá de esta línea base para Spyder mismo."
+
+#: ../../faq.rst:122
+msgid "Operating system"
+msgstr "Sistema operativo"
+
+#: ../../faq.rst:122
+msgid "Version"
+msgstr "Versión"
+
+#: ../../faq.rst:124
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../faq.rst:124
+msgid "Windows 8.1"
+msgstr "Windows 8.1"
+
+#: ../../faq.rst:125
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../faq.rst:125
+msgid "High Sierra (10.13)"
+msgstr "High Sierra (10.13)"
+
+#: ../../faq.rst:126
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../faq.rst:126
+msgid "Ubuntu 16.04"
+msgstr "Ubuntu 16.04"
+
+#: ../../faq.rst:133
+msgid "Select the environment you want to launch Spyder from under :guilabel:`Applications on`. If Spyder is installed in this environment, you will see it in Navigator's :guilabel:`Home` window. Click :guilabel:`Launch` to start Spyder in your selected environment."
+msgstr "Selecciona el entorno en el que quieres lanzar Spyder desde :guilabel:`Applications on. Si Spyder está instalado en este entorno, lo verás en la ventana :guilabel:`Home` del Navigator. Haz clic en :guilabel:`Launch` para iniciar Spyder en el entorno seleccionado."
+
+#: ../../faq.rst:144
+msgid "Activate your conda environment by typing the following in your terminal (or Anaconda Prompt on Windows):"
+msgstr "Activa tu entorno conda escribiendo lo siguiente en tu terminal (o en el Anaconda Prompt en Windows):"
+
+#: ../../faq.rst:150
+msgid "Then, type ``spyder`` to launch the version installed in that environment."
+msgstr "Luego, escribe ``spyder`` para lanzar la versión instalada en ese entorno."
+
+#: ../../faq.rst:158
+msgid "Using Spyder"
+msgstr "Usar Spyder"
+
+#: ../../faq.rst:163
+msgid "The first approach for installing a package should be using conda. In your system terminal (or Anaconda Prompt on Windows), type:"
+msgstr "El primer método para instalar un paquete debería ser usar conda. En tu terminal del sistema (o en el Anaconda Prompt en Windows), escribe:"
+
+#: ../../faq.rst:170
+msgid "If your installation is not successful, follow steps 3 through 5 of Part 2 in our video on solving and avoiding problems with pip, Conda and Conda-Forge."
+msgstr "Si la instalación no se ha realizado correctamente, sigue los pasos 3 a 5 de la Parte 2 en nuestro vídeo sobre la resolución y prevención de problemas con pip, Conda y Conda-Forge."
+
+#: ../../faq.rst:184
+msgid "To work with an existing environment in Spyder, change the default Python interpreter for new :doc:`/panes/ipythonconsole`\\s to point to this environment."
+msgstr "Para trabajar con un entorno existente en Spyder, cambia el intérprete predeterminado de Python para las nuevas :doc:`/panes/ipythonconsole` para que apunten a este entorno."
+
+#: ../../faq.rst:186
+msgid "To do so, open the :guilabel:`Python interpreter` section of Spyder's preferences (:menuselection:`Tools --> Preferences`, or :menuselection:`Spyder --> Preferences` on macOS). Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment. If it's not listed, see :ref:`the note below <faq-env-not-listed>`."
+msgstr "Para hacerlo, abre la sección :guilabel:`intérprete de Python` de las preferencias de Spyder (:menuselection:`Herramientas --> Preferencias`, o :menuselection:`Spyder --> Preferences` en macOS). Aquí, selecciona la opción :guilabel:`Usar el siguiente intérprete`, y utiliza el menú desplegable de abajo para seleccionar tu entorno preferido. Si no está listado, consulta :ref:`la nota debajo de <faq-env-not-listed>`."
+
+#: ../../faq.rst:197
+msgid "If you installed Miniconda (or another Conda-based distribution) to a non-default path, or are using a virtual environment managed by a tool other than ``pyenv``, your environments likely won't be listed."
+msgstr "Si instalaste Miniconda (u otra distribución basada en Conda) en una ruta no predeterminada, o estás usando un entorno virtual administrado por una herramienta que no sea ``pyenv``, es probable que los entornos no aparezcan en la lista."
+
+#: ../../faq.rst:199
+msgid "Instead, use the text box or the :guilabel:`Select file` button to enter the path to the Python interpreter you want to use. You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:"
+msgstr "En su lugar, utiliza el cuadro de texto o el botón :guilabel:`Seleccionar archivo` para ingresar la ruta al intérprete de Python que deseas utilizar. Puedes encontrar esta ruta activando el env o la env de Conda que deseas usar en tu terminal (Anaconda Prompt en Windows), y ejecutando el comando:"
+
+#: ../../faq.rst:206
+msgid "Finally, click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect. If ``spyder-kernels`` is not already installed, the :doc:`/panes/ipythonconsole` will display instructions on how to install the right version. Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more."
+msgstr "Finalmente, haz clic en :guilabel:`Reiniciar el núcleo` en el menú :guilabel:`Consolas` para que este cambio surta efecto. Si ``spyder-kernels`` no está instalado, el :doc:`/panes/ipythonconsole` te mostrará instrucciones sobre cómo instalar la versión correcta. Ejecuta el comando dado en tu terminal (Anaconda Prompt en Windows) con el entorno activado, y finalmente reinicia el núcleo una vez más."
+
+#: ../../faq.rst:216
+msgid "Watch our video on using additional packages or follow the instructions below."
+msgstr "Ve nuestro vídeo sobre el uso de paquetes adicionales o sigue las instrucciones que aparecen a continuación."
+
+#: ../../faq.rst:224
+msgid "If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniconda`_ or another Conda-based option. For Spyder to recognize it automatically, you should use a Conda-based distribution with its default install path."
+msgstr "Si quieres usar otros paquetes en Spyder que no vienen con nuestro instalador, necesitas tener tu propia distribución de Python instalada; recomendamos `Miniconda`_ u otra opción basada en Conda. Para que Spyder lo reconozca automáticamente, debes utilizar una distribución basada en Conda con su ruta de instalación predeterminada."
+
+#: ../../faq.rst:229
+msgid "Create a new conda environment containing ``spyder-kernels`` and the packages that you want to use. For example, if you want to use ``scikit-learn``, open your terminal (or Anaconda prompt on Windows) and run the following command:"
+msgstr "Crea un nuevo entorno conda que contenga ``spyder-kernels`` y los paquetes que quieres usar. Por ejemplo, si deseas usar ``scikit-learn``, abre tu terminal (o Anaconda Prompt en Windows) y ejecuta el siguiente comando:"
+
+#: ../../faq.rst:236
+msgid "Finally, connect Spyder to this ``my-env`` environment by changing Spyder's default Python interpreter, following the instructions in :ref:`the above answer <using-existing-environment>`."
+msgstr "Finalmente, conecta Spyder al entorno ``my-env`` cambiando el intérprete predeterminado de Python de Spyder, siguiendo las instrucciones en :ref:`la respuesta anterior <using-existing-environment>`."
+
+#: ../../faq.rst:242
+msgid "Either use the :guilabel:`Reset Spyder to factory defaults` under :guilabel:`Tools` in Spyder's menu bar, the :guilabel:`Reset Spyder settings` Start menu shortcut (Windows), or run ``spyder --reset`` in your system terminal (Anaconda prompt on Windows)."
+msgstr "Puedes usar el :guilabel:`Restablecer Spyder a su configuración por defecto` bajo :guilabel:`Herramientas` en la barra de menú de Spyder; el acceso directo del menú de inicio :guilabel:`Reset Spyder settings` (Windows), o ejecuta ``spyder --reset`` en tu terminal del sistema (Anaconda Prompt en Windows)."
+
+#: ../../faq.rst:251
+msgid "Under :guilabel:`General` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`."
+msgstr "En :guilabel:`Aplicación` en las :guilabel:`Preferencias` de Spyder, ve a la pestaña :guilabel:`Opciones avanzadas` y selecciona tu idioma de las opciones que se muestran en :guilabel:`Lenguaje`."
+
+#: ../../faq.rst:260
+#, python-format
+msgid "To create a cell in Spyder's :doc:`/panes/editor`, type ``#%%`` in your script. Each ``#%%`` will make a new cell. To run a cell, press :kbd:`Shift-Enter` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar."
+msgstr "Para crear una celda en el :doc:`/panes/editor` de Spyder, escribe ``#%%`` en tu script. Cada ``#%%`` hará una nueva celda. Para ejecutar una celda, presiona :kbd:`Shift-Enter` (mientras tu cursor está centrado en la celda) o usa el botón :guilabel:`Ejecutar la celda actual` en la barra de herramientas de Spyder."
+
+#: ../../faq.rst:271
+msgid "Spyder plugins are available in the ``conda-forge`` conda channel. To install one, type on the command line (or Anaconda Prompt on Windows):"
+msgstr "Los plugins de Spyder están disponibles en el canal conda ``conda-forge``. Para instalar uno, escribe en la línea de comandos (o en el Anaconda Prompt en Windows):"
+
+#: ../../faq.rst:278
+msgid "Replace ``<PLUGIN>`` with the name of the plugin you want to use. For more information on a specific plugin, go to the its repository:"
+msgstr "Reemplaza ``<PLUGIN>`` con el nombre del plugin que quieres usar. Para más información sobre un plugin específico, ve a su repositorio:"
+
+#: ../../faq.rst:281
+msgid "`spyder-unittest`_"
+msgstr "`spyder-unittest`_"
+
+#: ../../faq.rst:282
+msgid "`spyder-terminal`_"
+msgstr "`spyder-terminal`_"
+
+#: ../../faq.rst:283
+msgid "`spyder-notebook`_"
+msgstr "`spyder-notebook`_"
+
+#: ../../faq.rst:284
+msgid "`spyder-memory-profiler`_"
+msgstr "`spyder-memory-profiler`_"
+
+#: ../../faq.rst:285
+msgid "`spyder-line-profiler`_"
+msgstr "`spyder-line-profiler`_"
+
+#: ../../faq.rst:297
+msgid "Check the option :guilabel:`Remove all variables before execution` in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu."
+msgstr "Revisa la opción :guilabel:`Eliminar todas las variables antes de la ejecución` en el diálogo :guilabel:`Configuración por archivo...` bajo el menú :guilabel:`Ejecutar`."
+
+#: ../../faq.rst:306
+msgid "Select the appropriate option in the :guilabel:`Configuration per file...` dialog under the :guilabel:`Run` menu."
+msgstr "Seleccione la opción apropiada en el diálogo :guilabel:`Configuración por archivo...` bajo el menú :guilabel:`Ejecutar`."
+
+#: ../../faq.rst:315
+msgid "Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section."
+msgstr "Ve a :guilabel:`Preferencias` y selecciona el tema que quieras bajo el tema :guilabel:`Tema de coloreado de sintaxis` en la sección :guilabel:`Apariencia`."
+
+#: ../../faq.rst:324
+msgid "Troubleshooting"
+msgstr "Solución de problemas"
+
+#: ../../faq.rst:329
+msgid "You should first follow the steps in our :doc:`troubleshooting guide</troubleshooting/first-steps>`. If you can't solve your problem, open an issue by following the instructions in our :doc:`/troubleshooting/submit-a-report` section."
+msgstr "Primero debes seguir los pasos en nuestra guía :doc:`solución de problemas</troubleshooting/first-steps>`. Si no puedes resolver tu problema, abre un \"issue\" siguiendo las instrucciones de nuestra sección :doc:`/troubleshooting/submit-a-report`."
+
+#: ../../faq.rst:336
+msgid "First, make sure the error you are seeing is not a bug in your code. To confirm this, try running it in any standard Python interpreter. If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start. Otherwise, start at the :doc:`/troubleshooting/basic-first-aid` section of our troubleshooting guide."
+msgstr "Primero, asegúrate de que el error que estás viendo no es un error en tu código. Para confirmar esto, intenta ejecutarlo en cualquier intérprete estándar de Python. Si el error persiste, es probable que el problema esté en el código y un sitio como `Stack Overflow`_ podría ser el mejor lugar para empezar. De lo contrario, empieza por la sección :doc:`/troubleshooting/basic-first-aid` de nuestra guía de solución de problemas."
+
+#: ../../faq.rst:347
+msgid "If nothing is displayed in the calltip, hover hint or :doc:`/panes/help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`/panes/ipythonconsole` to get help and completions there. If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option."
+msgstr "Si no se muestra nada en el calltip, pase el cursor o usa el panel :doc:`/panes/help`, asegúrate de que el objeto que estás inspeccionando tiene un docstring, y prueba a ejecutar tu código en el :doc:`/panes/ipythonconsole` para obtener ayuda y completar el código allí. Si esto no funciona, prueba a reiniciar PyLS haciendo clic derecho en la etiqueta :guilabel:`LSP Python` en la barra de estado en la parte inferior de la ventana principal de Spyder, y seleccionando la opción :guilabel:`Reiniciar el Servidor de lenguaje de Python`."
+
+#: ../../faq.rst:350
+msgid "For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide."
+msgstr "Para obtener más información, ve a la sección :ref:`code-completion-problems-ref` en la página :doc:`/troubleshooting/common-illnesses` de nuestra solución de problemas."
+
+#: ../../faq.rst:356
+msgid "First, make sure your version of Spyder-Kernels is compatible with that of Spyder. See the table in the :ref:`spyder-kernels-version-ref` section of the troubleshooting guide to check."
+msgstr "Primero, asegúrate de que tu versión de Spyder-Kernels es compatible con la de Spyder. Revisa la tabla en la sección :ref:`spyder-kernels-version-ref` de la guía de solución de problemas para comprobar."
+
+#: ../../faq.rst:359
+msgid "To install the right version, type the following on the command line (or Anaconda Prompt on Windows)"
+msgstr "Para instalar la versión correcta, escribe lo siguiente en la línea de comandos (o Anaconda Prompt en Windows)"
+
+#: ../../faq.rst:365
+msgid "For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide."
+msgstr "Para obtener más información, ve a la sección :ref:`starting-kernel-problems-ref` en la página :doc:`/troubleshooting/common-illnesses` de nuestra solución de problemas."
+
+#: ../../faq.rst:371
+msgid "Spyder is in the final stages of being updated for full compatibility with macOS 11 Big Sur, which will be released by the end of 2020 as part of version 4.2.1. However, you can get it working right now with the workaround below. Make sure you have the Anaconda or Miniconda distribution installed, and run the following commands in the Terminal to install Spyder from Conda-Forge in a clean environment:"
+msgstr "Spyder está en las etapas finales de ser actualizado para total compatibilidad con macOS 11 Big Sur, que se publicará a finales de 2020 como parte de la versión 4.2.1. Sin embargo, puedes ponerlo en marcha ahora mismo con la solución a continuación. Asegúrate de tener la distribución Anaconda o Miniconda instalada, y ejecutar los siguientes comandos en la Terminal para instalar Spyder desde Conda-Forge en un entorno limpio:"
+
+#: ../../faq.rst:381
+msgid "Then, whenever you want to start Spyder, run the following from the Terminal:"
+msgstr "Entonces, cada vez que quieras iniciar Spyder, ejecuta lo siguiente desde la Terminal:"
+
+#: ../../faq.rst:393
+msgid "About Spyder"
+msgstr "Acerca de Spyder"
+
+#: ../../faq.rst:398
+#, python-format
+msgid "Spyder is 100% free and open source; there is no paid version or prohibition on commercial use. It is developed by its international user community, and supported by its users through `OpenCollective`_ and by its generous sponsoring organizations, including `Quansight`_ and `NumFOCUS`_. Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use. For more details about the situation with Anaconda, see `that question`_."
+msgstr "Spyder es 100% gratuito y de código abierto; no hay ninguna versión de pago ni prohibición sobre el uso comercial. Es desarrollado por su comunidad internacional de usuarios, y soportado por sus usuarios a través de `OpenCollective`_ y por sus generosas organizaciones patrocinadoras, incluyendo `Quansight`_ y `NumFOCUS`_. Nuestro código fuente, instaladores independientes y la mayoría de nuestros métodos de distribución (Pip/PyPI, distribuciones Linux, MacPorts, WinPython, etc) pueden ser libremente redistribuidos, utilizados y modificados por cualquier persona, para cualquier propósito, incluyendo uso comercial. Para más detalles sobre la situación con Anaconda, vea `esa pregunta`_."
+
+#: ../../faq.rst:412
+#, python-format
+msgid "If you use Spyder with the Anaconda distribution, they `recently changed`_ their `Terms of Service`_ to add restrictions on large (> 200 employee) for-profit companies using Anaconda on a large scale. However, these terms only apply to the package infrastructure (the full Anaconda distribution and the ``defaults`` conda channel). Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems here can break your whole installation). Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`install-standalone`) with ``conda`` as you usually do. Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions. For more, see our :doc:`/installation`."
+msgstr "Si usas Spyder con la distribución Anaconda, ellos recientemente cambiaron (`recently changed`_) sus términos de servicio (`Terms of Service`_) para añadir restricciones a grandes empresas (> 200 empleados) con fines de lucro que utilizan Anaconda a gran escala. Sin embargo, estos términos solo aplican a la infraestructura de paquetes (la distribución completa de Anaconda y el canal conda ``defaults``). En su lugar, puedes descargar la distribución Miniforge (`Miniforge distribution`_) que es 100% de código abierto e idéntica a Anaconda (aparte de no incluir los paquetes de Python instalados por defecto en el entorno ``base`` de Anaconda, que recomendamos que evites usar de todos modos dado que cualquier problema puede romper tu instalación). Luego, simplemente instala los paquetes que necesitas (incluyendo Spyder, si no estás usando nuestro :ref:`install-standalone` recomendado) con ``conda`` como lo haces normalmente. Miniforge utilizará automáticamente el repositorio Conda-Forge mantenido por la comunidad, que tiene una variedad de paquetes mucho más amplia y generalmente está más actualizada que el equivalente de Anaconda, además de estar libre de cualquier restricción comercial. Para más información, visita nuestra :doc:`/installation`."
+

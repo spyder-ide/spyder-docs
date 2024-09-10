@@ -1,0 +1,1192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
+# This file is distributed under the same license as the Spyder package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spyder 5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../troubleshooting/basic-first-aid.rst:3
+msgid "Basic First Aid"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:5
+msgid ""
+"These suggestions, while more of a shotgun approach, tend to fix the "
+"majority of reported issues just on their own."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:11
+msgid "Recommended troubleshooting steps"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:13
+msgid "**Restart Spyder**, and try what you were doing before again."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:15
+msgid ""
+"**Upgrade Spyder** to the latest release, and you might find your issue "
+"is resolved (along with new features, enhancements, and other bug fixes)."
+" Minor releases come out every couple months, so unless you've updated "
+"recently, there is a good chance your version isn't the latest. You can "
+"find out with the :guilabel:`Check for updates` command under the "
+":guilabel:`Help` menu."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:22
+msgid ""
+"To perform the update with Conda (strongly recommended), from your "
+"terminal (or Anaconda Prompt on Windows) run:"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:29
+msgid ""
+"**Update Spyder's dependencies and environment**, either by installing "
+"the latest version of your distribution (e.g. the recommended Anaconda), "
+"or with the relevant \"update all\" command in your terminal (or Anaconda"
+" Prompt on Windows). To get the latest stable version of everything using"
+" Conda, you can run:"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:36
+msgid ""
+"**Restart your machine**, in case the problem lies with a lingering "
+"process or another such issue."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:38
+msgid ""
+"**Restore Spyder's config files** to their defaults, which solves a huge "
+"variety of Spyder issues. From your terminal (or Anaconda Prompt on "
+"Windows), run:"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:47
+msgid ""
+"This will reset your preferences, as well as any custom keyboard "
+"shortcuts or syntax highlighting schemes. If you particularly care about "
+"any of those, you should make a copy of the :file:`.spyder-py3` folder in"
+" your user home directory (:file:`C:/Users/YOUR_USERNAME` on Windows, "
+":file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on "
+"Linux), and restore it afterwards if this doesn't solve the problem."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:50
+msgid ""
+"**Try installing Spyder into a new Conda environment** (recommended) or "
+"``virtualenv``/``venv``, and see if the issue reoccurs."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:52
+msgid ""
+"In your system terminal (or Anaconda Prompt on Windows), run the "
+"following commands to create an a fresh, clean environment and start "
+"Spyder in it:"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:60
+msgid ""
+"If this fixes the issue, the problem was likely due to another package "
+"installed on your system, particularly if done with pip, which can cause "
+"many problems and should be avoided if at all possible."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:62
+msgid ""
+"**Watch our video** on solving and avoiding problems with pip, Conda and "
+"Conda-Forge, and follow its instructions."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:75
+msgid "Reinstalling Spyder"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:77
+msgid ""
+"If none of the previous steps solve your issue, you should do a full "
+"uninstall of Spyder by whatever means you originally installed it."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:79
+msgid ""
+"For Anaconda, follow all the steps under Option B in the `Anaconda "
+"uninstall guide`_, delete the Anaconda directory wherever it was "
+"originally installed, and (on Windows) remove the "
+":file:`%appdata%/python` directory if it exists."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:84
+msgid ""
+"Then, do a clean install of the latest version of the `Anaconda "
+"distribution`_ which is how we recommend you install Spyder and keep it "
+"up to date."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:88
+msgid ""
+"While you are welcome to get Spyder working on your own by one of the "
+"many other means we offer, we are only able to provide individual support"
+" for install-related issues for users of the Anaconda distribution. In "
+"particular, pip installation, while doable, is only really for experts, "
+"as there are many pitfalls involved and different issues specific to your"
+" setup, which is why we recommend using Conda whenever possible. For "
+"further information, please visit our :doc:`/installation`."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:99
+msgid "Isolating problems"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:101
+msgid ""
+"If you get an error while running a specific line, block, or "
+"script/program, it may not be an issue with Spyder, but rather something "
+"lower down in the packages it depends on. Try running it in the following"
+" in order if and until it starts working as you expect. If you manage to "
+"isolate the bug, report it to the last one it *doesn't* work in."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:105
+msgid ""
+"**Spyder** itself, of course! Make sure you can reproduce the error after"
+" closing and reopening it, if possible."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:108
+msgid ""
+"**A bare QtConsole instance**, e.g. launched from Anaconda navigator or "
+"from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with "
+"``jupyter qtconsole``."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:113
+msgid ""
+"QtConsole is the GUI console backend Spyder depends on to run its code, "
+"so most issues involving Spyder's :doc:`/panes/ipythonconsole` are "
+"actually something with QtConsole instead, and can be reported to their "
+"`issue tracker`_."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:115
+msgid ""
+"**An IPython command line shell**, launched with e.g. ``ipython`` from "
+"the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux). "
+"Reproducible bugs can be reported to their `Github page`_, though make "
+"sure to read their guidelines and docs first."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:118
+msgid ""
+"**A standard Python interpreter**, either run as a script file with "
+"``python path/to/your/file.py`` or launched interactively with ``python``"
+" from your Anaconda Prompt/Terminal/command line (Windows/Mac/Linux). "
+"While it is not impossible that you've found Python bug, it is much more "
+"likely to be an issue with the code itself or a package you are using, so"
+" your best sources are the `Python docs`_ and the other resources listed "
+"above."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:127
+msgid ""
+"If the problem reoccurs in a similar or identical way with any of these "
+"methods (other than only Spyder itself), then it is almost certainly not "
+"an issue with Spyder, and would be best handled elsewhere. As we usually "
+"aren't able to do much about issues not related to Spyder, a forum like "
+"`Stack Overflow`_ or the relevant package's docs is a much better place "
+"to get help or report the issue."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:132
+msgid ""
+"See the :doc:`call-for-help` section for other places to look for "
+"information and assistance."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:138
+msgid "Debugging and patching"
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:140
+msgid ""
+"If you know your way around Python, you can often diagnose and even fix "
+"Spyder issues yourself, since the IDE is written in the same language you"
+" use in it. You can explore the error messages you're receiving and "
+"Spyder's inner workings with the :guilabel:`Internal Console`, available "
+"under the menu item :menuselection:`View --> Panes --> Internal Console`."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:146
+msgid ""
+"For more detailed debug output, start Spyder from the command line "
+"(Anaconda Prompt on Windows) with ``spyder --debug-info verbose``."
+msgstr ""
+
+#: ../../troubleshooting/basic-first-aid.rst:148
+msgid ""
+"Even if you don't manage to fix the problem yourself, this output can be "
+"very helpful in aiding us to quickly narrow down and solve your issue for"
+" you."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:3
+msgid "Calling for Help"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:5
+msgid ""
+"Aside from this troubleshooting guide, there are a number of other "
+"sources of documentation and troubleshooting information you can check "
+"before submitting an issue, as they might already offer an answer, or at "
+"least help you better understand the problem. Even if we aren't able to "
+"help you, these places might."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:14
+msgid "Spyder-related platforms"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:19
+msgid "Spyder's FAQ section"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:21
+msgid ""
+"Spyder's documentation has a FAQ section, where you might find the "
+"answers that you are looking for."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:27
+msgid "Spyder's YouTube channel"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:29
+msgid ""
+"Our `YouTube channel`_ contains helpful videos that will guide you "
+"through many of Spyder's features, and provide a starting point for newer"
+" users."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:37
+msgid "Spyder Gitter"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:39
+msgid ""
+"We have a public `Gitter room`_ where you can chat directly with the "
+"Spyder developers. If you've got a quick question to ask the team and are"
+" looking for a quick answer, this is a great place to go."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:48
+msgid "Spyder Google Group"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:50
+msgid ""
+"Our `Google Group`_ is great for help-related questions, particularly "
+"those you aren't sure are a full-on Spyder issue."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:58
+msgid "Spyder website"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:60
+msgid ""
+"The `Spyder site`_ contains basic information about the IDE and links to "
+"many other helpful resources."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:68
+msgid "Stack Overflow tag"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:70
+msgid ""
+"`Stack Overflow`_ is a great place to start searching and posting, "
+"particularly if your question is more programming-related, or has to do "
+"with something specific to your own code. It has an vibrant Spyder "
+"community as well, with new questions posted every day, and the "
+"developers (especially Carlos Cordoba, the lead maintainer) are active in"
+" answering them."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:79
+msgid "OpenTeams support"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:81
+msgid ""
+"On `OpenTeams`_, you can get help from expert Spyder consultants. "
+"OpenTeams offers services from Spyder experts ranging from a brief "
+"consultation to an experienced team to help you with a large scale "
+"implementation project."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:91
+msgid "Python resources"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:96
+msgid "Official Python help page"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:98
+msgid ""
+"The `Python help page`_ is a great resource that lists a number of places"
+" you can get assistance, support and learning resources for the language "
+"and its packages."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:106
+msgid "Python documentation"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:108
+msgid ""
+"The `Python docs`_ can help you understand a number of issues that can be"
+" caused by quirks in the language itself, or misunderstandings as to how "
+"it behaves."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:116
+msgid "Python subreddits"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:118
+msgid ""
+"`r/python`_ and `r/learnpython`_ are resources you can use to ask about "
+"and discuss issues with Python and its packages. The former is aimed more"
+" at general Python usage, and the latter more specifically at beginners."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:130
+msgid "Data science/SciPy resources:"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:136
+msgid "Anaconda help"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:138
+msgid ""
+"The `Anaconda docs`_ site offers free community help and documentation "
+"for the Anaconda applications, installing the Anaconda distribution, and "
+"using the Conda package and environment manager; along with paid support "
+"options."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:145
+msgid "SciPy.org website"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:147
+msgid ""
+"The `Scipy website`_ is the the central home of the SciPy stack, with "
+"information, documentation, help, and bug tracking for many of the core "
+"packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, "
+"Sympy and IPython."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:155
+msgid "Project Jupyter"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:157
+msgid ""
+"`Jupyter`_ is the development hub for IPython, Spyder's QtConsole, "
+"Jupyter notebooks used with the `Spyder-Notebook`_ plugin, and more."
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:166
+msgid "Data Science Stack Exchange"
+msgstr ""
+
+#: ../../troubleshooting/call-for-help.rst:168
+msgid ""
+"The `Data Science`_ site in Stack Exchange can be very useful for "
+"questions that relate more to data science than programming specifically."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:3
+msgid "Common Illnesses"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:5
+msgid ""
+"Beyond the general troubleshooting steps, some frequently-reported "
+"problems require more specialized solutions."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:13
+msgid "Errors starting the kernel"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:15
+msgid ""
+"If you receive the message ``An error occurred while starting the "
+"kernel`` in the :doc:`/panes/ipythonconsole`, Spyder was unable to launch"
+" a new Python interpreter in the current working environment to run your "
+"code. There are a number of problems that can cause this, but most can be"
+" fixed fairly quickly with a few easy steps."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:22
+msgid "Spyder-Kernels not installed/incompatible"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:24
+msgid ""
+"Spyder requires a supported version of the ``spyder-kernels`` package to "
+"be present in the working environment you want to run your console in."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:29
+msgid ""
+"It is included by default with Anaconda, but if you want to run your code"
+" in another Python environment or installation, you'll need to make sure "
+"it's installed and updated to the latest version."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:31
+msgid ""
+"Check the required version of spyder-kernels for your version of Spyder "
+"in the following table:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:33
+msgid "Spyder and Spyder-Kernels version compatibility"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:36
+msgid "Spyder"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:36
+msgid "Spyder-Kernels"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:38
+msgid "4.0.0-4.0.1"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:38
+msgid "1.8.1"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:39
+msgid "4.1.0-4.1.2"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:39
+msgid "1.9.0"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:40
+msgid "4.1.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:40
+msgid "1.9.1"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:41
+msgid "4.1.4"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:41
+msgid "1.9.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:42
+msgid "4.1.5-4.1.6"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:42
+msgid "1.9.4"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:43
+msgid "4.2.0"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:43
+msgid "1.10.0"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:44
+msgid "5.0.0-5.0.5"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:44
+msgid "2.0.5"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:45
+msgid "5.1.0-5.1.5"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:45
+msgid "2.1.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:46
+msgid "5.2.0-5.2.1"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:46
+msgid "2.2.0"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:47
+msgid "5.2.2"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:47
+msgid "2.2.1"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:48
+msgid "5.3.0-5.3.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:48
+msgid "2.3.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:49
+msgid "5.4.0-5.4.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:49
+msgid "2.4.3"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:52
+msgid ""
+"To do so, activate the environment, then install ``spyder-kernels``. If "
+"using Anaconda, open a terminal (Anaconda Prompt on Windows) and run:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:60
+msgid ""
+"Otherwise, activate your environment by whatever means you created it, "
+"and execute:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:66
+msgid ""
+"For both of the previous commands, replace ``<VERSION>`` with the "
+"corresponding version in the table."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:70
+msgid "Issue with another dependency"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:72
+msgid ""
+"If the kernel displays a long error traceback that mentions other "
+"packages like ``ipython``, ``ipykernel``, ``jupyter_client``, "
+"``traitlets`` or ``pyzmq``, the problem may be an out of date or "
+"incompatible version of a dependency package. To fix this, activate the "
+"environment and update the key dependencies."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:75
+msgid "In an Anaconda environment:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:82
+msgid ""
+"Otherwise, activate your environment by whatever means you created it, "
+"and run:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:90
+msgid "AttributeError/ImportError"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:92
+msgid ""
+"Check the last few lines of the error message, and see if its an "
+"``AttributeError`` or ``ImportError``, or refers to a file you created in"
+" your current working directory or your home folder "
+"(:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` "
+"on macOS, or :file:`/home/YOUR_USERNAME` on Linux)."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:97
+msgid ""
+"If so, the the error is likely due to your file being named the same as a"
+" Python standard library module, such as ``string.py`` or ``time.py``, "
+"which overrides the built-in module that Spyder-Kernels is trying to "
+"load. To fix this, simply rename your file to something other than one of"
+" these names, and try restarting the kernel. To check the names of these "
+"modules, see the list in the `Python standard library documentation`_."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:109
+msgid "Completion/help not working"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:111
+msgid ""
+"To provide code completions, help and real-time analysis in the Editor, "
+"Spyder uses the Python Language Server (PyLS), an implementation of the "
+"Language Server Protocol specification used by VSCode, Atom and other "
+"popular editors/IDEs. Most help and completion issues lie outside of "
+"Spyder's control, and are either limitations with PyLS or the code that "
+"is being introspected, but some can be worked around."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:116
+msgid "Object missing docstring"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:118
+msgid ""
+"If nothing is displayed in the calltip, hover hint or help pane, the "
+"object you're trying to introspect may not have a docstring."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:124
+msgid ""
+"In this case, the only solution is to add one in the source code of the "
+"original function, method or class."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:128
+msgid "Object cannot be found"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:130
+msgid ""
+"Some objects, whether due to being written in C, Cython or another "
+"language; generated dynamically at runtime; or being a method of an "
+"object you create, cannot be easily found without executing the code."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:136
+msgid ""
+"However, once you run your code in the :doc:`/panes/ipythonconsole`, you "
+"might be able to get help and completions on the object there."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:140
+msgid "LSP has stopped working"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:142
+msgid ""
+"Occasionally, especially after using Spyder for a while, code completion,"
+" help and analysis may stop working. If this is the case, you can check "
+"LSP status with the :guilabel:`LSP Python` item in Spyder's status bar at"
+" the bottom of the screen, and restart it by right-clicking it and "
+"selecting the :guilabel:`Restart Python Language Server` item."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:150
+msgid "Spyder bug/dependency issue"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:152
+msgid ""
+"Given the variety of dependencies involved in making LSP work, an "
+"incompatible or out of date version in your environment can result in "
+"error messages, incomplete results, or help/analysis not working at all."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:154
+msgid ""
+"To address this, first try updating Anaconda and Spyder as described in "
+":doc:`basic-first-aid`. If the issue still isn't resolved, update the "
+"various relevant dependencies with:"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:165
+msgid "Plugin Problems"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:168
+msgid "Plugin does not work at all"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:170
+msgid ""
+"If you have installed a Spyder plugin, but you can't see it, go to the "
+":guilabel:`Panes` submenu of the :guilabel:`View` menu and select the "
+"plugin's name, which should make its pane visible. If you don't see the "
+"plugin there, select the :guilabel:`Dependencies` item under the "
+":guilabel:`Help` menu and see if the plugin appears at the bottom."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:176
+msgid ""
+"If the plugin with the problem is not listed in the dependencies dialog, "
+"check that you installed it in the same environment as Spyder. If you "
+"have, then the problem may well be caused by a dependency issue. Test "
+"whether you can import the plug-in manually by opening a Python console "
+"in the same environment as Spyder and typing, for instance, ``import "
+"spyder_unittest`` to test the Spyder-Unittest` plug-in; this command "
+"should run without errors."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:180
+msgid ""
+"If none of this helps you to resolve the problem, then continue to the "
+"next section."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:184
+msgid "Other issues"
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:186
+msgid ""
+"If you get an error which mentions or involves a Spyder plugin, such as "
+"``spyder-unittest``, ``spyder-terminal`` or ``spyder-notebook``, or if "
+"you encounter any other problem with a Spyder plugin, then the first "
+"approach should be to update Spyder and the plugin to their latest "
+"versions."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:188
+msgid ""
+"If this doesn't fix the problem, you should check the plugin's website or"
+" repository to see if it is compatible with your version of Spyder."
+msgstr ""
+
+#: ../../troubleshooting/common-illnesses.rst:190
+msgid ""
+"Finally, if compatibility doesn't seem to be the problem, please check "
+"those repositories to see if an issue was already opened, and report it "
+"there if not."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:3
+msgid "Emergency CPR"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:5
+msgid ""
+"Is Spyder not launching at all? The steps on this section should "
+"hopefully get it back up and running in no time."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:12
+msgid "Common solutions"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:14
+msgid ""
+"Try :doc:`basic-first-aid` first, which usually resolves most Spyder "
+"install-related issues."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:16
+msgid ""
+"**Make sure Spyder isn't already running** and no Spyder related windows "
+"(*e.g.* :doc:`/panes/variableexplorer` dialogs) are left open, and check "
+"that the preference setting :menuselection:`Application --> Advanced "
+"Settings --> Use a single instance` isn't checked."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:21
+msgid ""
+"Try **starting Spyder via a different means**, such as from a shortcut, "
+"Anaconda navigator, or your command line (or Anaconda Prompt on Windows) "
+"by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if "
+"any of those work. If so, then something's wrong with your install, not "
+"Spyder itself, and so we recommend following :ref:`troubleshooting-"
+"reinstalling-spyder-ref` to uninstall and reinstall Anaconda."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:24
+msgid ""
+"**Disable any security software** you may be using, such as a firewall or"
+" antivirus, as these products can occasionally interfere with Spyder or "
+"its related packages. Make sure to re-enable it if it doesn't fix the "
+"problem, and if it does, add a rule or exception for Spyder or Python."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:27
+msgid ""
+"If it is currently installed \"for just you\", **try uninstalling and "
+"reinstalling Anaconda \"for all users\" instead**, and vice versa, as "
+"some systems can have issues with one or the other installation method."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:29
+msgid ""
+"**Check and repair/reset permissions**, your disk, and OS if all else "
+"fails."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:35
+msgid "Advanced tricks"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:37
+msgid ""
+"If none of the above solves the problem, you can try starting Spyder "
+"directly from its Python source files which may either get it running, or"
+" at least provide useful information to help debug the issue further."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:39
+msgid ""
+"This technique consists of starting Spyder from your terminal (or "
+"Anaconda Prompt on Windows) by manually running the Spyder startup "
+"routine ( :guilabel:`start.py` ) with a known good Python interpreter, "
+"and observing the results."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:41
+msgid "To do so, you'll need to:"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:43
+msgid ""
+"Find the path to the Spyder :file:`app` directory from the command line. "
+"For this, run:"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:50
+msgid "Go to the output path of the above command on your command line:"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:56
+msgid ""
+"Once inside the :file:`app` directory, run ``python start.py`` to launch "
+"Spyder."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:62
+msgid ""
+"#. If it doesn't start successfully, then you should see an error "
+"traceback printed; carefully copy that for future reference. Also run "
+"``python mainwindow.py``, and record your results as well."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:65
+msgid ""
+"(*Windows only*) In case the command window disappears immediately after "
+"the error, create a ``.bat`` file in the :file:`app` directory with the "
+"following content:"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:73
+msgid "Replace ``<PYTHON-PATH>`` with the output of:"
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:79
+msgid ""
+"Then, double click the batch file to run it, and you should see the error"
+" information you need."
+msgstr ""
+
+#: ../../troubleshooting/emergency-cpr.rst:81
+msgid ""
+"If reading the output (particularly the last line) doesn't help you solve"
+" the problem, then record all of it carefully, and post it as part of "
+"your bug report as described under the :doc:`submit-a-report` section."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:3
+msgid "First Steps"
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:5
+msgid ""
+"If Spyder crashes or you receive an error message, please read the "
+"following troubleshooting steps before opening a new issue. There's a "
+"good chance that someone else has already experienced the same problem, "
+"so checking for an existing solution will likely get Spyder working again"
+" for you as quickly as possible."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:9
+msgid ""
+"To make sure you're getting the most relevant help for your problem, "
+"please make sure the issue is actually related to Spyder:"
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:11
+msgid ""
+"If the problem appears to be a result of *your own code*, `Stack "
+"Overflow`_ is a better place to start."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:12
+msgid ""
+"If the bug also occurs in the *standard Python, IPython, or QtConsole* "
+"environments, or only with *a specific package*, it is unlikely to be "
+"something in Spyder, and you should report it to those sources instead."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:13
+msgid ""
+"If the problem lies with *your specific install*, uninstalling and clean-"
+"reinstalling the `Anaconda`_ distribution is strongly recommended. As the"
+" other methods of installing Spyder can result in tricky user-specific "
+"problems, we generally aren't able to give individual support for install"
+" issues."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:19
+msgid ""
+"Just like the programs you code in it, Spyder is written in Python, so "
+"you can often figure out many problems just by reading the last line of "
+"the traceback or error message. To view it, simply click :guilabel:`Show "
+"details` in the Spyder error dialog."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:25
+msgid ""
+"Often, that alone will tell you how to fix the problem on your own, but "
+"if not, we're here to help."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:31
+msgid "Where to go from here"
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:33
+msgid ""
+"If you check out our list of issue categories and problem descriptions "
+"and see a question, error message or traceback that looks familiar, the "
+"relevant sub-section will likely be of the most specific help solving "
+"your issue as quickly as possible."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:37
+msgid ""
+"As a first step to solving your issue, you can try some :doc:`basic-"
+"first-aid`."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:41
+msgid ""
+"If Spyder won't launch, check the :doc:`emergency-cpr` section and see if"
+" that clears it up."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:45
+msgid ""
+"If your problem is related to the kernel not starting, autocompletion or "
+"a plugin go to :doc:`common-illnesses` section."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:49
+msgid ""
+"If you still can't get it to work, and the problem is indeed Spyder-"
+"related, you should consult the the :doc:`call-for-help` section for "
+"other resources to explore."
+msgstr ""
+
+#: ../../troubleshooting/first-steps.rst:53
+msgid ""
+"Finally, if you couldn't solve your problem and want to submit an issue "
+"to our Github issue tracker, so the bug can hopefully be fixed for "
+"everyone, :doc:`submit-a-report`."
+msgstr ""
+
+#: ../../troubleshooting/index.rst:3
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:3
+msgid "Submit a Report"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:5
+msgid ""
+"If you can't fix your issue with any of the troubleshooting steps, then "
+"you'll want to submit it to our issue tracker so our team can take a look"
+" at it for you. You'll need a `Github account`_ to do this, so make sure "
+"you have one before you begin (a good idea anyway)."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:13
+msgid ""
+"Before you submit an issue, make sure you've searched a description of "
+"the problem and a relevant portion of the error traceback, on both Google"
+" and Spyder's `issue tracker`_ to make sure it hasn't been submitted "
+"before. If that's the case, your issue will be closed as a duplicate."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:23
+msgid "Ways to submit an issue"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:25
+msgid ""
+"There are several ways to submit an issue, either from Spyder or GitHub "
+"directly. In order of preference and difficulty:"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:28
+msgid ""
+"**If Spyder presents an error dialog** you can submit an issue directly "
+"from it. You will have to fill out a title for your issue, specify the "
+"steps that lead to this problem and click :guilabel:`submit to Github`. "
+"This will prefill an error report with your environment details, key "
+"versions and dependencies and automatically insert the error/traceback "
+"for you."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:36
+msgid ""
+"**If Spyder opens and your issue does not involve an error dialog**, the "
+"best way to do so is to simply select :guilabel:`Report issue` from the "
+":guilabel:`Help` menu, which manually brings up the issue report form and"
+" fills in the key information about your Spyder installation. Describe "
+"the issue you're experiencing (including any error/traceback information)"
+" along with a descriptive title, and click :guilabel:`Submit to Github`."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:42
+msgid ""
+"**If Spyder won't launch**, you can submit a report manually at our "
+"issues page on `Github`_. Unlike the above, you'll need to manually "
+"provide the versions of everything (Spyder, Python, OS, Qt/PyQt, "
+"Anaconda, and Spyder's dependencies) as listed in the error report "
+"template; see below for more on that."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:50
+msgid ""
+"Once you submit your report, our team will try to get back to you as soon"
+" as possible, often within 24 hours or less, to try to help you fix it."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:55
+msgid "What to include in your report"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:57
+msgid ""
+"**Please include as much as possible of the following in your report** to"
+" maximize your chances of getting relevant help and our ability to "
+"diagnose, reproduce and solve your issue."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:59
+msgid "The key items, in order of priority:"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:61
+msgid ""
+"The full, **complete error message or traceback** copy/pasted or "
+"automatically entered exactly as displayed by Spyder:"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:63
+msgid ""
+"Auto-generated reports directly from the error dialog should include this"
+" automatically, but double check to make sure."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:64
+msgid ""
+"You can copy and paste this from the the :guilabel:`Show Details` section"
+" of the error dialog."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:65
+msgid ""
+"If not present, or a dialog is not displayed, you can also find it "
+"printed to Spyder's :guilabel:`Internal Console`, located under the "
+":guilabel:`View` menu at :menuselection:`Panes --> Internal Console`."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:66
+msgid ""
+"If you prefer, or if Spyder won't start, you can start Spyder from your "
+"command line (or Anaconda prompt on windows) with ``spyder`` and copy the"
+" output printed there."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:70
+msgid ""
+"If you are reporting a specific behavior rather than an error, or the "
+"message does not fully explain what occurs, please describe in detail "
+"what actually happened, and what you expected Spyder to do."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:72
+msgid ""
+"A **detailed, step by step description of exactly what you did** leading "
+"up to the error occurring, complete with sample code that triggers it, if"
+" applicable."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:74
+msgid ""
+"**Information about Spyder and its environment** as listed in the error "
+"report template, which you can find under :guilabel:`About Spyder` in the"
+" :guilabel:`Help` menu; along with its key dependencies, shown in the "
+"dialog under :menuselection:`Help --> Dependencies` (there's a button to "
+"copy-paste them)."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:79
+msgid ""
+"If Spyder won't launch, paste the output of ``conda list`` from your "
+"command line (or Anaconda prompt on Windows) in the "
+":guilabel:`Dependencies` section of the issue template."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:85
+msgid ""
+"**How you installed Spyder** and any other relevant packages, *e.g.* "
+"Anaconda, MacPorts or pip and **whether Spyder has worked before** since "
+"you installed it."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:87
+msgid ""
+"**What else you've tried to fix it**, *e.g.* from this guide or elsewhere"
+" on the web, and if you've **tried to reproduce it in standalone "
+"QtConsole, IPython, and/or the plain Python** interpreter."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:89
+msgid ""
+"**Whether the problem occurred consistently before** in similar "
+"situations or if this is the first time you've observed it."
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:91
+msgid ""
+"**Anything else special or unusual** about your system, environment, "
+"packages, or specific usage that might have anything to do with the "
+"problem"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:95
+msgid ""
+"If including block(s) of code in your report, be sure to precede and "
+"follow it with a line of three backticks \\`\\`\\` to get a code block "
+"like this:"
+msgstr ""
+
+#: ../../troubleshooting/submit-a-report.rst:101
+msgid ""
+"Otherwise, your code will likely contain random formatting or missing "
+"indentation, making it difficult to examine and run it to reproduce and "
+"fix your issue."
+msgstr ""
+

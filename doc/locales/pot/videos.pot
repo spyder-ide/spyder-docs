@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
+# This file is distributed under the same license as the Spyder package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spyder 5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../videos/first-steps-with-spyder.rst:3
+msgid "First Steps with Spyder"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:5
+msgid ""
+"The videos in this section provide a starting point for new users who "
+"have never opened Spyder before. You'll get familiar with opening Spyder "
+"in different ways, working with the four main panes and customizing the "
+"Spyder to your heart's content."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:12
+msgid "Getting started"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:14
+msgid ""
+"Discover the basics of using the Spyder interface and get an introduction"
+" to its four main panes, along with a quick look at the others."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:16
+msgid "Find out different ways to open Spyder"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:17
+msgid "Understand the key elements of Spyder’s interface"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:18
+msgid "Learn more about Spyder’s four core panes"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:19
+msgid "Explore the other default panes"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:33
+msgid ""
+"Hello everyone! I'm Juanita, and in this video I'm going to show you how "
+"to open Spyder and go over the basics of Spyder's interface. We will "
+"learn about Spyder's four panes that you'll likely be using most often, "
+"as well as briefly explore the others that are open by default. If you "
+"don't have Spyder installed and would like to follow along, you can "
+"`download it here`_."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:37
+msgid ""
+"The easiest way to open Spyder is by opening Anaconda Navigator and "
+"clicking on the Spyder application. In case you have an older version of "
+"Spyder in Anaconda, open the command line (or the Anaconda Prompt in the "
+"case of Windows) and type the commands:"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:44
+msgid ""
+"To launch Spyder without opening Navigator, open your command line and "
+"type ``spyder``. If you followed the :doc:`/installation`, you should "
+"have everything necessary to open Spyder 4."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:46
+msgid ""
+"This is what Spyder 4 looks like in its default configuration, though you"
+" can thoroughly customize it, which we'll get to in a later tutorial. You"
+" can see that it is divided into three sections showing three different "
+"panes: the Editor, the IPython Console and the Help viewer. These three, "
+"along with the Variable Explorer, are the four core panes you'll work "
+"with the most in Spyder."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:48
+msgid ""
+"On the left we have the Editor, where you can open, edit and run files. "
+"Bottom right is the IPython Console, which you can use both interactively"
+" and to run your code in the Editor. It shows you which version of Python"
+" you are using. Above it, you'll find the Help pane, where you can get "
+"more information and documentation for any object in the Editor or "
+"Console by pressing :kbd:`Ctrl-I` (or :kbd:`Cmd-I` on macOS). We'll see "
+"how to do this in our next video."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:50
+msgid ""
+"For the two sections on the right, you can switch tabs to see the other "
+"panes that are open by default when launching Spyder. In the top section,"
+" you can switch to the Variable Explorer, which shows you the name, type,"
+" size and value of the variables that you have previously defined in the "
+"Editor or the Console. You can also modify the value of these variables "
+"directly from this pane by double clicking them under the Value column. "
+"The Plots pane will show you the figures you generate with Matplotlib and"
+" other libraries, and the Files pane allows you to browse the files on "
+"your computer and open them in the Editor with just a click."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:52
+msgid ""
+"Finally, in the bottom section you can also access the History pane, "
+"which shows you the commands you have entered in the Console, including "
+"those from previous sessions."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:54
+msgid ""
+"I hope you're now familiar with the basics of using the Spyder interface."
+" In the next video, we will start working with Spyder's core panes."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:56
+msgid "Happy Spydering!"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:62
+msgid "Learning the basics"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:64
+msgid "Learn the basics of using Spyder’s four main panes."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:66
+msgid "Open and edit a file in Spyder’s Editor"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:67
+msgid "Run a script in the Editor and see the output in Spyder’s IPython Console"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:68
+msgid "Execute basic Python commands in the IPython Console"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:69
+msgid ""
+"Define variables in the Editor and modify their values in the IPython "
+"Console"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:70
+msgid "View and interact with the variables in Spyder’s Variable Explorer"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:71
+msgid "Get documentation in the Help pane in two different ways"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:84
+msgid ""
+"Hello everyone! I'm Juanita, and in this video I will show you how to "
+"start working with Spyder's four main panes. First, let's take a look at "
+"the Editor, which you can use to open, edit and run files from your "
+"computer. I will open a short \"Hello World\" program for this demo, "
+"which you can `download here`_. Once you have it open in your Editor, you"
+" can execute it by pressing the green run button. We can see the output "
+"in the Python Console [Show IPython console] as well as the path of the "
+"file that we are running and the working directory where this code was "
+"run."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:88
+msgid ""
+"We can also run any Python code that is entered directly in the IPython "
+"Console. For example, we can type ``print(\"Hello\")`` and see the "
+"output. Or, we can try some math operations and see the results here too."
+" Note that for implicitly printed output, there is a red indication that "
+"differs from the output of the ``print()`` function."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:90
+msgid ""
+"Now, let's start defining some variables. We can do this both from the "
+"editor or from the Console. If I define a variable ``a = 10`` and then "
+"run this code, I can see its value in the console just by typing its name"
+" ``a``. However, you can also assign any variable in the IPython console "
+"(``b = 20``) and its value will be stored too. In both cases, they can "
+"also be seen in the Variable Explorer pane, which shows the name, type, "
+"size and value of each of the objects previously defined. In this case, "
+"we see variables ``a`` and ``b``, both of type int and with size 1. We "
+"can also define a list ``l`` with ``l = [1, 2, 3]`` and see that the type"
+" of the variable is list and the size is 3."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:92
+msgid ""
+"We can change the values of the variables in the Variable Explorer too by"
+" double-clicking them and typing their new value. Now, we can check their"
+" new value in the console. In the case of a more complex type like a "
+"list, double-clicking it will open a viewer in which you can modify each "
+"of its values separately, along with other more complex operations which "
+"we'll demonstrate in a future video. We can remove a variable by right-"
+"clicking it and selecting the option Remove. After doing this, we can "
+"check in the IPython Console that the variable was actually deleted."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:94
+msgid ""
+"Finally, we are going to learn how to get help for objects in two "
+"different ways. First, we can press :kbd:`Ctrl-I` (or :kbd:`Cmd-I` on "
+"macOS) right after the name of an object written in the Editor or the "
+"Console, for example ``numpy.array``. You can see that we obtain its "
+"documentation in the Help pane if it is available. Second, if we change "
+"the Source dropdown option to Console, we can type its name in the object"
+" box in the Help pane. Now we can get help for Numpy arrays."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:96
+msgid ""
+"You should now be ready to start using Spyder's four main panes. Check "
+"out our next video to continue learning and as always, Happy Spydering!"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:102
+msgid "Customization"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:104
+msgid ""
+"Learn how to customize Spyder’s interface to match your workflow and "
+"development style."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:106
+msgid "Choose your preferred fonts"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:107
+msgid "Switch between different interface, icon and syntax themes"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:108
+msgid "Show, hide, undock and rearrange Spyder panes"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:109
+msgid "Split, close and pop out Editor panels"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:123
+msgid ""
+"Hello everyone, I'm Juanita! In this video, I will show you how to "
+"customize Spyder to match your workflow and development style."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:125
+msgid ""
+"First, we are going to learn how to change the font in the Editor, "
+"IPython Console and Help panes. To do this, go to Preferences, select the"
+" Appearance entry and scroll down to Fonts. You can change both the style"
+" and the size of the font for both plain and rich text. You can see how "
+"this affects the font in the Editor, Console and Help panes."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:127
+msgid ""
+"In this same dialog, you can easily change the syntax highlighting theme,"
+" for which you can see the preview at the right of the window. Note that "
+"Spyder's interface theme changes to match the highlighting theme because "
+"the Interface theme option is set to Automatic by default. However, you "
+"can change the theme for the entire Spyder interface, choosing between "
+"Light and Dark. After selecting this change, click Apply to restart "
+"Spyder to apply the new theme."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:129
+msgid ""
+"Beyond just Spyder's preferences, you can freely rearrange the panes in "
+"Spyder's main window. To show or hide panes, go to Panes under the View "
+"menu, and select which ones you want to see. For example, let's hide the "
+"Files pane and show the Profiler pane. You can also close a pane from its"
+" options menu, which will hide it from the main window."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:131
+msgid ""
+"By default, the panes and toolbars are locked so they can't be moved "
+"accidentally. However, unchecking the option Lock panes and toolbars in "
+"the View menu will allow you to move them freely anywhere on the window, "
+"by dragging them from the top and dropping them at any position you like."
+" You can also undock a pane, which will open a new window with it. You "
+"can have as many separate windows as you have panes, if you choose. This "
+"feature is very useful if you work with several monitors because you can "
+"undock the Editor and move it to a different monitor, while working with "
+"the rest of the panes in your main monitor."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:133
+msgid ""
+"Additionally, you can split the Editor pane vertically or horizontally in"
+" as many copies as you want, and open one or more panels in separate "
+"Spyder windows, complete with their own toolbar, outline and status bar."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:135
+msgid ""
+"Finally, each pane can be customized further under its respective options"
+" menu and Preferences panel."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:137
+msgid ""
+"With all these options, you can customize Spyder to your heart's content."
+" However, if you ever want to return to its default configuration, you "
+"can always reset the window layout under Window Layouts in the View menu,"
+" or your entire Spyder configuration with the Reset to Default button in "
+"the Preferences."
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst:139
+msgid "Enjoy your customized version of Spyder, and Happy Spydering!"
+msgstr ""
+
+#: ../../videos/index.rst:3
+msgid "Intro Videos"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:3
+msgid "Working with Spyder"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:5
+msgid ""
+"In this section, you will learn about Spyder's more advanced "
+"functionality, and explore most of the panes."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:11
+msgid "Beyond the main panes"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:13
+msgid ""
+"Explore how to take advantage of Spyder’s functionality beyond just the "
+"four core panes."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:15
+msgid "View, manage and save figures with the Plots pane"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:16
+msgid "Browse, interact with and open external programs in the in the Files pane"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:17
+msgid "Quickly navigate within and between files with the Outline pane"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:18
+msgid ""
+"Search for text or regular expressions across your entire project with "
+"the Find pane"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:19
+msgid "Discover and explore structured documentation in the Online Help pane"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:33
+msgid ""
+"Hello everyone! I'm Juanita, and I am going to show you how to use some "
+"of the remaining panes available in Spyder beyond just the four primary "
+"ones."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:35
+msgid ""
+"Let's start with the Plots pane, which is open by default when launching "
+"Spyder. To see how it works, let's open a file that will generate a "
+"couple plots from Matplotlib's documentation. You can view the generated "
+"plots in the Plots pane and browse between them using the arrows, or "
+"simply clicking them in the sidebar."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:37
+msgid ""
+"If you open the pane's options menu, you will see that Fit Plots to "
+"Window is enabled by default. Disabling it will allow you to zoom the "
+"plots in or out. You can also see that Mute inline plotting is enabled, "
+"which prevents the same figures from also appearing in the IPython "
+"Console. Note that every time that the code is run, new copies of the "
+"plots are generated in the pane, but you can remove any you don't want to"
+" keep around with the X button in the pane toolbar. Additionally, the "
+"pane automatically updates to show the plots generated by each console as"
+" you switch between them."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:39
+msgid ""
+"To use a plot in another document, click the Copy to Clipboard button and"
+" paste it wherever you want, such as a word processor. Additionally, you "
+"can save a plot as a PNG by clicking the save icon."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:41
+msgid ""
+"The Files pane, also open by default, lets you browse the contents of the"
+" directories on your computer, open them in the Editor, and perform a "
+"variety of other file operations. You can show or hide the size, kind and"
+" date of the files in the pane's options menu. As you change the top-"
+"level folder you're viewing in the pane, Spyder's working directory shown"
+" in the top right of the main toolbar will update, which will also be "
+"synchronized with the currently active console. Double-clicking a text "
+"file will open it in the Editor, and copying one or more files will allow"
+" you to paste them as automatically-formatted absolute or relative paths."
+" Right-clicking any item will offer an array of additional options for "
+"interacting with it."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:43
+msgid ""
+"You can also open a file in the system default external application, or "
+"set up a custom file association in the File Associations tab of the "
+"Files preferences pane. For example, we can add the ``.csv`` extension "
+"and associate it with LibreOffice Calc under associated applications. Now"
+" every time you click a file with this extension, it opens externally "
+"with this program."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:45
+msgid ""
+"Now, let's see how to use the Outline pane to navigate within a file. "
+"First, we have to open the pane under Panes in the View menu, since it "
+"isn't visible by default. As you can see, it shows you all the classes, "
+"methods and functions that are currently defined, and allows you to move "
+"between them with just a click. For a very large file like this one, it "
+"is very useful to switch between classes easily instead of scrolling "
+"through the four-thousand-plus lines of code. You can also browse the "
+"methods of a class by expanding it using the arrows, or the buttons in "
+"the Outline pane's toolbar. The Outline continuously updates to highlight"
+" the function, method or class corresponding to the cursor position in "
+"your code, so you can easily keep track of what object you are working "
+"on. Finally, by going to the pane options menu and activating Show all "
+"files, you can easily switch between the scripts and modules you have "
+"open, which is particularly important for navigating larger projects."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:47
+msgid ""
+"The Files pane is another useful tool for particularly larger projects. "
+"Like the Outline pane, it can be opened under Panes in the View menu. "
+"This allows you to view and navigate through all occurrences of text or "
+"regular expressions in any file in the working directory, project or "
+"another custom directory. We see, for example, in the ``mainwindow.py`` "
+"file we import the ``is_dark_font_color`` function. If we want to quickly"
+" find the file where it was defined, we can write this string in the "
+"search bar. With this search, we get 7 matches from 3 different files. "
+"When we click on any of these matches, the file is opened automatically "
+"in the Editor, right where this string appears."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:49
+msgid ""
+"Finally, we'll learn how to browse documentation using the Online Help "
+"pane. Once you open it, again under Panes in the View menu, you will see "
+"an index of modules from which documentation is available, including both"
+" those in the Python standard library and any third-party packages that "
+"may be installed in Spyder's environment. For example, we can find help "
+"for Numpy, Pandas and Matplotlib, which are all installed if you've "
+"downloaded Spyder with Anaconda. You can browse the contents in the "
+"built-in web browser provided by the pane, and click the hyperlinks "
+"within to navigate to different pages. You can also enter the name of the"
+" item you'd like documentation on in the Get field or in the space over "
+"the pane's toolbar, to load its information directly. If you're not sure "
+"of the object's name, use the Search field to view a list of results "
+"applicable to any keyword."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:51
+msgid ""
+"Now that you're familiar with a wider array of Spyder's panes and "
+"features, you can accomplish a variety of common programming tasks with "
+"ease. Stay tuned for our our next videos to further add to your "
+"scientific toolbox, and as always, Happy Spydering!"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:57
+msgid "Improving your code quality"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:59
+msgid "Learn how to improve the quality of your programs using code analysis."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:61
+msgid ""
+"Open and use Code Analysis to evaluate the quality and style of Python "
+"files"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:62
+msgid "Run analysis on a file in the Editor or anywhere on your computer"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:63
+msgid "Determine what an error, warning or message means and how to fix it"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:64
+msgid "Turn off messages on a line, in a file or globally"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:78
+msgid ""
+"Hello everyone! I'm Juanita, and in this video we will learn how to "
+"improve your code quality using the Code Analysis pane. To display it, we"
+" can click its name under Panes in the View menu."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:80
+msgid ""
+"This pane detects style issues, bad practices, potential bugs and other "
+"quality problems in your code, without having to execute it. There are "
+"three ways of running code analysis:"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:82
+msgid ""
+"To analyze a file that is open in the Editor, we can press the "
+"configurable shortcut, :kbd:`F8` by default, or select Source --> Run "
+"code analysis from the menu bar."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:84
+msgid ""
+"We can also select a file to analyze by browsing for it using the file "
+"button next to the path box. This will start the analysis automatically."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:86
+msgid ""
+"The third way is to manually enter the path of a file we'd like to check "
+"in the path entry box in the pane's toolbar, and click the Analyze button"
+" in the pane."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:88
+msgid ""
+"Based on these results, the code analysis shows an overall score of "
+"4.34/10, which allows us to track improvements in our code quality. We "
+"can also expand or collapse one or all the sections in the pane to be "
+"able to see the Pylint errors, warnings and messages identifying the "
+"issues with our code."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:90
+msgid ""
+"For example, the results tell us that there is a warning on line 20. To "
+"go directly to this line in the Editor, just click the message. Here, the"
+" code analysis says there is a ``bad-whitespace`` issue. To understand "
+"what this means, open the Pylint documentation. On the `Pylint docs "
+"page`_ , click on Pylint features and search for the code of the message."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:94
+msgid ""
+"We can see that the docs say that we used the wrong number of spaces "
+"around an operator."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:102
+msgid ""
+"We can fix the error by adding one space before and after the operator in"
+" this variable assignment. If we run the analysis again, we can see the "
+"error isn't shown any more on this line."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:104
+msgid ""
+"We can click the dropdown arrow in the filename field to view the list of"
+" previous analyses. Clicking one of them will show us the results."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:106
+msgid ""
+"Sometimes, it is useful to turn certain messages off. We can do that in "
+"three different ways."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:108
+msgid ""
+"We might want to silence warnings on only one line; for example, this "
+"\"unused\" import that is still necessary for the code execution. For "
+"this, type ``# pylint: disable=unused-import`` as a comment at the end of"
+" the line. Running the analysis again will show us that the error is no "
+"longer visible."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:110
+msgid ""
+"If we want to silence a message in the whole file, we can do it by "
+"writing the disable command at the beginning of the file. For example, we"
+" can disable the ``invalid-name`` warning that appears several times in "
+"this file. If we run the analysis again, all of these warnings are gone."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:112
+msgid ""
+"Finally, we can suppress specific messages for all files by editing the "
+"``.pylintrc`` configuration file in your user folder. If it doesn't "
+"exist, we can generate it by opening our terminal, or the Anaconda Prompt"
+" if you're using Windows, and running ``pylint --generate-rc > "
+".pylintrc`` in our user directory."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:114
+msgid ""
+"Now, we can go to the ``MESSAGE CONTROL`` section in this file and add "
+"the corresponding Pylint message name, for example ``no-name-in-module``."
+" If we run the analysis one more time, we see that the ``no-name-in-"
+"module`` warnings don't appear anymore."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:116
+msgid ""
+"We can see that the score of our file increased to 7.63/10, a big "
+"improvement over the previous 4.34."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:118
+msgid ""
+"Now that we've learned how to improve the quality of our code, you are "
+"ready to write cleaner and more correct programs using Spyder. Stay tuned"
+" for our next videos and as always, Happy Spydering!"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:124
+msgid "Optimizing your code"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:126
+msgid "Learn how to optimize your code using the Profiler."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:128
+msgid "Use the Profiler to find bottlenecks in your programs"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:129
+msgid "Run profiling on a file in the Editor or elsewhere on your machine"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:130
+msgid "Interpret the results to evaluate function and method performance"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:131
+msgid "Use the information to speed up the run time of your code"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:145
+msgid ""
+"Hello everyone! I'm Juanita, and in this video we will learn how to "
+"optimize your code using the profiler. To display it, click its name "
+"under Panes in the View menu."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:147
+msgid ""
+"The Profiler will determine the run time and number of calls for every "
+"function and method used in a file. There are three ways of profiling a "
+"file:"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:149
+msgid ""
+"We can browse for a file using the open button to the right of the "
+"Profiler's path box, which will run profiling over it automatically."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:151
+msgid ""
+"We can also manually enter the path in the pane's path box, and then run "
+"the analysis on the file by pressing the Profile button."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:153
+msgid ""
+"If we want to run the profiler for the file that is currently open in the"
+" Editor, we can click Run --> Profile... in the menu bar, or use the "
+"configurable shortcut :kbd:`F10`."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:155
+msgid ""
+"We see that the results in the pane show us the different functions and "
+"methods in our file, with each sub-function listed hierarchically under "
+"the item that called them. The columns show the total time taken by each "
+"function and everything it called, while the local time includes only the"
+" time spent in that particular function."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:157
+msgid ""
+"For example, the function ``values`` in this file calls a function "
+"``internal_values`` values took a total of 482 us to run, with 338 us of "
+"that spent executing internal_values inside of it. Therefore, the total "
+"time for values is 482 us, but its local time is only 144 us as the rest "
+"was spent inside ``internal_values``."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:159
+msgid ""
+"The Calls column displays the total number of times that function was "
+"called at that level. Finally, the numbers in the Diff columns for each "
+"of the three appear if a comparison is loaded, and indicate the change in"
+" runtime between the two measurements."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:161
+msgid ""
+"By double-clicking an item in the Profiler, we will be taken to the file "
+"and line in the Editor where it was called. If this function was not "
+"called in one of your open scripts, clicking it will open the file that "
+"contains it. We can click the down arrow button in the filename field to "
+"recall paths of previously profiled files."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:163
+msgid ""
+"Now that we know how to interpret the results of our profiling, let's "
+"optimize our code by finding the functions that take the longest time and"
+" making them faster. In this case, ``to_datetime`` takes 39 seconds to "
+"run. The reason for this is Pandas has to parse the non-standard "
+"timestamp format and is not told to try to use a faster parser than the "
+"default."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:165
+#, python-format
+msgid ""
+"We can reduce the time this function takes and compare it with the one "
+"before. For this, first we have to save the data as a ``.Result`` file "
+"with the save button in the pane. Now we have to figure out how to "
+"optimize the function, so let's search for it. We see that we can speed "
+"up this function by `manually specifying a datetime format`_. So, we add "
+"the appropriate argument, ``format=\"%Y-%m-%d %H:%M:%S.%f %z\"``, to our "
+"function call."
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:169
+msgid ""
+"Now, we run the profiling again to see how our script's performance has "
+"improved. If we want to see how much we lowered the time, we can load our"
+" previous result and take a look at the diff columns. Notice the "
+"difference is green because the time was reduced by three times, taking "
+"only 13 seconds instead of 39. Our code is now 26 seconds faster!"
+msgstr ""
+
+#: ../../videos/working-with-spyder.rst:171
+msgid ""
+"Now that you've learned how to analyze the execution time of your code, "
+"you are ready to write more efficient programs with Spyder's help. Stay "
+"tuned for our next videos and as always, Happy Spydering!"
+msgstr ""
+
