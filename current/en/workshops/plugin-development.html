@@ -1,0 +1,1687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Plugin Development with Spyder &#8212; Spyder 5 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/plugin-development';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Qt Fundamentals" href="qt_fundamentals.html" />
+    <link rel="prev" title="Financial Data Analysis with Spyder" href="financial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="financial.html">Financial Data Analysis with Spyder</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Plugin Development with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_fundamentals.html">Qt Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scientific-computing.html">Scientific Computing and Visualization with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Workshops</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Plugin...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="plugin-development-with-spyder">
+<h1>Plugin Development with Spyder<a class="headerlink" href="#plugin-development-with-spyder" title="Link to this heading">#</a></h1>
+<p>This workshop reviews the features and possibilities of the API offered by <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> 5—the recently released version of our favorite IDE for scientific Python—for plugin development and to extend its functionality.</p>
+<p>As a practical exercise, we will develop a simple plugin that incorporates a configurable pomodoro timer in the status bar and some toolbar buttons to interact with it.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>You will need to have Spyder installed. Visit our <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a> for more information.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+However, readers of this workshop should install Spyder using Anaconda or Miniconda, as standalone installers currently do not allow to add extra packages like the plugin we are going to develop in this workshop.</p>
+</div>
+<p>It is also desirable to have the following prior knowledge:</p>
+<ul class="simple">
+<li><p>Basic level of Python. You can visit <a class="reference external" href="https://docs.python.org/3/tutorial/">The Python Tutorial</a> to learn the basics of this programming language.</p></li>
+<li><p>Know the basics of Qt application development using Python, either with <a class="reference external" href="https://www.riverbankcomputing.com/static/Docs/PyQt5/">PyQT</a> or <a class="reference external" href="https://doc.qt.io/qtforpython-5/index.html">PySide</a>.</p></li>
+</ul>
+<p>To quickly get started in desktop application development with Qt and Python here is a set of open access resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tutorialspoint.com/pyqt/index.htm">Tutorials Point - PyQt tutorial</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/search?q=pyqt">Real Python - PyQt entries</a></p></li>
+<li><p><a class="reference external" href="https://www.guru99.com/pyqt-tutorial.html">Guru99 - PyQt tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.pythonguis.com/">Python GUIs - PyQt and PySide tutorials</a></p></li>
+</ul>
+</section>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
+<p>By the end of this workshop participants will know:</p>
+<ul class="simple">
+<li><p>The basics to develop plugins for Spyder, and get a general idea of its inner workings.</p></li>
+<li><p>What types of plugins can be developed with Spyder.</p></li>
+<li><p>The structure of a plugin and the functionality of each component and how it connects to Spyder to extend its features.</p></li>
+<li><p>How to package and publish our plugin so that it can be easily installed and used by others.</p></li>
+</ul>
+</section>
+<section id="spyder-for-developers">
+<h2>Spyder for developers<a class="headerlink" href="#spyder-for-developers" title="Link to this heading">#</a></h2>
+<p>The best place to find information about contributing to Spyder or developing for Spyder is its Github repository, in particular the <a class="reference external" href="https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md">contribution guide</a>.</p>
+<img alt="Spyder IDE components." src="../_images/pd_spyder_ide.png" />
+<ul class="simple">
+<li><p>The core of <strong>Spyder</strong> is <a class="reference external" href="https://github.com/spyder-ide">Spyder-IDE</a> , a desktop application developed in <em>Qt</em>, which requires for its operation two packages with it is closely related (and without which it cannot work): <em>spyder-kernels</em> and <em>python-lsp-server</em>.</p></li>
+<li><p><a class="reference external" href="https://www.qt.io/">Qt</a> is an open source multiplatform widget toolkit for creating native graphical user interfaces. Qt is a very complete development framework that offers utilities for building applications, and has extensions for Networking, Bluetooth, Charts, 3D rendering, Navigation (as GPS), among others.</p></li>
+<li><p>Spyder uses <a class="reference external" href="https://github.com/spyder-ide/qtpy">qtpy</a> which is an abstraction layer that allows you to work with Qt from Python regardless of whether you use either of the two reference libraries: PyQt or PySide.</p></li>
+<li><p><a class="reference external" href="https://github.com/spyder-ide/spyder-kernels">spyder-kernels</a> provide Jupyter kernels to Spyder, for use within its consoles.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Spyder is currently developed in such a way that most of its features are implemented as plugins.</p>
+</div>
+</section>
+<section id="types-of-plugins-we-can-develop-in-spyder">
+<h2>Types of plugins we can develop in Spyder<a class="headerlink" href="#types-of-plugins-we-can-develop-in-spyder" title="Link to this heading">#</a></h2>
+<img alt="Types of Spyder plugins." src="../_images/pd_spyder_plugins.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A plugin is a component that adds functionality to an application, it can be a graphical component, for example, to display maps, or a non-graphical one that adds additional syntax coloring schemes.</p>
+</div>
+<p>Formally, plugins are instances of Qt classes that modify the behavior of Spyder.
+Aside from a few fundamental components, most of Spyder’s functionality arises from the interaction of plugins of two types:</p>
+<section id="spyderdockableplugin">
+<h3>SpyderDockablePlugin<a class="headerlink" href="#spyderdockableplugin" title="Link to this heading">#</a></h3>
+<p>It is a plugin that works as a <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QDockWidget.html">QDockWidget</a>, this is a Qt class that provides a graphical control that can be docked inside a <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QMainWindow.html">QMainWindow</a> or floated as a top-level window on the desktop.</p>
+</section>
+<section id="spyderpluginv2">
+<h3>SpyderPluginV2<a class="headerlink" href="#spyderpluginv2" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> is a plugin that does not create a new dock widget on Spyder’s main window. In fact, <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> is the parent class of <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code>.</p>
+</section>
+<section id="discovering-spyder-plugins">
+<h3>Discovering Spyder plugins<a class="headerlink" href="#discovering-spyder-plugins" title="Link to this heading">#</a></h3>
+<aside class="topic">
+<p class="topic-title"><code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code></p>
+<p>If we look at the Spyder interface, we can find a number of different panes on the right side (with the default layout), such as <em>Help</em>, <em>Variable Explorer</em>, <em>Plots</em>, <em>Files</em> and <em>History</em>.</p>
+<ul class="simple">
+<li><p>Each of these panes is a <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code> that offers an <em>Undock</em> option by clicking the hamburger menu button in the upper right corner.</p></li>
+<li><p>These plugins can also be hidden or shown via their entry in the <em>View &gt; Panes</em> menu, or using its corresponding keyboard shortcut displayed there.</p></li>
+</ul>
+</aside>
+<aside class="topic">
+<p class="topic-title"><code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code></p>
+<p>High-level interface elements that do not offer an undocking option are basically instances of <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code>. These are typically used to handle more abstract functionality.</p>
+<ul class="simple">
+<li><p>Examples of this are the <em>appearance</em> and <em>layout</em> plugins that manage Spyder’s code color schemes and window layouts respectively.</p></li>
+<li><p>Other examples of this type of plugins are the <em>main menu</em> and keyboard <em>shortcuts</em>. Some graphical elements, such as the main toolbar and the status bar are also instances of the <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> class.</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="what-will-we-do">
+<h2>What will we do?<a class="headerlink" href="#what-will-we-do" title="Link to this heading">#</a></h2>
+<p>Our practical work will consist in the implementation of the Pomodoro technique for time management in the Spyder interface.</p>
+<img alt="Description of the pomodoro technique." src="../_images/pd_pomodoro_timer.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://www.pomodorotechnique.com/">Pomodoro Technique</a>, designed by Francesco Cirillo, is a time management practice used to increase your focus and productivity when trying to complete assignments or meet deadlines.
+Choosing to use a Pomodoro Timer can help to give a task your full, undivided attention.</p>
+</div>
+<p>The typical process of the Pomodoro Technique consists of the following six
+steps:</p>
+<ol class="arabic simple">
+<li><p>Choose a task to be done.</p></li>
+<li><p>Set the Pomodoro Timer (default is 25 minutes).</p></li>
+<li><p>Work only on that task until the timer ends.</p></li>
+<li><p>When the timer rings, put a checkmark on a piece of paper, this is called “a pomodoro”.</p></li>
+<li><p>If you have less than 3 checkmarks take a short break (by default, 5 minutes), and return to step 2.</p></li>
+<li><p>When you have completed four Pomodoro cycles, you deserve a longer break (our default is 15 minutes). Checkmarks are reset to zero, go back to step 1.</p></li>
+</ol>
+<section id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h3>
+<p>These are the general steps that we will be following throughout this workshop:</p>
+<ul class="simple">
+<li><p>Select the most suitable plugin type and create its initial structure using <a class="reference external" href="https://cookiecutter.readthedocs.io">cookiecutter</a>.</p></li>
+<li><p>Install the plugin in development mode in the virtual environment from which we run Spyder.</p></li>
+<li><p>Implement the functionality of our plugin using the Spyder classes and following the guidelines indicated in the plugin structure.</p></li>
+<li><p>Build a configuration page for our plugin, which would appear in Tools &gt; Preferences.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="Location of Spyder Pomodoro Timer widgets in Spyder." src="../_images/pd_spyder_wireframe.png" />
+<figcaption>
+<p><span class="caption-text">Location of Spyder Pomodoro Timer widgets in Spyder.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="Spyder Pomodoro Timer in the preferences window." src="../_images/pd_preferences_wireframe.png" />
+<figcaption>
+<p><span class="caption-text">Spyder Pomodoro Timer in the preferences window.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
+<p>A minimal planning to organize ideas.</p>
+<ul>
+<li><p>Pomodoro Timer</p>
+<ul class="simple">
+<li><p>Status bar widget: to display the time for the current pomodoro interval.</p></li>
+<li><p>State: we have three activity states: <em>pomodoro</em>, <em>short-break</em> and <em>long-break</em>. We can show a message (with <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QMessageBox.html">QMessageBox</a>) to tell users that the time to take a break has arrived.</p></li>
+<li><p>Interactions: the user could use Start, Stop and Reset buttons to handle the Pomodoro Timer. This can be implemented adding <a class="reference external" href="https://doc.qt.io/archives/qtforpython-5.12/PySide2/QtWidgets/QAction.html">QAction</a> instances in a menu on the toolbar.</p></li>
+</ul>
+</li>
+<li><p>Tasks Logger
+- Counter: We need a variable to count the number of pomodoros completed.</p></li>
+<li><p>Notifications</p>
+<ul class="simple">
+<li><p>Dialog: Each time a pomodoro or break interval is completed, a message should appear to prompt the user to start working on a task or take a break.</p></li>
+</ul>
+<p>When working on a plugin for any system, we must check the data structures and functions available in that system that can facilitate our development.
+This involves spending considerable time understanding its inner workings.</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="set-up-a-development-environment">
+<h2>Set up a development environment<a class="headerlink" href="#set-up-a-development-environment" title="Link to this heading">#</a></h2>
+<p>In principle, we could use any Spyder installed within a <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html#virtual-environments">conda environment</a> according to the instructions given in the <a class="reference external" href="https://docs.spyder-ide.org/5/installation.html">installation guide</a>.</p>
+<p>However, if you use a working environment that has other dependencies and you want to keep your plugin development independent of them, it is recommended to create a new environment which only has Spyder with the minimum dependencies needed for your plugin.</p>
+<img alt="Spyder development environment." src="../_images/pd_dev_environment.png" />
+<p>We can install it in the following way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>base
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba<span class="w"> </span><span class="c1"># A personal recommendation</span>
+$<span class="w"> </span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-dev<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+$<span class="w"> </span>mamba<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>spyder
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Individual Edition</a> is a Python distribution for data science and machine learning to be used in a single machine.</p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a> is an Anaconda tool that manages virtual environments and their packages.</p></li>
+<li><p>Conda can work with <em>channels</em> that allow the use of packages that are not part of the official distribution. The most important channel is <a class="reference external" href="https://conda-forge.org/">conda-forge</a>, where a more extensive and updated list of packages than those offered by Anaconda Individual Edition are maintained.</p></li>
+<li><p>Finally, <a class="reference external" href="https://github.com/mamba-org/mamba">mamba</a>, is an optimized implementation of conda’s package management features, that resolves dependencies and installs packages much faster than conda.</p></li>
+</ul>
+</div>
+</section>
+<section id="create-a-repository">
+<h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Link to this heading">#</a></h2>
+<p>Now that we have our local virtual environment, it is good practice to manage our source code with a version control system, and the most widely used web service for this purpose is currently Github. Here you can find, for example, the Spyder and Python repositories.</p>
+<img alt="Git and Github repository concepts." src="../_images/pd_github_repo.png" />
+<p>To create a git repository on Github, we need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Log in to your Github account.</p></li>
+<li><p>Click on the “New repository” option in the “+” menu at the top right next to your profile picture.</p></li>
+<li><p>A dialog will appear where you can insert the repository name and some basic options, e.g. to initialize the repository with a README or license files.</p></li>
+<li><p>Click the “Create repository” button.</p></li>
+<li><p>In the main window of the recently created repository, click on the green “Code” button an copy the clone link.</p></li>
+<li><p>In your local command line run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">[repo-link]</span></code>. You must have git installed and configured on your computer. If you don’t have experience using git we recommend The Carpentries workshop <a class="reference external" href="https://swcarpentry.github.io/git-novice/">Version control with git</a>.</p></li>
+</ol>
+<p>A detailed description of <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/create-a-repo">repository creation</a> could be found in the official Github documentation, and a <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/hello-world">hello world</a> tutorial with basic git operations from the Github interface.</p>
+</section>
+<section id="let-s-get-started">
+<h2>Let’s get started<a class="headerlink" href="#let-s-get-started" title="Link to this heading">#</a></h2>
+<p>We already have a git repository and a virtual environment where Spyder 5 is installed.</p>
+<p>Let’s activate our environment and go into the local folder of our repository.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+<span class="nb">cd</span><span class="w"> </span>/path/to/your/repository
+</pre></div>
+</div>
+<p>Then we need to use <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> to create the initial structure of our plugin. <a class="reference external" href="https://cookiecutter.readthedocs.io">cookiecutter</a> is a tool made in Python specifically designed to create project templates.
+We have developed one of these templates to generate the basic structure of a plugin, it can be found at: <a class="github reference external" href="https://github.com/spyder-ide/spyder5-plugin-cookiecutter">spyder-ide/spyder5-plugin-cookiecutter</a></p>
+<img alt="Folder structure of our plugin." src="../_images/pd_plugin_structure.png" />
+<p>Let’s run cookiecutter to generate our</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cookiecutter<span class="w"> </span>https://github.com/spyder-ide/spyder5-plugin-cookiecutter
+You<span class="se">\&#39;</span>ve<span class="w"> </span>downloaded<span class="w"> </span>/home/mapologo/.cookiecutters/spyder5-plugin-cookiecutter<span class="w"> </span>before.<span class="w"> </span>Is<span class="w"> </span>it<span class="w"> </span>okay<span class="w"> </span>to<span class="w"> </span>delete<span class="w"> </span>and<span class="w"> </span>re-download<span class="w"> </span>it?<span class="w"> </span><span class="o">[</span>yes<span class="o">]</span>:
+full_name<span class="w"> </span><span class="o">[</span>Spyder<span class="w"> </span>Bot<span class="o">]</span>:<span class="w"> </span>Francisco<span class="w"> </span>Palm<span class="w"> </span><span class="c1"># It&#39;s your name, better John Doe</span>
+email<span class="w"> </span><span class="o">[</span>spyder.python@gmail.com<span class="o">]</span>:<span class="w"> </span>fpalm@qu4nt.com
+github_username<span class="w"> </span><span class="o">[</span>spyder-bot<span class="o">]</span>:<span class="w"> </span>map0logo
+github_org<span class="w"> </span><span class="o">[</span>spyder-ide<span class="o">]</span>:
+project_name<span class="w"> </span><span class="o">[</span>Spyder<span class="w"> </span>Boilerplate<span class="o">]</span>:<span class="w"> </span>Spyder<span class="w"> </span>Pomodoro<span class="w"> </span>Timer
+project_short_description<span class="w"> </span><span class="o">[</span>Boilerplate<span class="w"> </span>needed<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>Spyder<span class="w"> </span>Plugin.<span class="o">]</span>:<span class="w"> </span>A<span class="w"> </span>very<span class="w"> </span>simple<span class="w"> </span>pomodoro<span class="w"> </span>timer<span class="w"> </span>that<span class="w"> </span>shows<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>status<span class="w"> </span>bar.
+project_pypi_name<span class="w"> </span><span class="o">[</span>spyder-pomodoro-timer<span class="o">]</span>:
+project_package_name<span class="w"> </span><span class="o">[</span>spyder_pomodoro_timer<span class="o">]</span>:
+pypi_username<span class="w"> </span><span class="o">[</span>map0logo<span class="o">]</span>:
+Select<span class="w"> </span>plugin_type:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Spyder<span class="w"> </span>Dockable<span class="w"> </span>Plugin
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Spyder<span class="w"> </span>Plugin
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">2</span>
+Select<span class="w"> </span>open_source_license:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>MIT<span class="w"> </span>license
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>BSD<span class="w"> </span>license
+<span class="m">3</span><span class="w"> </span>-<span class="w"> </span>ISC<span class="w"> </span>license
+<span class="m">4</span><span class="w"> </span>-<span class="w"> </span>Apache<span class="w"> </span>Software<span class="w"> </span>License<span class="w"> </span><span class="m">2</span>.0
+<span class="m">5</span><span class="w"> </span>-<span class="w"> </span>GNU<span class="w"> </span>General<span class="w"> </span>Public<span class="w"> </span>License<span class="w"> </span>v3
+<span class="m">6</span><span class="w"> </span>-<span class="w"> </span>Not<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span>
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<section id="the-plugin-structure">
+<h3>The plugin structure<a class="headerlink" href="#the-plugin-structure" title="Link to this heading">#</a></h3>
+<p>After <code class="docutils literal notranslate"><span class="pre">cookicutter</span></code> finishes its job, you’ll get the following tree structure in your repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.
+├──<span class="w"> </span><span class="o">[</span>Some<span class="w"> </span>info<span class="w"> </span>files<span class="o">]</span>
+├──<span class="w"> </span>Makefile
+├──<span class="w"> </span>setup.py
+├──<span class="w"> </span>spyder_pomodoro_timer
+│<span class="w">   </span>├──<span class="w"> </span>__init__.py
+│<span class="w">   </span>└──<span class="w"> </span>spyder
+│<span class="w">       </span>├──<span class="w"> </span>__init__.py
+│<span class="w">       </span>├──<span class="w"> </span>api.py
+│<span class="w">       </span>├──<span class="w"> </span>confpage.py
+│<span class="w">       </span>├──<span class="w"> </span>container.py
+│<span class="w">       </span>├──<span class="w"> </span>locale
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>spyder_pomodoro_timer.pot
+│<span class="w">       </span>├──<span class="w"> </span>plugin.py
+│<span class="w">       </span>└──<span class="w"> </span>widgets.py
+└──<span class="w"> </span>tests
+</pre></div>
+</div>
+<p>In the root folder you’ll find two important files:</p>
+<ul class="simple">
+<li><p>The Makefile, which has several useful commands:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean<span class="w">                </span>remove<span class="w"> </span>all<span class="w"> </span>build,<span class="w"> </span>test,<span class="w"> </span>coverage<span class="w"> </span>and<span class="w"> </span>Python<span class="w"> </span>artifacts
+clean-build<span class="w">          </span>remove<span class="w"> </span>build<span class="w"> </span>artifacts
+clean-pyc<span class="w">            </span>remove<span class="w"> </span>Python<span class="w"> </span>file<span class="w"> </span>artifacts
+clean-test<span class="w">           </span>remove<span class="w"> </span><span class="nb">test</span><span class="w"> </span>and<span class="w"> </span>coverage<span class="w"> </span>artifacts
+<span class="nb">test</span><span class="w">                 </span>run<span class="w"> </span>tests<span class="w"> </span>quickly<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>Python
+docs<span class="w">                 </span>generate<span class="w"> </span>Sphinx<span class="w"> </span>HTML<span class="w"> </span>documentation,<span class="w"> </span>including<span class="w"> </span>API<span class="w"> </span>docs
+servedocs<span class="w">            </span>compile<span class="w"> </span>the<span class="w"> </span>docs<span class="w"> </span>watching<span class="w"> </span><span class="k">for</span><span class="w"> </span>changes
+release<span class="w">              </span>package<span class="w"> </span>and<span class="w"> </span>upload<span class="w"> </span>a<span class="w"> </span>release
+dist<span class="w">                 </span>builds<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>wheel<span class="w"> </span>package
+install<span class="w">              </span>install<span class="w"> </span>the<span class="w"> </span>package<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>active<span class="w"> </span>Python<span class="s1">&#39;s site-packages</span>
+<span class="s1">develop              install the package to the active Python&#39;</span>s<span class="w"> </span>site-packages
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, which helps you to install, package and distribute your plugin with <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>, the standard for distributing Python Modules.
+On this file the <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">setup</span></code> is quite important, as it is the one that allows Spyder to identify this package as a plugin, and to know how to access its functionalities.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">spyder-pomodoro-timer</span></code> folder has the name you introduced when running <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code>. Inside this you’ll see a folder called <code class="docutils literal notranslate"><span class="pre">spyder</span></code>, where we will place the code of our plugin.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">spyder</span></code> directory you’ll find the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">api.py</span></code>: where the functionality of the plugin is exposed to the rest of Spyder. That would allow additional functionality to be added from other plugins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plugin.py</span></code>: is the core of the plugin. Depending on the type of plugin we created, here you’ll see an instance of <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code> or <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code>.</p>
+<ul>
+<li><p>If it is a <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> you should set a constant class named <code class="docutils literal notranslate"><span class="pre">CONTAINER_CLASS</span></code> with an instance of <code class="docutils literal notranslate"><span class="pre">PluginMainContainer</span></code>.</p></li>
+<li><p>If it is a <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code> you should set a constant class named <code class="docutils literal notranslate"><span class="pre">WIDGET_CLASS</span></code> with an instance of <code class="docutils literal notranslate"><span class="pre">PluginMainWidget</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container.py</span></code>: only used for <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> plugins. This file contains an instance of <code class="docutils literal notranslate"><span class="pre">PluginMainContainer</span></code> that holds a reference to all graphical elements (or widgets) that the plugin is going to add to the interface. This is necessary because Qt requires widgets to be children of other widgets before using them (otherwise they appear as floating windows). Since <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> is not a widget, we need a data structure (i.e. the container) that is a widget for that.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">widgets.py</span></code>: in this file we will add the graphical components of our plugin. If it is of type <code class="docutils literal notranslate"><span class="pre">SpyderPluginV2</span></code> and it does not have widgets, then it is not necessary.
+We can also place here the instance of <code class="docutils literal notranslate"><span class="pre">PluginMainWidget</span></code> necessary for <code class="docutils literal notranslate"><span class="pre">SpyderDockablePlugin</span></code>, if we are developing that kind of plugin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">confpage.py</span></code>: this is where you specify the configuration page that will be displayed in <code class="docutils literal notranslate"><span class="pre">Preferences</span></code>, so that the user can adjust the options of our plugin.</p></li>
+</ul>
+</section>
+</section>
+<section id="building-our-first-plugin">
+<h2>Building our first plugin<a class="headerlink" href="#building-our-first-plugin" title="Link to this heading">#</a></h2>
+<p>From now on we will be building the plugin step by step. In the <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer">spyder pomodoro timer repository</a> you will find the final version of the code for you to take a look at it, in case we are missing any detail.</p>
+<section id="widgets">
+<h3>Widgets<a class="headerlink" href="#widgets" title="Link to this heading">#</a></h3>
+<p>The best way to start building our plugin is by implementing its graphical components first in <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code></p>
+<p>Let’s call the initial version, without any editing <code class="docutils literal notranslate"><span class="pre">INITIAL</span></code>.
+In <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a>, widgets.py is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spyder imports</span>
+<span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
+<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+
+<span class="kn">from</span> <span class="nn">spyder.api.widgets.mixins</span> <span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
+
+
+<span class="c1"># Localization</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The preset imports are a guide to what we will need in our plugin. The <code class="docutils literal notranslate"><span class="pre">on_conf_change</span></code> decorator will allow us to propagate the changes in configuration. <code class="docutils literal notranslate"><span class="pre">get_translation</span></code> helps us to generate translation strings for the plugin and <code class="docutils literal notranslate"><span class="pre">SpyderWidgetMixin</span></code> adds to any widget the attributes and methods needed to integrate it with Spyder (icon, style, translation, actions and extra options).</p>
+</div>
+<p>When taking a look at the Spyder <code class="docutils literal notranslate"><span class="pre">api</span></code> module, we can find that in Spyder there are two types of predefined components for the status bar:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">StatusBarWidget</span></code>, a class derived from <code class="docutils literal notranslate"><span class="pre">QWidget</span></code> and <code class="docutils literal notranslate"><span class="pre">SpyderWidgetMixin</span></code>, which contains an icon, a label and a spinner (to show the plugin loading).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>, a class derived from <code class="docutils literal notranslate"><span class="pre">StatusBarWidget</span></code> with an internal <code class="docutils literal notranslate"><span class="pre">QTimer</span></code> to periodically update its content.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Below, we will be indicating links in github with the diffs between the tags, this as an aid to check the progressive changes that will be made in the code.</p>
+</div>
+<p>The first version that we are going to reach after the first editions will be called <code class="docutils literal notranslate"><span class="pre">HELLO</span> <span class="pre">WORLD</span></code>.</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/c7b5cc6c4ce3c4afcd3cb9d3474bdabe2b81e060">INITIAL -&gt; HELLO WORLD widgets.py diff</a></p>
+<p>Since we want a widget that shows the pomodoro countdown and is periodically updated, we will use a <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code> instance.</p>
+<p>So, we can substitute</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.mixins</span> <span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
+</pre></div>
+</div>
+<p>with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.status</span> <span class="kn">import</span> <span class="n">BaseTimerStatus</span>
+<span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+</pre></div>
+</div>
+<p>Add an initial import:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third party imports</span>
+<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
+</pre></div>
+</div>
+<p>With that, we can write our first widget like this</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerStatus</span><span class="p">(</span><span class="n">BaseTimerStatus</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Status bar widget to display the pomodoro timer&quot;&quot;&quot;</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;pomodoro_timer_status&quot;</span>
+    <span class="n">CONF_SECTION</span> <span class="o">=</span> <span class="s2">&quot;spyder_pomodoro_timer&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;25:00&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_tooltip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Override api method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;I am the Pomodoro timer!&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Spyder needs <code class="docutils literal notranslate"><span class="pre">ID</span></code> to be defined for <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>. Its constructor calls the parent class constructor and initializes the label with <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+</div>
+<p>We add a tooltip to verify the presence of our widget. Since Spyder uses <code class="docutils literal notranslate"><span class="pre">qtawesome</span></code> (another of our projects that eases the incorporation of iconic fonts into PyQt applications), we can select an appropriate icon by running the <code class="docutils literal notranslate"><span class="pre">qta-browser</span></code> command on a terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>qta-browser
+</pre></div>
+</div>
+<p>From here we can select and copy the name of the icon of our preference.</p>
+<img alt="qta browser dialog" src="../_images/pd_qta-browser_timer.png" />
+<p>To finish the implementation of our widget, we need to add the following method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---- BaseTimerStatus API</span>
+<span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get current time of the timer&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code> requires this method to be implemented to update its content every time it is requested by the internal timer.</p>
+</section>
+<section id="the-container">
+<h3>The container<a class="headerlink" href="#the-container" title="Link to this heading">#</a></h3>
+<p>The next step in the development of our plugin is to create an instance of the widget we wrote above, so we can add it to Spyder’s status bar. For that, we need to use a container. Due to Qt specifics, we need an instance of <code class="docutils literal notranslate"><span class="pre">QWidget</span></code> (the container) to be the parent of all other widgets part of our plugin (as mentioned above).</p>
+<p>Thus, the <a class="reference external" href="https://cookiecutter.readthedocs.io">COOKIECUTTER</a> version of <code class="docutils literal notranslate"><span class="pre">container.py</span></code> is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
+<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+<span class="kn">from</span> <span class="nn">spyder.api.widgets.main_container</span> <span class="kn">import</span> <span class="n">PluginMainContainer</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">SpyderPomodoroTimerContainer</span><span class="p">(</span><span class="n">PluginMainContainer</span><span class="p">):</span>
+
+    <span class="c1"># Signals</span>
+
+    <span class="c1"># --- PluginMainContainer API</span>
+    <span class="c1"># ------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">update_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/73dbc2c010274613357d6d8d2e4d1428dc030c77">INITIAL -&gt; HELLO WORLD container.py diff</a></p>
+<p>In this case <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> is already defined, and we must implement the <code class="docutils literal notranslate"><span class="pre">setup</span></code> and <code class="docutils literal notranslate"><span class="pre">update_actions</span></code> methods.</p>
+<p>Now we are going to add the widget created earlier to the container. To do so, first we need to import the widget.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.widgets</span> <span class="kn">import</span> <span class="n">PomodoroTimerStatus</span>
+</pre></div>
+</div>
+<p>Then we edit the <code class="docutils literal notranslate"><span class="pre">setup</span></code> method to add an instance of our widget.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Widgets</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span> <span class="o">=</span> <span class="n">PomodoroTimerStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="plugin">
+<h3>Plugin<a class="headerlink" href="#plugin" title="Link to this heading">#</a></h3>
+<p>Finally, we define our plugin so that it is registered within Spyder.
+The <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a> version (i.e. the one created by cookiecutter)  for <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> is:</p>
+<ul class="simple">
+<li><p>Imports:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third-party imports</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+
+<span class="c1"># Spyder imports</span>
+<span class="kn">from</span> <span class="nn">spyder.api.plugins</span> <span class="kn">import</span> <span class="n">Plugins</span><span class="p">,</span> <span class="n">SpyderPluginV2</span>
+<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+
+<span class="c1"># Local imports</span>
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.confpage</span> <span class="kn">import</span> <span class="n">SpyderPomodoroTimerConfigPage</span>
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.container</span> <span class="kn">import</span> <span class="n">SpyderPomodoroTimerContainer</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Plugin class:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Spyder Pomodoro Timer plugin.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;spyder_pomodoro_timer&quot;</span>
+    <span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">OPTIONAL</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">CONTAINER_CLASS</span> <span class="o">=</span> <span class="n">SpyderPomodoroTimerContainer</span>
+    <span class="n">CONF_SECTION</span> <span class="o">=</span> <span class="n">NAME</span>
+    <span class="n">CONF_WIDGET_CLASS</span> <span class="o">=</span> <span class="n">SpyderPomodoroTimerConfigPage</span>
+
+    <span class="c1"># --- Signals</span>
+
+    <span class="c1"># --- SpyderPluginV2 API</span>
+    <span class="c1"># ------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Spyder Pomodoro Timer&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;A very simple pomodoro timer&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">QIcon</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">on_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SpyderPomodoroTimer initialized!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">check_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># Note: Remember to use _(&quot;&quot;) to localize the string</span>
+        <span class="k">return</span> <span class="n">valid</span><span class="p">,</span> <span class="n">message</span>
+
+    <span class="k">def</span> <span class="nf">on_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cancellable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/d368e695e096e1a054e043671f98b5f0021b6822">INITIAL -&gt; HELLO WORLD plugin.py diff</a></p>
+<p>First, we need to declare the dependencies of our plugin, by defining the <code class="docutils literal notranslate"><span class="pre">REQUIRES</span></code> class constant. Since we’re going to add a status bar widget, we require the <code class="docutils literal notranslate"><span class="pre">StatusBar</span></code> plugin, as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Then we need to set the icon for our plugin. For that, we substitute</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">QIcon</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>by</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third-party imports</span>
+<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
+
+<span class="c1"># Spyder imports</span>
+<span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Due to recent changes to the Spyder API, we need to add to the spyder imports</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spyder imports</span>
+<span class="kn">from</span> <span class="nn">spyder.api.plugin_registration.decorators</span> <span class="kn">import</span> <span class="n">on_plugin_available</span>
+</pre></div>
+</div>
+<p>And add the following after the <code class="docutils literal notranslate"><span class="pre">on_initialize</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">on_statusbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">statusbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">statusbar</span><span class="p">:</span>
+        <span class="n">statusbar</span><span class="o">.</span><span class="n">add_status_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With these changes, Spyder will be aware of the presence of our plugin, and that this plugin adds a new widget to the status bar.</p>
+<p>Finally, we add the following method to our plugin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">pomodoro_timer_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">container</span><span class="o">.</span><span class="n">pomodoro_timer_status</span>
+</pre></div>
+</div>
+<p>In this way, <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimer</span></code> can access <code class="docutils literal notranslate"><span class="pre">pomodoro_timer_status</span></code> of <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> as if it were its own property.</p>
+<p>In summary, we did the following:</p>
+<img alt="Basic structure of Pomodoro Timer Spyder plugin." src="../_images/pd_plugin_build.png" />
+<p>We created a widget, then we added it to the container, which is registered in the plugin through the <code class="docutils literal notranslate"><span class="pre">CONTAINER_CLASS</span></code> constant. In the plugin, we accessed the instance of that widget and added it to the status bar.</p>
+</section>
+</section>
+<section id="how-to-test-our-plugin">
+<h2>How to test our plugin<a class="headerlink" href="#how-to-test-our-plugin" title="Link to this heading">#</a></h2>
+<p>Now it is time to see how our plugin looks in the Spyder interface.</p>
+<p><strong>From the root folder of our plugin</strong>, we activate the environment where Spyder is installed, and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
+<span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<p>Now we can see two outputs. The first one is shown in the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>spyder-dev<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>spyder
+SpyderPomodoroTimer<span class="w"> </span>registered!
+</pre></div>
+</div>
+<p>And in Spyder you’ll see our plugin in the status bar with the tooltip “I am the Pomodoro tooltip”.</p>
+<img alt="First version of our plugin" src="../_images/pd_hello_world.png" />
+<p>Keep in mind that every time we make a change to our code, it is necessary to restart Spyder so that the plugin is reloaded and we can check the changes.</p>
+</section>
+<section id="enhancing-our-plugin">
+<h2>Enhancing our plugin<a class="headerlink" href="#enhancing-our-plugin" title="Link to this heading">#</a></h2>
+<p>From now on we are going to go into details of how things are implemented in Qt. So in case you have any doubts, the Qt documentation will be your best guide.
+We created an annex to this workshop that quickly explains way the fundamental concepts of Qt for those in a hurry: <a class="reference internal" href="qt_fundamentals.html#qt-fundamentals"><span class="std std-ref">Qt Fundamentals</span></a></p>
+<section id="timer-updates">
+<h3>Timer updates<a class="headerlink" href="#timer-updates" title="Link to this heading">#</a></h3>
+<p>The first problem with our plugin is that its pomodoro timer is not being updated. To activate it we can use the <code class="docutils literal notranslate"><span class="pre">QTimer</span></code> in <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, which is present because it’s an instance of <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code>.</p>
+<p>The second version where the value in the status bar is updated is called <code class="docutils literal notranslate"><span class="pre">TIMER</span></code>.</p>
+<p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and add this constant below the import lines (line 22).</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/5d72eaf2c8ce6c7760529c90121837e275757974">HELLO WORLD -&gt; TIMER widgets.py diff</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Constants</span>
+<span class="c1"># ------ Time limits by default</span>
+
+<span class="n">POMODORO_DEFAULT</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span>  <span class="c1"># 25 mins in milliseconds</span>
+<span class="n">INTERVAL</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">POMODORO_DEFAULT</span></code> is to set the pomodoro time limit in milliseconds, and <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code> to the timer update rate.</p>
+<p>Now, in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method of <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code> we need to add:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actual time limits</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span> <span class="o">=</span> <span class="n">POMODORO_DEFAULT</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">_interval</span> <span class="o">=</span> <span class="n">INTERVAL</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_timer</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_interval</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Up to this point, we created a default value (<code class="docutils literal notranslate"><span class="pre">POMODORO_DEFAULT</span></code>) for the timer duration during pomodoros; we added it to the <code class="docutils literal notranslate"><span class="pre">pomodoro_limit</span></code> attribute to be able to configure it; and with that value we initialized the <code class="docutils literal notranslate"><span class="pre">countdown</span></code> attribute that will be modified over time.
+As for the update interval of the timer, we set it to to the value of <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code>, which corresponds to 1 second (one thousand milliseconds).</p>
+<p>The function of <code class="docutils literal notranslate"><span class="pre">self.timer</span></code> is to update our timer periodically. This is done through the method <code class="docutils literal notranslate"><span class="pre">timeout.connect()</span></code>, to which we pass as parameter the reference to the <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> function that will perform the required adjustments.</p>
+<p>Now let’s implement <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> at the end of the file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the time that should be displayed.&quot;&quot;&quot;</span>
+
+    <span class="n">minutes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minutes</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">update_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates the timer and the current widget. Also, update the</span>
+<span class="sd">    task counter if a task is set.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Update the current timer by decreasing the current running time by one second</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">-=</span> <span class="n">INTERVAL</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_time</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here we rely on the <code class="docutils literal notranslate"><span class="pre">display_time</span></code> method that converts the current <code class="docutils literal notranslate"><span class="pre">countdown</span></code> value, which is measured in milliseconds, into a human-readable format. And <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> simply keeps updating the countdown until it reaches zero.</p>
+<p>If we run Spyder again we will find that our timer has come to life.</p>
+<img alt="Timer countdown working." src="../_images/pd_timer_countdown.gif" />
+</section>
+</section>
+<section id="timer-controls">
+<h2>Timer controls<a class="headerlink" href="#timer-controls" title="Link to this heading">#</a></h2>
+<p>Now we need a way to control our timer. We can achieve this by adding some buttons to Spyder’s toolbar, which will be useful to learn how to work with toolbars, menus and actions in Spyder.</p>
+<section id="pomodorotimertoolbar">
+<h3>PomodoroTimerToolbar<a class="headerlink" href="#pomodorotimertoolbar" title="Link to this heading">#</a></h3>
+<p>The next version where actions are added to the toolbar is called <code class="docutils literal notranslate"><span class="pre">ACTIONS</span></code>.</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/48a946fdbb934b9b85facd3c1b77fc8999e049a9">TIMER -&gt; ACTIONS widgets.py diff</a></p>
+<p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and import the Spyder application toolbar class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.toolbars</span> <span class="kn">import</span> <span class="n">ApplicationToolbar</span>
+</pre></div>
+</div>
+<p>And create an instance of it by adding the following code before the definition of <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerToolbar</span><span class="p">(</span><span class="n">ApplicationToolbar</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Toolbar to add buttons to control our timer.&quot;&quot;&quot;</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s1">&#39;pomodoro_timer_toolbar&#39;</span>
+</pre></div>
+</div>
+<p>As you can see, this statement is very simple. It only needs to declare an <code class="docutils literal notranslate"><span class="pre">ID</span></code>, that serves to identify our toolabr among the rest.</p>
+<p>It is possible to include other Qt widgets in our toolbar, but in this case it’s better to use the appropriate Spyder methods for that in order to maintain their relationship with the rest of the application. In other words, as long as the widget you need exists in <code class="docutils literal notranslate"><span class="pre">spyder.api.widgets</span></code>, use it!</p>
+<p>Next, we need to declare a boolean variable in our status widget to indicate if the countdown is paused or not. For that, let’s add the following inside the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method of <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>And inside the <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> method, substitute</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>by</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pause</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="create-the-pomodoro-toolbar">
+<h3>Create the Pomodoro Toolbar<a class="headerlink" href="#create-the-pomodoro-toolbar" title="Link to this heading">#</a></h3>
+<p>Now we are going to create a new section in our toolbar and associate some functionality to it by means of actions. This particular information is recommended to be included in the <code class="docutils literal notranslate"><span class="pre">api.py</span></code> file because this way we can offer endpoints to the rest of Spyder and new plugins for tweaking the behavior of our plugin.</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/cf540f972f37aaf5d6ccc8524cbcc7aeae9c483b">TIMER -&gt; ACTIONS api.py diff</a></p>
+<p>Let’s add the following to the end of <code class="docutils literal notranslate"><span class="pre">api.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroToolbarActions</span><span class="p">:</span>
+    <span class="n">Start</span> <span class="o">=</span> <span class="s1">&#39;start_timer&#39;</span>
+    <span class="n">Pause</span> <span class="o">=</span> <span class="s1">&#39;pause_timer&#39;</span>
+    <span class="n">Stop</span> <span class="o">=</span> <span class="s1">&#39;stop_timer&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">PomodoroToolbarSections</span><span class="p">:</span>
+    <span class="n">Controls</span> <span class="o">=</span> <span class="s2">&quot;pomodoro_timer&quot;</span>
+
+<span class="k">class</span> <span class="nc">PomodoroMenuSections</span><span class="p">:</span>
+    <span class="n">Main</span> <span class="o">=</span> <span class="s2">&quot;main_section&quot;</span>
+</pre></div>
+</div>
+<p>With these we are telling the rest of Spyder, and our own plugin, that we are going to have a new toolbar section called “pomodoro_timer”. This section will consist of a button containing a menu (with a single section “main_section”) and actions identified as “start_timer”, “pause_timer” and “stop_timer”, to start, pause and stop (resetting) our timer, respectively.</p>
+<p>Note that these are simple class definitions with class constants, to ease the encapsulation and exchange of this information in a simple way.</p>
+</section>
+<section id="add-actions-to-the-toolbar">
+<h3>Add actions to the toolbar<a class="headerlink" href="#add-actions-to-the-toolbar" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/492f30771285af937a8a75d69e4e879d21f9dc0f">TIMER -&gt; ACTIONS container.py diff</a></p>
+<p>Now let’s go to <code class="docutils literal notranslate"><span class="pre">container.py</span></code>, where we are going to implement the behavior of our new toolbar and its actions.
+In this case, we are not going to specify the internal behavior of our plugin, but the relationship between its widgets and other areas of Spyder, so it is more convenient to do it in the container.</p>
+<p>As we did with <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, we are going to use <code class="docutils literal notranslate"><span class="pre">qtawesome</span></code> icons for our actions. For this purpose, let’s add at the beginning of our imports:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third party imports</span>
+<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QToolButton</span>
+</pre></div>
+</div>
+<p>We also imported <code class="docutils literal notranslate"><span class="pre">QToolButton</span></code> because it will be used to set the button that we will add in our toolbar.</p>
+<p>At the end of the Spyder imports we also need:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+</pre></div>
+</div>
+<p>Now, let’s include <code class="docutils literal notranslate"><span class="pre">PomodoroTimerToolbar</span></code> and the actions and sections we just declared in <code class="docutils literal notranslate"><span class="pre">api.py</span></code> in our local imports:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.widgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">PomodoroTimerStatus</span><span class="p">,</span>
+    <span class="n">PomodoroTimerToolbar</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.api</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">PomodoroToolbarActions</span><span class="p">,</span>
+    <span class="n">PomodoroToolbarSections</span><span class="p">,</span>
+    <span class="n">PomodoroMenuSections</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, we need to do following things in the <code class="docutils literal notranslate"><span class="pre">setup</span></code> method of <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code>.</p>
+<p>The first one is to create an instance of the toolbar class we declared earlier:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pomodoro Timer Toolbar&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_toolbar</span> <span class="o">=</span> <span class="n">PomodoroTimerToolbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second one is to create the actions corresponding to Start, Pause and Stop our pomodoro timer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actions</span>
+<span class="n">start_timer_action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_action</span><span class="p">(</span>
+    <span class="n">PomodoroToolbarActions</span><span class="o">.</span><span class="n">Start</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Start&quot;</span><span class="p">),</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Start timer&quot;</span><span class="p">),</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;fa.play-circle&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">),</span>
+    <span class="n">triggered</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">start_pomodoro_timer</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">pause_timer_action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_action</span><span class="p">(</span>
+    <span class="n">PomodoroToolbarActions</span><span class="o">.</span><span class="n">Pause</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pause&quot;</span><span class="p">),</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pause timer&quot;</span><span class="p">),</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;fa.pause-circle&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">),</span>
+    <span class="n">triggered</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pause_pomodoro_timer</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">stop_timer_action</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_action</span><span class="p">(</span>
+    <span class="n">PomodoroToolbarActions</span><span class="o">.</span><span class="n">Stop</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Stop&quot;</span><span class="p">),</span>
+    <span class="n">tip</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Stop timer&quot;</span><span class="p">),</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;fa.stop-circle&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">),</span>
+    <span class="n">triggered</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_pomodoro_timer</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The third one is to create the menu that will contain our actions and add them to it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_menu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_menu</span><span class="p">(</span>
+    <span class="s2">&quot;pomodoro_timer_menu&quot;</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pomodoro timer&quot;</span><span class="p">),</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># Add actions to the menu</span>
+<span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="p">[</span><span class="n">start_timer_action</span><span class="p">,</span> <span class="n">pause_timer_action</span><span class="p">,</span> <span class="n">stop_timer_action</span><span class="p">]:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_item_to_menu</span><span class="p">(</span>
+        <span class="n">action</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_menu</span><span class="p">,</span>
+        <span class="n">section</span><span class="o">=</span><span class="n">PomodoroMenuSections</span><span class="o">.</span><span class="n">Main</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>The fourth one is to create a button that will contain the menu and configure it as <code class="docutils literal notranslate"><span class="pre">PopupMode</span></code>, so that it is displayed when clicked.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_button</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_toolbutton</span><span class="p">(</span>
+    <span class="s2">&quot;pomodoro_timer_button&quot;</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pomodoro timer&quot;</span><span class="p">),</span>
+    <span class="n">icon</span><span class="o">=</span><span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_button</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_menu</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_button</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">InstantPopup</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And finally, the fifth one is to add the button to our toolbar:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add menu to toolbar</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">add_item_to_toolbar</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_button</span><span class="p">,</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_toolbar</span><span class="p">,</span>
+    <span class="n">section</span><span class="o">=</span><span class="n">PomodoroToolbarSections</span><span class="o">.</span><span class="n">Controls</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>When creating the actions, we indicate by means of the <code class="docutils literal notranslate"><span class="pre">triggered</span></code> parameter the methods to be executed when they are activated, i.e. when the corresponding buttons on the toolbar are clicked.</p>
+<p>We can insert these methods at the end of the <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> declaration, in the section that our cookiecutter template indicates as <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">---</span> <span class="pre">Public</span> <span class="pre">API</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">start_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start the timer.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">pause_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pause the timer.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">stop_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stop the timer.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">countdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pomodoro_limit</span>
+</pre></div>
+</div>
+<p>These methods simply manipulate the <code class="docutils literal notranslate"><span class="pre">pause</span></code> field of <code class="docutils literal notranslate"><span class="pre">pomodoro_timer_status</span></code>, and in the case of <code class="docutils literal notranslate"><span class="pre">stop_pomodoro_timer</span></code> the countdown is restarted.</p>
+</section>
+<section id="register-the-toolbar">
+<h3>Register the toolbar<a class="headerlink" href="#register-the-toolbar" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/012c5ef6568114ea945501d44efb30afeefbad98">TIMER -&gt; ACTIONS plugin.py diff</a></p>
+<p>A final mandatory step is to go to <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code> and register this new toolbar component.</p>
+<p>To do this, add <code class="docutils literal notranslate"><span class="pre">Plugins.Toolbar</span></code> to the plugin requirements:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And use this plugin’s API to add the toolbar we have created in the container to Spyder’s toolbar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">on_toolbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
+    <span class="n">toolbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">)</span>
+    <span class="n">toolbar</span><span class="o">.</span><span class="n">add_application_toolbar</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">pomodoro_timer_toolbar</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="review-the-changes">
+<h3>Review the changes<a class="headerlink" href="#review-the-changes" title="Link to this heading">#</a></h3>
+<p>The first thing we can notice is that we already have the corresponding buttons in the toolbar.</p>
+<img alt="Pomodoro timer toolbar buttons" src="../_images/pd_toolbar_actions.gif" />
+<p>The strings that were entered as the <code class="docutils literal notranslate"><span class="pre">tip</span></code> parameter in the creation of the actions are shown here as the buttons’ tooltips.</p>
+<p>Also, if we check the menu “View &gt; Toolbars”, we find that there is a new entry there corresponding to our toolbar.</p>
+<img alt="View &gt; Toolbars menu with &quot;Pomodoro Timer Toolbar&quot; option." src="../_images/pd_view_pomodoro_toolbar.png" />
+<p>Finally, let’s check how the new Pomodoro Timer control buttons in the toolbar interact with the component in the status bar.</p>
+<img alt="Interaction between the Pomodoro Timer toolbar and its status bar." src="../_images/pd_toolbar_statusbar_interact.gif" />
+</section>
+</section>
+<section id="add-a-configuration-page">
+<h2>Add a Configuration Page<a class="headerlink" href="#add-a-configuration-page" title="Link to this heading">#</a></h2>
+<p>Another feature of Spyder plugins is that they can have configurable options that appear in Spyder’s Preferences window.</p>
+<section id="configuration-defaults">
+<h3>Configuration defaults<a class="headerlink" href="#configuration-defaults" title="Link to this heading">#</a></h3>
+<p>The final version in which we add a configurable parameter will be called <code class="docutils literal notranslate"><span class="pre">CONFPAGE</span></code>.</p>
+<p>The first step is to define what options we want to offer to our users. For this we must create a new file, which we can call <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. In this file we will write the following:</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b71457c96013dc0b9c27d588f46568a81e9a2f0c">ACTIONS -&gt; CONFPAGE config.py diff</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Spyder terminal default configuration.&quot;&quot;&quot;</span>
+
+<span class="c1"># --- Constants</span>
+<span class="c1"># ------ Time limits by default</span>
+
+<span class="n">POMODORO_DEFAULT</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span>  <span class="c1"># 25 mins in milliseconds</span>
+
+<span class="n">CONF_SECTION</span> <span class="o">=</span> <span class="s2">&quot;spyder_pomodoro_timer&quot;</span>
+
+<span class="n">CONF_DEFAULTS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span>
+        <span class="n">CONF_SECTION</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;pomodoro_limit&quot;</span><span class="p">:</span> <span class="n">POMODORO_DEFAULT</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="p">},</span>
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;shortcuts&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;pomodoro-timer start/pause&quot;</span><span class="p">:</span> <span class="s2">&quot;Ctrl+Alt+Shift+P&quot;</span><span class="p">}),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>We must highlight the declaration of <code class="docutils literal notranslate"><span class="pre">CONF_SECTION</span></code>, which is the internal name of the section in Preferences corresponding to our plugin; and the dictionary keys associated with <code class="docutils literal notranslate"><span class="pre">CONF_DEFAULTS</span></code>. In this case, we are indicating that <code class="docutils literal notranslate"><span class="pre">pomodoro_limit</span></code> is a configurable parameter within the <code class="docutils literal notranslate"><span class="pre">spyder_pomodoro_timer</span></code> section.</p>
+<p>At the end of this file it is necessary to set another important constant, <code class="docutils literal notranslate"><span class="pre">CONF_VERSION</span></code>, which must be updated when adding, removing or renaming configurable parameters in successive versions of the plugin.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># IMPORTANT NOTES:</span>
+<span class="c1"># 1. If you want to *change* the default value of a current option, you need to</span>
+<span class="c1">#    do a MINOR update in config version, e.g. from 1.0.0 to 1.1.0</span>
+<span class="c1"># 2. If you want to *remove* options that are no longer needed in our codebase,</span>
+<span class="c1">#    or if you want to *rename* options, then you need to do a MAJOR update in</span>
+<span class="c1">#    version, e.g. from 1.0.0 to 2.0.0</span>
+<span class="c1"># 3. You don&#39;t need to touch this value if you&#39;re just adding a new option</span>
+<span class="n">CONF_VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
+</pre></div>
+</div>
+<p>Note that we are moving the definition of <code class="docutils literal notranslate"><span class="pre">POMODORO_DEFAULT</span></code> from <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, since we now have a dedicated place for default configuration values.</p>
+</section>
+<section id="configuration-page">
+<h3>Configuration page<a class="headerlink" href="#configuration-page" title="Link to this heading">#</a></h3>
+<p>Now, we need to build the page that will appear in the Preferences window. For this, we edit the <code class="docutils literal notranslate"><span class="pre">confpage.py</span></code> file generated by cokkiecutter as follows:</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/bd3bcf2ce895c440fb2d6b80233100c6d86822fe">ACTIONS -&gt; CONFPAGE confpage.py diff</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Spyder Pomodoro Timer Preferences Page.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QGroupBox</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
+<span class="kn">from</span> <span class="nn">spyder.api.preferences</span> <span class="kn">import</span> <span class="n">PluginConfigPage</span>
+<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.config</span> <span class="kn">import</span> <span class="n">POMODORO_DEFAULT</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">SpyderPomodoroTimerConfigPage</span><span class="p">(</span><span class="n">PluginConfigPage</span><span class="p">):</span>
+
+    <span class="c1"># --- PluginConfigPage API</span>
+    <span class="c1"># ------------------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">setup_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">limits_group</span> <span class="o">=</span> <span class="n">QGroupBox</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Time limits&quot;</span><span class="p">))</span>
+        <span class="n">pomodoro_spin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_spinbox</span><span class="p">(</span>
+            <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pomodoro timer limit&quot;</span><span class="p">),</span>
+            <span class="n">_</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;pomodoro_limit&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="n">POMODORO_DEFAULT</span><span class="p">,</span>
+            <span class="n">min_</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+            <span class="n">max_</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">pt_limits_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+        <span class="n">pt_limits_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pomodoro_spin</span><span class="o">.</span><span class="n">plabel</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">pt_limits_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pomodoro_spin</span><span class="o">.</span><span class="n">spinbox</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">pt_limits_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">pomodoro_spin</span><span class="o">.</span><span class="n">slabel</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">pt_limits_layout</span><span class="o">.</span><span class="n">setColumnStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">limits_group</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">pt_limits_layout</span><span class="p">)</span>
+
+        <span class="n">vlayout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">vlayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">limits_group</span><span class="p">)</span>
+        <span class="n">vlayout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">vlayout</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This mostly corresponds to the regular code for user interfaces based on Qt widgets. In this case, our options section corresponds to a <code class="docutils literal notranslate"><span class="pre">QGroupBox</span></code>, where the parameters are organized vertically using a <code class="docutils literal notranslate"><span class="pre">QVBoxLayout</span></code>, and each parameter corresponds to a <code class="docutils literal notranslate"><span class="pre">QGridLayout</span></code> where labels and inputs are distributed (in this case a <code class="docutils literal notranslate"><span class="pre">QSpinBox</span></code>).</p>
+<p>Configuration pages in Spyder provide some helper methods to facilitate this work. For instance, <code class="docutils literal notranslate"><span class="pre">create_spinbox</span></code> allows to instantiate and initialize in a single step the widgets corresponding prefix an suffix labels together with the spinbox.</p>
+</section>
+<section id="propagate-configuration-changes">
+<h3>Propagate configuration changes<a class="headerlink" href="#propagate-configuration-changes" title="Link to this heading">#</a></h3>
+<p>Since we moved all the configuration information to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, now we have to import it from there into <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code>.</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b94cee118bf887b52934230a35d67a0080551a68">ACTIONS -&gt; CONFPAGE widgets.py diff</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
+<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.config</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CONF_SECTION</span><span class="p">,</span>
+    <span class="n">CONF_DEFAULTS</span><span class="p">,</span>
+    <span class="n">CONF_VERSION</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can access the configuration options from anywhere in our plugin using the <code class="docutils literal notranslate"><span class="pre">get_conf</span></code> method. In this case we use it to access the value of <code class="docutils literal notranslate"><span class="pre">pomodoro_limit</span></code> from the configuration instead of the constant <code class="docutils literal notranslate"><span class="pre">POMODORO_DEFAULT</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_conf</span><span class="p">(</span>
+    <span class="s2">&quot;pomodoro_limit&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can add a method that updates our configurable parameter <code class="docutils literal notranslate"><span class="pre">pomodoro_limit</span></code>. The <code class="docutils literal notranslate"><span class="pre">&#64;on_conf_change</span></code> decorator is the one in charge of capturing the signal that is generated when applying the change of a specific option.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_conf_change</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="s2">&quot;pomodoro_limit&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">set_pomodoro_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_time</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="registering-preferences">
+<h3>Registering preferences<a class="headerlink" href="#registering-preferences" title="Link to this heading">#</a></h3>
+<p>Finally, it is necessary to activate the use of preferences in <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code>, by requiring the Preferences plugin</p>
+<p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b238b133d46a52e2d6e57ae938964094a45e7177">ACTIONS -&gt; CONFPAGE plugin.py diff</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>and registering our plugin in a method with the decorator <code class="docutils literal notranslate"><span class="pre">&#64;on_plugin_available</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">on_preferences_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">preferences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">)</span>
+    <span class="n">preferences</span><span class="o">.</span><span class="n">register_plugin_preferences</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can access the Preferences window either from the toolbar or from the “Tools &gt; Preferences” menu. There we will find a section called <em>Spyder Pomodoro Timer</em> and inside it is the <em>Pomodoro timer limit</em> parameter. If we change that value, we will see how the corresponding label in the status bar changes.</p>
+<img alt="Pomodoro Timer toolbar configuration page." src="../_images/pd_plugin_confpage.gif" />
+<p>Now your plugin is in an initial version ready to publish…</p>
+</section>
+</section>
+<section id="publishing-your-plugin">
+<h2>Publishing your plugin<a class="headerlink" href="#publishing-your-plugin" title="Link to this heading">#</a></h2>
+<p>Since the recommended way to install Spyder is through conda, the obvious choice would be to publish our plugin through a channel like conda-forge, but this is a task that is beyond the scope of this workshop due to its complexity.</p>
+<p>However, the tools used to publish packages in conda are usually based on the packages published in PyPI. So let’s see how to publish our plugin there.</p>
+<img alt="Publish your plugin in PyPI." src="../_images/pd_plugin_publish.png" />
+<section id="pypi-and-testpypi">
+<h3>PyPI and TestPyPI<a class="headerlink" href="#pypi-and-testpypi" title="Link to this heading">#</a></h3>
+<p>The first thing we have to do is to create an account on the <a class="reference external" href="https://pypi.org">PyPI</a> and <a class="reference external" href="https://test.pypi.org">TestPyPI</a> websites. Although our package will be finally published in PyPI, it is advisable to use TestPyPI to test that our package can be published properly without generating additional load to the PyPI servers or affecting their logs.</p>
+<p>Next, we need edit the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file at the root of our project with our own data. Fortunately, cookiecutter created one for us.</p>
+<p>To upload our package to PyPI we have to use a tool called <a class="reference external" href="https://twine.readthedocs.io">Twine</a> that makes this task much easier. And we can install it in our conda environment using:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>twine
+</pre></div>
+</div>
+</section>
+<section id="build-and-check-the-package">
+<h3>Build and check the package<a class="headerlink" href="#build-and-check-the-package" title="Link to this heading">#</a></h3>
+<p>Before publishing our plugin we must package it. To do it we must write the following from the root folder of our project (where <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is placed):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>sdist<span class="w"> </span>bdist_wheel
+</pre></div>
+</div>
+<p>After that we will see that the following files are generated in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spyder_pomodoro_timer
+└──<span class="w"> </span>dist
+<span class="w">    </span>├──<span class="w"> </span>spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl
+<span class="w">    </span>└──<span class="w"> </span>spyder-pomodoro-timer-0.0.1.dev0.tar.gz
+</pre></div>
+</div>
+<p>On Linux and macOS we can check that the newly built distribution packages contain the expected files by inspecting the contents of the <code class="docutils literal notranslate"><span class="pre">tar</span></code> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>tzf<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz
+</pre></div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">twine</span></code> to run a check on the created files in <code class="docutils literal notranslate"><span class="pre">dist</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>check<span class="w"> </span>dist/*
+Checking<span class="w"> </span>dist/spyder_pomodoro_timer-0.0.1.dev0-py3-none-any.whl:<span class="w"> </span>PASSED
+Checking<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz:<span class="w"> </span>PASSED
+</pre></div>
+</div>
+</section>
+<section id="upload-to-pypi">
+<h3>Upload to PyPI<a class="headerlink" href="#upload-to-pypi" title="Link to this heading">#</a></h3>
+<p>Now we can use twine to upload the distribution packages we have built. First, we will upload them to TestPyPI to make sure everything works:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>upload<span class="w"> </span>--repository-url<span class="w"> </span>https://test.pypi.org/legacy/<span class="w"> </span>dist/*
+</pre></div>
+</div>
+<p>This command will prompt you for the username and password with which you registered in TestPyPI.</p>
+<p>If we open <a class="reference external" href="https://test.pypi.org/project/spyder-pomodoro-timer/">https://test.pypi.org/project/spyder-pomodoro-timer/</a> in the browser we will be able to see the package we have just published.</p>
+<p>There we’ll see that some details are missing, like the package description, and that our package is marked as <code class="docutils literal notranslate"><span class="pre">Development</span> <span class="pre">Status</span> <span class="pre">5-Stable</span></code>.</p>
+<p>To fix the first one, we can follow the instructions in <a class="reference external" href="https://packaging.python.org/guides/making-a-pypi-friendly-readme/">Making a PyPI-friendly README</a>. Since we already have a README file, we simply add the following lines to the beginning of our <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># read the contents of your README file</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">this_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">long_description</span> <span class="o">=</span> <span class="p">(</span><span class="n">this_directory</span> <span class="o">/</span> <span class="s2">&quot;README.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;spyder-pomodoro-timer&quot;</span><span class="p">,</span>
+    <span class="c1"># ...</span>
+    <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
+    <span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>We can also change the classifiers of our package using the following site as a guide: <a class="reference external" href="https://pypi.org/classifiers">https://pypi.org/classifiers</a>. Here we can simply copy the classifiers we consider appropriate and then paste them into our code.
+Specifically in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, within the list that enters as the <code class="docutils literal notranslate"><span class="pre">classifier</span></code> argument in the call to function <code class="docutils literal notranslate"><span class="pre">setup</span></code>.</p>
+<p>With these changes, and by bumping our plugin’s version in the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">spyder_pomodoro_timer</span></code> folder, we can repeat the cycle of building a new version of our package, loading it into TestPyPI for checking, and finally loading it into PyPI by using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>twine<span class="w"> </span>upload<span class="w"> </span>dist/
+</pre></div>
+</div>
+<p>And check the result in <a class="reference external" href="https://pypi.org/project/spyder-pomodoro-timer/">https://pypi.org/project/spyder-pomodoro-timer/</a></p>
+<p>Once this is done, anyone can install our plugin in their environments simply by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>spyder-pomodoro-timer
+</pre></div>
+</div>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Link to this heading">#</a></h2>
+<p>The possibility of making a tool extensible through plugins, extensions or addons, as they are usually called, is a fundamental feature that allows taking advantage of the talent of third-party developers to respond to needs and enhancements that are beyond the scope of the application’s core development team.</p>
+<p>Similarly, a plugin-based system makes the application much easier to maintain. Eventually, the ability to enable and disable plugins makes it more adaptable to different use cases. For instance, at present it would be inconceivable to think of a web browser that does not have extensions to block advertising or organize links, even if those features don’t come by default on them.</p>
+<p>In Spyder we have put special interest in consolidating an API that allows the development of plugins in a consistent way. The main focus of the development effort between versions 4 and 5 was in this direction and we are at a key moment where we expect to capitalize on all this work.</p>
+<p>In this workshop you have learned how to:</p>
+<ul class="simple">
+<li><p>Identify the basic building blocks in Spyder development.</p></li>
+<li><p>Identify the different types of plugins that can be implemented in Spyder.</p></li>
+<li><p>Recognize the types of plugins that are part of Spyder.</p></li>
+<li><p>Plan the development of a new Spyder plugin.</p></li>
+<li><p>Build a development environment for Spyder plugin development.</p></li>
+<li><p>Generate the basic structure of a Spyder plugin using Cookiecutter.</p></li>
+<li><p>Understand the file structure of a Spyder plugin.</p></li>
+<li><p>Add and register Qt widgets in the Spyder status bar.</p></li>
+<li><p>Add and register Qt widgets in the Spyder toolbar.</p></li>
+<li><p>Add a menu with actions in the toolbar.</p></li>
+<li><p>Add configuration options to our plugin and display them appear in the Preferences window.</p></li>
+<li><p>Edit the description and classifiers of the installable package of our plugin.</p></li>
+<li><p>Publish our plugin to TestPyPI and PyPI.</p></li>
+</ul>
+<p>With these skills we hope to ease the way for you to develop your own Spyder plugins.</p>
+<p>If you have ideas for plugin development feel free to contact us through the <a class="reference external" href="https://github.com/spyder-ide">Spyder-IDE</a> Github organization space.</p>
+<p>If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop <a class="reference internal" href="scientific-computing.html"><span class="doc">Scientific Computing and Visualization with Spyder</span></a>.</p>
+<p>If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop <a class="reference internal" href="financial.html"><span class="doc">Financial Data Analysis with Spyder</span></a>.</p>
+<section id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h3>
+<p>As you may have noticed, there were some features left to implement such as notifications when pomodoros are completed. Try to implement them and do not hesitate to contact us if you have any doubts.</p>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<p>In the <a class="reference external" href="https://github.com/spyder-ide/plugin-examples">plugin-examples</a> repository you can find additional examples that will surely be useful for you to further understand Spyder plugin development.</p>
+<p>A more in-depth review of the Spyder repository itself, especially its simpler plugins, such as History, Plots or Working directory, may help you understand it better. As well as a review of the various helper functions, widgets and mixins present in <code class="docutils literal notranslate"><span class="pre">spyder.api</span></code>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="financial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Financial Data Analysis with Spyder</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="qt_fundamentals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Qt Fundamentals</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-for-developers">Spyder for developers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-plugins-we-can-develop-in-spyder">Types of plugins we can develop in Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyderdockableplugin">SpyderDockablePlugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyderpluginv2">SpyderPluginV2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovering-spyder-plugins">Discovering Spyder plugins</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-we-do">What will we do?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-development-environment">Set up a development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-repository">Create a repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-plugin-structure">The plugin structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-our-first-plugin">Building our first plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#widgets">Widgets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-container">The container</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plugin">Plugin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-test-our-plugin">How to test our plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enhancing-our-plugin">Enhancing our plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-updates">Timer updates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-controls">Timer controls</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pomodorotimertoolbar">PomodoroTimerToolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-pomodoro-toolbar">Create the Pomodoro Toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-actions-to-the-toolbar">Add actions to the toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-toolbar">Register the toolbar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-the-changes">Review the changes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-configuration-page">Add a Configuration Page</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-defaults">Configuration defaults</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-page">Configuration page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propagate-configuration-changes">Propagate configuration changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-preferences">Registering preferences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-your-plugin">Publishing your plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi-and-testpypi">PyPI and TestPyPI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-check-the-package">Build and check the package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-to-pypi">Upload to PyPI</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-words">Final words</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/workshops/plugin-development.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

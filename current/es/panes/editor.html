@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Editor &#8212; documentación de Spyder - 5</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6e454508"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=d190bf04"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'panes/editor';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Archivos" href="fileexplorer.html" />
+    <link rel="prev" title="Depurador (Debugger)" href="debugging.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="documentación de Spyder - 5 - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="documentación de Spyder - 5 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Navegación del sección">
+  <p class="bd-links__title" role="heading" aria-level="1">Navegación del sección</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Depurador (Debugger)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">Archivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Buscar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Ayuda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">Historial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">Terminal de IPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Ayuda en línea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Explorador de código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">Gráficos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiler.html">Perfilador (Profiler)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Proyectos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Análisis del código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Explorador de variables</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Miga de pan" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Inicio">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Panes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Editor</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="editor">
+<h1>Editor<a class="headerlink" href="#editor" title="Link to this heading">#</a></h1>
+<p>El panel del <strong>Editor</strong> de varios lenguajes de Spyder es el elemento clave del IDE, donde puedes crear, abrir y modificar los archivos de origen. El editor ofrece una variedad de características básicas, tales como autocompletado, análisis en tiempo real, resaltado de sintaxis, división horizontal y vertical, y mucho más. Además, integra una serie de poderosas herramientas para una experiencia de edición fácil y eficiente.</p>
+<img alt="Spyder's Editor pane, split horizontally and with style analysis" src="../_images/editor-standard.png" />
+<section id="key-components">
+<h2>Componentes clave<a class="headerlink" href="#key-components" title="Link to this heading">#</a></h2>
+<p>El panel del Editor consta de las siguientes áreas:</p>
+<img alt="Spyder's Editor pane, showing its different areas (described below)" src="../_images/editor-components.png" />
+<ol class="arabic simple">
+<li><p>La barra lateral izquierda muestra los números de línea y muestra las advertencias de análisis de código que existen en el archivo actual. Al hacer clic en un número de línea selecciona el texto en esa recta, y haciendo clic a la derecha se establece un <a class="reference internal" href="debugging.html#debugging-breakpoints"><span class="std std-ref">punto de interrupción</span></a>.</p></li>
+<li><p>Las barras de desplazamiento permiten la navegación vertical y horizontal en un archivo.</p></li>
+<li><p>El menú contextual (clic derecho) muestra acciones relevantes a cualquier cosa que se haya seleccionado.</p></li>
+<li><p>El menú de opciones (icono «Hamburguesa» en la parte superior derecha) incluye opciones útiles y acciones relevantes para el Editor.</p></li>
+<li><p>La barra de ubicación en la parte superior del panel del Editor muestra la ruta completa del archivo actual.</p></li>
+<li><p>La barra de pestañas muestra los nombres de todos los archivos abiertos. También tiene un botón <span class="guilabel">Navegar por las pestañas</span> (a la izquierda) para mostrar cada pestaña abierta y cambiar entre ellas, que es útil si muchas están abiertas.</p></li>
+</ol>
+</section>
+<section id="interface">
+<h2>Interfaz<a class="headerlink" href="#interface" title="Link to this heading">#</a></h2>
+<section id="tabs">
+<h3>Pestañas<a class="headerlink" href="#tabs" title="Link to this heading">#</a></h3>
+<p>Puedes explorar y navegar entre archivos abiertos en el Editor con pestañas. Haz clic en el botón <span class="guilabel">Navegar por las pestañas</span> a la izquierda de la barra de pestañas para mostrar una lista de archivos abiertos, con la pestaña activa seleccionada.</p>
+<img alt="Spyder's Editor pane, showing the tabs browser" src="../_images/editor-tabs-browser.png" />
+<p>Reordenar archivos arrastrando y soltando, o con <span class="guilabel">Ordenar las pestañas alfabéticamente</span> en el menú de opciones, que también permite cerrar todas las pestañas a la derecha de, o todas las pestañas excepto la activa.</p>
+<img alt="Spyder's Editor pane, showing how to browse and sort open tabs alphabetically" src="../_images/editor-tabs-sorting.gif" />
+</section>
+<section id="file-switcher">
+<h3>Cambiador de archivos<a class="headerlink" href="#file-switcher" title="Link to this heading">#</a></h3>
+<p>El Editor incluye un cambiador de archivos, que te permite navegar y cambiar entre varios archivos abiertos. El cambiador de archivos es útil para localizar cualquier archivo cuando hay varios archivos abiertos.</p>
+<img alt="Spyder's Editor pane, showing the file switcher" src="../_images/editor-file-switcher.png" />
+<p>Se puede acceder desde el menú <span class="menuselection">Archivo ‣ Cambiador de archivos</span> o <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>, e incluye una función de búsqueda. Puedes escribir cualquier parte del nombre de un archivo abierto y, si existe, puede ser cambiado pulsando <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+<img alt="Spyder's Editor pane, showing searching and switching to an existing file" src="../_images/editor-file-switcher.gif" />
+</section>
+<section id="split-panels">
+<h3>Dividir paneles<a class="headerlink" href="#split-panels" title="Link to this heading">#</a></h3>
+<p>El Editor puede dividirse horizontal y verticalmente en tantos paneles distintos como se desee. Esto permite visualizar y editar el contenido de varios archivos (o partes diferentes del mismo archivo) al mismo tiempo.</p>
+<img alt="Spyder's Editor pane, showing how to split panels" src="../_images/editor-split-panels.gif" />
+<p>Divide el Editor con los comandos en el menú de opciones <span class="guilabel">Dividir verticalmente</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">{</kbd></kbd>) y <span class="guilabel">Dividir horizontalmente</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">-</kbd></kbd>), y utiliza <span class="guilabel">Cerrar este panel</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">W</kbd></kbd>) para cerrar el panel de división seleccionado.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="menuselection">Cerrar este panel</span> cierra un panel dividido, mientras que <span class="menuselection">Cerrar</span> oculta todo el <em>panel</em> del editor (incluyendo todas las divisiones, que se restauran cuando se vuelve a abrir el Editor).</p>
+</div>
+</section>
+</section>
+<section id="editing-features">
+<h2>Editar características<a class="headerlink" href="#editing-features" title="Link to this heading">#</a></h2>
+<section id="syntax-highlighting">
+<h3>Coloreado de sintaxis<a class="headerlink" href="#syntax-highlighting" title="Link to this heading">#</a></h3>
+<p>Para mejorar la legibilidad de tu código, Spyder tiene una función de resaltado de sintaxis que determina el color y el estilo del texto en el editor, así como en el <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>.</p>
+<p>Puedes configurar y previsualizar los temas y fuentes de resaltado de sintaxis bajo <span class="menuselection">Preferencias ‣ Apariencia</span>. La sección :guilabel:”Tema de coloreado de sintaxis” te permite cambiar el color y el estilo de los elementos de sintaxis y el fondo para que coincida con tus preferencias. Puedes cambiar entre los temas disponibles en el menú desplegable, modificar el tema seleccionado, crear un nuevo tema y más. La sección <span class="guilabel">Tipo de letra</span> te permite cambiar el tamaño y la fuente de texto.</p>
+<img alt="Spyder's Editor pane, showing how to switch between syntax highlighting themes" src="../_images/editor-syntax-highlighting.gif" />
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los cambios realizados al tema de resaltado de sintaxis y a la configuración de fuentes son comunes a todos los archivos de fuente, independientemente de su idioma.</p>
+</div>
+</section>
+<section id="code-cells">
+<h3>Celdas de código<a class="headerlink" href="#code-cells" title="Link to this heading">#</a></h3>
+<p>Una «celda de código» en Spyder es un bloque de líneas, normalmente un script, que puede ser fácilmente ejecutado todo a la vez en el <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>. Esto es similar al comportamiento de «celda» en Jupyter Notebook y MATLAB. Puedes dividir tus scripts en tantas celdas como necesites o ninguna en absoluto, la elección es tuya.</p>
+<img alt="Spyder's Editor pane, showing an example of a code cell" src="../_images/editor-cells.png" />
+<p>Puedes separar las celdas por líneas comenzando por:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (separador estándar de celda), o</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;codecell&gt;</span></code> (separador de celdas de notebook IPython)</p></li>
+</ul>
+<p>Proporcionar una descripción a la derecha del separador dará a esa celda su propio nombre en el <a class="reference internal" href="outline.html"><span class="doc">Explorador de código</span></a>. También puedes crear «subsecciones» añadiendo más signos de <code class="docutils literal notranslate"><span class="pre">%</span></code> al separador de celda, por ejemplo <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%</span></code> para crear una subsección de nivel 2, <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%%%</span></code> para el nivel 3, etc. Esto muestra varios niveles en el panel <a class="reference internal" href="outline.html"><span class="doc">Explorador de código</span></a>.</p>
+<img alt="Spyder outline pane, showing an example of sub sections" src="../_images/editor-subsections.png" />
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Esto solo afecta a cómo se muestra la celda en el <a class="reference internal" href="outline.html"><span class="doc">Explorador de código</span></a>, y no afecta a ejecutarla en el Editor.</p>
+</div>
+<p>Para ejecutar el código en una celda, usa <span class="menuselection">Ejecutar ‣ Ejecutar la celda</span>, el botón <span class="guilabel">Ejecutar la celda</span> actual en la barra de herramientas o el atajo de teclado (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd></kbd> por defecto). También puedes ejecutar una celda y luego saltar a la siguiente, permitiéndote pasar rápidamente por varias células, usando <span class="menuselection">Ejecutar ‣ Ejecutar la celda y avanzar</span> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> por defecto).</p>
+</section>
+<section id="automatic-formatting">
+<h3>Formato automático<a class="headerlink" href="#automatic-formatting" title="Link to this heading">#</a></h3>
+<p>El editor tiene soporte integrado para formatear automáticamente tu código usando varias herramientas populares, incluyendo <a class="reference external" href="https://github.com/hhatto/autopep8">Autopep8</a> y <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>. El comando <span class="guilabel">Formatear archivo o selección con {tool}</span>, en el <span class="guilabel">Source</span> o en el menú contextual, formatearán el fragmento seleccionado (si se selecciona el texto) o todo el archivo activo.</p>
+<img alt="Spyder Editor pane, showing an example of code selection formatting" src="../_images/editor-automatic-formatting.gif" />
+<p>Puedes tener el Editor automáticamente para autoformatear un archivo cada vez que guardes tu trabajo. Para configurarlo, ve a <span class="menuselection">Preferencias ‣ Completado y análisis del código ‣ Estilo y formato de código ‣ Formato de código</span> y activa la opción <span class="guilabel">Autoformatear archivos al guardar</span>.</p>
+<img alt="Spyder's preferences dialog, showing checking the autoformat files on save setting" src="../_images/editor-autoformat-setting.png" />
+</section>
+</section>
+<section id="running-code">
+<h2>Ejecutar código<a class="headerlink" href="#running-code" title="Link to this heading">#</a></h2>
+<p>El Editor te permite ejecutar un archivo completo, así como líneas específicas, selecciones o celdas.</p>
+<p>Mientras tu código se ejecuta,</p>
+<ul class="simple">
+<li><p>La <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a> mostrará salida y errores.</p></li>
+<li><p>El <a class="reference internal" href="variableexplorer.html"><span class="doc">Explorador de variables</span></a> te permite navegar e interactuar con los objetos generados.</p></li>
+<li><p>El panel <a class="reference internal" href="plots.html"><span class="doc">Gráficos</span></a> muestra las figuras e imágenes creadas.</p></li>
+</ul>
+<section id="run-file">
+<h3>Ejecutar archivo<a class="headerlink" href="#run-file" title="Link to this heading">#</a></h3>
+<p>Ejecuta un archivo completo del Editor usando el elemento del menú <span class="menuselection">Ejecutar ‣ Ejecutar</span>, el botón de la barra de herramientas <span class="guilabel">Ejecutar archivo</span> o la tecla <kbd class="kbd docutils literal notranslate">F5</kbd>. Usa <span class="menuselection">Ejecutar ‣ Ejecutar de nuevo el último archivo</span> para volver a ejecutar el archivo más reciente ejecutado con el anterior.</p>
+</section>
+<section id="run-line-selection">
+<h3>Ejecutar línea/selección<a class="headerlink" href="#run-line-selection" title="Link to this heading">#</a></h3>
+<p>Puedes ejecutar la línea actual o varias líneas seleccionadas usando la opción <span class="guilabel">Ejecutar selección o línea actual</span> desde la barra de herramientas o en el menú <span class="menuselection">Ejecutar</span>, así como con la tecla <kbd class="kbd docutils literal notranslate">F9</kbd>. Después de ejecutar la línea actual, el cursor avanza automáticamente a la siguiente, así que puedes pasar a través de tu código línea por línea. A diferencia de <span class="guilabel">Ejecutar archivo</span>, las líneas ejecutadas se muestran en la <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>.</p>
+</section>
+<section id="run-cell">
+<h3>Ejecutar celda<a class="headerlink" href="#run-cell" title="Link to this heading">#</a></h3>
+<p>Para ejecutar una celda, coloca tu cursor dentro de ella y usa el elemento de menú <span class="menuselection">Ejecutar ‣ Ejecutar la celda</span>, el botón de la barra de herramientas <span class="guilabel">Ejecutar la celda actual</span> o el atajo de teclado <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd></kbd>. Usa <span class="guilabel">Ejecutar la celda y avanzar a la siguiente</span> en el menú/barra de herramientas <span class="guilabel">Ejecutar</span> o <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> para saltar a la siguiente celda después de ejecutar, esto es útil para atravesar rápidamente las celdas.</p>
+</section>
+<section id="run-configuration">
+<h3>Configuración de ejecución<a class="headerlink" href="#run-configuration" title="Link to this heading">#</a></h3>
+<p>Puedes utilizar el cuadro de diálogo <span class="guilabel">Configuración de ejecución por archivo</span> para establecer el directorio de trabajo de cada archivo, el modo de consola (actual, dedicada o terminal de comandos del sistema), argumentos de línea de comandos, opciones de ejecución (borrar todas las variables, ejecutar en un espacio de nombres existente/vacío, depurar en un error) y más.</p>
+<img alt="Spyder's Editor pane, showing the Run Configuration dialog" src="../_images/editor-run-configuration.png" />
+<p>Para acceder a él, haz clic en <span class="menuselection">Ejecutar ‣ Configuración por archivo…</span> o pulsa <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F6</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">F6</kbd></kbd>.</p>
+</section>
+</section>
+<section id="code-navigation">
+<h2>Navegación por código<a class="headerlink" href="#code-navigation" title="Link to this heading">#</a></h2>
+<section id="find-and-replace">
+<h3>Buscar y reemplazar<a class="headerlink" href="#find-and-replace" title="Link to this heading">#</a></h3>
+<p>Para buscar texto en el archivo actual, usa <span class="menuselection">Buscar ‣ Buscar texto</span> o <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd>, y para reemplazarlo, usa <span class="menuselection">Buscar ‣ Reemplazar texto</span> o <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd>. Escribiendo la cadena de búsqueda en el panel resultante debajo del Editor resalta cada resultado y cuenta el total. Navega entre los resultados con los botones <span class="guilabel">Buscar anterior</span> y <span class="guilabel">Buscar siguiente</span> en el panel de buscar/reemplazar, sus correspondientes entradas en el menú <span class="guilabel">Buscar</span>, o utiliza las teclas <kbd class="kbd docutils literal notranslate">F2</kbd> y <kbd class="kbd docutils literal notranslate">F3</kbd>. Usa <span class="guilabel">. *</span> para procesar texto de búsqueda como una <a class="reference external" href="https://docs.python.org/3/library/re.html">expresión regular</a>, <span class="guilabel">Aa</span> para tratarlo como sensible a mayúsculas y <span class="guilabel">[–]</span> para que solo coincida con palabras enteras (por ejemplo, para <code class="docutils literal notranslate"><span class="pre">data</span></code>, coincide con <code class="docutils literal notranslate"><span class="pre">data()</span></code> pero no con <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>).</p>
+<img alt="Spyder's Editor pane, showing the find and replace panel" src="../_images/editor-find-replace-panel.png" />
+</section>
+<section id="go-to-line">
+<h3>Ir a la línea<a class="headerlink" href="#go-to-line" title="Link to this heading">#</a></h3>
+<p>El diálogo <span class="guilabel">Ir a la línea</span> permite saltar a una línea específica en el archivo activo. Abrelo con <span class="menuselection">Buscar ‣ Ir a la línea</span> o <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd>, escribe el número de línea al que quieres desplazarte y pulsa <kbd class="kbd docutils literal notranslate">Enter</kbd> (o haz clic en <span class="guilabel">OK</span>).</p>
+<img alt="Spyder's Editor pane, showing the go to line feature" src="../_images/editor-go-to-line.gif" />
+<p>También muestra el número de línea actual y el recuento total de líneas en el archivo.</p>
+</section>
+<section id="class-function-selector">
+<h3>Selector de clase/función<a class="headerlink" href="#class-function-selector" title="Link to this heading">#</a></h3>
+<p>Este panel, activado bajo <span class="menuselection">Código fuente‣ Mostrar selector para clases y funciones</span>, muestra (como aplicable) el nombre de la celda, la función/método y la clase en la que el cursor del Editor se encuentra dentro. Utiliza el menú desplegable para ver y saltar a las funciones, métodos y clases del archivo actual.</p>
+<img alt="Spyder's Editor pane, showing the class and function selector panel" src="../_images/editor-class-function-selector.gif" />
+</section>
+</section>
+<section id="code-analysis-and-completions">
+<h2>Completado y análisis del código<a class="headerlink" href="#code-analysis-and-completions" title="Link to this heading">#</a></h2>
+<p>Spyder utiliza el <a class="reference external" href="https://microsoft.github.io/language-server-protocol/">Protocolo de Servidor de Idioma</a> (LSP) para proporcionar el completado de código y linting para el Editor, similar a VSCode, Neovim, y otros editores/IDE populares.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Muchos problemas con el completado y el linting están fuera del control de Spyder y son o bien limitaciones con el LSP o el código que se está introduciendo, pero algunas pueden ser trabajadas. Vea <a class="reference internal" href="../troubleshooting/common-illnesses.html#code-completion-problems-ref"><span class="std std-ref">El autocompletado o la ayuda no funcionan</span></a> para los pasos de solución de problemas.</p>
+</div>
+<p>Python está soportado por defecto, y los usuarios avanzados pueden añadir soporte de completado y linting para otros idiomas configurando los servidores LSP en <span class="menuselection">Preferencias ‣ Completado y análisis de código ‣ Otros idiomas</span>.</p>
+<section id="code-completion">
+<h3>Completado de código<a class="headerlink" href="#code-completion" title="Link to this heading">#</a></h3>
+<p>El completado automático de código está activado de forma predeterminada en el Editor mientras escribes, pero también puede ser activado manualmente con <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Space</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Space</kbd></kbd>, el cual muestra las posibles formas de completar (con una ayuda emergente para cada una) y los fragmentos de código disponibles. Por ejemplo, escribir <code class="docutils literal notranslate"><span class="pre">cla</span></code> mostrará la palabra clave <code class="docutils literal notranslate"><span class="pre">class</span></code>, el decorador <code class="docutils literal notranslate"><span class="pre">classmethod</span></code> y dos fragmentos incorporados con plantillas de clases. Selecciona la terminación deseada con las teclas de flecha y <kbd class="kbd docutils literal notranslate">Enter</kbd>, o haciendo doble clic.</p>
+<img alt="Spyder's Editor pane, showing a code completion example" src="../_images/editor-code-completion.png" />
+<p>Puedes activar o desactivar el completado de código sobre la marcha, así como modificar cuando se activa y qué resultados se muestran, bajo <span class="menuselection">Preferencias ‣ Completado y análisis del código ‣ General ‣ Completado</span>. Spyder también te permite definir fragmentos de completado personalizados a utilizar, además de los ofrecidos por el LSP, bajo <span class="menuselection">Preferencias ‣ Completado y análisis del código ‣ Opciones avanzadas</span>.</p>
+</section>
+<section id="linting-and-code-style">
+<h3>Linting y estilo de código<a class="headerlink" href="#linting-and-code-style" title="Link to this heading">#</a></h3>
+<p>Spyder puede resaltar opcionalmente errores de sintaxis, problemas de estilo y otros problemas potenciales con tu código en el Editor, lo que puede ayudarte a detectar errores rápidamente y hacer que tu código sea más fácil de leer y entender.</p>
+<img alt="Spyder's Editor pane, showing an example of a highlighted code error" src="../_images/editor-pane-code-error.png" />
+<p>El linting básico del Editor, desarrollado por <a class="reference external" href="https://github.com/PyCQA/pyflakes">Pyflakes</a>, advierte los errores de sintaxis y posibles errores en tu código. Está activado por defecto, y puede ser deshabilitado o personalizado bajo <span class="menuselection">Preferencias ‣ Completado y análisis de código ‣ Análisis de código</span>.</p>
+<img alt="Spyder's preferences dialog, showing linting settings" src="../_images/editor-linting-setting.png" />
+<p>El análisis de estilo de código, desarrollado por <a class="reference external" href="https://pycodestyle.pycqa.org/en/stable/">Pycodestyle</a>, señala las desviaciones de las convenciones de estilo en <span class="target" id="index-2"></span><a class="pep reference external" href="https://peps.python.org/pep-0008/"><strong>PEP 8</strong></a>. No está activo por defecto, pero puedes activarlo y personalizar los <a class="reference external" href="https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes">códigos de error Pycodestyle</a> mostrados con las opciones <span class="menuselection">Preferencias ‣ Completado y análisis de código ‣ Estilo y formato de código ‣ Estilo del código</span>.</p>
+<img alt="Spyder's preferences dialog, showing code style and formatting settings" src="../_images/editor-code-style-setting.png" />
+</section>
+<section id="introspection-features">
+<h3>Características de introspección<a class="headerlink" href="#introspection-features" title="Link to this heading">#</a></h3>
+<p>Si hay una función, clase o variable para la que desea comprobar su definición, necesitas hacer <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>-clic en su nombre en el Editor (o haz clic en su nombre y pulsa <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> / <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> para saltar al archivo y línea donde se declara.</p>
+<img alt="Spyder's Editor pane, showing the go to definition feature" src="../_images/editor-go-to-definition.gif" />
+<p>Puedes pasar por encima del nombre de un objeto para ayuda emergente, como se describió <a class="reference internal" href="help.html#help-hover-hints"><span class="std std-ref">en la documentación del panel de ayuda</span></a>.</p>
+<img alt="Spyder's Editor pane, showing an example of a hover hint" src="../_images/editor-hoverhint.png" />
+<p>Finalmente, si escribes el nombre de una función, método o constructor de clase y luego un paréntesis abierto, aparecerá un calltip que mostrará los parámetros de la función a medida que los escribas, así como un resumen de su documentación. Estas características pueden ser habilitadas y personalizadas bajo <span class="menuselection">Preferencias ‣ Completado y análisis de código ‣ Introspección</span>.</p>
+</section>
+</section>
+<section id="keyboard-shortcuts">
+<h2>Atajos de teclado<a class="headerlink" href="#keyboard-shortcuts" title="Link to this heading">#</a></h2>
+<p>Para ver los atajos de teclado primarios del Editor, consulta la sección bajo <span class="menuselection">Ayuda ‣ Resumen de atajos</span>. La lista completa se puede buscar, buscar y personalizar (en doble clic) en <span class="menuselection">Preferencias ‣ Atajos de teclado</span>.</p>
+</section>
+<section id="related-panes">
+<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Archivos</span></a></p></li>
+<li><p><a class="reference internal" href="findinfiles.html"><span class="doc">Buscar</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a></p></li>
+<li><p><a class="reference internal" href="projects.html"><span class="doc">Proyectos</span></a></p></li>
+<li><p><a class="reference internal" href="pylint.html"><span class="doc">Análisis del código</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="debugging.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Depurador (Debugger)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="fileexplorer.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Archivos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components">Componentes clave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interfaz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabs">Pestañas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-switcher">Cambiador de archivos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-panels">Dividir paneles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-features">Editar características</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-highlighting">Coloreado de sintaxis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Celdas de código</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-formatting">Formato automático</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-code">Ejecutar código</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-file">Ejecutar archivo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-line-selection">Ejecutar línea/selección</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-cell">Ejecutar celda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-configuration">Configuración de ejecución</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-navigation">Navegación por código</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-and-replace">Buscar y reemplazar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#go-to-line">Ir a la línea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-function-selector">Selector de clase/función</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-analysis-and-completions">Completado y análisis del código</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-completion">Completado de código</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linting-and-code-style">Linting y estilo de código</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introspection-features">Características de introspección</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keyboard-shortcuts">Atajos de teclado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-panes">Paneles relacionados</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/panes/editor.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Mostrar el código
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

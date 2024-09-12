@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Basic First Aid &#8212; Spyder 5 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'troubleshooting/basic-first-aid';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Emergency CPR" href="emergency-cpr.html" />
+    <link rel="prev" title="First Steps" href="first-steps.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">First Steps</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Basic First Aid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emergency-cpr.html">Emergency CPR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-illnesses.html">Common Illnesses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="call-for-help.html">Calling for Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="submit-a-report.html">Submit a Report</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Troubleshooting</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Basic First Aid</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="basic-first-aid">
+<h1>Basic First Aid<a class="headerlink" href="#basic-first-aid" title="Link to this heading">#</a></h1>
+<p>These suggestions, while more of a shotgun approach, tend to fix the majority of reported issues just on their own.</p>
+<section id="recommended-troubleshooting-steps">
+<h2>Recommended troubleshooting steps<a class="headerlink" href="#recommended-troubleshooting-steps" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Restart Spyder</strong>, and try what you were doing before again.</p></li>
+<li><p><strong>Upgrade Spyder</strong> to the latest release, and you might find your issue is resolved (along with new features, enhancements, and other bug fixes).
+Minor releases come out every couple months, so unless you’ve updated recently, there is a good chance your version isn’t the latest.
+You can find out with the <span class="guilabel">Check for updates</span> command under the <span class="guilabel">Help</span> menu.</p>
+<img alt="Spyder showing view internal console option" src="../_images/basic-first-aid-updates.png" />
+<p>To perform the update with Conda (strongly recommended), from your terminal (or Anaconda Prompt on Windows) run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+conda<span class="w"> </span>update<span class="w"> </span>spyder
+</pre></div>
+</div>
+</li>
+<li><p><strong>Update Spyder’s dependencies and environment</strong>, either by installing the latest version of your distribution (e.g. the recommended Anaconda), or with the relevant “update all” command in your terminal (or Anaconda Prompt on Windows).
+To get the latest stable version of everything using Conda, you can run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>qt<span class="w"> </span>pyqt<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq
+</pre></div>
+</div>
+</li>
+<li><p><strong>Restart your machine</strong>, in case the problem lies with a lingering process or another such issue.</p></li>
+<li><p><strong>Restore Spyder’s config files</strong> to their defaults, which solves a huge variety of Spyder issues.
+From your terminal (or Anaconda Prompt on Windows), run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spyder<span class="w"> </span>--reset
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes.
+If you particularly care about any of those, you should make a copy of the <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> folder in your user home directory (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> on Linux), and restore it afterwards if this doesn’t solve the problem.</p>
+</div>
+</li>
+<li><p><strong>Try installing Spyder into a new Conda environment</strong> (recommended) or <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">venv</span></code>, and see if the issue reoccurs.</p></li>
+</ol>
+<p>In your system terminal (or Anaconda Prompt on Windows), run the following commands to create an a fresh, clean environment and start Spyder in it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
+spyder
+</pre></div>
+</div>
+<p>If this fixes the issue, the problem was likely due to another package installed on your system, particularly if done with pip, which can cause many problems and should be avoided if at all possible.</p>
+<ol class="arabic">
+<li><p><strong>Watch our video</strong> on solving and avoiding problems with pip, Conda and Conda-Forge, and follow its instructions.</p>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/Ul79ihg41Rs?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div></li>
+</ol>
+</section>
+<section id="reinstalling-spyder">
+<span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalling Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
+<p>If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.</p>
+<p>For Anaconda, follow all the steps under Option B in the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">Anaconda uninstall guide</a>, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> directory if it exists.</p>
+<img alt="Deleting appdata/python directory" src="../_images/basic-first-aid-app-data.gif" />
+<p>Then, do a clean install of the latest version of the <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda distribution</a> which is how we recommend you install Spyder and keep it up to date.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
+In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
+For further information, please visit our <a class="reference internal" href="../installation.html"><span class="doc">Install Guide</span></a>.</p>
+</div>
+</section>
+<section id="isolating-problems">
+<h2>Isolating problems<a class="headerlink" href="#isolating-problems" title="Link to this heading">#</a></h2>
+<p>If you get an error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the packages it depends on.
+Try running it in the following in order if and until it starts working as you expect.
+If you manage to isolate the bug, report it to the last one it <em>doesn’t</em> work in.</p>
+<ol class="arabic">
+<li><p><strong>Spyder</strong> itself, of course!
+Make sure you can reproduce the error after closing and reopening it, if possible.</p></li>
+<li><p><strong>A bare QtConsole instance</strong>, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">qtconsole</span></code>.</p>
+<img alt="Anaconda navigator showing qtconsole" src="../_images/basic-first-aid-qtconsole.png" />
+<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> are actually something with QtConsole instead, and can be reported to their <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
+</li>
+<li><p><strong>An IPython command line shell</strong>, launched with e.g. <code class="docutils literal notranslate"><span class="pre">ipython</span></code> from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
+Reproducible bugs can be reported to their <a class="reference external" href="https://github.com/ipython/ipython/issues">Github page</a>, though make sure to read their guidelines and docs first.</p></li>
+<li><p><strong>A standard Python interpreter</strong>, either run as a script file with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">path/to/your/file.py</span></code> or launched interactively with <code class="docutils literal notranslate"><span class="pre">python</span></code> from your Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
+While it is not impossible that you’ve found Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the <a class="reference external" href="https://www.python.org/doc/">Python docs</a> and the other resources listed above.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the problem reoccurs in a similar or identical way with any of these methods (other than only Spyder itself), then it is almost certainly not an issue with Spyder, and would be best handled elsewhere.
+As we usually aren’t able to do much about issues not related to Spyder, a forum like <a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> or the relevant package’s docs is a much better place to get help or report the issue.</p>
+</div>
+<p>See the <a class="reference internal" href="call-for-help.html"><span class="doc">Calling for Help</span></a> section for other places to look for information and assistance.</p>
+</section>
+<section id="debugging-and-patching">
+<h2>Debugging and patching<a class="headerlink" href="#debugging-and-patching" title="Link to this heading">#</a></h2>
+<p>If you know your way around Python, you can often diagnose and even fix Spyder issues yourself, since the IDE is written in the same language you use in it.
+You can explore the error messages you’re receiving and Spyder’s inner workings with the <span class="guilabel">Internal Console</span>, available under the menu item <span class="menuselection">View ‣ Panes ‣ Internal Console</span>.</p>
+<img alt="Spyder showing Internal console" src="../_images/basic-first-aid-internal-console.png" />
+<p>For more detailed debug output, start Spyder from the command line (Anaconda Prompt on Windows) with <code class="docutils literal notranslate"><span class="pre">spyder</span> <span class="pre">--debug-info</span> <span class="pre">verbose</span></code>.</p>
+<p>Even if you don’t manage to fix the problem yourself, this output can be very helpful in aiding us to quickly narrow down and solve your issue for you.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="first-steps.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Steps</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="emergency-cpr.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Emergency CPR</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-troubleshooting-steps">Recommended troubleshooting steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinstalling-spyder">Reinstalling Spyder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isolating-problems">Isolating problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-and-patching">Debugging and patching</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/troubleshooting/basic-first-aid.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

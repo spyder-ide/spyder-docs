@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>First Steps with Spyder &#8212; documentación de Spyder - 5</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6e454508"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=d190bf04"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'videos/first-steps-with-spyder';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Working with Spyder" href="working-with-spyder.html" />
+    <link rel="prev" title="Tutorials" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="documentación de Spyder - 5 - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="documentación de Spyder - 5 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Navegación del sección">
+  <p class="bd-links__title" role="heading" aria-level="1">Navegación del sección</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-spyder.html">Working with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Miga de pan" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Inicio">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">First Steps...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="first-steps-with-spyder">
+<h1>First Steps with Spyder<a class="headerlink" href="#first-steps-with-spyder" title="Link to this heading">#</a></h1>
+<p>The videos in this section provide a starting point for new users who have never opened Spyder before.
+You’ll get familiar with opening Spyder in different ways, working with the four main panes and customizing the Spyder to your heart’s content.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<p>Discover the basics of using the Spyder interface and get an introduction to its four main panes, along with a quick look at the others.</p>
+<ul class="simple">
+<li><p>Find out different ways to open Spyder</p></li>
+<li><p>Understand the key elements of Spyder’s interface</p></li>
+<li><p>Learn more about Spyder’s four core panes</p></li>
+<li><p>Explore the other default panes</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/E2Dap5SfXkI?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in dropdown-videos">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Transcript</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="scroll docutils">
+<p class="sd-card-text">Hello everyone! I’m Juanita, and in this video I’m going to show you how to open Spyder and go over the basics of Spyder’s interface. We will learn about Spyder’s four panes that you’ll likely be using most often, as well as briefly explore the others that are open by default. If you don’t have Spyder installed and would like to follow along, you can <a class="reference external" href="https://www.spyder-ide.org/">download it here</a>.</p>
+<p class="sd-card-text">The easiest way to open Spyder is by opening Anaconda Navigator and clicking on the Spyder application. In case you have an older version of Spyder in Anaconda, open the command line (or the Anaconda Prompt in the case of Windows) and type the commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">4</span>
+</pre></div>
+</div>
+<p class="sd-card-text">To launch Spyder without opening Navigator, open your command line and type <code class="docutils literal notranslate"><span class="pre">spyder</span></code>. If you followed the <a class="reference internal" href="../installation.html"><span class="doc">Install Guide</span></a>, you should have everything necessary to open Spyder 4.</p>
+<p class="sd-card-text">This is what Spyder 4 looks like in its default configuration, though you can thoroughly customize it, which we’ll get to in a later tutorial. You can see that it is divided into three sections showing three different panes: the Editor, the IPython Console and the Help viewer. These three, along with the Variable Explorer, are the four core panes you’ll work with the most in Spyder.</p>
+<p class="sd-card-text">On the left we have the Editor, where you can open, edit and run files. Bottom right is the IPython Console, which you can use both interactively and to run your code in the Editor. It shows you which version of Python you are using. Above it, you’ll find the Help pane, where you can get more information and documentation for any object in the Editor or Console by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> (or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> on macOS). We’ll see how to do this in our next video.</p>
+<p class="sd-card-text">For the two sections on the right, you can switch tabs to see the other panes that are open by default when launching Spyder. In the top section, you can switch to the Variable Explorer, which shows you the name, type, size and value of the variables that you have previously defined in the Editor or the Console. You can also modify the value of these variables directly from this pane by double clicking them under the Value column. The Plots pane will show you the figures you generate with Matplotlib and other libraries, and the Files pane allows you to browse the files on your computer and open them in the Editor with just a click.</p>
+<p class="sd-card-text">Finally, in the bottom section you can also access the History pane, which shows you the commands you have entered in the Console, including those from previous sessions.</p>
+<p class="sd-card-text">I hope you’re now familiar with the basics of using the Spyder interface. In the next video, we will start working with Spyder’s core panes.</p>
+<p class="sd-card-text">Happy Spydering!</p>
+</div>
+</div>
+</details></section>
+<section id="learning-the-basics">
+<h2>Learning the basics<a class="headerlink" href="#learning-the-basics" title="Link to this heading">#</a></h2>
+<p>Learn the basics of using Spyder’s four main panes.</p>
+<ul class="simple">
+<li><p>Open and edit a file in Spyder’s Editor</p></li>
+<li><p>Run a script in the Editor and see the output in Spyder’s IPython Console</p></li>
+<li><p>Execute basic Python commands in the IPython Console</p></li>
+<li><p>Define variables in the Editor and modify their values in the IPython Console</p></li>
+<li><p>View and interact with the variables in Spyder’s Variable Explorer</p></li>
+<li><p>Get documentation in the Help pane in two different ways</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/WV9bm4ey7Cg?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in dropdown-videos">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Transcript</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="scroll docutils">
+<p class="sd-card-text">Hello everyone! I’m Juanita, and in this video I will show you how to start working with Spyder’s four main panes. First, let’s take a look at the Editor, which you can use to open, edit and run files from your computer. I will open a short «Hello World» program for this demo, which you can <a class="reference external" href="https://drive.google.com/file/d/18Ai-XY9kIPm9x_7-0RBakV2a6dRVqh-L/view">download here</a>. Once you have it open in your Editor, you can execute it by pressing the green run button. We can see the output in the Python Console [Show IPython console] as well as the path of the file that we are running and the working directory where this code was run.</p>
+<p class="sd-card-text">We can also run any Python code that is entered directly in the IPython Console. For example, we can type <code class="docutils literal notranslate"><span class="pre">print(&quot;Hello&quot;)</span></code> and see the output. Or, we can try some math operations and see the results here too. Note that for implicitly printed output, there is a red indication that differs from the output of the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p>
+<p class="sd-card-text">Now, let’s start defining some variables. We can do this both from the editor or from the Console. If I define a variable <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">10</span></code> and then run this code, I can see its value in the console just by typing its name <code class="docutils literal notranslate"><span class="pre">a</span></code>. However, you can also assign any variable in the IPython console (<code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">20</span></code>) and its value will be stored too. In both cases, they can also be seen in the Variable Explorer pane, which shows the name, type, size and value of each of the objects previously defined. In this case, we see variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, both of type int and with size 1. We can also define a list <code class="docutils literal notranslate"><span class="pre">l</span></code> with <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> and see that the type of the variable is list and the size is 3.</p>
+<p class="sd-card-text">We can change the values of the variables in the Variable Explorer too by double-clicking them and typing their new value. Now, we can check their new value in the console. In the case of a more complex type like a list, double-clicking it will open a viewer in which you can modify each of its values separately, along with other more complex operations which we’ll demonstrate in a future video. We can remove a variable by right-clicking it and selecting the option Remove. After doing this, we can check in the IPython Console that the variable was actually deleted.</p>
+<p class="sd-card-text">Finally, we are going to learn how to get help for objects in two different ways. First, we can press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> (or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> on macOS) right after the name of an object written in the Editor or the Console, for example <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code>. You can see that we obtain its documentation in the Help pane if it is available. Second, if we change the Source dropdown option to Console, we can type its name in the object box in the Help pane. Now we can get help for Numpy arrays.</p>
+<p class="sd-card-text">You should now be ready to start using Spyder’s four main panes. Check out our next video to continue learning and as always, Happy Spydering!</p>
+</div>
+</div>
+</details></section>
+<section id="customization">
+<h2>Customization<a class="headerlink" href="#customization" title="Link to this heading">#</a></h2>
+<p>Learn how to customize Spyder’s interface to match your workflow and development style.</p>
+<ul class="simple">
+<li><p>Choose your preferred fonts</p></li>
+<li><p>Switch between different interface, icon and syntax themes</p></li>
+<li><p>Show, hide, undock and rearrange Spyder panes</p></li>
+<li><p>Split, close and pop out Editor panels</p></li>
+</ul>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/-dARZBUDk_s?start=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in dropdown-videos">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Transcript</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="scroll docutils">
+<p class="sd-card-text">Hello everyone, I’m Juanita! In this video, I will show you how to customize Spyder to match your workflow and development style.</p>
+<p class="sd-card-text">First, we are going to learn how to change the font in the Editor, IPython Console and Help panes. To do this, go to Preferences, select the Appearance entry and scroll down to Fonts. You can change both the style and the size of the font for both plain and rich text. You can see how this affects the font in the Editor, Console and Help panes.</p>
+<p class="sd-card-text">In this same dialog, you can easily change the syntax highlighting theme, for which you can see the preview at the right of the window. Note that Spyder’s interface theme changes to match the highlighting theme because the Interface theme option is set to Automatic by default. However, you can change the theme for the entire Spyder interface, choosing between Light and Dark. After selecting this change, click Apply to restart Spyder to apply the new theme.</p>
+<p class="sd-card-text">Beyond just Spyder’s preferences, you can freely rearrange the panes in Spyder’s main window. To show or hide panes, go to Panes under the View menu, and select which ones you want to see. For example, let’s hide the Files pane and show the Profiler pane. You can also close a pane from its options menu, which will hide it from the main window.</p>
+<p class="sd-card-text">By default, the panes and toolbars are locked so they can’t be moved accidentally. However, unchecking the option Lock panes and toolbars in the View menu will allow you to move them freely anywhere on the window, by dragging them from the top and dropping them at any position you like. You can also undock a pane, which will open a new window with it. You can have as many separate windows as you have panes, if you choose. This feature is very useful if you work with several monitors because you can undock the Editor and move it to a different monitor, while working with the rest of the panes in your main monitor.</p>
+<p class="sd-card-text">Additionally, you can split the Editor pane vertically or horizontally in as many copies as you want, and open one or more panels in separate Spyder windows, complete with their own toolbar, outline and status bar.</p>
+<p class="sd-card-text">Finally, each pane can be customized further under its respective options menu and Preferences panel.</p>
+<p class="sd-card-text">With all these options, you can customize Spyder to your heart’s content. However, if you ever want to return to its default configuration, you can always reset the window layout under Window Layouts in the View menu, or your entire Spyder configuration with the Reset to Default button in the Preferences.</p>
+<p class="sd-card-text">Enjoy your customized version of Spyder, and Happy Spydering!</p>
+</div>
+</div>
+</details></section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Tutorials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="working-with-spyder.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Working with Spyder</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-the-basics">Learning the basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customization">Customization</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/videos/first-steps-with-spyder.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Mostrar el código
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

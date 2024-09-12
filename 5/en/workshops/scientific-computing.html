@@ -1,0 +1,1163 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Scientific Computing and Visualization with Spyder &#8212; Spyder 5 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workshops/scientific-computing';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting" href="../troubleshooting/index.html" />
+    <link rel="prev" title="Qt Fundamentals" href="qt_fundamentals.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Troubleshooting
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="financial.html">Financial Data Analysis with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-development.html">Plugin Development with Spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_fundamentals.html">Qt Fundamentals</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Computing and Visualization with Spyder</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Workshops</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Scientific...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="scientific-computing-and-visualization-with-spyder">
+<h1>Scientific Computing and Visualization with Spyder<a class="headerlink" href="#scientific-computing-and-visualization-with-spyder" title="Link to this heading">#</a></h1>
+<p>This workshop allows you to explore some of Spyder’s features that make Spyder an ideal IDE for using the scientific tools offered by Python. Throughout the workshop, we will apply the scientific method to answer some questions related to our preferences and cognitive abilities. By the end of this workshop participants will be able to use Spyder to explore data, analyze it with some statistical tools and plot the relationship between variables.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>You will need to have Spyder installed. Visit our <a class="reference internal" href="../installation.html"><span class="doc">installation guide</span></a> for more information.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment.
+While we still support Anaconda, we recommend this install method on those platforms to avoid most problems with package conflicts and other issues.</p>
+</div>
+<p>It is also desirable to have the following prior knowledge:</p>
+<ul class="simple">
+<li><p>Basic level of Python. You can visit <a class="reference external" href="https://docs.python.org/3/tutorial/">The Python Tutorial</a> to learn the basics of this programming language.</p></li>
+<li><p>Some knowledge of Statistics (<a class="reference external" href="https://en.wikipedia.org/wiki/Statistical_hypothesis_testing">hypothesis testing</a> , <a class="reference external" href="https://en.wikipedia.org/wiki/Analysis_of_variance">ANOVA</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/P-value">p-value</a>)</p></li>
+</ul>
+</section>
+<section id="learning-goals">
+<h2>Learning goals<a class="headerlink" href="#learning-goals" title="Link to this heading">#</a></h2>
+<p>After completing this workshop, you should be able to:</p>
+<ul class="simple">
+<li><p>Apply the scientific method to answer questions related to psychometric variables</p></li>
+<li><p>Understand how to use Spyder’s built-in scientific computing tools</p></li>
+</ul>
+</section>
+<section id="learner-profile">
+<h2>Learner profile<a class="headerlink" href="#learner-profile" title="Link to this heading">#</a></h2>
+<p>This workshop is intended for people who want to learn how to answer questions scientifically from a dataset. We have also designed it to serve as a tutorial for learning how to use Spyder as a research tool.</p>
+</section>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
+<p>In this workshop we will explore a data set and use it to answer some questions using the scientific method.</p>
+<section id="why-do-scientific-research-with-python">
+<h3>Why do scientific research with Python?<a class="headerlink" href="#why-do-scientific-research-with-python" title="Link to this heading">#</a></h3>
+<p>Python is a mature programming language that has been chosen by much of the scientific community to support the research process. There are a few reasons for this:</p>
+<ul class="simple">
+<li><p>It is versatile and easy to learn and use</p></li>
+<li><p>It allows for multiple ways to handle inputs and outputs. No matter what format your data is in, in Python there is always a way to import it (and export it in the format of your choice)</p></li>
+<li><p>It is interpreted. You don’t have to write code from start to finish to see partial results. This makes it especially easy and fast to explore data</p></li>
+<li><p>It has built-in support for scientific computing tasks: <a class="reference external" href="https://scipy.org">SciPy</a>, <a class="reference external" href="https://numpy.org">NumPy</a>, <a class="reference external" href="https://pandas.pydata.org">Pandas</a>, and a vast number of other libraries created by and for scientists</p></li>
+<li><p>It is the most widely used programming language for Machine Learning (including Keras and TensorFlow)</p></li>
+<li><p>It has excellent libraries for plotting</p></li>
+<li><p>It can be integrated with <a class="reference external" href="https://jupyter.org">Jupyter Notebooks</a> and implementations of these in the cloud (<a class="reference external" href="https://colab.research.google.com">Google Colab</a> or <a class="reference external" href="https://mybinder.org">Binder</a>)</p></li>
+</ul>
+</section>
+<section id="how-can-spyder-help-me-in-my-scientific-research">
+<h3>How can Spyder help me in my scientific research?<a class="headerlink" href="#how-can-spyder-help-me-in-my-scientific-research" title="Link to this heading">#</a></h3>
+<p>Spyder is a Scientific Integrated Development Environment written in Python, and designed by and for scientists, engineers, and data analysts. It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package. Together with Python, it provides a very complete set of tools for scientific computing.</p>
+</section>
+<section id="the-basic-steps-of-the-scientific-method">
+<h3>The basic steps of the scientific method<a class="headerlink" href="#the-basic-steps-of-the-scientific-method" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Scientific_method">scientific method</a> is a set of good practices used to achieve new knowledge in a valid way. Broadly speaking, the stages of the scientific method are as follows:</p>
+<ol class="arabic simple">
+<li><p>Observation: first find something that needs an explanation</p></li>
+<li><p>Search/generate theory: say a thing or two about the state of the world or how it works (an abstract thought about a phenomenon)</p></li>
+<li><p>Hypothesis: identify variables and make predictions</p></li>
+<li><p>Testing/Experiment/More observation: measure relationship between variables</p></li>
+<li><p>Analysis: fit a model/graph data</p></li>
+<li><p>Reporting: share new findings</p></li>
+</ol>
+<p>Throughout this workshop, we will be developing each of these steps in a practical way. We will use Spyder as a research tool and psychometric data from an online dating site to make it easy and fun.</p>
+</section>
+<section id="introduction-to-scientific-research-with-spyder">
+<h3>Introduction to scientific research with Spyder<a class="headerlink" href="#introduction-to-scientific-research-with-spyder" title="Link to this heading">#</a></h3>
+<p>If you’re not familiar with Spyder, we recommend you start with our <a class="reference internal" href="../quickstart.html"><span class="doc">Quickstart</span></a>. But if you want a  summary, here’s a quick overview.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have experience with Spyder, you can skip to <a class="reference internal" href="#preparation-work">Preparation work</a> section.</p>
+</div>
+<section id="editor">
+<h4>Editor<a class="headerlink" href="#editor" title="Link to this heading">#</a></h4>
+<p>The <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> is the place where you write your code and save it as a file (script). It allows you to easily persist your work. This is where you write the code you want to keep from the data analysis you do in IPython Console. <strong>Here you will also be able to read, edit and run the code from this workshop</strong>.</p>
+</section>
+<section id="ipython-console">
+<h4>IPython Console<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h4>
+<p>The <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> is the Spyder’s component where you write chunks of code that you want to experiment with. <strong>In this workshop, we are going to give you pieces of code that you can copy and run in this console</strong>.</p>
+<p>In essence, the IPython Console allows you to execute commands and interact with data using Python.</p>
+</section>
+<section id="variable-explorer">
+<h4>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h4>
+<p>The <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Variable Explorer</span></a> is one of Spyder’s best features. It allows you to interactively browse and manage the objects generated in the code of the currently selected <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> session.</p>
+<p>The Variable Explorer is one of the most frequently used components in this workshop. <strong>This is the pane where we will observe the data and most of the results of the scientific analysis, except for the plots</strong>.</p>
+</section>
+<section id="plots-pane">
+<h4>Plots pane<a class="headerlink" href="#plots-pane" title="Link to this heading">#</a></h4>
+<p>The <a class="reference internal" href="../panes/plots.html"><span class="doc">Plots pane</span></a> shows all the static graphs and images created in your IPython Console session. <strong>All plots generated by the code will appear in this component</strong>. You will also be able to save each graphic in a local file or copy it to the clipboard to share it with other researchers.</p>
+</section>
+<section id="code-analysis-share-a-stylish-code">
+<h4>Code Analysis (share a stylish code!)<a class="headerlink" href="#code-analysis-share-a-stylish-code" title="Link to this heading">#</a></h4>
+<p>Wouldn’t it be great to have a tool to be able to detect code errors, stylistic problems, bad practices, inconsistencies and other issues? This is precisely the task of the  <a class="reference internal" href="../panes/pylint.html"><span class="doc">Code Analysis</span></a>. Your code can run, but if you are going to share it with other researchers it would be great if it is both readable and neat as well.</p>
+</section>
+</section>
+</section>
+<section id="preparation-work">
+<h2>Preparation work<a class="headerlink" href="#preparation-work" title="Link to this heading">#</a></h2>
+<p>Before starting, you must have installed some packages and libraries needed to run the code. We recommend you to install these requirements in a virtual environment. Here we explain step by step how to do it.</p>
+<section id="setting-up-the-conda-environment">
+<h3>Setting up the Conda environment<a class="headerlink" href="#setting-up-the-conda-environment" title="Link to this heading">#</a></h3>
+<p>If you would like to have Spyder in a dedicated environment to update it separately from your other packages and avoid any conflicts, you can.</p>
+<p>You can set up your environment in two different ways.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We recommend creating the virtual environment with <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> (or <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>) as it integrates seamlessly with Spyder. You can find installation instructions in <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda documentation</a>.</p>
+</div>
+<section id="with-commands">
+<h4>1. With commands<a class="headerlink" href="#with-commands" title="Link to this heading">#</a></h4>
+<p>Just run the following command in your Anaconda Prompt (Windows) or terminal (other platforms), for a minimal install of Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">scientific-computing</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>scientific-computing
+</pre></div>
+</div>
+<p>To install Spyder’s optional dependencies as well for full functionality, use the following command instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>scientific-computing<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">5</span><span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sympy<span class="w"> </span>cython<span class="w"> </span>seaborn<span class="w"> </span>spyder-kernels<span class="w"> </span>pyarrow
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Spyder now offers <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS, making it easier to get up and running with the application without having to download Anaconda or manually install it in your existing environment. If you use the standalone installer, there is no need to install <code class="docutils literal notranslate"><span class="pre">spyder=5</span></code> with conda.</p>
+</div>
+</section>
+<section id="from-an-environment-yml-file">
+<h4>2. From an environment.yml file<a class="headerlink" href="#from-an-environment-yml-file" title="Link to this heading">#</a></h4>
+<p>You can also install the virtual environment easily using the environment file (<code class="docutils literal notranslate"><span class="pre">scientific-computing.yml</span></code>) that we share with you. Just run the following command in the terminal (you must have the environment file in the current directory):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>scientific-computing.yml
+</pre></div>
+</div>
+</section>
+<section id="activate-environment">
+<h4>Activate environment<a class="headerlink" href="#activate-environment" title="Link to this heading">#</a></h4>
+<p>You can now enter the newly created virtual environment in this way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>scientific-computing
+</pre></div>
+</div>
+</section>
+</section>
+<section id="downloading-the-dataset">
+<h3>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Link to this heading">#</a></h3>
+<p>We are going to work with a public dataset called OKCupid, collected by Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and 2,626 variables.</p>
+<p>Download the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a> to a directory of your choice.</p>
+</section>
+<section id="setting-up-the-working-directory">
+<h3>Setting up the working directory<a class="headerlink" href="#setting-up-the-working-directory" title="Link to this heading">#</a></h3>
+<p>The virtual environment and the data file are now ready. The only thing that remains is to create a directory to work in. In your operating system, create a new directory with the name of your choice. Then copy and unzip the dataset file there.</p>
+<p>Here is an example (on Linux or macOS):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>scientific-computing
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>scientific-computing
+</pre></div>
+</div>
+<p>Keep in mind that in this new directory you must have the data file unzipped.</p>
+<p>Launch Spyder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>spyder
+</pre></div>
+</div>
+<p>Let’s make sure Spyder is ready. First, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the dataset. Something like this:</p>
+<img alt="Spyder's Working Directory plugin showing the working directory of spyder-scientific" src="../_images/working-directory1.png" />
+<p>Second, let’s check that the virtual environment we created is enabled in Spyder. Go to <span class="guilabel">Preferences</span> &gt; <span class="guilabel">Python interpreter</span>, and use the dropdown under <span class="guilabel">Use the following Python interpreter</span> to select the path to your virtual environment. You should see something like this:</p>
+<img alt="Set up environment in Spyder's Preferences" src="../_images/set-up-environment1.png" />
+<p>Now, you have everything ready to proceed with the workshop.</p>
+</section>
+<section id="download-the-code">
+<h3>Download the code<a class="headerlink" href="#download-the-code" title="Link to this heading">#</a></h3>
+<p>Although the workshop is designed for you to write the code in the IPython Console, we have created a file that you can <a class="reference download internal" download="" href="../_downloads/0a85bf6b6f5c0377014b2035ca60c31e/scientific-computing.py"><code class="xref download docutils literal notranslate"><span class="pre">download</span></code></a>. This script provides all the code you will write in this workshop, and you can use it as a guide if you get lost.</p>
+</section>
+</section>
+<section id="the-dataset">
+<h2>The dataset<a class="headerlink" href="#the-dataset" title="Link to this heading">#</a></h2>
+<p>OKCupid is a dataset that gathers information obtained from the online dating site OKCupid. It consists of 68,371 records collected automatically employing a scraper that extracted public information.</p>
+<p>The dataset contains demographic data (e.g., gender, sexual orientation and age). It also includes answers to general questions used by the website’s algorithm to calculate some personality indicators to help find compatible matches.</p>
+<p>If you want more information about how this dataset was collected and what kind of information it contains you can get it in this paper: <a class="reference external" href="https://doi.org/10.26775/ODP.2016.11.03">The OKCupid dataset</a>.</p>
+<p>Remember to type and run all code for this workshop in the “IPython Console” at the bottom right of Spyder.</p>
+<img alt="IPython Console location in Spyder IDE" src="../_images/ipython-console-in-context.png" />
+<p>You can also write your code or in the Editor (the pane that occupies the entire left side of Spyder). If you use the Editor, you can run the code by selecting it and pressing the <span class="guilabel">Run selection or current line</span> button in the <span class="guilabel">Run toolbar</span> or by pressing the F9 button.</p>
+<img alt="Editor location in Spyder IDE" src="../_images/editor-in-context.png" />
+<p>To get started, import the libraries.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+<p>The data you downloaded earlier is in <a class="reference external" href="https://arrow.apache.org/docs/python/parquet.html">parquet</a> format. This format is very convenient because it is smaller and faster than CSV or JSON files.</p>
+<p>Load data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="s2">&quot;parsed_data_public.parquet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should now be able to see the data you have imported in the Variable Explorer.</p>
+<img alt="Dataset in the Variable Explorer" src="../_images/first-object-in-variable-explorer.png" />
+<p>You can see that the object is of type DataFrame and the number of rows and columns of the object.</p>
+</section>
+<section id="explore-the-dataset">
+<h2>Explore the dataset<a class="headerlink" href="#explore-the-dataset" title="Link to this heading">#</a></h2>
+<section id="age">
+<h3>Age<a class="headerlink" href="#age" title="Link to this heading">#</a></h3>
+<p>Now, let’s explore one of the variables, in this case, the numeric variable age (<code class="docutils literal notranslate"><span class="pre">d_age</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the OKCupid dataset, all demographic variables are prefixed with “d_” and profile variables with “p_”.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Console output for data.d_age.describe()" src="../_images/data-age-describe-console-output.png" />
+<p>What happened? We called the <code class="docutils literal notranslate"><span class="pre">data</span></code> object and used Python’s dot notation to pick the <code class="docutils literal notranslate"><span class="pre">d_age</span></code> column. This has a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html">Pandas Series</a> type object. To this object we pass the <code class="docutils literal notranslate"><span class="pre">describe()</span></code> method that shows a summary of some indicators: count of values, mean, standard deviation, maximum value, minimum value, among others. With these figures we can see that the sample is mainly constituted of young people (the average is 31.65 years old).</p>
+<p>The return of a function, method or the attribute of an object can be stored as a variable to have it at hand in the Variable Explorer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_age</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">min_age</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="More variables in Variable Explorer" src="../_images/min-age-max-age-variables.png" />
+<p>The values are floats. The lowest age is 18.0 years and the highest is 100.0 years.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice also that each type of variable has a different color to quickly distinguish them.</p>
+</div>
+<p>We already know the minimum and maximum age, and that the mean is around 32 years old. A good way to further explore this variable is to plot a histogram, a type of graph that shows the frequency distributions. In this way we can see if the groups of young people on the platform are more numerous than the older ones.</p>
+<p>We can plot a histogram directly from the dataframe. To do this we select the variable (as we did with the <code class="docutils literal notranslate"><span class="pre">.describe()</span></code>) and invoke the <code class="docutils literal notranslate"><span class="pre">.plot.hist()</span></code> method. In this method we will pass as arguments the number of bins and the transparency of the plot (<code class="docutils literal notranslate"><span class="pre">alpha</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Age histogram with Pandas" src="../_images/age-histogram-1.png" />
+<p>Another way to generate a simple histogram in Spyder is to use a context menu on an array in the Variable Explorer. But first we must store these values in a list and call that variable <code class="docutils literal notranslate"><span class="pre">age</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Age histogram option from Variable Explorer" src="../_images/histogram-from-variable-explorer.png" />
+<img alt="Age histogram from Variable Explorer" src="../_images/histogram-from-variable-explorer-plotted.png" />
+<p>Frequency distributions come in different sizes and shapes. The shape of a histogram reveals very interesting things about the data. A symmetrical, bell-shaped histogram might indicate that the distribution is normal (most of the scores are close to the center of the distribution). In the age histogram, you can see that it has a “tail” to the right (towards the older ages). Technically this is called “positively <a class="reference external" href="https://en.wikipedia.org/wiki/Skewness">skewed</a>”. It is also noticeable that it is somewhat pointy (positive <a class="reference external" href="https://en.wikipedia.org/wiki/Kurtosis">kurtosis</a> or leptokurtic). These two things could suggest that age is not a random variable.</p>
+<p>Although we can create the histogram directly from the dataframe, we are going to use a Python library called Seaborn to do the same, because this library will allow us to do more interesting things later.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We call <code class="docutils literal notranslate"><span class="pre">sns.histplot()</span></code> with three arguments. The first one (<code class="docutils literal notranslate"><span class="pre">data.d_age</span></code>) is a Pandas Series with the <strong>quantitative</strong> variable we want to plot. The second (<code class="docutils literal notranslate"><span class="pre">kde=True</span></code>) adds a curve showing an ideal model of the age distribution (using a method called <em>Kernel Density Estimator</em>). And the third one (<code class="docutils literal notranslate"><span class="pre">bins=25</span></code>) indicates that we want 25 bins in the graph.</p>
+<img alt="Age histogram with Seaborn" src="../_images/age-histogram-2.png" />
+<p>The second line (<code class="docutils literal notranslate"><span class="pre">plt.show()</span></code>) is intended to show all the figures not displayed so far. If you have any doubts about how to utilize an object, method or function, you can use the <code class="docutils literal notranslate"><span class="pre">help()</span></code> tool in the console. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or you can also take advantage of the Help pane included in Spyder to get on-screen help:</p>
+<img alt="plt.show() help in Spyder's Help pane" src="../_images/help-pane-for-plt.show.png" />
+<p>With Seaborn, we can add a line representing the mean of the histogram. To do this we will use the <code class="docutils literal notranslate"><span class="pre">axvline()</span></code> method and add a text with the value of the mean where <code class="docutils literal notranslate"><span class="pre">text()</span></code>, <code class="docutils literal notranslate"><span class="pre">min_ylim</span></code> and <code class="docutils literal notranslate"><span class="pre">max_ylim</span></code> are used to mark the position of the text.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">min_ylim</span><span class="p">,</span> <span class="n">max_ylim</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">max_ylim</span><span class="o">*</span><span class="mf">0.9</span><span class="p">,</span>
+         <span class="s1">&#39;Mean: </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">d_age</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Age histogram with mean line" src="../_images/age-histogram-3.png" />
+</section>
+<section id="religion-seriosity">
+<h3>Religion seriosity<a class="headerlink" href="#religion-seriosity" title="Link to this heading">#</a></h3>
+<p>We know the extent of the dataframe and we have seen how to explore a quantitative variable. Now let’s move on to a qualitative variable. The <code class="docutils literal notranslate"><span class="pre">columns</span></code> attribute shows a list of column names in the dataframe. We also know that demographic variables are prefixed with “d_”, so we can look for variable names that correspond to this prefix.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">demograph</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;d_&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>In the Variable Explorer you will see a new variable <code class="docutils literal notranslate"><span class="pre">demograph</span></code>. If you double click on it you will see a list of the demographic variables in the dataset. At the end of the list you will see a value <code class="docutils literal notranslate"><span class="pre">d_religion_seriosity</span></code>. If you right click on it, several options will appear on the screen. You can rename the column, delete it or insert a new one. Let’s click on <span class="guilabel">Copy</span> to copy the column name into memory.</p>
+<p>In the IPython Console, type <code class="docutils literal notranslate"><span class="pre">data.</span></code> and then copy the column name. Type a period at the end (no spaces) and hit tab. You should see something like the following:</p>
+<img alt="IPython Console auto-completion" src="../_images/console-auto-completion.png" />
+<p>You can then see a list of all relevant methods and attributes of the class. Right at the end you will see <code class="docutils literal notranslate"><span class="pre">value_counts</span></code> that could be used to summarize the variable. It is a method so it must end in parentheses:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">d_religion_seriosity</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="c1"># but not too serious about it     11142</span>
+<span class="c1"># and laughing about it             7307</span>
+<span class="c1"># and somewhat serious about it     5372</span>
+<span class="c1"># and very serious about it         3290</span>
+<span class="c1"># Name: d_religion_seriosity, dtype: int64</span>
+</pre></div>
+</div>
+<p>In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix “q” followed by an integer. The text of the questions is stored in a file called <code class="file docutils literal notranslate"><span class="pre">question_data.csv</span></code> (which you can download as part of the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a>).</p>
+<p>We can examine this file in the Variable Explorer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">question_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;question_data.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Double click on “question_data” in the Variable Explorer to display each question aligned with its code (“q” + number).</p>
+<p>Now that we have learned how to explore the data we can ask interesting questions and try to answer them with the help of the dataset and Spyder.</p>
+</section>
+</section>
+<section id="think-of-a-theory-and-write-a-hypothesis">
+<h2>Think of a theory and write a hypothesis<a class="headerlink" href="#think-of-a-theory-and-write-a-hypothesis" title="Link to this heading">#</a></h2>
+<p>A theory is nothing more than an explanation of something. For example, we could get involved in the eternal conflict between cats and dogs. I, as a dog person, might have a theory (unscientific, of course) that those who prefer to have the companionship of a dog are smarter people than those who prefer a wicked (but lovable) kitty. To test the support of a theory, one can make a prediction based on it and see how this prediction behaves in an experiment or a concrete situation. We call this prediction a hypothesis.</p>
+<p>A hypothesis is a statement that can be tested employing the scientific method. They must be verifiable using empirical evidence or data. For example, <em>green is the best color</em> is not a hypothesis since it cannot be proven or disproven.</p>
+<p>Concerning the above theory of a person’s pet preferences, to explore it we should find two variables to relate. The first variable would be related to a <strong>self-identification as a cat person or dog person</strong>. The second variable would be related to a person’s <strong>ability to solve problems and situations</strong>.</p>
+<p>The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question <strong>q997</strong> (<em>Are you a cat person or a dog person?</em> ) provides information about a person’s pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file <code class="file docutils literal notranslate"><span class="pre">test_items.csv</span></code> in the <a class="reference external" href="https://figshare.com/articles/dataset/OKCupid_Datasets/14987388">OKCupid dataset</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">test_items</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;test_items.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So, let’s try to see if there is any evidence in the OKCupid dataset to support the following hypothesis:</p>
+<p><em>People who prefer dogs to cats would score higher on tests of cognitive ability</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SPOILER ALERT: If you are a cat person, and feel you should immediately leave this workshop, I suggest you stay. If you’re not a cat person, stay too.</p>
+</div>
+</section>
+<section id="build-the-test">
+<h2>Build the test<a class="headerlink" href="#build-the-test" title="Link to this heading">#</a></h2>
+<p>We already know which questions will be part of the cognitive ability test. Now we are going to process this data to obtain the scores for each person.</p>
+<p>First, we make a copy of the original dataset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ca_test</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then, we find the correct answer to each test question (these answers are in <code class="docutils literal notranslate"><span class="pre">test_items</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">right_answers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ID</span><span class="p">,</span> <span class="n">ROW</span> <span class="ow">in</span> <span class="n">test_items</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">right_answers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ROW</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ROW</span><span class="p">[</span><span class="s2">&quot;option_correct&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">test_items</span><span class="p">[</span><span class="s2">&quot;right_answer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">right_answers</span>
+</pre></div>
+</div>
+<p>The correct answers have been stored in the <code class="docutils literal notranslate"><span class="pre">test_items</span></code> dataframe.</p>
+<p>Next, we will indicate, in the <code class="docutils literal notranslate"><span class="pre">ca_test</span></code> dataframe, whether the person answered correctly to each question selected in the cognitive ability test. These answers will be entered as a boolean in new variables with the prefix “resp_” followed by the corresponding question code. The Boolean is calculated with the function <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">row:</span> <span class="pre">row[q]</span> <span class="pre">==</span> <span class="pre">a,</span> <span class="pre">axis=1</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ID</span><span class="p">,</span> <span class="n">ROW</span> <span class="ow">in</span> <span class="n">test_items</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">QUESTION</span> <span class="o">=</span> <span class="s2">&quot;q&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ROW</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">])</span>
+    <span class="n">ANSWER</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ROW</span><span class="p">[</span><span class="s2">&quot;right_answer&quot;</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ca_test</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">QUESTION</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">ca_test</span><span class="p">[</span><span class="s2">&quot;resp_&quot;</span> <span class="o">+</span> <span class="n">QUESTION</span><span class="p">]</span> <span class="o">=</span> <span class="n">ca_test</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="n">QUESTION</span><span class="p">]</span> <span class="o">==</span> <span class="n">ANSWER</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">QUESTION</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Some <code class="docutils literal notranslate"><span class="pre">test_items</span></code> questions are not in the data but don’t worry about that. We use a <code class="docutils literal notranslate"><span class="pre">try...</span> <span class="pre">except</span></code> block to ignore these errors. Answering these questions was optional, so many OkCupid site users did not answer all of them. So we have removed from the records the users who did not answer the 14 questions we have chosen for the cognitive ability test. This reduced the sample size considerably. There are other ways to avoid this reduction, but they are outside the scope of this workshop.</p>
+</div>
+<p>We want to sum the correct answers for each person, but some integer results were stored as strings, so let’s fix that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ca_test</span><span class="o">.</span><span class="n">q18154</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q18154</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="n">ca_test</span><span class="o">.</span><span class="n">q18154</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q18154</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+<span class="n">ca_test</span><span class="o">.</span><span class="n">resp_q18154</span> <span class="o">=</span> <span class="n">ca_test</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;q18154&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;26&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ca_test</span><span class="o">.</span><span class="n">q255</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q255</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">)</span>
+<span class="n">ca_test</span><span class="o">.</span><span class="n">q255</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q255</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+<span class="n">ca_test</span><span class="o">.</span><span class="n">resp_q255</span> <span class="o">=</span> <span class="n">ca_test</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;q255&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;89547&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we have the correct answer for each test question, let’s add up each correct answer for each person. There are 14 questions, so the maximum score will also be 14:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cognitive_score</span> <span class="o">=</span> <span class="n">ca_test</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;^resp&quot;</span><span class="p">))]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ca_test</span><span class="p">[</span><span class="s2">&quot;cognitive_score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cognitive_score</span>
+</pre></div>
+</div>
+<p>How do we add up these responses? Remember that each answer was stored as a boolean (True or False) with the prefix “resp_”. So we search in the <code class="docutils literal notranslate"><span class="pre">ca_test</span></code> dataframe for the answers of each column starting with “resp” (we use the regular expression <code class="docutils literal notranslate"><span class="pre">regex=&quot;^resp&quot;</span></code> and the method <code class="docutils literal notranslate"><span class="pre">filter</span></code>) and sum the True values of each row with <code class="docutils literal notranslate"><span class="pre">sum(axis=1)</span></code>. Then we store these results in the “cognitive_score” column of the <code class="docutils literal notranslate"><span class="pre">ca_test</span></code> dataset.</p>
+<p>You can see the results of these operations by typing in the IPython Console <code class="docutils literal notranslate"><span class="pre">ca_test.cognitive_score.describe()</span></code>. If you do so, in <em>count</em> you will see that the new number of records has been reduced to 479 (the rest of the 68,371 users did not answer all of these questions).</p>
+<section id="cognitive-ability-distribution">
+<h3>Cognitive ability distribution<a class="headerlink" href="#cognitive-ability-distribution" title="Link to this heading">#</a></h3>
+<p>Let’s draw a histogram of this variable to see the frequency distribution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ca_test</span><span class="o">.</span><span class="n">cognitive_score</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Cognitive test score histogram" src="../_images/cognitive-score-histogram.png" />
+<p>As you can see, in this case, the distribution is not symmetrical but has a long “tail” on the left (negatively skewed). This means that most of the users who answered all the questions did quite well and that only a few users answered most of the questions in the wrong way.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The values we have calculated in this section were already in the data (<code class="docutils literal notranslate"><span class="pre">data.CA_items</span></code>). However, we have chosen to obtain these results again using code because it is a good way to learn how to use the tools provided by Python and Pandas for data manipulation.</p>
+</div>
+</section>
+</section>
+<section id="relate-variables">
+<h2>Relate variables<a class="headerlink" href="#relate-variables" title="Link to this heading">#</a></h2>
+<p>Remember that the hypothesis relates two variables: which pet do you prefer and cognitive ability. The measurement of pet preferences will be made from question <strong>q997</strong> (categorical or qualitative variable) and cognitive ability will be measured from the sum of the correct answers on the test (quantitative interval variable). With this type of variable we can make some box plots to see if there are differences between the means.</p>
+<p>But first, let’s change the standard Seaborn palette, to get prettier plots.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">palplot</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Seaborn allows you to choose from different styles of graphics and color palettes. More information is available at <a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html">https://seaborn.pydata.org/tutorial/color_palettes.html</a></p>
+</div>
+<p>Now, we are going to create box plots to observe the relationship between variables. To do this, we will use the <code class="docutils literal notranslate"><span class="pre">catplot</span></code> class of Seaborn. The first argument will be the x-axis, which in this case will be the qualitative variable (question <strong>q997</strong>). The second argument will be the y-axis, where we will place the quantitative variable (cognitive score). With the parameter <code class="docutils literal notranslate"><span class="pre">kind</span></code> we indicate that it is a box plot. The parameters <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">aspect</span></code> regulate the appearance of the graph. The last parameter, <code class="docutils literal notranslate"><span class="pre">data</span></code>, indicates where the data comes from.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q997</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">ca_test</span><span class="o">.</span><span class="n">cognitive_score</span><span class="p">,</span>
+<span class="n">kind</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ca_test</span><span class="p">)</span><span class="o">.</span><span class="n">set_axis_labels</span><span class="p">(</span><span class="s2">&quot;q997 = Are you a cat person or a dog person?&quot;</span><span class="p">,</span> <span class="s2">&quot;cognitive score&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Pet preferences and cognitive score relationship (boxplot)" src="../_images/pet-preferences-cognitive-score-boxplot.png" />
+<p>Box plots or box-whisker diagrams display, near the center of the box, the <strong>mean</strong> of the data as a horizontal line. The lines bordering the box represent <strong>50% of the observations</strong> (<em>interquartile range</em> ). Outside the box, upwards and downwards, we find two whiskers: the lower one represents the <strong>mean of the values in the lower part of the dataset</strong>, and the upper one represents the <strong>mean of the values in the upper part of the dataset</strong>. The points beyond the whiskers are <strong>outliers</strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>An outlier is a value that is very different from the rest of the data values. They must be taken into account because they can often create a bias in the model we are trying to fit to the data.</p>
+</div>
+<p>The graph shows four boxes measuring cognitive ability for the following groups:</p>
+<ol class="arabic simple">
+<li><p>Those who prefer dogs</p></li>
+<li><p>Those who define themselves as cat people and dog people indistinctly.</p></li>
+<li><p>Those who prefer cats</p></li>
+<li><p>Those who like neither cats nor dogs.</p></li>
+</ol>
+<p>The lowest mean is that of those who prefer dogs only, but by very little. The box (and boundaries) representing dog lovers is also “wider,” implying a larger variability in the individual test results for this group. But this is not a very different dispersion from that of those who prefer cats. All the means are within the limits of the other boxes (interquartiles), which seems to indicate that, in fact, there are not really important differences in the intelligence test scores for these groups. This seems to undermine support for the initial hypothesis we posed above.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to see the figures, enter <code class="docutils literal notranslate"><span class="pre">dog_or_cat</span> <span class="pre">=</span> <span class="pre">ca_test.groupby(&quot;q997&quot;)[&quot;cognitive_score&quot;].describe()</span></code> in the IPython Console and look at the results in the Variable Explorer. This way you can see how many people prefer cats or dogs, and the means and standard deviation of the cognitive ability test results for each group.</p>
+</div>
+<p>To appreciate in context the real difference in the averages, let’s create some bar charts. We are now going to use Seaborn’s barplot class. On the x-axis we put again the qualitative variable (<strong>q997</strong>) and on the y-axis the quantitative variable (cognitive_score). The data parameter takes as argument the entire dataset.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig_dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">fig_dims</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ca_test</span><span class="o">.</span><span class="n">q997</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">ca_test</span><span class="o">.</span><span class="n">cognitive_score</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ca_test</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="n">palette</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;q997 = Are you a cat person or a dog person?&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;cognitive score&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Pet preferences and cognitive score mean representation (box graph)" src="../_images/pet-preferences-cognitive-score-bar-graph.png" />
+<p>If the box plots indicated that the means did not show significant differences (possibly due to chance), the bar plot confirms that these differences are, in proportion, quite modest.</p>
+</section>
+<section id="anova-test">
+<h2>ANOVA test<a class="headerlink" href="#anova-test" title="Link to this heading">#</a></h2>
+<p>To make sure that the differences between the means are statistically significant, we will perform an ANOVA (analysis of variance) because we are going to compare the means of more than two groups.</p>
+<p>How does ANOVA work? This analysis tells us whether three or more means are equal. If so, this would support the null hypothesis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>null hypothesis</em> is an alternative prediction to the one we have stated in our hypothesis. The null hypothesis simply states that the observed differences in means are due to random variations that occur when samples are collected.</p>
+</div>
+<p>An ANOVA produces an <em>F-ratio</em> (also called F-statistic) that compares the amount of systematic variation in the data (variation that can be explained by the model or hypothesis) with the amount of unsystematic variance (variation that cannot be explained by our hypothesis or model). This means that F is the ratio of the model to its error. ANOVA also produces a <em>p-value</em> that indicates the probability that the variation can be attributed to the null hypothesis. The smaller the p-value, the less likely it is that the observed variation is due to chance.</p>
+<section id="formatting-the-data">
+<h3>Formatting the data<a class="headerlink" href="#formatting-the-data" title="Link to this heading">#</a></h3>
+<p>To perform an ANOVA, let’s start by pivoting the dataset with the cognitive ability test results. The pet preferences values will now be the column names, and each row will represent a person.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To perform an ANOVA, certain requirements or assumptions must be met. For example, the distributions of the residuals must be normal. This is not the case here. There are more appropriate statistical tests for this example, and the possibility of performing certain transformations on the data in order to apply ANOVA in this case. However, we use ANOVA because it is a fairly popular test, and because the purpose of this workshop is to serve as an introduction to scientific computing with Spyder. We do not intend here to obtain scientific results for publication.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog_or_cat_pivot</span> <span class="o">=</span> <span class="n">ca_test</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;q997&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;cognitive_score&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You will see that one of the columns includes the answers to the test made by people who did not specify their preferences towards pets. Let’s delete that column.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="Pet preferences pivot table for ANOVA analysis." src="../_images/pets-preferences-pivot-table.png" />
+<p>Now let’s rename the column names (for simplicity) and remove the records that have missing values (with <code class="docutils literal notranslate"><span class="pre">dropna</span></code>). The argument <code class="docutils literal notranslate"><span class="pre">inplace=True</span></code> allows you to directly modify a dataframe without having to create a new one.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog_or_cat_col_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">]</span>
+<span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the variable <code class="docutils literal notranslate"><span class="pre">dog_or_cat_col_names</span></code> we have stored the names of the values in order. This implies that: A = Both, B = Cats, C = Dogs, and D = Neither.</p>
+</div>
+<p>To perform ANOVA, we are going to use a Python library called “stats”, in particular the <code class="docutils literal notranslate"><span class="pre">f_oneway</span></code> function. You can find more information about this library by typing <code class="docutils literal notranslate"><span class="pre">stats</span></code> in the Help Pane or learn more about the function by typing <code class="docutils literal notranslate"><span class="pre">stats.f_oneway</span></code>.</p>
+<img alt="stats.f_oneway() help in Spyder's Help pane" src="../_images/help-pane-for-stats.f_oneway.png" />
+<p>The help notes that this function requires an array-like with the measurements for each group as an input (in our case, one sample for A, one for B, one for C, and one for D). Since we have empty cells in each column, let’s remove them from each column (the <code class="docutils literal notranslate"><span class="pre">f_oneway</span></code> function does not support missing values).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog_or_cat_samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">dog_or_cat_pivot</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">dog_or_cat_pivot</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In the above line of code we are creating a list with 4 elements: the test results of each column A, B, C, and D, without the missing values (they are removed with <code class="docutils literal notranslate"><span class="pre">dropna()</span></code>).</p>
+</section>
+<section id="run-anova">
+<h3>Run ANOVA<a class="headerlink" href="#run-anova" title="Link to this heading">#</a></h3>
+<p>Now, let’s run ANOVA and store the output in two variables: <code class="docutils literal notranslate"><span class="pre">f_value</span></code> and <code class="docutils literal notranslate"><span class="pre">p_value</span></code>. Notice that since <code class="docutils literal notranslate"><span class="pre">dog_or_cat_samples</span></code> is a list, we must pass the argument with an asterisk (<code class="docutils literal notranslate"><span class="pre">*dog_or_cat_samples</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f_value</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="o">*</span><span class="n">dog_or_cat_samples</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With the help of <code class="docutils literal notranslate"><span class="pre">stats.f_oneway</span></code> in the Help Pane you can read a description of the output of this function, some interesting notes about the test, and some references that you can use to better understand the nature of this analysis.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In the Help pane you will read that ANOVA requires certain assumptions to be satisfied. In this workshop we have not checked those assumptions because our goal is merely to show some Spyder functions that make the research work easier. Thus, the results obtained in this example with ANOVA should not be taken too rigorously.</p>
+</div>
+<p>In the Variable Explorer you can find these two new variables: <code class="docutils literal notranslate"><span class="pre">f_value</span></code> and <code class="docutils literal notranslate"><span class="pre">p_value</span></code>. <code class="docutils literal notranslate"><span class="pre">p_value</span></code> (0.6275) is well over 0.05, which gives support to the null hypothesis (detracting support from our hypothesis). To know if the F value obtained is greater than the theoretically expected value, a <strong>F critical value</strong> must be calculated. This can be estimated using the <code class="docutils literal notranslate"><span class="pre">stats</span></code> library, a significance level (<em>q</em> ), and the degrees of freedom (<em>df</em> ) for the number of groups and the number of observations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_groups</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dog_or_cat_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">num_observations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dog_or_cat_pivot</span><span class="p">)</span>
+<span class="n">dfn</span> <span class="o">=</span> <span class="n">num_groups</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">dfd</span> <span class="o">=</span> <span class="n">num_observations</span> <span class="o">-</span> <span class="n">num_groups</span>
+
+<span class="n">f_critical</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">dfn</span><span class="o">=</span><span class="n">dfn</span><span class="p">,</span> <span class="n">dfd</span><span class="o">=</span><span class="n">dfd</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">f_critical</span></code> (2.6241) is larger than that of <code class="docutils literal notranslate"><span class="pre">f_value</span></code> (0.5813). This means that the variance between the means of these groups is not significantly different. Since the <em>p</em> value indicates that we cannot rule out random variations, then we have to discard our hypothesis.</p>
+<p>What is the conclusion of all this? There seems to be little or no evidence in our data to think that there is indeed a correlation between a person’s pet preferences and his or her ability to solve practical or abstract problems. Cat and dog owners, rejoice!</p>
+</section>
+</section>
+<section id="report-and-share">
+<h2>Report and share<a class="headerlink" href="#report-and-share" title="Link to this heading">#</a></h2>
+<p>In science, sharing results, good and bad, is critical. Today, in scientific computing, it is also crucial to share data, and the code used to process and analyze it. To help with this, we will use Spyder’s Code Analysis.</p>
+<section id="code-analysis">
+<h3>Code Analysis<a class="headerlink" href="#code-analysis" title="Link to this heading">#</a></h3>
+<p>When you share code, you want it to be readable, clean, and not overly complex. The Code Analysis component can help us detect these issues and even bugs that can affect the performance of our code.</p>
+<p>To see an example, you can open the <a class="reference download internal" download="" href="../_downloads/5094c1817ea6459cc1ea9e5ec793a6b0/scientific-computing-astro.py"><code class="xref download docutils literal notranslate"><span class="pre">scientific-computing-astro.py</span></code></a> file and run the <span class="guilabel">Code Analysis</span> (open the file in the pane and click on the green triangular button in the upper right corner).</p>
+<img alt="Code Analysis pane Example for astrological sign and cognitive ability" src="../_images/code-analysis-pane-workshop-2.png" />
+<p>You can see four categories that can help you improve your code:</p>
+<ul class="simple">
+<li><p>Convention: programming standard violations</p></li>
+<li><p>Refactor: refactoring related checks</p></li>
+<li><p>Warning: Python-specific problems</p></li>
+<li><p>Error: probable bugs in the code</p></li>
+</ul>
+<p>Each of these categories indicates the type of alert and the line on which the potential issue occurs. For example, it tells us that line 129 is too long, or that we imported numpy but did not use it at all in the code.</p>
+<p>These suggestions can contribute to sharing clean code. We recommend using this panel to polish your code before publishing it.</p>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Link to this heading">#</a></h2>
+<p>In this workshop we have taken the first steps to use Spyder for scientific computing. We have seen how from a question or doubt a hypothesis is raised. This question can also emerge from the exploration of some data, which can be done by calculating some measures (such as mean, median, standard deviation) or by drawing some plots.</p>
+<p>Often, in order to answer the question, we must process some data (for example, for the construction of a cognitive ability test).</p>
+<p>Finally, we try to establish a relationship between variables with some statistical tests. The results of these tests will support or not our initial hypothesis.</p>
+<p>In this workshop you have learned how to:</p>
+<ul class="simple">
+<li><p>Set up a Conda environment.</p></li>
+<li><p>Write and test code with the IPython Console and Editor.</p></li>
+<li><p>Download a dataset.</p></li>
+<li><p>Inspect objects in the Variable Explorer.</p></li>
+<li><p>Graphically explore a dataset.</p></li>
+<li><p>Browse between plots using the Plots pane.</p></li>
+<li><p>Explore data and relate it to a hypothesis.</p></li>
+<li><p>Manipulate data in a Pandas DataFrame.</p></li>
+<li><p>Perform a statistical test with a specialized library on the data.</p></li>
+<li><p>Improve code readability with Code Analysis.</p></li>
+</ul>
+<p>Spyder has many features that can help you do data analysis. You can find more information in our <a class="reference external" href="https://docs.spyder-ide.org/5/index.html">official documentation</a>.</p>
+<p>Thank you for reaching the end of this workshop! We hope you found it helpful and informative.</p>
+<p>If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop <a class="reference internal" href="financial.html"><span class="doc">Financial Data Analysis with Spyder</span></a>.</p>
+<section id="homework">
+<h3>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h3>
+<p>If you want to check what you have learned, we suggest you analyze the data to try to answer the following question: <em>Do the different zodiac signs influence the results of a cognitive ability test?,</em> you can check the Python script <a class="reference download internal" download="" href="../_downloads/5094c1817ea6459cc1ea9e5ec793a6b0/scientific-computing-astro.py"><code class="xref download docutils literal notranslate"><span class="pre">scientific-computing-astro.py</span></code></a> if you have any doubts.</p>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<p>For a description of the dataset used, see the following <a class="reference external" href="https://openpsych.net/paper/46/">paper</a>:</p>
+<ul class="simple">
+<li><p>Kirkegaard, E. O. W., &amp; Bjerrekær, J. D. (2016). <em>The OKCupid dataset: A very large public dataset of dating site users</em>. Open Differential Psychology. doi:10.26775/odp.2016.11.03*</p></li>
+</ul>
+<p>A very fun book for learning statistics with R is the following:</p>
+<ul class="simple">
+<li><p>Field, A., Miles, J., &amp; Field, Z. (2012). <em>Discovering statistics using R</em>. SAGE Publications.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="qt_fundamentals.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Qt Fundamentals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../troubleshooting/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Troubleshooting</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-goals">Learning goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learner-profile">Learner profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-scientific-research-with-python">Why do scientific research with Python?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-spyder-help-me-in-my-scientific-research">How can Spyder help me in my scientific research?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-basic-steps-of-the-scientific-method">The basic steps of the scientific method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-scientific-research-with-spyder">Introduction to scientific research with Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#editor">Editor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipython-console">IPython Console</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-explorer">Variable Explorer</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plots-pane">Plots pane</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-analysis-share-a-stylish-code">Code Analysis (share a stylish code!)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparation-work">Preparation work</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-conda-environment">Setting up the Conda environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#with-commands">1. With commands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-an-environment-yml-file">2. From an environment.yml file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-environment">Activate environment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-dataset">Downloading the dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-working-directory">Setting up the working directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataset">The dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-dataset">Explore the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#age">Age</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#religion-seriosity">Religion seriosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#think-of-a-theory-and-write-a-hypothesis">Think of a theory and write a hypothesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-test">Build the test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cognitive-ability-distribution">Cognitive ability distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-variables">Relate variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anova-test">ANOVA test</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-the-data">Formatting the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-anova">Run ANOVA</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#report-and-share">Report and share</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-analysis">Code Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-words">Final words</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/workshops/scientific-computing.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

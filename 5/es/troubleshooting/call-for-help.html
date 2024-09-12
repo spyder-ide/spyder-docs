@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pedir ayuda &#8212; documentación de Spyder - 5</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=6e454508"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=d190bf04"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'troubleshooting/call-for-help';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=44d5eb88"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Enviar un reporte" href="submit-a-report.html" />
+    <link rel="prev" title="Problemas comunes" href="common-illnesses.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="documentación de Spyder - 5 - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="documentación de Spyder - 5 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Install Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    FAQ
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../panes/index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Navegación del sección">
+  <p class="bd-links__title" role="heading" aria-level="1">Navegación del sección</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">Primeros Pasos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-first-aid.html">Primera ayuda básica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emergency-cpr.html">Kit de emergencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-illnesses.html">Problemas comunes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pedir ayuda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="submit-a-report.html">Enviar un reporte</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Miga de pan" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Inicio">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Solución de problemas</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Pedir ayuda</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="calling-for-help">
+<h1>Pedir ayuda<a class="headerlink" href="#calling-for-help" title="Link to this heading">#</a></h1>
+<p>Además de esta guía de solución de problemas, hay una serie de otras fuentes de documentación e información de solución de problemas que puedes consultar antes de enviar un problema, ya que es posible que ya ofrezcan una respuesta o al menos te ayuden a comprender mejor el problema. Incluso si no somos capaces de ayudarte, estos lugares podrían hacerlo.</p>
+<section class="fa-offset-h3" id="spyder-related-platforms">
+<h2>Plataformas relacionadas con Spyder<a class="headerlink" href="#spyder-related-platforms" title="Link to this heading">#</a></h2>
+<section class="fasb fa-question-circle" id="spyder-s-faq-section">
+<h3>Sección de preguntas frecuentes (FAQ) de Spyder<a class="headerlink" href="#spyder-s-faq-section" title="Link to this heading">#</a></h3>
+<p>La documentación de Spyder tiene una sección de preguntas frecuentes, donde puedes encontrar las respuestas que estás buscando.</p>
+</section>
+<section class="fabb fa-youtube" id="spyder-s-youtube-channel">
+<h3>Canal de YouTube de Spyder<a class="headerlink" href="#spyder-s-youtube-channel" title="Link to this heading">#</a></h3>
+<p>Nuestro <a class="reference external" href="https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg">YouTube channel</a> contiene videos útiles que te guiarán a través de muchas de las características de Spyder y proporcionan un punto de partida para los nuevos usuarios.</p>
+</section>
+<section class="fabb fa-gitlab" id="spyder-gitter">
+<h3>Gitter de Spyder<a class="headerlink" href="#spyder-gitter" title="Link to this heading">#</a></h3>
+<p>Tenemos una sala pública <a class="reference external" href="https://gitter.im/spyder-ide/public">Gitter</a> donde puedes chatear directamente con los desarrolladores de Spyder. Si tienes una pregunta rápida para hacer al equipo y estás buscando una respuesta rápida, este es un buen lugar para ir.</p>
+</section>
+<section class="fabb fa-google" id="spyder-google-group">
+<h3>Grupo de Google de Spyder<a class="headerlink" href="#spyder-google-group" title="Link to this heading">#</a></h3>
+<p>Nuestro <a class="reference external" href="https://groups.google.com/g/spyderlib">Google Group</a> es ideal para preguntas relacionadas con la ayuda, en particular aquellas que no estás seguro de que sean un problema de Spyder.</p>
+</section>
+<section class="fasb fa-globe" id="spyder-website">
+<h3>Sitio web de Spyder<a class="headerlink" href="#spyder-website" title="Link to this heading">#</a></h3>
+<p>El <a class="reference external" href="https://www.spyder-ide.org/">Spyder site</a> contiene información básica sobre el IDE y enlaces a muchos otros recursos útiles.</p>
+</section>
+<section class="fabb fa-stack-overflow" id="stack-overflow-tag">
+<h3>Etiqueta Stack Overflow<a class="headerlink" href="#stack-overflow-tag" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://stackoverflow.com/questions/tagged/spyder">Stack Overflow</a> es un buen lugar para empezar a buscar y publicar, particularmente si tu pregunta está más relacionada con la programación o tiene que ver con algo específico de tu propio código. También tiene una vibrante comunidad Spyder, con nuevas preguntas publicadas todos los días y los desarrolladores (especialmente Carlos Cordoba, el mantenedor principal) están activos para responderlas.</p>
+</section>
+<section class="fabb openteams-icon" id="openteams-support">
+<h3>Soporte de OpenTeams<a class="headerlink" href="#openteams-support" title="Link to this heading">#</a></h3>
+<p>En <a class="reference external" href="https://www.openteams.com/oss-spyder/">OpenTeams</a>, puedes obtener ayuda de consultores expertos Spyder. OpenTeams ofrece servicios desde expertos de Spyder que van desde una breve consulta a un equipo experimentado para ayudarte con un proyecto de implementación a gran escala.</p>
+</section>
+</section>
+<section class="fa-offset-h3" id="python-resources">
+<h2>Recursos de Python<a class="headerlink" href="#python-resources" title="Link to this heading">#</a></h2>
+<section class="fabb fa-python" id="official-python-help-page">
+<h3>Página oficial de ayuda de Python<a class="headerlink" href="#official-python-help-page" title="Link to this heading">#</a></h3>
+<p>La Página de ayuda de Python (<a class="reference external" href="https://www.python.org/about/help/">Python help page</a>) es un gran recurso que lista una serie de lugares en los que puedes obtener asistencia, soporte y recursos de aprendizaje para del lenguaje y sus paquetes.</p>
+</section>
+<section class="fasb fa-book-open" id="python-documentation">
+<h3>Documentación de Python<a class="headerlink" href="#python-documentation" title="Link to this heading">#</a></h3>
+<p>La <a class="reference external" href="https://docs.python.org/">Python docs</a> puede ayudarte a entender una serie de problemas que pueden ser causados por peculiaridades del lenguaje en sí o malentendidos sobre cómo se comporta.</p>
+</section>
+<section class="fabb fa-reddit" id="python-subreddits">
+<h3>Los subreddits de Python<a class="headerlink" href="#python-subreddits" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.reddit.com/r/Python/">r/python</a> y <a class="reference external" href="https://www.reddit.com/r/learnpython/">r/learnpython</a> son recursos que puedes usar para preguntar y discutir problemas con Python y sus paquetes. La primera se dirige más al uso general de Python, y la segunda es más específica para principiantes.</p>
+</section>
+</section>
+<section class="fa-offset-h3" id="data-science-scipy-resources">
+<h2>Recursos de ciencia de datos/SciPy:<a class="headerlink" href="#data-science-scipy-resources" title="Link to this heading">#</a></h2>
+<section class="fasb fa-circle-notch" id="anaconda-help">
+<h3>Ayuda de Anaconda<a class="headerlink" href="#anaconda-help" title="Link to this heading">#</a></h3>
+<p>El sitio <a class="reference external" href="https://anaconda.cloud/support-center">Anaconda docs</a> ofrece ayuda y documentación gratuita de la comunidad para las aplicaciones de Anaconda, la instalación de la distribución de Anaconda y el uso del administrador de paquetes y entornos Conda; junto con opciones de soporte pagas.</p>
+</section>
+<section class="fasb fa-flask" id="scipy-org-website">
+<h3>Sitio web de SciPy.org<a class="headerlink" href="#scipy-org-website" title="Link to this heading">#</a></h3>
+<p>El <a class="reference external" href="https://scipy.org/">Scipy website</a> es el hogar central de SciPy, con información, documentación, ayuda, y seguimiento de errores para muchos de los paquetes principales utilizados con Spyder, incluyendo NumPy, SciPy, Matplotlib, Pandas, Sympy y IPython.</p>
+</section>
+<section class="fasb fa-sticky-note" id="project-jupyter">
+<h3>Proyecto Jupyter<a class="headerlink" href="#project-jupyter" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://jupyter.org/">Jupyter</a> es el centro de desarrollo de IPython, el QtConsole de Spyder, los Jupyter notebooks usados con el plugin <a class="reference external" href="https://github.com/spyder-ide/spyder-notebook">Spyder-Notebook</a> y más.</p>
+</section>
+<section class="fabb fa-stack-exchange" id="data-science-stack-exchange">
+<h3>Stack Exchange de Data Science<a class="headerlink" href="#data-science-stack-exchange" title="Link to this heading">#</a></h3>
+<p>El sitio <a class="reference external" href="https://datascience.stackexchange.com/">Data Science</a> en Stack Exchange puede ser muy útil para preguntas que se relacionan más con la ciencia de datos que con la programación específica.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="common-illnesses.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Problemas comunes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="submit-a-report.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Enviar un reporte</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-related-platforms">Plataformas relacionadas con Spyder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-s-faq-section">Sección de preguntas frecuentes (FAQ) de Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-s-youtube-channel">Canal de YouTube de Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-gitter">Gitter de Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-google-group">Grupo de Google de Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-website">Sitio web de Spyder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-overflow-tag">Etiqueta Stack Overflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openteams-support">Soporte de OpenTeams</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-resources">Recursos de Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#official-python-help-page">Página oficial de ayuda de Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-documentation">Documentación de Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-subreddits">Los subreddits de Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-science-scipy-resources">Recursos de ciencia de datos/SciPy:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda-help">Ayuda de Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy-org-website">Sitio web de SciPy.org</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-jupyter">Proyecto Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-science-stack-exchange">Stack Exchange de Data Science</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/troubleshooting/call-for-help.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Mostrar el código
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
