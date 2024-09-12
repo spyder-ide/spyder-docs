@@ -1,0 +1,4511 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
+# This file is distributed under the same license as the Spyder package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spyder 5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../workshops/financial.rst:3
+msgid "Financial Data Analysis with Spyder"
+msgstr ""
+
+#: ../../workshops/financial.rst:5
+msgid ""
+"By the end of this workshop participants will be able to use Spyder "
+"effectively for  applying some normative financial theories and models to"
+" assemble a portfolio of assets in a way that maximizes the expected "
+"return for a given level of risk. In this way, statistically-based tools "
+"are used to construct investment portfolios."
+msgstr ""
+
+#: ../../workshops/financial.rst:11 ../../workshops/plugin-development.rst:15
+#: ../../workshops/scientific-computing.rst:11
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../workshops/financial.rst:13
+msgid ""
+"To follow this workshop we recommend that you have a intermediate "
+"knowledge of Python. You can visit `The Python Tutorial`_ to learn the "
+"basics of this programming language or to refresh your knowledge of "
+"Python."
+msgstr ""
+
+#: ../../workshops/financial.rst:17
+msgid ""
+"You will also need to have `Anaconda "
+"<https://www.anaconda.com/products/individual>`_ (or `Miniconda "
+"<https://docs.conda.io/en/latest/miniconda.html>`_) and Spyder installed."
+" More information about Spyder installation in :doc:`installation "
+"guide<../installation>`."
+msgstr ""
+
+#: ../../workshops/financial.rst:21 ../../workshops/scientific-computing.rst:17
+msgid ""
+"Spyder now offers :ref:`install-standalone` for Windows and macOS, making"
+" it easier to get up and running with the application without having to "
+"download Anaconda or manually install it in your existing environment. "
+"While we still support Anaconda, we recommend this install method on "
+"those platforms to avoid most problems with package conflicts and other "
+"issues."
+msgstr ""
+
+#: ../../workshops/financial.rst:25 ../../workshops/plugin-development.rst:24
+#: ../../workshops/scientific-computing.rst:20
+msgid "It is also desirable to have the following prior knowledge:"
+msgstr ""
+
+#: ../../workshops/financial.rst:27
+msgid "Intermediate level of Python"
+msgstr ""
+
+#: ../../workshops/financial.rst:28
+msgid "Basic knowledge of Statistics"
+msgstr ""
+
+#: ../../workshops/financial.rst:29
+msgid "Some knowledge of Financial Econometrics is desirable"
+msgstr ""
+
+#: ../../workshops/financial.rst:34 ../../workshops/scientific-computing.rst:34
+msgid "Learning goals"
+msgstr ""
+
+#: ../../workshops/financial.rst:36 ../../workshops/scientific-computing.rst:36
+msgid "After completing this workshop, you should be able to:"
+msgstr ""
+
+#: ../../workshops/financial.rst:38
+msgid ""
+"Apply elementary statistical analysis to stock and cryptocurrency "
+"portfolios to measure their performance"
+msgstr ""
+
+#: ../../workshops/financial.rst:39
+msgid ""
+"Understand the advantages of programming with an IDE, such as inspecting "
+"variables using the Variable Explorer and interacting with plots "
+"leveraging the Plots Pane."
+msgstr ""
+
+#: ../../workshops/financial.rst:44 ../../workshops/scientific-computing.rst:45
+msgid "Learner profile"
+msgstr ""
+
+#: ../../workshops/financial.rst:46
+msgid ""
+"This workshop is intended for people interested in finance who want to "
+"take their first steps in Financial Analysis using Python and Spyder."
+msgstr ""
+
+#: ../../workshops/financial.rst:52 ../../workshops/scientific-computing.rst:53
+msgid "Intro"
+msgstr ""
+
+#: ../../workshops/financial.rst:54
+msgid ""
+"In this workshop we will obtain financial data in real-time from `Yahoo! "
+"Finance`_ API and explore financial portfolios using Econometrics and "
+"computational tools."
+msgstr ""
+
+#: ../../workshops/financial.rst:58
+msgid "Why use Python for financial analysis?"
+msgstr ""
+
+#: ../../workshops/financial.rst:60
+msgid ""
+"Real-time analysis of historical and current financial data is essential "
+"for those investing in financial instruments. Python has a number of "
+"features that make it ideal for financial tasks:"
+msgstr ""
+
+#: ../../workshops/financial.rst:62
+msgid ""
+"It is easy to learn for anyone, whether they have previous programming "
+"experience or not"
+msgstr ""
+
+#: ../../workshops/financial.rst:63
+msgid ""
+"It has a variety of specialized mathematical and statistical libraries "
+"(`SciPy <https://scipy.org>`_, `NumPy <https://numpy.org>`_, `Pandas "
+"<https://pandas.pydata.org>`_) that are commonly used for financial "
+"analysis"
+msgstr ""
+
+#: ../../workshops/financial.rst:64
+msgid "It can be connected to APIs for loading financial data in real time"
+msgstr ""
+
+#: ../../workshops/financial.rst:65
+msgid ""
+"It is the programming language with the most resources for machine "
+"learning (supervised learning, unsupervised learning, reinforcement "
+"learning), which is one of the most useful tools for Econometrics "
+"nowadays"
+msgstr ""
+
+#: ../../workshops/financial.rst:66 ../../workshops/scientific-computing.rst:68
+msgid "It has excellent libraries for plotting"
+msgstr ""
+
+#: ../../workshops/financial.rst:67
+msgid ""
+"You can use resources such as `Google Colab "
+"<https://colab.research.google.com>`_ or `Binder <https://mybinder.org>`_"
+" to do your analysis in the cloud."
+msgstr ""
+
+#: ../../workshops/financial.rst:71
+msgid "Why should I use an IDE?"
+msgstr ""
+
+#: ../../workshops/financial.rst:73
+msgid ""
+"Although you can use Python without an IDE (Integrated Development "
+"Environment), you will work much better with one. Spyder is a Scientific "
+"Integrated Development Environment written in Python, and designed by and"
+" for scientists, engineers, and data analysts. Spyder's capabilities and "
+"its integration with Python make it perfect for financial analysis."
+msgstr ""
+
+#: ../../workshops/financial.rst:77
+msgid "Introduction to financial analysis with Spyder"
+msgstr ""
+
+#: ../../workshops/financial.rst:79 ../../workshops/scientific-computing.rst:96
+msgid ""
+"If you're not familiar with Spyder, we recommend you start with our "
+":doc:`Quickstart<../quickstart>`. But if you want a  summary, here's a "
+"quick overview."
+msgstr ""
+
+#: ../../workshops/financial.rst:83
+msgid "If you already have experience with Spyder, you can skip this section."
+msgstr ""
+
+#: ../../workshops/financial.rst:87
+#: ../../workshops/scientific-computing.rst:104
+msgid "Editor"
+msgstr ""
+
+#: ../../workshops/financial.rst:89
+#: ../../workshops/scientific-computing.rst:106
+msgid ""
+"The :doc:`Editor<../panes/editor>` is the place where you write your code"
+" and save it as a file (script). It allows you to easily persist your "
+"work. This is where you write the code you want to keep from the data "
+"analysis you do in IPython Console. **Here you will also be able to read,"
+" edit and run the code from this workshop**."
+msgstr ""
+
+#: ../../workshops/financial.rst:93
+#: ../../workshops/scientific-computing.rst:110
+msgid "IPython Console"
+msgstr ""
+
+#: ../../workshops/financial.rst:95
+#: ../../workshops/scientific-computing.rst:112
+msgid ""
+"The :doc:`IPython Console<../panes/ipythonconsole>` is the Spyder's "
+"component where you write chunks of code that you want to experiment "
+"with. **In this workshop, we are going to give you pieces of code that "
+"you can copy and run in this console**."
+msgstr ""
+
+#: ../../workshops/financial.rst:97
+#: ../../workshops/scientific-computing.rst:114
+msgid ""
+"In essence, the IPython Console allows you to execute commands and "
+"interact with data using Python."
+msgstr ""
+
+#: ../../workshops/financial.rst:101
+#: ../../workshops/scientific-computing.rst:118
+msgid "Variable Explorer"
+msgstr ""
+
+#: ../../workshops/financial.rst:103
+#: ../../workshops/scientific-computing.rst:120
+msgid ""
+"The :doc:`Variable Explorer<../panes/variableexplorer>` is one of "
+"Spyder's best features. It allows you to interactively browse and manage "
+"the objects generated in the code of the currently selected "
+":doc:`../panes/ipythonconsole` session."
+msgstr ""
+
+#: ../../workshops/financial.rst:105
+msgid ""
+"The Variable Explorer is one of the most frequently used components in "
+"this workshop. **This is the pane where we will observe the data and most"
+" of the results of the analysis, except for the plots**."
+msgstr ""
+
+#: ../../workshops/financial.rst:109
+#: ../../workshops/scientific-computing.rst:126
+msgid "Plots pane"
+msgstr ""
+
+#: ../../workshops/financial.rst:111
+msgid ""
+"The :doc:`Plots pane <../panes/plots>` shows all the static graphs and "
+"images created in your IPython Console session. **All plots generated by "
+"the code will appear in this component**.  This pane also allows you to "
+"save each graphic in a local file or copy it to the clipboard to share it"
+" with other people."
+msgstr ""
+
+#: ../../workshops/financial.rst:117
+#: ../../workshops/scientific-computing.rst:140
+msgid "Preparation work"
+msgstr ""
+
+#: ../../workshops/financial.rst:119
+#: ../../workshops/scientific-computing.rst:142
+msgid ""
+"Before starting, you must have installed some packages and libraries "
+"needed to run the code. We recommend you to install these requirements in"
+" a virtual environment. Here we explain step by step how to do it."
+msgstr ""
+
+#: ../../workshops/financial.rst:123
+msgid "Set up Conda environment"
+msgstr ""
+
+#: ../../workshops/financial.rst:125
+#: ../../workshops/scientific-computing.rst:148
+msgid ""
+"If you would like to have Spyder in a dedicated environment to update it "
+"separately from your other packages and avoid any conflicts, you can."
+msgstr ""
+
+#: ../../workshops/financial.rst:127
+#: ../../workshops/scientific-computing.rst:150
+msgid "You can set up your environment in two different ways."
+msgstr ""
+
+#: ../../workshops/financial.rst:131
+msgid ""
+"We recommend creating the virtual environment with Anaconda (or "
+"Miniconda) as it integrates seamlessly with Spyder. You can find "
+"installation instructions in `Anaconda documentation`_."
+msgstr ""
+
+#: ../../workshops/financial.rst:137
+msgid "With commands"
+msgstr ""
+
+#: ../../workshops/financial.rst:139
+msgid ""
+"Just run the following command in your Anaconda Prompt (Windows) or "
+"terminal (other platforms), to create a new environment called "
+"``financial-analysis``:"
+msgstr ""
+
+#: ../../workshops/financial.rst:145
+msgid ""
+"To install Spyder's optional dependencies as well for full functionality,"
+" use the following command:"
+msgstr ""
+
+#: ../../workshops/financial.rst:156
+msgid ""
+"Spyder now offers :ref:`install-standalone` for Windows and macOS, making"
+" it easier to get up and running with the application without having to "
+"download Anaconda or manually install it in your existing environment."
+msgstr ""
+
+#: ../../workshops/financial.rst:160
+msgid "Download the datasets"
+msgstr ""
+
+#: ../../workshops/financial.rst:162
+msgid ""
+"Although during the workshop we will explain how to use some APIs to "
+"download up-to-date data, you can also download the datasets in csv "
+"format from `this link "
+"<https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215>`_."
+msgstr ""
+
+#: ../../workshops/financial.rst:164
+msgid ""
+"To follow this workshop you do not need to create a new directory. "
+"However, if you have downloaded the data and want to use it instead of "
+"the APIs, you must set the directory that has the downloaded data as the "
+"working directory. In order to do this, check that the working directory "
+"is correct. You should see in the upper right corner the path to the "
+"directory where you have the downloaded data. Something like this:"
+msgstr ""
+
+#: ../../workshops/financial.rst:171
+msgid "Setting up the virtual environment in Spyder"
+msgstr ""
+
+#: ../../workshops/financial.rst:173
+msgid ""
+"Let's check that the virtual environment we created is enabled in Spyder."
+" Go to :guilabel:`Preferences > Python interpreter`, and use the dropdown"
+" below :guilabel:`Use the following Python interpreter` to choose your "
+"virtual environment. You should see something like this:"
+msgstr ""
+
+#: ../../workshops/financial.rst:178
+#: ../../workshops/scientific-computing.rst:239
+msgid "Now, you have everything ready to proceed with the workshop."
+msgstr ""
+
+#: ../../workshops/financial.rst:182
+#: ../../workshops/scientific-computing.rst:243
+msgid "Download the code"
+msgstr ""
+
+#: ../../workshops/financial.rst:184
+msgid ""
+"Although the workshop is designed for you to write the code in the "
+"IPython Console, we have created a file that you can download "
+":download:`here <financial-analysis.py>`. This script provides all the "
+"code you will write in this workshop, and you can use it as a guide if "
+"you get lost."
+msgstr ""
+
+#: ../../workshops/financial.rst:190
+msgid "Obtain financial data"
+msgstr ""
+
+#: ../../workshops/financial.rst:192
+msgid ""
+"When it comes to finance, being up to date is very important. So we are "
+"going to use a Python library that allows us to get updated historical "
+"Stock Market records from `Yahoo! Finance`_ API. In this way, we will be "
+"able to download data in the period of time we are interested in "
+"analyzing."
+msgstr ""
+
+#: ../../workshops/financial.rst:197
+#: ../../workshops/scientific-computing.rst:261
+msgid ""
+"Remember to type and run all code for this workshop in the \"IPython "
+"Console\" at the bottom right of Spyder."
+msgstr ""
+
+#: ../../workshops/financial.rst:202
+msgid ""
+"You can also write your code in the Editor (the pane that occupies the "
+"entire left side of Spyder). If you use the Editor, you can run the code "
+"by selecting it and pressing the :guilabel:`Run selection or current "
+"line` button in the :guilabel:`Run toolbar` or by pressing the :kbd:`F9` "
+"key."
+msgstr ""
+
+#: ../../workshops/financial.rst:207
+#: ../../workshops/scientific-computing.rst:271
+msgid "To get started, import the libraries."
+msgstr ""
+
+#: ../../workshops/financial.rst:222
+msgid ""
+"The first group of imports is for basic operations. The second "
+"(``Historic_Crypto`` and ``yfinance``) imports the libraries that we will"
+" use to download financial data."
+msgstr ""
+
+#: ../../workshops/financial.rst:224
+msgid ""
+"Let's start exploring libraries with an example. We are going to get "
+"financial information about Netflix with one line of code:"
+msgstr ""
+
+#: ../../workshops/financial.rst:230
+msgid ""
+"We have used the ``Ticker`` class of the ``yfinance`` library to create a"
+" ``netflix`` object. This object contains attributes and methods that we "
+"can query to obtain various types of information."
+msgstr ""
+
+#: ../../workshops/financial.rst:234
+msgid "General stock information"
+msgstr ""
+
+#: ../../workshops/financial.rst:236
+msgid ""
+"If you want to know which methods and attributes you can query, you can "
+"do so with the built-in ``help()`` function."
+msgstr ""
+
+#: ../../workshops/financial.rst:238
+msgid ""
+"You can also type the name of the object (``netflix``) in the console, "
+"then type a period and hit the Tab key once. IPython suggestions will "
+"then appear to help you navigate the object:"
+msgstr ""
+
+#: ../../workshops/financial.rst:243
+msgid ""
+"For example, we can obtain general information with the ``info`` property"
+" of the object."
+msgstr ""
+
+#: ../../workshops/financial.rst:249
+msgid ""
+"We can observe the result in the Variable Explorer, in the "
+"``netflix_info`` variable."
+msgstr ""
+
+#: ../../workshops/financial.rst:254
+msgid ""
+"If we double-click on it, a new window with detailed information will be "
+"displayed."
+msgstr ""
+
+#: ../../workshops/financial.rst:259
+msgid ""
+"In that window we can see a Python dictionary in which each key has a "
+"value assigned to it. Each type of value is represented by a distinctive "
+"color. For example, we see that Netflix is an Entertainment industry, the"
+" summary of the business type, among other indicators. The Variable "
+"Explorer is a very convenient way to view these types of results. We can "
+"compare it to viewing them in the IPython Console with the ``pprint`` "
+"function:"
+msgstr ""
+
+#: ../../workshops/financial.rst:268
+msgid ""
+"Although ``pprint`` displays all the information, it is easier to view it"
+" in the Variable Explorer."
+msgstr ""
+
+#: ../../workshops/financial.rst:272
+msgid "Historical stock data"
+msgstr ""
+
+#: ../../workshops/financial.rst:274
+msgid ""
+"We can download in a dataset the history of a stock with the following "
+"line of code:"
+msgstr ""
+
+#: ../../workshops/financial.rst:280
+msgid ""
+"We can see a summary and more details of this dataset in the Variable "
+"Explorer. It appears as a DataFrame object, with 7 columns and thousands "
+"of rows. If we double-click on it we will see the historical records of "
+"Netflix stock organized by ascending dates."
+msgstr ""
+
+#: ../../workshops/financial.rst:285
+msgid ""
+"Throughout this workshop we will use this historical information to "
+"compare, with various normative financial theories, different types of "
+"financial portfolios."
+msgstr ""
+
+#: ../../workshops/financial.rst:291
+msgid "First portfolio"
+msgstr ""
+
+#: ../../workshops/financial.rst:293
+msgid ""
+"Let's build our first stock investment portfolio! Say we are interested "
+"in investing in technology, and we want to know what performance can be "
+"obtained by putting money into some of the \"heavyweights\" in this "
+"industry."
+msgstr ""
+
+#: ../../workshops/financial.rst:295
+msgid ""
+"To measure the performance of our first portfolio we are going to use a "
+"classic theory in the world of finance: `mean-variance portfolio (MVP) "
+"theory`_. This model assumes that investors only care about expected "
+"returns and the variance of such returns. The analysis is based entirely "
+"on statistical measures based on a time series of share prices, such as "
+"periodic mean returns and the variances of those returns with the same "
+"periodicity."
+msgstr ""
+
+#: ../../workshops/financial.rst:301
+msgid "Prepare portfolio data"
+msgstr ""
+
+#: ../../workshops/financial.rst:303
+msgid ""
+"Before we start, let's run some lines of code to style the plots.  These "
+"lines are optional, but we recommend that you run them so that the "
+"graphics look like the screenshots we present in this workshop."
+msgstr ""
+
+#: ../../workshops/financial.rst:312
+msgid ""
+"Suppose we want to measure the performance of a portfolio consisting of "
+"Google, Apple, Microsoft, Netflix and Amazon stocks. Let's call this set "
+"``SYMBOLS_1``."
+msgstr ""
+
+#: ../../workshops/financial.rst:320
+msgid ""
+"If you search for ``SYMBOLS_1`` in Variable Explorer you will not find "
+"it: Python interprets this element not as a variable, but as a "
+"**constant**. This is because the name is written with uppercase letters "
+"(no letter is lowercase). By default, the Variable Explorer doesn't show "
+"this, but actually you can change the settings in the "
+":guilabel:`Preferences` to be able to see these constants."
+msgstr ""
+
+#: ../../workshops/financial.rst:322
+msgid ""
+"We are going to download the historical data for this portfolio. To do "
+"this, we are going to use the ``yfinance`` ``download()`` function, which"
+" takes as its first argument a string with the symbols (``SYMBOLS_1``) "
+"defined above. The rest of the arguments are the start date "
+"(``start=\"2012-01-01\"``), the end date (``end=\"2021-01-01\"``) and how"
+" the data will be grouped (``group_by=\"Ticker\"``)."
+msgstr ""
+
+#: ../../workshops/financial.rst:328
+msgid ""
+"The last argument (``group_by=\"Ticker\"``) groups the information mainly"
+" by stock. Otherwise, the primary grouping is done by the type of "
+"information (e.g., opening price, closing price, volume traded) of the "
+"transactions. In the following image you can see the differences (above "
+"is the default organization and below is the grouping by \"Ticker\")."
+msgstr ""
+
+#: ../../workshops/financial.rst:334
+msgid ""
+"The historical data has been downloaded as a Pandas DataFrame. We can "
+"explore this data in the variable ``data_1`` in the Variable Explorer."
+msgstr ""
+
+#: ../../workshops/financial.rst:339
+msgid ""
+"Let's change the formatting of the data a bit so that the symbols appear "
+"as the column names, and the Ticker moves from columns to rows. We will "
+"do this with the ``stack()`` operation of the DataFrame."
+msgstr ""
+
+#: ../../workshops/financial.rst:348
+msgid ""
+"From the Ticker we are only interested in the daily closing price. So we "
+"will leave only the values for ``\"Close\"`` and eliminate the Ticker "
+"column afterwards."
+msgstr ""
+
+#: ../../workshops/financial.rst:354
+msgid ""
+"You will notice that there is a new DataFrame in the Variable Explorer "
+"called ``close_data_1`` with 2,265 rows and 5 columns."
+msgstr ""
+
+#: ../../workshops/financial.rst:358
+msgid "A first glance at the portfolio"
+msgstr ""
+
+#: ../../workshops/financial.rst:360
+msgid ""
+"We want to see how our portfolio would have performed if we had invested "
+"in it from 2012 to early 2021. How could we obtain this measurement? "
+"Let's look at the monthly closing prices of each stock. To do this we "
+"will do an automatic resample of the data. And then we will calculate the"
+" change in relative frequencies (percentages)."
+msgstr ""
+
+#: ../../workshops/financial.rst:362
+msgid ""
+"The resampling will be performed with the ``resample(\"M\")`` method and "
+"the calculation of percentages with the ``pct_change()`` method. The "
+"result will be stored in the ``monthly_data_1`` variable."
+msgstr ""
+
+#: ../../workshops/financial.rst:368
+msgid ""
+"Since each stock is a column, we can use the ``mean()`` method on the "
+"DataFrame to see the results."
+msgstr ""
+
+#: ../../workshops/financial.rst:383
+msgid ""
+"Remember that this closing information represents the relative growth of "
+"each stock, not its closing price in any currency."
+msgstr ""
+
+#: ../../workshops/financial.rst:385
+msgid ""
+"As we can see, all the results are positive, so this portfolio has been "
+"profitable over the years. In relative terms, the biggest gains would "
+"come from Netflix (0.4 percent). These percentages show an average of the"
+" monthly variation of the stock price. But how stable have that prices "
+"been? To find this out, we can calculate the standard deviation of stock "
+"price growth:"
+msgstr ""
+
+#: ../../workshops/financial.rst:398
+msgid ""
+"The highest volatility is found in Netflix (0.1454), which indicates that"
+" its price, despite being the fastest growing, has also had a lot of "
+"variation during these years. The most stable price, on the other hand, "
+"has been Microsoft's (0.0583)."
+msgstr ""
+
+#: ../../workshops/financial.rst:400
+msgid ""
+"A good way to observe both growth and variability is to draw a time-"
+"series plot. To scale the values, we are going to divide the relative "
+"frequency of the closing price of the actions by the initial value it has"
+" in the dataframe ``close_data_1`` (these initial values can be found "
+"with ``close_data_1.iloc[0])``). The plot is drawn with the ``plot()`` "
+"method of the Pandas DataFrame (to which we pass as arguments the size of"
+" the plot and the plot title)."
+msgstr ""
+
+#: ../../workshops/financial.rst:411
+msgid ""
+"You will be able to see the graph in the Plots pane. On the left, you "
+"will see the plot in detail. On the right, a stack will be created with "
+"all the plots that are generated both in the Console and by running the "
+"code directly in the Editor. You can copy, delete or save the plot to "
+"disk by clicking on it with the right mouse button or trackpad."
+msgstr ""
+
+#: ../../workshops/financial.rst:413
+msgid ""
+"The above time-series plot clearly shows the growth of all stocks, "
+"particularly Netflix. The high volatility discussed above can also be "
+"seen. For example, it can be seen from the plots that, due to high "
+"volatility, investing in Netflix in the years 2014 and 2019 left "
+"virtually no profit (if shares were bought at the beginning of the year "
+"and sold right at the end)."
+msgstr ""
+
+#: ../../workshops/financial.rst:415
+msgid ""
+"We can also plot with the ``plot()`` method the DataFrame we already have"
+" with the monthly data. To do this, we will add 1 to all the values and "
+"calculate the accumulated product with the ``cumprod()`` method:"
+msgstr ""
+
+#: ../../workshops/financial.rst:424
+msgid ""
+"This plot of the monthly data is \"smoother\" than the plot of the daily "
+"data."
+msgstr ""
+
+#: ../../workshops/financial.rst:428
+msgid "Returns and volatility"
+msgstr ""
+
+#: ../../workshops/financial.rst:430
+msgid ""
+"Remember that in the *mean-variance portfolio theory* what matters are "
+"the expected returns and variances. To calculate these returns, we will "
+"divide the price of the stock on one day by the price of the same stock "
+"on the previous day. We will do this by dividing the ``close_data_1`` "
+"DataFrame by a version of itself in which we shift each record one date "
+"backwards (``shift(1)``). For example, if on the date 2012-01-03 a stock "
+"was valued at 1, and on the next day (2012-01-02), it was valued at 2, "
+"then in our shifted dataset, on the day 2012-01-03 the stock would be "
+"worth 1. In this way, we would divide 1 by 2. And so on with all the "
+"values of all the shares. We will also normalize the results by passing "
+"them to a logarithmic scale with ``np.log()``."
+msgstr ""
+
+#: ../../workshops/financial.rst:434
+msgid ""
+"Trend lines are more easily drawn in logarithmic scale because they tend "
+"to fit better to the minimums. In addition, the logarithmic scale gives a"
+" more realistic view of price movements."
+msgstr ""
+
+#: ../../workshops/financial.rst:440
+msgid ""
+"In the variable ``rets_1`` you can see the resulting DataFrame. If you "
+"double-click on the variable name in the Variable Explorer, you will see "
+"that there are positive values (the share price increased) and negative "
+"values (the price decreased at the time of closing)."
+msgstr ""
+
+#: ../../workshops/financial.rst:445
+msgid ""
+"In addition to the returns of each stock, we will need the specific "
+"weight of each stock in the portfolio, i.e., how many shares of each "
+"company are in the portfolio. In this workshop we will assume that there "
+"is one share of each company and, therefore, the weights will be "
+"distributed equally."
+msgstr ""
+
+#: ../../workshops/financial.rst:449
+msgid ""
+"A stock is a financial security that represents that you own a part of a "
+"company (whatever the size of this part). A share, on the other hand, is "
+"the smallest unit of denomination of a stock. A stock is composed of one "
+"or several shares."
+msgstr ""
+
+#: ../../workshops/financial.rst:451
+msgid ""
+"This weight will be a vector (Python list) composed of the relative "
+"weight (between 0 and 1) of each stock in the portfolio. The sum of these"
+" weights has to be 1. Since we will assume that each stock is a single "
+"share, the distribution will be equal: ``[0.2, 0.2, 0.2, 0.2, 0.2]``."
+msgstr ""
+
+#: ../../workshops/financial.rst:457
+msgid ""
+"With this information we can calculate the expected return of this "
+"portfolio. The math is simple: this is given by the dot product of the "
+"portfolio weights vector and the vector of expected returns. This result "
+"must be multiplied by the number of days for which the return is to be "
+"calculated (a year has approximately 252 stock price closings)."
+msgstr ""
+
+#: ../../workshops/financial.rst:459
+msgid "Let's put all this into a function:"
+msgstr ""
+
+#: ../../workshops/financial.rst:466
+msgid ""
+"Let's look at the expected return of this portfolio if we hold it for one"
+" year:"
+msgstr ""
+
+#: ../../workshops/financial.rst:474
+#, python-format
+msgid ""
+"An expected gain of almost 30% in one year. Not bad, right? But don't "
+"forget the other side of this coin: volatility. This calculation is a bit"
+" more complex. First, the dot product of the annualized covariance of the"
+" returns (this is multiplied by the number of trading days in a year) and"
+" the weights is calculated. Then the dot product of the weights and the "
+"previous result is obtained. Finally, the square root of this result is "
+"extracted. Let's implement this into a function as well."
+msgstr ""
+
+#: ../../workshops/financial.rst:481
+msgid "Let's see how our portfolio performs with respect to its volatility:"
+msgstr ""
+
+#: ../../workshops/financial.rst:489
+msgid ""
+"If high return is desirable, high volatility is undesirable. The risk of "
+"this portfolio is relatively large."
+msgstr ""
+
+#: ../../workshops/financial.rst:493
+msgid "Sharpe ratio"
+msgstr ""
+
+#: ../../workshops/financial.rst:495
+msgid ""
+"The `Sharpe`_ ratio or index is a measure of portfolio performance. It "
+"relates the portfolio's return to its volatility, comparing the "
+"expected/realized return with the expected/realized risk. It is "
+"calculated as the difference between the actual investment returns and "
+"the expected return in a zero-risk situation, divided by the volatility "
+"of the investment. **It provides a model of the additional amount of "
+"returns received for each additional unit of risk**."
+msgstr ""
+
+#: ../../workshops/financial.rst:499
+msgid "Let's formalize this in a function:"
+msgstr ""
+
+#: ../../workshops/financial.rst:506
+msgid "And let's apply this to our portfolio."
+msgstr ""
+
+#: ../../workshops/financial.rst:516
+msgid ""
+"The Sharpe ratio measure is best understood in context: when comparing "
+"two or more portfolios, the one with the higher Sharpe ratio provides "
+"more profit for the same amount of risk."
+msgstr ""
+
+#: ../../workshops/financial.rst:518
+msgid ""
+"We can also use a `Monte Carlo "
+"<https://en.wikipedia.org/wiki/Monte_Carlo_method>`_ simulation to "
+"randomize the weights of each stock in the portfolio so that we can see "
+"the range over which the Sharpe ratio can vary. In this way we can plot "
+"some scenarios that together will give us a good insight of the "
+"relationship between expected returns and expected volatility."
+msgstr ""
+
+#: ../../workshops/financial.rst:520
+msgid ""
+"We are going to do this with a function that we will explain step by step"
+" in the `monte_carlo_sharpe function explained`_ section."
+msgstr ""
+
+#: ../../workshops/financial.rst:538
+msgid ""
+"You do not need to type the following code in the IPython Console. If you"
+" write the function above it will be enough. It is just a code "
+"presentation to explain what is inside the function."
+msgstr ""
+
+#: ../../workshops/financial.rst:542
+msgid "``monte_carlo_sharpe`` function explained"
+msgstr ""
+
+#: ../../workshops/financial.rst:544
+msgid ""
+"Let's now break the function down to understand what is happening. First,"
+" we create a numpy array of length 1,000 and width of the number of "
+"shares in the portfolio. Each row of the array has random weights that "
+"always add up to 1:"
+msgstr ""
+
+#: ../../workshops/financial.rst:552
+msgid ""
+"The next section calculates the volatility and returns for the new random"
+" weights using a list comprehension. The resulting list is transformed "
+"back into a numpy array:"
+msgstr ""
+
+#: ../../workshops/financial.rst:559
+msgid ""
+"Finally, we obtain the Sharpe ratio by dividing the index 1 "
+"(volatilities) by the index 0 (returns) of the numpy array:"
+msgstr ""
+
+#: ../../workshops/financial.rst:567
+msgid "Using the ``monte_carlo_sharpe`` function"
+msgstr ""
+
+#: ../../workshops/financial.rst:569
+msgid ""
+"We use the function to get the simulated returns and volatility of "
+"portfolio 1 (``port_1_vr``) and the related Sharpe ratios "
+"(``port_1_sr``)."
+msgstr ""
+
+#: ../../workshops/financial.rst:571
+msgid "Enter the following code in the console."
+msgstr ""
+
+#: ../../workshops/financial.rst:579
+msgid ""
+"Remember that the weights are initialized randomly, so each time you run "
+"this code you will get different results."
+msgstr ""
+
+#: ../../workshops/financial.rst:581
+msgid ""
+"With this we obtain two arrays with 1,000 simulated cases for our "
+"portfolio. But the best way to explore this is with a plot."
+msgstr ""
+
+#: ../../workshops/financial.rst:593
+msgid "You should see in the Plots pane something like this:"
+msgstr ""
+
+#: ../../workshops/financial.rst:598
+msgid ""
+"A roughly linear relationship can be observed between returns and "
+"volatility: the higher the volatility, the higher the gains. And the "
+"Sharpe ratio shows an important amount of variability (it is noticeable "
+"in the \"width\" of the line drawn)."
+msgstr ""
+
+#: ../../workshops/financial.rst:600
+msgid ""
+"This seems to be a good portfolio because it has a good performance with "
+"a not very large variance."
+msgstr ""
+
+#: ../../workshops/financial.rst:604
+msgid "Optimal portfolio weights"
+msgstr ""
+
+#: ../../workshops/financial.rst:606
+msgid ""
+"Can we use the data obtained to calculate the optimal weights for the "
+"portfolio by year? Of course we can. Let's start by delimiting the "
+"previous years as variables."
+msgstr ""
+
+#: ../../workshops/financial.rst:612
+msgid "We will now write a function to calculate these optimal weights."
+msgstr ""
+
+#: ../../workshops/financial.rst:629
+msgid ""
+"Let's describe this function in broad strokes. ``bounds`` indicates the "
+"maximum and minimum weights for each stock in the portfolio. The lowest "
+"weight will be 0 and the highest weight will be 1 for each stock in the "
+"portfolio. ``constraints`` is a function that ensures that the sum of the"
+" weights of all actions always adds up to 1. Then a loop is initialized "
+"that will segment the data for each year. In the variable ``_rets`` the "
+"returns for the specified year are obtained. In ``_opt_w`` the "
+"``portfolio_shape()`` function is used to calculate the weights that "
+"maximize the Sharpe ratio. This is done with the ``minimize()`` function "
+"of SciPy (which takes as arguments the ``portfolio_shape`` function, the "
+"actual weights of our stocks in the portfolio, and the ``bounds`` and the"
+" ``constraints`` variables). Notice the ``-`` sign before "
+"``portfolio_sharpe``? It's because ``minimize()`` aims to find the "
+"minimum value of a function relative to a parameter, but we are "
+"interested in the maximum, so we make the result of ``portfolio_sharpe`` "
+"a negative one."
+msgstr ""
+
+#: ../../workshops/financial.rst:631
+msgid ""
+"We will use the function we just defined to calculate the optimal weights"
+" for each year, and we are going to save the result in a Pandas DataFrame"
+" to take advantage of the Variable Explorer display options."
+msgstr ""
+
+#: ../../workshops/financial.rst:639
+msgid ""
+"Double click on the ``port_1_ow`` variable in the Variable Explorer. In "
+"the table, you can specify the number of decimal places to display, by "
+"clicking the format button at the bottom left of the pane, as you can see"
+" in the following image:"
+msgstr ""
+
+#: ../../workshops/financial.rst:644
+msgid ""
+"We set the number of decimal places to 4 and uncheck the **Column "
+"min/max** checkbox to better appreciate the contrasts in the row values "
+"(years)."
+msgstr ""
+
+#: ../../workshops/financial.rst:646
+msgid ""
+"You can see, for example, how 2015 was a particularly good year for "
+"investing in Amazon and Netflix, while 2014 was the year of Apple. "
+"Despite Netflix's rapid growth over the years, its high volatility means "
+"that its Sharpe Ratio is not very remarkable in any year, especially (as "
+"we said above) in 2014 and 2019. In the same respect, Apple and Microsoft"
+" seem to be safer bets in the return/volatility ratio."
+msgstr ""
+
+#: ../../workshops/financial.rst:650
+msgid "Comparison of expected and realized returns"
+msgstr ""
+
+#: ../../workshops/financial.rst:652
+msgid ""
+"Finally, we will use the optimal weights to calculate the expected "
+"returns and compare them with the actual returns."
+msgstr ""
+
+#: ../../workshops/financial.rst:668
+msgid ""
+"In this function we compare year to year realized returns with "
+"theoretically expected returns. This is done by estimating:"
+msgstr ""
+
+#: ../../workshops/financial.rst:670
+msgid ""
+"The returns from applying the optimal weights of the previous year's "
+"stocks to the data for that same year (``expected_pr``)."
+msgstr ""
+
+#: ../../workshops/financial.rst:671
+msgid ""
+"The returns from applying the optimal weights of the previous year's "
+"stocks to the following year's data (``realized_pr``)."
+msgstr ""
+
+#: ../../workshops/financial.rst:673
+msgid ""
+"We are going to apply this function to the data in portfolio 1 and store "
+"the results in a DataFrame that we can review in the Variable Explorer."
+msgstr ""
+
+#: ../../workshops/financial.rst:680
+msgid ""
+"The expected column shows the predicted values if the optimal portfolio "
+"composition had been used. The realized column, on the other hand, shows "
+"the actual profits that would have been obtained with those weights. It "
+"can be seen that there are notable differences in some years. Let's look "
+"at this in a plot."
+msgstr ""
+
+#: ../../workshops/financial.rst:689
+msgid ""
+"The most notable differences are seen in 2014 and 2016. In those years, "
+"the previous year's optimal portfolio weights (in blue in the above plot)"
+" are a lousy indicator of the following year's stock performance (in "
+"red). In 2013, our model estimated that Google and Netflix were excellent"
+" investments. But by 2014 their share price did not grow if we compare "
+"the price at the beginning and at the end of that year. And something "
+"similar happened in 2016, in which Amazon's growing trend of the previous"
+" year diminished, and the value of Microsoft and Apple shares grew."
+msgstr ""
+
+#: ../../workshops/financial.rst:691
+msgid "Let's summarize these numbers."
+msgstr ""
+
+#: ../../workshops/financial.rst:701
+msgid ""
+"Our optimal weight model offered us a profit of around 40%, but the "
+"profit we would have obtained, due to real market fluctuations, would "
+"have been almost 20%. Not bad, but the mean-variance portfolio model we "
+"have applied for annual calculations is not very accurate, is it?"
+msgstr ""
+
+#: ../../workshops/financial.rst:703
+msgid ""
+"And this result is less encouraging if we calculate the correlations "
+"between expected and realized profits."
+msgstr ""
+
+#: ../../workshops/financial.rst:713
+msgid ""
+"As we can see, the correlations are negative, which warns us that we "
+"should be cautious when using this type of modeling."
+msgstr ""
+
+#: ../../workshops/financial.rst:719
+msgid "Second portfolio"
+msgstr ""
+
+#: ../../workshops/financial.rst:721
+msgid ""
+"We are now going to apply all the previous code with a portfolio of a "
+"different nature. Let's assume that instead of technology companies, we "
+"are now interested in pharmaceuticals. We will build a portfolio with "
+"stocks of Pfizer, Astra Zeneca, Johnson & Johnson."
+msgstr ""
+
+#: ../../workshops/financial.rst:725
+msgid "Download the data"
+msgstr ""
+
+#: ../../workshops/financial.rst:727
+msgid "Let's download the data and format it."
+msgstr ""
+
+#: ../../workshops/financial.rst:740
+msgid ""
+"If you do not want to use the yfinance API, you can download the "
+"``close_data_2.csv`` file containing the closing information for this "
+"portfolio. Copy this file to your working directory. Load the data with "
+"the following instruction:  ``>>> close_data_2 = "
+"pd.read_csv(\"close_data_2.csv\")``."
+msgstr ""
+
+#: ../../workshops/financial.rst:744
+msgid "Mean and standard deviation"
+msgstr ""
+
+#: ../../workshops/financial.rst:746
+msgid ""
+"We are going to put the data in a monthly format and observe the mean and"
+" standard deviation."
+msgstr ""
+
+#: ../../workshops/financial.rst:768
+msgid ""
+"As in portfolio 1, all means are positive. But its largest value (that of"
+" JNJ) barely reaches 1% per month, which is slower growth than that of "
+"portfolio 1. The variation is also smaller compared to that of the "
+"previous portfolio (here the largest deviation is 0.06) which makes it a "
+"lower risk investment."
+msgstr ""
+
+#: ../../workshops/financial.rst:772
+msgid "Daily and monthly timelines"
+msgstr ""
+
+#: ../../workshops/financial.rst:774
+msgid "Let's better visualize the above with a couple of charts."
+msgstr ""
+
+#: ../../workshops/financial.rst:791
+msgid ""
+"These two plots show a steady growth over the years, but also a high "
+"variability in each year. This seems to be a good portfolio only if taken"
+" as a long-term investment."
+msgstr ""
+
+#: ../../workshops/financial.rst:795
+msgid "Returns, volatility and Sharpe ratio"
+msgstr ""
+
+#: ../../workshops/financial.rst:797
+msgid ""
+"To confirm what was said in the previous section, let's calculate "
+"returns, volatility and Sharpe ratio."
+msgstr ""
+
+#: ../../workshops/financial.rst:811
+msgid ""
+"The return of this portfolio is significantly lower than that of the "
+"previous portfolio (0.0809 < 0.2859). Its volatility (0.1637 < 0.2370) is"
+" also lower, but to a lesser extent. This is reflected in a lower Sharpe "
+"ratio as well (0.4940 < 1.2062). This means, within the mean-variance "
+"theory approach, that the first portfolio is a better investment than the"
+" second one."
+msgstr ""
+
+#: ../../workshops/financial.rst:813
+msgid ""
+"The different behavior is clearly observed if we apply a Monte Carlo "
+"simulation and visualize it with a graph:"
+msgstr ""
+
+#: ../../workshops/financial.rst:830
+msgid ""
+"High volatility does not correspond in most cases with high returns. In "
+"fact, there are scenarios in the simulation in which higher expected "
+"returns are related to lower expected volatility."
+msgstr ""
+
+#: ../../workshops/financial.rst:834
+msgid "Optimal pharmaceutical stock weights"
+msgstr ""
+
+#: ../../workshops/financial.rst:836
+msgid ""
+"Let us now see what are the optimal weights for each stock using the "
+"``optimal_weights`` function."
+msgstr ""
+
+#: ../../workshops/financial.rst:849
+msgid ""
+"In addition, we can use these optimal weights to plot the expected and "
+"realized returns of this portfolio for each year."
+msgstr ""
+
+#: ../../workshops/financial.rst:861
+msgid ""
+"Due to the high volatility of this portfolio, our model has not been able"
+" to adequately forecast expected returns in several of the years. Higher "
+"than expected returns would have been realized in 2013 and 2017, but in "
+"2015 and 2018 using the model would have generated losses."
+msgstr ""
+
+#: ../../workshops/financial.rst:863
+msgid ""
+"Finally, let us look at the differences between the expected and realized"
+" means, and the linear correlation between the data."
+msgstr ""
+
+#: ../../workshops/financial.rst:881
+msgid ""
+"As we can see, the model with optimal weights predicted a return close to"
+" 15% per year, but the realized return would have barely reached 6%. And "
+"the negative correlations show, as with portfolio 1, that there does not "
+"seem to be any correspondence between these values."
+msgstr ""
+
+#: ../../workshops/financial.rst:883
+msgid ""
+"The comparison is then favorable for portfolio 1. But what if we compare "
+"portfolio 1 with a \"higher risk\" investment such as cryptocurrencies? "
+"Let's discuss it below."
+msgstr ""
+
+#: ../../workshops/financial.rst:889
+msgid "Third portfolio"
+msgstr ""
+
+#: ../../workshops/financial.rst:892
+msgid "Download cryptocurrencies data"
+msgstr ""
+
+#: ../../workshops/financial.rst:894
+msgid ""
+"Our third portfolio will consist of three cryptocurrencies: bitcoin "
+"(BTC), ethereum (ETH) and litecoin (LTC). To access historical data, we "
+"are going to use a library called **Historic-Crypto**."
+msgstr ""
+
+#: ../../workshops/financial.rst:898
+msgid ""
+"If you want to make use of the data without the Historic-Crypto library, "
+"you can `download the dataset "
+"<https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215>`_"
+" \"crypto_hist.csv\" in your working directory, and load it in memory "
+"with the instruction ``crypto_hist = pd.read_csv(\"crypto_hist.csv\")``, "
+"and skip to section `Monthly data`_."
+msgstr ""
+
+#: ../../workshops/financial.rst:900
+msgid "Import the libraries:"
+msgstr ""
+
+#: ../../workshops/financial.rst:907
+msgid ""
+"We are going to use the ``Cryptocurrencies`` class to obtain a list of "
+"available cryptocurrencies."
+msgstr ""
+
+#: ../../workshops/financial.rst:915
+msgid ""
+"If you want more information about the use of this library you can make a"
+" quick query using the Spyder Help panel (type in the console "
+"``Cryptocurrencies`` and use :kbd:`Ctrl-I` or :kbd:`Cmd-I` to display "
+"it). Or you can read the documentation in their `official repository "
+"<https://github.com/David-Woroniuk/Historic_Crypto>`_"
+msgstr ""
+
+#: ../../workshops/financial.rst:917
+msgid ""
+"A new variable has appeared in the Variable Explorer: ``crypto_list``. It"
+" is a Pandas DataFrame that has a basic description of the types of "
+"cryptocurrency transactions. For example, we can look up which token is "
+"the token for ethereum transactions in US dollars."
+msgstr ""
+
+#: ../../workshops/financial.rst:923
+msgid "In this case, we are interested in the symbol with ID 171: ETH-USD."
+msgstr ""
+
+#: ../../workshops/financial.rst:925
+msgid ""
+"We can use the HistoricalData class of Historic-Crypto to download the "
+"history of transactions done in the cryptocurrencies of our portfolio, in"
+" US dollars."
+msgstr ""
+
+#: ../../workshops/financial.rst:946
+msgid ""
+"Let's merge the resulting dataframes to have all the data in a single "
+"table."
+msgstr ""
+
+#: ../../workshops/financial.rst:953
+msgid ""
+"We will not present the procedures and code in this section, but only the"
+" results of the analysis. You can follow the steps in the previous "
+"sections to recreate these results."
+msgstr ""
+
+#: ../../workshops/financial.rst:957
+msgid ""
+"Use all this section on portfolio 3 to check your understanding of the "
+"concepts and code we have presented until now. If you have any questions,"
+" you can consult the :download:`code <financial-analysis.py>` code that "
+"accompanies this workshop. But we encourage you to try as much as "
+"possible to solve the code on your own."
+msgstr ""
+
+#: ../../workshops/financial.rst:961
+msgid "Monthly data"
+msgstr ""
+
+#: ../../workshops/financial.rst:963
+msgid "Let's take a look at the monthly history of cryptocurrency price growth."
+msgstr ""
+
+#: ../../workshops/financial.rst:968
+msgid ""
+"We can note that the scale here is much larger. And the proportion of ETH"
+" growth over the other two coins is quite remarkable."
+msgstr ""
+
+#: ../../workshops/financial.rst:972
+msgid "Return, volatility and Sharpe ratio"
+msgstr ""
+
+#: ../../workshops/financial.rst:974
+msgid "Let's consider the return, volatility and Sharpe ratio of this portfolio."
+msgstr ""
+
+#: ../../workshops/financial.rst:976
+msgid "Return: 0.6203"
+msgstr ""
+
+#: ../../workshops/financial.rst:977
+msgid "Volatility: 0.7587"
+msgstr ""
+
+#: ../../workshops/financial.rst:978
+msgid "Sharpe: 0.8176"
+msgstr ""
+
+#: ../../workshops/financial.rst:980
+msgid ""
+"These numbers are higher than those obtained for portfolios 1 and 2, "
+"except for the Sharpe ratio. This is a very volatile portfolio (in fact "
+"three times more volatile than that of the technology companies), and "
+"that makes it ultimately not as profitable as portfolio 1. The returns "
+"are higher (almost double) but the risk may not compensate for it."
+msgstr ""
+
+#: ../../workshops/financial.rst:984
+msgid "Monte carlo simulation"
+msgstr ""
+
+#: ../../workshops/financial.rst:986
+msgid ""
+"The Monte Carlo simulation also shows the non-linear correlation between "
+"risk and returns (as you can see, sometimes high risk involves only "
+"modest profits):"
+msgstr ""
+
+#: ../../workshops/financial.rst:991
+msgid ""
+"As can be seen, there are points (bottom right) that show a very high "
+"volatility and yet have a very low expected return. In this sense, "
+"portfolio 1 represents a safer investment because the higher risk is "
+"consistently offset by higher returns."
+msgstr ""
+
+#: ../../workshops/financial.rst:995
+msgid "Optimal cryptocurrency weights"
+msgstr ""
+
+#: ../../workshops/financial.rst:1000
+msgid ""
+"The optimal portfolio weights, if calculated annually, suggest that our "
+"portfolio should have been quite polarized in some years: the "
+"recommendation is to have bought only bitcoins before the start of 2016 "
+"and 2019, and only ethereum in 2018. Starting 2017 and 2020, on the other"
+" hand, our weights recommended a more balanced investment between bitcoin"
+" and ethereum. Litecoin is not recommended by our model."
+msgstr ""
+
+#: ../../workshops/financial.rst:1004
+msgid "Expected and realized returns"
+msgstr ""
+
+#: ../../workshops/financial.rst:1009
+msgid ""
+"In this graph we can see that in 2017 and 2020 the earnings obtained "
+"would have exceeded the expected earnings (with our calculated weights). "
+"In 2019 our model predicted a sharp drop in the portfolio, but in reality"
+" the portfolio did not make either annualized gains or losses that year. "
+"In contrast, in 2018, our model would have brought us heavy losses, as "
+"the value of cryptocurrencies declined sharply that year."
+msgstr ""
+
+#: ../../workshops/financial.rst:1011
+msgid ""
+"The mean expected return for our portfolio is 0.6972, which is higher "
+"than the realized return of 0.4181 that we would have obtained. Having "
+"invested in this portfolio over the long term (from 2016 to the present) "
+"would have been a very good deal. Due to the high variability, investing "
+"in the short term would have been very risky. In terms of gross profits, "
+"the realized returns of this portfolio were more than double those of "
+"portfolio 1 (0.4181 > 0.1997)."
+msgstr ""
+
+#: ../../workshops/financial.rst:1017
+#: ../../workshops/plugin-development.rst:1394
+#: ../../workshops/scientific-computing.rst:751
+msgid "Final words"
+msgstr ""
+
+#: ../../workshops/financial.rst:1019
+msgid ""
+"The mean-variance portfolio (MVP) theory is one of the many tools "
+"available to financial analysis. In recent years, machine learning "
+"algorithms have even been used to predict the behavior of stock prices "
+"more accurately than can be achieved with any standard financial theory."
+msgstr ""
+
+#: ../../workshops/financial.rst:1021
+msgid ""
+"The examples given during this workshop are not intended to serve as "
+"guidelines for you to invest your money. It is only a first step towards "
+"learning financial analysis using Python and a scientific IDE."
+msgstr ""
+
+#: ../../workshops/financial.rst:1023
+#: ../../workshops/plugin-development.rst:1402
+#: ../../workshops/scientific-computing.rst:759
+msgid "In this workshop you have learned how to:"
+msgstr ""
+
+#: ../../workshops/financial.rst:1025
+#: ../../workshops/scientific-computing.rst:761
+msgid "Set up a Conda environment."
+msgstr ""
+
+#: ../../workshops/financial.rst:1026
+msgid "Use the Spyder Editor to write and run code."
+msgstr ""
+
+#: ../../workshops/financial.rst:1027
+msgid "Write and test code with the IPython Console."
+msgstr ""
+
+#: ../../workshops/financial.rst:1028
+msgid "Obtain financial data using an API."
+msgstr ""
+
+#: ../../workshops/financial.rst:1029
+msgid "Graphing data."
+msgstr ""
+
+#: ../../workshops/financial.rst:1030
+#: ../../workshops/scientific-computing.rst:764
+msgid "Inspect objects in the Variable Explorer."
+msgstr ""
+
+#: ../../workshops/financial.rst:1031
+#: ../../workshops/scientific-computing.rst:766
+msgid "Browse between plots using the Plots pane."
+msgstr ""
+
+#: ../../workshops/financial.rst:1032
+#: ../../workshops/scientific-computing.rst:768
+msgid "Manipulate data in a Pandas DataFrame."
+msgstr ""
+
+#: ../../workshops/financial.rst:1033
+msgid "Build a financial portfolio."
+msgstr ""
+
+#: ../../workshops/financial.rst:1034
+msgid "Calculate returns and volatility of a portfolio over time."
+msgstr ""
+
+#: ../../workshops/financial.rst:1035
+msgid "Obtain the optimal weights of the stocks in a portfolio."
+msgstr ""
+
+#: ../../workshops/financial.rst:1037
+msgid ""
+"With the skills learned here, you will be able to approach more complex "
+"topics of financial analysis such as those you will find in the "
+"references in the next section."
+msgstr ""
+
+#: ../../workshops/financial.rst:1039
+#: ../../workshops/scientific-computing.rst:774
+msgid ""
+"Thank you for reaching the end of this workshop! We hope you found it "
+"helpful and informative."
+msgstr ""
+
+#: ../../workshops/financial.rst:1041
+#: ../../workshops/plugin-development.rst:1422
+msgid ""
+"If you are interested in an introduction to scientific computing with "
+"Spyder, you can visit the workshop :doc:`Scientific Computing and "
+"Visualization with Spyder <../workshops/scientific-computing>`."
+msgstr ""
+
+#: ../../workshops/financial.rst:1045
+#: ../../workshops/plugin-development.rst:1429
+#: ../../workshops/scientific-computing.rst:780
+msgid "Homework"
+msgstr ""
+
+#: ../../workshops/financial.rst:1047
+msgid ""
+"If you want to check what you have learned, we suggest you try to obtain "
+"the results presented for the third portfolio. If you have any questions,"
+" you can consult the code that accompanies this workshop in our "
+"repository."
+msgstr ""
+
+#: ../../workshops/financial.rst:1053
+#: ../../workshops/plugin-development.rst:1436
+#: ../../workshops/scientific-computing.rst:788
+msgid "Further reading"
+msgstr ""
+
+#: ../../workshops/financial.rst:1055
+msgid ""
+"Much of the math used to apply MVP was the mathematics outlined in Yves "
+"Hilpisch's excellent book, which we recommend to you:"
+msgstr ""
+
+#: ../../workshops/financial.rst:1057
+msgid "Yves Hilpisch, Y. (2020). *Artificial Intelligence in Finance*. O'Reilly.*"
+msgstr ""
+
+#: ../../workshops/financial.rst:1059
+msgid ""
+"A classic that has been with us for decades and is one of Warren "
+"Buffett's favorites:"
+msgstr ""
+
+#: ../../workshops/financial.rst:1061
+msgid "Graham, B. (1949). *The Intelligent Investor*. HarperCollins."
+msgstr ""
+
+#: ../../workshops/financial.rst:1063
+msgid ""
+"Another good resource for financial analysis with Python is the following"
+" book by James Ma Weiming:"
+msgstr ""
+
+#: ../../workshops/financial.rst:1065
+msgid "Ma Weiming, J. (2019). *Mastering Python for Finance*. Packt"
+msgstr ""
+
+#: ../../workshops/index.rst:3
+msgid "Workshops"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:3
+msgid "Plugin Development with Spyder"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:5
+msgid ""
+"This workshop reviews the features and possibilities of the API offered "
+"by `Spyder`_ 5—the recently released version of our favorite IDE for "
+"scientific Python—for plugin development and to extend its functionality."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:7
+msgid ""
+"As a practical exercise, we will develop a simple plugin that "
+"incorporates a configurable pomodoro timer in the status bar and some "
+"toolbar buttons to interact with it."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:17
+#: ../../workshops/scientific-computing.rst:13
+msgid ""
+"You will need to have Spyder installed. Visit our :doc:`installation "
+"guide<../installation>` for more information."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:21
+msgid ""
+"Spyder now offers :ref:`install-standalone` for Windows and macOS, making"
+" it easier to get up and running with the application without having to "
+"download Anaconda or manually install it in your existing environment. "
+"However, readers of this workshop should install Spyder using Anaconda or"
+" Miniconda, as standalone installers currently do not allow to add extra "
+"packages like the plugin we are going to develop in this workshop."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:26
+#: ../../workshops/scientific-computing.rst:22
+msgid ""
+"Basic level of Python. You can visit `The Python Tutorial`_ to learn the "
+"basics of this programming language."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:27
+msgid ""
+"Know the basics of Qt application development using Python, either with "
+"`PyQT`_ or `PySide`_."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:29
+msgid ""
+"To quickly get started in desktop application development with Qt and "
+"Python here is a set of open access resources:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:31
+msgid "`Tutorials Point - PyQt tutorial`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:32
+msgid "`Real Python - PyQt entries`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:33
+msgid "`Guru99 - PyQt tutorial`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:34
+msgid "`Python GUIs - PyQt and PySide tutorials`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:46
+msgid "Learning Goals"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:48
+msgid "By the end of this workshop participants will know:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:50
+msgid ""
+"The basics to develop plugins for Spyder, and get a general idea of its "
+"inner workings."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:51
+msgid "What types of plugins can be developed with Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:52
+msgid ""
+"The structure of a plugin and the functionality of each component and how"
+" it connects to Spyder to extend its features."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:53
+msgid ""
+"How to package and publish our plugin so that it can be easily installed "
+"and used by others."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:59
+msgid "Spyder for developers"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:61
+msgid ""
+"The best place to find information about contributing to Spyder or "
+"developing for Spyder is its Github repository, in particular the "
+"`contribution guide`_."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:66
+msgid ""
+"The core of **Spyder** is `Spyder-IDE`_ , a desktop application developed"
+" in *Qt*, which requires for its operation two packages with it is "
+"closely related (and without which it cannot work): *spyder-kernels* and "
+"*python-lsp-server*."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:68
+msgid ""
+"`Qt`_ is an open source multiplatform widget toolkit for creating native "
+"graphical user interfaces. Qt is a very complete development framework "
+"that offers utilities for building applications, and has extensions for "
+"Networking, Bluetooth, Charts, 3D rendering, Navigation (as GPS), among "
+"others."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:70
+msgid ""
+"Spyder uses `qtpy`_ which is an abstraction layer that allows you to work"
+" with Qt from Python regardless of whether you use either of the two "
+"reference libraries: PyQt or PySide."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:72
+msgid ""
+"`spyder-kernels`_ provide Jupyter kernels to Spyder, for use within its "
+"consoles."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:76
+msgid ""
+"Spyder is currently developed in such a way that most of its features are"
+" implemented as plugins."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:89
+msgid "Types of plugins we can develop in Spyder"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:97
+msgid ""
+"A plugin is a component that adds functionality to an application, it can"
+" be a graphical component, for example, to display maps, or a non-"
+"graphical one that adds additional syntax coloring schemes."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:99
+msgid ""
+"Formally, plugins are instances of Qt classes that modify the behavior of"
+" Spyder. Aside from a few fundamental components, most of Spyder's "
+"functionality arises from the interaction of plugins of two types:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:104
+msgid "SpyderDockablePlugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:106
+msgid ""
+"It is a plugin that works as a `QDockWidget`_, this is a Qt class that "
+"provides a graphical control that can be docked inside a `QMainWindow`_ "
+"or floated as a top-level window on the desktop."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:113
+msgid "SpyderPluginV2"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:115
+msgid ""
+"``SpyderPluginV2`` is a plugin that does not create a new dock widget on "
+"Spyder's main window. In fact, ``SpyderPluginV2`` is the parent class of "
+"``SpyderDockablePlugin``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:120
+msgid "Discovering Spyder plugins"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:124
+msgid ""
+"If we look at the Spyder interface, we can find a number of different "
+"panes on the right side (with the default layout), such as *Help*, "
+"*Variable Explorer*, *Plots*, *Files* and *History*."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:126
+msgid ""
+"Each of these panes is a ``SpyderDockablePlugin`` that offers an *Undock*"
+" option by clicking the hamburger menu button in the upper right corner."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:128
+msgid ""
+"These plugins can also be hidden or shown via their entry in the *View > "
+"Panes* menu, or using its corresponding keyboard shortcut displayed "
+"there."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:132
+msgid ""
+"High-level interface elements that do not offer an undocking option are "
+"basically instances of ``SpyderPluginV2``. These are typically used to "
+"handle more abstract functionality."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:134
+msgid ""
+"Examples of this are the *appearance* and *layout* plugins that manage "
+"Spyder's code color schemes and window layouts respectively."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:136
+msgid ""
+"Other examples of this type of plugins are the *main menu* and keyboard "
+"*shortcuts*. Some graphical elements, such as the main toolbar and the "
+"status bar are also instances of the ``SpyderPluginV2`` class."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:142
+msgid "What will we do?"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:144
+msgid ""
+"Our practical work will consist in the implementation of the Pomodoro "
+"technique for time management in the Spyder interface."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:151
+msgid ""
+"The `Pomodoro Technique`_, designed by Francesco Cirillo, is a time "
+"management practice used to increase your focus and productivity when "
+"trying to complete assignments or meet deadlines. Choosing to use a "
+"Pomodoro Timer can help to give a task your full, undivided attention."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:154
+msgid ""
+"The typical process of the Pomodoro Technique consists of the following "
+"six steps:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:157
+msgid "Choose a task to be done."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:158
+msgid "Set the Pomodoro Timer (default is 25 minutes)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:159
+msgid "Work only on that task until the timer ends."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:160
+msgid ""
+"When the timer rings, put a checkmark on a piece of paper, this is called"
+" \"a pomodoro\"."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:161
+msgid ""
+"If you have less than 3 checkmarks take a short break (by default, 5 "
+"minutes), and return to step 2."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:162
+msgid ""
+"When you have completed four Pomodoro cycles, you deserve a longer break "
+"(our default is 15 minutes). Checkmarks are reset to zero, go back to "
+"step 1."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:168
+msgid "Steps"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:170
+msgid ""
+"These are the general steps that we will be following throughout this "
+"workshop:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:172
+msgid ""
+"Select the most suitable plugin type and create its initial structure "
+"using `cookiecutter`_."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:173
+msgid ""
+"Install the plugin in development mode in the virtual environment from "
+"which we run Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:174
+msgid ""
+"Implement the functionality of our plugin using the Spyder classes and "
+"following the guidelines indicated in the plugin structure."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:175
+msgid ""
+"Build a configuration page for our plugin, which would appear in Tools > "
+"Preferences."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:180
+msgid "Location of Spyder Pomodoro Timer widgets in Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:185
+msgid "Spyder Pomodoro Timer in the preferences window."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:189
+msgid "Features"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:191
+msgid "A minimal planning to organize ideas."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:193
+msgid "Pomodoro Timer"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:195
+msgid "Status bar widget: to display the time for the current pomodoro interval."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:196
+msgid ""
+"State: we have three activity states: *pomodoro*, *short-break* and "
+"*long-break*. We can show a message (with `QMessageBox`_) to tell users "
+"that the time to take a break has arrived."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:197
+msgid ""
+"Interactions: the user could use Start, Stop and Reset buttons to handle "
+"the Pomodoro Timer. This can be implemented adding `QAction`_ instances "
+"in a menu on the toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:199
+msgid ""
+"Tasks Logger - Counter: We need a variable to count the number of "
+"pomodoros completed."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:202
+msgid "Notifications"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:204
+msgid ""
+"Dialog: Each time a pomodoro or break interval is completed, a message "
+"should appear to prompt the user to start working on a task or take a "
+"break."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:206
+msgid ""
+"When working on a plugin for any system, we must check the data "
+"structures and functions available in that system that can facilitate our"
+" development. This involves spending considerable time understanding its "
+"inner workings."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:219
+msgid "Set up a development environment"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:221
+msgid ""
+"In principle, we could use any Spyder installed within a `conda "
+"environment`_ according to the instructions given in the `installation "
+"guide`_."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:223
+msgid ""
+"However, if you use a working environment that has other dependencies and"
+" you want to keep your plugin development independent of them, it is "
+"recommended to create a new environment which only has Spyder with the "
+"minimum dependencies needed for your plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:228
+msgid "We can install it in the following way:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:240
+msgid ""
+"`Anaconda Individual Edition`_ is a Python distribution for data science "
+"and machine learning to be used in a single machine."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:241
+msgid ""
+"`Conda`_ is an Anaconda tool that manages virtual environments and their "
+"packages."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:242
+msgid ""
+"Conda can work with *channels* that allow the use of packages that are "
+"not part of the official distribution. The most important channel is "
+"`conda-forge`_, where a more extensive and updated list of packages than "
+"those offered by Anaconda Individual Edition are maintained."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:243
+msgid ""
+"Finally, `mamba`_, is an optimized implementation of conda's package "
+"management features, that resolves dependencies and installs packages "
+"much faster than conda."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:256
+msgid "Create a repository"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:258
+msgid ""
+"Now that we have our local virtual environment, it is good practice to "
+"manage our source code with a version control system, and the most widely"
+" used web service for this purpose is currently Github. Here you can "
+"find, for example, the Spyder and Python repositories."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:263
+msgid "To create a git repository on Github, we need to follow these steps:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:265
+msgid "Log in to your Github account."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:266
+msgid ""
+"Click on the \"New repository\" option in the \"+\" menu at the top right"
+" next to your profile picture."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:267
+msgid ""
+"A dialog will appear where you can insert the repository name and some "
+"basic options, e.g. to initialize the repository with a README or license"
+" files."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:268
+msgid "Click the “Create repository” button."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:269
+msgid ""
+"In the main window of the recently created repository, click on the green"
+" \"Code\" button an copy the clone link."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:270
+msgid ""
+"In your local command line run ``$ git clone [repo-link]``. You must have"
+" git installed and configured on your computer. If you don't have "
+"experience using git we recommend The Carpentries workshop `Version "
+"control with git`_."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:272
+msgid ""
+"A detailed description of `repository creation`_ could be found in the "
+"official Github documentation, and a `hello world`_ tutorial with basic "
+"git operations from the Github interface."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:282
+msgid "Let's get started"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:284
+msgid ""
+"We already have a git repository and a virtual environment where Spyder 5"
+" is installed."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:286
+msgid ""
+"Let's activate our environment and go into the local folder of our "
+"repository."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:293
+msgid ""
+"Then we need to use ``cookiecutter`` to create the initial structure of "
+"our plugin. `cookiecutter`_ is a tool made in Python specifically "
+"designed to create project templates. We have developed one of these "
+"templates to generate the basic structure of a plugin, it can be found "
+"at: https://github.com/spyder-ide/spyder5-plugin-cookiecutter"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:301
+msgid "Let's run cookiecutter to generate our"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:331
+msgid "The plugin structure"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:334
+msgid ""
+"After ``cookicutter`` finishes its job, you'll get the following tree "
+"structure in your repository"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:356
+msgid "In the root folder you'll find two important files:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:358
+msgid "The Makefile, which has several useful commands:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:375
+msgid ""
+"``setup.py``, which helps you to install, package and distribute your "
+"plugin with ``setuptools``, the standard for distributing Python Modules."
+" On this file the ``entry_points`` parameter of ``setup`` is quite "
+"important, as it is the one that allows Spyder to identify this package "
+"as a plugin, and to know how to access its functionalities."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:380
+msgid ""
+"The ``spyder-pomodoro-timer`` folder has the name you introduced when "
+"running ``cookiecutter``. Inside this you'll see a folder called "
+"``spyder``, where we will place the code of our plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:382
+msgid "In the ``spyder`` directory you'll find the following files:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:384
+msgid ""
+"``api.py``: where the functionality of the plugin is exposed to the rest "
+"of Spyder. That would allow additional functionality to be added from "
+"other plugins."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:386
+msgid ""
+"``plugin.py``: is the core of the plugin. Depending on the type of plugin"
+" we created, here you'll see an instance of ``SpyderDockablePlugin`` or "
+"``SpyderPluginV2``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:388
+msgid ""
+"If it is a ``SpyderPluginV2`` you should set a constant class named "
+"``CONTAINER_CLASS`` with an instance of ``PluginMainContainer``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:389
+msgid ""
+"If it is a ``SpyderDockablePlugin`` you should set a constant class named"
+" ``WIDGET_CLASS`` with an instance of ``PluginMainWidget``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:391
+msgid ""
+"``container.py``: only used for ``SpyderPluginV2`` plugins. This file "
+"contains an instance of ``PluginMainContainer`` that holds a reference to"
+" all graphical elements (or widgets) that the plugin is going to add to "
+"the interface. This is necessary because Qt requires widgets to be "
+"children of other widgets before using them (otherwise they appear as "
+"floating windows). Since ``SpyderPluginV2`` is not a widget, we need a "
+"data structure (i.e. the container) that is a widget for that."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:393
+msgid ""
+"``widgets.py``: in this file we will add the graphical components of our "
+"plugin. If it is of type ``SpyderPluginV2`` and it does not have widgets,"
+" then it is not necessary. We can also place here the instance of "
+"``PluginMainWidget`` necessary for ``SpyderDockablePlugin``, if we are "
+"developing that kind of plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:396
+msgid ""
+"``confpage.py``: this is where you specify the configuration page that "
+"will be displayed in ``Preferences``, so that the user can adjust the "
+"options of our plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:402
+msgid "Building our first plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:404
+msgid ""
+"From now on we will be building the plugin step by step. In the `spyder "
+"pomodoro timer repository`_ you will find the final version of the code "
+"for you to take a look at it, in case we are missing any detail."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:409
+#: ../../workshops/qt_fundamentals.rst:45
+msgid "Widgets"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:411
+msgid ""
+"The best way to start building our plugin is by implementing its "
+"graphical components first in ``widgets.py``"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:413
+msgid ""
+"Let's call the initial version, without any editing ``INITIAL``. In "
+"`INITIAL`_, widgets.py is as follows:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:431
+msgid ""
+"The preset imports are a guide to what we will need in our plugin. The "
+"``on_conf_change`` decorator will allow us to propagate the changes in "
+"configuration. ``get_translation`` helps us to generate translation "
+"strings for the plugin and ``SpyderWidgetMixin`` adds to any widget the "
+"attributes and methods needed to integrate it with Spyder (icon, style, "
+"translation, actions and extra options)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:433
+msgid ""
+"When taking a look at the Spyder ``api`` module, we can find that in "
+"Spyder there are two types of predefined components for the status bar:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:435
+msgid ""
+"``StatusBarWidget``, a class derived from ``QWidget`` and "
+"``SpyderWidgetMixin``, which contains an icon, a label and a spinner (to "
+"show the plugin loading)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:436
+msgid ""
+"``BaseTimerStatus``, a class derived from ``StatusBarWidget`` with an "
+"internal ``QTimer`` to periodically update its content."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:440
+msgid ""
+"Below, we will be indicating links in github with the diffs between the "
+"tags, this as an aid to check the progressive changes that will be made "
+"in the code."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:442
+msgid ""
+"The first version that we are going to reach after the first editions "
+"will be called ``HELLO WORLD``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:444
+msgid "`INITIAL -> HELLO WORLD widgets.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:448
+msgid ""
+"Since we want a widget that shows the pomodoro countdown and is "
+"periodically updated, we will use a ``BaseTimerStatus`` instance."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:450
+msgid "So, we can substitute"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:456
+msgid "with"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:463
+msgid "Add an initial import:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:470
+msgid "With that, we can write our first widget like this"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:493
+msgid ""
+"Spyder needs ``ID`` to be defined for ``BaseTimerStatus``. Its "
+"constructor calls the parent class constructor and initializes the label "
+"with ``value``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:495
+msgid ""
+"We add a tooltip to verify the presence of our widget. Since Spyder uses "
+"``qtawesome`` (another of our projects that eases the incorporation of "
+"iconic fonts into PyQt applications), we can select an appropriate icon "
+"by running the ``qta-browser`` command on a terminal."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:501
+msgid "From here we can select and copy the name of the icon of our preference."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:506
+msgid ""
+"To finish the implementation of our widget, we need to add the following "
+"method:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:516
+msgid ""
+"``BaseTimerStatus`` requires this method to be implemented to update its "
+"content every time it is requested by the internal timer."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:520
+msgid "The container"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:522
+msgid ""
+"The next step in the development of our plugin is to create an instance "
+"of the widget we wrote above, so we can add it to Spyder's status bar. "
+"For that, we need to use a container. Due to Qt specifics, we need an "
+"instance of ``QWidget`` (the container) to be the parent of all other "
+"widgets part of our plugin (as mentioned above)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:524
+msgid "Thus, the `COOKIECUTTER`_ version of ``container.py`` is:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:547
+msgid "`INITIAL -> HELLO WORLD container.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:551
+msgid ""
+"In this case ``SpyderPomodoroTimerContainer`` is already defined, and we "
+"must implement the ``setup`` and ``update_actions`` methods."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:553
+msgid ""
+"Now we are going to add the widget created earlier to the container. To "
+"do so, first we need to import the widget."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:560
+msgid "Then we edit the ``setup`` method to add an instance of our widget."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:570
+msgid "Plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:572
+msgid ""
+"Finally, we define our plugin so that it is registered within Spyder. The"
+" `INITIAL`_ version (i.e. the one created by cookiecutter)  for "
+"``plugin.py`` is:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:575
+msgid "Imports:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:592
+msgid "Plugin class:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:633
+msgid "`INITIAL -> HELLO WORLD plugin.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:637
+msgid ""
+"First, we need to declare the dependencies of our plugin, by defining the"
+" ``REQUIRES`` class constant. Since we're going to add a status bar "
+"widget, we require the ``StatusBar`` plugin, as shown below."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:643
+msgid "Then we need to set the icon for our plugin. For that, we substitute"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:651
+#: ../../workshops/plugin-development.rst:668
+msgid "and"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:658
+#: ../../workshops/plugin-development.rst:871
+msgid "by"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:676
+msgid ""
+"Due to recent changes to the Spyder API, we need to add to the spyder "
+"imports"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:683
+msgid "And add the following after the ``on_initialize`` method:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:693
+msgid ""
+"With these changes, Spyder will be aware of the presence of our plugin, "
+"and that this plugin adds a new widget to the status bar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:695
+msgid "Finally, we add the following method to our plugin:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:704
+msgid ""
+"In this way, ``SpyderPomodoroTimer`` can access ``pomodoro_timer_status``"
+" of ``SpyderPomodoroTimerContainer`` as if it were its own property."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:706
+msgid "In summary, we did the following:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:711
+msgid ""
+"We created a widget, then we added it to the container, which is "
+"registered in the plugin through the ``CONTAINER_CLASS`` constant. In the"
+" plugin, we accessed the instance of that widget and added it to the "
+"status bar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:717
+msgid "How to test our plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:719
+msgid "Now it is time to see how our plugin looks in the Spyder interface."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:721
+msgid ""
+"**From the root folder of our plugin**, we activate the environment where"
+" Spyder is installed, and run:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:729
+msgid "Now we can see two outputs. The first one is shown in the command line:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:736
+msgid ""
+"And in Spyder you'll see our plugin in the status bar with the tooltip "
+"\"I am the Pomodoro tooltip\"."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:741
+msgid ""
+"Keep in mind that every time we make a change to our code, it is "
+"necessary to restart Spyder so that the plugin is reloaded and we can "
+"check the changes."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:747
+msgid "Enhancing our plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:749
+msgid ""
+"From now on we are going to go into details of how things are implemented"
+" in Qt. So in case you have any doubts, the Qt documentation will be your"
+" best guide. We created an annex to this workshop that quickly explains "
+"way the fundamental concepts of Qt for those in a hurry: :ref:`qt-"
+"fundamentals`"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:754
+msgid "Timer updates"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:756
+msgid ""
+"The first problem with our plugin is that its pomodoro timer is not being"
+" updated. To activate it we can use the ``QTimer`` in "
+"``PomodoroTimerStatus``, which is present because it's an instance of "
+"``BaseTimerStatus``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:758
+msgid ""
+"The second version where the value in the status bar is updated is called"
+" ``TIMER``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:760
+msgid ""
+"Let's go back to ``widgets.py`` and add this constant below the import "
+"lines (line 22)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:762
+msgid "`HELLO WORLD -> TIMER widgets.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:774
+msgid ""
+"``POMODORO_DEFAULT`` is to set the pomodoro time limit in milliseconds, "
+"and ``INTERVAL`` to the timer update rate."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:776
+msgid "Now, in the ``__init__`` method of ``PomodoroTimerStatus`` we need to add:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:788
+msgid ""
+"Up to this point, we created a default value (``POMODORO_DEFAULT``) for "
+"the timer duration during pomodoros; we added it to the "
+"``pomodoro_limit`` attribute to be able to configure it; and with that "
+"value we initialized the ``countdown`` attribute that will be modified "
+"over time. As for the update interval of the timer, we set it to to the "
+"value of ``INTERVAL``, which corresponds to 1 second (one thousand "
+"milliseconds)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:791
+msgid ""
+"The function of ``self.timer`` is to update our timer periodically. This "
+"is done through the method ``timeout.connect()``, to which we pass as "
+"parameter the reference to the ``update_timer`` function that will "
+"perform the required adjustments."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:793
+msgid "Now let's implement ``update_timer`` at the end of the file:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:813
+msgid ""
+"Here we rely on the ``display_time`` method that converts the current "
+"``countdown`` value, which is measured in milliseconds, into a human-"
+"readable format. And ``update_timer`` simply keeps updating the countdown"
+" until it reaches zero."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:815
+msgid "If we run Spyder again we will find that our timer has come to life."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:824
+msgid "Timer controls"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:826
+msgid ""
+"Now we need a way to control our timer. We can achieve this by adding "
+"some buttons to Spyder's toolbar, which will be useful to learn how to "
+"work with toolbars, menus and actions in Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:830
+msgid "PomodoroTimerToolbar"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:832
+msgid ""
+"The next version where actions are added to the toolbar is called "
+"``ACTIONS``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:834
+msgid "`TIMER -> ACTIONS widgets.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:838
+msgid ""
+"Let's go back to ``widgets.py`` and import the Spyder application toolbar"
+" class:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:844
+msgid ""
+"And create an instance of it by adding the following code before the "
+"definition of ``PomodoroTimerStatus``:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:853
+msgid ""
+"As you can see, this statement is very simple. It only needs to declare "
+"an ``ID``, that serves to identify our toolabr among the rest."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:855
+msgid ""
+"It is possible to include other Qt widgets in our toolbar, but in this "
+"case it's better to use the appropriate Spyder methods for that in order "
+"to maintain their relationship with the rest of the application. In other"
+" words, as long as the widget you need exists in ``spyder.api.widgets``, "
+"use it!"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:858
+msgid ""
+"Next, we need to declare a boolean variable in our status widget to "
+"indicate if the countdown is paused or not. For that, let's add the "
+"following inside the ``__init__`` method of ``PomodoroTimerStatus``:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:864
+msgid "And inside the ``update_timer`` method, substitute"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:880
+msgid "Create the Pomodoro Toolbar"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:882
+msgid ""
+"Now we are going to create a new section in our toolbar and associate "
+"some functionality to it by means of actions. This particular information"
+" is recommended to be included in the ``api.py`` file because this way we"
+" can offer endpoints to the rest of Spyder and new plugins for tweaking "
+"the behavior of our plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:884
+msgid "`TIMER -> ACTIONS api.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:888
+msgid "Let's add the following to the end of ``api.py``:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:904
+msgid ""
+"With these we are telling the rest of Spyder, and our own plugin, that we"
+" are going to have a new toolbar section called \"pomodoro_timer\". This "
+"section will consist of a button containing a menu (with a single section"
+" \"main_section\") and actions identified as \"start_timer\", "
+"\"pause_timer\" and \"stop_timer\", to start, pause and stop (resetting) "
+"our timer, respectively."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:906
+msgid ""
+"Note that these are simple class definitions with class constants, to "
+"ease the encapsulation and exchange of this information in a simple way."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:909
+msgid "Add actions to the toolbar"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:911
+msgid "`TIMER -> ACTIONS container.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:915
+msgid ""
+"Now let's go to ``container.py``, where we are going to implement the "
+"behavior of our new toolbar and its actions. In this case, we are not "
+"going to specify the internal behavior of our plugin, but the "
+"relationship between its widgets and other areas of Spyder, so it is more"
+" convenient to do it in the container."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:918
+msgid ""
+"As we did with ``PomodoroTimerStatus``, we are going to use ``qtawesome``"
+" icons for our actions. For this purpose, let's add at the beginning of "
+"our imports:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:926
+msgid ""
+"We also imported ``QToolButton`` because it will be used to set the "
+"button that we will add in our toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:928
+msgid "At the end of the Spyder imports we also need:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:934
+msgid ""
+"Now, let's include ``PomodoroTimerToolbar`` and the actions and sections "
+"we just declared in ``api.py`` in our local imports:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:948
+msgid ""
+"Next, we need to do following things in the ``setup`` method of "
+"``SpyderPomodoroTimerContainer``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:950
+msgid ""
+"The first one is to create an instance of the toolbar class we declared "
+"earlier:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:957
+msgid ""
+"The second one is to create the actions corresponding to Start, Pause and"
+" Stop our pomodoro timer:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:986
+msgid ""
+"The third one is to create the menu that will contain our actions and add"
+" them to it."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1004
+msgid ""
+"The fourth one is to create a button that will contain the menu and "
+"configure it as ``PopupMode``, so that it is displayed when clicked."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1017
+msgid "And finally, the fifth one is to add the button to our toolbar:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1028
+msgid ""
+"When creating the actions, we indicate by means of the ``triggered`` "
+"parameter the methods to be executed when they are activated, i.e. when "
+"the corresponding buttons on the toolbar are clicked."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1030
+msgid ""
+"We can insert these methods at the end of the "
+"``SpyderPomodoroTimerContainer`` declaration, in the section that our "
+"cookiecutter template indicates as ``# --- Public API``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1050
+msgid ""
+"These methods simply manipulate the ``pause`` field of "
+"``pomodoro_timer_status``, and in the case of ``stop_pomodoro_timer`` the"
+" countdown is restarted."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1053
+msgid "Register the toolbar"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1055
+msgid "`TIMER -> ACTIONS plugin.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1059
+msgid ""
+"A final mandatory step is to go to ``plugin.py`` and register this new "
+"toolbar component."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1061
+msgid "To do this, add ``Plugins.Toolbar`` to the plugin requirements:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1067
+msgid ""
+"And use this plugin's API to add the toolbar we have created in the "
+"container to Spyder's toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1078
+msgid "Review the changes"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1080
+msgid ""
+"The first thing we can notice is that we already have the corresponding "
+"buttons in the toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1085
+msgid ""
+"The strings that were entered as the ``tip`` parameter in the creation of"
+" the actions are shown here as the buttons' tooltips."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1087
+msgid ""
+"Also, if we check the menu \"View > Toolbars\", we find that there is a "
+"new entry there corresponding to our toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1093
+msgid ""
+"Finally, let's check how the new Pomodoro Timer control buttons in the "
+"toolbar interact with the component in the status bar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1102
+msgid "Add a Configuration Page"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1104
+msgid ""
+"Another feature of Spyder plugins is that they can have configurable "
+"options that appear in Spyder's Preferences window."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1107
+msgid "Configuration defaults"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1109
+msgid ""
+"The final version in which we add a configurable parameter will be called"
+" ``CONFPAGE``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1111
+msgid ""
+"The first step is to define what options we want to offer to our users. "
+"For this we must create a new file, which we can call ``conf.py``. In "
+"this file we will write the following:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1113
+msgid "`ACTIONS -> CONFPAGE config.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1138
+msgid ""
+"We must highlight the declaration of ``CONF_SECTION``, which is the "
+"internal name of the section in Preferences corresponding to our plugin; "
+"and the dictionary keys associated with ``CONF_DEFAULTS``. In this case, "
+"we are indicating that ``pomodoro_limit`` is a configurable parameter "
+"within the ``spyder_pomodoro_timer`` section."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1140
+msgid ""
+"At the end of this file it is necessary to set another important "
+"constant, ``CONF_VERSION``, which must be updated when adding, removing "
+"or renaming configurable parameters in successive versions of the plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1153
+msgid ""
+"Note that we are moving the definition of ``POMODORO_DEFAULT`` from "
+"``widgets.py`` to ``conf.py``, since we now have a dedicated place for "
+"default configuration values."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1156
+msgid "Configuration page"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1158
+msgid ""
+"Now, we need to build the page that will appear in the Preferences "
+"window. For this, we edit the ``confpage.py`` file generated by "
+"cokkiecutter as follows:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1160
+msgid "`ACTIONS -> CONFPAGE confpage.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1206
+msgid ""
+"This mostly corresponds to the regular code for user interfaces based on "
+"Qt widgets. In this case, our options section corresponds to a "
+"``QGroupBox``, where the parameters are organized vertically using a "
+"``QVBoxLayout``, and each parameter corresponds to a ``QGridLayout`` "
+"where labels and inputs are distributed (in this case a ``QSpinBox``)."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1208
+msgid ""
+"Configuration pages in Spyder provide some helper methods to facilitate "
+"this work. For instance, ``create_spinbox`` allows to instantiate and "
+"initialize in a single step the widgets corresponding prefix an suffix "
+"labels together with the spinbox."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1211
+msgid "Propagate configuration changes"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1213
+msgid ""
+"Since we moved all the configuration information to ``conf.py``, now we "
+"have to import it from there into ``widgets.py``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1215
+msgid "`ACTIONS -> CONFPAGE widgets.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1228
+msgid ""
+"Now we can access the configuration options from anywhere in our plugin "
+"using the ``get_conf`` method. In this case we use it to access the value"
+" of ``pomodoro_limit`` from the configuration instead of the constant "
+"``POMODORO_DEFAULT``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1236
+msgid ""
+"Now we can add a method that updates our configurable parameter "
+"``pomodoro_limit``. The ``@on_conf_change`` decorator is the one in "
+"charge of capturing the signal that is generated when applying the change"
+" of a specific option."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1247
+msgid "Registering preferences"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1249
+msgid ""
+"Finally, it is necessary to activate the use of preferences in "
+"``plugin.py``, by requiring the Preferences plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1251
+msgid "`ACTIONS -> CONFPAGE plugin.py diff`_"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1262
+msgid ""
+"and registering our plugin in a method with the decorator "
+"``@on_plugin_available``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1271
+msgid ""
+"Now we can access the Preferences window either from the toolbar or from "
+"the \"Tools > Preferences\" menu. There we will find a section called "
+"*Spyder Pomodoro Timer* and inside it is the *Pomodoro timer limit* "
+"parameter. If we change that value, we will see how the corresponding "
+"label in the status bar changes."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1276
+msgid "Now your plugin is in an initial version ready to publish..."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1282
+msgid "Publishing your plugin"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1284
+msgid ""
+"Since the recommended way to install Spyder is through conda, the obvious"
+" choice would be to publish our plugin through a channel like conda-"
+"forge, but this is a task that is beyond the scope of this workshop due "
+"to its complexity."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1286
+msgid ""
+"However, the tools used to publish packages in conda are usually based on"
+" the packages published in PyPI. So let's see how to publish our plugin "
+"there."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1293
+msgid "PyPI and TestPyPI"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1295
+msgid ""
+"The first thing we have to do is to create an account on the `PyPI`_ and "
+"`TestPyPI`_ websites. Although our package will be finally published in "
+"PyPI, it is advisable to use TestPyPI to test that our package can be "
+"published properly without generating additional load to the PyPI servers"
+" or affecting their logs."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1297
+msgid ""
+"Next, we need edit the ``setup.py`` file at the root of our project with "
+"our own data. Fortunately, cookiecutter created one for us."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1299
+msgid ""
+"To upload our package to PyPI we have to use a tool called `Twine`_ that "
+"makes this task much easier. And we can install it in our conda "
+"environment using:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1306
+msgid "Build and check the package"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1308
+msgid ""
+"Before publishing our plugin we must package it. To do it we must write "
+"the following from the root folder of our project (where ``setup.py`` is "
+"placed):"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1314
+msgid ""
+"After that we will see that the following files are generated in the "
+"``dist`` folder:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1323
+msgid ""
+"On Linux and macOS we can check that the newly built distribution "
+"packages contain the expected files by inspecting the contents of the "
+"``tar`` file:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1329
+msgid ""
+"You can also use ``twine`` to run a check on the created files in "
+"``dist``:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1338
+msgid "Upload to PyPI"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1340
+msgid ""
+"Now we can use twine to upload the distribution packages we have built. "
+"First, we will upload them to TestPyPI to make sure everything works:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1346
+msgid ""
+"This command will prompt you for the username and password with which you"
+" registered in TestPyPI."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1348
+msgid ""
+"If we open https://test.pypi.org/project/spyder-pomodoro-timer/ in the "
+"browser we will be able to see the package we have just published."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1350
+msgid ""
+"There we'll see that some details are missing, like the package "
+"description, and that our package is marked as ``Development Status "
+"5-Stable``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1352
+msgid ""
+"To fix the first one, we can follow the instructions in `Making a PyPI-"
+"friendly README`_. Since we already have a README file, we simply add the"
+" following lines to the beginning of our ``setup.py`` file:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1368
+msgid ""
+"We can also change the classifiers of our package using the following "
+"site as a guide: https://pypi.org/classifiers. Here we can simply copy "
+"the classifiers we consider appropriate and then paste them into our "
+"code. Specifically in ``setup.py``, within the list that enters as the "
+"``classifier`` argument in the call to function ``setup``."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1371
+msgid ""
+"With these changes, and by bumping our plugin's version in the "
+"``__init__.py`` file inside the ``spyder_pomodoro_timer`` folder, we can "
+"repeat the cycle of building a new version of our package, loading it "
+"into TestPyPI for checking, and finally loading it into PyPI by using:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1377
+msgid "And check the result in https://pypi.org/project/spyder-pomodoro-timer/"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1379
+msgid ""
+"Once this is done, anyone can install our plugin in their environments "
+"simply by running:"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1396
+msgid ""
+"The possibility of making a tool extensible through plugins, extensions "
+"or addons, as they are usually called, is a fundamental feature that "
+"allows taking advantage of the talent of third-party developers to "
+"respond to needs and enhancements that are beyond the scope of the "
+"application's core development team."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1398
+msgid ""
+"Similarly, a plugin-based system makes the application much easier to "
+"maintain. Eventually, the ability to enable and disable plugins makes it "
+"more adaptable to different use cases. For instance, at present it would "
+"be inconceivable to think of a web browser that does not have extensions "
+"to block advertising or organize links, even if those features don't come"
+" by default on them."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1400
+msgid ""
+"In Spyder we have put special interest in consolidating an API that "
+"allows the development of plugins in a consistent way. The main focus of "
+"the development effort between versions 4 and 5 was in this direction and"
+" we are at a key moment where we expect to capitalize on all this work."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1404
+msgid "Identify the basic building blocks in Spyder development."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1405
+msgid "Identify the different types of plugins that can be implemented in Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1406
+msgid "Recognize the types of plugins that are part of Spyder."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1407
+msgid "Plan the development of a new Spyder plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1408
+msgid "Build a development environment for Spyder plugin development."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1409
+msgid "Generate the basic structure of a Spyder plugin using Cookiecutter."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1410
+msgid "Understand the file structure of a Spyder plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1411
+msgid "Add and register Qt widgets in the Spyder status bar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1412
+msgid "Add and register Qt widgets in the Spyder toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1413
+msgid "Add a menu with actions in the toolbar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1414
+msgid ""
+"Add configuration options to our plugin and display them appear in the "
+"Preferences window."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1415
+msgid ""
+"Edit the description and classifiers of the installable package of our "
+"plugin."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1416
+msgid "Publish our plugin to TestPyPI and PyPI."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1418
+msgid ""
+"With these skills we hope to ease the way for you to develop your own "
+"Spyder plugins."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1420
+msgid ""
+"If you have ideas for plugin development feel free to contact us through "
+"the `Spyder-IDE`_ Github organization space."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1424
+#: ../../workshops/scientific-computing.rst:776
+msgid ""
+"If you are interested in an introduction to financial analysis with "
+"Spyder, you can visit the workshop :doc:`Financial Data Analysis with "
+"Spyder<../workshops/financial>`."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1431
+msgid ""
+"As you may have noticed, there were some features left to implement such "
+"as notifications when pomodoros are completed. Try to implement them and "
+"do not hesitate to contact us if you have any doubts."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1438
+msgid ""
+"In the `plugin-examples`_ repository you can find additional examples "
+"that will surely be useful for you to further understand Spyder plugin "
+"development."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1440
+msgid ""
+"A more in-depth review of the Spyder repository itself, especially its "
+"simpler plugins, such as History, Plots or Working directory, may help "
+"you understand it better. As well as a review of the various helper "
+"functions, widgets and mixins present in ``spyder.api``."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:5
+msgid "Qt Fundamentals"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:9
+msgid ""
+"**Qt** is a multiplatform widget toolkit for creating native graphical "
+"user interfaces. Qt is also a very complete development framework that "
+"offers utilities for building applications, and libraries of extensions "
+"for Networking, Bluetooth, Charts, 3D rendering, Navigation (as GPS), "
+"among others."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:14
+msgid "Basic Qt Components"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:16
+msgid ""
+"As mentioned before, Spyder's plugin development consists of extending "
+"the functionality of its Qt-based graphical interface."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:18
+msgid ""
+"To develop a GUI we will add graphical elements of interaction known as "
+"widgets, arrange them using layouts. Then, we interconnect those widgets "
+"using customized procedures implemented as functions or methods, allowing"
+" to trigger behavior from user interaction. In the following, we will "
+"develop these ideas in more detail."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:20
+msgid ""
+"Each type of Qt component is a class starting with the letter ``Q`` "
+"followed by a name related to its functionality."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:22
+msgid ""
+"The core component of Qt is the ``QApplication`` class. Every Qt "
+"application needs a single instance of this class as the base, from where"
+" the Qt *event loop* is controlled. Spyder itself is an instance of "
+"``QApplication``, its starting point is in the following two lines of "
+"code (spyder/spyder/app/mainwindow.py):"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:30
+msgid ""
+"``QMainWindow`` is a pre-built widget that provides many standard window "
+"features as toolbars, menus, a status bar, dockable widgets and more, "
+"which serves as the basis for the application."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:34
+msgid "Signals & Slots"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:36
+msgid ""
+"**Signals** are notifications emitted by widgets when something happens. "
+"That something could be different things, from pressing a button, to "
+"changing text in an input box, to changing text in the window. Many "
+"signals are initiated by user action, but this is not a rule."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:39
+msgid ""
+"**Slots** are signal receivers. Functions or methods could be used as "
+"slots, by connecting a signal to them. If a signal sends data, the "
+"receiver callable will also receive it. Many Qt widgets also have their "
+"own built-in slots, so the corresponding widgets are notified "
+"automatically."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:47
+msgid ""
+"In computer science a *Widget* is a shortened form of “window gadget”. A "
+"widget is an element of interaction, such as a button, or a container for"
+" other widgets, as panels or tabs. The ``QWidget`` class is the "
+"fundamental class for creating interfaces in Qt, it receives events from "
+"the window system, and renders its representation on the screen. A widget"
+" can provide a container for grouping other widgets, and if it is not "
+"embedded in a parent widget, it becomes a window."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:52
+msgid "Layouts"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:54
+msgid ""
+"Interfaces are built by embedding widgets inside widgets, and since they "
+"are visual components they are visually organized by means of *layouts*. "
+"A layout indicates how the widgets fill their container, either as "
+"columns, rows, cells in a matrix or stacked so that only one is visible "
+"at a time. Those are the 4 basic layouts available in Qt: "
+"``QHBoxLayout``, ``QVBoxLayout``, ``QGridLayout``, and "
+"``QStackedLayout``."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:61
+msgid "Actions, Toolbars & Menus"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:63
+msgid ""
+"User interfaces of desktop applications usually use ``QToolbar`` and "
+"``QMenu``. Since these are alternative ways to access the same "
+"functionality, Qt provides ``QAction`` as a way to avoid duplication of "
+"functions. Thus, each time a menu option or a toolbar button gives access"
+" to the same function, they point to the same action."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:67
+msgid "Dialogs"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:69
+msgid ""
+"A *Dialog* is a GUI component that communicates with the user. Dialogs "
+"are commonly used for functions that do not fit into the main interface. "
+"In Qt, by design ``QDialog`` is a modal (or blocking) window that show in"
+" front of the main Window until it is dismissed."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:72
+msgid ""
+"Qt provides some *special dialogs* for the most common use-cases as *file"
+" Open/Save*, *font selection*, *error messages*, *color choosing*, "
+"*printing*, among others."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:76
+msgid "Windows"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:78
+msgid ""
+"If an application requires additional windows that do not block the main "
+"window, these are generated as non-parent ``QWidget`` instances. These "
+"are used for tasks that happen in parallel over long-running processes "
+"such as displaying graphs or document editing."
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:83
+msgid "Events"
+msgstr ""
+
+#: ../../workshops/qt_fundamentals.rst:85
+msgid ""
+"An *Event* denote every interaction the user has with a Qt application. "
+"There are several types of events designed to address different types of "
+"interactions. In Qt they are represented by ``QEvent`` instances that "
+"contain information about what prompted them, and are passed to specific "
+"handlers that are responsible for triggering further actions."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:3
+msgid "Scientific Computing and Visualization with Spyder"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:5
+msgid ""
+"This workshop allows you to explore some of Spyder's features that make "
+"Spyder an ideal IDE for using the scientific tools offered by Python. "
+"Throughout the workshop, we will apply the scientific method to answer "
+"some questions related to our preferences and cognitive abilities. By the"
+" end of this workshop participants will be able to use Spyder to explore "
+"data, analyze it with some statistical tools and plot the relationship "
+"between variables."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:23
+msgid ""
+"Some knowledge of Statistics (`hypothesis testing`_ , `ANOVA`_, "
+"`p-value`_)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:38
+msgid ""
+"Apply the scientific method to answer questions related to psychometric "
+"variables"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:39
+msgid "Understand how to use Spyder's built-in scientific computing tools"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:47
+msgid ""
+"This workshop is intended for people who want to learn how to answer "
+"questions scientifically from a dataset. We have also designed it to "
+"serve as a tutorial for learning how to use Spyder as a research tool."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:55
+msgid ""
+"In this workshop we will explore a data set and use it to answer some "
+"questions using the scientific method."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:59
+msgid "Why do scientific research with Python?"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:61
+msgid ""
+"Python is a mature programming language that has been chosen by much of "
+"the scientific community to support the research process. There are a few"
+" reasons for this:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:63
+msgid "It is versatile and easy to learn and use"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:64
+msgid ""
+"It allows for multiple ways to handle inputs and outputs. No matter what "
+"format your data is in, in Python there is always a way to import it (and"
+" export it in the format of your choice)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:65
+msgid ""
+"It is interpreted. You don't have to write code from start to finish to "
+"see partial results. This makes it especially easy and fast to explore "
+"data"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:66
+msgid ""
+"It has built-in support for scientific computing tasks: `SciPy "
+"<https://scipy.org>`_, `NumPy <https://numpy.org>`_, `Pandas "
+"<https://pandas.pydata.org>`_, and a vast number of other libraries "
+"created by and for scientists"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:67
+msgid ""
+"It is the most widely used programming language for Machine Learning "
+"(including Keras and TensorFlow)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:69
+msgid ""
+"It can be integrated with `Jupyter Notebooks <https://jupyter.org>`_ and "
+"implementations of these in the cloud (`Google Colab "
+"<https://colab.research.google.com>`_ or `Binder "
+"<https://mybinder.org>`_)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:73
+msgid "How can Spyder help me in my scientific research?"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:75
+msgid ""
+"Spyder is a Scientific Integrated Development Environment written in "
+"Python, and designed by and for scientists, engineers, and data analysts."
+" It features a unique combination of the advanced editing, analysis, "
+"debugging, and profiling functionality of a comprehensive development "
+"tool with the data exploration, interactive execution, deep inspection, "
+"and beautiful visualization capabilities of a scientific package. "
+"Together with Python, it provides a very complete set of tools for "
+"scientific computing."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:79
+msgid "The basic steps of the scientific method"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:81
+msgid ""
+"The `scientific method "
+"<https://en.wikipedia.org/wiki/Scientific_method>`_ is a set of good "
+"practices used to achieve new knowledge in a valid way. Broadly speaking,"
+" the stages of the scientific method are as follows:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:83
+msgid "Observation: first find something that needs an explanation"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:84
+msgid ""
+"Search/generate theory: say a thing or two about the state of the world "
+"or how it works (an abstract thought about a phenomenon)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:85
+msgid "Hypothesis: identify variables and make predictions"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:86
+msgid ""
+"Testing/Experiment/More observation: measure relationship between "
+"variables"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:87
+msgid "Analysis: fit a model/graph data"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:88
+msgid "Reporting: share new findings"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:90
+msgid ""
+"Throughout this workshop, we will be developing each of these steps in a "
+"practical way. We will use Spyder as a research tool and psychometric "
+"data from an online dating site to make it easy and fun."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:94
+msgid "Introduction to scientific research with Spyder"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:100
+msgid ""
+"If you already have experience with Spyder, you can skip to `Preparation "
+"work`_ section."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:122
+msgid ""
+"The Variable Explorer is one of the most frequently used components in "
+"this workshop. **This is the pane where we will observe the data and most"
+" of the results of the scientific analysis, except for the plots**."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:128
+msgid ""
+"The :doc:`Plots pane <../panes/plots>` shows all the static graphs and "
+"images created in your IPython Console session. **All plots generated by "
+"the code will appear in this component**. You will also be able to save "
+"each graphic in a local file or copy it to the clipboard to share it with"
+" other researchers."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:132
+msgid "Code Analysis (share a stylish code!)"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:134
+msgid ""
+"Wouldn't it be great to have a tool to be able to detect code errors, "
+"stylistic problems, bad practices, inconsistencies and other issues? This"
+" is precisely the task of the  :doc:`Code Analysis<../panes/pylint>`. "
+"Your code can run, but if you are going to share it with other "
+"researchers it would be great if it is both readable and neat as well."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:146
+msgid "Setting up the Conda environment"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:154
+msgid ""
+"We recommend creating the virtual environment with `Anaconda "
+"<https://www.anaconda.com/products/individual>`_ (or `Miniconda "
+"<https://docs.conda.io/en/latest/miniconda.html>`_) as it integrates "
+"seamlessly with Spyder. You can find installation instructions in "
+"`Anaconda documentation`_."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:160
+msgid "1. With commands"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:162
+msgid ""
+"Just run the following command in your Anaconda Prompt (Windows) or "
+"terminal (other platforms), for a minimal install of Spyder into a new "
+"environment called ``scientific-computing``:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:168
+msgid ""
+"To install Spyder's optional dependencies as well for full functionality,"
+" use the following command instead:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:176
+msgid ""
+"Spyder now offers :ref:`install-standalone` for Windows and macOS, making"
+" it easier to get up and running with the application without having to "
+"download Anaconda or manually install it in your existing environment. If"
+" you use the standalone installer, there is no need to install "
+"``spyder=5`` with conda."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:180
+msgid "2. From an environment.yml file"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:182
+msgid ""
+"You can also install the virtual environment easily using the environment"
+" file (``scientific-computing.yml``) that we share with you. Just run the"
+" following command in the terminal (you must have the environment file in"
+" the current directory):"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:190
+msgid "Activate environment"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:192
+msgid "You can now enter the newly created virtual environment in this way:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:200
+msgid "Downloading the dataset"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:202
+msgid ""
+"We are going to work with a public dataset called OKCupid, collected by "
+"Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and "
+"2,626 variables."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:204
+msgid "Download the `OKCupid dataset`_ to a directory of your choice."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:210
+msgid "Setting up the working directory"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:212
+msgid ""
+"The virtual environment and the data file are now ready. The only thing "
+"that remains is to create a directory to work in. In your operating "
+"system, create a new directory with the name of your choice. Then copy "
+"and unzip the dataset file there."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:214
+msgid "Here is an example (on Linux or macOS):"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:221
+msgid ""
+"Keep in mind that in this new directory you must have the data file "
+"unzipped."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:223
+msgid "Launch Spyder:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:229
+msgid ""
+"Let's make sure Spyder is ready. First, check that the working directory "
+"is correct. You should see in the upper right corner the path to the "
+"directory where you have the dataset. Something like this:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:234
+msgid ""
+"Second, let's check that the virtual environment we created is enabled in"
+" Spyder. Go to :guilabel:`Preferences` > :guilabel:`Python interpreter`, "
+"and use the dropdown under :guilabel:`Use the following Python "
+"interpreter` to select the path to your virtual environment. You should "
+"see something like this:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:245
+msgid ""
+"Although the workshop is designed for you to write the code in the "
+"IPython Console, we have created a file that you can :download:`download "
+"<scientific-computing.py>`. This script provides all the code you will "
+"write in this workshop, and you can use it as a guide if you get lost."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:251
+msgid "The dataset"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:253
+msgid ""
+"OKCupid is a dataset that gathers information obtained from the online "
+"dating site OKCupid. It consists of 68,371 records collected "
+"automatically employing a scraper that extracted public information."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:255
+msgid ""
+"The dataset contains demographic data (e.g., gender, sexual orientation "
+"and age). It also includes answers to general questions used by the "
+"website's algorithm to calculate some personality indicators to help find"
+" compatible matches."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:257
+msgid ""
+"If you want more information about how this dataset was collected and "
+"what kind of information it contains you can get it in this paper: `The "
+"OKCupid dataset`_."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:266
+msgid ""
+"You can also write your code or in the Editor (the pane that occupies the"
+" entire left side of Spyder). If you use the Editor, you can run the code"
+" by selecting it and pressing the :guilabel:`Run selection or current "
+"line` button in the :guilabel:`Run toolbar` or by pressing the F9 button."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:280
+msgid ""
+"The data you downloaded earlier is in `parquet "
+"<https://arrow.apache.org/docs/python/parquet.html>`_ format. This format"
+" is very convenient because it is smaller and faster than CSV or JSON "
+"files."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:282
+msgid "Load data:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:288
+msgid ""
+"You should now be able to see the data you have imported in the Variable "
+"Explorer."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:293
+msgid ""
+"You can see that the object is of type DataFrame and the number of rows "
+"and columns of the object."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:299
+msgid "Explore the dataset"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:303
+msgid "Age"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:305
+msgid ""
+"Now, let's explore one of the variables, in this case, the numeric "
+"variable age (``d_age``)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:309
+msgid ""
+"In the OKCupid dataset, all demographic variables are prefixed with "
+"\"d\\_\" and profile variables with \"p\\_\"."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:318
+msgid ""
+"What happened? We called the ``data`` object and used Python's dot "
+"notation to pick the ``d_age`` column. This has a `Pandas Series "
+"<https://pandas.pydata.org/pandas-"
+"docs/stable/reference/api/pandas.Series.html>`_ type object. To this "
+"object we pass the ``describe()`` method that shows a summary of some "
+"indicators: count of values, mean, standard deviation, maximum value, "
+"minimum value, among others. With these figures we can see that the "
+"sample is mainly constituted of young people (the average is 31.65 years "
+"old)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:320
+msgid ""
+"The return of a function, method or the attribute of an object can be "
+"stored as a variable to have it at hand in the Variable Explorer:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:330
+msgid ""
+"The values are floats. The lowest age is 18.0 years and the highest is "
+"100.0 years."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:334
+msgid ""
+"Notice also that each type of variable has a different color to quickly "
+"distinguish them."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:336
+msgid ""
+"We already know the minimum and maximum age, and that the mean is around "
+"32 years old. A good way to further explore this variable is to plot a "
+"histogram, a type of graph that shows the frequency distributions. In "
+"this way we can see if the groups of young people on the platform are "
+"more numerous than the older ones."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:338
+msgid ""
+"We can plot a histogram directly from the dataframe. To do this we select"
+" the variable (as we did with the ``.describe()``) and invoke the "
+"``.plot.hist()`` method. In this method we will pass as arguments the "
+"number of bins and the transparency of the plot (``alpha``)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:348
+msgid ""
+"Another way to generate a simple histogram in Spyder is to use a context "
+"menu on an array in the Variable Explorer. But first we must store these "
+"values in a list and call that variable ``age``."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:360
+msgid ""
+"Frequency distributions come in different sizes and shapes. The shape of "
+"a histogram reveals very interesting things about the data. A "
+"symmetrical, bell-shaped histogram might indicate that the distribution "
+"is normal (most of the scores are close to the center of the "
+"distribution). In the age histogram, you can see that it has a \"tail\" "
+"to the right (towards the older ages). Technically this is called "
+"\"positively `skewed`_\". It is also noticeable that it is somewhat "
+"pointy (positive `kurtosis`_ or leptokurtic). These two things could "
+"suggest that age is not a random variable."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:365
+msgid ""
+"Although we can create the histogram directly from the dataframe, we are "
+"going to use a Python library called Seaborn to do the same, because this"
+" library will allow us to do more interesting things later."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:372
+msgid ""
+"We call ``sns.histplot()`` with three arguments. The first one "
+"(``data.d_age``) is a Pandas Series with the **quantitative** variable we"
+" want to plot. The second (``kde=True``) adds a curve showing an ideal "
+"model of the age distribution (using a method called *Kernel Density "
+"Estimator*). And the third one (``bins=25``) indicates that we want 25 "
+"bins in the graph."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:377
+msgid ""
+"The second line (``plt.show()``) is intended to show all the figures not "
+"displayed so far. If you have any doubts about how to utilize an object, "
+"method or function, you can use the ``help()`` tool in the console. For "
+"example:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:383
+msgid ""
+"Or you can also take advantage of the Help pane included in Spyder to get"
+" on-screen help:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:388
+msgid ""
+"With Seaborn, we can add a line representing the mean of the histogram. "
+"To do this we will use the ``axvline()`` method and add a text with the "
+"value of the mean where ``text()``, ``min_ylim`` and ``max_ylim`` are "
+"used to mark the position of the text."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:405
+msgid "Religion seriosity"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:407
+msgid ""
+"We know the extent of the dataframe and we have seen how to explore a "
+"quantitative variable. Now let's move on to a qualitative variable. The "
+"``columns`` attribute shows a list of column names in the dataframe. We "
+"also know that demographic variables are prefixed with \"d\\_\", so we "
+"can look for variable names that correspond to this prefix."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:413
+msgid ""
+"In the Variable Explorer you will see a new variable ``demograph``. If "
+"you double click on it you will see a list of the demographic variables "
+"in the dataset. At the end of the list you will see a value "
+"``d_religion_seriosity``. If you right click on it, several options will "
+"appear on the screen. You can rename the column, delete it or insert a "
+"new one. Let's click on :guilabel:`Copy` to copy the column name into "
+"memory."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:415
+msgid ""
+"In the IPython Console, type ``data.`` and then copy the column name. "
+"Type a period at the end (no spaces) and hit tab. You should see "
+"something like the following:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:420
+msgid ""
+"You can then see a list of all relevant methods and attributes of the "
+"class. Right at the end you will see ``value_counts`` that could be used "
+"to summarize the variable. It is a method so it must end in parentheses:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:432
+msgid ""
+"In addition to demographic and profile variables, the dataset includes "
+"responses to questions on a variety of topics. These questions are coded "
+"with a prefix \"q\" followed by an integer. The text of the questions is "
+"stored in a file called :file:`question_data.csv` (which you can download"
+" as part of the `OKCupid dataset`_)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:434
+msgid "We can examine this file in the Variable Explorer:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:440
+msgid ""
+"Double click on \"question_data\" in the Variable Explorer to display "
+"each question aligned with its code (\"q\" + number)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:442
+msgid ""
+"Now that we have learned how to explore the data we can ask interesting "
+"questions and try to answer them with the help of the dataset and Spyder."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:448
+msgid "Think of a theory and write a hypothesis"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:450
+msgid ""
+"A theory is nothing more than an explanation of something. For example, "
+"we could get involved in the eternal conflict between cats and dogs. I, "
+"as a dog person, might have a theory (unscientific, of course) that those"
+" who prefer to have the companionship of a dog are smarter people than "
+"those who prefer a wicked (but lovable) kitty. To test the support of a "
+"theory, one can make a prediction based on it and see how this prediction"
+" behaves in an experiment or a concrete situation. We call this "
+"prediction a hypothesis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:452
+msgid ""
+"A hypothesis is a statement that can be tested employing the scientific "
+"method. They must be verifiable using empirical evidence or data. For "
+"example, *green is the best color* is not a hypothesis since it cannot be"
+" proven or disproven."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:454
+msgid ""
+"Concerning the above theory of a person's pet preferences, to explore it "
+"we should find two variables to relate. The first variable would be "
+"related to a **self-identification as a cat person or dog person**. The "
+"second variable would be related to a person's **ability to solve "
+"problems and situations**."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:456
+msgid ""
+"The OKCupid dataset has useful variables that we can use to investigate "
+"this theory. For example, question **q997** (*Are you a cat person or a "
+"dog person?* ) provides information about a person's pet preferences. The"
+" second variable is slightly more difficult to come up with, as it is "
+"somewhat more complex. Fortunately, the researchers who collected the "
+"dataset have also selected 14 questions that can serve as a proxy for a "
+"cognitive ability test. This selection of questions can be found in the "
+"file :file:`test_items.csv` in the `OKCupid dataset`_."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:462
+msgid ""
+"So, let's try to see if there is any evidence in the OKCupid dataset to "
+"support the following hypothesis:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:464
+msgid ""
+"*People who prefer dogs to cats would score higher on tests of cognitive "
+"ability*."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:468
+msgid ""
+"SPOILER ALERT: If you are a cat person, and feel you should immediately "
+"leave this workshop, I suggest you stay. If you're not a cat person, stay"
+" too."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:474
+msgid "Build the test"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:476
+msgid ""
+"We already know which questions will be part of the cognitive ability "
+"test. Now we are going to process this data to obtain the scores for each"
+" person."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:478
+msgid "First, we make a copy of the original dataset:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:484
+msgid ""
+"Then, we find the correct answer to each test question (these answers are"
+" in ``test_items``)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:493
+msgid "The correct answers have been stored in the ``test_items`` dataframe."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:495
+msgid ""
+"Next, we will indicate, in the ``ca_test`` dataframe, whether the person "
+"answered correctly to each question selected in the cognitive ability "
+"test. These answers will be entered as a boolean in new variables with "
+"the prefix \"resp\\_\" followed by the corresponding question code. The "
+"Boolean is calculated with the function ``lambda row: row[q] == a, "
+"axis=1``."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:510
+msgid ""
+"Some ``test_items`` questions are not in the data but don't worry about "
+"that. We use a ``try... except`` block to ignore these errors. Answering "
+"these questions was optional, so many OkCupid site users did not answer "
+"all of them. So we have removed from the records the users who did not "
+"answer the 14 questions we have chosen for the cognitive ability test. "
+"This reduced the sample size considerably. There are other ways to avoid "
+"this reduction, but they are outside the scope of this workshop."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:512
+msgid ""
+"We want to sum the correct answers for each person, but some integer "
+"results were stored as strings, so let's fix that:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:524
+msgid ""
+"Now that we have the correct answer for each test question, let's add up "
+"each correct answer for each person. There are 14 questions, so the "
+"maximum score will also be 14:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:531
+msgid ""
+"How do we add up these responses? Remember that each answer was stored as"
+" a boolean (True or False) with the prefix \"resp\\_\". So we search in "
+"the ``ca_test`` dataframe for the answers of each column starting with "
+"\"resp\" (we use the regular expression ``regex=\"^resp\"`` and the "
+"method ``filter``) and sum the True values of each row with "
+"``sum(axis=1)``. Then we store these results in the \"cognitive_score\" "
+"column of the ``ca_test`` dataset."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:533
+msgid ""
+"You can see the results of these operations by typing in the IPython "
+"Console ``ca_test.cognitive_score.describe()``. If you do so, in *count* "
+"you will see that the new number of records has been reduced to 479 (the "
+"rest of the 68,371 users did not answer all of these questions)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:537
+msgid "Cognitive ability distribution"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:539
+msgid "Let's draw a histogram of this variable to see the frequency distribution."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:549
+msgid ""
+"As you can see, in this case, the distribution is not symmetrical but has"
+" a long \"tail\" on the left (negatively skewed). This means that most of"
+" the users who answered all the questions did quite well and that only a "
+"few users answered most of the questions in the wrong way."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:553
+msgid ""
+"The values we have calculated in this section were already in the data "
+"(``data.CA_items``). However, we have chosen to obtain these results "
+"again using code because it is a good way to learn how to use the tools "
+"provided by Python and Pandas for data manipulation."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:559
+msgid "Relate variables"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:561
+msgid ""
+"Remember that the hypothesis relates two variables: which pet do you "
+"prefer and cognitive ability. The measurement of pet preferences will be "
+"made from question **q997** (categorical or qualitative variable) and "
+"cognitive ability will be measured from the sum of the correct answers on"
+" the test (quantitative interval variable). With this type of variable we"
+" can make some box plots to see if there are differences between the "
+"means."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:563
+msgid ""
+"But first, let's change the standard Seaborn palette, to get prettier "
+"plots."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:573
+msgid ""
+"Seaborn allows you to choose from different styles of graphics and color "
+"palettes. More information is available at "
+"https://seaborn.pydata.org/tutorial/color_palettes.html"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:575
+msgid ""
+"Now, we are going to create box plots to observe the relationship between"
+" variables. To do this, we will use the ``catplot`` class of Seaborn. The"
+" first argument will be the x-axis, which in this case will be the "
+"qualitative variable (question **q997**). The second argument will be the"
+" y-axis, where we will place the quantitative variable (cognitive score)."
+" With the parameter ``kind`` we indicate that it is a box plot. The "
+"parameters ``height`` and ``aspect`` regulate the appearance of the "
+"graph. The last parameter, ``data``, indicates where the data comes from."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:586
+#, python-format
+msgid ""
+"Box plots or box-whisker diagrams display, near the center of the box, "
+"the **mean** of the data as a horizontal line. The lines bordering the "
+"box represent **50% of the observations** (*interquartile range* ). "
+"Outside the box, upwards and downwards, we find two whiskers: the lower "
+"one represents the **mean of the values in the lower part of the "
+"dataset**, and the upper one represents the **mean of the values in the "
+"upper part of the dataset**. The points beyond the whiskers are "
+"**outliers**."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:590
+msgid ""
+"An outlier is a value that is very different from the rest of the data "
+"values. They must be taken into account because they can often create a "
+"bias in the model we are trying to fit to the data."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:592
+msgid ""
+"The graph shows four boxes measuring cognitive ability for the following "
+"groups:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:594
+msgid "Those who prefer dogs"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:595
+msgid "Those who define themselves as cat people and dog people indistinctly."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:596
+msgid "Those who prefer cats"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:597
+msgid "Those who like neither cats nor dogs."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:599
+msgid ""
+"The lowest mean is that of those who prefer dogs only, but by very "
+"little. The box (and boundaries) representing dog lovers is also "
+"\"wider,\" implying a larger variability in the individual test results "
+"for this group. But this is not a very different dispersion from that of "
+"those who prefer cats. All the means are within the limits of the other "
+"boxes (interquartiles), which seems to indicate that, in fact, there are "
+"not really important differences in the intelligence test scores for "
+"these groups. This seems to undermine support for the initial hypothesis "
+"we posed above."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:603
+msgid ""
+"If you want to see the figures, enter ``dog_or_cat = "
+"ca_test.groupby(\"q997\")[\"cognitive_score\"].describe()`` in the "
+"IPython Console and look at the results in the Variable Explorer. This "
+"way you can see how many people prefer cats or dogs, and the means and "
+"standard deviation of the cognitive ability test results for each group."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:605
+msgid ""
+"To appreciate in context the real difference in the averages, let's "
+"create some bar charts. We are now going to use Seaborn's barplot class. "
+"On the x-axis we put again the qualitative variable (**q997**) and on the"
+" y-axis the quantitative variable (cognitive_score). The data parameter "
+"takes as argument the entire dataset."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:620
+msgid ""
+"If the box plots indicated that the means did not show significant "
+"differences (possibly due to chance), the bar plot confirms that these "
+"differences are, in proportion, quite modest."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:626
+msgid "ANOVA test"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:628
+msgid ""
+"To make sure that the differences between the means are statistically "
+"significant, we will perform an ANOVA (analysis of variance) because we "
+"are going to compare the means of more than two groups."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:630
+msgid ""
+"How does ANOVA work? This analysis tells us whether three or more means "
+"are equal. If so, this would support the null hypothesis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:634
+msgid ""
+"The *null hypothesis* is an alternative prediction to the one we have "
+"stated in our hypothesis. The null hypothesis simply states that the "
+"observed differences in means are due to random variations that occur "
+"when samples are collected."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:636
+msgid ""
+"An ANOVA produces an *F-ratio* (also called F-statistic) that compares "
+"the amount of systematic variation in the data (variation that can be "
+"explained by the model or hypothesis) with the amount of unsystematic "
+"variance (variation that cannot be explained by our hypothesis or model)."
+" This means that F is the ratio of the model to its error. ANOVA also "
+"produces a *p-value* that indicates the probability that the variation "
+"can be attributed to the null hypothesis. The smaller the p-value, the "
+"less likely it is that the observed variation is due to chance."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:640
+msgid "Formatting the data"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:642
+msgid ""
+"To perform an ANOVA, let's start by pivoting the dataset with the "
+"cognitive ability test results. The pet preferences values will now be "
+"the column names, and each row will represent a person."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:646
+msgid ""
+"To perform an ANOVA, certain requirements or assumptions must be met. For"
+" example, the distributions of the residuals must be normal. This is not "
+"the case here. There are more appropriate statistical tests for this "
+"example, and the possibility of performing certain transformations on the"
+" data in order to apply ANOVA in this case. However, we use ANOVA because"
+" it is a fairly popular test, and because the purpose of this workshop is"
+" to serve as an introduction to scientific computing with Spyder. We do "
+"not intend here to obtain scientific results for publication."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:652
+msgid ""
+"You will see that one of the columns includes the answers to the test "
+"made by people who did not specify their preferences towards pets. Let's "
+"delete that column."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:661
+msgid ""
+"Now let's rename the column names (for simplicity) and remove the records"
+" that have missing values (with ``dropna``). The argument "
+"``inplace=True`` allows you to directly modify a dataframe without having"
+" to create a new one."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:671
+msgid ""
+"In the variable ``dog_or_cat_col_names`` we have stored the names of the "
+"values in order. This implies that: A = Both, B = Cats, C = Dogs, and D ="
+" Neither."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:673
+msgid ""
+"To perform ANOVA, we are going to use a Python library called \"stats\", "
+"in particular the ``f_oneway`` function. You can find more information "
+"about this library by typing ``stats`` in the Help Pane or learn more "
+"about the function by typing ``stats.f_oneway``."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:678
+msgid ""
+"The help notes that this function requires an array-like with the "
+"measurements for each group as an input (in our case, one sample for A, "
+"one for B, one for C, and one for D). Since we have empty cells in each "
+"column, let's remove them from each column (the ``f_oneway`` function "
+"does not support missing values)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:684
+msgid ""
+"In the above line of code we are creating a list with 4 elements: the "
+"test results of each column A, B, C, and D, without the missing values "
+"(they are removed with ``dropna()``)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:688
+msgid "Run ANOVA"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:690
+msgid ""
+"Now, let's run ANOVA and store the output in two variables: ``f_value`` "
+"and ``p_value``. Notice that since ``dog_or_cat_samples`` is a list, we "
+"must pass the argument with an asterisk (``*dog_or_cat_samples``)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:696
+msgid ""
+"With the help of ``stats.f_oneway`` in the Help Pane you can read a "
+"description of the output of this function, some interesting notes about "
+"the test, and some references that you can use to better understand the "
+"nature of this analysis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:700
+msgid ""
+"In the Help pane you will read that ANOVA requires certain assumptions to"
+" be satisfied. In this workshop we have not checked those assumptions "
+"because our goal is merely to show some Spyder functions that make the "
+"research work easier. Thus, the results obtained in this example with "
+"ANOVA should not be taken too rigorously."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:702
+msgid ""
+"In the Variable Explorer you can find these two new variables: "
+"``f_value`` and ``p_value``. ``p_value`` (0.6275) is well over 0.05, "
+"which gives support to the null hypothesis (detracting support from our "
+"hypothesis). To know if the F value obtained is greater than the "
+"theoretically expected value, a **F critical value** must be calculated. "
+"This can be estimated using the ``stats`` library, a significance level "
+"(*q* ), and the degrees of freedom (*df* ) for the number of groups and "
+"the number of observations:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:713
+msgid ""
+"The value of ``f_critical`` (2.6241) is larger than that of ``f_value`` "
+"(0.5813). This means that the variance between the means of these groups "
+"is not significantly different. Since the *p* value indicates that we "
+"cannot rule out random variations, then we have to discard our "
+"hypothesis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:715
+msgid ""
+"What is the conclusion of all this? There seems to be little or no "
+"evidence in our data to think that there is indeed a correlation between "
+"a person's pet preferences and his or her ability to solve practical or "
+"abstract problems. Cat and dog owners, rejoice!"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:721
+msgid "Report and share"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:723
+msgid ""
+"In science, sharing results, good and bad, is critical. Today, in "
+"scientific computing, it is also crucial to share data, and the code used"
+" to process and analyze it. To help with this, we will use Spyder's Code "
+"Analysis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:727
+msgid "Code Analysis"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:729
+msgid ""
+"When you share code, you want it to be readable, clean, and not overly "
+"complex. The Code Analysis component can help us detect these issues and "
+"even bugs that can affect the performance of our code."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:731
+msgid ""
+"To see an example, you can open the :download:`scientific-computing-"
+"astro.py <scientific-computing-astro.py>` file and run the "
+":guilabel:`Code Analysis` (open the file in the pane and click on the "
+"green triangular button in the upper right corner)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:736
+msgid "You can see four categories that can help you improve your code:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:738
+msgid "Convention: programming standard violations"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:739
+msgid "Refactor: refactoring related checks"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:740
+msgid "Warning: Python-specific problems"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:741
+msgid "Error: probable bugs in the code"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:743
+msgid ""
+"Each of these categories indicates the type of alert and the line on "
+"which the potential issue occurs. For example, it tells us that line 129 "
+"is too long, or that we imported numpy but did not use it at all in the "
+"code."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:745
+msgid ""
+"These suggestions can contribute to sharing clean code. We recommend "
+"using this panel to polish your code before publishing it."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:753
+msgid ""
+"In this workshop we have taken the first steps to use Spyder for "
+"scientific computing. We have seen how from a question or doubt a "
+"hypothesis is raised. This question can also emerge from the exploration "
+"of some data, which can be done by calculating some measures (such as "
+"mean, median, standard deviation) or by drawing some plots."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:755
+msgid ""
+"Often, in order to answer the question, we must process some data (for "
+"example, for the construction of a cognitive ability test)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:757
+msgid ""
+"Finally, we try to establish a relationship between variables with some "
+"statistical tests. The results of these tests will support or not our "
+"initial hypothesis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:762
+msgid "Write and test code with the IPython Console and Editor."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:763
+msgid "Download a dataset."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:765
+msgid "Graphically explore a dataset."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:767
+msgid "Explore data and relate it to a hypothesis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:769
+msgid "Perform a statistical test with a specialized library on the data."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:770
+msgid "Improve code readability with Code Analysis."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:772
+msgid ""
+"Spyder has many features that can help you do data analysis. You can find"
+" more information in our `official documentation <https://docs.spyder-"
+"ide.org/5/index.html>`_."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:782
+msgid ""
+"If you want to check what you have learned, we suggest you analyze the "
+"data to try to answer the following question: *Do the different zodiac "
+"signs influence the results of a cognitive ability test?,* you can check "
+"the Python script :download:`scientific-computing-astro.py <scientific-"
+"computing-astro.py>` if you have any doubts."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:790
+msgid ""
+"For a description of the dataset used, see the following `paper "
+"<https://openpsych.net/paper/46/>`__:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:792
+msgid ""
+"Kirkegaard, E. O. W., & Bjerrekær, J. D. (2016). *The OKCupid dataset: A "
+"very large public dataset of dating site users*. Open Differential "
+"Psychology. doi:10.26775/odp.2016.11.03*"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:794
+msgid "A very fun book for learning statistics with R is the following:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:796
+msgid ""
+"Field, A., Miles, J., & Field, Z. (2012). *Discovering statistics using "
+"R*. SAGE Publications."
+msgstr ""
+

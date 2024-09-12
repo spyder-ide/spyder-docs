@@ -1,0 +1,396 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: spyder-documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"PO-Revision-Date: 2024-09-10 00:48\n"
+"Last-Translator: \n"
+"Language: es\n"
+"Language-Team: Spanish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Crowdin-Project: spyder-documentation\n"
+"X-Crowdin-Project-ID: 641502\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /doc/locales/en/LC_MESSAGES/installation.po\n"
+"X-Crowdin-File-ID: 22\n"
+
+#: ../../installation.rst:5
+msgid "Installation Guide"
+msgstr "Guía de instalación"
+
+#: ../../installation.rst:7
+msgid "Spyder is relatively easy to install on Windows, Linux and macOS. Just make sure to read and follow these instructions with care."
+msgstr "Spyder es relativamente fácil de instalar en Windows, Linux y macOS. Solo asegúrate de leer y seguir estas instrucciones con cuidado."
+
+#: ../../installation.rst:10
+msgid "If you run into problems, before posting a report, *please* consult our comprehensive :doc:`troubleshooting guide</troubleshooting/first-steps>` and search the `issue tracker`_ for your error message and problem description. These methods generally fix or isolate the great majority of install-related difficulties. Thanks!"
+msgstr "Si tienes problemas antes de publicar un informe *por favor* consulta nuestra guía completa :doc:`guía de solución de problemas</troubleshooting/first-steps>` y busca en el `seguimiento de incidencias`_ tu mensaje de error y descripción de problema. Estos métodos generalmente arreglan o aislan la gran mayoría de las dificultades relacionadas con la instalación. ¡Gracias!"
+
+#: ../../installation.rst:18
+msgid "For most users on Windows and macOS, we recommend our :ref:`install-standalone` as the most straightforward and robust option to obtain Spyder. For users needing Linux support, third-party Spyder plugins or Variable Explorer compatibility with custom-installed packages—all capabilities which the standalone installers currently do not yet provide—we advise using a :ref:`install-conda`. Linux, plugin and package/environment management support in the standalone installers are currently under active development for future Spyder versions."
+msgstr "Para la mayoría de los usuarios en Windows y macOS, recomendamos nuestra :ref:`install-standalone` como la opción más sencilla y robusta para obtener Spyder. Para los usuarios que necesitan soporte para Linux, plugins Spyder de terceros o compatibilidad con Variable Explorer con paquetes instalados a medida, todas las capacidades que los instaladores independientes aún no proporcionan, recomendamos usar :ref:`install-conda`. Linux, plugin y soporte de gestión de paquetes/entorno en los instaladores independientes están actualmente en activo desarrollo para las futuras versiones de Spyder."
+
+#: ../../installation.rst:27
+msgid "Try Spyder online"
+msgstr "Probar Spyder en línea"
+
+#: ../../installation.rst:29
+msgid "Want to try out Spyder without installing it? With `Binder`_ you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed. Visit the `Spyder Binder`_ to get started using Spyder."
+msgstr "¿Quieres probar Spyder sin instalarlo? Con `Binder`_ puedes trabajar con una copia completamente funcional de Spyder online que se ejecuta directamente en tu navegador web, sin necesidad de instalación. Visita el `Spyder Binder`_ para comenzar a usar Spyder."
+
+#: ../../installation.rst:45
+msgid "Standalone installers"
+msgstr "Instaladores independientes"
+
+#: ../../installation.rst:47
+msgid "The standalone installers are our recommended method for most users on Windows and macOS, with experimental Linux support under active development. They work like any other IDE, where Spyder can be installed and updated independently of the Python environments you use to run your code. This avoids the problems with incompatible packages and broken installations users often face when mixing Spyder with the (Conda, etc) environments they use to run their code."
+msgstr "Los instaladores independientes son nuestro método recomendado para la mayoría de los usuarios en Windows y macOS, con soporte experimental para Linux bajo activo desarrollo. Estos funcionan como cualquier otro IDE, donde Spyder puede ser instalado y actualizado independientemente de los entornos Python que utilices para ejecutar tu código. Esto evita los problemas con paquetes incompatibles e instalaciones rotas que los usuarios suelen enfrentar cuando mezclan Spyder con los entornos (Conda, etc) que usan para ejecutar su código."
+
+#: ../../installation.rst:51
+msgid "The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks. However, to manage your own packages and environments, you'll currently need to connect an external Python distribution (such as `Anaconda`_, `Miniconda`_, `Miniforge/Mambaforge`_, `WinPython`_ or `Python.org <Python_>`__) to your standalone copy of Spyder. For more information on this, see our :ref:`FAQ entry on the subject <using-packages-installer>`."
+msgstr "Los instaladores incluyen un entorno Python integrado con las librerías científicas más comunes (NumPy, Pandas, Matpotlib, etc), que se puede utilizar de forma automática para las tareas básicas de análisis de datos. Sin embargo, para gestionar tus propios paquetes y entornos, actualmente necesitarás conectar una distribución externa de Python (como `Anaconda`_, `Miniconda`_, `Miniforge/Mambaforge`_, `WinPython`_ o `Python.org <Python_>`__) a tu copia independiente de Spyder. Para más información sobre esto, ve nuestra entrada :ref:`FAQ sobre el asunto <using-packages-installer>`."
+
+#: ../../installation.rst:57
+msgid "The standalone installers do not yet support installing third-party Spyder plugins not already bundled with them, though this feature is currently under development. For now, if you need this capability, we recommend a :ref:`install-conda`."
+msgstr "Los instaladores independientes todavía no soportan la instalación de complementos Spyder de terceros que no están ya empaquetados con ellos, aunque esta característica está actualmente en desarrollo. Por ahora, si necesitas esta capacidad, recomendamos un :ref:`install-conda`."
+
+#: ../../installation.rst:64
+msgid "Downloading and installing"
+msgstr "Descargar e instalar"
+
+#: ../../installation.rst:66
+msgid "To download the supported Spyder installer for your platform, simply click the appropriate link below (for Linux, see the :ref:`install-conda` section). Then, double-click the downloaded file to open the installer. If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:`OK`, :guilabel:`Open`, :guilabel:`Allow` or similar."
+msgstr "Para descargar el instalador Spyder soportado para tu plataforma, simplemente haz clic en el enlace apropiado de abajo (para Linux, consulta la sección :ref:`install-conda`). Luego, haz doble clic en el archivo descargado para abrir el instalador. Si aparece una advertencia de seguridad, puede que necesites hacer clic en :guilabel:`Sí`, :guilabel:`OK`, :guilabel:`Abrir`, :guilabel:`Permitir` o similares."
+
+#: ../../installation.rst:70
+msgid "On Windows, if a \"SmartScreen\" dialog appears, click :guilabel:`More info` followed by :guilabel:`Run anyway`, and then proceed through the steps in the installer."
+msgstr "En Windows, si aparece un diálogo \"SmartScreen\", haz clic en :guilabel:`Más información` seguido por :guilabel:`Ejecutar de todos modos`, y luego procede a través de los pasos del instalador."
+
+#: ../../installation.rst:72
+msgid "On macOS, open the disk image and drag Spyder to your :guilabel:`Applications` folder."
+msgstr "En macOS, abre la imagen del disco y arrastra Spyder a tu carpeta de :guilabel:`Aplicaciones`."
+
+#: ../../installation.rst:79
+msgid "`Windows Installer`_"
+msgstr "`Windows installer`_"
+
+#: ../../installation.rst:79
+msgid "`macOS Installer`_"
+msgstr "`macOS Installer`_"
+
+#: ../../installation.rst:87
+msgid "\"Lite\" versions of both installers are also available from the `releases page`_, which are somewhat smaller than the full installers. These lack a number of optional but recommended dependencies, such as NumPy, SciPy and Pandas, meaning that a few :doc:`/panes/variableexplorer` features, including graphical data import wizards and support for rich display and editing of NumPy arrays and Pandas DataFrames, will not be available. Given this only saves a modest amount of space while missing out on significant features, we recommend using the full installers unless minimizing download/install size and memory usage is a priority."
+msgstr "Las versiones \"Lite\" de ambos instaladores también están disponibles en `releases page`_, que son algo más pequeñas que los instaladores completos. Estas carecen de un número de dependencias opcionales pero recomendadas, como NumPy, SciPy y Pandas, lo que significa que algunas características de :doc:`/panes/variableexplorer`, incluyendo asistentes gráficos de importación de datos y soporte para la visualización y edición enriquecida de matrices NumPy y Pandas DataFrames, no estarán disponibles. Dado que esto solo ahorra una modesta cantidad de espacio mientras se pierden características significativas, recomendamos usar los instaladores completos a menos que minimizar el tamaño de descarga/instalación y el uso de memoria sea una prioridad."
+
+#: ../../installation.rst:97
+msgid "Running from a standalone install"
+msgstr "Ejecutar desde una instalación independiente"
+
+#: ../../installation.rst:99
+msgid "To run Spyder when installed standalone, you can simply use your operating system's typical method of launching applications, such as opening it from the :guilabel:`Start` menu on Windows (or the Taskbar, if you've pinned it there), or from Launchpad, Spotlight or the :guilabel:`Applications` folder on macOS (or the Dock, if you've added it there)."
+msgstr "Para ejecutar Spyder cuando se instala de forma autónoma, simplemente puedes utilizar el método típico de tu sistema operativo para iniciar aplicaciones, tal como abrirlo desde el menú :guilabel:`Inicio` en Windows (o la barra de tareas, si lo has anclado ahí), o desde Launchpad, Spotlight o la carpeta :guilabel:`Aplicaciones` en macOS (o el Dock, si lo has añadido allí)."
+
+#: ../../installation.rst:105
+msgid "Updating a standalone install"
+msgstr "Actualizar una instalación independiente"
+
+#: ../../installation.rst:107
+msgid "By default, Spyder checks for updates automatically on startup, and you can also check manually with :menuselection:`Help --> Check for updates`. The standalone installers for Spyder 5.4.0+ include update functionality built right into Spyder, which after checking for updates will display a prompt to automatically download and install the current version. On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings)."
+msgstr "Por defecto, Spyder comprueba las actualizaciones automáticamente al iniciar, y también puede comprobar manualmente con :menuselection:`Ayuda --> Buscar actualizaciones`. Los instaladores autónomos para Spyder 5.4.0+ incluyen la funcionalidad de actualización incorporada directamente en Spyder, que después de comprobar si hay actualizaciones, mostrará un mensaje para descargar e instalar automáticamente la versión actual. En versiones anteriores, necesitarás descargar e instalar manualmente la última versión (en Windows, asegúrate de eliminar la versión antigua primero en la Configuración del Panel de Control/Sistema)."
+
+#: ../../installation.rst:117
+msgid "Conda-based distributions"
+msgstr "Distribuciones basadas en Conda"
+
+#: ../../installation.rst:119
+msgid "Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package. It can also be easily installed in the much lighter-weight `Miniconda`_ and `Miniforge/Mambaforge`_, which include just Python and the Conda/Mamba package and environment manager by default (with Miniforge defaulting to the Conda-Forge channel, and Mambaforge using Mamba, a much faster alternative to Conda). This is our recommended installation method on Linux and for users with third-party Spyder plugins, as support for both of these in our standalone installers is still under active development."
+msgstr "Spyder se incluye por defecto en la distribución `Anaconda`_ de Python, que viene con todo lo que necesitas para empezar con un paquete todo en uno. También puede instalarse fácilmente en el mucho más ligero `Miniconda`_ y `Miniforge/Mambaforge`_, que solamente incluyen Python y el paquete y gestor de entorno Conda/Mamba por defecto (con Miniforge por defecto en el canal Conda-Forge, y Mambaforge utilizando Mamba, una alternativa mucho más rápida a Conda). Este es nuestro método de instalación recomendado en Linux y para usuarios con plugins Spyder de terceros, ya que el soporte para ambos en nuestros instaladores independientes todavía está en proceso de desarrollo."
+
+#: ../../installation.rst:131
+msgid "Conda environment"
+msgstr "Entorno Conda"
+
+#: ../../installation.rst:133
+msgid "With Miniconda/Miniforge/Mambaforge, or to get a more reliable and up-to-date Spyder version with Anaconda, we strongly recommend installing Spyder into its own dedicated Conda environment."
+msgstr "Con Miniconda/Miniforge/Mambaforge, o para obtener una versión más fiable y actualizada de Spyder con Anaconda, te recomendamos encarecidamente instalar Spyder en tu propio entorno Conda."
+
+#: ../../installation.rst:137
+msgid "If using Mamba/Mambaforge, substitute ``mamba`` for ``conda`` in the following commands."
+msgstr "Si usas Mamba/Mambaforge, sustituye ``mamba`` por ``conda`` en los siguientes comandos."
+
+#: ../../installation.rst:143
+msgid "Installing with Conda"
+msgstr "Instalar con Conda"
+
+#: ../../installation.rst:145
+msgid "For a full install of Spyder and all optional dependencies, run the following command in your Anaconda Prompt (Windows) or terminal:"
+msgstr "Para una instalación completa de Spyder y todas las dependencias opcionales, ejecuta el siguiente comando en tu Anaconda Prompt (Windows) o terminal:"
+
+#: ../../installation.rst:151
+msgid "For a minimal install without the optional functionality and integration with the above packages, you can instead run:"
+msgstr "Para una instalación mínima sin la funcionalidad opcional y la integración con los paquetes anteriores, puedes ejecutar:"
+
+#: ../../installation.rst:157
+msgid "This installs Spyder into a new environment called ``spyder-env``, using the more up-to-date, community-run Conda-Forge channel. To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment's default channel with strict channel priority enabled, if this isn't the case already (as it is with Miniforge/Mambaforge or if you've manually configured it):"
+msgstr "Esto instala Spyder en un nuevo ambiente llamado ``spyder-env``, usando el canal Conda-Forge más actualizado, ejecutado por la comunidad. Para asegurarse de que futuras instalaciones/actualizaciones en este entorno también utilizan Conda-Forge y que sean más rápidas y confiables, asegúrate de establecerlo como el canal predeterminado de tu entorno con la prioridad estricta de canal activada, si este no es el caso (como lo es con Miniforge/Mambaforge o si lo has configurado manualmente):"
+
+#: ../../installation.rst:166
+msgid "Here's a summary of the main steps."
+msgstr "Aquí tienes un resumen de los pasos principales."
+
+#: ../../installation.rst:175
+msgid "Running with Conda"
+msgstr "Ejecutar con Conda"
+
+#: ../../installation.rst:177
+msgid "You can then run Spyder by the same methods :ref:`as with Anaconda <install-anaconda-running>`, except that you need to make sure to launch the Start menu shortcut with ``(spyder-env)`` in the name, select the ``spyder-env`` environment on the left before launching it with Navigator, or type ``conda activate spyder-env`` before launching it on the command line."
+msgstr "Luego puedes ejecutar Spyder por los mismos métodos :ref:`que con Anaconda <install-anaconda-running>`, excepto que necesitas asegurarte de iniciar el acceso directo del menú Inicio con ``(spyder-env)`` en el nombre, selecciona el entorno ``spyder-env`` a la izquierda antes de lanzarlo con Navigator, o escribe ``conda activate spyder-env`` antes de lanzarlo en la línea de comandos."
+
+#: ../../installation.rst:179
+msgid "See :ref:`our FAQ question <using-existing-environment>` for more information about how to use Spyder with your existing Conda environments."
+msgstr "Ve a :ref:`nuestras preguntas frecuentes FAQ <using-existing-environment>` para más información sobre cómo usar Spyder con sus entornos Conda existentes."
+
+#: ../../installation.rst:185
+msgid "Updating with Conda"
+msgstr "Ejecutar con Conda"
+
+#: ../../installation.rst:187
+msgid "With any Conda-based distribution and Spyder installed in its own environment (recommended), update Conda itself, active the environment, and finally update Spyder. In your system terminal (or Anaconda Prompt if on Windows), run:"
+msgstr "Con cualquier distribución basada en Conda y Spyder instalados en su propio entorno (recomendado), actualiza Conda en sí mismo, activa el entorno y finalmente actualiza Spyder. En tu terminal del sistema, o en el Anaconda Prompt si estás en Windows, ejecuta:"
+
+#: ../../installation.rst:196
+msgid "In case you get an error trying to update, just remove the existing environment (if using one other than ``base``):"
+msgstr "En caso de que se produzca un error al intentar actualizar, simplemente elimina el entorno existente (si se utiliza otro que no sea ``base``):"
+
+#: ../../installation.rst:202
+msgid "And then :ref:`recreate a fresh one <install-conda-installing>`."
+msgstr "Y luego :ref:`recrea uno nuevo <install-conda-installing>`."
+
+#: ../../installation.rst:208
+msgid "Anaconda base"
+msgstr "Anaconda base"
+
+#: ../../installation.rst:210
+msgid "While we recommend always using a dedicated environment, with Anaconda you can also run the bundled copy of Spyder from the built-in ``base`` environment."
+msgstr "Aunque recomendamos utilizar siempre un entorno dedicado, con Anaconda también puede ejecutar la copia empaquetada de Spyder desde el entorno ``base`` incorporado."
+
+#: ../../installation.rst:214
+msgid "The bundled Spyder version can often be quite out of date, missing new features and bug fixes from the latest version, and if you install, change or remove other packages, there is a significant chance of dependency conflicts or a broken Spyder installation. Therefore, we recommend :ref:`installing Spyder into a new Conda environment <install-conda-installing>` to avoid all these issues."
+msgstr "La versión empaquetada de Spyder a menudo puede estar bastante desactualizada, faltando nuevas características y correcciones de errores que están en la última versión, y si instalas, cambias o eliminar otros paquetes, hay una gran probabilidad de conflictos de dependencias o de una instalación rota de Spyder. Por lo tanto, recomendamos que :ref:`instales Spyder en un nuevo entorno Conda <install-conda-installing>` para evitar todos estos problemas."
+
+#: ../../installation.rst:221
+msgid "Running with Anaconda"
+msgstr "Ejecutar con Anaconda"
+
+#: ../../installation.rst:223
+msgid "To run the bundled version of Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut. On other platforms, open Anaconda Navigator, scroll to Spyder under :guilabel:`Home` and click :guilabel:`Launch`."
+msgstr "Para ejecutar la versión empaquetada de Spyder después de instalarla con Anaconda, el método recomendado en Windows es lanzarlo a través del acceso directo al menú Inicio. En otras plataformas, abre Anaconda Navigator, desplázate a Spyder bajo :guilabel:`Home` y haz clic en :guilabel:`Launch`."
+
+#: ../../installation.rst:229
+msgid "If Spyder does not start via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type ``conda activate base`` then ``spyder``."
+msgstr "Si Spyder no se inicia a través de este método o prefieres utilizar la línea de comandos, abre el Anaconda Prompt (Windows) o tu terminal (otras plataformas), escribe ``conda activate base`` y luego ``spyder``."
+
+#: ../../installation.rst:235
+msgid "Updating with Anaconda"
+msgstr "Actualizar con Anaconda"
+
+#: ../../installation.rst:237
+msgid "With Spyder installed in Anaconda's ``base`` environment, first update the ``anaconda`` meta-package, and then Spyder itself (in case there is a newer version than that pinned to the ``anaconda`` metapackage). In your system terminal (or Anaconda Prompt if on Windows), run:"
+msgstr "Con Spyder instalado en el entorno Anaconda ``base``, primero actualiza el meta-paquete ``anaconda``, y luego Spyder en sí, en caso de que haya una versión más reciente que la fijada al metapaquete ``anaconda``. En tu terminal de sistema (o Anaconda Prompt si en Windows), ejecutar:"
+
+#: ../../installation.rst:247
+msgid "These commands also update all your other packages, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on other installed packages."
+msgstr "Estos comandos también actualizan todos los demás paquetes, es una de las razones por las que recomendamos que utilices un entorno conda aislado para evitar posibles efectos no intencionados en otros paquetes instalados."
+
+#: ../../installation.rst:249
+msgid "In case you get an error resolving dependencies, try uninstalling Spyder and re-installing it:"
+msgstr "En caso de que obtengas un error resolviendo las dependencias, intenta desinstalar Spyder y reinstalarlo:"
+
+#: ../../installation.rst:262
+msgid "Using pip"
+msgstr "Usar Pip"
+
+#: ../../installation.rst:266
+msgid "While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with pip can sometimes lead to tricky issues, particularly on Windows and macOS. While you are welcome to try it on your own, we are typically not able to provide individual support for installation problems with pip, except to recommend our :ref:`install-standalone` (Windows and macOS) or a :ref:`install-conda`."
+msgstr "Si bien este método de instalación es una opción viable para usuarios experimentados, instalar Spyder (y otros paquetes de PyData-stack) con pip a veces puede llevar a problemas complicados, particularmente en Windows y macOS. Aunque eres bienvenido a probarlo por tu cuenta, normalmente no somos capaces de proporcionar soporte individual para problemas de instalación con pip excepto para recomendar nuestro :ref:`install-standalone` (Windows y macOS) o un :ref:`install-conda`."
+
+#: ../../installation.rst:269
+msgid "You can install Spyder with the pip package manager, which is included by default with most Python installations. Before installing Spyder itself by this method, you need to download the `Python`_ programming language."
+msgstr "Puedes instalar Spyder con el gestor de paquetes pip, que se incluye por defecto en la mayoría de las instalaciones de Python. Antes de instalar Spyder en sí mismo mediante este método, necesitas descargar el lenguaje de programación `Python`_."
+
+#: ../../installation.rst:276
+msgid "Due to a known issue with some DEB-based Linux distributions (Debian, Ubuntu, Mint), you might also need to install the ``pyqt5-dev-tools`` package first, with ``sudo apt install pyqt5-dev-tools``."
+msgstr "Debido a un problema conocido con algunas distribuciones Linux basadas en DEB (Debian, Ubuntu, Mint), podrías necesitar instalar primero el paquete ``pyqt5-dev-tools`` con ``sudo apt install pyqt5-dev-tools``."
+
+#: ../../installation.rst:278
+msgid "You'll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods."
+msgstr "Primero querrás crear y activar un entorno virtual en el cual instalar Spyder, mediante uno de los siguientes métodos."
+
+#: ../../installation.rst:280
+msgid "With ``virtualenvwrapper``:"
+msgstr "Con ``virtualenvapper``:"
+
+#: ../../installation.rst:287
+msgid "Otherwise, on macOS/Linux/Unix:"
+msgstr "De lo contrario, en macOS/Linux/Unix:"
+
+#: ../../installation.rst:294
+msgid "or on Windows:"
+msgstr "o en Windows:"
+
+#: ../../installation.rst:301
+msgid "After activating your environment, to install Spyder and its optional dependencies, run:"
+msgstr "Después de activar tu entorno, para instalar Spyder y sus dependencias opcionales, ejecuta:"
+
+#: ../../installation.rst:307
+msgid "Or for a minimal installation, run:"
+msgstr "O para una instalación mínima, ejecuta:"
+
+#: ../../installation.rst:316
+msgid "To launch Spyder after installing it, ensure your environment is activated and run the ``spyder`` or ``spyder3`` command."
+msgstr "Para iniciar Spyder después de instalarlo, asegúrate de que tu entorno está activado y ejecuta el comando ``spyder`` o ``spyder3``."
+
+#: ../../installation.rst:318
+msgid "And to update Spyder, with your Spyder environment activated, run:"
+msgstr "Y para actualizar Spyder, con tu entorno Spyder activado, ejecuta:"
+
+#: ../../installation.rst:330
+msgid "Alternative methods"
+msgstr "Métodos alternativos"
+
+#: ../../installation.rst:334
+msgid "While we describe alternative Spyder installation options for users who prefer them, as these are third-party distributions that we have no direct involvement in, we are usually not able to offer useful individual assistance for problems specific to installing via these alternative methods."
+msgstr "Mientras describimos opciones alternativas de instalación de Spyder para los usuarios que las prefieren, ya que se trata de distribuciones de terceros en las que no tenemos ninguna implicación directa, normalmente no podemos ofrecer asistencia individual útil para problemas específicos de instalación a través de estos métodos alternativos."
+
+#: ../../installation.rst:336
+msgid "Also, the Spyder versions they install may be out of date relative to the current release, and thus be missing the latest features and bug fixes."
+msgstr "Además, las versiones de Spyder que instalan pueden estar desactualizadas respecto a la versión actual, y por lo tanto faltan las últimas características y correcciones de errores."
+
+#: ../../installation.rst:338
+msgid "Therefore, we recommend you switch to our :ref:`install-standalone` (Windows and macOS) or a :ref:`install-conda` if you encounter installation issues you are unable to solve on your own."
+msgstr "Por lo tanto, te recomendamos cambiar a nuestro :ref:`install-standalone` (Windows y macOS) o a un :ref:`install-conda` si encuentras problemas de instalación que no puedes resolver por ti mismo."
+
+#: ../../installation.rst:344
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../installation.rst:346
+msgid "Spyder is included in the `WinPython`_ scientific Python distribution, along with many other common numerical computing and data analysis packages. You can use Spyder immediately after installing, similar to Anaconda."
+msgstr "Spyder está incluido en la distribución científica de Python `WinPython`_, junto con muchos otros paquetes comunes de cálculo y análisis de datos. Puedes usar Spyder inmediatamente después de la instalación, similar a Anaconda."
+
+#: ../../installation.rst:355
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../installation.rst:357
+msgid "Spyder is available as `a cask`_ through `Homebrew`_."
+msgstr "Spyder está disponible como un `cask`_ a través de `Homebrew`_."
+
+#: ../../installation.rst:362
+msgid "To install it using the ``brew`` package manager, run:"
+msgstr "Para instalarlo usando el gestor de paquetes ``brew``, ejecuta:"
+
+#: ../../installation.rst:368
+msgid "It is also available as a `a port`_ through `MacPorts`_."
+msgstr "También está disponible como un `port`_ a través de `MacPorts`_."
+
+#: ../../installation.rst:373
+msgid "To install it using the ``port`` package manager, run:"
+msgstr "Para instalarlo usando el gestor de paquetes ``port``, ejecuta:"
+
+#: ../../installation.rst:383
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../installation.rst:385
+msgid "Spyder can be installed via third-party distro packages on most common Linux distributions."
+msgstr "Spyder se puede instalar a través de paquetes de distribución de terceros en las distribuciones de Linux más comunes."
+
+#: ../../installation.rst:387
+msgid "Running Spyder installed this way will generally be the same as any other distro-installed application. Alternatively, it can be launched from the terminal with ``spyder`` (or ``spyder3``, on older versions of some distros)."
+msgstr "Al instalar Spyder de esta forma, puede ser ejecutado al igual que cualquier otra aplicación obtenida a través de tu distribución. Alternativamente, puede ser lanzado desde la terminal con ``spyder`` (o ``spyder3``, en versiones antiguas de algunas distribuciones)."
+
+#: ../../installation.rst:394
+msgid "Ubuntu/Debian"
+msgstr "Ubuntu/Debian"
+
+#: ../../installation.rst:396
+msgid "Spyder is available as `a Ubuntu package`_ and `a Debian package`_."
+msgstr "Spyder está disponible como `un paquete Ubuntu`_ y `un paquete Debian`_."
+
+#: ../../installation.rst:401
+msgid "To install it using the ``apt`` package manager, run:"
+msgstr "Para instalarlo usando el gestor de paquetes ``apt``, ejecuta:"
+
+#: ../../installation.rst:411
+msgid "Other distributions"
+msgstr "Otras distribuciones"
+
+#: ../../installation.rst:413
+msgid "Spyder is also available in other GNU/Linux distributions, including:"
+msgstr "Spyder también está disponible en otras distribuciones GNU/Linux, incluyendo:"
+
+#: ../../installation.rst:415
+msgid "`Arch Linux`_"
+msgstr "`Arch Linux`_"
+
+#: ../../installation.rst:416
+msgid "`Fedora`_"
+msgstr "`Fedora`_"
+
+#: ../../installation.rst:417
+msgid "`Gentoo`_"
+msgstr "`Gentoo`_"
+
+#: ../../installation.rst:418
+msgid "`openSUSE`_"
+msgstr "`openSUSE`_"
+
+#: ../../installation.rst:425
+msgid "Please refer to the links or your distribution's documentation for how to install Spyder."
+msgstr "Por favor, consulta los enlaces o la documentación de tu distribución sobre cómo instalar Spyder."
+
+#: ../../installation.rst:433
+msgid "Development builds"
+msgstr "Versiones de desarrollo"
+
+#: ../../installation.rst:435
+msgid "If you want to try the next Spyder version before it is released, you can! You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do. For more information, please see the `Contributing Guide`_ included with the Spyder source or on Github, and for further detail consult the `Spyder development wiki`_."
+msgstr "Si quieres probar la siguiente versión de Spyder antes de que sea lanzada, ¡puedes hacerlo! Es posible que quieras hacer esto para corregir errores en Spyder, añadir nuevas características, aprender cómo funciona Spyder o simplemente probar lo que el IDE puede hacer. Para más información, por favor vea la `Guía de Contribución`_ incluida con el código fuente de Spyder o en Github, y para más detalles consulte la `Guía de Desarrollo de Spyder`_."
+
+#: ../../installation.rst:450
+msgid "Additional help"
+msgstr "Ayuda adicional"
+
+#: ../../installation.rst:454
+msgid "*Run in to a problem installing or running Spyder?* Read our `Troubleshooting Guide and FAQ`_."
+msgstr "*¿Problemas al instalar o ejecutar Spyder?* Lea nuestra `Guía de solución de problemas y FAQ`_."
+
+#: ../../installation.rst:458
+msgid "*Looking for general information about Spyder and its ecosystem?* See our `main website`_."
+msgstr "*¿Buscas información general sobre Spyder y su ecosistema?* Ve a nuestro `sitio web principal`_."
+
+#: ../../installation.rst:462
+msgid "*Need to submit a bug report or feature request?* Check out our `Github repository`_."
+msgstr "*¿Necesitas enviar un informe de error o solicitud de características?* Revisa nuestro `repositorio de Github`_."
+
+#: ../../installation.rst:466
+msgid "*Want development-oriented help and information?* Consult our `Github wiki`_."
+msgstr "*¿Quieres ayuda e información orientada al desarrollo?* Consulta nuestro `Github wiki`_."
+
+#: ../../installation.rst:470
+msgid "*Have a help request or discussion topic?* Subscribe to our `Google Group`_."
+msgstr "*¿Tienes una solicitud de ayuda o un tema de discusión?* Suscríbete a nuestro `Grupo de Google`_."
+
+#: ../../installation.rst:474
+msgid "*Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_."
+msgstr "*¿Hacer una pregunta rápida o quieres chatear con el equipo de desarrolladores?* Pásate por nuestro `chat de Gitter`_."
+
+#: ../../installation.rst:478
+msgid "*Seeking personalized help from expert Spyder consultants?* Visit `OpenTeams`_."
+msgstr "*¿Buscando ayuda personalizada de consultores expertos de Spyder?* Visita `OpenTeams`_."
+

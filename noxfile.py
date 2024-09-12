@@ -23,6 +23,7 @@ nox.options.default_venv_backend = "none"
 
 
 CI = "CI" in os.environ
+
 CANARY_COMMAND = ("sphinx-build", "--version")
 
 BUILD_INVOCATION = ("python", "-m", "sphinx")
@@ -31,13 +32,24 @@ BUILD_DIR = Path("doc/_build").resolve()
 BUILD_OPTIONS = ("-n", "-W", "--keep-going")
 
 HTML_BUILDER = "html"
-HTML_BUILD_DIR = BUILD_DIR / "html"
+HTML_BUILD_DIR = BUILD_DIR / HTML_BUILDER
 HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 
-SCRIPT_DIR = Path("scripts").resolve()
+SOURCE_LANGUAGE = "en"
+TRANSLATION_LANGUAGES = ("es",)
+ALL_LANGUAGES = (SOURCE_LANGUAGE,) + TRANSLATION_LANGUAGES
+
+LOCALE_DIR = SOURCE_DIR / "locales"
+GETTEXT_BUILDER = "gettext"
+GETTEXT_BUILD_DIR = BUILD_DIR / GETTEXT_BUILDER
+POT_DIR = LOCALE_DIR / "pot"
+PO_LINE_WIDTH = 0
 
 LATEST_VERSION = 5
 BASE_URL = "https://docs.spyder-ide.org"
+
+CONF_PY = SOURCE_DIR / "conf.py"
+SCRIPT_DIR = Path("scripts").resolve()
 
 
 # ---- Helpers ---- #
@@ -53,7 +65,7 @@ def set_log_level(logger=nox.logger.logger, level=logging.CRITICAL):
         logger.setLevel(prev_level)
 
 
-def split_sequence(seq, sep="--"):
+def split_sequence(seq, *, sep="--"):
     """Split a sequence by a single separator."""
     if sep not in seq:
         seq.append(sep)
@@ -73,33 +85,44 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
     return filenames
 
 
-def extract_builder_name(options):
-    """Extract the Sphinx builder name from a sequence of options."""
-    try:
-        builder_index = options.index("--builder")
-    except ValueError:
-        try:
-            builder_index = options.index("-b")
-        except ValueError:
-            return None
+def extract_option_values(options, option_names, *, split_csv=False):
+    """Extract particular option values from a sequence of options."""
+    option_values = []
+    remaining_options = []
 
-    options.pop(builder_index)
-    builder = options.pop(builder_index)
-    return builder
+    save_next_option = False
+    for option in options:
+        if save_next_option:
+            if split_csv:
+                option_values += list(option.strip(",").split(","))
+            else:
+                option_values.append(option)
+            save_next_option = False
+        elif option in option_names:
+            save_next_option = True
+        else:
+            remaining_options.append(option)
+
+    return option_values, remaining_options
 
 
 def construct_sphinx_invocation(
     posargs=(),
+    *,
     builder=HTML_BUILDER,
     source_dir=SOURCE_DIR,
-    build_dir=BUILD_DIR,
+    build_dir=None,
     build_options=BUILD_OPTIONS,
+    extra_options=(),
     build_invocation=BUILD_INVOCATION,
 ):
     """Reusably build a Sphinx invocation string from the given arguments."""
-    extra_options, filenames = split_sequence(list(posargs))
+    cli_options, filenames = split_sequence(list(posargs))
     filenames = process_filenames(filenames, source_dir=source_dir)
-    builder = extract_builder_name(extra_options) or builder
+    builders, cli_options = extract_option_values(
+        cli_options, ["--builder", "-b"], split_csv=False)
+    builder = builders[-1] if builders else builder
+    build_dir = BUILD_DIR / builder if build_dir is None else build_dir
 
     if CI:
         build_options = list(build_options) + ["--color"]
@@ -110,9 +133,10 @@ def construct_sphinx_invocation(
         builder,
         *build_options,
         *extra_options,
+        *cli_options,
         "--",
         str(source_dir),
-        str(build_dir / builder),
+        str(build_dir),
         *filenames,
     ]
     return sphinx_invocation
@@ -146,7 +170,7 @@ def _execute(session):
 
 # ---- Install ---- #
 
-def _install(session, use_posargs=True):
+def _install(session, *, use_posargs=True):
     """Execute the dependency installation."""
     posargs = session.posargs[1:] if use_posargs else ()
     session.install("-r", "requirements.txt", *posargs)
@@ -217,17 +241,6 @@ def build(session):
     session.notify("_execute", posargs=([_build], *session.posargs))
 
 
-def _serve():
-    """Open the docs in a web browser."""
-    webbrowser.open(HTML_INDEX_PATH.as_uri())
-
-
-@nox.session
-def serve(_session):
-    """Display the project."""
-    _serve()
-
-
 def _autobuild(session):
     """Use Sphinx-Autobuild to rebuild the project and open in browser."""
     session.install("sphinx-autobuild")
@@ -236,7 +249,7 @@ def _autobuild(session):
         sphinx_invocation = construct_sphinx_invocation(
             posargs=session.posargs[1:],
             build_dir=destination,
-            build_options=list(BUILD_OPTIONS) + ["-a"],
+            extra_options=["-a"],
             build_invocation=[
                 "sphinx-autobuild",
                 "--port=0",
@@ -253,9 +266,50 @@ def autobuild(session):
     session.notify("_execute", posargs=([_autobuild], *session.posargs))
 
 
+def _build_languages(session):
+    """Build the docs in multiple languages."""
+    languages, posargs = extract_option_values(
+        session.posargs[1:], ("--lang", "--language"), split_csv=True)
+    languages = languages or ALL_LANGUAGES
+
+    for language in languages:
+        print(f"\nBuilding {language} translation...\n")
+        sphinx_invocation = construct_sphinx_invocation(
+            posargs=posargs,
+            build_dir=HTML_BUILD_DIR / language,
+            extra_options=["-D", f"language={language}"],
+        )
+        session.run(*sphinx_invocation)
+
+
+@nox.session(name="build-languages")
+def build_languages(session):
+    """Build the project in multiple languages (specify with '--lang')."""
+    session.notify(
+        "_execute", posargs=([_build_languages], *session.posargs))
+
+
+@nox.session(name="build-multilanguage")
+def build_multilanguage(session):
+    """Build the project for deployment in all languages."""
+    session.notify(
+        "_execute", posargs=([_build, _build_languages], *session.posargs))
+
+
 # ---- Deploy ---- #
 
-def _deploy():
+def _serve(_session=None):
+    """Open the docs in a web browser."""
+    webbrowser.open(HTML_INDEX_PATH.as_uri())
+
+
+@nox.session
+def serve(_session):
+    """Display the project."""
+    _serve()
+
+
+def _prepare_multiversion(_session=None):
     """Execute the pre-deployment steps for multi-version support."""
     # pylint: disable=import-outside-toplevel
 
@@ -280,10 +334,22 @@ def _deploy():
     )
 
 
-@nox.session
-def deploy(_session):
-    """Prepare the project for deployment."""
-    _deploy()
+@nox.session(name="prepare-multiversion")
+def prepare_multiversion(_session):
+    """Prepare the project for multi-version deployment."""
+    _prepare_multiversion()
+
+
+@nox.session(name="build-deployment")
+def build_deployment(session):
+    """Build and prepare the project for production deployment."""
+    session.notify(
+        "_execute",
+        posargs=(
+            [_build, _build_languages, _prepare_multiversion],
+            *session.posargs,
+        ),
+    )
 
 
 # ---- Check ---- #
@@ -348,3 +414,85 @@ def _linkcheck(session):
 def linkcheck(session):
     """Check that links in the project are valid."""
     session.notify("_execute", posargs=([_linkcheck], *session.posargs))
+
+
+# ---- Translation ---- #
+
+def _build_pot(session):
+    """Build the docs with Sphinx -b gettext to extract .pot files."""
+    sphinx_invocation = construct_sphinx_invocation(
+        posargs=session.posargs[1:], builder=GETTEXT_BUILDER)
+    session.run(*sphinx_invocation)
+
+
+@nox.session(name="build-pot")
+def build_pot(session):
+    """Build the gettext .pot file translation catalogs for the project."""
+    session.notify("_execute", posargs=([_build_pot], *session.posargs))
+
+
+def _copy_pot(_session=None):
+    """Copy the built gettext .pot files to the locale directory."""
+    if POT_DIR.exists():
+        for old_file in POT_DIR.glob("*.pot"):
+            old_file.unlink()
+    else:
+        POT_DIR.mkdir(parents=True)
+    for pot_file in GETTEXT_BUILD_DIR.glob("*.pot"):
+        print(f"Copying {pot_file.relative_to(GETTEXT_BUILD_DIR).as_posix()}")
+        shutil.copy2(pot_file, POT_DIR)
+
+
+@nox.session(name="copy-pot")
+def copy_pot(_session):
+    """Update the checked-in gettext pot files with the built ones."""
+    _copy_pot()
+
+
+@nox.session(name="update-pot")
+def update_pot(session):
+    """Rebuild gettext .pot files and update the existing ones."""
+    session.notify(
+        "_execute", posargs=([_build_pot, _copy_pot], *session.posargs))
+
+
+def _update_po(session):
+    """Run sphinx-intl update to update po files from pot for languages."""
+    session.install("sphinx-intl")
+
+    lang_args = []
+    posargs = list(session.posargs[1:])
+    if "--all-languages" in posargs:
+        posargs.pop(posargs.index("--all-languages"))
+        for language in ALL_LANGUAGES:
+            lang_args += ["--language", language]
+    elif "-l" not in posargs and "--language" not in posargs:
+        lang_args += ["--language", SOURCE_LANGUAGE]
+
+    session.run(
+        "sphinx-intl",
+        "--config",
+        CONF_PY,
+        "update",
+        "--pot-dir",
+        POT_DIR,
+        "--line-width",
+        str(PO_LINE_WIDTH),
+        *lang_args,
+        *posargs,
+    )
+
+
+@nox.session(name="update-po")
+def update_po(session):
+    """Update gettext .po from .pot (pass "-l LANG" to specify languages)."""
+    session.notify("_execute", posargs=([_update_po], *session.posargs))
+
+
+@nox.session(name="update-po-pot")
+def update_po_pot(session):
+    """Rebuild & update the pot files, & update the source lang po files."""
+    session.notify(
+        "_execute",
+        posargs=([_build_pot, _copy_pot, _update_po], *session.posargs),
+    )
