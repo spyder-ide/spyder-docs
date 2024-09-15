@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
 # This file is distributed under the same license as the Spyder package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Spyder 5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"POT-Creation-Date: 2024-09-06 20:38-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../plugins/index.rst:3
-msgid "Spyder Plugins"
+msgid "Plugins"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:3
@@ -25,10 +25,11 @@ msgid "Spyder Line Profiler"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:5
-msgid ""
-"**Spyder-Line-Profiler** is a plugin to run the Python `line profiler`_. "
-"This package profiles the time that individual lines of code take to "
-"execute."
+msgid "**Spyder-Line-Profiler** is a plugin to run the Python `line profiler`_. This package profiles the time that individual lines of code take to execute."
+msgstr ""
+
+#: ../../plugins/lineprofiler.rst:10
+msgid "Spyder with the Line Profiler pane open"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:17
@@ -36,20 +37,15 @@ msgid "Installing the Line Profiler"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:19
-msgid ""
-"If you installed Spyder using conda, the best way to obtain Spyder-Line-"
-"Profiler is to run the following command in your terminal (or Anaconda "
-"prompt on Windows):"
+msgid "If you installed Spyder using conda, the best way to obtain Spyder-Line-Profiler is to run the following command in your terminal (or Anaconda prompt on Windows):"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:27
-msgid ""
-"At the moment it is not possible to use this plugin with the Spyder :ref"
-":`install-standalone` for Windows and macOS. We're working to add support"
-" for them in the future."
+msgid "At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to add support for them in the future."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:30 ../../plugins/notebook.rst:26
+#: ../../plugins/lineprofiler.rst:30
+#: ../../plugins/notebook.rst:26
 #: ../../plugins/terminal.rst:27
 msgid "Restart Spyder in order to be able to use the plugin."
 msgstr ""
@@ -59,32 +55,35 @@ msgid "Using the Line Profiler"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:38
-msgid ""
-"When the Line Profiler is installed, it will be available under the menu "
-"item :menuselection:`View --> Panes --> Line Profiler`."
+msgid "When the Line Profiler is installed, it will be available under the menu item :menuselection:`View --> Panes --> Line Profiler`."
+msgstr ""
+
+#: ../../plugins/lineprofiler.rst:40
+msgid "Spyder showing View Panes Line Profiler"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:43
-msgid ""
-"You will see it then as a tab next to the :guilabel:`Files` tab. For the "
-"Line Profiler to work, you must place the ``@profile`` decorator on the "
-"line above any functions that you wish to profile."
+msgid "You will see it then as a tab next to the :guilabel:`Files` tab. For the Line Profiler to work, you must place the ``@profile`` decorator on the line above any functions that you wish to profile."
+msgstr ""
+
+#: ../../plugins/lineprofiler.rst:46
+msgid "Adding 'profile' decorators to script to profile it line by line."
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:49
-msgid ""
-"Now that the decorators have been added, you can then either select a "
-"script with the button present in the pane or run the profiler from "
-":menuselection:`Run --> Profile line by line`. Your file will then be "
-"profiled line by line."
+msgid "Now that the decorators have been added, you can then either select a script with the button present in the pane or run the profiler from :menuselection:`Run --> Profile line by line`. Your file will then be profiled line by line."
+msgstr ""
+
+#: ../../plugins/lineprofiler.rst:52
+msgid "Spyder showing the line profiler button in the Run menu"
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:55
-msgid ""
-"After running the profiler, either from the button in the pane or the "
-":menuselection:`Run` menu, the results are shown in the :guilabel:`Line "
-"Profiler` pane. The path displayed there is that of the file being "
-"profiled."
+msgid "After running the profiler, either from the button in the pane or the :menuselection:`Run` menu, the results are shown in the :guilabel:`Line Profiler` pane. The path displayed there is that of the file being profiled."
+msgstr ""
+
+#: ../../plugins/lineprofiler.rst:58
+msgid "Running the line profiler and inspecting the results."
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:61
@@ -100,9 +99,7 @@ msgid "``Hits:`` how many times that line is hit in the scope."
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:65
-msgid ""
-"``Time (ms):`` time spent running the line in total for all hits, in "
-"milliseconds."
+msgid "``Time (ms):`` time spent running the line in total for all hits, in milliseconds."
 msgstr ""
 
 #: ../../plugins/lineprofiler.rst:66
@@ -126,16 +123,15 @@ msgid "Spyder Notebook"
 msgstr ""
 
 #: ../../plugins/notebook.rst:5
-msgid ""
-"**Spyder-notebook** is a plugin that allows you to open, edit and "
-"interact with Jupyter Notebooks right inside Spyder."
+msgid "**Spyder-notebook** is a plugin that allows you to open, edit and interact with Jupyter Notebooks right inside Spyder."
+msgstr ""
+
+#: ../../plugins/notebook.rst:7
+msgid "Spyder Notebook in Spyder"
 msgstr ""
 
 #: ../../plugins/notebook.rst:10
-msgid ""
-"Using notebooks inside Spyder allows you to take advantage of their web "
-"interface alongside Spyder’s powerful features such as the Variable "
-"explorer, console and debugger."
+msgid "Using notebooks inside Spyder allows you to take advantage of their web interface alongside Spyder’s powerful features such as the Variable explorer, console and debugger."
 msgstr ""
 
 #: ../../plugins/notebook.rst:14
@@ -143,17 +139,12 @@ msgid "Installing the Notebook"
 msgstr ""
 
 #: ../../plugins/notebook.rst:16
-msgid ""
-"If you installed Spyder using conda, the best way to install Spyder-"
-"notebook is to run the following command in your terminal or Anaconda "
-"prompt on Windows:"
+msgid "If you installed Spyder using conda, the best way to install Spyder-notebook is to run the following command in your terminal or Anaconda prompt on Windows:"
 msgstr ""
 
-#: ../../plugins/notebook.rst:24 ../../plugins/terminal.rst:25
-msgid ""
-"At the moment it is not possible to use this plugin with the Spyder :ref"
-":`install-standalone` for Windows and macOS. We're working to make that "
-"possible in the future."
+#: ../../plugins/notebook.rst:24
+#: ../../plugins/terminal.rst:25
+msgid "At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future."
 msgstr ""
 
 #: ../../plugins/notebook.rst:30
@@ -161,49 +152,47 @@ msgid "Using the Notebook"
 msgstr ""
 
 #: ../../plugins/notebook.rst:32
-msgid ""
-"When the Notebook is installed, it will be available under the menu item "
-":menuselection:`View --> Panes --> Notebook`."
+msgid "When the Notebook is installed, it will be available under the menu item :menuselection:`View --> Panes --> Notebook`."
+msgstr ""
+
+#: ../../plugins/notebook.rst:34
+msgid "Spyder showing view panes Notebook"
 msgstr ""
 
 #: ../../plugins/notebook.rst:37
-msgid ""
-"You will see it then as a tab in the bottom of the editor area. When "
-"switching to it, a welcome screen will be displayed, from where you can "
-"create a new notebook by right-clicking it and selecting :guilabel:`New "
-"notebook`."
+msgid "You will see it then as a tab in the bottom of the editor area. When switching to it, a welcome screen will be displayed, from where you can create a new notebook by right-clicking it and selecting :guilabel:`New notebook`."
+msgstr ""
+
+#: ../../plugins/notebook.rst:39
+msgid "Spyder with context menu showing new notebook option"
 msgstr ""
 
 #: ../../plugins/notebook.rst:42
-msgid ""
-"You can also click the :guilabel:`Plus` button at the top right of the "
-"pane. A new Jupyter Notebook will be opened as a tab, ready for user "
-"input in a temporary file. This can serve as a scratch pad where you can "
-"do quick calculations and plots."
+msgid "You can also click the :guilabel:`Plus` button at the top right of the pane. A new Jupyter Notebook will be opened as a tab, ready for user input in a temporary file. This can serve as a scratch pad where you can do quick calculations and plots."
+msgstr ""
+
+#: ../../plugins/notebook.rst:44
+msgid "Spyder showing a new notebook"
 msgstr ""
 
 #: ../../plugins/notebook.rst:47
-msgid ""
-"To save this notebook go to the options menu at the top right of the pane"
-" and click the :guilabel:`Save as...` option. This will store your "
-"notebook locally with the ``ipynb`` extension, which will allow you to "
-"open it then as a Jupyter Notebook outside of Spyder."
+msgid "To save this notebook go to the options menu at the top right of the pane and click the :guilabel:`Save as...` option. This will store your notebook locally with the ``ipynb`` extension, which will allow you to open it then as a Jupyter Notebook outside of Spyder."
+msgstr ""
+
+#: ../../plugins/notebook.rst:49
+msgid "Gif showing save as"
 msgstr ""
 
 #: ../../plugins/notebook.rst:52
-msgid ""
-"You can also open any Jupyter Notebook inside Spyder. For this go to the "
-"options menu at the top right of the pane and click :guilabel:`Open`, "
-"which will allow you to look for ``ipynb`` files in your computer. Click "
-"any notebook that you want to open inside Spyder and you will be able to "
-"see it as a new tab in the Notebook pane."
+msgid "You can also open any Jupyter Notebook inside Spyder. For this go to the options menu at the top right of the pane and click :guilabel:`Open`, which will allow you to look for ``ipynb`` files in your computer. Click any notebook that you want to open inside Spyder and you will be able to see it as a new tab in the Notebook pane."
+msgstr ""
+
+#: ../../plugins/notebook.rst:54
+msgid "Gif showing opening a Jupyter notebook inside Spyder"
 msgstr ""
 
 #: ../../plugins/notebook.rst:57
-msgid ""
-"The :guilabel:`Open recent` option displays a list of the recent "
-"notebooks you opened in Spyder, from which you can select them and open "
-"them again in Spyder."
+msgid "The :guilabel:`Open recent` option displays a list of the recent notebooks you opened in Spyder, from which you can select them and open them again in Spyder."
 msgstr ""
 
 #: ../../plugins/notebook.rst:61
@@ -211,14 +200,11 @@ msgid "Connecting an IPython Console"
 msgstr ""
 
 #: ../../plugins/notebook.rst:63
-msgid ""
-"You can connect an :doc:`/panes/ipythonconsole` to your notebook, which "
-"will allow you to view your variables in the "
-":doc:`/panes/variableexplorer`. To do so, go to the options menu and "
-"click the :guilabel:`Open console` option. This will open a new console "
-"with the same name of your notebook and display the variables of the "
-"cells that you have executed previously in your Notebook. If you don't "
-"see them, press :kbd:`Enter` in the console."
+msgid "You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will allow you to view your variables in the :doc:`/panes/variableexplorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console."
+msgstr ""
+
+#: ../../plugins/notebook.rst:65
+msgid "Gif showing connecting console and displaying variables"
 msgstr ""
 
 #: ../../plugins/notebook.rst:68
@@ -226,10 +212,7 @@ msgid "You can view, modify and create new ones in the console too."
 msgstr ""
 
 #: ../../plugins/notebook.rst:70
-msgid ""
-"Since the Variable Explorer is associated to each console, closing the "
-"notebook's console will immediately hide the variables from the Variable "
-"Explorer."
+msgid "Since the Variable Explorer is associated to each console, closing the notebook's console will immediately hide the variables from the Variable Explorer."
 msgstr ""
 
 #: ../../plugins/notebook.rst:74
@@ -237,21 +220,27 @@ msgid "Additional Options"
 msgstr ""
 
 #: ../../plugins/notebook.rst:76
-msgid ""
-"The context menu, available by right-clicking the pane area outside the "
-"notebook, allows you to zoom your notebook in or out."
+msgid "The context menu, available by right-clicking the pane area outside the notebook, allows you to zoom your notebook in or out."
+msgstr ""
+
+#: ../../plugins/notebook.rst:78
+msgid "Gif zooming in and out the notebook."
 msgstr ""
 
 #: ../../plugins/notebook.rst:81
-msgid ""
-"You can also select the code from your Notebook and copy it on your "
-"clipboard to paste this code anywhere you want."
+msgid "You can also select the code from your Notebook and copy it on your clipboard to paste this code anywhere you want."
+msgstr ""
+
+#: ../../plugins/notebook.rst:83
+msgid "Gif copying and pasting"
 msgstr ""
 
 #: ../../plugins/notebook.rst:86
-msgid ""
-"Finally, you can see all the server information of your notebook by "
-"clicking the :guilabel:`Server info` option in the context menu."
+msgid "Finally, you can see all the server information of your notebook by clicking the :guilabel:`Server info` option in the context menu."
+msgstr ""
+
+#: ../../plugins/notebook.rst:88
+msgid "Server info for notebook in Spyder"
 msgstr ""
 
 #: ../../plugins/terminal.rst:3
@@ -259,17 +248,15 @@ msgid "Spyder Terminal"
 msgstr ""
 
 #: ../../plugins/terminal.rst:5
-msgid ""
-"**Spyder-terminal** is a plugin that allows you to have integrated system"
-" terminals inside Spyder."
+msgid "**Spyder-terminal** is a plugin that allows you to have integrated system terminals inside Spyder."
+msgstr ""
+
+#: ../../plugins/terminal.rst:7
+msgid "Spyder Terminal in Spyder"
 msgstr ""
 
 #: ../../plugins/terminal.rst:10
-msgid ""
-"Spyder-terminal allows you to use any system shell installed in your "
-"system (e.g. Bash, Zsh or Powershell) rather than just the IPython "
-"console. You can use it to issue commands, interact with version control "
-"or to run programs."
+msgid "Spyder-terminal allows you to use any system shell installed in your system (e.g. Bash, Zsh or Powershell) rather than just the IPython console. You can use it to issue commands, interact with version control or to run programs."
 msgstr ""
 
 #: ../../plugins/terminal.rst:15
@@ -277,10 +264,7 @@ msgid "Installing the Terminal"
 msgstr ""
 
 #: ../../plugins/terminal.rst:17
-msgid ""
-"If you installed Spyder using conda, the best way to install Spyder-"
-"terminal is to run the following command in your Terminal or Anaconda "
-"prompt on Windows:"
+msgid "If you installed Spyder using conda, the best way to install Spyder-terminal is to run the following command in your Terminal or Anaconda prompt on Windows:"
 msgstr ""
 
 #: ../../plugins/terminal.rst:31
@@ -288,31 +272,35 @@ msgid "Using the Terminal"
 msgstr ""
 
 #: ../../plugins/terminal.rst:33
-msgid ""
-"When the Terminal is installed, it will be available under the menu item "
-":menuselection:`View --> Panes --> Terminal`."
+msgid "When the Terminal is installed, it will be available under the menu item :menuselection:`View --> Panes --> Terminal`."
+msgstr ""
+
+#: ../../plugins/terminal.rst:35
+msgid "Spyder showing view panes Terminal"
 msgstr ""
 
 #: ../../plugins/terminal.rst:38
-msgid ""
-"You will see it then as a tab at the bottom of the console area. When "
-"switching to it, a new terminal tab will be created. You can also create "
-"more terminals by clicking in the :guilabel:`+` button at the upper right"
-" corner of the terminal area."
+msgid "You will see it then as a tab at the bottom of the console area. When switching to it, a new terminal tab will be created. You can also create more terminals by clicking in the :guilabel:`+` button at the upper right corner of the terminal area."
+msgstr ""
+
+#: ../../plugins/terminal.rst:40
+msgid "Spyder showing the new terminal button"
 msgstr ""
 
 #: ../../plugins/terminal.rst:43
-msgid ""
-"Clicking the :guilabel:`Options` button next to the :guilabel:`+` button "
-"will allow you to rename terminals, undock the terminal, and open a "
-"terminal in the directory of the current Editor file."
+msgid "Clicking the :guilabel:`Options` button next to the :guilabel:`+` button will allow you to rename terminals, undock the terminal, and open a terminal in the directory of the current Editor file."
+msgstr ""
+
+#: ../../plugins/terminal.rst:45
+msgid "Spyder showing the terminal Options menu"
 msgstr ""
 
 #: ../../plugins/terminal.rst:48
-msgid ""
-"If you right click the terminal area, it's possible to issue commands "
-"such as :guilabel:`Clear Terminal`, :guilabel:`Zoom In/Out` and "
-":guilabel:`Copy/Paste Text`."
+msgid "If you right click the terminal area, it's possible to issue commands such as :guilabel:`Clear Terminal`, :guilabel:`Zoom In/Out` and :guilabel:`Copy/Paste Text`."
+msgstr ""
+
+#: ../../plugins/terminal.rst:50
+msgid "Spyder showing the terminal context menu"
 msgstr ""
 
 #: ../../plugins/terminal.rst:55
@@ -320,10 +308,9 @@ msgid "Terminal Preferences"
 msgstr ""
 
 #: ../../plugins/terminal.rst:57
-msgid ""
-"It's also possible to customize the Terminal by going to "
-":menuselection:`python --> Preferences...` and then clicking on the "
-"Terminal tab on the menu to the left. You can select the shell "
-"interpreter, set the buffer limit and the type of cursor."
+msgid "It's also possible to customize the Terminal by going to :menuselection:`python --> Preferences...` and then clicking on the Terminal tab on the menu to the left. You can select the shell interpreter, set the buffer limit and the type of cursor."
 msgstr ""
 
+#: ../../plugins/terminal.rst:60
+msgid "Preferences of the Terminal plugin"
+msgstr ""
