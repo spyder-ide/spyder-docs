@@ -478,6 +478,7 @@ def _update_po(session):
         POT_DIR,
         "--line-width",
         str(PO_LINE_WIDTH),
+        "--no-obsolete",
         *lang_args,
         *posargs,
     )
