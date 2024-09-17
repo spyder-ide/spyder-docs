@@ -59,7 +59,6 @@ templates_path = []
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = ".rst"
 
 # The encoding of source files.
 source_encoding = "utf-8"

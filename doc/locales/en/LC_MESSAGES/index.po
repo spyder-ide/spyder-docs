@@ -8,22 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Spyder 5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 08:54-0600\n"
+"POT-Creation-Date: 2024-09-06 20:38-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../../index.rst:137
-msgid "Welcome"
-msgstr ""
-
-#: ../../index.rst:137
+#: ../../index.rst:153
 msgid "FAQ"
 msgstr ""
 
@@ -31,14 +27,12 @@ msgstr ""
 msgid "Welcome to Spyder's Documentation"
 msgstr ""
 
+#: ../../index.rst:5
+msgid "Screenshot of the Spyder main window, with the default panel layout"
+msgstr ""
+
 #: ../../index.rst:9
-msgid ""
-"Spyder is a powerful scientific environment written in Python, for "
-"Python, and designed by and for scientists, engineers and data analysts. "
-"It features a unique combination of the advanced editing, analysis, "
-"debugging, and profiling functionality of a comprehensive development "
-"tool with the data exploration, interactive execution, deep inspection, "
-"and beautiful visualization capabilities of a scientific package."
+msgid "Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts. It features a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package."
 msgstr ""
 
 #: ../../index.rst:18
@@ -46,109 +40,74 @@ msgid "Where to go now?"
 msgstr ""
 
 #: ../../index.rst:20
-msgid ""
-"Spyder's documentation provides a variety of resources that will help you"
-" learn how to use the application and explore each one of its panes. "
-"These include video tutorials, in-depth descriptions and how-to guides "
-"covering a wide range of needs and experience levels with Spyder."
+msgid "Spyder's documentation provides a variety of resources that will help you learn how to use the application and explore each one of its panes. These include video tutorials, in-depth descriptions and how-to guides covering a wide range of needs and experience levels with Spyder."
 msgstr ""
 
-#: ../../index.rst:33
-msgid ""
-"If you are looking for a summary of its features and interface, check out"
-" the :doc:`quickstart`."
+#: ../../index.rst:34
+msgid "If you are looking for a summary of its features and interface, check out the :doc:`quickstart`."
 msgstr ""
 
-#: ../../index.rst:41
-msgid ""
-"If you don't have Spyder installed and want to get started, follow the "
-":doc:`/installation`."
+#: ../../index.rst:45
+msgid "If you don't have Spyder installed and want to get started, follow the :doc:`/installation`."
 msgstr ""
 
-#: ../../index.rst:49
-msgid ""
-"If you are completely new to Spyder, watch our basic tutorial series, "
-":doc:`videos/first-steps-with-spyder`."
+#: ../../index.rst:56
+msgid "If you are completely new to Spyder, watch our basic tutorial series, :doc:`videos/first-steps-with-spyder`."
 msgstr ""
 
-#: ../../index.rst:57
-msgid ""
-"If you are familiar with Spyder and want to explore the functionality of "
-"its panes in more detail, go to :doc:`panes/index`."
+#: ../../index.rst:67
+msgid "If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`panes/index`."
 msgstr ""
 
-#: ../../index.rst:65
-msgid ""
-"If you've run into a Spyder problem and need help solving it, take a look"
-" at our :doc:`troubleshooting guide<troubleshooting/first-steps>`."
+#: ../../index.rst:78
+msgid "If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<troubleshooting/first-steps>`."
 msgstr ""
 
-#: ../../index.rst:73
+#: ../../index.rst:89
 msgid "If you have a question about Spyder, visit the :doc:`faq` section."
 msgstr ""
 
-#: ../../index.rst:81
+#: ../../index.rst:97
 msgid "Join our community"
 msgstr ""
 
-#: ../../index.rst:83
-msgid ""
-"Spyder is open source software, which means that is free for everyone to "
-"use and anyone can contribute to it. We encourage everyone to become a "
-"part of our community and help develop Spyder!"
-msgstr ""
-
-#: ../../index.rst:90
-msgid "Looking to contribute your code?"
-msgstr ""
-
-#: ../../index.rst:92
-msgid ""
-"Spyder is written in the same Python language that you use it to develop,"
-" so its easy to get started contributing to it. You can follow our "
-"`contributing guide`_ to set up a development environment, and you can "
-"get involved with the project through our `Github repository`_. The "
-"easiest way to get started is helping us resolve items on our `issue "
-"tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot"
-" their problems (which doesn't require writing any code)."
+#: ../../index.rst:99
+msgid "Spyder is open source software, which means that is free for everyone to use and anyone can contribute to it. We encourage everyone to become a part of our community and help develop Spyder!"
 msgstr ""
 
 #: ../../index.rst:106
-msgid "Want to help writing docs?"
+msgid "Looking to contribute your code?"
 msgstr ""
 
 #: ../../index.rst:108
-msgid ""
-"We welcome your contributions of corrections, additions and enhancements "
-"to these docs. Check out the `docs contributing guide`_ to learn how to "
-"submit a PR with your changes on our `docs repo`_."
+msgid "Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it. You can follow our `contributing guide`_ to set up a development environment, and you can get involved with the project through our `Github repository`_. The easiest way to get started is helping us resolve items on our `issue tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code)."
 msgstr ""
 
-#: ../../index.rst:119
+#: ../../index.rst:122
+msgid "Want to help writing docs?"
+msgstr ""
+
+#: ../../index.rst:124
+msgid "We welcome your contributions of corrections, additions and enhancements to these docs. Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_."
+msgstr ""
+
+#: ../../index.rst:135
 msgid "Interested in translating Spyder?"
 msgstr ""
 
-#: ../../index.rst:121
-msgid ""
-"In order to reach more users around the world in need of a powerful "
-"scientific Python environment, we welcome your help translating the "
-"documentation and the interface into different languages."
+#: ../../index.rst:137
+msgid "In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages."
 msgstr ""
 
-#: ../../index.rst:123
-msgid ""
-"For this purpose we use `Crowdin`_, which provides a simple web based "
-"interface for translators, proofreaders and managers, so everyone can "
-"help us translate Spyder into any language."
+#: ../../index.rst:139
+msgid "For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language."
 msgstr ""
 
-#: ../../index.rst:131
+#: ../../index.rst:147
 msgid "Want to be part of our social media?"
 msgstr ""
 
-#: ../../index.rst:133
-msgid ""
-"Connect with Spyder through our social media channels to stay up to date "
-"with our current developments!"
+#: ../../index.rst:149
+msgid "Connect with Spyder through our social media channels to stay up to date with our current developments!"
 msgstr ""
 
