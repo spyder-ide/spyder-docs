@@ -300,7 +300,7 @@ msgstr "Spyder-Kernels no está instalado o es incompatible"
 
 #: ../../troubleshooting/common-illnesses.rst:24
 msgid "Spyder requires a supported version of the ``spyder-kernels`` package to be present in the working environment you want to run your console in."
-msgstr "Spyder requiere que una versión compatible del paquete``spyder-kernels`` esté presente en el entorno de trabajo en el que deseas ejecutar tu consola."
+msgstr "Spyder requiere que una versión compatible del paquete ``spyder-kernels`` esté presente en el entorno de trabajo en el que deseas ejecutar tu consola."
 
 #: ../../troubleshooting/common-illnesses.rst:29
 msgid "It is included by default with Anaconda, but if you want to run your code in another Python environment or installation, you'll need to make sure it's installed and updated to the latest version."
@@ -600,7 +600,7 @@ msgstr "Para hacerlo, necesitarás:"
 
 #: ../../troubleshooting/emergency-cpr.rst:43
 msgid "Find the path to the Spyder :file:`app` directory from the command line. For this, run:"
-msgstr "Encuentra la ruta al directorio `:file:`app` de Spyder desde la línea de comandos. Para esto, ejecuta:"
+msgstr "Encuentra la ruta al directorio :file:`app` de Spyder desde la línea de comandos. Para esto, ejecuta:"
 
 #: ../../troubleshooting/emergency-cpr.rst:50
 msgid "Go to the output path of the above command on your command line:"

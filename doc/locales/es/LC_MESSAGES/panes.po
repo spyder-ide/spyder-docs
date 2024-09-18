@@ -32,7 +32,7 @@ msgstr "Depurando con ipdb"
 
 #: ../../panes/debugging.rst:17
 msgid "You can fully control debugger execution from the :guilabel:`Debug` menu, :guilabel:`Debug toolbar` and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands`_."
-msgstr "Puedes controlar completamente la ejecución del depurador desde el menú `Depurar` de la :guilabel:`Barra de herramientas de depuración` y a través de atajos de teclado configurables, junto con el estándar ``ipdb`` `comandos de consola`_."
+msgstr "Puedes controlar completamente la ejecución del depurador desde el menú :guilabel:`Depurar` de la :guilabel:`Barra de herramientas de depuración` y a través de atajos de teclado configurables, junto con el estándar ``ipdb`` `comandos de consola`_."
 
 #: ../../panes/debugging.rst:22
 msgid "Additionally, the  :doc:`editor` shows the line of code the debugger is currently stopped on with an arrow."
@@ -246,7 +246,7 @@ msgstr "Para mejorar la legibilidad de tu código, Spyder tiene una función de 
 
 #: ../../panes/editor.rst:93
 msgid "You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`. The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences. You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more. The :guilabel:`Fonts` section lets you change the text font and size."
-msgstr "Puedes configurar y previsualizar los temas y fuentes de resaltado de sintaxis bajo :menuselection:`Preferencias --> Apariencia`. La sección :guilabel:'Tema de coloreado de sintaxis' te permite cambiar el color y el estilo de los elementos de sintaxis y el fondo para que coincida con tus preferencias. Puedes cambiar entre los temas disponibles en el menú desplegable, modificar el tema seleccionado, crear un nuevo tema y más. La sección :guilabel:`Tipo de letra` te permite cambiar el tamaño y la fuente de texto."
+msgstr "Puedes configurar y previsualizar los temas y fuentes de resaltado de sintaxis bajo :menuselection:`Preferencias --> Apariencia`. La sección :guilabel:`Tema de coloreado de sintaxis` te permite cambiar el color y el estilo de los elementos de sintaxis y el fondo para que coincida con tus preferencias. Puedes cambiar entre los temas disponibles en el menú desplegable, modificar el tema seleccionado, crear un nuevo tema y más. La sección :guilabel:`Tipo de letra` te permite cambiar el tamaño y la fuente de texto."
 
 #: ../../panes/editor.rst:101
 msgid "Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language."
@@ -540,7 +540,7 @@ msgstr "Asociaciones de archivos"
 
 #: ../../panes/fileexplorer.rst:83
 msgid ":guilabel:`Files` allows you to associate different external applications with specific file extensions they can open. Under the :guilabel:`File associations` tab of the :guilabel:`Files` preferences pane, you can add file types and set the external program used to open each of them by default."
-msgstr ":guilabel:`Archivos` te permite asociar diferentes aplicaciones externas con extensiones específicas de archivo que pueden abrir. Bajo la pestaña :guilabel:'Asociaciones de archivos' del panel de preferencias :guilabel:'Archivos', puedes añadir tipos de archivo y establecer el programa externo usado para abrir cada uno de ellos por defecto."
+msgstr ":guilabel:`Archivos` te permite asociar diferentes aplicaciones externas con extensiones específicas de archivo que pueden abrir. Bajo la pestaña :guilabel:`Asociaciones de archivos` del panel de preferencias :guilabel:`Archivos`, puedes añadir tipos de archivo y establecer el programa externo usado para abrir cada uno de ellos por defecto."
 
 #: ../../panes/fileexplorer.rst:89
 msgid "Once you've set this up, files will automatically launch in the associated application when opened from Spyder's :guilabel:`Files` pane. Additionally, when you right-click a file, you will find an :guilabel:`Open with...` option that will allow you to select from the applications associated with this extension."
@@ -1093,7 +1093,7 @@ msgstr "Haciendo clic en el menú desplegable o pulsando la tecla :kbd:`Flecha a
 
 #: ../../panes/profiler.rst:47
 msgid "Finally, you can save the data for a given run to disk as a file with the ``.Result`` extension using the :guilabel:`Save data` button. This can be loaded to compare with a previous run of the same file using the :guilabel:`Load data` button. To remove the loaded data, click the :guilabel:`Clear comparison` button."
-msgstr "Finalmente, puedes guardar los datos para una ejecución dada en el disco como un archivo con el ``.Result`` usando el botón :guilabel:`Guardar información de perfilado`. Esto se puede cargar para comparar con una ejecución anterior del mismo archivo usando el botón 'Cargar datos' de :guilabel:. Para eliminar los datos cargados, haga clic en el botón :guilabel:'Limpiar comparación'."
+msgstr "Finalmente, puedes guardar los datos para una ejecución dada en el disco como un archivo con el ``.Result`` usando el botón :guilabel:`Guardar información de perfilado`. Esto se puede cargar para comparar con una ejecución anterior del mismo archivo usando el botón :guilabel:`Cargar datos`. Para eliminar los datos cargados, haga clic en el botón :guilabel:`Limpiar comparación`."
 
 #: ../../panes/profiler.rst:58
 msgid "Interpreting the results"
