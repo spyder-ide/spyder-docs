@@ -36,7 +36,7 @@
     * [ ] Spyder 3 (``3.x``, frozen)
 
 
-* Are you planning on submitting a Github pull request with a suitable change?
+* Are you planning on submitting a GitHub pull request with a suitable change?
 
     * [ ] Yes
     * [ ] No

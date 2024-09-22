@@ -1,3 +1,5 @@
+// Configuration file for eslint
+
 const neostandard = require("neostandard");
 
 module.exports = [
@@ -12,9 +14,6 @@ module.exports = [
     },
     linterOptions: {
       reportUnusedDisableDirectives: "warn",
-    },
-    rules: {
-      "no-var": "off",
     },
   },
 ];

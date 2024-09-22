@@ -63,14 +63,6 @@ repos:
     exclude: '\.gitattributes|\bworkshops\b'
     args: [--write-changes]
 
-# Format CSS with Prettier
-- repo: https://github.com/rbubley/mirrors-prettier
-  rev: v3.3.3
-  hooks:
-  - id: prettier
-    name: Format CSS (Prettier)
-    types: [css]
-
 # Lint and fix CSS with stylelint
 - repo: https://github.com/thibaudcolas/pre-commit-stylelint
   rev: v16.9.0
@@ -91,6 +83,14 @@ repos:
     # https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues/299
     - 'caniuse-lite@1.0.30001653'
 
+# Format CSS with Prettier
+- repo: https://github.com/rbubley/mirrors-prettier
+  rev: v3.3.3
+  hooks:
+  - id: prettier
+    name: Format CSS (Prettier)
+    types: [css]
+
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.14.0
@@ -99,14 +99,6 @@ repos:
     name: Format INI
     types: [ini]
     args: [--autofix]
-
-# Format JavaScript with Prettier
-- repo: https://github.com/rbubley/mirrors-prettier
-  rev: v3.3.3
-  hooks:
-  - id: prettier
-    name: Format JavaScript (Prettier)
-    types: [javascript]
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
@@ -121,14 +113,23 @@ repos:
     - 'eslint-plugin-promise@7.1.0'
     - 'neostandard@0.11.5'
 
+# Format JavaScript with Prettier
+- repo: https://github.com/rbubley/mirrors-prettier
+  rev: v3.3.3
+  hooks:
+  - id: prettier
+    name: Format JavaScript (Prettier)
+    types: [javascript]
+
 # Lint Jinja
 - repo: https://github.com/thibaudcolas/curlylint
   rev: v0.13.1
   hooks:
   - id: curlylint
     name: Lint Jinja templates
-    types: [html]
+    types: [html, jinja, twig]
     files: 'templates/'
+    require_serial: true
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -146,10 +147,10 @@ repos:
     args: [--maxlevel, '3', --update-only]
 
 # Lint Markdown
-- repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.41.0
+- repo: https://github.com/DavidAnson/markdownlint-cli2
+  rev: v0.14.0
   hooks:
-  - id: markdownlint
+  - id: markdownlint-cli2
     name: Lint Markdown
     args: [--fix]
 
@@ -181,6 +182,7 @@ repos:
   hooks:
   - id: python-safety-dependencies-check
     name: Check Python dependencies (Safety)
+    args: [--disable-optional-telemetry]
     files: '.*requirements.*.txt'
     types: [text]
 
@@ -235,7 +237,7 @@ repos:
   - id: yamllint
     name: Lint YAML
     types: [yaml]
-    args: [-s, -f, colored]
+    args: [--strict, --format, colored]
 
 # Replace CRLF with LF post-prettify
 - repo: https://github.com/Lucas-C/pre-commit-hooks

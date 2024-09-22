@@ -5,12 +5,12 @@ tabWidth: 2
 useTabs: false
 semi: true
 singleQuote: false
-trailingComma: 'es5'
+trailingComma: 'all'
 bracketSpacing: false
 arrowParens: 'always'
 proseWrap: 'preserve'
 endOfLine: 'lf'
-singleAttributePerLine: false
+singleAttributePerLine: true
 
 overrides:
 - files: '*.css'

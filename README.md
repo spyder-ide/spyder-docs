@@ -34,14 +34,14 @@
 ## Overview
 
 This repository contains the documentation for Spyder, the Scientific Python Development Environment.
-You can view the live docs for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
+You can view the live docs for current and past Spyder versions at [docs.spyder-ide.org](https://docs.spyder-ide.org).
 
 For more information about Spyder itself, please see our [website](https://www.spyder-ide.org/) and the [main repo](https://github.com/spyder-ide/spyder).
 
 
 ## Building and Deploying
 
-The docs are built with [Sphinx](https://www.sphinx-doc.org/) and deployed with GitHub Actions to the [docs.Spyder-IDE.org](https://docs.spyder-ide.org/) domain.
+The docs are built with [Sphinx](https://www.sphinx-doc.org/) and deployed with GitHub Actions to the [docs.spyder-ide.org](https://docs.spyder-ide.org/) domain.
 [Nox](https://nox.thea.codes/) is used to automate setup, building and numerous other project tasks.
 The ``master`` branch contains the in-development docs for Spyder 5, while the frozen ``4.x`` and ``3.x`` branches retain the docs for Spyder 4 and Spyder 3.
 
@@ -61,7 +61,7 @@ Thanks for your interest in Spyder and its documentation, and we appreciate your
 
 [Online Documentation](https://docs.spyder-ide.org/)
 
-[Spyder Github](https://github.com/spyder-ide/spyder)
+[Spyder GitHub](https://github.com/spyder-ide/spyder)
 
 [Development Wiki](https://github.com/spyder-ide/spyder/wiki/Dev:-Index)
 
