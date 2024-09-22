@@ -4,7 +4,7 @@
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
   "plugins": [
-    "stylelint-csstree-validator",
+    "@carlosjeurissen/stylelint-csstree-validator",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",
     "stylelint-order"
