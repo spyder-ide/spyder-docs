@@ -4,7 +4,7 @@ First off, thanks for your interest in helping out with the documentation for Sp
 
 **Important Note:** This is the repository for the documentation sources used to build the [Spyder docs site](https://docs.Spyder-IDE.org/)—not the IDE itself.
 For more information about Spyder, please see the [website](https://www.spyder-ide.org/), and for the core Spyder codebase, visit the [main repo](https://github.com/spyder-ide/spyder).
-You can view the live documentation for current and past Spyder versions at [docs.Spyder-IDE.org](https://docs.spyder-ide.org).
+You can view the live documentation for current and past Spyder versions at [docs.spyder-ide.org](https://docs.spyder-ide.org).
 
 Spyder-Docs is part of the Spyder IDE GitHub org, and is developed with standard GitHub flow.
 If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://docs.github.com/en/get-started/using-git/about-git#basic-git) and its [guide to the fork workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
@@ -313,7 +313,7 @@ Where ``<FEATURE-BRANCH>`` is the name of your feature branch, e.g. ``fix-docs-t
 
 ## Submitting a Pull Request
 
-Finally, create a pull request to the [spyder-ide/spyder-docs repository](https://github.com/spyder-ide/spyder-docs/) on GitHub.
+Finally, create a pull request to the [``spyder-ide/spyder-docs`` repository](https://github.com/spyder-ide/spyder-docs/) on GitHub.
 Make sure to set the target branch to the one you based your PR off of (``master`` or ``X.x``).
 
 We'll then review your changes, and after they're ready to go, your work will become an official part of Spyder-Docs.
@@ -323,6 +323,7 @@ Thanks for taking the time to read and follow this guide, and we look forward to
 
 
 ## Standards and Conventions
+
 
 ### Key standards
 

@@ -26,6 +26,8 @@ rules:
     spaces: 2
     indent-sequences: consistent
     check-multi-line-strings: true
+  key-duplicates:
+    forbid-duplicated-merge-keys: true
   line-length: disable
   new-lines: disable
   octal-values: enable

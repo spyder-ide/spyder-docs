@@ -1,0 +1,146 @@
+# Configuration file for markdownlint
+
+# Default state for all rules
+default: true
+
+# MD003/heading-style : Heading style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md003.md
+heading-style:
+  # Heading style
+  style: 'atx'
+
+# MD004/ul-style : Unordered list style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md004.md
+ul-style:
+  # List style
+  style: 'asterisk'
+
+# MD007/ul-indent : Unordered list indentation : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md007.md
+ul-indent:
+  # Spaces for indent
+  indent: 4
+  # Whether to indent the first level of the list
+  start_indented: false
+  # Spaces for first level indent (when start_indented is set)
+  start_indent: 4
+
+# MD009/no-trailing-spaces : Trailing spaces : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md009.md
+no-trailing-spaces:
+  # Spaces for line break
+  br_spaces: 0
+  # Allow spaces for empty lines in list items
+  list_item_empty_lines: false
+  # Include unnecessary breaks
+  strict: true
+
+# MD010/no-hard-tabs : Hard tabs : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md010.md
+no-hard-tabs:
+  # Include code blocks
+  code_blocks: true
+  # Fenced code languages to ignore
+  ignore_code_languages: []
+  # Number of spaces for each hard tab
+  spaces_per_tab: 4
+
+# MD012/no-multiple-blanks : Multiple consecutive blank lines : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md012.md
+no-multiple-blanks:
+  # Consecutive blank lines
+  maximum: 4
+
+# MD013/line-length : Line length : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md013.md
+line-length: false
+
+# MD022/blanks-around-headings : Headings should be surrounded by blank lines : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md022.md
+blanks-around-headings:
+  # Blank lines above heading
+  lines_above: 2
+  # Blank lines below heading
+  lines_below: 1
+
+# MD024/no-duplicate-heading : Multiple headings with the same content : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md024.md
+no-duplicate-heading:
+  # Only check sibling headings
+  siblings_only: true
+
+# MD029/ol-prefix : Ordered list item prefix : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md029.md
+ol-prefix:
+  # List style
+  style: 'one'
+
+# MD031/blanks-around-fences : Fenced code blocks should be surrounded by blank lines : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md031.md
+blanks-around-fences:
+  # Include list items
+  list_items: false
+
+# MD035/hr-style : Horizontal rule style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md035.md
+hr-style:
+  # Horizontal rule style
+  style: '---'
+
+# MD040/fenced-code-language : Fenced code blocks should have a language specified : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md040.md
+fenced-code-language:
+  # List of languages
+  allowed_languages: []
+  # Require language only
+  language_only: true
+
+# MD044/proper-names : Proper names should have the correct capitalization : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md044.md
+MD044:
+  # List of proper names
+  names:
+  - 'CAM Gerlach'
+  - 'GitHub'
+  - 'github.com'
+  - 'Python'
+  - 'python.org'
+  - 'reStructuredText'
+  - 'Sphinx'
+  - 'sphinx-doc.org'
+  - 'Spyder'
+  - 'Spyder-IDE'
+  - 'spyder-ide.org'
+  - 'Spyder-API-Docs'
+  - 'Spyder-Docs'
+  - 'Spyder-Website'
+  # Include code blocks
+  code_blocks: false
+  # Include HTML elements
+  html_elements: false
+
+# MD046/code-block-style : Code block style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md046.md
+code-block-style:
+  # Block style
+  style: 'fenced'
+
+# MD048/code-fence-style : Code fence style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md048.md
+code-fence-style:
+  # Code fence style
+  style: 'backtick'
+
+# MD049/emphasis-style : Emphasis style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md049.md
+emphasis-style:
+  # Emphasis style
+  style: 'asterisk'
+
+# MD050/strong-style : Strong style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md050.md
+strong-style:
+  # Strong style
+  style: 'asterisk'
+
+# MD054/link-image-style : Link and image style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md054.md
+link-image-style:
+  # Allow autolinks
+  autolink: false
+  # Allow inline links and images
+  inline: true
+  # Allow full reference links and images
+  full: true
+  # Allow collapsed reference links and images
+  collapsed: false
+  # Allow shortcut reference links and images
+  shortcut: false
+  # Allow URLs as inline links
+  url_inline: false
+
+# MD055/table-pipe-style : Table pipe style : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md055.md
+table-pipe-style:
+  # Table pipe style
+  style: 'leading_and_trailing'

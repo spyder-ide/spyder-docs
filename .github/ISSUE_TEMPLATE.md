@@ -1,8 +1,9 @@
+# Issue Report
+
 <!--- **PLEASE NOTE:** This is the issue tracker for Spyder's documentation, not problems with the Spyder application itself nor general help with Spyder. For that, please see the main Spyder repo: <https://github.com/spyder-ide/spyder> . --->
 
 <!--- Please make sure you fill out this template completely so we can find and fix your issue. Otherwise, it may be closed. Thanks! --->
 
-# Issue Report
 
 ## Issue Description
 
@@ -35,7 +36,7 @@
     * [ ] Spyder 3 (``3.x``, frozen)
 
 
-* Are you planning on submitting a Github pull request with a suitable change?
+* Are you planning on submitting a GitHub pull request with a suitable change?
 
     * [ ] Yes
     * [ ] No
