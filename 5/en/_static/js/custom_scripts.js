@@ -9,7 +9,7 @@
   const dropdownClassName = "dropdown";
 
   // Interactive tour driver options
-  var quickstartDriverOptions = {
+  const quickstartDriverOptions = {
     animate: false,
     opacity: 0.1,
     padding: 0,
@@ -19,7 +19,7 @@
   };
 
   // Step definitions for the quickstart tour
-  var quickstartTourSteps = [
+  const quickstartTourSteps = [
     {
       element: "#introduction-rect",
       popover: {
@@ -152,21 +152,22 @@
 
   // Set the active image for the tour based on the element's class
   function setActiveTourImage(activeElement) {
-    var activeClass = "tour-screenshot-active";
-    var classNames = activeElement.node.className.baseVal.split(" ");
-    for (var i = 0; i < classNames.length; i++) {
-      var imageToActivate = document.getElementById(classNames[i]);
+    const activeClass = "tour-screenshot-active";
+    const classNames = activeElement.node.className.baseVal.split(" ");
+    let imageToActivate = null;
+    for (let i = 0; i < classNames.length; i++) {
+      imageToActivate = document.getElementById(classNames[i]);
       if (imageToActivate) break;
     }
-    var imageToDeactivate = document.getElementsByClassName(activeClass)[0];
+    const imageToDeactivate = document.getElementsByClassName(activeClass)[0];
     imageToDeactivate.classList.remove(activeClass);
     imageToActivate.classList.add(activeClass);
   }
 
   // Add a span for the progress indicator to each tour step title
   function addProgressSpan(tourSteps) {
-    for (var i = 0; i < tourSteps.length; i++) {
-      var spanToAdd =
+    for (let i = 0; i < tourSteps.length; i++) {
+      const spanToAdd =
         '<span class="tour-progress-indicator">' +
         (i + 1).toString() +
         "/" +
@@ -178,12 +179,12 @@
 
   // Get the currently selected anchor element if its a dropdown
   function getDropdownElement() {
-    var dropdownID = window.location.hash;
+    const dropdownID = window.location.hash;
     if (!dropdownID) {
       return false;
     }
 
-    var dropdownElement = document.getElementById(dropdownID.substring(1));
+    const dropdownElement = document.getElementById(dropdownID.substring(1));
     if (
       !dropdownElement ||
       !dropdownElement.classList.contains(dropdownClassName)
@@ -204,7 +205,7 @@
 
   /* Main functions */
 
-  var driver = null;
+  let driver = null;
 
   // Event handler to start tour
   function startTour() {
@@ -235,13 +236,13 @@
 
   // Set up ids and direct links to dropdowns in FAQ
   function setupDropdownLinks() {
-    var dropdowns = document.getElementsByClassName(dropdownClassName);
-    for (var i = 0; i < dropdowns.length; i++) {
-      for (var j = 0; j < dropdowns[i].classList.length; j++) {
+    const dropdowns = document.getElementsByClassName(dropdownClassName);
+    for (let i = 0; i < dropdowns.length; i++) {
+      for (let j = 0; j < dropdowns[i].classList.length; j++) {
         if (dropdowns[i].classList[j].startsWith("dropdown-id-")) {
           dropdowns[i].id = dropdowns[i].classList[j].replace(
             "dropdown-id-",
-            ""
+            "",
           );
         }
       }
@@ -249,24 +250,24 @@
         dropdowns[i].id = "dropdown-" + (i + 1);
       }
 
-      var aTag = document.createElement("a");
+      const aTag = document.createElement("a");
       aTag.setAttribute("href", "#" + dropdowns[i].id);
       aTag.classList.add("fas");
       aTag.classList.add("fa-link");
       aTag.classList.add("dropdown-link");
 
-      var summaryElement =
+      const summaryElement =
         dropdowns[i].getElementsByClassName("summary-title")[0];
       summaryElement.insertBefore(
         aTag,
-        summaryElement.getElementsByClassName("docutils")[0]
+        summaryElement.getElementsByClassName("docutils")[0],
       );
     }
   }
 
   // Open the specified dropdown, wait for images to load then scroll to it
   function scrollToDropdown() {
-    var dropdownElement = getDropdownElement();
+    const dropdownElement = getDropdownElement();
     if (dropdownElement) {
       if (dropdownElement.open) {
         scrollToElement(dropdownElement);
@@ -279,8 +280,8 @@
 
   // Open all dropdowns that have highlighted words
   function openHighlightedDropdowns() {
-    var dropdowns = document.getElementsByClassName(dropdownClassName);
-    for (var idx = 0; idx < dropdowns.length; idx++) {
+    const dropdowns = document.getElementsByClassName(dropdownClassName);
+    for (let idx = 0; idx < dropdowns.length; idx++) {
       if (dropdowns[idx].getElementsByClassName("highlighted").length) {
         dropdowns[idx].open = true;
       }
