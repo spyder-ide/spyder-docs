@@ -21,11 +21,12 @@ nox.options.error_on_external_run = True
 nox.options.sessions = ["build"]
 nox.options.default_venv_backend = "none"
 
-
-CI = "CI" in os.environ
+ORG_NAME = "spyder-ide"
+REPO_NAME = "spyder-docs"
+REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
+REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
 CANARY_COMMAND = ("sphinx-build", "--version")
-
 BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
@@ -50,6 +51,8 @@ BASE_URL = "https://docs.spyder-ide.org"
 
 CONF_PY = SOURCE_DIR / "conf.py"
 SCRIPT_DIR = Path("scripts").resolve()
+
+CI = "CI" in os.environ
 
 
 # ---- Helpers ---- #
@@ -89,6 +92,8 @@ def extract_option_values(options, option_names, *, split_csv=False):
     """Extract particular option values from a sequence of options."""
     option_values = []
     remaining_options = []
+    if isinstance(option_names, str):
+        option_names = [option_names]
 
     save_next_option = False
     for option in options:
@@ -209,14 +214,15 @@ def run(session):
 def _clean(session):
     """Remove the build directory."""
     print(f"Removing build directory {BUILD_DIR.as_posix()!r}")
-    ignore = session.posargs and session.posargs[0] in {"-i", "--ignore"}
+    ignore_flag = "--ignore"
+    should_ignore = ignore_flag in session.posargs
 
     try:
-        shutil.rmtree(BUILD_DIR, ignore_errors=ignore)
+        shutil.rmtree(BUILD_DIR, ignore_errors=should_ignore)
     except FileNotFoundError:
         pass
     except Exception:
-        print("\nError removing files; pass '-i'/'--ignore' flag to ignore\n")
+        print(f"\nError removing files; pass {ignore_flag!r} flag to ignore\n")
         raise
 
 
@@ -224,6 +230,72 @@ def _clean(session):
 def clean(session):
     """Clean build artifacts (pass -i/--ignore to ignore errors)."""
     _clean(session)
+
+
+# --- Set up --- #
+
+def _setup_remotes(session):
+    """Set up the origin and upstream remote repositories."""
+    remote_cmd = ["git", "remote"]
+    posargs = list(session.posargs[1:])
+    https = "--https" in posargs
+    ssh = "--ssh" in posargs
+    username_args = extract_option_values(posargs, "--username")[0]
+    if https == ssh:
+        session.error("Exactly one of '--https' or '--ssh' must be passed")
+
+    # Get current origin details
+    origin_url_cmd = (*remote_cmd, "get-url", "origin")
+    origin_url = session.run(
+        *origin_url_cmd, external=True, silent=True, log=False).strip()
+    if "https://" not in origin_url:
+        origin_url = origin_url.split(":")[-1]
+    origin_user, origin_repo = origin_url.split("/")[-2:]
+    if origin_repo.endswith(".git"):
+        origin_repo = origin_repo[:-4]
+
+    # Check username
+    if username_args:
+        origin_user = username_args[0].strip().lstrip("@")
+    elif origin_user.lower() == ORG_NAME.lower():
+        code_host = REPO_URL_HTTPS.split(":")[1].lstrip("/").split("/")[0]
+        session.warn(
+            "Origin remote currently set to upstream; should be your fork.\n"
+            f"To fix, fork it and pass --username <Your {code_host} username>"
+        )
+
+    # Set up remotes
+    existing_remotes = session.run(
+        *remote_cmd, external=True, silent=True, log=False).strip().split("\n")
+    for remote, user_name, repo_name in (
+            ("origin", origin_user, origin_repo),
+            ("upstream", ORG_NAME, REPO_NAME),
+    ):
+        action = "set-url" if remote in existing_remotes else "add"
+        fetch_url = REPO_URL_HTTPS.format(user=user_name, repo=repo_name)
+        session.run(*remote_cmd, action, remote, fetch_url, external=True)
+
+        ssh_url = REPO_URL_SSH.format(user=user_name, repo=repo_name)
+        push_url = ssh_url if ssh else fetch_url
+        session.run(
+            *remote_cmd, "set-url", "--push", remote, push_url, external=True)
+
+    session.run("git", "fetch", "--all", external=True)
+
+
+@nox.session(name="setup-remotes")
+def setup_remotes(session):
+    """Set up the Git remotes; pass --https or --ssh to specify URL type."""
+    session.notify("_execute", posargs=([_setup_remotes], *session.posargs))
+
+
+@nox.session()
+def setup(session):
+    """Set up the project; pass --https or --ssh to specify Git URL type."""
+    session.notify(
+        "_execute",
+        posargs=([_setup_remotes, _install_hooks, _clean], *session.posargs),
+    )
 
 
 # ---- Build ---- #
@@ -312,6 +384,7 @@ def serve(_session):
 def _prepare_multiversion(_session=None):
     """Execute the pre-deployment steps for multi-version support."""
     # pylint: disable=import-outside-toplevel
+    # pylint: disable=import-error
 
     sys.path.append(str(SCRIPT_DIR))
     import generateredirects
