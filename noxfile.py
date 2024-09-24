@@ -201,8 +201,11 @@ def build_help(session):
 
 
 def _run(session):
-    """Run an arbitrary command in the project's venv."""
-    session.run(*session.posargs[1:])
+    """Run an arbitrary command invocation in the project's venv."""
+    posargs = session.posargs[1:]
+    if not posargs:
+        session.error("Must pass a command invocation to run")
+    session.run(*posargs)
 
 
 @nox.session()
