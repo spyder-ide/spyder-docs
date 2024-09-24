@@ -302,9 +302,7 @@ def setup(session):
 
 def _build(session):
     """Execute the docs build."""
-    sphinx_invocation = construct_sphinx_invocation(
-        posargs=session.posargs[1:])
-    session.run(*sphinx_invocation)
+    _docs(session)
 
 
 @nox.session
@@ -314,6 +312,32 @@ def build(session):
 
 
 def _autobuild(session):
+    """Use Sphinx-Autobuild to rebuild the project and open in browser."""
+    _autodocs(session)
+
+
+@nox.session
+def autobuild(session):
+    """Rebuild the project continuously as source files are changed."""
+    session.notify("_execute", posargs=([_autobuild], *session.posargs))
+
+
+# --- Docs --- #
+
+def _docs(session):
+    """Execute the docs build."""
+    sphinx_invocation = construct_sphinx_invocation(
+        posargs=session.posargs[1:])
+    session.run(*sphinx_invocation)
+
+
+@nox.session
+def docs(session):
+    """Build the documentation."""
+    session.notify("_execute", posargs=([_docs], *session.posargs))
+
+
+def _autodocs(session):
     """Use Sphinx-Autobuild to rebuild the project and open in browser."""
     session.install("sphinx-autobuild")
 
@@ -333,9 +357,9 @@ def _autobuild(session):
 
 
 @nox.session
-def autobuild(session):
-    """Rebuild the project continuously as source files are changed."""
-    session.notify("_execute", posargs=([_autobuild], *session.posargs))
+def autodocs(session):
+    """Rebuild the docs continuously as source files are changed."""
+    session.notify("_execute", posargs=([_autodocs], *session.posargs))
 
 
 def _build_languages(session):
@@ -370,15 +394,26 @@ def build_multilanguage(session):
 
 # ---- Deploy ---- #
 
-def _serve(_session=None):
+def _serve(session=None):
+    """Open the docs in a web browser."""
+    _serve_docs(session)
+
+
+def _serve_docs(_session=None):
     """Open the docs in a web browser."""
     webbrowser.open(HTML_INDEX_PATH.as_uri())
 
 
 @nox.session
 def serve(_session):
-    """Display the project."""
+    """Display the built project."""
     _serve()
+
+
+@nox.session(name="serve-docs")
+def serve_docs(_session):
+    """Display the rendered documentation."""
+    _serve_docs()
 
 
 def _prepare_multiversion(_session=None):
