@@ -25,7 +25,8 @@ Let us know if you have any further questions, and we look forward to your contr
 - [Setting Up a Development Environment Manually](#setting-up-a-development-environment-manually)
   - [Create and activate a fresh environment](#create-and-activate-a-fresh-environment)
   - [Install dependencies](#install-dependencies)
-- [Installing the Pre-Commit Hooks](#installing-the-pre-commit-hooks)
+  - [Add the upstream remote](#add-the-upstream-remote)
+- [Installing and Using the Pre-Commit Hooks](#installing-and-using-the-pre-commit-hooks)
 - [Building the Docs](#building-the-docs)
   - [Build with Nox](#build-with-nox)
   - [Build manually](#build-manually)
@@ -66,12 +67,6 @@ After cloning the repository, navigate to its new directory using the `cd` comma
 cd spyder-docs
 ```
 
-Finally, set the upstream remote to the official Spyder-Docs repo with:
-
-```shell
-git remote add upstream https://github.com/spyder-ide/spyder-docs.git
-```
-
 
 
 ## Setting Up a Development Environment with Nox (Recommended)
@@ -97,11 +92,20 @@ or, if not using Conda,
 python -m pip install nox
 ```
 
-To check that Nox is installed and browse a list of commands (called "sessions") we provide through Nox and what they do, you can run
+To check that Nox is installed and browse a list of commands (called "sessions") we provide through Nox and what they do, run
 
 ```shell
 nox --list
 ```
+
+Then, run the ``setup`` session, which performs the project's one-time setup steps; pass either ``--https`` or ``--ssh`` to specify how you'd like to push changes to GitHub.
+If not sure, pass ``--https`` for now:
+
+```shell
+nox -s setup -- --https
+```
+
+You can always switch it later with ``nox -s setup-remotes -- --ssh``.
 
 
 
@@ -171,20 +175,30 @@ python -m pip install -r requirements.txt
 ```
 
 
+### Add the upstream remote
 
-## Installing the Pre-Commit Hooks
+Make sure to set the upstream Git remote to the official Spyder-Docs repo with:
+
+```shell
+git remote add upstream https://github.com/spyder-ide/spyder-docs.git
+```
+
+
+
+## Installing and Using the Pre-Commit Hooks
 
 This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
 You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide.
 They are also run on all pull requests, and will need to pass before your changes can be merged.
 
-If you've [using Nox](#setting-up-a-development-environment-with-nox-recommended), it installs Pre-Commit in its own environment, and we provide our own simplified command to install the hooks:
+If you've [using Nox](#setting-up-a-development-environment-with-nox-recommended), it installs Pre-Commit and its hooks for you when running ``nox -s setup`` (as above).
+You can also install them with
 
 ```shell
 nox -s install-hooks
 ```
 
-If instead you've followed the [manual install approach](#install-dependencies), pre-commit will be installed directly in your local environment.
+If you've followed the [manual install approach](#install-dependencies), Pre-Commit will be installed directly in your local environment.
 To install the hooks, run the following from the root of this repo:
 
 ```shell
