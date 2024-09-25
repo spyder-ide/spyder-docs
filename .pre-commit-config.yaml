@@ -121,16 +121,6 @@ repos:
     name: Format JavaScript (Prettier)
     types: [javascript]
 
-# Lint Jinja
-- repo: https://github.com/thibaudcolas/curlylint
-  rev: v0.13.1
-  hooks:
-  - id: curlylint
-    name: Lint Jinja templates
-    types: [html, jinja, twig]
-    files: 'templates/'
-    require_serial: true
-
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.6.0
