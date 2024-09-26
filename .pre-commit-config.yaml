@@ -102,7 +102,7 @@ repos:
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
-  rev: v9.11.0
+  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#
   hooks:
   - id: eslint
     name: Lint and fix JavaScript (ESLint)
@@ -111,7 +111,7 @@ repos:
     - 'eslint-plugin-import@2.30.0'
     - 'eslint-plugin-n@17.10.3'
     - 'eslint-plugin-promise@7.1.0'
-    - 'neostandard@0.11.5'
+    - 'neostandard@0.11.6'
 
 # Format JavaScript with Prettier
 - repo: https://github.com/rbubley/mirrors-prettier
