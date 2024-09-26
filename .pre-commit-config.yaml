@@ -1,10 +1,10 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 
-# Baseline hooks and config updated 2023-11-01
-# Web hooks and config updated 2023-11-01
-# Docs hooks and config updated 2024-01-29
-# Python hooks and config updated 2024-01-29
+# Baseline hooks and config updated 2024-09-25
+# Web hooks and config updated 2024-09-25
+# Docs hooks and config updated 2024-09-25
+# Python hooks and config updated 2024-09-25
 
 minimum_pre_commit_version: '2.10.0'
 
@@ -102,7 +102,7 @@ repos:
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
-  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#
+  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#18956
   hooks:
   - id: eslint
     name: Lint and fix JavaScript (ESLint)
@@ -169,7 +169,7 @@ repos:
     exclude: '\bworkshops\b'
 
 - repo: https://github.com/pycqa/pylint
-  rev: v3.3.0
+  rev: v3.3.1
   hooks:
   - id: pylint
     name: Lint Python with Pylint
