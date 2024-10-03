@@ -1,10 +1,10 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 
-# Baseline hooks and config updated 2023-11-01
-# Web hooks and config updated 2023-11-01
-# Docs hooks and config updated 2024-01-29
-# Python hooks and config updated 2024-01-29
+# Baseline hooks and config updated 2024-09-25
+# Web hooks and config updated 2024-09-25
+# Docs hooks and config updated 2024-09-25
+# Python hooks and config updated 2024-09-25
 
 minimum_pre_commit_version: '2.10.0'
 
@@ -102,7 +102,7 @@ repos:
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
-  rev: v9.11.0
+  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#18956
   hooks:
   - id: eslint
     name: Lint and fix JavaScript (ESLint)
@@ -111,7 +111,7 @@ repos:
     - 'eslint-plugin-import@2.30.0'
     - 'eslint-plugin-n@17.10.3'
     - 'eslint-plugin-promise@7.1.0'
-    - 'neostandard@0.11.5'
+    - 'neostandard@0.11.6'
 
 # Format JavaScript with Prettier
 - repo: https://github.com/rbubley/mirrors-prettier
@@ -120,16 +120,6 @@ repos:
   - id: prettier
     name: Format JavaScript (Prettier)
     types: [javascript]
-
-# Lint Jinja
-- repo: https://github.com/thibaudcolas/curlylint
-  rev: v0.13.1
-  hooks:
-  - id: curlylint
-    name: Lint Jinja templates
-    types: [html, jinja, twig]
-    files: 'templates/'
-    require_serial: true
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -154,6 +144,15 @@ repos:
     name: Lint Markdown
     args: [--fix]
 
+# Format Python
+- repo: https://github.com/psf/black-pre-commit-mirror
+  rev: '24.8.0'
+  hooks:
+  - id: black
+    name: Format Python with Black
+    args: ['--config', '.black.toml']
+    exclude: '\bworkshops\b'
+
 # Check Python
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.6.0
@@ -170,7 +169,7 @@ repos:
     exclude: '\bworkshops\b'
 
 - repo: https://github.com/pycqa/pylint
-  rev: v3.3.0
+  rev: v3.3.1
   hooks:
   - id: pylint
     name: Lint Python with Pylint

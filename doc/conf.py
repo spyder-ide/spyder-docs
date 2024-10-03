@@ -18,6 +18,7 @@
 
 # pylint: disable-next = import-error
 from docutils import nodes
+
 # pylint: disable-next = import-error
 from docutils.parsers.rst import Directive, directives
 
@@ -69,7 +70,8 @@ master_doc = "index"
 # General information about the project.
 project = "Spyder"
 copyright = (  # pylint: disable = redefined-builtin
-    f" 2009-{UTC_DATE.year} Spyder Doc Contributors; MIT License")
+    f" 2009-{UTC_DATE.year} Spyder Doc Contributors; MIT License"
+)
 author = "The Spyder Doc Contributors"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -142,7 +144,8 @@ html_theme_options = {
     "show_version_warning_banner": True,
     "switcher": {
         "json_url": (
-            "https://docs.spyder-ide.org/current/_static/versions.json"),
+            "https://docs.spyder-ide.org/current/_static/versions.json"
+        ),
         "version_match": version,
     },
 }
@@ -304,12 +307,13 @@ linkcheck_ignore = [
     r"https://(www\.)?software\.opensuse\.org/?.*",
     r"https://(www\.)?packages\.ubuntu\.com/?.*",
     r"https://(www\.)?github\.com/.+/commit/.+",
+    r"https://(www\.)?figshare\.com/?.*",
     # Blocks GitHub Actions
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
     # Temporary until removed (flaky/no longer used)
     r"https://(www\.)?openteams\.com/?.*",
-    ]
+]
 
 
 # -- Additional Directives ---------------------------------------------------
@@ -326,6 +330,7 @@ linkcheck_ignore = [
 #         :align: left
 # :copyright: (c) 2012 by Danilo Bargen.
 # :license: BSD 3-clause
+
 
 def align(argument):
     """Convert the "align" argument to one of the specified options."""
@@ -366,16 +371,18 @@ class IFrameVideo(Directive):
 class Youtube(IFrameVideo):
     """A specific directive for injecting a Youtube video in a Sphinx doc."""
 
-    html = "".join([
-        '<div class="video-container-container">',
-        '<div class="video-container">',
-        '<iframe src="https://www.youtube.com/embed/%(video_id)s',
-        '?start=%(start)s" ',
-        'width="%(width)u" height="%(height)u" frameborder="0" ',
-        # pylint: disable = inconsistent-quotes
-        'webkitAllowFullScreen mozallowfullscreen allowfullscreen ',
-        'class="align-%(align)s"></iframe></div></div>',
-        ])
+    html = "".join(
+        [
+            '<div class="video-container-container">',
+            '<div class="video-container">',
+            '<iframe src="https://www.youtube.com/embed/%(video_id)s',
+            '?start=%(start)s" ',
+            'width="%(width)u" height="%(height)u" frameborder="0" ',
+            # pylint: disable = inconsistent-quotes
+            "webkitAllowFullScreen mozallowfullscreen allowfullscreen ",
+            'class="align-%(align)s"></iframe></div></div>',
+        ]
+    )
 
 
 def setup(builder):  # pylint: disable = unused-argument

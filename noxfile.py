@@ -26,6 +26,8 @@ REPO_NAME = "spyder-docs"
 REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
 REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
+IGNORE_REVS_FILE = ".git-blame-ignore-revs"
+
 CANARY_COMMAND = ("sphinx-build", "--version")
 BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
@@ -57,6 +59,7 @@ CI = "CI" in os.environ
 
 # ---- Helpers ---- #
 
+
 @contextlib.contextmanager
 def set_log_level(logger=nox.logger.logger, level=logging.CRITICAL):
     """Context manager to set a logger log level and reset it after."""
@@ -73,16 +76,18 @@ def split_sequence(seq, *, sep="--"):
     if sep not in seq:
         seq.append(sep)
     idx = seq.index(sep)
-    return seq[:idx], seq[idx + 1:]
+    return seq[:idx], seq[idx + 1 :]
 
 
 def process_filenames(filenames, source_dir=SOURCE_DIR):
     """If filepaths are missing the source directory, add it automatically."""
     source_dir = Path(source_dir)
     filenames = [
-        str(source_dir / filename)
-        if source_dir not in Path(filename).resolve().parents
-        else filename
+        (
+            str(source_dir / filename)
+            if source_dir not in Path(filename).resolve().parents
+            else filename
+        )
         for filename in filenames
     ]
     return filenames
@@ -125,7 +130,8 @@ def construct_sphinx_invocation(
     cli_options, filenames = split_sequence(list(posargs))
     filenames = process_filenames(filenames, source_dir=source_dir)
     builders, cli_options = extract_option_values(
-        cli_options, ["--builder", "-b"], split_csv=False)
+        cli_options, ["--builder", "-b"], split_csv=False
+    )
     builder = builders[-1] if builders else builder
     build_dir = BUILD_DIR / builder if build_dir is None else build_dir
 
@@ -149,6 +155,7 @@ def construct_sphinx_invocation(
 
 # ---- Dispatch ---- #
 
+
 # Workaround for Nox not (yet) supporting shared venvs
 # See: https://github.com/wntrblm/nox/issues/167
 @nox.session(venv_backend="virtualenv", reuse_venv=True)
@@ -156,14 +163,16 @@ def _execute(session):
     """Dispatch tasks to run in a common environment. Do not run directly."""
     if not session.posargs or isinstance(session.posargs[0], str):
         raise ValueError(
-            "Must pass a list of functions to execute as first posarg")
+            "Must pass a list of functions to execute as first posarg"
+        )
 
     if not session.posargs or session.posargs[0] is not _install:
         # pylint: disable=too-many-try-statements
         try:
             with set_log_level():
                 session.run(
-                    *CANARY_COMMAND, include_outer_env=False, silent=True)
+                    *CANARY_COMMAND, include_outer_env=False, silent=True
+                )
         except nox.command.CommandFailed:
             print("Installing dependencies in isolated environment...")
             _install(session, use_posargs=False)
@@ -174,6 +183,7 @@ def _execute(session):
 
 
 # ---- Install ---- #
+
 
 def _install(session, *, use_posargs=True):
     """Execute the dependency installation."""
@@ -188,6 +198,7 @@ def install(session):
 
 
 # ---- Utility ---- #
+
 
 def _build_help(session):
     """Print Sphinx --help."""
@@ -237,12 +248,16 @@ def clean(session):
 
 # --- Set up --- #
 
+
 def _setup_remotes(session):
     """Set up the origin and upstream remote repositories."""
     remote_cmd = ["git", "remote"]
-    posargs = list(session.posargs[1:])
+    posargs = list(session.posargs)
     https = "--https" in posargs
     ssh = "--ssh" in posargs
+
+    if posargs and not isinstance(posargs[0], str):
+        posargs = posargs[1:]
     username_args = extract_option_values(posargs, "--username")[0]
     if https == ssh:
         session.error("Exactly one of '--https' or '--ssh' must be passed")
@@ -250,7 +265,8 @@ def _setup_remotes(session):
     # Get current origin details
     origin_url_cmd = (*remote_cmd, "get-url", "origin")
     origin_url = session.run(
-        *origin_url_cmd, external=True, silent=True, log=False).strip()
+        *origin_url_cmd, external=True, silent=True, log=False
+    ).strip()
     if "https://" not in origin_url:
         origin_url = origin_url.split(":")[-1]
     origin_user, origin_repo = origin_url.split("/")[-2:]
@@ -268,11 +284,14 @@ def _setup_remotes(session):
         )
 
     # Set up remotes
-    existing_remotes = session.run(
-        *remote_cmd, external=True, silent=True, log=False).strip().split("\n")
+    existing_remotes = (
+        session.run(*remote_cmd, external=True, silent=True, log=False)
+        .strip()
+        .split("\n")
+    )
     for remote, user_name, repo_name in (
-            ("origin", origin_user, origin_repo),
-            ("upstream", ORG_NAME, REPO_NAME),
+        ("origin", origin_user, origin_repo),
+        ("upstream", ORG_NAME, REPO_NAME),
     ):
         action = "set-url" if remote in existing_remotes else "add"
         fetch_url = REPO_URL_HTTPS.format(user=user_name, repo=repo_name)
@@ -281,7 +300,8 @@ def _setup_remotes(session):
         ssh_url = REPO_URL_SSH.format(user=user_name, repo=repo_name)
         push_url = ssh_url if ssh else fetch_url
         session.run(
-            *remote_cmd, "set-url", "--push", remote, push_url, external=True)
+            *remote_cmd, "set-url", "--push", remote, push_url, external=True
+        )
 
     session.run("git", "fetch", "--all", external=True)
 
@@ -289,7 +309,26 @@ def _setup_remotes(session):
 @nox.session(name="setup-remotes")
 def setup_remotes(session):
     """Set up the Git remotes; pass --https or --ssh to specify URL type."""
-    session.notify("_execute", posargs=([_setup_remotes], *session.posargs))
+    _setup_remotes(session)
+
+
+def _ignore_revs(session):
+    """Configure the Git ignore revs file to the repo default."""
+    if not IGNORE_REVS_FILE:
+        return
+    session.run(
+        "git",
+        "config",
+        "blame.ignoreRevsFile",
+        IGNORE_REVS_FILE,
+        external=True,
+    )
+
+
+@nox.session(name="ignore-revs")
+def ignore_revs(session):
+    """Configure Git to ignore noisy revisions."""
+    _ignore_revs(session)
 
 
 @nox.session()
@@ -297,11 +336,20 @@ def setup(session):
     """Set up the project; pass --https or --ssh to specify Git URL type."""
     session.notify(
         "_execute",
-        posargs=([_setup_remotes, _install_hooks, _clean], *session.posargs),
+        posargs=(
+            [
+                _ignore_revs,
+                _setup_remotes,
+                _install_hooks,
+                _clean,
+            ],
+            *session.posargs,
+        ),
     )
 
 
 # ---- Build ---- #
+
 
 def _build(session):
     """Execute the docs build."""
@@ -327,10 +375,12 @@ def autobuild(session):
 
 # --- Docs --- #
 
+
 def _docs(session):
     """Execute the docs build."""
     sphinx_invocation = construct_sphinx_invocation(
-        posargs=session.posargs[1:])
+        posargs=session.posargs[1:]
+    )
     session.run(*sphinx_invocation)
 
 
@@ -354,7 +404,7 @@ def _autodocs(session):
                 "--port=0",
                 f"--watch={SOURCE_DIR}",
                 "--open-browser",
-            ]
+            ],
         )
         session.run(*sphinx_invocation)
 
@@ -368,7 +418,8 @@ def autodocs(session):
 def _build_languages(session):
     """Build the docs in multiple languages."""
     languages, posargs = extract_option_values(
-        session.posargs[1:], ("--lang", "--language"), split_csv=True)
+        session.posargs[1:], ("--lang", "--language"), split_csv=True
+    )
     languages = languages or ALL_LANGUAGES
 
     for language in languages:
@@ -384,18 +435,19 @@ def _build_languages(session):
 @nox.session(name="build-languages")
 def build_languages(session):
     """Build the project in multiple languages (specify with '--lang')."""
-    session.notify(
-        "_execute", posargs=([_build_languages], *session.posargs))
+    session.notify("_execute", posargs=([_build_languages], *session.posargs))
 
 
 @nox.session(name="build-multilanguage")
 def build_multilanguage(session):
     """Build the project for deployment in all languages."""
     session.notify(
-        "_execute", posargs=([_build, _build_languages], *session.posargs))
+        "_execute", posargs=([_build, _build_languages], *session.posargs)
+    )
 
 
 # ---- Deploy ---- #
+
 
 def _serve(session=None):
     """Open the docs in a web browser."""
@@ -430,7 +482,8 @@ def _prepare_multiversion(_session=None):
 
     latest_version_dir = HTML_BUILD_DIR / str(LATEST_VERSION)
     shutil.copytree(
-        HTML_BUILD_DIR, latest_version_dir, copy_function=shutil.move)
+        HTML_BUILD_DIR, latest_version_dir, copy_function=shutil.move
+    )
     safecopy.copy_dir_if_not_existing(
         source_dir=str(LATEST_VERSION),
         target_dir="current",
@@ -464,6 +517,7 @@ def build_deployment(session):
 
 
 # ---- Check ---- #
+
 
 def _install_hooks(session):
     """Run pre-commit install to install the project's hooks."""
@@ -505,7 +559,8 @@ def _lint(session):
     """Run linting on the project via pre-commit."""
     extra_options = ["--show-diff-on-failure"] if CI else []
     session.run(
-        "pre-commit", "run", "--all", *extra_options, *session.posargs[1:])
+        "pre-commit", "run", "--all", *extra_options, *session.posargs[1:]
+    )
 
 
 @nox.session
@@ -517,7 +572,8 @@ def lint(session):
 def _linkcheck(session):
     """Run Sphinx linkcheck on the docs."""
     sphinx_invocation = construct_sphinx_invocation(
-        posargs=session.posargs[1:], builder="linkcheck")
+        posargs=session.posargs[1:], builder="linkcheck"
+    )
     session.run(*sphinx_invocation)
 
 
@@ -529,10 +585,12 @@ def linkcheck(session):
 
 # ---- Translation ---- #
 
+
 def _build_pot(session):
     """Build the docs with Sphinx -b gettext to extract .pot files."""
     sphinx_invocation = construct_sphinx_invocation(
-        posargs=session.posargs[1:], builder=GETTEXT_BUILDER)
+        posargs=session.posargs[1:], builder=GETTEXT_BUILDER
+    )
     session.run(*sphinx_invocation)
 
 
@@ -564,7 +622,8 @@ def copy_pot(_session):
 def update_pot(session):
     """Rebuild gettext .pot files and update the existing ones."""
     session.notify(
-        "_execute", posargs=([_build_pot, _copy_pot], *session.posargs))
+        "_execute", posargs=([_build_pot, _copy_pot], *session.posargs)
+    )
 
 
 def _update_po(session):
