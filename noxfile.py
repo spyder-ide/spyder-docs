@@ -26,6 +26,8 @@ REPO_NAME = "spyder-docs"
 REPO_URL_HTTPS = "https://github.com/{user}/{repo}.git"
 REPO_URL_SSH = "git@github.com:{user}/{repo}.git"
 
+IGNORE_REVS_FILE = ".git-blame-ignore-revs"
+
 CANARY_COMMAND = ("sphinx-build", "--version")
 BUILD_INVOCATION = ("python", "-m", "sphinx")
 SOURCE_DIR = Path("doc").resolve()
@@ -307,12 +309,39 @@ def setup_remotes(session):
     session.notify("_execute", posargs=([_setup_remotes], *session.posargs))
 
 
+def _ignore_revs(session):
+    """Configure the Git ignore revs file to the repo default."""
+    if not IGNORE_REVS_FILE:
+        return
+    session.run(
+        "git",
+        "config",
+        "blame.ignoreRevsFile",
+        IGNORE_REVS_FILE,
+        external=True,
+    )
+
+
+@nox.session(name="ignore-revs")
+def ignore_revs(session):
+    """Configure Git to ignore noisy revisions."""
+    _ignore_revs(session)
+
+
 @nox.session()
 def setup(session):
     """Set up the project; pass --https or --ssh to specify Git URL type."""
     session.notify(
         "_execute",
-        posargs=([_setup_remotes, _install_hooks, _clean], *session.posargs),
+        posargs=(
+            [
+                _ignore_revs,
+                _setup_remotes,
+                _install_hooks,
+                _clean,
+            ],
+            *session.posargs,
+        ),
     )
 
 
