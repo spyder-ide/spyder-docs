@@ -252,9 +252,12 @@ def clean(session):
 def _setup_remotes(session):
     """Set up the origin and upstream remote repositories."""
     remote_cmd = ["git", "remote"]
-    posargs = list(session.posargs[1:])
+    posargs = list(session.posargs)
     https = "--https" in posargs
     ssh = "--ssh" in posargs
+
+    if posargs and not isinstance(posargs[0], str):
+        posargs = posargs[1:]
     username_args = extract_option_values(posargs, "--username")[0]
     if https == ssh:
         session.error("Exactly one of '--https' or '--ssh' must be passed")
@@ -306,7 +309,7 @@ def _setup_remotes(session):
 @nox.session(name="setup-remotes")
 def setup_remotes(session):
     """Set up the Git remotes; pass --https or --ssh to specify URL type."""
-    session.notify("_execute", posargs=([_setup_remotes], *session.posargs))
+    _setup_remotes(session)
 
 
 def _ignore_revs(session):
