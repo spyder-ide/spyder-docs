@@ -71,9 +71,9 @@ You can deactivate the background color by unchecking the appropriate option in 
    :alt: Array editor array, displaying a "heatmap" of its values
 
 If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display.
-For this, click the :guilabel:`Format` button and and set the desired formatting in the dialog that appears, using standard `Printf-style syntax`_.
+For this, click the :guilabel:`Format` button and and set the desired formatting in the dialog that appears, using the standard `format specification mini-language`_.
 
-.. _Printf-style syntax: https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting
+.. _format specification mini-language: https://docs.python.org/3/library/string.html#format-specification-mini-language
 
 Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers.
 Clicking the :guilabel:`Resize` button will set it automatically.
