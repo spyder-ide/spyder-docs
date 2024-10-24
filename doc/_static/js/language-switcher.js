@@ -1,14 +1,14 @@
 // Define the custom behavior of the page
-import { documentReady } from "./mixin";
-import { compare, validate } from "compare-versions";
+// import { documentReady } from "./mixin";
+// import { compare, validate } from "compare-versions";
 
-import "../styles/pydata-sphinx-theme.scss";
+// import "../styles/pydata-sphinx-theme.scss";
 
 /*******************************************************************************
  * Theme interaction
  */
 
-var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+// var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 /**
  * set the the body theme to the one specified by the user browser
@@ -872,21 +872,140 @@ async function fetchRevealBannersTogether() {
  * Call functions after document loading.
  */
 
+/* define several functions to replace jQuery methods
+ * inspired by https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/
+ */
+
+/**
+ * Execute a method if DOM has finished loading
+ *
+ * @param {function} callback the method to execute
+ */
+function documentReady(callback) {
+  if (document.readyState != "loading") callback();
+  else document.addEventListener("DOMContentLoaded", callback);
+}
+
 // This one first to kick off the network request for the version warning
 // and announcement banner data as early as possible.
-documentReady(fetchRevealBannersTogether);
+// documentReady(fetchRevealBannersTogether);
 
-documentReady(addModeListener);
-documentReady(scrollToActive);
-documentReady(addTOCInteractivity);
-documentReady(setupSearchButtons);
-documentReady(initRTDObserver);
-documentReady(setupMobileSidebarKeyboardHandlers);
+// documentReady(addModeListener);
+// documentReady(scrollToActive);
+// documentReady(addTOCInteractivity);
+// documentReady(setupSearchButtons);
+// documentReady(initRTDObserver);
+// documentReady(setupMobileSidebarKeyboardHandlers);
 
 // Determining whether an element has scrollable content depends on stylesheets,
 // so we're checking for the "load" event rather than "DOMContentLoaded"
-if (document.readyState === "complete") {
-  addTabStopsToScrollableElements();
-} else {
-  window.addEventListener("load", addTabStopsToScrollableElements);
+// if (document.readyState === "complete") {
+  // addTabStopsToScrollableElements();
+// } else {
+  // window.addEventListener("load", addTabStopsToScrollableElements);
+// }
+
+
+/*******************************************************************************
+ * Patched-in functions to handle language switcher.
+ */
+
+// Populate the version switcher from the JSON data
+function populateLanguageSwitcher(data, versionSwitcherBtns) {
+  const currentFilePath = getCurrentUrlPath();
+  versionSwitcherBtns.forEach((btn) => {
+    // Set empty strings by default so that these attributes exist and can be used in CSS selectors
+    btn.dataset["activeVersionName"] = "";
+    btn.dataset["activeVersion"] = "";
+  });
+  // in case there are multiple entries with the same version string, this helps us
+  // decide which entry's `name` to put on the button itself. Without this, it would
+  // always be the *last* version-matching entry; now it will be either the
+  // version-matching entry that is also marked as `"preferred": true`, or if that
+  // doesn't exist: the *first* version-matching entry.
+  data = data.map((entry) => {
+    // does this entry match the version that we're currently building/viewing?
+    entry.match =
+      entry.version == DOCUMENTATION_OPTIONS.theme_switcher_version_match;
+    entry.preferred = entry.preferred || false;
+    // if no custom name specified (e.g., "latest"), use version string
+    if (!("name" in entry)) {
+      entry.name = entry.version;
+    }
+    return entry;
+  });
+  const hasMatchingPreferredEntry = data
+    .map((entry) => entry.preferred && entry.match)
+    .some(Boolean);
+  var foundMatch = false;
+  // create links to the corresponding page in the other docs versions
+  data.forEach((entry) => {
+    // create the node
+    const anchor = document.createElement("a");
+    anchor.setAttribute(
+      "class",
+      "dropdown-item list-group-item list-group-item-action py-1",
+    );
+    anchor.setAttribute("href", `${entry.url}${currentFilePath}`);
+    anchor.setAttribute("role", "option");
+    const span = document.createElement("span");
+    span.textContent = `${entry.name}`;
+    anchor.appendChild(span);
+    // Add dataset values for the version and name in case people want
+    // to apply CSS styling based on this information.
+    anchor.dataset["versionName"] = entry.name;
+    anchor.dataset["version"] = entry.version;
+    // replace dropdown button text with the preferred display name of the
+    // currently-viewed version, rather than using sphinx's {{ version }} variable.
+    // also highlight the dropdown entry for the currently-viewed version's entry
+    let matchesAndIsPreferred = hasMatchingPreferredEntry && entry.preferred;
+    let matchesAndIsFirst =
+      !hasMatchingPreferredEntry && !foundMatch && entry.match;
+    if (matchesAndIsPreferred || matchesAndIsFirst) {
+      anchor.classList.add("active");
+      versionSwitcherBtns.forEach((btn) => {
+        btn.innerText = entry.name;
+        btn.dataset["activeVersionName"] = entry.name;
+        btn.dataset["activeVersion"] = entry.version;
+      });
+      foundMatch = true;
+    }
+    // There may be multiple version-switcher elements, e.g. one
+    // in a slide-over panel displayed on smaller screens.
+    document.querySelectorAll(".version-switcher__menu").forEach((menu) => {
+      // we need to clone the node for each menu, but onclick attributes are not
+      // preserved by `.cloneNode()` so we add onclick here after cloning.
+      let node = anchor.cloneNode(true);
+      node.onclick = checkPageExistsAndRedirect;
+      // on click, AJAX calls will check if the linked page exists before
+      // trying to redirect, and if not, will redirect to the homepage
+      // for that version of the docs.
+      menu.append(node);
+    });
+  });
 }
+
+async function fetchAndUseLanguages() {
+  // fetch the JSON version data (only once), then use it to populate the version
+  // switcher and maybe show the version warning bar
+  var versionSwitcherBtns = document.querySelectorAll(
+    ".version-switcher__button",
+  );
+  const hasSwitcherMenu = versionSwitcherBtns.length > 0;
+  const hasVersionsJSON = DOCUMENTATION_OPTIONS.hasOwnProperty(
+    "theme_switcher_json_url",
+  );
+
+  if (hasVersionsJSON && hasSwitcherMenu) {
+    const data = await fetchVersionSwitcherJSON(
+      DOCUMENTATION_OPTIONS.theme_switcher_json_url,
+    );
+    // TODO: remove the `if(data)` once the `return null` is fixed within fetchVersionSwitcherJSON.
+    // We don't really want the switcher and warning bar to silently not work.
+    if (data) {
+      populateVersionSwitcher(data, versionSwitcherBtns);
+    }
+  }
+}
+
+documentReady(fetchAndUseLanguages);
