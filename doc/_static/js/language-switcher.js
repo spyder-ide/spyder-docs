@@ -910,13 +910,13 @@ function documentReady(callback) {
  * Patched-in functions to handle language switcher.
  */
 
-// Populate the version switcher from the JSON data
-function populateLanguageSwitcher(data, versionSwitcherBtns) {
+// Populate the language switcher from the JSON data
+function populateLanguageSwitcher(data, languageSwitcherBtns) {
   const currentFilePath = getCurrentUrlPath();
-  versionSwitcherBtns.forEach((btn) => {
+  languageSwitcherBtns.forEach((btn) => {
     // Set empty strings by default so that these attributes exist and can be used in CSS selectors
-    btn.dataset["activeVersionName"] = "";
-    btn.dataset["activeVersion"] = "";
+    btn.dataset["activeLanguageName"] = "";
+    btn.dataset["activeLanguage"] = "";
   });
   // in case there are multiple entries with the same version string, this helps us
   // decide which entry's `name` to put on the button itself. Without this, it would
@@ -926,11 +926,11 @@ function populateLanguageSwitcher(data, versionSwitcherBtns) {
   data = data.map((entry) => {
     // does this entry match the version that we're currently building/viewing?
     entry.match =
-      entry.version == DOCUMENTATION_OPTIONS.theme_switcher_version_match;
+      entry.language == DOCUMENTATION_OPTIONS.LANGUAGE;
     entry.preferred = entry.preferred || false;
     // if no custom name specified (e.g., "latest"), use version string
     if (!("name" in entry)) {
-      entry.name = entry.version;
+      entry.name = entry.language;
     }
     return entry;
   });
@@ -953,8 +953,8 @@ function populateLanguageSwitcher(data, versionSwitcherBtns) {
     anchor.appendChild(span);
     // Add dataset values for the version and name in case people want
     // to apply CSS styling based on this information.
-    anchor.dataset["versionName"] = entry.name;
-    anchor.dataset["version"] = entry.version;
+    anchor.dataset["languageName"] = entry.name;
+    anchor.dataset["language"] = entry.language;
     // replace dropdown button text with the preferred display name of the
     // currently-viewed version, rather than using sphinx's {{ version }} variable.
     // also highlight the dropdown entry for the currently-viewed version's entry
@@ -963,16 +963,16 @@ function populateLanguageSwitcher(data, versionSwitcherBtns) {
       !hasMatchingPreferredEntry && !foundMatch && entry.match;
     if (matchesAndIsPreferred || matchesAndIsFirst) {
       anchor.classList.add("active");
-      versionSwitcherBtns.forEach((btn) => {
+      languageSwitcherBtns.forEach((btn) => {
         btn.innerText = entry.name;
-        btn.dataset["activeVersionName"] = entry.name;
-        btn.dataset["activeVersion"] = entry.version;
+        btn.dataset["activeLanguageName"] = entry.name;
+        btn.dataset["activeLanguage"] = entry.language;
       });
       foundMatch = true;
     }
     // There may be multiple version-switcher elements, e.g. one
     // in a slide-over panel displayed on smaller screens.
-    document.querySelectorAll(".version-switcher__menu").forEach((menu) => {
+    document.querySelectorAll(".language-switcher__menu").forEach((menu) => {
       // we need to clone the node for each menu, but onclick attributes are not
       // preserved by `.cloneNode()` so we add onclick here after cloning.
       let node = anchor.cloneNode(true);
@@ -986,24 +986,35 @@ function populateLanguageSwitcher(data, versionSwitcherBtns) {
 }
 
 async function fetchAndUseLanguages() {
-  // fetch the JSON version data (only once), then use it to populate the version
-  // switcher and maybe show the version warning bar
-  var versionSwitcherBtns = document.querySelectorAll(
-    ".version-switcher__button",
+  // fetch the JSON language data (only once), then use it to populate the
+  // language switcher
+  var languageSwitcherBtns = document.querySelectorAll(
+    ".language-switcher__button",
   );
-  const hasSwitcherMenu = versionSwitcherBtns.length > 0;
-  const hasVersionsJSON = DOCUMENTATION_OPTIONS.hasOwnProperty(
-    "theme_switcher_json_url",
+  const hasSwitcherMenu = languageSwitcherBtns.length > 0;
+  const hasLanguagesJSON = DOCUMENTATION_OPTIONS.hasOwnProperty(
+    "language_switcher_json_url",
   );
 
-  if (hasVersionsJSON && hasSwitcherMenu) {
-    const data = await fetchVersionSwitcherJSON(
-      DOCUMENTATION_OPTIONS.theme_switcher_json_url,
-    );
+  if (hasSwitcherMenu) {
+    const data = [
+      {
+        "language": "en",
+        "name": "English",
+        "preferred": true,
+        "url": "https://docs.spyder-ide.org/5/en"
+      },
+      {
+        "language": "es",
+        "name": "Español",
+        "url": "https://docs.spyder-ide.org/5/es"
+      }
+    ]
+
     // TODO: remove the `if(data)` once the `return null` is fixed within fetchVersionSwitcherJSON.
     // We don't really want the switcher and warning bar to silently not work.
     if (data) {
-      populateVersionSwitcher(data, versionSwitcherBtns);
+      populateLanguageSwitcher(data, languageSwitcherBtns);
     }
   }
 }
