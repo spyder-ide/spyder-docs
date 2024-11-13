@@ -4,6 +4,7 @@
 import contextlib
 import logging
 import os
+import re
 import tempfile
 import shutil
 import sys
@@ -30,9 +31,12 @@ IGNORE_REVS_FILE = ".git-blame-ignore-revs"
 
 CANARY_COMMAND = ("sphinx-build", "--version")
 BUILD_INVOCATION = ("python", "-m", "sphinx")
+BUILD_OPTIONS = ("-n", "-W", "--keep-going")
+
 SOURCE_DIR = Path("doc").resolve()
 BUILD_DIR = Path("doc/_build").resolve()
-BUILD_OPTIONS = ("-n", "-W", "--keep-going")
+STATIC_DIR_NAME = Path("_static")
+SOURCE_STATIC_DIR = SOURCE_DIR / STATIC_DIR_NAME
 
 HTML_BUILDER = "html"
 HTML_BUILD_DIR = BUILD_DIR / HTML_BUILDER
@@ -41,6 +45,7 @@ HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 SOURCE_LANGUAGE = "en"
 TRANSLATION_LANGUAGES = ("es",)
 ALL_LANGUAGES = (SOURCE_LANGUAGE,) + TRANSLATION_LANGUAGES
+LANGUAGE_SWITCHER_SOURCE = SOURCE_STATIC_DIR / "js" / "language_switcher.js"
 
 LOCALE_DIR = SOURCE_DIR / "locales"
 GETTEXT_BUILDER = "gettext"
@@ -69,6 +74,13 @@ def set_log_level(logger=nox.logger.logger, level=logging.CRITICAL):
         yield
     finally:
         logger.setLevel(prev_level)
+
+
+def modify_asset(pattern, replacement, asset_path):
+    """Perform a regex find and replace in an asset."""
+    source_content = Path(asset_path).read_text(encoding="UTF-8")
+    modified_content = re.sub(pattern, replacement, source_content)
+    Path(asset_path).write_text(modified_content, encoding="UTF-8")
 
 
 def split_sequence(seq, *, sep="--"):
@@ -415,21 +427,42 @@ def autodocs(session):
     session.notify("_execute", posargs=([_autodocs], *session.posargs))
 
 
+def _patch_theme_css_language_switcher(build_dir):
+    """Patch the theme CSS to support styling the language switcher."""
+    theme_css_path = (
+        build_dir / STATIC_DIR_NAME / "styles" / "pydata-sphinx-theme.css"
+    )
+    print(f"Modifying {theme_css_path.as_posix()}")
+
+    modify_asset(
+        pattern=(
+            r"([\{\}\,])([^\{\}\,]*)"
+            r"version-switcher__(container|button|menu)"
+            r"([^\{\,]*)([\{\,])"
+        ),
+        replacement=r"\1\2version-switcher__\3\4,\2language-switcher__\3\4\5",
+        asset_path=theme_css_path,
+    )
+
+
 def _build_languages(session):
     """Build the docs in multiple languages."""
     languages, posargs = extract_option_values(
         session.posargs[1:], ("--lang", "--language"), split_csv=True
     )
     languages = languages or ALL_LANGUAGES
+    _patch_theme_css_language_switcher(HTML_BUILD_DIR)
 
     for language in languages:
         print(f"\nBuilding {language} translation...\n")
+        build_dir = HTML_BUILD_DIR / language
         sphinx_invocation = construct_sphinx_invocation(
             posargs=posargs,
-            build_dir=HTML_BUILD_DIR / language,
+            build_dir=build_dir,
             extra_options=["-D", f"language={language}"],
         )
         session.run(*sphinx_invocation)
+        _patch_theme_css_language_switcher(build_dir)
 
 
 @nox.session(name="build-languages")
