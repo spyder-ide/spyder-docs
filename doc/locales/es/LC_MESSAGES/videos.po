@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spyder-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 08:54-0600\n"
-"PO-Revision-Date: 2024-09-10 00:48\n"
+"POT-Creation-Date: 2024-09-06 20:38-0500\n"
+"PO-Revision-Date: 2024-11-13 22:01\n"
 "Last-Translator: \n"
 "Language: es\n"
 "Language-Team: Spanish\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 "X-Crowdin-Project: spyder-documentation\n"
 "X-Crowdin-Project-ID: 641502\n"
 "X-Crowdin-Language: es-ES\n"
@@ -48,6 +48,11 @@ msgstr ""
 
 #: ../../videos/first-steps-with-spyder.rst:19
 msgid "Explore the other default panes"
+msgstr ""
+
+#: ../../videos/first-steps-with-spyder.rst
+#: ../../videos/working-with-spyder.rst
+msgid "Transcript"
 msgstr ""
 
 #: ../../videos/first-steps-with-spyder.rst:33
@@ -203,7 +208,7 @@ msgid "Enjoy your customized version of Spyder, and Happy Spydering!"
 msgstr ""
 
 #: ../../videos/index.rst:3
-msgid "Intro Videos"
+msgid "Tutorials"
 msgstr ""
 
 #: ../../videos/working-with-spyder.rst:3
