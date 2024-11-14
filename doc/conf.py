@@ -54,7 +54,7 @@ extensions = [
 panels_add_bootstrap_css = False
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = []
+templates_path = ["_templates"]
 
 # The suffix of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -139,7 +139,7 @@ html_theme = "pydata_sphinx_theme"
 html_logo = "_static/images/spyder_logo.svg"
 html_theme_options = {
     "header_links_before_dropdown": 8,
-    "navbar_start": ["navbar-logo", "version-switcher"],
+    "navbar_start": ["navbar-logo", "version-switcher", "language-switcher"],
     "navigation_with_keys": False,
     "show_version_warning_banner": True,
     "switcher": {
@@ -190,6 +190,7 @@ html_css_files = [
 html_js_files = [
     "js/driver.min.js",
     "js/custom_scripts.js",
+    "js/language-switcher.js",
 ]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,

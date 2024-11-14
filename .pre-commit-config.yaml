@@ -112,6 +112,7 @@ repos:
     - 'eslint-plugin-n@17.10.3'
     - 'eslint-plugin-promise@7.1.0'
     - 'neostandard@0.11.6'
+    exclude: 'doc/_static/js/language-switcher.js'
 
 # Format JavaScript with Prettier
 - repo: https://github.com/rbubley/mirrors-prettier
@@ -120,6 +121,7 @@ repos:
   - id: prettier
     name: Format JavaScript (Prettier)
     types: [javascript]
+    exclude: 'doc/_static/js/language-switcher.js'
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
