@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spyder-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 08:54-0600\n"
-"PO-Revision-Date: 2024-09-11 23:09\n"
+"POT-Creation-Date: 2024-09-06 20:38-0500\n"
+"PO-Revision-Date: 2024-11-13 22:01\n"
 "Last-Translator: \n"
 "Language: es\n"
 "Language-Team: Spanish\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 "X-Crowdin-Project: spyder-documentation\n"
 "X-Crowdin-Project-ID: 641502\n"
 "X-Crowdin-Language: es-ES\n"
@@ -26,6 +26,10 @@ msgstr "Depurador (Debugger)"
 msgid "**Debugging** in Spyder is supported through integration with the enhanced ``ipdb`` debugger in the :doc:`ipythonconsole`. This allows breakpoints and the execution flow to be viewed and controlled right from the Spyder GUI, as well as with all the familiar IPython console commands."
 msgstr "La **depuración** en Spyder es compatible a través de la integración con el depurador mejorado de ``ipdb`` en la consola :doc:`ipythonconsole`. Esto permite que los puntos de interrupción y el flujo de ejecución sean vistos y controlados directamente desde el Spyder GUI, así como con todos los comandos conocidos de la consola IPython."
 
+#: ../../panes/debugging.rst:8
+msgid "A Spyder IPython console window, showing the ipdb debugger in action"
+msgstr ""
+
 #: ../../panes/debugging.rst:15
 msgid "Debugging with ipdb"
 msgstr "Depurando con ipdb"
@@ -34,9 +38,17 @@ msgstr "Depurando con ipdb"
 msgid "You can fully control debugger execution from the :guilabel:`Debug` menu, :guilabel:`Debug toolbar` and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands`_."
 msgstr "Puedes controlar completamente la ejecución del depurador desde el menú :guilabel:`Depurar` de la :guilabel:`Barra de herramientas de depuración` y a través de atajos de teclado configurables, junto con el estándar ``ipdb`` `comandos de consola`_."
 
+#: ../../panes/debugging.rst:19
+msgid "A Spyder IPython console window, showing debugging from toolbar"
+msgstr ""
+
 #: ../../panes/debugging.rst:22
 msgid "Additionally, the  :doc:`editor` shows the line of code the debugger is currently stopped on with an arrow."
 msgstr "Además, el :doc:`editor` muestra la línea de código en la que el depurador se detiene con una flecha."
+
+#: ../../panes/debugging.rst:26
+msgid "Spyder Editor showing the debugging panel"
+msgstr ""
 
 #: ../../panes/debugging.rst:29
 msgid "Spyder's debugger offers syntax highlighting, code completion and command history, which work exactly like they do in the normal interactive interpreter."
@@ -46,14 +58,26 @@ msgstr "El depurador de Spyder ofrece resaltado de sintaxis, terminación de có
 msgid "Use the up and down arrows to recall previous commands, and press :kbd:`Tab` to trigger autocomplete suggestions."
 msgstr "Usa las flechas arriba y abajo para recordar comandos anteriores, y pulsa :kbd:`Tab` para activar sugerencias de autocompletado."
 
+#: ../../panes/debugging.rst:33
+msgid "A Spyder IPython console window, showing autocompletion when debugging"
+msgstr ""
+
 #: ../../panes/debugging.rst:36
 #, python-format
 msgid "Furthermore, IPython's `magic functions`_ are available in debugging mode. You can, for example, run ``%ls`` to list the contents of your current working directory or ``%timeit`` to check how fast a given snippet of code is."
 msgstr "Además, las `funciones mágicas`_ de IPython están disponibles en modo de depuración. Puedes, por ejemplo, ejecutar ``%ls`` para listar los contenidos de tu directorio de trabajo actual o ``%timeit`` para comprobar cuán rápido es un fragmento de código dado."
 
+#: ../../panes/debugging.rst:41
+msgid "Ipython console in debug mode showing timeit magic"
+msgstr ""
+
 #: ../../panes/debugging.rst:44
 msgid "Finally, you can enter and execute multiline statements in Spyder's debugger just like with the regular IPython prompt, to easily run complex code."
 msgstr "Por último, puedes introducir y ejecutar sentencias multilíneas en el depurador de Spyder de la misma forma que con la petición IPython habitual, para ejecutar fácilmente código complejo."
+
+#: ../../panes/debugging.rst:46
+msgid "Debugger showing multiline debugger"
+msgstr ""
 
 #: ../../panes/debugging.rst:54
 msgid "Breakpoints"
@@ -62,6 +86,10 @@ msgstr "Puntos de interrupción"
 #: ../../panes/debugging.rst:56
 msgid "Spyder's debugger is integrated with the :guilabel:`Breakpoints` pane, which lists the file, line, and condition (if any) of every breakpoint defined. To open it, select :menuselection:`Debug --> List breakpoints`, or press :kbd:`Ctrl-Shift-B` (:kbd:`Cmd-Shift-B` on macOS)."
 msgstr "El depurador de Spyder está integrado con el panel de :guilabel:`Breakpoints`, el cual muestra el archivo, la línea y la condición (si existe) de cada punto de interrupción definido. Para abrirlo, selecciona :menuselection:`Depurar --> Listar puntos de interrupción`, o pulsa :kbd:`Ctrl-Shift-B` (:kbd:`Cmd-Shift-B` en macOS)."
+
+#: ../../panes/debugging.rst:59
+msgid "Spyder's Breakpoints panel, with a number of examples showing file, line number and an optional condition"
+msgstr ""
 
 #: ../../panes/debugging.rst:62
 msgid "There are several different ways to set and clear breakpoints:"
@@ -87,9 +115,17 @@ msgstr "Con la función incorporada ``breakpoint()`` en tu código."
 msgid "Interactively, using the ``b`` command in a debugging session."
 msgstr "Interactivamente, usando el comando ``b`` en una sesión de depuración."
 
+#: ../../panes/debugging.rst:70
+msgid "Spyder showing setting conditional breakpoint"
+msgstr ""
+
 #: ../../panes/debugging.rst:73
 msgid "You can access and edit local and global variables at each breakpoint through the :doc:`variableexplorer`."
 msgstr "Puedes acceder y editar variables locales y globales en cada punto de interrupción a través del :doc:`variableexplorer`."
+
+#: ../../panes/debugging.rst:75
+msgid "Spyder's console and variable explorer showing local and global variables when debugging"
+msgstr ""
 
 #: ../../panes/debugging.rst:82
 msgid "Advanced features"
@@ -99,13 +135,25 @@ msgstr "Funcionalidades avanzadas"
 msgid "You can avoid stepping through other Python packages while debugging by enabling the new :guilabel:`Ignore Python libraries while debugging` option in Spyder's preferences, under :menuselection:`IPython Console --> Debugger --> Debug`. This will skip all the built-in and third-party Python modules you have installed."
 msgstr "Puedes evitar pasar por otros paquetes de Python mientras depuras activando :guilabel:`Ignorar las librerías de Python mientras se depura` en las preferencias de Spyder, bajo :menuselection:`Terminal de IPython --> Depurador --> Depurar`. Esto omitirá todos los módulos Python integrados y de terceros que haya instalado."
 
+#: ../../panes/debugging.rst:87
+msgid "Spyder's preferences showing Ignore Python libraries while debugging options"
+msgstr ""
+
 #: ../../panes/debugging.rst:90
 msgid "If your code has variables with the same names as Pdb commands (e.g. ``b`` or ``step``), you can still refer to them as normal while debugging. To call the respective Pdb command, just add an exclamation point before it (e.g. ``!b`` or ``!step``)."
 msgstr "Si tu código tiene variables con los mismos nombres que los comandos Pdb (por ejemplo, ``b`` o ``step``), todavía puedes referirte a ellos como normales mientras depuras. Para llamar al comando Pdb correspondiente, simplemente agrega un punto de exclamación antes de él (por ejemplo, ``!b`` o ``!step``)."
 
+#: ../../panes/debugging.rst:93
+msgid "Spyder's IPython console showing Pdb commands"
+msgstr ""
+
 #: ../../panes/debugging.rst:96
 msgid "You can have Spyder automatically execute a custom snippet of code every time the debugger stops. For example, you can use this to set specific variables, or import commonly-used modules so they are always available while debugging. To set this up, go to :menuselection:`Preferences --> IPython Console --> Debugger --> Run code while debugging`, and enter the code that you want to be executed with each step."
 msgstr "Puedes hacer que Spyder ejecute automáticamente un fragmento de código personalizado cada vez que el depurador se detiene. Por ejemplo, puedes usar esto para establecer variables específicas, o importar módulos usados comúnmente para que estén siempre disponibles durante la depuración. Para configurar esto, vaya a :menuselection:`Preferencias --> Terminal de IPython --> Depurador --> Ejecutar código al depurar`, e introduce el código que deseas que se ejecute con cada paso."
+
+#: ../../panes/debugging.rst:100
+msgid "Spyder's preferenes with debugging snippet"
+msgstr ""
 
 #: ../../panes/debugging.rst:107
 msgid "Matplotlib support"
@@ -114,6 +162,10 @@ msgstr "Soporte Matplotlib"
 #: ../../panes/debugging.rst:109
 msgid "Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends. Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matplotlib qt5``) to pan, zoom and adjust your plots in a separate window, or switch back to the default ``inline`` (``%matplotlib inline``) to see them displayed right in the :doc:`plots` pane."
 msgstr "La generación de figuras de Matplotlib está totalmente soportada mientras el depurador está activo, incluyendo todos los diferentes backends gráficos. Utilice la magia ``%matplotlib`` para cambiar a un backend interactivo (por ejemplo, ``%matplotlib qt5``) para anclar, acercar y ajustar tus gráficas en una ventana separada, o vuelve al ``inline`` predeterminado (``%matplotlib inline``) para verlos mostrados directamente en el panel :doc:`plots`."
+
+#: ../../panes/debugging.rst:112
+msgid "Debugger showing matplotlib interactive backend"
+msgstr ""
 
 #: ../../panes/debugging.rst:116
 msgid "To avoid showing plots while debugging, deactivate the :guilabel:`Process execute events while debugging` option in :menuselection:`Preferences --> IPython console --> Debugger`."
@@ -156,6 +208,10 @@ msgstr "Editor"
 msgid "Spyder's multi-language **Editor** pane is the key element of the IDE, where you can create, open, and modify source files. The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more. In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience."
 msgstr "El panel del **Editor** de varios lenguajes de Spyder es el elemento clave del IDE, donde puedes crear, abrir y modificar los archivos de origen. El editor ofrece una variedad de características básicas, tales como autocompletado, análisis en tiempo real, resaltado de sintaxis, división horizontal y vertical, y mucho más. Además, integra una serie de poderosas herramientas para una experiencia de edición fácil y eficiente."
 
+#: ../../panes/editor.rst:9
+msgid "Spyder's Editor pane, split horizontally and with style analysis"
+msgstr ""
+
 #: ../../panes/editor.rst:16
 msgid "Key components"
 msgstr "Componentes clave"
@@ -163,6 +219,10 @@ msgstr "Componentes clave"
 #: ../../panes/editor.rst:18
 msgid "The Editor pane consists of the following areas:"
 msgstr "El panel del Editor consta de las siguientes áreas:"
+
+#: ../../panes/editor.rst:20
+msgid "Spyder's Editor pane, showing its different areas (described below)"
+msgstr ""
 
 #: ../../panes/editor.rst:23
 msgid "The left sidebar shows line numbers and displays any code analysis warnings that exist in the current file. Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <debugging-breakpoints>`."
@@ -200,9 +260,17 @@ msgstr "Pestañas"
 msgid "You can browse and navigate between open files in the Editor with tabs. Click the :guilabel:`Browse tabs` button on the left of the tab bar to display a list of open files, with the active tab checked."
 msgstr "Puedes explorar y navegar entre archivos abiertos en el Editor con pestañas. Haz clic en el botón :guilabel:`Navegar por las pestañas` a la izquierda de la barra de pestañas para mostrar una lista de archivos abiertos, con la pestaña activa seleccionada."
 
+#: ../../panes/editor.rst:44
+msgid "Spyder's Editor pane, showing the tabs browser"
+msgstr ""
+
 #: ../../panes/editor.rst:47
 msgid "Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one."
 msgstr "Reordenar archivos arrastrando y soltando, o con :guilabel:`Ordenar las pestañas alfabéticamente` en el menú de opciones, que también permite cerrar todas las pestañas a la derecha de, o todas las pestañas excepto la activa."
+
+#: ../../panes/editor.rst:49
+msgid "Spyder's Editor pane, showing how to browse and sort open tabs alphabetically"
+msgstr ""
 
 #: ../../panes/editor.rst:54
 msgid "File switcher"
@@ -212,9 +280,17 @@ msgstr "Cambiador de archivos"
 msgid "The Editor features a file switcher, which enables you to navigate and switch between multiple open files. The file switcher is helpful for locating any file when there are several files opened."
 msgstr "El Editor incluye un cambiador de archivos, que te permite navegar y cambiar entre varios archivos abiertos. El cambiador de archivos es útil para localizar cualquier archivo cuando hay varios archivos abiertos."
 
+#: ../../panes/editor.rst:59
+msgid "Spyder's Editor pane, showing the file switcher"
+msgstr ""
+
 #: ../../panes/editor.rst:62
 msgid "It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P`, and includes a search function. You can type in any part of an open file's name and—if exists—it can be switched to by pressing :kbd:`Enter`."
 msgstr "Se puede acceder desde el menú :menuselection:`Archivo --> Cambiador de archivos` o :kbd:`Ctrl-P`, e incluye una función de búsqueda. Puedes escribir cualquier parte del nombre de un archivo abierto y, si existe, puede ser cambiado pulsando :kbd:`Enter`."
+
+#: ../../panes/editor.rst:65
+msgid "Spyder's Editor pane, showing searching and switching to an existing file"
+msgstr ""
 
 #: ../../panes/editor.rst:70
 msgid "Split panels"
@@ -223,6 +299,10 @@ msgstr "Dividir paneles"
 #: ../../panes/editor.rst:72
 msgid "The Editor can be split horizontally and vertically into as many distinct panels as desired. This allows viewing and editing the contents of several files (or different parts of the same file) at the same time."
 msgstr "El Editor puede dividirse horizontal y verticalmente en tantos paneles distintos como se desee. Esto permite visualizar y editar el contenido de varios archivos (o partes diferentes del mismo archivo) al mismo tiempo."
+
+#: ../../panes/editor.rst:75
+msgid "Spyder's Editor pane, showing how to split panels"
+msgstr ""
 
 #: ../../panes/editor.rst:78
 msgid "Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and :guilabel:`Split horizontally` (:kbd:`Ctrl-Shift--`) commands in the options menu, and use :guilabel:`Close this panel` (:kbd:`Alt-Shift-W`) to close the selected split panel."
@@ -248,6 +328,10 @@ msgstr "Para mejorar la legibilidad de tu código, Spyder tiene una función de 
 msgid "You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`. The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences. You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more. The :guilabel:`Fonts` section lets you change the text font and size."
 msgstr "Puedes configurar y previsualizar los temas y fuentes de resaltado de sintaxis bajo :menuselection:`Preferencias --> Apariencia`. La sección :guilabel:`Tema de coloreado de sintaxis` te permite cambiar el color y el estilo de los elementos de sintaxis y el fondo para que coincida con tus preferencias. Puedes cambiar entre los temas disponibles en el menú desplegable, modificar el tema seleccionado, crear un nuevo tema y más. La sección :guilabel:`Tipo de letra` te permite cambiar el tamaño y la fuente de texto."
 
+#: ../../panes/editor.rst:98
+msgid "Spyder's Editor pane, showing how to switch between syntax highlighting themes"
+msgstr ""
+
 #: ../../panes/editor.rst:101
 msgid "Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language."
 msgstr "Los cambios realizados al tema de resaltado de sintaxis y a la configuración de fuentes son comunes a todos los archivos de fuente, independientemente de su idioma."
@@ -259,6 +343,10 @@ msgstr "Celdas de código"
 #: ../../panes/editor.rst:107
 msgid "A \"code cell\" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`. This is similar to \"cell\" behavior in Jupyter Notebook and MATLAB. You can divide your scripts into as many cells as needed, or none at all—the choice is yours."
 msgstr "Una \"celda de código\" en Spyder es un bloque de líneas, normalmente un script, que puede ser fácilmente ejecutado todo a la vez en el :doc:`ipythonconsole`. Esto es similar al comportamiento de \"celda\" en Jupyter Notebook y MATLAB. Puedes dividir tus scripts en tantas celdas como necesites o ninguna en absoluto, la elección es tuya."
+
+#: ../../panes/editor.rst:111
+msgid "Spyder's Editor pane, showing an example of a code cell"
+msgstr ""
 
 #: ../../panes/editor.rst:114
 msgid "You can separate cells by lines starting with either:"
@@ -278,6 +366,10 @@ msgstr "``# <codecell>`` (separador de celdas de notebook IPython)"
 msgid "Providing a description to the right of the separator will give that cell its own name in the :doc:`outline`. You can also create \"subsections\" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc. This displays multiple levels in the :doc:`outline` pane."
 msgstr "Proporcionar una descripción a la derecha del separador dará a esa celda su propio nombre en el :doc:`outline`. También puedes crear \"subsecciones\" añadiendo más signos de ``%`` al separador de celda, por ejemplo ``# %%%`` para crear una subsección de nivel 2, ``# %%%%`` para el nivel 3, etc. Esto muestra varios niveles en el panel :doc:`outline`."
 
+#: ../../panes/editor.rst:123
+msgid "Spyder outline pane, showing an example of sub sections"
+msgstr ""
+
 #: ../../panes/editor.rst:126
 msgid "This only affects how the cell is displayed in the :doc:`outline`, and doesn't affect running it in the Editor."
 msgstr "Esto solo afecta a cómo se muestra la celda en el :doc:`outline`, y no afecta a ejecutarla en el Editor."
@@ -294,9 +386,17 @@ msgstr "Formato automático"
 msgid "The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_ and `Black <https://black.readthedocs.io/en/stable/>`_. The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file."
 msgstr "El editor tiene soporte integrado para formatear automáticamente tu código usando varias herramientas populares, incluyendo `Autopep8 <https://github.com/hhatto/autopep8>`_ y `Black <https://black.readthedocs.io/en/stable/>`_. El comando :guilabel:`Formatear archivo o selección con {tool}`, en el :guilabel:`Source` o en el menú contextual, formatearán el fragmento seleccionado (si se selecciona el texto) o todo el archivo activo."
 
+#: ../../panes/editor.rst:138
+msgid "Spyder Editor pane, showing an example of code selection formatting"
+msgstr ""
+
 #: ../../panes/editor.rst:141
 msgid "You can have the Editor automatically autoformat a file every time you save your work. To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code style and formatting --> Code formatting` and check the :guilabel:`Autoformat files on save` option."
 msgstr "Puedes tener el Editor automáticamente para autoformatear un archivo cada vez que guardes tu trabajo. Para configurarlo, ve a :menuselection:`Preferencias --> Completado y análisis del código --> Estilo y formato de código --> Formato de código` y activa la opción :guilabel:`Autoformatear archivos al guardar`."
+
+#: ../../panes/editor.rst:144
+msgid "Spyder's preferences dialog, showing checking the autoformat files on save setting"
+msgstr ""
 
 #: ../../panes/editor.rst:151
 msgid "Running code"
@@ -354,6 +454,10 @@ msgstr "Configuración de ejecución"
 msgid "You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more."
 msgstr "Puedes utilizar el cuadro de diálogo :guilabel:`Configuración de ejecución por archivo` para establecer el directorio de trabajo de cada archivo, el modo de consola (actual, dedicada o terminal de comandos del sistema), argumentos de línea de comandos, opciones de ejecución (borrar todas las variables, ejecutar en un espacio de nombres existente/vacío, depurar en un error) y más."
 
+#: ../../panes/editor.rst:189
+msgid "Spyder's Editor pane, showing the Run Configuration dialog"
+msgstr ""
+
 #: ../../panes/editor.rst:192
 msgid "To access it, click :menuselection:`Run --> Configuration per file...` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`."
 msgstr "Para acceder a él, haz clic en :menuselection:`Ejecutar --> Configuración por archivo...` o pulsa :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`."
@@ -370,6 +474,10 @@ msgstr "Buscar y reemplazar"
 msgid "To search for text in the current file, use :menuselection:`Search --> Find text` or :kbd:`Ctrl-F` / :kbd:`Cmd-F`, and to replace it, use :menuselection:`Search --> Replace text` or :kbd:`Ctrl-R` / :kbd:`Cmd-R`. Typing your search string in the resulting panel below the Editor highlights each result and counts the total. Navigate between matches with the :guilabel:`Find Previous` and :guilabel:`Find Next` buttons in the find/replace panel, their corresponding entries in the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys. Use the :guilabel:`.*` button to process search text as a `regular expression <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` to treat it as case-sensitive and :guilabel:`[–]` to only match whole words (e.g. for ``data``, match ``data()`` but not ``dataframe``)."
 msgstr "Para buscar texto en el archivo actual, usa :menuselection:`Buscar --> Buscar texto` o :kbd:`Ctrl-F` / :kbd:`Cmd-F`, y para reemplazarlo, usa :menuselection:`Buscar --> Reemplazar texto` o :kbd:`Ctrl-R` / :kbd:`Cmd-R`. Escribiendo la cadena de búsqueda en el panel resultante debajo del Editor resalta cada resultado y cuenta el total. Navega entre los resultados con los botones :guilabel:`Buscar anterior` y :guilabel:`Buscar siguiente` en el panel de buscar/reemplazar, sus correspondientes entradas en el menú :guilabel:`Buscar`, o utiliza las teclas :kbd:`F2` y :kbd:`F3`. Usa :guilabel:`. *` para procesar texto de búsqueda como una `expresión regular <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` para tratarlo como sensible a mayúsculas y :guilabel:`[–]` para que solo coincida con palabras enteras (por ejemplo, para ``data``, coincide con ``data()`` pero no con ``dataframe``)."
 
+#: ../../panes/editor.rst:208
+msgid "Spyder's Editor pane, showing the find and replace panel"
+msgstr ""
+
 #: ../../panes/editor.rst:213
 msgid "Go to line"
 msgstr "Ir a la línea"
@@ -377,6 +485,10 @@ msgstr "Ir a la línea"
 #: ../../panes/editor.rst:215
 msgid "The :guilabel:`Go to line` dialog allows jumping to a specific line in the active file. Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd-L`, type the line number you want to scroll to and press :kbd:`Enter` (or click :guilabel:`OK`)."
 msgstr "El diálogo :guilabel:`Ir a la línea` permite saltar a una línea específica en el archivo activo. Abrelo con :menuselection:`Buscar --> Ir a la línea` o :kbd:`Ctrl-L` / :kbd:`Cmd-L`, escribe el número de línea al que quieres desplazarte y pulsa :kbd:`Enter` (o haz clic en :guilabel:`OK`)."
+
+#: ../../panes/editor.rst:218
+msgid "Spyder's Editor pane, showing the go to line feature"
+msgstr ""
 
 #: ../../panes/editor.rst:221
 msgid "It also shows the current line number and total line count in the file."
@@ -389,6 +501,10 @@ msgstr "Selector de clase/función"
 #: ../../panes/editor.rst:227
 msgid "This panel, activated under :menuselection:`Source --> Show selector for classes and functions`, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside. Use its dropdowns to view and jump to the functions, methods and classes in the current file."
 msgstr "Este panel, activado bajo :menuselection:`Código fuente--> Mostrar selector para clases y funciones`, muestra (como aplicable) el nombre de la celda, la función/método y la clase en la que el cursor del Editor se encuentra dentro. Utiliza el menú desplegable para ver y saltar a las funciones, métodos y clases del archivo actual."
+
+#: ../../panes/editor.rst:230
+msgid "Spyder's Editor pane, showing the class and function selector panel"
+msgstr ""
 
 #: ../../panes/editor.rst:237
 msgid "Code analysis and completions"
@@ -414,6 +530,10 @@ msgstr "Completado de código"
 msgid "Automatic code completion as you type is enabled by default in the Editor, and can also be triggered manually with :kbd:`Ctrl-Space`/:kbd:`Cmd-Space`, showing you possible completions (with pop-up help for each) and available code snippets. For example, typing ``cla`` will display the keyword ``class``, the decorator ``classmethod`` and two built-in snippets with class templates. Select the desired completion with the arrow keys and :kbd:`Enter`, or by double clicking."
 msgstr "El completado automático de código está activado de forma predeterminada en el Editor mientras escribes, pero también puede ser activado manualmente con :kbd:`Ctrl-Space`/:kbd:`Cmd-Space`, el cual muestra las posibles formas de completar (con una ayuda emergente para cada una) y los fragmentos de código disponibles. Por ejemplo, escribir ``cla`` mostrará la palabra clave ``class``, el decorador ``classmethod`` y dos fragmentos incorporados con plantillas de clases. Selecciona la terminación deseada con las teclas de flecha y :kbd:`Enter`, o haciendo doble clic."
 
+#: ../../panes/editor.rst:256
+msgid "Spyder's Editor pane, showing a code completion example"
+msgstr ""
+
 #: ../../panes/editor.rst:259
 msgid "You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`. Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`."
 msgstr "Puedes activar o desactivar el completado de código sobre la marcha, así como modificar cuando se activa y qué resultados se muestran, bajo :menuselection:`Preferencias --> Completado y análisis del código --> General --> Completado`. Spyder también te permite definir fragmentos de completado personalizados a utilizar, además de los ofrecidos por el LSP, bajo :menuselection:`Preferencias --> Completado y análisis del código --> Opciones avanzadas`."
@@ -426,13 +546,25 @@ msgstr "Linting y estilo de código"
 msgid "Spyder can optionally highlight syntax errors, style issues, and other potential problems with your code in the Editor, which can help you spot bugs quickly and make your code easier to read and understand."
 msgstr "Spyder puede resaltar opcionalmente errores de sintaxis, problemas de estilo y otros problemas potenciales con tu código en el Editor, lo que puede ayudarte a detectar errores rápidamente y hacer que tu código sea más fácil de leer y entender."
 
+#: ../../panes/editor.rst:268
+msgid "Spyder's Editor pane, showing an example of a highlighted code error"
+msgstr ""
+
 #: ../../panes/editor.rst:271
 msgid "The Editor's basic linting, powered by `Pyflakes <https://github.com/PyCQA/pyflakes>`_, warns of syntax errors and likely bugs in your code. It is on by default, and can be disabled or customized under :menuselection:`Preferences --> Completion and Linting --> Linting`."
 msgstr "El linting básico del Editor, desarrollado por `Pyflakes <https://github.com/PyCQA/pyflakes>`_, advierte los errores de sintaxis y posibles errores en tu código. Está activado por defecto, y puede ser deshabilitado o personalizado bajo :menuselection:`Preferencias --> Completado y análisis de código --> Análisis de código`."
 
+#: ../../panes/editor.rst:274
+msgid "Spyder's preferences dialog, showing linting settings"
+msgstr ""
+
 #: ../../panes/editor.rst:277
 msgid "Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/stable/>`_, flags deviations from the style conventions in :pep:`8`. It is not active by default, but you can enable it and customize the `Pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`."
 msgstr "El análisis de estilo de código, desarrollado por `Pycodestyle <https://pycodestyle.pycqa.org/en/stable/>`_, señala las desviaciones de las convenciones de estilo en :pep:`8`. No está activo por defecto, pero puedes activarlo y personalizar los `códigos de error Pycodestyle <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ mostrados con las opciones :menuselection:`Preferencias --> Completado y análisis de código --> Estilo y formato de código --> Estilo del código`."
+
+#: ../../panes/editor.rst:280
+msgid "Spyder's preferences dialog, showing code style and formatting settings"
+msgstr ""
 
 #: ../../panes/editor.rst:285
 msgid "Introspection features"
@@ -442,9 +574,17 @@ msgstr "Características de introspección"
 msgid "If there's a function, class or variable for which you would like to check its definition, you need to :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is declared."
 msgstr "Si hay una función, clase o variable para la que desea comprobar su definición, necesitas hacer :kbd:`Ctrl`/:kbd:`Cmd`-clic en su nombre en el Editor (o haz clic en su nombre y pulsa :kbd:`Ctrl-G` / :kbd:`Cmd-G` para saltar al archivo y línea donde se declara."
 
+#: ../../panes/editor.rst:289
+msgid "Spyder's Editor pane, showing the go to definition feature"
+msgstr ""
+
 #: ../../panes/editor.rst:292
 msgid "You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`."
 msgstr "Puedes pasar por encima del nombre de un objeto para ayuda emergente, como se describió :ref:`en la documentación del panel de ayuda <help-hover-hints>`."
+
+#: ../../panes/editor.rst:294
+msgid "Spyder's Editor pane, showing an example of a hover hint"
+msgstr ""
 
 #: ../../panes/editor.rst:297
 msgid "Finally, if you type the name of a function, method or class constructor and then an open parenthesis, a calltip will pop up which shows the function's parameters as you type them, as well as a summary of its documentation. These features can be enabled and customized under :menuselection:`Preferences --> Completion and Linting --> Introspection`."
@@ -484,6 +624,10 @@ msgstr "Archivos"
 msgid "The **Files** pane is a filesystem and directory browser built right into Spyder. You can view and filter files according to their type and extension, open them with the :doc:`editor` or an external tool, and perform many common operations."
 msgstr "El panel **Archivos** es un navegador de archivos y directorios construido directamente en Spyder. Puedes ver y filtrar archivos de acuerdo a su tipo y extensión, abrirlos con el :doc:`editor` o con una herramienta externa, y realizar muchas operaciones comunes."
 
+#: ../../panes/fileexplorer.rst:8
+msgid "Spyder Files pane, showing a tree view of files and metadata"
+msgstr ""
+
 #: ../../panes/fileexplorer.rst:17
 msgid "File operations"
 msgstr "Operaciones de archivo"
@@ -492,13 +636,25 @@ msgstr "Operaciones de archivo"
 msgid "To browse the files on your system, use the arrows at the top of the pane. You can expand/collapse the folders in the pane to display the files and subdirectories hierarchically. Double-clicking a folder will open it, showing the files inside and making it your working directory."
 msgstr "Para navegar por los archivos de tu sistema, usa las flechas en la parte superior del panel. Puedes expandir/contraer las carpetas en el panel para mostrar los archivos y subdirectorios jerárquicamente. Al hacer doble clic en una carpeta se abrirá, mostrando los archivos dentro y haciéndolos tu directorio de trabajo."
 
+#: ../../panes/fileexplorer.rst:23
+msgid "Spyder Files pane showing browsing directories"
+msgstr ""
+
 #: ../../panes/fileexplorer.rst:26
 msgid "To open a file in the :guilabel:`Editor` from the :guilabel:`Files` pane, double-click its name. If you right-click over it, you will see a context menu that allows you to access a number of functions, including running scripts; creating, renaming, moving, deleting files; and opening them in your computer's file manager."
 msgstr "Para abrir un archivo en el :guilabel:`Editor` desde el panel :guilabel:`Archivos`, haz doble clic en su nombre. Si haces clic con el botón derecho sobre él, verás un menú contextual que te permite acceder a una serie de funciones, incluyendo ejecutar scripts; crear, renombrar, mover, eliminar archivos; y abrirlos en el gestor de archivos de su computadora."
 
+#: ../../panes/fileexplorer.rst:29
+msgid "Spyder Files pane showing context menu"
+msgstr ""
+
 #: ../../panes/fileexplorer.rst:32
 msgid "You can copy and paste one or several files to and from the pane, and copy their absolute or relative paths to the clipboard as text. If copying the paths for multiple files, they will be automatically formatted so you can paste them directly into a Python list."
 msgstr "Puedes copiar y pegar uno o varios archivos desde y hacia el panel, y copiar sus rutas absolutas o relativas al portapapeles como texto. Si se copian las rutas para múltiples archivos, se formatearán automáticamente para que se puedan pegar directamente en una lista de Python."
+
+#: ../../panes/fileexplorer.rst:35
+msgid "Spyder Files pane showing copying absolute path to Editor"
+msgstr ""
 
 #: ../../panes/fileexplorer.rst:44
 msgid "Version control support"
@@ -507,6 +663,10 @@ msgstr "Soporte de control de versiones"
 #: ../../panes/fileexplorer.rst:46
 msgid "The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like committing your changes and browsing the repository a given file or folder is part of. This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :doc:`projects`."
 msgstr "El panel :guilabel:`Archivos` te permite realizar operaciones básicas con el sistema de control de versiones distribuidas `Git`_ como hacer \"commit\" a los cambios y navegar por el repositorio del que forma parte un archivo o carpeta determinado. Esto es :ref:`particularmente útil<vcs-section>` cuando estás trabajando en Spyder :doc:`projects`."
+
+#: ../../panes/fileexplorer.rst:51
+msgid "Spyder Files pane showing committing change of file"
+msgstr ""
 
 #: ../../panes/fileexplorer.rst:58 ../../panes/ipythonconsole.rst:65
 #: ../../panes/outline.rst:16 ../../panes/plots.rst:20
@@ -522,6 +682,10 @@ msgstr "El menú de opciones en la parte superior derecha del panel :guilabel:`A
 msgid "By default, the pane displays the contents of your working directory without filtering. However, it can filter the list to show only files matching the patterns set under :guilabel:`Show filenames with these extensions...`, if you toggle the :guilabel:`Filter filenames` button in the pane toolbar."
 msgstr "Por defecto, el panel muestra el contenido de su directorio de trabajo sin filtrar. Sin embargo, puedes filtrar la lista para mostrar sólo archivos que coincidan con los patrones establecidos bajo :guilabel:`Mostrar nombres de archivo con estas extensiones...`, si activa el botón :guilabel:`Filtrar nombre de archivo` en la barra de herramientas del panel."
 
+#: ../../panes/fileexplorer.rst:65
+msgid "Spyder Files pane showing filtering files"
+msgstr ""
+
 #: ../../panes/fileexplorer.rst:68
 msgid "You can also activate the :guilabel:`Show hidden files` option, which will display files that are invisible by default in your operating system."
 msgstr "También puedes activar la opción :guilabel:`Mostrar archivos ocultos`, que mostrará archivos que son invisibles por defecto en su sistema operativo."
@@ -529,6 +693,10 @@ msgstr "También puedes activar la opción :guilabel:`Mostrar archivos ocultos`,
 #: ../../panes/fileexplorer.rst:70
 msgid "Additionally, you can change which file attributes you want to see by hiding or displaying the :guilabel:`Type`, :guilabel:`Size` and :guilabel:`Date Modified` columns using the corresponding menu options."
 msgstr "Además, puedes cambiar qué atributos de archivo deseas ver ocultando o mostrando las columnas :guilabel:`Tipo`, :guilabel:`Tamaño` y :guilabel:`Fecha de modificación` usando las opciones de menú correspondientes."
+
+#: ../../panes/fileexplorer.rst:72
+msgid "Spyder Files pane showing columns checked and shown"
+msgstr ""
 
 #: ../../panes/fileexplorer.rst:75
 msgid "The menu also gives you the option to open files and directories with a single instead of a double click, to suit your preferences."
@@ -542,9 +710,17 @@ msgstr "Asociaciones de archivos"
 msgid ":guilabel:`Files` allows you to associate different external applications with specific file extensions they can open. Under the :guilabel:`File associations` tab of the :guilabel:`Files` preferences pane, you can add file types and set the external program used to open each of them by default."
 msgstr ":guilabel:`Archivos` te permite asociar diferentes aplicaciones externas con extensiones específicas de archivo que pueden abrir. Bajo la pestaña :guilabel:`Asociaciones de archivos` del panel de preferencias :guilabel:`Archivos`, puedes añadir tipos de archivo y establecer el programa externo usado para abrir cada uno de ellos por defecto."
 
+#: ../../panes/fileexplorer.rst:86
+msgid "Spyder Files pane showing files associations"
+msgstr ""
+
 #: ../../panes/fileexplorer.rst:89
 msgid "Once you've set this up, files will automatically launch in the associated application when opened from Spyder's :guilabel:`Files` pane. Additionally, when you right-click a file, you will find an :guilabel:`Open with...` option that will allow you to select from the applications associated with this extension."
 msgstr "Una vez que lo hayas configurado, los archivos se ejecutarán automáticamente en la aplicación asociada cuando se abran desde el panel :guilabel:`Archivos` de Spyder. Además, cuando haces clic derecho en un archivo, encontrarás un :guilabel:`Abrir con...` que te permitirá seleccionar entre las aplicaciones asociadas a esta extensión."
+
+#: ../../panes/fileexplorer.rst:92
+msgid "Spyder Files pane showing opening file with associated program"
+msgstr ""
 
 #: ../../panes/findinfiles.rst:3
 msgid "Find"
@@ -554,6 +730,10 @@ msgstr "Buscar"
 msgid "The **Find** pane allows you to search the content of text files in a user-defined location, with advanced features to filter your results."
 msgstr "El panel **Buscar** te permite buscar el contenido de los archivos de texto en una ubicación definida por el usuario, con características avanzadas para filtrar tus resultados."
 
+#: ../../panes/findinfiles.rst:7
+msgid "Spyder Find in Files panel, with search results shown per-file"
+msgstr ""
+
 #: ../../panes/findinfiles.rst:14
 msgid "Using the Find pane"
 msgstr "Usar el panel Buscar"
@@ -562,9 +742,17 @@ msgstr "Usar el panel Buscar"
 msgid "To search for text in the Find pane, enter it in the field in the top left and press the search button. This will allow you to view and navigate through all the occurrences of your search text in your working directory. You can expand or collapse the search results to view the matches in each file. Clicking on a match will automatically open the file and highlight the line where the text was found."
 msgstr "Para buscar texto en el panel Buscar, ingrésalo en el campo de la parte superior izquierda y pulsa el botón de búsqueda. Esto te permitirá ver y navegar a través de todas las ocurrencias de tu texto de búsqueda en el directorio de trabajo. Puedes expandir o contraer los resultados de la búsqueda para ver los resultados en cada archivo. Al hacer clic en una coincidencia se abrirá automáticamente el archivo y se resaltará la línea donde se encontró el texto."
 
+#: ../../panes/findinfiles.rst:21
+msgid "Spyder Find pane showing search and going to a file"
+msgstr ""
+
 #: ../../panes/findinfiles.rst:24
 msgid "If you want to change the scope of your search, select another directory, project or file in the :guilabel:`Search in` menu. The locations that you select for your search will be stored in the list so you can access them easily in the future. To erase all of these saved directories, select the :guilabel:`Clear the list` option from the dropdown menu in the :guilabel:`Search in` field."
 msgstr "Si quieres cambiar el alcance de tu búsqueda, selecciona otro directorio, proyecto o archivo en el menú :guilabel:`Buscar` . Las ubicaciones que selecciones para tu búsqueda se almacenarán en la lista para poder acceder fácilmente a ellas en el futuro. Para borrar todos estos directorios guardados selecciona la opción :guilabel:`Limpiar la lista` en el menú desplegable en el campo :guilabel:`Buscar en`."
+
+#: ../../panes/findinfiles.rst:28
+msgid "Spyder Find pane showing choosing new directory and directory stored in the list"
+msgstr ""
 
 #: ../../panes/findinfiles.rst:35
 msgid "Choosing search options"
@@ -578,17 +766,33 @@ msgstr "Puedes seleccionar entre una serie de opciones para permitir búsquedas 
 msgid "To enable case sensitivity, which only returns matches with identical capitalization to your search text, toggle the :guilabel:`Aa` button on."
 msgstr "Para habilitar la sensibilidad a mayúsculas, que solo devuelve coincidencias con una mayúscula idéntica al texto de búsqueda, activa el botón :guilabel:`Aa`."
 
+#: ../../panes/findinfiles.rst:41
+msgid "Spyder Find pane showing search with case sensitive activated"
+msgstr ""
+
 #: ../../panes/findinfiles.rst:44
 msgid "To parse your search string as a `regular expression`_, enable the :guilabel:`.*` button."
 msgstr "Para analizar tu cadena de búsqueda como una `expresión regular`_, activa el botón :guilabel:`.*`."
+
+#: ../../panes/findinfiles.rst:48
+msgid "Spyder Find pane showing regular expression search"
+msgstr ""
 
 #: ../../panes/findinfiles.rst:51
 msgid "To exclude certain filenames, extensions or directories from your search, click the :guilabel:`Plus` button to display the advanced options for the pane, and then enter them in the :guilabel:`Exclude` text box."
 msgstr "Para excluir ciertos nombres de archivos, extensiones o directorios de su búsqueda, haz clic en el botón :guilabel:`Plus` para mostrar las opciones avanzadas para el panel, y luego introdúcelas en el cuadro de texto :guilabel:`Exclude`."
 
+#: ../../panes/findinfiles.rst:53
+msgid "Spyder Find pane showing search excluding several file-types"
+msgstr ""
+
 #: ../../panes/findinfiles.rst:56
 msgid "Finally, to change the number of matches displayed, select the :guilabel:`Set maximum number of results` option under the pane's Options menu in the top right."
 msgstr "Finalmente, para cambiar el número de coincidencias mostradas, selecciona la opción :guilabel:`Establecer número máximo de resultados` en el menú Opciones del panel en la parte superior derecha."
+
+#: ../../panes/findinfiles.rst:58
+msgid "Spyder Find pane showing window with maximum results dialog open"
+msgstr ""
 
 #: ../../panes/help.rst:3
 msgid "Help"
@@ -598,9 +802,17 @@ msgstr "Ayuda"
 msgid "You can use the **Help** pane to find, render and display rich documentation for any object with a docstring, including modules, classes, functions and methods. This allows you to access documentation easily directly from Spyder, without having to interrupt your workflow."
 msgstr "Puedes usar el panel de **Ayuda** para encontrar, renderizar y mostrar la documentación enriquecida para cualquier objeto con una cadena de documentación, incluyendo módulos, clases, funciones y métodos. Esto te permite acceder fácilmente a la documentación directamente desde Spyder, sin tener que interrumpir tu flujo de trabajo."
 
+#: ../../panes/help.rst:8
+msgid "Spyder main window showing getting help for numpy arrays from editor"
+msgstr ""
+
 #: ../../panes/help.rst:11
 msgid "You can also access Spyder's tutorial from here, which will guide you through some basic steps for using its key features."
 msgstr "También puedes acceder al tutorial de Spyder desde aquí, que te guiará a través de algunos pasos básicos para usar sus características clave."
+
+#: ../../panes/help.rst:13
+msgid "Spyder Help pane showing the link for the Spyder's tutorial"
+msgstr ""
 
 #: ../../panes/help.rst:21
 msgid "Getting help"
@@ -610,13 +822,25 @@ msgstr "Obtener ayuda"
 msgid "Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`. You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default)."
 msgstr "La ayuda se puede recuperar tanto mediante el análisis estático de los archivos abiertos en el :doc:`editor`, o inspeccionando dinámicamente un objeto en una :doc:`ipythonconsole`. Puedes activar la ayuda manualmente pulsando el atajo de ayuda configurable (:kbd:`Ctrl-I` por defecto)."
 
+#: ../../panes/help.rst:26
+msgid "Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former."
+msgstr ""
+
 #: ../../panes/help.rst:29
 msgid "You can also manually enter the object's name into the :guilabel:`Object` textbox at the top of the pane, if :guilabel:`Console` is selected as the :guilabel:`Source`."
 msgstr "También puedes introducir manualmente el nombre del objeto en el cuadro de texto :guilabel:`Objeto` en la parte superior del panel, si :guilabel:`Terminal` es seleccionado como el :guilabel:`Origen`."
 
+#: ../../panes/help.rst:31
+msgid "Spyder Help pane, displaying documentation for an object whose name was written in the object text box"
+msgstr ""
+
 #: ../../panes/help.rst:34
 msgid "Automatic help can be individually enabled for both the :guilabel:`Editor` and the :guilabel:`Console` under :menuselection:`Preferences --> Help --> Automatic Connections`, and turned on and off dynamically via the lock icon in the top right corner of the :guilabel:`Help` pane. If enabled, simply typing a left parenthesis (``(``) after a function or method name will show its associated help."
 msgstr "La ayuda automática puede ser habilitada individualmente tanto para el :guilabel:`Editor` como para la :guilabel:`Terminal` bajo :menuselection:`Preferencias --> Ayuda --> Conexiones automáticas`, y se activa y desactiva dinámicamente mediante el icono de bloqueo en la esquina superior derecha del panel :guilabel:`Ayuda`. Si está habilitado, simplemente tecleando un paréntesis izquierdo (``(``) después de una función o nombre del método te mostrará su ayuda asociada."
+
+#: ../../panes/help.rst:37
+msgid "Spyder console and help pane showing automatic help with parenthesis"
+msgstr ""
 
 #: ../../panes/help.rst:44
 msgid "Understanding help modes"
@@ -630,6 +854,10 @@ msgstr "Puedes usar el menú de opciones ( icono :guilabel:`Hamburguesa`) en la 
 msgid ":guilabel:`Rich Text` mode renders the object's docstrings with ``Sphinx``, :guilabel:`Plain Text` mode displays the docstring without formatting while :guilabel:`Show Source` displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python). The latter can be useful when docstrings are not available or insufficient to document the object."
 msgstr "El modo :guilabel:`Texto enriquecido` renderiza las cadenas de documentación del objeto con ``Sphinx``, El modo :guilabel:`Texto plano` muestra la docstring sin formatear, mientras que :guilabel:`Mostrar código fuente` muestra la docstring en línea con el código para el objeto seleccionado, o cualquier porción de Python (si el objeto no es Python puro). Esto último puede ser útil cuando los docstrings no están disponibles o son insuficientes para documentar el objeto."
 
+#: ../../panes/help.rst:51
+msgid "Spyder help pane showing different modes"
+msgstr ""
+
 #: ../../panes/help.rst:59
 msgid "Getting help by hovering"
 msgstr "Obtener ayuda al pasar el cursor"
@@ -637,6 +865,10 @@ msgstr "Obtener ayuda al pasar el cursor"
 #: ../../panes/help.rst:61
 msgid "You can also get summary help for objects by hovering over them in the :guilabel:`Editor`. Clicking the hover popup will open the full documentation in the :guilabel:`Help` pane."
 msgstr "También puedes obtener ayuda resumida para objetos pasando el cursor sobre ellos en el :guilabel:`Editor`. Al hacer clic en la ventana emergente se abrirá la documentación completa en el panel de :guilabel:`Ayuda`."
+
+#: ../../panes/help.rst:64
+msgid "Editor pane showing help of an object from hover"
+msgstr ""
 
 #: ../../panes/help.rst:71
 msgid "Control automatic import"
@@ -658,6 +890,10 @@ msgstr "Historial"
 msgid "With the **History** pane, you can view the recent code and commands you've entered into any :doc:`ipythonconsole`, along with their timestamp."
 msgstr "Con el panel **Historial** puedes ver el código y comandos recientes que has introducido en cualquier :doc:`ipythonconsole`, junto con su marca de tiempo."
 
+#: ../../panes/historylog.rst:7
+msgid "Spyder History Log, displaying a list of previously executed commands"
+msgstr ""
+
 #: ../../panes/historylog.rst:14
 msgid "Using the History pane"
 msgstr "Usar el panel Historial"
@@ -674,6 +910,10 @@ msgstr "Menú de opciones"
 msgid "The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle wrapping of long lines (:guilabel:`Wrap lines`), and whether the line number is displayed to the left of the text (:guilabel:`Show line numbers`)."
 msgstr "El menú de opciones de arriba a la derecha (icono :guilabel:`Hamburguesa`) te permite cambiar el ajuste de líneas largas (:guilabel:`Ajuste de línea automático`), y también si el número de línea se muestra a la izquierda del texto (:guilabel:`Mostrar números de línea`)."
 
+#: ../../panes/historylog.rst:30
+msgid "Spyder History Log, displaying wrapping lines and showing line number"
+msgstr ""
+
 #: ../../panes/historylog.rst:37
 msgid "Advanced usage"
 msgstr "Uso avanzado"
@@ -682,13 +922,17 @@ msgstr "Uso avanzado"
 msgid "The list of commands shown in the :guilabel:`History` pane are stored in :file:`history.py` in the :file:`.spyder-py3` directory in your user home folder (by default, :file:`C:/Users/{username}` on Windows, :file:`/Users/{username}` for macOS, and typically :file:`/home/{username}` on GNU/Linux). You might need to show invisible files in order to see it on a non-Windows operating system."
 msgstr "La lista de comandos mostrados en el panel :guilabel:`Historial` se almacenan en :file:`history.py` en el directorio :file:`.spyder-py3` en tu carpeta de inicio del usuario (por defecto, :file:`C:/Users/{username}` en Windows, :file:`/Users/{username}` para macOS, y normalmente :file:`/home/{username}` en GNU/Linux). Puede que necesites mostrar archivos invisibles para poder verlos en un sistema operativo no Windows."
 
+#: ../../panes/historylog.rst:42
+msgid "Spyder History Log file"
+msgstr ""
+
 #: ../../panes/historylog.rst:45
 msgid "While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and restarting Spyder again."
 msgstr "Aunque actualmente no hay ninguna forma integrada de borrar el historial de la interfaz Spyder aparte de restablecer las preferencias, puedes hacerlo cerrando Spyder, eliminando este archivo y reiniciando Spyder de nuevo."
 
 #: ../../panes/index.rst:3
-msgid "Panes in Depth"
-msgstr "Paneles en profundidad"
+msgid "Panes"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:3
 msgid "IPython Console"
@@ -698,9 +942,17 @@ msgstr "Terminal de IPython"
 msgid "The **IPython Console** allows you to execute commands and interact with data inside `IPython`_ interpreters."
 msgstr "La **Terminal IPython** te permite ejecutar comandos e interactuar con datos dentro de los intérpretes `IPython`_."
 
+#: ../../panes/ipythonconsole.rst:9
+msgid "Spyder IPython Console with code, inline plots, and the In prompt"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:12
 msgid "To launch a new IPython instance, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu, or use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused."
 msgstr "Para lanzar una nueva instancia de IPython, vaya a :guilabel:`Nueva terminal (configuración por defecto)` en el menú :guilabel:`Terminales`, o usa el atajo de teclado :kbd:`Ctrl-T` (:kbd:`Cmd-T` en macOS) cuando la consola está focalizada."
+
+#: ../../panes/ipythonconsole.rst:14
+msgid "Spyder showing opening a new Ipython Console"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:17
 msgid "From the same menu, you can stop currently executing code with :guilabel:`Interrupt kernel`, clear a console's namespace with :guilabel:`Remove all variables`, or relaunch a fresh one with :guilabel:`Restart kernel`. As each console is executed in a separate process, this won't affect any others you've opened, and you will be able to easily test your code in a clean environment without disrupting your primary session."
@@ -734,6 +986,10 @@ msgstr "El :doc:`variableexplorer`, con editores gráficos para muchos objetos d
 msgid "Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu."
 msgstr "Visualización de gráficos de Matplotlib en el panel de :doc:`plots` de Spyder, si se selecciona el backend :guilabel:`En línea` en :menuselection:`Preferencias ‣ Terminal de IPython ‣ Gráficas ‣ Salida gráfica`, y en línea en la consola si la opción :guilabel:`Silenciar los gráficos en línea` no está marcada en el menú de opciones del panel de :guilabel:`Gráficos`."
 
+#: ../../panes/ipythonconsole.rst:36
+msgid "Spyder IPython Console, with a popup list of code completion guesses"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:39
 msgid "For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_."
 msgstr "Para obtener información sobre las características, comandos y capacidades incorporadas en IPython mismo, vea la `IPython documentation`_."
@@ -746,13 +1002,25 @@ msgstr "Consolas especiales"
 msgid "Spyder also supports several types of specialized consoles. A `Sympy console`_ enables creating and displaying symbolic math expressions right inside Spyder. A `Cython console`_ allows you to use the Cython language to speed up your code and call C functions directly from Python. Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it."
 msgstr "Spyder también soporta varios tipos de consolas especializadas. Una `Sympy console`_ permite crear y mostrar expresiones matemáticas simbólicas dentro de Spyder. Una `Cython console`_ te permite usar el lenguaje de Cython para acelerar tu código y llamar a funciones C directamente desde Python. Finalmente, una `Pylab console`_ carga las funciones comunes Numpy y Matplotlib por defecto; mientras que esto está obsoleto y fuertemente desaconsejado para el nuevo código, todavía puede ser usado si es necesario para scripts heredados que lo necesiten."
 
+#: ../../panes/ipythonconsole.rst:58
+msgid "Spyder showing opening a new special Console"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:67
 msgid "The options menu allows you to inspect your current environment variables (:guilabel:`Show environment variables`), and the contents of your system's ``PATH`` (:guilabel:`Show sys.path contents`). In addition, you can have each console display how long it has been running with :guilabel:`Show elapsed time`."
 msgstr "El menú de opciones te permite inspeccionar tus variables de entorno actuales (:guilabel:`Mostrar las variables de entorno`), y los contenidos de su sistema ``PATH`` (:guilabel:`Contenidos del sys.path`). Además, puedes tener que cada consola muestre cuánto tiempo ha estado funcionando con :guilabel:`Mostrar el tiempo transcurrido`."
 
+#: ../../panes/ipythonconsole.rst:70
+msgid "Spyder IPython Console with options menu"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:73
 msgid "You can also change the name of the current :guilabel:`IPython console` tab with the :guilabel:`Rename tab` option, or by simply double-clicking it."
 msgstr "También puedes cambiar el nombre de la pestaña :guilabel:`IPython console` con la opción :guilabel:`Renombrar la pestaña`, o simplemente haciendo doble clic en ella."
+
+#: ../../panes/ipythonconsole.rst:75
+msgid "Spyder IPython Console showing renaming console"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:84
 msgid "Using external kernels"
@@ -761,6 +1029,10 @@ msgstr "Usar núcleos externos"
 #: ../../panes/ipythonconsole.rst:86
 msgid "You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu. For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running."
 msgstr "Puedes conectarte a los núcleos externos locales y remotos (incluidos los administrados por Jupyter Notebook o QtConsole) a través del diálogo :guilabel:`Conectarse a un núcleo existente` bajo el menú de :guilabel:`Terminales`. Para que esta característica funcione, una versión compatible del paquete ``spyder-kernels`` :ref:`debe ser instalado <starting-kernel-problems-ref>` en el entorno o máquina en la que el núcleo externo está corriendo."
+
+#: ../../panes/ipythonconsole.rst:89
+msgid "Connect to external kernel dialog of the Spyder IPython console"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:94
 msgid "Connect to a local kernel"
@@ -775,6 +1047,10 @@ msgstr "Para conectarse a un núcleo local que ya se está ejecutando (por ejemp
 msgid "Run ``%connect_info`` in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after ``jupyter <app> --existing``."
 msgstr "Ejecuta ``%connect_info`` en el notebook o la consola a la que quieres conectarte, y copia el nombre de su archivo de conexión al núcleo, que se muestra después de ``jupyter <app> --existing``."
 
+#: ../../panes/ipythonconsole.rst:100
+msgid "Running connect_info in a Jupyter notebook"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:103
 msgid "In Spyder, click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and paste the name of the :guilabel:`Connection file` from the previous step."
 msgstr "En Spyder, haz clic en :guilabel:`Conectarse a un núcleo existente` desde el menú :guilabel:`Terminales`, y pega el nombre del :guilabel:`Archivo de conexión` del paso anterior."
@@ -783,9 +1059,17 @@ msgstr "En Spyder, haz clic en :guilabel:`Conectarse a un núcleo existente` des
 msgid "As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path of the file, i.e. :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`."
 msgstr "Por conveniencia, los números de ID del núcleo (por ejemplo ``1234``) ingresados en el campo de ruta del archivo de conexión se ampliarán a la ruta completa del archivo, por ejemplo :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`."
 
+#: ../../panes/ipythonconsole.rst:107
+msgid "Copying the connection filename into Spyder's dialog"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:110
 msgid "Click :guilabel:`OK` to connect to the kernel."
 msgstr "Haz clic en :guilabel:`OK` para conectarte al núcleo."
+
+#: ../../panes/ipythonconsole.rst:112
+msgid "Connecting to the kernel and running basic commands."
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:117
 msgid "Connect to a remote kernel"
@@ -799,6 +1083,10 @@ msgstr "Para conectarse a un núcleo en una máquina remota:"
 msgid "Launch a Spyder kernel on the remote host if one is not already running, with ``python -m spyder_kernels.console``."
 msgstr "Inicia un núcleo Spyder en el host remoto, si aún no se está ejecutando, con ``python -m spyder_kernels.console``."
 
+#: ../../panes/ipythonconsole.rst:123
+msgid "Staring a Spyder kernel on a remote machine"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:126
 msgid "Copy the kernel's connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on."
 msgstr "Copia el archivo de conexión del núcleo (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) a la máquina en la que estás ejecutando Spyder."
@@ -806,6 +1094,10 @@ msgstr "Copia el archivo de conexión del núcleo (:file:`{jupyter/runtime/dir/p
 #: ../../panes/ipythonconsole.rst:128
 msgid "You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel. Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel."
 msgstr "Puedes obtener :file:`{jupyter/runtime/dir/path}` ejecutando ``jupyter --runtime-dir`` en el mismo entorno de Python que el kernel. Generalmente, el archivo de conexión que estás buscando será uno de los más recientes en este directorio, correspondiente a la hora en que inició el núcleo externo."
+
+#: ../../panes/ipythonconsole.rst:131
+msgid "Using SCP to copy the connection file to the local machine"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:134
 msgid "Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and browse for or enter the path to the connection file from the previous step."
@@ -815,6 +1107,10 @@ msgstr "Haz clic en :guilabel:`Conectarse a un núcleo existente` desde el menú
 msgid "As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine, if you've copied the connection file there."
 msgstr "Por conveniencia, los números de ID del núcleo (por ejemplo, ``1234``) introducidos en el campo de ruta del archivo de conexión se expandirán a :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` en tu máquina local, si has copiado el archivo de conexión allí."
 
+#: ../../panes/ipythonconsole.rst:138
+msgid "Opening the connect to kernel dialog and browsing for the path"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:141
 msgid "Check the :guilabel:`This is a remote kernel (via SSH)` box and enter the :guilabel:`Hostname` or IP address, username and port to connect to on the remote machine. Then, enter *either* :file:`{username}`'s password on the remote machine, or browse to an SSH keyfile (typically in the :file:`.ssh` directory in your home folder on the local machine, often called :file:`id_rsa` or similar) registered on it; only one is needed to connect. If you check :guilabel:`Save connection settings`, these details will be remembered and filled for you automatically next time you open the dialog."
 msgstr "Marca la casilla :guilabel:`Este es un núcleo remoto (via SSH)` e ingresa el :guilabel:`Servidor` o dirección IP, nombre de usuario y puerto al cual conectarse en la máquina remota. Luego, ingresa la contraseña de :file:`{nombre de usuario}` en la máquina remota, **o** selecciona un archivo de clave SSH registrado en la máquina remota, normalmente ubicado en el directorio :file:`.ssh` en tu carpeta de inicio en la máquina local y llamado a menudo :file:`id_rsa`. Si marcas :guilabel:`Guardar ajustes de conexión`, estos detalles serán recordados y rellenados automáticamente la próxima vez que abras el diálogo."
@@ -823,9 +1119,17 @@ msgstr "Marca la casilla :guilabel:`Este es un núcleo remoto (via SSH)` e ingre
 msgid "Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically 22 unless you or your administrator has configured it otherwise."
 msgstr "Ten en cuenta que :guilabel:`Puerto` es el número de puerto en tu máquina remota en el que el daemon SSH (``sshd``) está escuchando, típicamente 22 a menos que tú o tu administrador lo hayan configurado de otra manera."
 
+#: ../../panes/ipythonconsole.rst:147
+msgid "Entering pre-filled SSH details into the connection dialog"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:150
 msgid "Click :guilabel:`OK` to connect to the remote kernel"
 msgstr "Haz clic en :guilabel:`OK` para conectarte al núcleo"
+
+#: ../../panes/ipythonconsole.rst:152
+msgid "Connecting to the remote kernel and running basic commands"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:155
 msgid "For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook."
@@ -843,9 +1147,17 @@ msgstr "Al trabajar en una sesión interactiva, Python sólo carga un módulo de
 msgid "Spyder's :guilabel:`User Module Reloader` (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported. With the UMR enabled, you can test changes to your code without restarting the kernel."
 msgstr "El :guilabel:`Recargador de Módulos de usuario` (RMU) de Spyder recarga automáticamente módulos en las consolas de IPython existentes siempre que sean modificadas y reimportadas. Con la RMU activada, puedes probar los cambios en tu código sin reiniciar el núcleo."
 
+#: ../../panes/ipythonconsole.rst:172
+msgid "Spyder showing reloading modules in console"
+msgstr ""
+
 #: ../../panes/ipythonconsole.rst:175
 msgid "UMR is enabled by default, and it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it is activated. If desired, you can turn it on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`."
 msgstr "RMU está activado por defecto, y te proporcionará un mensaje en rojo ``Módulos recargados:`` en la consola listando los archivos que se han actualizado cuando está activado. Si lo deseas, puedes activarlo o desactivarlo y evitar que se recargen módulos específicos, bajo :menuselection:`Preferencias --> intérprete de Python --> Recargador de Módulos de Usuario (RMU)`."
+
+#: ../../panes/ipythonconsole.rst:178
+msgid "Spyder preferences showing option to use module reloader"
+msgstr ""
 
 #: ../../panes/ipythonconsole.rst:187 ../../panes/variableexplorer.rst:196
 msgid ":doc:`debugging`"
@@ -867,6 +1179,10 @@ msgstr "Ayuda en línea"
 msgid "The **Online Help** pane provides a built-in web browser to explore dynamically generated Python documentation on installed modules—including your own—rendered by a `pydoc`_ server running in the background."
 msgstr "El panel de **Ayuda en línea** proporciona un navegador web integrado para explorar la documentación de Python generada dinámicamente en los módulos instalados, incluyendo el tuyo, renderizado por un servidor `pydoc`_ corriendo en segundo plano."
 
+#: ../../panes/onlinehelp.rst:9
+msgid "Spyder Online Help pane on the index page, a list of builtin modules"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:16
 msgid "Using the Online Help"
 msgstr "Usar la Ayuda en línea"
@@ -875,25 +1191,49 @@ msgstr "Usar la Ayuda en línea"
 msgid "The Online Help's home shows an index where you can browse the documentation of standard library modules, third party packages installed in your Python environment, and your own local code. Click on the name of any module to open its documentation."
 msgstr "En la página de inicio de la ayuda en línea se muestra un índice donde puedes navegar por la documentación de módulos de biblioteca estándar, paquetes de terceros instalados en tu entorno Python y tu propio código local. Haz clic en el nombre de cualquier módulo para abrir su documentación."
 
+#: ../../panes/onlinehelp.rst:21
+msgid "Spyder Online Help pane showing module browsing"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:24
 msgid "Enter the name of the item you'd like help on in the :guilabel:`Package` field to load its documentation directly."
 msgstr "Introduce el nombre del elemento en el que deseas ayuda en el campo :guilabel:`Paquete` para cargar su documentación directamente."
+
+#: ../../panes/onlinehelp.rst:26
+msgid "Spyder Online Help pane showing module browsing by name"
+msgstr ""
 
 #: ../../panes/onlinehelp.rst:29
 msgid "The module's file location is linked to the right of the doc's title, which you can click to view its source code."
 msgstr "La ubicación del archivo del módulo está enlazada a la derecha del título del documento, al cual puedes hacer clic para ver su código fuente."
 
+#: ../../panes/onlinehelp.rst:31
+msgid "Spyder Online Help pane showing source code clicking module's path"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:34
 msgid "Standard library modules also have a link to the corresponding `Python docs`_, which can be viewed right inside of the pane."
 msgstr "Los módulos de biblioteca estándar también tienen un enlace a los correspondientes `Python docs`_, que pueden ser vistos justo dentro del panel."
+
+#: ../../panes/onlinehelp.rst:38
+msgid "Spyder Online Help pane showing python docs embedded in pane"
+msgstr ""
 
 #: ../../panes/onlinehelp.rst:41
 msgid "If you're not sure of the name of the object you want help on, or are looking for a specific keyword, use the :guilabel:`Search` field to get a list of results."
 msgstr "Si no estás seguro del nombre del objeto en el que deseas obtener ayuda, o estás buscando una palabra clave específica, usa el campo :guilabel:`Search` para obtener una lista de resultados."
 
+#: ../../panes/onlinehelp.rst:43
+msgid "Spyder Online Help pane showing search of a keyword"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:46
 msgid "Links above the search field provide an index of topics with general help and a list of Python keywords linked to their corresponding docs."
 msgstr "Los enlaces que están por encima del campo de búsqueda proporcionan un índice de temas con ayuda general y una lista de palabras clave Python vinculadas a sus documentos correspondientes."
+
+#: ../../panes/onlinehelp.rst:48
+msgid "Spyder Online Help pane on the topics page"
+msgstr ""
 
 #: ../../panes/onlinehelp.rst:55
 msgid "Toolbar items"
@@ -903,21 +1243,41 @@ msgstr "Elementos de la barra de herramientas"
 msgid "Just like in a web browser, the forward and back buttons move through the pages you have visited, and the home button (house icon) returns you to the module index."
 msgstr "Al igual que en un navegador web, los botones de adelante y atrás se mueven a través de las páginas que has visitado, y el botón de inicio (icono de la casa) te devuelve al índice de módulos."
 
+#: ../../panes/onlinehelp.rst:59
+msgid "Spyder Online Help pane showing navigation with arrows"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:62
 msgid "Perform a realtime search within a page's content with the :guilabel:`Find` button (magnifying glass icon top left) or :kbd:`Ctrl-F`, navigate through matches with the Up and Down buttons, and make matching case sensitive with the :guilabel:`Aa` button."
 msgstr "Realiza una búsqueda en tiempo real dentro del contenido de una página con el botón :guilabel:`Encontrar texto` (icono de lupa arriba a la derecha) o :kbd:`Ctrl-F`, y navega a través de coincidencias con los botones Arriba y Abajo; además puedes hacer que coincida mayúsculas y minúsculas con el botón :guilabel:`Aa`."
+
+#: ../../panes/onlinehelp.rst:64
+msgid "Spyder Online Help pane showing finding a word on a module"
+msgstr ""
 
 #: ../../panes/onlinehelp.rst:67
 msgid "You can view and re-run previous searches from the drop-down menu in the :guilabel:`Package` field."
 msgstr "Puedes ver y volver a ejecutar búsquedas anteriores desde el menú desplegable en el campo :guilabel:`Paquete`."
 
+#: ../../panes/onlinehelp.rst:69
+msgid "Spyder Online Help pane showing previous searches"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:72
 msgid "You can also use the zoom in/out buttons (:guilabel:`-` and :guilabel:`+`, top right) to change the font size to suit your preferences."
 msgstr "También puedes usar los botones de acercar/alejar (:guilabel:`-` y :guilabel:`+`, arriba a la derecha) para cambiar el tamaño de la fuente según tus preferencias."
 
+#: ../../panes/onlinehelp.rst:74
+msgid "Spyder Online Help pane showing changing the font"
+msgstr ""
+
 #: ../../panes/onlinehelp.rst:77
 msgid "To cancel searching or page loading, click the stop button (red square), and to reload the page (such as when you change your own package's documentation), press the refresh button (circular arrow)."
 msgstr "Para cancelar la búsqueda o la carga de la página, haz clic en el botón de detener (cuadrado rojo), y para recargar la página, como cuando cambias la documentación de tu propio paquete, pulsa el botón de actualizar (flecha circular)."
+
+#: ../../panes/onlinehelp.rst:79
+msgid "Spyder Online Help pane showing refreshing pane when updating docs"
+msgstr ""
 
 #: ../../panes/outline.rst:3
 msgid "Outline"
@@ -927,9 +1287,17 @@ msgstr "Explorador de código"
 msgid "The **Outline** pane allows you to view and navigate the functions, classes, methods, cells and comments in open Python files. To show or hide the Outline pane, use :menuselection:`View --> Panes --> Outline` or :kbd:`Ctrl-Shift-O` / :kbd:`Cmd-Shift-O`. Click an entry in the outline to jump to its source file location, and use the :guilabel:`Go to cursor position` toolbar button to highlight the item corresponding to the current :doc:`editor` position."
 msgstr "El panel **Explorador de código** te permite ver y navegar las funciones, clases, métodos, celdas y comentarios en archivos Python abiertos. Para mostrar u ocultar el panel de Explorador de código, usa :menuselection:`Ver --> Paneles --> Explorador de código` o :kbd:`Ctrl-Shift-O` / :kbd:`Cmd-Shift-O`. Haz clic en una entrada del esquema para saltar a la ubicación de su archivo de origen y utiliza el botón de la barra de herramientas :guilabel:`Ir a la posición del cursor` para resaltar el elemento correspondiente a la posición actual del :doc:`editor`."
 
+#: ../../panes/outline.rst:9
+msgid "Outline pane"
+msgstr ""
+
 #: ../../panes/outline.rst:18
 msgid "The options menu in the top-right of the pane allows customizing how the outline is displayed."
 msgstr "El menú de opciones en la parte superior derecha del panel te permite personalizar la forma en que se muestra el explorador de código."
+
+#: ../../panes/outline.rst:20
+msgid "Outline options menu"
+msgstr ""
 
 #: ../../panes/outline.rst:23
 msgid "These customization settings include:"
@@ -999,9 +1367,17 @@ msgstr "Gráficos"
 msgid "The **Plots** pane shows the static figures and images created during your session. It will show you plots from the :doc:`ipythonconsole`, produced by your code in the :doc:`editor` or generated by the :doc:`variableexplorer` allowing you to interact with them in several ways."
 msgstr "El panel **Gráficos** muestra las figuras e imágenes estáticas creadas durante tu sesión. Te mostrará gráficos de la :doc:`ipythonconsole` producidos por tu código en el :doc:`editor` o generados por el :doc:`variableexplorer` permitiéndote interactuar con ellos de varias maneras."
 
+#: ../../panes/plots.rst:8
+msgid "Spyder main window showing execution for the Plots pane"
+msgstr ""
+
 #: ../../panes/plots.rst:11
 msgid "The figures shown in the Plots pane are those associated with the currently active :guilabel:`Console` tab; if you switch consoles, the list of plots displayed (or none at all, if a new console) will change accordingly."
 msgstr "Las figuras que se muestran en el panel de Gráficos son las asociadas con la pestaña activa :guilabel:`Terminal`. Si cambias de terminal, la lista de gráficos mostrados cambiará en consecuencia o no mostrará ninguno si abres una terminal nueva."
+
+#: ../../panes/plots.rst:13
+msgid "Spyder's plots pane and console showing switching consoles"
+msgstr ""
 
 #: ../../panes/plots.rst:22
 msgid "The options menu in the top right of the :guilabel:`Plots` pane offers several ways to customize how your plots are displayed."
@@ -1015,6 +1391,10 @@ msgstr "Silenciar los gráficos en línea"
 msgid "The :guilabel:`Mute inline plotting` option is enabled by default, preventing your plots from appearing in the Console. If you deactivate this option, figures will display in both the Plots pane and the Console."
 msgstr "La opción :guilabel:`Silenciar los gráficos en línea` está activada por defecto, evitando que tus gráficos aparezcan en la consola. Si desactivas esta opción, las figuras se mostrarán tanto en el panel Gráficos como en la Terminal."
 
+#: ../../panes/plots.rst:31
+msgid "Spyder's plots pane and console showing plots in the console"
+msgstr ""
+
 #: ../../panes/plots.rst:36
 msgid "Show plot outline"
 msgstr "Mostrar el borde del gráfico"
@@ -1022,6 +1402,10 @@ msgstr "Mostrar el borde del gráfico"
 #: ../../panes/plots.rst:38
 msgid "The :guilabel:`Show plot outline` option, off by default, shows a thin stroke surrounding the area of the figure area, which will also appear in the exported images."
 msgstr "La opción :guilabel:`Mostrar el borde del gráfico`, desactivada por defecto, muestra un trazo delgado alrededor del área de la figura, que también aparecerá en las imágenes exportadas."
+
+#: ../../panes/plots.rst:40
+msgid "Spyder's plots pane showing a plot's outline"
+msgstr ""
 
 #: ../../panes/plots.rst:45
 msgid "Fit plots to window"
@@ -1031,6 +1415,10 @@ msgstr "Ajustar gráficos a la ventana"
 msgid "The :guilabel:`Fit plots to Window` option, also enabled by default, sizes the figures to match the pane. Disabling it will display plots at their native size, and allow you use the zoom buttons at the top of the pane to scale them manually."
 msgstr "La opción :guilabel:`Ajustar gráficos a la ventana`, también activada por defecto,ajusta el tamaño de las figuras para que coincidan con el panel. Al deshabilitarlo, se mostrarán los gráficos en su tamaño nativo y podrás usar los botones de zoom en la parte superior del panel para escalarlos manualmente."
 
+#: ../../panes/plots.rst:50
+msgid "Spyder main window showing plots zoom"
+msgstr ""
+
 #: ../../panes/plots.rst:57
 msgid "Toolbar options"
 msgstr "Opciones de la barra de herramientas"
@@ -1039,17 +1427,33 @@ msgstr "Opciones de la barra de herramientas"
 msgid "The toolbar at the top of the Plots pane provides several useful features that allow you to interact with your figures. For example, you can cycle sequentially through the plot list with the forward and back arrows."
 msgstr "La barra de herramientas en la parte superior del panel de Gráficos proporciona varias funciones útiles que te permiten interactuar con sus figuras. Por ejemplo, puede recorrer secuencialmente la lista de gráficos con las flechas hacia adelante y hacia atrás."
 
+#: ../../panes/plots.rst:62
+msgid "Spyder main window showing plot navigation using arrows."
+msgstr ""
+
 #: ../../panes/plots.rst:65
 msgid "You can also save one or all the plots in the pane to file(s) by clicking the respective \"save\"/\"save all\" icons in the toolbar. Plots are rendered and saved as PNG by default, but SVG can be selected as an option under :menuselection:`Preferences --> IPython console --> Graphics --> Inline backend --> Format`."
 msgstr "También puedes guardar uno o todos los gráficos en el panel a archivo(s) haciendo clic en los iconos respectivos \"guardar gráfico como...\"/\"guardar todos los gráficos...\" en la barra de herramientas. Los gráficos son procesados y guardados como PNG por defecto, aunque también puedes seleccionar SVG como una opción bajo :menuselection:`Preferencias --> Terminal de IPython --> Gráficas --> Salida en línea --> Formato`."
+
+#: ../../panes/plots.rst:68
+msgid "Spyder plots pane showing saving a plot."
+msgstr ""
 
 #: ../../panes/plots.rst:71
 msgid "Additionally, if you want to use a figure in another document, you can click the \"copy to clipboard\" button and paste your plot wherever you want, such as a word processor."
 msgstr "Además, si deseas utilizar una figura en otro documento, puedes hacer clic en el botón \"Copiar gráfico al portapapeles como imagen\" y pegar tu gráfico donde quieras, por ejemplo en un procesador de textos."
 
+#: ../../panes/plots.rst:73
+msgid "Spyder Plots pane showing pasting plot in LibreOffice."
+msgstr ""
+
 #: ../../panes/plots.rst:76
 msgid "Finally, you can use the \"remove\" and \"remove all\" buttons in the toolbar to clear plots from the list."
 msgstr "Por último, puedes utilizar los botones \"Borrar gráfico\" y \"Borrar todos los gráficos\" de la barra de herramientas para borrar los gráficos de la lista."
+
+#: ../../panes/plots.rst:78
+msgid "Spyder plots pane showing pasting plot in LibreOffice."
+msgstr ""
 
 #: ../../panes/profiler.rst:3
 msgid "Profiler"
@@ -1059,6 +1463,11 @@ msgstr "Perfilador (Profiler)"
 msgid "The **Profiler** pane recursively determines the run time and number of calls for every function and method called in a file, breaking down each procedure into its smallest individual units. This allows you to easily identify the bottlenecks in your code, points you toward the exact statements most critical for optimization, and measures the performance delta after followup changes."
 msgstr "El panel **Perfilador (Profiler)** determina recursivamente el tiempo de ejecución y el número de llamadas para cada función, y el método llamado en un archivo, dividiendo cada procedimiento en sus unidades individuales más pequeñas. Esto te permite identificar fácilmente los cuellos de botella en tu código, te indica las sentencias exactas más críticas para la optimización, y mide el delta del rendimiento después de los cambios de seguimiento."
 
+#: ../../panes/profiler.rst:8 ../../panes/profiler.rst:84
+#: ../../panes/profiler.rst:92
+msgid "Spyder Profiler pane, displaying a list of functions and their execution time"
+msgstr ""
+
 #: ../../panes/profiler.rst:15
 msgid "Running the Profiler"
 msgstr "Ejecutando el Perfilador (Profiler)"
@@ -1066,6 +1475,10 @@ msgstr "Ejecutando el Perfilador (Profiler)"
 #: ../../panes/profiler.rst:17
 msgid "You can browse for a file using the open button to the right of the Profiler's path box (top left of the pane), which will run profiling over this file automatically."
 msgstr "Puedes buscar un archivo usando el botón \"Seleccionar archivo de Python\", ubicado a la derecha del cuadro de ruta del perfil (arriba a la izquierda del panel), que ejecutará automáticamente el perfilador sobre este archivo."
+
+#: ../../panes/profiler.rst:19
+msgid "Spyder Profiler pane, showing browsing a file and running profiler"
+msgstr ""
 
 #: ../../panes/profiler.rst:22
 msgid "You can manually enter the path in the pane's path box and then run the analysis on the file by pressing :guilabel:`Profile` in the Profiler pane."
@@ -1075,6 +1488,10 @@ msgstr "Puedes introducir manualmente la ruta en el cuadro de ruta del panel y l
 msgid "You can also run profiling for the file that is currently open in the :doc:`editor` by clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a configurable shortcut (:kbd:`F10` by default)."
 msgstr "También puedes ejecutar perfiles para el archivo que está actualmente abierto en el :doc:`editor` haciendo clic en :menuselection:`&Ejecutar --> Ejecutar el perfilador` en la barra de menú, o usando un acceso directo configurable (:kbd:`F10` por defecto)."
 
+#: ../../panes/profiler.rst:27 ../../panes/profiler.rst:51
+msgid "Spyder Profiler pane, showing running profiler from menu bar"
+msgstr ""
+
 #: ../../panes/profiler.rst:30
 msgid "If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in the top right, and if profiling fails for any reason, the :guilabel:`Output` dialog will be displayed, indicating the error that occurred."
 msgstr "Si quieres cancelar una ejecución en curso, haz clic en el botón :guilabel:`Detener el perfilador` en la parte superior derecha, y si el perfil falla por cualquier razón, se mostrará el diálogo :guilabel:`Salida del perfilador` indicando el error que ha ocurrido."
@@ -1083,13 +1500,25 @@ msgstr "Si quieres cancelar una ejecución en curso, haz clic en el botón :guil
 msgid "By double-clicking an item in the Profiler, you will be taken to the file and line in the :doc:`editor` where it was called."
 msgstr "Al hacer doble clic en un elemento del Perfilador, serás llevado al archivo y a la línea en el :doc:`editor` donde fue llamado."
 
+#: ../../panes/profiler.rst:34
+msgid "Spyder Profiler pane, showing opening a file when clicking on its analysis"
+msgstr ""
+
 #: ../../panes/profiler.rst:37
 msgid "You can increase the number of levels displayed for a particular object by clicking the dropdown arrows to the left of the name, and expand/collapse all the items with the buttons in the top left."
 msgstr "Puedes aumentar el número de niveles mostrados para un objeto en particular haciendo clic en las flechas desplegables a la izquierda del nombre, y expandir/contraer todos los elementos con los botones de la parte superior izquierda."
 
+#: ../../panes/profiler.rst:39
+msgid "Spyder Profiler pane, showing dropdown arrows and buttons for expanding and collapsing"
+msgstr ""
+
 #: ../../panes/profiler.rst:42
 msgid "By clicking the dropdown or press the :kbd:`Down Arrow` key in the filename field, you can recall paths of previous profiled files."
 msgstr "Haciendo clic en el menú desplegable o pulsando la tecla :kbd:`Flecha abajo` en el campo de nombre de archivo, puedes recuperar las rutas de acceso de los archivos perfilados anteriormente."
+
+#: ../../panes/profiler.rst:44
+msgid "Spyder Profiler pane, showing dropdown of previous profiled files"
+msgstr ""
 
 #: ../../panes/profiler.rst:47
 msgid "Finally, you can save the data for a given run to disk as a file with the ``.Result`` extension using the :guilabel:`Save data` button. This can be loaded to compare with a previous run of the same file using the :guilabel:`Load data` button. To remove the loaded data, click the :guilabel:`Clear comparison` button."
@@ -1102,6 +1531,10 @@ msgstr "Interpretar los resultados"
 #: ../../panes/profiler.rst:60
 msgid "Results are broken down by function/method/statement, with each sub-element listed hierarchically under the top-level item that called them. :guilabel:`Total Time` is that taken by the specified item and every function \"underneath\" (*i.e.* called by) it, while :guilabel:`Local Time` only counts the time spent in the particular callable object's own scope. The :guilabel:`Calls` column displays the total number of times the specified object was called at that level inside its parent calling function (or within the ``__main__`` scope, if a top-level object). Finally, the numbers in the :guilabel:`Diff` columns for each of the three appear if a comparison is loaded, and indicate the deltas between each measurement."
 msgstr "Los resultados son desglosados por función/método/sentencia, con cada subelemento listado jerárquicamente bajo el elemento de nivel superior que los llama. :guilabel:`Tiempo total` es el tiempo que tarda el objeto especificado y todas las funciones \"debajo\" del objeto(es decir, las llamadas por el objeto), mientras que :guilabel:`Tiempo Local` solo cuenta el tiempo empleado en el ámbito propio del objeto en particular. La columna :guilabel:`Llamados` muestra el número total de veces que el objeto especificado fue llamado en ese nivel dentro de su función de llamada primaria o dentro del ámbito ``__main__``, si se trata de un objeto de nivel superior. Finalmente, los números en la columna :guilabel:`Diff` para cada uno de los tres aparecen si se carga una comparación, e indican los deltas entre cada medición."
+
+#: ../../panes/profiler.rst:65
+msgid "Profiler with a comparison loaded, displaying the time deltas between two runs"
+msgstr ""
 
 #: ../../panes/profiler.rst:68
 msgid "For example, suppose you ran the :guilabel:`Profiler` on a file calling a function ``sleep_wrapper()`` that in turn called the ``sleep()`` function, and the ``sleep_wrapper()`` function took a total of 3.87 ms to run, with 3.86 ms of that spent executing the ``sleep()`` function inside it. Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time` and :guilabel:`Local Time` would both be identical, at 3.87 ms. Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.86 ms, but :guilabel:`Local Time` only 0.01 ms as the rest was spent inside the ``sleep()`` function it called."
@@ -1127,6 +1560,10 @@ msgstr "Proyectos"
 msgid "Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :doc:`editor` from the last time you opened that project. With the :ref:`Project <project-explorer>` pane, you can browse all your project's files, regardless of your current working directory or :doc:`fileexplorer` location."
 msgstr "Spyder te permite asociar un directorio determinado con un **Proyecto**, el cual automáticamente guarda y restaura los archivos que has abierto en el :doc:`editor` desde la última vez que abriste ese proyecto. En el panel :ref:`Proyecto <project-explorer>` puedes navegar todos los archivos de tu proyecto, independientemente de tu directorio de trabajo actual o de la ubicación de :doc:`fileexplorer`."
 
+#: ../../panes/projects.rst:8
+msgid "Spyder showing Project Explorer and projects menu"
+msgstr ""
+
 #: ../../panes/projects.rst:11
 msgid "In addition, your project's root folder is used to set your working directory, and automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create inside of it."
 msgstr "Además, la carpeta raíz del proyecto se utiliza para establecer tu directorio de trabajo, y se añade automáticamente al ``PYTHONPATH``, para que puedas ``importar`` fácilmente y trabajar con cualquier módulo y paquetes que crees dentro de él."
@@ -1143,6 +1580,10 @@ msgstr "Crear un proyecto"
 msgid "To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a :guilabel:`Project` with an existing directory or make a new one, and enter the :guilabel:`Project`'s name and path."
 msgstr "Para crear un :guilabel:`Proyecto`, haz clic en la entrada :guilabel:`Nuevo Proyecto` en el menú :guilabel:`Proyectos`. Elige si quieres asociar un :guilabel:`Proyecto` con un directorio existente o crear uno nuevo, e introduce el nombre y la ruta del :guilabel:`Proyecto`."
 
+#: ../../panes/projects.rst:26
+msgid "Spyder showing opening a new project"
+msgstr ""
+
 #: ../../panes/projects.rst:35
 msgid "Using the Projects Pane"
 msgstr "Usar el panel de Proyectos"
@@ -1150,6 +1591,10 @@ msgstr "Usar el panel de Proyectos"
 #: ../../panes/projects.rst:37
 msgid "Once a :guilabel:`Project` is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current :guilabel:`Project`'s files and directories. It allows you to perform all the same :ref:`operations<file-operations>` as Spyder's :doc:`fileexplorer` pane."
 msgstr "Una vez que se abre un :guilabel:`Proyecto`, se muestra el panel :guilabel:`Project`, presentando una vista de árbol de los archivos y directorios del :guilabel:`Proyecto` actual. Esto te permite realizar las mismas :ref:`operaciones <file-operations>` que el panel :doc:`fileexplorer` de Spyder."
+
+#: ../../panes/projects.rst:40
+msgid "Spyder Project Explorer, displaying a directory tree of project files"
+msgstr ""
 
 #: ../../panes/projects.rst:49
 msgid "Working with version control"
@@ -1171,6 +1616,10 @@ msgstr "Análisis del código"
 msgid "The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it. Based on these results, it also gives your code an overall quality score. Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more."
 msgstr "El panel **Análisis del código** detecta problemas de estilo, malas prácticas, posibles errores y otros problemas de calidad en tu código, todo sin tener que ejecutarlo realmente. Basado en estos resultados, también le da a tu código una puntuación de calidad general. El analizador del código de Spyder funciona con el mejor back-end de `Pylint`_ de su clase, que pueden detectar de forma inteligente una gama enorme y personalizable de posibles errores, malas prácticas, problemas de calidad, violaciones de estilo y mucho más."
 
+#: ../../panes/pylint.rst:11
+msgid "Spyder Pylint pane, showing numerous issues discovered in a file"
+msgstr ""
+
 #: ../../panes/pylint.rst:18
 msgid "Using the code analyzer"
 msgstr "Usar el analizador del código"
@@ -1179,25 +1628,49 @@ msgstr "Usar el analizador del código"
 msgid "You can select the desired file to analyze directly in the :doc:`editor` by clicking anywhere within it. To run the analysis, press the configurable shortcut (:kbd:`F8` by default), select :menuselection:`Source --> Run code analysis` from the menu bar or click the :guilabel:`Analyze` button in the Code Analysis pane. If the Code Analysis pane is not visible, you can open it under :menuselection:`View --> Panes --> Code Analysis`. All standard checks are run by default. To go directly to a line in the :doc:`editor` highlighted by a failed check, just click its name."
 msgstr "Puedes seleccionar el archivo deseado para analizarlo directamente en el :doc:`editor` haciendo clic en cualquier lugar dentro de él. Para ejecutar el análisis, presiona el acceso directo configurable (:kbd:`F8` por defecto), selecciona :menuselection:`Código fuente --> Ejecutar análisis del código` desde la barra de menú o haz clic en el botón :guilabel:`Ejecutar análisis del código` en el panel de Análisis de código. Si el panel de análisis de código no está visible, puedes abrirlo en :menuselection:`Ver --> Paneles --> Análisis del código`. Todas las comprobaciones estándar se ejecutan de forma predeterminada. Para ir directamente a una línea en el :doc:`editor` que ha sido resaltada por una comprobación fallida, simplemente haz clic en su nombre."
 
+#: ../../panes/pylint.rst:26
+msgid "Spyder Pylint pane, showing running analysis and clicking failed check"
+msgstr ""
+
 #: ../../panes/pylint.rst:29
 msgid "You can also manually enter the path of a file you'd like it to check in the path entry box in the pane's toolbar. The analyzer works with both individual scripts and whole Python packages (directories containing an :file:`__init__.py` file)."
 msgstr "También puedes introducir manualmente la ruta de un archivo que te gustaría comprobar en la casilla de entrada de la ruta de la barra de herramientas del panel. El analizador funciona tanto con scripts individuales como con paquetes completos de Python (directorios que contienen un archivo :file:`__init__.py`)."
+
+#: ../../panes/pylint.rst:32
+msgid "Spyder Pylint pane, showing running analysis browsing file"
+msgstr ""
 
 #: ../../panes/pylint.rst:35
 msgid "Cancel analyzing a file with the :guilabel:`Stop` button, and if analysis fails, click the :guilabel:`Output` button to find out why. If Pylint does succeed, the :guilabel:`Output` will show the raw plain text analysis results on the selected file, allowing you to easily browse and copy/paste the full message names and descriptions."
 msgstr "Cancela el análisis de un archivo con el botón :guilabel:`Detener`, y si se produce un error en el análisis, haz clic en el botón :guilabel:`Salida` para averiguar por qué. Si Pylint tiene éxito, la :guilabel:`Salida` mostrará los resultados de análisis de texto sin formato en el archivo seleccionado, permitiéndote navegar y copiar/pegar fácilmente los nombres de los mensajes completos y las descripciones."
 
+#: ../../panes/pylint.rst:38
+msgid "Spyder Pylint pane, showing output"
+msgstr ""
+
 #: ../../panes/pylint.rst:41
 msgid "Finally, you can click the dropdown or press the dropdown arrow in the filename field to view results of previous analyses."
 msgstr "Finalmente, puedes hacer clic en el menú desplegable o pulsar la flecha desplegable en el campo nombre del archivo para ver los resultados de análisis anteriores."
+
+#: ../../panes/pylint.rst:43
+msgid "Spyder Pylint pane, showing history"
+msgstr ""
 
 #: ../../panes/pylint.rst:52
 msgid "The number of recent runs Spyder should remember can be customized in the :guilabel:`History` dialog, available from the Code Analysis options menu."
 msgstr "El número de ejecuciones recientes que Spyder debe recordar puede personalizarse en el cuadro de diálogo :guilabel:`Historial`, disponible en el menú de opciones de Análisis del código."
 
+#: ../../panes/pylint.rst:54
+msgid "Spyder Pylint pane, customizing history dialog"
+msgstr ""
+
 #: ../../panes/pylint.rst:57
 msgid "You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu."
 msgstr "También puedes expandir o contraer una o todas las secciones del panel usando las opciones correspondientes en el menú de opciones."
+
+#: ../../panes/pylint.rst:59
+msgid "Spyder Pylint pane, expanding and collapsing sections"
+msgstr ""
 
 #: ../../panes/pylint.rst:66
 msgid "Advanced options"
@@ -1207,9 +1680,17 @@ msgstr "Opciones avanzadas"
 msgid "You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_. For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``."
 msgstr "Puedes desactivar ciertos mensajes en el nivel de línea, bloque o archivo/módulo añadiendo un comentario ``# pylint: disable=MESSAGE-NAMES`` en el `scope`_ respectivo, donde ``MESSAGE_NAMES`` debe reemplazarse por una lista separada por comas (o valor único) de `Pylint message names`_. Por ejemplo, una directiva podría verse como ``# pylint: disable=invalid-name``, o ``# pylint: disable=fixme, line-too-long``."
 
+#: ../../panes/pylint.rst:75
+msgid "Spyder Pylint pane, showing disabling a message locally"
+msgstr ""
+
 #: ../../panes/pylint.rst:78
 msgid "Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user folder. If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user directory, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux). For more details on configuring Pylint, see the `Pylint documentation`_."
 msgstr "O bien, puedes eliminar globalmente mensajes específicos y ajustar otras configuraciones de Pylint editando el archivo de configuración :file:`.pylintrc` en tu carpeta de usuario. Si no existe, puedes generarlo ejecutando ``pylint --generate-rcfile > . ylintrc`` en tu directorio de usuario, desde Anaconda Prompt (en Windows) o tu terminal (macOS/Linux). Para más detalles sobre la configuración de Pylint, consulta la `Pylint documentation`_."
+
+#: ../../panes/pylint.rst:84
+msgid "Spyder Pylint pane, disabling a message globally in the .pylintrc"
+msgstr ""
 
 #: ../../panes/pylint.rst:94
 msgid ":doc:`profiler`"
@@ -1223,13 +1704,25 @@ msgstr "Explorador de variables"
 msgid "The **Variable Explorer** allows you to interactively browse and manage the objects generated running your code."
 msgstr "El **Explorador de variables** te permite navegar y administrar de forma interactiva los objetos generados al ejecutar tu código."
 
+#: ../../panes/variableexplorer.rst:7
+msgid "Spyder Variable Explorer execution with a variable of type list"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:10
 msgid "It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected :doc:`ipythonconsole` session, and allows you to add, remove, and edit their values through a variety of GUI-based editors."
 msgstr "Muestra el contenido del espacio de nombres (incluyendo todos los objetos globales, variables, instancias de clase y más) de la sesión :doc:`ipythonconsole` seleccionada, y te permite agregar, eliminar y editar sus valores a través de una variedad de editores basados en GUI."
 
+#: ../../panes/variableexplorer.rst:12
+msgid "Spyder Variable Explorer, with a list of variables and their contents"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:15
 msgid "The Variable Explorer gives you information on the name, size, type and value of each object. To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value."
 msgstr "El Explorador de variables te proporciona información sobre el nombre, tamaño, tipo y valor de cada objeto. Para modificar una variable escalar, como un número, cadena o booleano, simplemente haz doble clic en el panel y escribe su nuevo valor."
+
+#: ../../panes/variableexplorer.rst:18
+msgid "Spyder Variable Explorer modifying value of a variable"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:25
 msgid "Object viewers"
@@ -1247,6 +1740,10 @@ msgstr "Cadenas de texto"
 msgid "When a string variable is longer than forty characters, you can double click it to see its value in a text editor to more easily modify it."
 msgstr "Cuando una variable de cadena es más larga que cuarenta caracteres, puedes hacer doble clic en ella para ver su valor en un editor de texto para modificarla más fácilmente."
 
+#: ../../panes/variableexplorer.rst:35
+msgid "Variable Explorer text editor, displaying a long string in a window"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:41
 msgid "Dictionaries"
 msgstr "Diccionarios"
@@ -1254,6 +1751,10 @@ msgstr "Diccionarios"
 #: ../../panes/variableexplorer.rst:43
 msgid "Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value. You can double click any of the values to modify them, which will open a new viewer if the value is itself an object."
 msgstr "Al hacer doble clic en los diccionarios se desplegará un visor que muestra cada una de sus llaves con su valor asociado. Puedes hacer doble clic en cualquiera de los valores para modificarlos, lo que abrirá un nuevo visor si el valor en sí mismo es un objeto."
+
+#: ../../panes/variableexplorer.rst:46
+msgid "Dictionary editor displaying keys and their types, sizes, and values"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:52
 msgid "Lists"
@@ -1263,6 +1764,10 @@ msgstr "Listas"
 msgid "For lists, the main Variable Explorer displays a preview of the first ten values. To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list. Just like dictionaries, you can double-click values to edit them."
 msgstr "En el caso de las listas, el Explorador de variables principal muestra una vista previa de los diez primeros valores. Para verlos todos, haz doble clic en la lista para abrir un visor que te mostrará el índice, tipo, tamaño y valor de cada elemento de la lista. Al igual que los diccionarios, puedes hacer doble clic en los valores para editarlos."
 
+#: ../../panes/variableexplorer.rst:58
+msgid "List editor displaying a list, showing one being edited"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:64
 msgid "Numpy arrays"
 msgstr "Arreglos de NumPy"
@@ -1270,6 +1775,10 @@ msgstr "Arreglos de NumPy"
 #: ../../panes/variableexplorer.rst:66
 msgid "Like lists, for Numpy arrays the Variable Explorer shows a preview of their values. Double-clicking them will open a viewer displaying the array values in a \"heat map\", with each value in a grid cell colored based on its numeric quantity. You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance."
 msgstr "Al igual que las listas, para las arreglos de Numpy el Explorador de variables muestra una vista previa de sus valores. Al hacer doble clic en ellos, se abrirá un visor que muestra los valores de la matriz en un \"mapa de calor\", con cada valor en una celda de cuadrícula coloreada en base a su cantidad numérica. Puedes desactivar el color de fondo desmarcando la opción apropiada en el visor, lo que sucederá automáticamente si la matriz es demasiado grande para mejorar el rendimiento."
+
+#: ../../panes/variableexplorer.rst:70
+msgid "Array editor array, displaying a \"heatmap\" of its values"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:73
 msgid "If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display. For this, click the :guilabel:`Format` button and and set the desired formatting in the dialog that appears, using standard `Printf-style syntax`_."
@@ -1279,6 +1788,10 @@ msgstr "Si es compatible con el tipo de datos, también puedes cambiar el format
 msgid "Additionally, you can adjust the size of the rows and columns of the array by expanding or contracting their headers. Clicking the :guilabel:`Resize` button will set it automatically."
 msgstr "Además, puedes ajustar el tamaño de las filas y columnas del arreglo expandiendo o contrayendo sus encabezados. Al hacer clic en el botón :guilabel:`Cambiar tamaño` se establecerá automáticamente."
 
+#: ../../panes/variableexplorer.rst:81
+msgid "Array editor with a 2D int array, showing resizing of columns"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:86
 msgid "DataFrames"
 msgstr "DataFrames"
@@ -1287,17 +1800,33 @@ msgstr "DataFrames"
 msgid "DataFrames, like Numpy arrays, display in a viewer where you can show or hide \"heatmap\" colors, change the format and resize the rows and columns either manually or automatically."
 msgstr "Los DataFrames, al igual que los arreglos de Numpy, se muestran en un visor donde puedes mostrar u ocultar los colores del \"mapa de calor\", cambiar el formato y cambiar el tamaño de las filas y columnas, ya sea de forma manual o automática."
 
+#: ../../panes/variableexplorer.rst:90
+msgid "Dataframe editor showing data frame \"heatmap\""
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:93
 msgid "Additionally, starting in Spyder 4, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices."
 msgstr "Adicionalmente, a partir de Spyder 4, el Explorador de variables tiene soporte MultiIndex en su inspector de DataFrame, incluyendo índices multi-nivel y multidimensionales."
+
+#: ../../panes/variableexplorer.rst:96
+msgid "Dataframe editor showing multi-index support"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:105
 msgid "The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria."
 msgstr "El menú de opciones en la parte superior derecha del panel de Explorador de variables te permite filtrar los objetos mostrados por una serie de criterios diferentes."
 
+#: ../../panes/variableexplorer.rst:107
+msgid "Spyder Variable Explorer, with options menu"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:110
 msgid "It also allows you to display the min and max of Numpy arrays instead of a preview of their values."
 msgstr "También te permite mostrar el mínimo y máximo de los arreglos de NumPy en lugar de una vista previa de sus valores."
+
+#: ../../panes/variableexplorer.rst:112
+msgid "Variable Explorer showing max and min values of numpy array"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:120
 msgid "Toolbar buttons"
@@ -1307,6 +1836,10 @@ msgstr "Botones de la barra de herramientas"
 msgid "The Variable Explorer's toolbar includes several useful features that affect the entire namespace. For example, you can save the current session's data as a ``.spydata`` file, which can be loaded later to recover all the variables stored."
 msgstr "La barra de herramientas del Explorador de variables incluye varias características útiles que afectan a todo el espacio de nombres. Por ejemplo, puedes guardar los datos de la sesión actual como un archivo ``.spydata``, que se puede cargar más tarde para recuperar todas las variables almacenadas."
 
+#: ../../panes/variableexplorer.rst:125
+msgid "Variable Explorer showing how to save and import data"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:130
 msgid "You should **not** load any ``.spydata`` file from any source you don't fully trust (ideally, only those files you've saved yourself). Like with any `Python pickle`_, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine. Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange."
 msgstr "**No** debes cargar ningún archivo ``.spydata`` desde cualquier fuente en la que no confíes (idealmente, solo aquellos archivos que hayas guardado tu mismp). Al igual que con cualquier `Python pickle`_, no es inherentemente seguro contra código malicioso, ya que puede cargar cualquier objeto Python y puede ejecutar código arbitrario en tu máquina. Además, no se garantiza que funcione de forma fiable en todos los entornos de Python que no sean en aquel en el que se creó, por lo que sólo debería utilizarse como formato de persistencia local, y no para intercambio."
@@ -1314,6 +1847,10 @@ msgstr "**No** debes cargar ningún archivo ``.spydata`` desde cualquier fuente 
 #: ../../panes/variableexplorer.rst:136
 msgid "There is also a button to remove all displayed variables, and a search box to find objects by  name or type."
 msgstr "También hay un botón para eliminar todas las variables mostradas, y un cuadro de búsqueda para encontrar objetos por nombre o tipo."
+
+#: ../../panes/variableexplorer.rst:138
+msgid "Variable Explorer showing how to search variables"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:141
 msgid "Finally, there is a button to refresh the Variable Explorer's contents, which will update it to show the current state of the code running in the IPython console."
@@ -1327,27 +1864,55 @@ msgstr "Funcionalidad avanzada"
 msgid "The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types. These include renaming, removing or editing existing variables, as well as the :guilabel:`duplicate` option to create a new copy of one of them under a new name you enter in the resulting dialog box."
 msgstr "El menú contextual, disponible haciendo clic derecho en cualquier variable, proporciona numerosas opciones adicionales para interactuar con objetos de varios tipos. Estas incluyen renombrar, eliminar o editar variables existentes, así como la opción :guilabel:`Duplicar` para crear una nueva copia de una de ellas bajo un nuevo nombre que puedes ingresar en el cuadro de diálogo resultante."
 
+#: ../../panes/variableexplorer.rst:152
+msgid "Variable Explorer showing duplicating a variable"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:155
 msgid "Furthermore, you can copy and paste the value of a variable, saving it in the Variable Explorer with any name that you choose. This allows you to change the type of the variable that you are pasting which can be very useful, allowing you to, for example, easily copy the elements of a list into an array."
 msgstr "Además, puedes copiar y pegar el valor de una variable, guardándola en el Explorador de variables con el nombre que elijas. Esto te permite cambiar el tipo de variable que estás pegando, lo que puede ser muy útil. Por ejemplo, te permite copiar fácilmente los elementos de una lista en una matriz."
+
+#: ../../panes/variableexplorer.rst:158
+msgid "Variable Explorer showing copying list into array"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:161
 msgid "Additionally, you can create an object from scratch directly in the Variable Explorer with the :guilabel:`Insert` option, which allows you to type the key (which should be in quotation marks) and the value for the item that you want to insert. In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more."
 msgstr "Adicionalmente, puedes crear un objeto desde cero directamente en el Explorador de variables con la opción :guilabel:`Insertar`, que te permite escribir la clave (que debería estar entre comillas) y el valor del elemento que deseas insertar. Además de añadir una nueva variable de nivel superior, esta característica también te permite crear una nueva llave en un diccionario, un nuevo elemento en una lista, y mucho más."
 
+#: ../../panes/variableexplorer.rst:164
+msgid "Variable Explorer showing insertion of a new variable"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:167
 msgid "For lists and Numpy arrays, more advanced options are available, including generating plots and histograms of their values appropriate to their type and dimensions."
 msgstr "Para listas y arreglos de NumPy, hay opciones avanzadas disponibles, incluyendo la generación de gráficos e histogramas de sus valores apropiados a su tipo y dimensiones."
+
+#: ../../panes/variableexplorer.rst:169
+msgid "Plot window showing a plot, generated via the previous options"
+msgstr ""
 
 #: ../../panes/variableexplorer.rst:172
 msgid "You can even save an array to a ``.npy`` file by simply clicking the appropriate option, which can later be loaded by Spyder or in your code via ``numpy.load()``."
 msgstr "Incluso puedes guardar un arreglo en un archivo ``.npy`` simplemente haciendo clic en la opción apropiada, que luego puede ser cargada por Spyder o en tu código a través de ``numpy.load()``."
 
+#: ../../panes/variableexplorer.rst:174
+msgid "Context menu for an int array, with the Show image option selected"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:178
 msgid "For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib's colormaps, which can be `easily changed to match your preferences`_."
 msgstr "En el caso de arreglos bidimensionales, también puedes mostrarlos como imágenes, tratando sus valores como colores RGB. Para esto, Spyder utiliza los mapas de colores de Matplotlib, que pueden ser `fácilmente cambiados para que coincidan con tus preferencias`_."
 
+#: ../../panes/variableexplorer.rst:182
+msgid "Interactive image based on the array's data"
+msgstr ""
+
 #: ../../panes/variableexplorer.rst:185
 msgid "Finally, we added a context-menu action to open any object using the new Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these datatypes."
 msgstr "Finalmente, hemos añadido una acción de menú contextual para abrir cualquier objeto usando el nuevo Explorador de objetos incluso si ya tienen un visor incorporado (DataFrames, arreglos, etc) permitiendo una inspección más profunda del funcionamiento interno de estos tipos de datos."
+
+#: ../../panes/variableexplorer.rst:187
+msgid "Object explorer showing dataframe"
+msgstr ""
 

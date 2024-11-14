@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spyder-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 08:54-0600\n"
-"PO-Revision-Date: 2024-09-10 00:48\n"
+"POT-Creation-Date: 2024-09-06 20:38-0500\n"
+"PO-Revision-Date: 2024-11-13 22:01\n"
 "Last-Translator: \n"
 "Language: es\n"
 "Language-Team: Spanish\n"
@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.16.0\n"
 "X-Crowdin-Project: spyder-documentation\n"
 "X-Crowdin-Project-ID: 641502\n"
 "X-Crowdin-Language: es-ES\n"
@@ -248,12 +248,20 @@ msgstr ""
 msgid "To follow this workshop you do not need to create a new directory. However, if you have downloaded the data and want to use it instead of the APIs, you must set the directory that has the downloaded data as the working directory. In order to do this, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the downloaded data. Something like this:"
 msgstr ""
 
+#: ../../workshops/financial.rst:166
+msgid "Spyder's Working Directory plugin showing the working directory downloaded-data-dir"
+msgstr ""
+
 #: ../../workshops/financial.rst:171
 msgid "Setting up the virtual environment in Spyder"
 msgstr ""
 
 #: ../../workshops/financial.rst:173
 msgid "Let's check that the virtual environment we created is enabled in Spyder. Go to :guilabel:`Preferences > Python interpreter`, and use the dropdown below :guilabel:`Use the following Python interpreter` to choose your virtual environment. You should see something like this:"
+msgstr ""
+
+#: ../../workshops/financial.rst:175
+msgid "Screenshot on how to set up environment in Spyder's Preferences"
 msgstr ""
 
 #: ../../workshops/financial.rst:178
@@ -283,8 +291,17 @@ msgstr ""
 msgid "Remember to type and run all code for this workshop in the \"IPython Console\" at the bottom right of Spyder."
 msgstr ""
 
+#: ../../workshops/financial.rst:199
+msgid "Screenshot IPython Console location in Spyder IDE"
+msgstr ""
+
 #: ../../workshops/financial.rst:202
 msgid "You can also write your code in the Editor (the pane that occupies the entire left side of Spyder). If you use the Editor, you can run the code by selecting it and pressing the :guilabel:`Run selection or current line` button in the :guilabel:`Run toolbar` or by pressing the :kbd:`F9` key."
+msgstr ""
+
+#: ../../workshops/financial.rst:204
+#: ../../workshops/scientific-computing.rst:268
+msgid "Editor location in Spyder IDE"
 msgstr ""
 
 #: ../../workshops/financial.rst:207
@@ -316,6 +333,10 @@ msgstr ""
 msgid "You can also type the name of the object (``netflix``) in the console, then type a period and hit the Tab key once. IPython suggestions will then appear to help you navigate the object:"
 msgstr ""
 
+#: ../../workshops/financial.rst:240
+msgid "IPython Console auto-suggestions"
+msgstr ""
+
 #: ../../workshops/financial.rst:243
 msgid "For example, we can obtain general information with the ``info`` property of the object."
 msgstr ""
@@ -324,12 +345,24 @@ msgstr ""
 msgid "We can observe the result in the Variable Explorer, in the ``netflix_info`` variable."
 msgstr ""
 
+#: ../../workshops/financial.rst:251
+msgid "First variable in Variable Explorer"
+msgstr ""
+
 #: ../../workshops/financial.rst:254
 msgid "If we double-click on it, a new window with detailed information will be displayed."
 msgstr ""
 
+#: ../../workshops/financial.rst:256
+msgid "Python dict example in Variable Explorer"
+msgstr ""
+
 #: ../../workshops/financial.rst:259
 msgid "In that window we can see a Python dictionary in which each key has a value assigned to it. Each type of value is represented by a distinctive color. For example, we see that Netflix is an Entertainment industry, the summary of the business type, among other indicators. The Variable Explorer is a very convenient way to view these types of results. We can compare it to viewing them in the IPython Console with the ``pprint`` function:"
+msgstr ""
+
+#: ../../workshops/financial.rst:265
+msgid "netflix_info output in IPython Console"
 msgstr ""
 
 #: ../../workshops/financial.rst:268
@@ -346,6 +379,10 @@ msgstr ""
 
 #: ../../workshops/financial.rst:280
 msgid "We can see a summary and more details of this dataset in the Variable Explorer. It appears as a DataFrame object, with 7 columns and thousands of rows. If we double-click on it we will see the historical records of Netflix stock organized by ascending dates."
+msgstr ""
+
+#: ../../workshops/financial.rst:282
+msgid "Netflix historical operations"
 msgstr ""
 
 #: ../../workshops/financial.rst:285
@@ -388,12 +425,24 @@ msgstr ""
 msgid "The last argument (``group_by=\"Ticker\"``) groups the information mainly by stock. Otherwise, the primary grouping is done by the type of information (e.g., opening price, closing price, volume traded) of the transactions. In the following image you can see the differences (above is the default organization and below is the grouping by \"Ticker\")."
 msgstr ""
 
+#: ../../workshops/financial.rst:330
+msgid "Data grouped by Ticker"
+msgstr ""
+
 #: ../../workshops/financial.rst:334
 msgid "The historical data has been downloaded as a Pandas DataFrame. We can explore this data in the variable ``data_1`` in the Variable Explorer."
 msgstr ""
 
+#: ../../workshops/financial.rst:336
+msgid "Portfolio 1 historical data"
+msgstr ""
+
 #: ../../workshops/financial.rst:339
 msgid "Let's change the formatting of the data a bit so that the symbols appear as the column names, and the Ticker moves from columns to rows. We will do this with the ``stack()`` operation of the DataFrame."
+msgstr ""
+
+#: ../../workshops/financial.rst:345
+msgid "Portfolio 1 historical data stacked by Ticker"
 msgstr ""
 
 #: ../../workshops/financial.rst:348
@@ -436,6 +485,10 @@ msgstr ""
 msgid "A good way to observe both growth and variability is to draw a time-series plot. To scale the values, we are going to divide the relative frequency of the closing price of the actions by the initial value it has in the dataframe ``close_data_1`` (these initial values can be found with ``close_data_1.iloc[0])``). The plot is drawn with the ``plot()`` method of the Pandas DataFrame (to which we pass as arguments the size of the plot and the plot title)."
 msgstr ""
 
+#: ../../workshops/financial.rst:406
+msgid "Portfolio 1 daily stock price"
+msgstr ""
+
 #: ../../workshops/financial.rst:411
 msgid "You will be able to see the graph in the Plots pane. On the left, you will see the plot in detail. On the right, a stack will be created with all the plots that are generated both in the Console and by running the code directly in the Editor. You can copy, delete or save the plot to disk by clicking on it with the right mouse button or trackpad."
 msgstr ""
@@ -446,6 +499,10 @@ msgstr ""
 
 #: ../../workshops/financial.rst:415
 msgid "We can also plot with the ``plot()`` method the DataFrame we already have with the monthly data. To do this, we will add 1 to all the values and calculate the accumulated product with the ``cumprod()`` method:"
+msgstr ""
+
+#: ../../workshops/financial.rst:421
+msgid "Portfolio 1 monthly stock price"
 msgstr ""
 
 #: ../../workshops/financial.rst:424
@@ -466,6 +523,10 @@ msgstr ""
 
 #: ../../workshops/financial.rst:440
 msgid "In the variable ``rets_1`` you can see the resulting DataFrame. If you double-click on the variable name in the Variable Explorer, you will see that there are positive values (the share price increased) and negative values (the price decreased at the time of closing)."
+msgstr ""
+
+#: ../../workshops/financial.rst:442
+msgid "Portfolio 1 daily returns"
 msgstr ""
 
 #: ../../workshops/financial.rst:445
@@ -577,6 +638,10 @@ msgstr ""
 msgid "You should see in the Plots pane something like this:"
 msgstr ""
 
+#: ../../workshops/financial.rst:595
+msgid "Portfolio 1 Monte Carlo Sharpe simulation scatter plot"
+msgstr ""
+
 #: ../../workshops/financial.rst:598
 msgid "A roughly linear relationship can be observed between returns and volatility: the higher the volatility, the higher the gains. And the Sharpe ratio shows an important amount of variability (it is noticeable in the \"width\" of the line drawn)."
 msgstr ""
@@ -607,6 +672,10 @@ msgstr ""
 
 #: ../../workshops/financial.rst:639
 msgid "Double click on the ``port_1_ow`` variable in the Variable Explorer. In the table, you can specify the number of decimal places to display, by clicking the format button at the bottom left of the pane, as you can see in the following image:"
+msgstr ""
+
+#: ../../workshops/financial.rst:641
+msgid "Portfolio 1 optimal weights by year"
 msgstr ""
 
 #: ../../workshops/financial.rst:644
@@ -643,6 +712,10 @@ msgstr ""
 
 #: ../../workshops/financial.rst:680
 msgid "The expected column shows the predicted values if the optimal portfolio composition had been used. The realized column, on the other hand, shows the actual profits that would have been obtained with those weights. It can be seen that there are notable differences in some years. Let's look at this in a plot."
+msgstr ""
+
+#: ../../workshops/financial.rst:686
+msgid "Portfolio 1 expected and realized returns comparison"
 msgstr ""
 
 #: ../../workshops/financial.rst:689
@@ -705,6 +778,14 @@ msgstr ""
 msgid "Let's better visualize the above with a couple of charts."
 msgstr ""
 
+#: ../../workshops/financial.rst:785
+msgid "Portfolio 2 daily stock price"
+msgstr ""
+
+#: ../../workshops/financial.rst:788
+msgid "Portfolio 2 monthly stock price"
+msgstr ""
+
 #: ../../workshops/financial.rst:791
 msgid "These two plots show a steady growth over the years, but also a high variability in each year. This seems to be a good portfolio only if taken as a long-term investment."
 msgstr ""
@@ -725,6 +806,10 @@ msgstr ""
 msgid "The different behavior is clearly observed if we apply a Monte Carlo simulation and visualize it with a graph:"
 msgstr ""
 
+#: ../../workshops/financial.rst:827
+msgid "Portfolio 2 Monte Carlo Sharpe simulation scatter plot"
+msgstr ""
+
 #: ../../workshops/financial.rst:830
 msgid "High volatility does not correspond in most cases with high returns. In fact, there are scenarios in the simulation in which higher expected returns are related to lower expected volatility."
 msgstr ""
@@ -737,8 +822,16 @@ msgstr ""
 msgid "Let us now see what are the optimal weights for each stock using the ``optimal_weights`` function."
 msgstr ""
 
+#: ../../workshops/financial.rst:846
+msgid "Portfolio 2 optimal weights by year"
+msgstr ""
+
 #: ../../workshops/financial.rst:849
 msgid "In addition, we can use these optimal weights to plot the expected and realized returns of this portfolio for each year."
+msgstr ""
+
+#: ../../workshops/financial.rst:858
+msgid "Portfolio 2 expected and realized returns comparison"
 msgstr ""
 
 #: ../../workshops/financial.rst:861
@@ -817,6 +910,10 @@ msgstr ""
 msgid "Let's take a look at the monthly history of cryptocurrency price growth."
 msgstr ""
 
+#: ../../workshops/financial.rst:965
+msgid "Portfolio 3 daily stock price"
+msgstr ""
+
 #: ../../workshops/financial.rst:968
 msgid "We can note that the scale here is much larger. And the proportion of ETH growth over the other two coins is quite remarkable."
 msgstr ""
@@ -853,6 +950,10 @@ msgstr ""
 msgid "The Monte Carlo simulation also shows the non-linear correlation between risk and returns (as you can see, sometimes high risk involves only modest profits):"
 msgstr ""
 
+#: ../../workshops/financial.rst:988
+msgid "Portfolio 3 Monte Carlo Sharpe simulation scatter plot"
+msgstr ""
+
 #: ../../workshops/financial.rst:991
 msgid "As can be seen, there are points (bottom right) that show a very high volatility and yet have a very low expected return. In this sense, portfolio 1 represents a safer investment because the higher risk is consistently offset by higher returns."
 msgstr ""
@@ -861,12 +962,20 @@ msgstr ""
 msgid "Optimal cryptocurrency weights"
 msgstr ""
 
+#: ../../workshops/financial.rst:997
+msgid "Portfolio 3 optimal weights by year"
+msgstr ""
+
 #: ../../workshops/financial.rst:1000
 msgid "The optimal portfolio weights, if calculated annually, suggest that our portfolio should have been quite polarized in some years: the recommendation is to have bought only bitcoins before the start of 2016 and 2019, and only ethereum in 2018. Starting 2017 and 2020, on the other hand, our weights recommended a more balanced investment between bitcoin and ethereum. Litecoin is not recommended by our model."
 msgstr ""
 
 #: ../../workshops/financial.rst:1004
 msgid "Expected and realized returns"
+msgstr ""
+
+#: ../../workshops/financial.rst:1006
+msgid "Portfolio 3 expected and realized returns comparison"
 msgstr ""
 
 #: ../../workshops/financial.rst:1009
@@ -1085,6 +1194,10 @@ msgstr ""
 msgid "The best place to find information about contributing to Spyder or developing for Spyder is its Github repository, in particular the `contribution guide`_."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:63
+msgid "Spyder IDE components."
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:66
 msgid "The core of **Spyder** is `Spyder-IDE`_ , a desktop application developed in *Qt*, which requires for its operation two packages with it is closely related (and without which it cannot work): *spyder-kernels* and *python-lsp-server*."
 msgstr ""
@@ -1107,6 +1220,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:89
 msgid "Types of plugins we can develop in Spyder"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:92
+msgid "Types of Spyder plugins."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:97
@@ -1137,6 +1254,10 @@ msgstr ""
 msgid "Discovering Spyder plugins"
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:120
+msgid "``SpyderDockablePlugin``"
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:124
 msgid "If we look at the Spyder interface, we can find a number of different panes on the right side (with the default layout), such as *Help*, *Variable Explorer*, *Plots*, *Files* and *History*."
 msgstr ""
@@ -1147,6 +1268,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:128
 msgid "These plugins can also be hidden or shown via their entry in the *View > Panes* menu, or using its corresponding keyboard shortcut displayed there."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:120
+msgid "``SpyderPluginV2``"
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:132
@@ -1167,6 +1292,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:144
 msgid "Our practical work will consist in the implementation of the Pomodoro technique for time management in the Spyder interface."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:146
+msgid "Description of the pomodoro technique."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:151
@@ -1225,10 +1354,12 @@ msgstr ""
 msgid "Build a configuration page for our plugin, which would appear in Tools > Preferences."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:177
 #: ../../workshops/plugin-development.rst:180
 msgid "Location of Spyder Pomodoro Timer widgets in Spyder."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:182
 #: ../../workshops/plugin-development.rst:185
 msgid "Spyder Pomodoro Timer in the preferences window."
 msgstr ""
@@ -1285,6 +1416,10 @@ msgstr ""
 msgid "However, if you use a working environment that has other dependencies and you want to keep your plugin development independent of them, it is recommended to create a new environment which only has Spyder with the minimum dependencies needed for your plugin."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:225
+msgid "Spyder development environment."
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:228
 msgid "We can install it in the following way:"
 msgstr ""
@@ -1311,6 +1446,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:258
 msgid "Now that we have our local virtual environment, it is good practice to manage our source code with a version control system, and the most widely used web service for this purpose is currently Github. Here you can find, for example, the Spyder and Python repositories."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:260
+msgid "Git and Github repository concepts."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:263
@@ -1359,6 +1498,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:293
 msgid "Then we need to use ``cookiecutter`` to create the initial structure of our plugin. `cookiecutter`_ is a tool made in Python specifically designed to create project templates. We have developed one of these templates to generate the basic structure of a plugin, it can be found at: https://github.com/spyder-ide/spyder5-plugin-cookiecutter"
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:298
+msgid "Folder structure of our plugin."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:301
@@ -1502,6 +1645,10 @@ msgstr ""
 msgid "From here we can select and copy the name of the icon of our preference."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:503
+msgid "qta browser dialog"
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:506
 msgid "To finish the implementation of our widget, we need to add the following method:"
 msgstr ""
@@ -1600,6 +1747,10 @@ msgstr ""
 msgid "In summary, we did the following:"
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:708
+msgid "Basic structure of Pomodoro Timer Spyder plugin."
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:711
 msgid "We created a widget, then we added it to the container, which is registered in the plugin through the ``CONTAINER_CLASS`` constant. In the plugin, we accessed the instance of that widget and added it to the status bar."
 msgstr ""
@@ -1622,6 +1773,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:736
 msgid "And in Spyder you'll see our plugin in the status bar with the tooltip \"I am the Pomodoro tooltip\"."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:738
+msgid "First version of our plugin"
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:741
@@ -1682,6 +1837,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:815
 msgid "If we run Spyder again we will find that our timer has come to life."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:817
+msgid "Timer countdown working."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:824
@@ -1844,6 +2003,10 @@ msgstr ""
 msgid "The first thing we can notice is that we already have the corresponding buttons in the toolbar."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:1082
+msgid "Pomodoro timer toolbar buttons"
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:1085
 msgid "The strings that were entered as the ``tip`` parameter in the creation of the actions are shown here as the buttons' tooltips."
 msgstr ""
@@ -1852,8 +2015,16 @@ msgstr ""
 msgid "Also, if we check the menu \"View > Toolbars\", we find that there is a new entry there corresponding to our toolbar."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:1089
+msgid "View > Toolbars menu with \"Pomodoro Timer Toolbar\" option."
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:1093
 msgid "Finally, let's check how the new Pomodoro Timer control buttons in the toolbar interact with the component in the status bar."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1095
+msgid "Interaction between the Pomodoro Timer toolbar and its status bar."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:1102
@@ -1952,6 +2123,10 @@ msgstr ""
 msgid "Now we can access the Preferences window either from the toolbar or from the \"Tools > Preferences\" menu. There we will find a section called *Spyder Pomodoro Timer* and inside it is the *Pomodoro timer limit* parameter. If we change that value, we will see how the corresponding label in the status bar changes."
 msgstr ""
 
+#: ../../workshops/plugin-development.rst:1273
+msgid "Pomodoro Timer toolbar configuration page."
+msgstr ""
+
 #: ../../workshops/plugin-development.rst:1276
 msgid "Now your plugin is in an initial version ready to publish..."
 msgstr ""
@@ -1966,6 +2141,10 @@ msgstr ""
 
 #: ../../workshops/plugin-development.rst:1286
 msgid "However, the tools used to publish packages in conda are usually based on the packages published in PyPI. So let's see how to publish our plugin there."
+msgstr ""
+
+#: ../../workshops/plugin-development.rst:1288
+msgid "Publish your plugin in PyPI."
 msgstr ""
 
 #: ../../workshops/plugin-development.rst:1293
@@ -2429,8 +2608,16 @@ msgstr ""
 msgid "Let's make sure Spyder is ready. First, check that the working directory is correct. You should see in the upper right corner the path to the directory where you have the dataset. Something like this:"
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:231
+msgid "Spyder's Working Directory plugin showing the working directory of spyder-scientific"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:234
 msgid "Second, let's check that the virtual environment we created is enabled in Spyder. Go to :guilabel:`Preferences` > :guilabel:`Python interpreter`, and use the dropdown under :guilabel:`Use the following Python interpreter` to select the path to your virtual environment. You should see something like this:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:236
+msgid "Set up environment in Spyder's Preferences"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:245
@@ -2453,6 +2640,10 @@ msgstr ""
 msgid "If you want more information about how this dataset was collected and what kind of information it contains you can get it in this paper: `The OKCupid dataset`_."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:263
+msgid "IPython Console location in Spyder IDE"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:266
 msgid "You can also write your code or in the Editor (the pane that occupies the entire left side of Spyder). If you use the Editor, you can run the code by selecting it and pressing the :guilabel:`Run selection or current line` button in the :guilabel:`Run toolbar` or by pressing the F9 button."
 msgstr ""
@@ -2467,6 +2658,10 @@ msgstr ""
 
 #: ../../workshops/scientific-computing.rst:288
 msgid "You should now be able to see the data you have imported in the Variable Explorer."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:290
+msgid "Dataset in the Variable Explorer"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:293
@@ -2489,12 +2684,20 @@ msgstr ""
 msgid "In the OKCupid dataset, all demographic variables are prefixed with \"d\\_\" and profile variables with \"p\\_\"."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:315
+msgid "Console output for data.d_age.describe()"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:318
 msgid "What happened? We called the ``data`` object and used Python's dot notation to pick the ``d_age`` column. This has a `Pandas Series <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html>`_ type object. To this object we pass the ``describe()`` method that shows a summary of some indicators: count of values, mean, standard deviation, maximum value, minimum value, among others. With these figures we can see that the sample is mainly constituted of young people (the average is 31.65 years old)."
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:320
 msgid "The return of a function, method or the attribute of an object can be stored as a variable to have it at hand in the Variable Explorer:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:327
+msgid "More variables in Variable Explorer"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:330
@@ -2513,8 +2716,20 @@ msgstr ""
 msgid "We can plot a histogram directly from the dataframe. To do this we select the variable (as we did with the ``.describe()``) and invoke the ``.plot.hist()`` method. In this method we will pass as arguments the number of bins and the transparency of the plot (``alpha``)."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:344
+msgid "Age histogram with Pandas"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:348
 msgid "Another way to generate a simple histogram in Spyder is to use a context menu on an array in the Variable Explorer. But first we must store these values in a list and call that variable ``age``."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:354
+msgid "Age histogram option from Variable Explorer"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:357
+msgid "Age histogram from Variable Explorer"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:360
@@ -2529,6 +2744,10 @@ msgstr ""
 msgid "We call ``sns.histplot()`` with three arguments. The first one (``data.d_age``) is a Pandas Series with the **quantitative** variable we want to plot. The second (``kde=True``) adds a curve showing an ideal model of the age distribution (using a method called *Kernel Density Estimator*). And the third one (``bins=25``) indicates that we want 25 bins in the graph."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:374
+msgid "Age histogram with Seaborn"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:377
 msgid "The second line (``plt.show()``) is intended to show all the figures not displayed so far. If you have any doubts about how to utilize an object, method or function, you can use the ``help()`` tool in the console. For example:"
 msgstr ""
@@ -2537,8 +2756,16 @@ msgstr ""
 msgid "Or you can also take advantage of the Help pane included in Spyder to get on-screen help:"
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:385
+msgid "plt.show() help in Spyder's Help pane"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:388
 msgid "With Seaborn, we can add a line representing the mean of the histogram. To do this we will use the ``axvline()`` method and add a text with the value of the mean where ``text()``, ``min_ylim`` and ``max_ylim`` are used to mark the position of the text."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:400
+msgid "Age histogram with mean line"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:405
@@ -2555,6 +2782,10 @@ msgstr ""
 
 #: ../../workshops/scientific-computing.rst:415
 msgid "In the IPython Console, type ``data.`` and then copy the column name. Type a period at the end (no spaces) and hit tab. You should see something like the following:"
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:417
+msgid "IPython Console auto-completion"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:420
@@ -2661,6 +2892,10 @@ msgstr ""
 msgid "Let's draw a histogram of this variable to see the frequency distribution."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:546
+msgid "Cognitive test score histogram"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:549
 msgid "As you can see, in this case, the distribution is not symmetrical but has a long \"tail\" on the left (negatively skewed). This means that most of the users who answered all the questions did quite well and that only a few users answered most of the questions in the wrong way."
 msgstr ""
@@ -2687,6 +2922,10 @@ msgstr ""
 
 #: ../../workshops/scientific-computing.rst:575
 msgid "Now, we are going to create box plots to observe the relationship between variables. To do this, we will use the ``catplot`` class of Seaborn. The first argument will be the x-axis, which in this case will be the qualitative variable (question **q997**). The second argument will be the y-axis, where we will place the quantitative variable (cognitive score). With the parameter ``kind`` we indicate that it is a box plot. The parameters ``height`` and ``aspect`` regulate the appearance of the graph. The last parameter, ``data``, indicates where the data comes from."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:583
+msgid "Pet preferences and cognitive score relationship (boxplot)"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:586
@@ -2730,6 +2969,10 @@ msgstr ""
 msgid "To appreciate in context the real difference in the averages, let's create some bar charts. We are now going to use Seaborn's barplot class. On the x-axis we put again the qualitative variable (**q997**) and on the y-axis the quantitative variable (cognitive_score). The data parameter takes as argument the entire dataset."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:617
+msgid "Pet preferences and cognitive score mean representation (box graph)"
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:620
 msgid "If the box plots indicated that the means did not show significant differences (possibly due to chance), the bar plot confirms that these differences are, in proportion, quite modest."
 msgstr ""
@@ -2770,6 +3013,10 @@ msgstr ""
 msgid "You will see that one of the columns includes the answers to the test made by people who did not specify their preferences towards pets. Let's delete that column."
 msgstr ""
 
+#: ../../workshops/scientific-computing.rst:658
+msgid "Pet preferences pivot table for ANOVA analysis."
+msgstr ""
+
 #: ../../workshops/scientific-computing.rst:661
 msgid "Now let's rename the column names (for simplicity) and remove the records that have missing values (with ``dropna``). The argument ``inplace=True`` allows you to directly modify a dataframe without having to create a new one."
 msgstr ""
@@ -2780,6 +3027,10 @@ msgstr ""
 
 #: ../../workshops/scientific-computing.rst:673
 msgid "To perform ANOVA, we are going to use a Python library called \"stats\", in particular the ``f_oneway`` function. You can find more information about this library by typing ``stats`` in the Help Pane or learn more about the function by typing ``stats.f_oneway``."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:675
+msgid "stats.f_oneway() help in Spyder's Help pane"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:678
@@ -2836,6 +3087,10 @@ msgstr ""
 
 #: ../../workshops/scientific-computing.rst:731
 msgid "To see an example, you can open the :download:`scientific-computing-astro.py <scientific-computing-astro.py>` file and run the :guilabel:`Code Analysis` (open the file in the pane and click on the green triangular button in the upper right corner)."
+msgstr ""
+
+#: ../../workshops/scientific-computing.rst:733
+msgid "Code Analysis pane Example for astrological sign and cognitive ability"
 msgstr ""
 
 #: ../../workshops/scientific-computing.rst:736
