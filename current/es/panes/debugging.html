@@ -14,32 +14,29 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script src="../_static/documentation_options.js?v=6e454508"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
@@ -48,7 +45,7 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'panes/debugging';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
@@ -63,7 +60,6 @@
     <link rel="prev" title="Panes" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
-  <meta name="docsearch:version" content="5" />
   </head>
   
   
@@ -71,16 +67,32 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -88,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -95,27 +108,20 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
+</form></div>
+  </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
-  </button>
+  </label>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
 
-  
-    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -130,30 +136,34 @@
     
     
     <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="documentación de Spyder - 5 - Home"/>
-    <img src="../_static/spyder_logo.svg" class="logo__image only-dark pst-js-only" alt="documentación de Spyder - 5 - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="documentación de Spyder - 5 - Home"/>`);</script>
   
   
 </a></div>
     
       <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
   </div>
-</div></div>
+`);
+</script></div>
     
       <div class="navbar-item">
 <div class="language-switcher__container dropdown pst-js-only">
@@ -182,64 +192,70 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav>
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Navegación del sitio">
+    Navegación del sitio
+  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../quickstart.html">
-    Tour
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Tour
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Guía de instalación
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../installation.html">
-    Guía de instalación
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        Preguntas Frecuentes (FAQ)
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../videos/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../faq.html">
-    Preguntas Frecuentes (FAQ)
-  </a>
-</li>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Panes
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../plugins/index.html">
+                        Plugins
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../videos/index.html">
-    Tutorials
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../workshops/index.html">
+                        Workshops
+                      </a>
+                    </li>
+                
 
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
-    Panes
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../plugins/index.html">
-    Plugins
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../workshops/index.html">
-    Workshops
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
-    Solución de problemas
-  </a>
-</li>
-
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+                        Solución de problemas
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -251,21 +267,29 @@
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Búsqueda</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
       
     </div>
     
@@ -274,31 +298,31 @@
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Búsqueda</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-    </button>
+    </label>
   
 </div>
 
-    </header>
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      
-      
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -307,70 +331,73 @@
     
       <div class="sidebar-header-items__center">
         
-          
-          
-            <div class="navbar-item">
-<nav>
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Navegación del sitio">
+    Navegación del sitio
+  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../quickstart.html">
-    Tour
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Tour
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Guía de instalación
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../installation.html">
-    Guía de instalación
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        Preguntas Frecuentes (FAQ)
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../videos/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../faq.html">
-    Preguntas Frecuentes (FAQ)
-  </a>
-</li>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Panes
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../plugins/index.html">
+                        Plugins
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../videos/index.html">
-    Tutorials
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../workshops/index.html">
+                        Workshops
+                      </a>
+                    </li>
+                
 
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
-    Panes
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../plugins/index.html">
-    Plugins
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../workshops/index.html">
-    Workshops
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
-    Solución de problemas
-  </a>
-</li>
-
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+                        Solución de problemas
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
-          
         
       </div>
     
@@ -380,11 +407,15 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
         
       </div>
     
@@ -393,8 +424,8 @@
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 <nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+     aria-label="Navegación del sección">
+  <p class="bd-links__title" role="heading" aria-level="1">Navegación del sección</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Depurador (Debugger)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editor.html">Editor</a></li>
@@ -424,31 +455,33 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-<nav aria-label="Breadcrumb" class="d-print-none">
+
+
+<nav aria-label="Miga de pan">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
+      <a href="../index.html" class="nav-link" aria-label="Inicio">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Panes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Depurador (Debugger)</span></li>
+    <li class="breadcrumb-item active" aria-current="page">Depurador (Debugger)</li>
   </ul>
 </nav>
 </div>
@@ -463,7 +496,7 @@
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section id="debugger">
 <h1>Depurador (Debugger)<a class="headerlink" href="#debugger" title="Link to this heading">#</a></h1>
@@ -531,12 +564,12 @@
               
               
               
-                <footer class="prev-next-footer d-print-none">
+                <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
-       title="previous page">
+       title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
@@ -545,7 +578,7 @@
     </a>
     <a class="right-next"
        href="editor.html"
-       title="next page">
+       title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
         <p class="prev-next-title">Editor</p>
@@ -559,17 +592,14 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+  <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-with-ipdb">Depurando con ipdb</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breakpoints">Puntos de interrupción</a></li>
@@ -601,8 +631,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -635,7 +665,7 @@
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.14.4.
 </p></div>
       
     </div>
