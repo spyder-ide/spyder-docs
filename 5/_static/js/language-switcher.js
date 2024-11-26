@@ -1002,12 +1002,12 @@ async function fetchAndUseLanguages() {
         "language": "en",
         "name": "English",
         "preferred": true,
-        "url": "https://docs.spyder-ide.org/5/en"
+        "url": "https://docs.spyder-ide.org/5/en/"
       },
       {
         "language": "es",
         "name": "Español",
-        "url": "https://docs.spyder-ide.org/5/es"
+        "url": "https://docs.spyder-ide.org/5/es/"
       }
     ]
 
