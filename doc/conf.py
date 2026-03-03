@@ -49,6 +49,7 @@ UTC_DATE = datetime.datetime.now(datetime.timezone.utc)
 extensions = [
     "sphinx.ext.githubpages",
     "sphinx_design",
+    "sphinxcontrib.video",
 ]
 
 panels_add_bootstrap_css = False
