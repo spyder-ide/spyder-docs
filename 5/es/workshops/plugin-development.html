@@ -28,10 +28,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=38e29e3d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -782,10 +782,10 @@ We can also place here the instance of <code class="docutils literal notranslate
 <p>Let’s call the initial version, without any editing <code class="docutils literal notranslate"><span class="pre">INITIAL</span></code>.
 In <a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/tree/v0.1.1-dev0">INITIAL</a>, widgets.py is as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spyder imports</span>
-<span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
-<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.config.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">on_conf_change</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.translations</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_translation</span>
 
-<span class="kn">from</span> <span class="nn">spyder.api.widgets.mixins</span> <span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.widgets.mixins</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
 
 
 <span class="c1"># Localization</span>
@@ -809,35 +809,35 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/c7b5cc6c4ce3c4afcd3cb9d3474bdabe2b81e060">INITIAL -&gt; HELLO WORLD widgets.py diff</a></p>
 <p>Since we want a widget that shows the pomodoro countdown and is periodically updated, we will use a <code class="docutils literal notranslate"><span class="pre">BaseTimerStatus</span></code> instance.</p>
 <p>So, we can substitute</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.mixins</span> <span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.widgets.mixins</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpyderWidgetMixin</span>
 </pre></div>
 </div>
 <p>with</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.status</span> <span class="kn">import</span> <span class="n">BaseTimerStatus</span>
-<span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.widgets.status</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseTimerStatus</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.utils.icon_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">ima</span>
 </pre></div>
 </div>
 <p>Add an initial import:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third party imports</span>
-<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qtawesome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qta</span>
 </pre></div>
 </div>
 <p>With that, we can write our first widget like this</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerStatus</span><span class="p">(</span><span class="n">BaseTimerStatus</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PomodoroTimerStatus</span><span class="p">(</span><span class="n">BaseTimerStatus</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Status bar widget to display the pomodoro timer&quot;&quot;&quot;</span>
 
     <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;pomodoro_timer_status&quot;</span>
     <span class="n">CONF_SECTION</span> <span class="o">=</span> <span class="s2">&quot;spyder_pomodoro_timer&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;25:00&quot;</span>
 
-    <span class="k">def</span> <span class="nf">get_tooltip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_tooltip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Override api method.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s2">&quot;I am the Pomodoro timer!&quot;</span>
 
-    <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -853,7 +853,7 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <img alt="qta browser dialog" src="../_images/pd_qta-browser_timer.png" />
 <p>To finish the implementation of our widget, we need to add the following method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ---- BaseTimerStatus API</span>
-<span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get current time of the timer&quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
@@ -865,23 +865,23 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <h3>The container<a class="headerlink" href="#the-container" title="Link to this heading">#</a></h3>
 <p>The next step in the development of our plugin is to create an instance of the widget we wrote above, so we can add it to Spyder’s status bar. For that, we need to use a container. Due to Qt specifics, we need an instance of <code class="docutils literal notranslate"><span class="pre">QWidget</span></code> (the container) to be the parent of all other widgets part of our plugin (as mentioned above).</p>
 <p>Thus, the <a class="reference external" href="https://cookiecutter.readthedocs.io">COOKIECUTTER</a> version of <code class="docutils literal notranslate"><span class="pre">container.py</span></code> is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.config.decorators</span> <span class="kn">import</span> <span class="n">on_conf_change</span>
-<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
-<span class="kn">from</span> <span class="nn">spyder.api.widgets.main_container</span> <span class="kn">import</span> <span class="n">PluginMainContainer</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.config.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">on_conf_change</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.translations</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_translation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.widgets.main_container</span><span class="w"> </span><span class="kn">import</span> <span class="n">PluginMainContainer</span>
 
 <span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">SpyderPomodoroTimerContainer</span><span class="p">(</span><span class="n">PluginMainContainer</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SpyderPomodoroTimerContainer</span><span class="p">(</span><span class="n">PluginMainContainer</span><span class="p">):</span>
 
     <span class="c1"># Signals</span>
 
     <span class="c1"># --- PluginMainContainer API</span>
     <span class="c1"># ------------------------------------------------------------------------</span>
-    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">update_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_actions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
 </pre></div>
 </div>
@@ -889,11 +889,11 @@ In <a class="reference external" href="https://github.com/map0logo/spyder-pomodo
 <p>In this case <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> is already defined, and we must implement the <code class="docutils literal notranslate"><span class="pre">setup</span></code> and <code class="docutils literal notranslate"><span class="pre">update_actions</span></code> methods.</p>
 <p>Now we are going to add the widget created earlier to the container. To do so, first we need to import the widget.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.widgets</span> <span class="kn">import</span> <span class="n">PomodoroTimerStatus</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">PomodoroTimerStatus</span>
 </pre></div>
 </div>
 <p>Then we edit the <code class="docutils literal notranslate"><span class="pre">setup</span></code> method to add an instance of our widget.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># Widgets</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span> <span class="o">=</span> <span class="n">PomodoroTimerStatus</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
@@ -907,15 +907,15 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <li><p>Imports:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third-party imports</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qtpy.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="n">QIcon</span>
 
 <span class="c1"># Spyder imports</span>
-<span class="kn">from</span> <span class="nn">spyder.api.plugins</span> <span class="kn">import</span> <span class="n">Plugins</span><span class="p">,</span> <span class="n">SpyderPluginV2</span>
-<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.plugins</span><span class="w"> </span><span class="kn">import</span> <span class="n">Plugins</span><span class="p">,</span> <span class="n">SpyderPluginV2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.translations</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_translation</span>
 
 <span class="c1"># Local imports</span>
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.confpage</span> <span class="kn">import</span> <span class="n">SpyderPomodoroTimerConfigPage</span>
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.container</span> <span class="kn">import</span> <span class="n">SpyderPomodoroTimerContainer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.confpage</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpyderPomodoroTimerConfigPage</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.container</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpyderPomodoroTimerContainer</span>
 
 <span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
 </pre></div>
@@ -923,7 +923,7 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <ul class="simple">
 <li><p>Plugin class:</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Spyder Pomodoro Timer plugin.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -939,25 +939,25 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 
     <span class="c1"># --- SpyderPluginV2 API</span>
     <span class="c1"># ------------------------------------------------------------------------</span>
-    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Spyder Pomodoro Timer&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;A very simple pomodoro timer&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">QIcon</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">on_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SpyderPomodoroTimer initialized!&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">check_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">valid</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># Note: Remember to use _(&quot;&quot;) to localize the string</span>
         <span class="k">return</span> <span class="n">valid</span><span class="p">,</span> <span class="n">message</span>
 
-    <span class="k">def</span> <span class="nf">on_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cancellable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_close</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cancellable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
@@ -967,37 +967,37 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 </pre></div>
 </div>
 <p>Then we need to set the icon for our plugin. For that, we substitute</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qtpy.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="n">QIcon</span>
 
 <span class="c1"># ...</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">QIcon</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>by</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third-party imports</span>
-<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qtawesome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qta</span>
 
 <span class="c1"># Spyder imports</span>
-<span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.utils.icon_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">ima</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_icon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">qta</span><span class="o">.</span><span class="n">icon</span><span class="p">(</span><span class="s2">&quot;mdi.av-timer&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ima</span><span class="o">.</span><span class="n">MAIN_FG_COLOR</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Due to recent changes to the Spyder API, we need to add to the spyder imports</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spyder imports</span>
-<span class="kn">from</span> <span class="nn">spyder.api.plugin_registration.decorators</span> <span class="kn">import</span> <span class="n">on_plugin_available</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.plugin_registration.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">on_plugin_available</span>
 </pre></div>
 </div>
 <p>And add the following after the <code class="docutils literal notranslate"><span class="pre">on_initialize</span></code> method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">on_statusbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_statusbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">statusbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">statusbar</span><span class="p">:</span>
         <span class="n">statusbar</span><span class="o">.</span><span class="n">add_status_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="p">)</span>
@@ -1006,7 +1006,7 @@ The <a class="reference external" href="https://github.com/map0logo/spyder-pomod
 <p>With these changes, Spyder will be aware of the presence of our plugin, and that this plugin adds a new widget to the status bar.</p>
 <p>Finally, we add the following method to our plugin:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">pomodoro_timer_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pomodoro_timer_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">container</span><span class="o">.</span><span class="n">pomodoro_timer_status</span>
 </pre></div>
@@ -1066,14 +1066,14 @@ We created an annex to this workshop that quickly explains way the fundamental c
 As for the update interval of the timer, we set it to to the value of <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code>, which corresponds to 1 second (one thousand milliseconds).</p>
 <p>The function of <code class="docutils literal notranslate"><span class="pre">self.timer</span></code> is to update our timer periodically. This is done through the method <code class="docutils literal notranslate"><span class="pre">timeout.connect()</span></code>, to which we pass as parameter the reference to the <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> function that will perform the required adjustments.</p>
 <p>Now let’s implement <code class="docutils literal notranslate"><span class="pre">update_timer</span></code> at the end of the file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">display_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the time that should be displayed.&quot;&quot;&quot;</span>
 
     <span class="n">minutes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
     <span class="n">seconds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span><span class="p">)</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minutes</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">seconds</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span>
 
-<span class="k">def</span> <span class="nf">update_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates the timer and the current widget. Also, update the</span>
 <span class="sd">    task counter if a task is set.&quot;&quot;&quot;</span>
 
@@ -1096,11 +1096,11 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <p>The next version where actions are added to the toolbar is called <code class="docutils literal notranslate"><span class="pre">ACTIONS</span></code>.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/48a946fdbb934b9b85facd3c1b77fc8999e049a9">TIMER -&gt; ACTIONS widgets.py diff</a></p>
 <p>Let’s go back to <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code> and import the Spyder application toolbar class:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.api.widgets.toolbars</span> <span class="kn">import</span> <span class="n">ApplicationToolbar</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.widgets.toolbars</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationToolbar</span>
 </pre></div>
 </div>
 <p>And create an instance of it by adding the following code before the definition of <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroTimerToolbar</span><span class="p">(</span><span class="n">ApplicationToolbar</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PomodoroTimerToolbar</span><span class="p">(</span><span class="n">ApplicationToolbar</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Toolbar to add buttons to control our timer.&quot;&quot;&quot;</span>
 
     <span class="n">ID</span> <span class="o">=</span> <span class="s1">&#39;pomodoro_timer_toolbar&#39;</span>
@@ -1128,16 +1128,16 @@ As for the update interval of the timer, we set it to to the value of <code clas
 <p>Now we are going to create a new section in our toolbar and associate some functionality to it by means of actions. This particular information is recommended to be included in the <code class="docutils literal notranslate"><span class="pre">api.py</span></code> file because this way we can offer endpoints to the rest of Spyder and new plugins for tweaking the behavior of our plugin.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/cf540f972f37aaf5d6ccc8524cbcc7aeae9c483b">TIMER -&gt; ACTIONS api.py diff</a></p>
 <p>Let’s add the following to the end of <code class="docutils literal notranslate"><span class="pre">api.py</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PomodoroToolbarActions</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PomodoroToolbarActions</span><span class="p">:</span>
     <span class="n">Start</span> <span class="o">=</span> <span class="s1">&#39;start_timer&#39;</span>
     <span class="n">Pause</span> <span class="o">=</span> <span class="s1">&#39;pause_timer&#39;</span>
     <span class="n">Stop</span> <span class="o">=</span> <span class="s1">&#39;stop_timer&#39;</span>
 
 
-<span class="k">class</span> <span class="nc">PomodoroToolbarSections</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PomodoroToolbarSections</span><span class="p">:</span>
     <span class="n">Controls</span> <span class="o">=</span> <span class="s2">&quot;pomodoro_timer&quot;</span>
 
-<span class="k">class</span> <span class="nc">PomodoroMenuSections</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PomodoroMenuSections</span><span class="p">:</span>
     <span class="n">Main</span> <span class="o">=</span> <span class="s2">&quot;main_section&quot;</span>
 </pre></div>
 </div>
@@ -1151,21 +1151,21 @@ As for the update interval of the timer, we set it to to the value of <code clas
 In this case, we are not going to specify the internal behavior of our plugin, but the relationship between its widgets and other areas of Spyder, so it is more convenient to do it in the container.</p>
 <p>As we did with <code class="docutils literal notranslate"><span class="pre">PomodoroTimerStatus</span></code>, we are going to use <code class="docutils literal notranslate"><span class="pre">qtawesome</span></code> icons for our actions. For this purpose, let’s add at the beginning of our imports:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third party imports</span>
-<span class="kn">import</span> <span class="nn">qtawesome</span> <span class="k">as</span> <span class="nn">qta</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QToolButton</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qtawesome</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qtpy.QtWidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">QToolButton</span>
 </pre></div>
 </div>
 <p>We also imported <code class="docutils literal notranslate"><span class="pre">QToolButton</span></code> because it will be used to set the button that we will add in our toolbar.</p>
 <p>At the end of the Spyder imports we also need:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder.utils.icon_manager</span> <span class="kn">import</span> <span class="n">ima</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder.utils.icon_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">ima</span>
 </pre></div>
 </div>
 <p>Now, let’s include <code class="docutils literal notranslate"><span class="pre">PomodoroTimerToolbar</span></code> and the actions and sections we just declared in <code class="docutils literal notranslate"><span class="pre">api.py</span></code> in our local imports:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.widgets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.widgets</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">PomodoroTimerStatus</span><span class="p">,</span>
     <span class="n">PomodoroTimerToolbar</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.api</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.api</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">PomodoroToolbarActions</span><span class="p">,</span>
     <span class="n">PomodoroToolbarSections</span><span class="p">,</span>
     <span class="n">PomodoroMenuSections</span><span class="p">,</span>
@@ -1243,17 +1243,17 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </div>
 <p>When creating the actions, we indicate by means of the <code class="docutils literal notranslate"><span class="pre">triggered</span></code> parameter the methods to be executed when they are activated, i.e. when the corresponding buttons on the toolbar are clicked.</p>
 <p>We can insert these methods at the end of the <code class="docutils literal notranslate"><span class="pre">SpyderPomodoroTimerContainer</span></code> declaration, in the section that our cookiecutter template indicates as <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">---</span> <span class="pre">Public</span> <span class="pre">API</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">start_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">start_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Start the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="k">def</span> <span class="nf">pause_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pause_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Pause the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="k">def</span> <span class="nf">stop_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">stop_pomodoro_timer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Stop the timer.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_timer_status</span><span class="o">.</span><span class="n">pause</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1272,7 +1272,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </div>
 <p>And use this plugin’s API to add the toolbar we have created in the container to Spyder’s toolbar.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">on_toolbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_toolbar_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">container</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_container</span><span class="p">()</span>
     <span class="n">toolbar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">)</span>
     <span class="n">toolbar</span><span class="o">.</span><span class="n">add_application_toolbar</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">pomodoro_timer_toolbar</span><span class="p">)</span>
@@ -1339,20 +1339,20 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Spyder Pomodoro Timer Preferences Page.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QGroupBox</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
-<span class="kn">from</span> <span class="nn">spyder.api.preferences</span> <span class="kn">import</span> <span class="n">PluginConfigPage</span>
-<span class="kn">from</span> <span class="nn">spyder.api.translations</span> <span class="kn">import</span> <span class="n">get_translation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qtpy.QtWidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QGroupBox</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.preferences</span><span class="w"> </span><span class="kn">import</span> <span class="n">PluginConfigPage</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder.api.translations</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_translation</span>
 
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.config</span> <span class="kn">import</span> <span class="n">POMODORO_DEFAULT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">POMODORO_DEFAULT</span>
 
 <span class="n">_</span> <span class="o">=</span> <span class="n">get_translation</span><span class="p">(</span><span class="s2">&quot;spyder_pomodoro_timer.spyder&quot;</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">SpyderPomodoroTimerConfigPage</span><span class="p">(</span><span class="n">PluginConfigPage</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SpyderPomodoroTimerConfigPage</span><span class="p">(</span><span class="n">PluginConfigPage</span><span class="p">):</span>
 
     <span class="c1"># --- PluginConfigPage API</span>
     <span class="c1"># ------------------------------------------------------------------------</span>
-    <span class="k">def</span> <span class="nf">setup_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">limits_group</span> <span class="o">=</span> <span class="n">QGroupBox</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Time limits&quot;</span><span class="p">))</span>
         <span class="n">pomodoro_spin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_spinbox</span><span class="p">(</span>
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Pomodoro timer limit&quot;</span><span class="p">),</span>
@@ -1385,7 +1385,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <p>Since we moved all the configuration information to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, now we have to import it from there into <code class="docutils literal notranslate"><span class="pre">widgets.py</span></code>.</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b94cee118bf887b52934230a35d67a0080551a68">ACTIONS -&gt; CONFPAGE widgets.py diff</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Local imports</span>
-<span class="kn">from</span> <span class="nn">spyder_pomodoro_timer.spyder.config</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spyder_pomodoro_timer.spyder.config</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">CONF_SECTION</span><span class="p">,</span>
     <span class="n">CONF_DEFAULTS</span><span class="p">,</span>
     <span class="n">CONF_VERSION</span><span class="p">,</span>
@@ -1400,7 +1400,7 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 </div>
 <p>Now we can add a method that updates our configurable parameter <code class="docutils literal notranslate"><span class="pre">pomodoro_limit</span></code>. The <code class="docutils literal notranslate"><span class="pre">&#64;on_conf_change</span></code> decorator is the one in charge of capturing the signal that is generated when applying the change of a specific option.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_conf_change</span><span class="p">(</span><span class="n">option</span><span class="o">=</span><span class="s2">&quot;pomodoro_limit&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">set_pomodoro_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_pomodoro_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">countdown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pomodoro_limit</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_time</span><span class="p">()</span>
@@ -1411,14 +1411,14 @@ In this case, we are not going to specify the internal behavior of our plugin, b
 <h3>Registering preferences<a class="headerlink" href="#registering-preferences" title="Link to this heading">#</a></h3>
 <p>Finally, it is necessary to activate the use of preferences in <code class="docutils literal notranslate"><span class="pre">plugin.py</span></code>, by requiring the Preferences plugin</p>
 <p><a class="reference external" href="https://github.com/map0logo/spyder-pomodoro-timer/commit/b238b133d46a52e2d6e57ae938964094a45e7177">ACTIONS -&gt; CONFPAGE plugin.py diff</a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SpyderPomodoroTimer</span><span class="p">(</span><span class="n">SpyderPluginV2</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="n">REQUIRES</span> <span class="o">=</span> <span class="p">[</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">StatusBar</span><span class="p">,</span> <span class="n">Plugins</span><span class="o">.</span><span class="n">Toolbar</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>and registering our plugin in a method with the decorator <code class="docutils literal notranslate"><span class="pre">&#64;on_plugin_available</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@on_plugin_available</span><span class="p">(</span><span class="n">plugin</span><span class="o">=</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">on_preferences_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_preferences_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">preferences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_plugin</span><span class="p">(</span><span class="n">Plugins</span><span class="o">.</span><span class="n">Preferences</span><span class="p">)</span>
     <span class="n">preferences</span><span class="o">.</span><span class="n">register_plugin_preferences</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
@@ -1477,7 +1477,7 @@ Checking<span class="w"> </span>dist/spyder-pomodoro-timer-0.0.1.dev0.tar.gz:<sp
 <p>There we’ll see that some details are missing, like the package description, and that our package is marked as <code class="docutils literal notranslate"><span class="pre">Development</span> <span class="pre">Status</span> <span class="pre">5-Stable</span></code>.</p>
 <p>To fix the first one, we can follow the instructions in <a class="reference external" href="https://packaging.python.org/guides/making-a-pypi-friendly-readme/">Making a PyPI-friendly README</a>. Since we already have a README file, we simply add the following lines to the beginning of our <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># read the contents of your README file</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">this_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
 <span class="n">long_description</span> <span class="o">=</span> <span class="p">(</span><span class="n">this_directory</span> <span class="o">/</span> <span class="s2">&quot;README.md&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
 
@@ -1677,7 +1677,7 @@ Specifically in <code class="docutils literal notranslate"><span class="pre">set
 
   <p class="copyright">
     
-      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      © Copyright  2009-2026 Spyder Doc Contributors; MIT License.
       <br/>
     
   </p>
@@ -1686,7 +1686,7 @@ Specifically in <code class="docutils literal notranslate"><span class="pre">set
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

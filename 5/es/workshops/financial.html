@@ -28,10 +28,10 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=a967d746" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=38e29e3d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -620,16 +620,16 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>You can also write your code in the Editor (the pane that occupies the entire left side of Spyder). If you use the Editor, you can run the code by selecting it and pressing the <span class="guilabel">Run selection or current line</span> button in the <span class="guilabel">Run toolbar</span> or by pressing the <kbd class="kbd docutils literal notranslate">F9</kbd> key.</p>
 <img alt="Editor location in Spyder IDE" src="../_images/editor-in-context.png" />
 <p>To get started, import the libraries.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 
-<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">Cryptocurrencies</span>
-<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">HistoricalData</span>
-<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Historic_Crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cryptocurrencies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Historic_Crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">HistoricalData</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yfinance</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">yf</span>
 </pre></div>
 </div>
 <p>The first group of imports is for basic operations. The second (<code class="docutils literal notranslate"><span class="pre">Historic_Crypto</span></code> and <code class="docutils literal notranslate"><span class="pre">yfinance</span></code>) imports the libraries that we will use to download financial data.</p>
@@ -783,7 +783,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <p>With this information we can calculate the expected return of this portfolio. The math is simple: this is given by the dot product of the portfolio weights vector and the vector of expected returns. This result must be multiplied by the number of days for which the return is to be calculated (a year has approximately 252 stock price closings).</p>
 <p>Let’s put all this into a function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">returns</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">weights</span><span class="p">)</span> <span class="o">*</span> <span class="mi">252</span>
 </pre></div>
 </div>
@@ -794,7 +794,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>An expected gain of almost 30% in one year. Not bad, right? But don’t forget the other side of this coin: volatility. This calculation is a bit more complex. First, the dot product of the annualized covariance of the returns (this is multiplied by the number of trading days in a year) and the weights is calculated. Then the dot product of the weights and the previous result is obtained. Finally, the square root of this result is extracted. Let’s implement this into a function as well.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">returns</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span> <span class="o">*</span> <span class="mi">252</span><span class="p">,</span> <span class="n">weights</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
 </pre></div>
 </div>
@@ -810,7 +810,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <h3>Sharpe ratio<a class="headerlink" href="#sharpe-ratio" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sharpe_ratio">Sharpe</a> ratio or index is a measure of portfolio performance. It relates the portfolio’s return to its volatility, comparing the expected/realized return with the expected/realized risk. It is calculated as the difference between the actual investment returns and the expected return in a zero-risk situation, divided by the volatility of the investment. <strong>It provides a model of the additional amount of returns received for each additional unit of risk</strong>.</p>
 <p>Let’s formalize this in a function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">portfolio_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">portfolio_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">portfolio_return</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span> <span class="o">/</span> <span class="n">portfolio_volatility</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -826,7 +826,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <p>We can also use a <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation to randomize the weights of each stock in the portfolio so that we can see the range over which the Sharpe ratio can vary. In this way we can plot some scenarios that together will give us a good insight of the relationship between expected returns and expected volatility.</p>
 <p>We are going to do this with a function that we will explain step by step in the <a class="reference internal" href="#monte-carlo-sharpe-function-explained">monte_carlo_sharpe function explained</a> section.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">monte_carlo_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">monte_carlo_sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
 
     <span class="n">sim_weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)))</span>
     <span class="n">sim_weights</span> <span class="o">=</span> <span class="p">(</span><span class="n">sim_weights</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="n">sim_weights</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
@@ -894,7 +894,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </pre></div>
 </div>
 <p>We will now write a function to calculate these optimal weights.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">optimal_weights</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">actual_weights</span><span class="p">,</span> <span class="n">start_y</span><span class="p">,</span> <span class="n">end_y</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">optimal_weights</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">actual_weights</span><span class="p">,</span> <span class="n">start_y</span><span class="p">,</span> <span class="n">end_y</span><span class="p">):</span>
 
     <span class="n">bounds</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)</span> <span class="o">*</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">]</span>
     <span class="n">constraints</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;fun&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">weights</span><span class="p">:</span> <span class="n">weights</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">}</span>
@@ -922,7 +922,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <section id="comparison-of-expected-and-realized-returns">
 <h3>Comparison of expected and realized returns<a class="headerlink" href="#comparison-of-expected-and-realized-returns" title="Link to this heading">#</a></h3>
 <p>Finally, we will use the optimal weights to calculate the expected returns and compare them with the actual returns.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">exp_real_rets</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">exp_real_rets</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">opt_weights</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
 
     <span class="n">_rets</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
@@ -1109,8 +1109,8 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>If you want to make use of the data without the Historic-Crypto library, you can <a class="reference external" href="https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215">download the dataset</a> «crypto_hist.csv» in your working directory, and load it in memory with the instruction <code class="docutils literal notranslate"><span class="pre">crypto_hist</span> <span class="pre">=</span> <span class="pre">pd.read_csv(&quot;crypto_hist.csv&quot;)</span></code>, and skip to section <a class="reference internal" href="#monthly-data">Monthly data</a>.</p>
 </div>
 <p>Import the libraries:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">Cryptocurrencies</span>
-<span class="kn">from</span> <span class="nn">Historic_Crypto</span> <span class="kn">import</span> <span class="n">HistoricalData</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">Historic_Crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cryptocurrencies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Historic_Crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">HistoricalData</span>
 </pre></div>
 </div>
 <p>We are going to use the <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> class to obtain a list of available cryptocurrencies.</p>
@@ -1119,7 +1119,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>If you want more information about the use of this library you can make a quick query using the Spyder Help panel (type in the console <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> and use <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> to display it). Or you can read the documentation in their <a class="reference external" href="https://github.com/David-Woroniuk/Historic_Crypto">official repository</a></p>
+<p>If you want more information about the use of this library you can make a quick query using the Spyder Help panel (type in the console <code class="docutils literal notranslate"><span class="pre">Cryptocurrencies</span></code> and use <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> or <kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> to display it). Or you can read the documentation in their <a class="reference external" href="https://github.com/David-Woroniuk/Historic_Crypto">official repository</a></p>
 </div>
 <p>A new variable has appeared in the Variable Explorer: <code class="docutils literal notranslate"><span class="pre">crypto_list</span></code>. It is a Pandas DataFrame that has a basic description of the types of cryptocurrency transactions. For example, we can look up which token is the token for ethereum transactions in US dollars.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crypto_list</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">crypto_list</span><span class="o">.</span><span class="n">base_currency</span> <span class="o">==</span> <span class="s2">&quot;ETH&quot;</span><span class="p">]</span>
@@ -1379,7 +1379,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 
   <p class="copyright">
     
-      © Copyright  2009-2024 Spyder Doc Contributors; MIT License.
+      © Copyright  2009-2026 Spyder Doc Contributors; MIT License.
       <br/>
     
   </p>
@@ -1388,7 +1388,7 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
