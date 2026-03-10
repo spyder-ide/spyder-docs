@@ -361,3 +361,9 @@ a.dropdown-link:focus {
   color: #fff;
   text-decoration: none;
 }
+
+/* Override image filters */
+
+html[data-theme="dark"] img {
+  filter: none !important;
+}
