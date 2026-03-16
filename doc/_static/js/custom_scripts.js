@@ -6,7 +6,7 @@
   /* Top-level variables */
 
   // Name of the dropdown class to check for
-  const dropdownClassName = "dropdown";
+  const dropdownClassName = "sd-dropdown";
 
   // Interactive tour driver options
   const quickstartDriverOptions = {
@@ -251,16 +251,19 @@
       }
 
       const aTag = document.createElement("a");
+      const fasSpan = document.createElement("span");
+      aTag.appendChild(fasSpan);
+
       aTag.setAttribute("href", "#" + dropdowns[i].id);
-      aTag.classList.add("fas");
-      aTag.classList.add("fa-link");
       aTag.classList.add("dropdown-link");
+      fasSpan.classList.add("fas");
+      fasSpan.classList.add("fa-link");
 
       const summaryElement =
-        dropdowns[i].getElementsByClassName("summary-title")[0];
+        dropdowns[i].getElementsByClassName("sd-summary-title")[0];
       summaryElement.insertBefore(
         aTag,
-        summaryElement.getElementsByClassName("docutils")[0],
+        summaryElement.getElementsByClassName("sd-summary-state-marker")[0],
       );
     }
   }
