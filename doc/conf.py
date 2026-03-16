@@ -205,13 +205,12 @@ html_js_files = [
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
-# The default sidebars (for documents that don't match any pattern) are
-# defined by theme itself.  Builtin themes are using these templates by
-# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
-# 'searchbox.html']``.
-#
+# Hack to fix pydata/pydata-sphinx-theme#1662
+# https://github.com/pydata/pydata-sphinx-theme/issues/1662
 html_sidebars = {
-    "**": ["sidebar-nav-bs"],
+    "quickstart": [],
+    "installation": [],
+    "faq": [],
 }
 
 # Additional templates that should be rendered to pages, maps page names to

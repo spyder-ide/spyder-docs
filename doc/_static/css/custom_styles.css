@@ -30,7 +30,7 @@ section img {
   color: #36557c;
   display: inline-block;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 26px;
   font-style: normal;
   font-variant: normal;
@@ -44,7 +44,7 @@ section img {
 
 .fabb::before {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 /* Ensure FA icons applied to section divs display inline */
@@ -305,7 +305,7 @@ table.installer-table td {
 
 table.installer-table tbody td p::before {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 table.installer-table tbody td:nth-child(1) p,
