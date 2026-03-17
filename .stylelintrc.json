@@ -1,10 +1,13 @@
 {
   "extends": ["stylelint-config-standard"],
+  "fix": "strict",
+  "maxWarnings": 0,
   "reportDescriptionlessDisables": true,
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
+  "reportUnscopedDisables": true,
   "plugins": [
-    "@carlosjeurissen/stylelint-csstree-validator",
+    "stylelint-csstree-validator",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",
     "stylelint-order"

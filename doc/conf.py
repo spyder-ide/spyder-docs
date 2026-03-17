@@ -380,7 +380,6 @@ class Youtube(IFrameVideo):
             '<iframe src="https://www.youtube.com/embed/%(video_id)s',
             '?start=%(start)s" ',
             'width="%(width)u" height="%(height)u" frameborder="0" ',
-            # pylint: disable = inconsistent-quotes
             "webkitAllowFullScreen mozallowfullscreen allowfullscreen ",
             'class="align-%(align)s"></iframe></div></div>',
         ]

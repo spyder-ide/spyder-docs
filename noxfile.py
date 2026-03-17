@@ -15,7 +15,6 @@ from pathlib import Path
 import nox  # pylint: disable=import-error
 import nox.logger  # pylint: disable=import-error
 
-
 # --- Global constants --- #
 
 nox.options.error_on_external_run = True
