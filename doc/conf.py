@@ -311,9 +311,11 @@ linkcheck_ignore = [
     r"https://(www\.)?github\.com/.+/commit/.+",
     r"https://(www\.)?figshare\.com/?.*",
     # Blocks GitHub Actions
+    r"https://(www\.)?guru99\.com/?.*",
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
     # Temporary until removed (flaky/no longer used)
+    r"https://(www\.)?opencollective\.org/?.*",
     r"https://(www\.)?openteams\.com/?.*",
 ]
 
