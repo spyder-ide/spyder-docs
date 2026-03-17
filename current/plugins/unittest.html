@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spyder Unittest &#8212; Spyder 5 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=b1564301" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script src="../_static/documentation_options.js?v=d5d7d944"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'plugins/unittest';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/custom_scripts.js?v=e20826ca"></script>
+    <script src="../_static/js/language-switcher.js?v=3f553729"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Workshops" href="../workshops/index.html" />
+    <link rel="prev" title="Spyder Terminal" href="terminal.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="Spyder 5 documentation - Home"/>
+    <script>document.write(`<img src="../_static/spyder_logo.svg" class="logo__image only-dark" alt="Spyder 5 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+      <div class="navbar-item">
+<div class="language-switcher__container dropdown pst-js-only">
+  <button id="pst-language-switcher-button-2"
+    type="button"
+    class="language-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-language-switcher-list-2"
+    aria-label="Language switcher list"
+  >
+    Choose language  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-language-switcher-list-2"
+    class="language-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-language-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Tour
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Install Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../videos/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../panes/index.html">
+                        Panes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Plugins
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../workshops/index.html">
+                        Workshops
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+                        Troubleshooting
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../quickstart.html">
+                        Tour
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Install Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../videos/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../panes/index.html">
+                        Panes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Plugins
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../workshops/index.html">
+                        Workshops
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+                        Troubleshooting
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lineprofiler.html">Spyder Line Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Spyder Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Spyder Terminal</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Spyder Unittest</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Plugins</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Spyder Unittest</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="spyder-unittest">
+<h1>Spyder Unittest<a class="headerlink" href="#spyder-unittest" title="Link to this heading">#</a></h1>
+<p><strong>Spyder-unittest</strong> is a plugin that allows you to run automatic tests within Spyder and view the results.</p>
+<img alt="Spyder Unittest plugin in Spyder" src="../_images/unittest-standard.png" />
+<p>Spyder-unittest can run tests written using the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module in the Python library or the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library.</p>
+<section id="installing-the-plugin">
+<h2>Installing the plugin<a class="headerlink" href="#installing-the-plugin" title="Link to this heading">#</a></h2>
+<p>If you installed Spyder using conda, the best way to install Spyder-unittest is to run the following command in your Terminal or Anaconda prompt on Windows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>spyder-unittest<span class="w"> </span>-c<span class="w"> </span>spyder-ide
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>At the moment it is not possible to use this plugin with the Spyder <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> for Windows and macOS.
+We’re working to add support for them in the future.</p>
+</div>
+<p>Restart Spyder in order to be able to use the plugin.</p>
+<p>When the Unittest plugin is installed, it will be available under the menu item <span class="menuselection">View ‣ Panes ‣ Unittest</span>.</p>
+<img alt="Spyder showing View Panes Unittest" src="../_images/unittest-view-panes.png" />
+<p>You will see it then as a tab next to the <span class="guilabel">Files</span> tab.</p>
+<p>If you plan to use the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library, then you also need to make sure that the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library is installed.
+This needs to be done in the Python environment that Spyder uses to run your code, which can be specified under <span class="menuselection">Preferences ‣ Python interpreter</span>.
+The <code class="docutils literal notranslate"><span class="pre">pyzeromq</span></code> library also needs to be installed in the same environment.
+However, this is likely already the case, because you need the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> to be installed in order for Spyder to use the environment and <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> depends on <code class="docutils literal notranslate"><span class="pre">pyzeromq</span></code>.</p>
+</section>
+<section id="running-tests">
+<h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<p>The first step is to write the automatic tests.
+Follow the usual instructions for the framework that you are using:</p>
+<ul class="simple">
+<li><p>If you use the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module in the standard Python library, see this <a class="reference external" href="https://docs.python.org/library/unittest.html#basic-example">basic example</a>.</p></li>
+<li><p>If you use the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library, see this <a class="reference external" href="https://docs.pytest.org/en/latest/#a-quick-example">quick example</a>.</p></li>
+</ul>
+<p>After the automatic tests are written, they can be executed.
+To run the tests, either use <span class="menuselection">Run ‣ Run unit tests</span> menu item or click on the “Start” button with the green triangle (▷) icon in the Unit testing pane.
+The first time that you run the tests, a configuration window will pop up where you need to specify the testing framework.
+All options in the configuration window are explained in the section <a class="reference internal" href="#unittest-configuration"><span class="std std-ref">Configuration</span></a> below.</p>
+<img alt="Spyder running tests using the Run button and the Run menu item" src="../_images/unittest-run.gif" />
+<p>After running the tests, the results will appear in the Unit Testing pane.
+If you use the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module, then the results will only appear after all the tests have been run.
+If you use the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library, then the results will be continuously updated, as shown in the image below.
+A summary of the results is displayed at the top of the Unit Testing pane; in the image below, this is “1 test failed, 3 passed, 1 other”.
+If no tests are found, then the summary will read “No results to show”.</p>
+<img alt="Unit Testing pane with test results coming in slowly" src="../_images/unittest-slow-run.gif" />
+</section>
+<section id="viewing-test-results">
+<h2>Viewing test results<a class="headerlink" href="#viewing-test-results" title="Link to this heading">#</a></h2>
+<p>The Unit Testing pane shows the results after running the tests.
+The top shows a summary of test results in the form “xxx tests passed, xxx failed, xxx other”.
+The results of the individual tests are displayed in a table occupying most of the pane.</p>
+<img alt="Unit testing pane with test results" src="../_images/unittest-results.png" />
+<p>Every row in the table corresponds to one test.
+The color indicates the result of that test: green for success, red for failure, and yellow for the rest.
+The table has four columns:</p>
+<ol class="arabic simple">
+<li><p>The first column shows the outcome of the test.
+This is commonly “passed” or “failed”, but there are more possibilities depending on the testing framework.</p></li>
+<li><p>The second column shows the name of the test.
+To save space, components of the test name are abbreviated in a way that still makes the names unique.
+If you hoover over the abbreviated test name, then a tool tip with the full test name will appear.</p></li>
+<li><p>The third column may show some extra information, for instance an error message if the test failed.</p></li>
+<li><p>The fourth column shows the time (in milliseconds) that it took to run the test.
+The <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module does not report the time, so if you use the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module as your testing framework then this column will be empty.</p></li>
+</ol>
+<p>Initially, the test results are shown in the order in which the tests are run.
+You can sort the test results on one of the four columns by clicking on the column header.
+In particular, you can sort on the outcome of the test by clicking on the header of the first column, as shown in the picture below.
+This allows you to quickly locate failing tests if you have a big test suite with many tests.</p>
+<img alt="Unit Testing pane with many test results; after sorting by outcome, the one test failure appears at the top" src="../_images/unittest-sort.gif" />
+<p>Some tests, especially failing tests, have more than one line of information.
+To display all the output,
+This extra information is not shown by default.
+To expand a row and show the extra information of a particular test, click on the icon at the start of the line.
+The options menu of the Unit testing pane (“Hamburger” icon at top right) also contains the item <span class="menuselection">Expand all</span>, which expands all the rows in the table.
+The menu item <span class="menuselection">Collapse all</span> does the opposite.</p>
+<img alt="Expanding and collapsing test results in the Unit Testing pane" src="../_images/unittest-expand-collapse.gif" />
+<p>If you double click on a test result, then the <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> pane will jump to the location where this test is defined.
+Unfortunately, this functionality is only available if you use the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> framework.
+The <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module does not record the test location.</p>
+<img alt="Spyder's editor displaying the source code of a test after doubling clicking on it in the Unit testing pane" src="../_images/unittest-goto.gif" />
+<p>Finally, if you want to look at the raw output of the test run, then click on the <span class="menuselection">Show output</span> item in the options menu of the Unit testing pane.
+This is a good troubleshooting tool if the results are not what you expect, for instance if no tests are found while you are certain that you wrote some tests.</p>
+<img alt="Spyder shows the output of the test run after clicking on the &quot;Show output&quot; menu item" src="../_images/unittest-show-output.gif" />
+</section>
+<section id="configuration">
+<span id="unittest-configuration"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
+<p>You can change the configuration of the spyder-unittest plugin by clicking on the <span class="menuselection">Configure</span> item in the options menu of the Unit testing pane.
+This will show the configuration window, shown below.
+The configuration window will also appear whenever there is no valid configuration for the plugin, for instance on the first time that you run tests.</p>
+<img alt="The test configuration window" src="../_images/unittest-configure.png" />
+<p>There are two important configuration options that you need to set correctly.
+Firstly, you need to pick the testing framework.
+You can use either the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module in the standard Python library or the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library.
+Actually, there is a third possibility for the testing framework, the <code class="docutils literal notranslate"><span class="pre">nose</span></code> library, but this choice is deprecated and we plan to remove it in the next version of the plugin.</p>
+<p>Secondly, you need to specify the directory in which the tests are stored.
+Spyder will find all the test in the specified directory and its subdirectories (at any level) according to the test discovery rules of the testing framework that you are using.</p>
+<p>The plugin can also display testing coverage: which lines of your code are executed when the tests are run.
+This functionality is only available when using the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> framework.
+You also need to install the <code class="docutils literal notranslate"><span class="pre">pytest-cov</span></code> library in the Python environment that Spyder uses to run your code before you can do coverage testing.
+There is an option in the configuration window to turn on coverage testing.
+After running the tests, the coverage results will be displayed under all the test results.</p>
+<img alt="Unit testing pane showing test results and coverage" src="../_images/unittest-coverage.png" />
+<p>Spyder saves the testing configuration sp that you do not have to specify it every time that you want to run the tests.
+If you use Spyder <a class="reference internal" href="../panes/projects.html"><span class="doc">Projects</span></a>, then the testing configuration is associated to the currently open project and will be stored with the project configuration.
+If no project is open, then the testing configuration is stored in the global Spyder configuration.</p>
+<p>The <span class="menuselection">Dependencies</span> item in the options menu of the Unit testing pane displays a window showing which testing frameworks are installed in the Python environment that Spyder uses to run tests.
+The window also shows any plugins that come with the testing framework and the versions of the testing frameworks and the plugins.
+A side-effect of this command is that Spyder will pick up any testing frameworks that were installed since Spyder was started.</p>
+<img alt="The Unittest dependencies window" src="../_images/unittest-dependencies.png" />
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="terminal.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Spyder Terminal</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../workshops/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Workshops</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-plugin">Installing the plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-tests">Running tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-test-results">Viewing test results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/plugins/unittest.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2026 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
