@@ -244,7 +244,7 @@ Using Spyder
 .. dropdown:: Q: How do I change Spyder's language?
    :name: using-change-language
 
-   Under :guilabel:`General` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
+   Under :guilabel:`Application` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
 
    .. image:: /images/faq/faq-change-language.png
       :alt: Spyder change language in preferences.
