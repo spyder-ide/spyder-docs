@@ -435,11 +435,11 @@ def _patch_theme_css_language_switcher(build_dir):
 
     modify_asset(
         pattern=(
-            r"([\{\}\,])([^\{\}\,]*)"
+            r"(?<=[\{\}\,])([^\{\}\,]*)"
             r"version-switcher__(container|button|menu)"
-            r"([^\{\,]*)([\{\,])"
+            r"([^\{\,]*)(?=[\{\,])"
         ),
-        replacement=r"\1\2version-switcher__\3\4,\2language-switcher__\3\4\5",
+        replacement=r"\1version-switcher__\2\3,\1language-switcher__\2\3",
         asset_path=theme_css_path,
     )
 

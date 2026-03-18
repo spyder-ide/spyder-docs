@@ -177,10 +177,12 @@ div#driver-popover-item .tour-progress-indicator {
   font-weight: bold;
 }
 
-/* Version selector using PyData Sphinx Theme features */
+/* Version and language selectors */
 
 /* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
-.version-switcher__button {
+.version-switcher__button,
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.language-switcher__button {
   margin-bottom: 0 !important;
 }
 
