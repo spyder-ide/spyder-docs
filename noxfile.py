@@ -2,12 +2,15 @@
 
 # Standard library imports
 import contextlib
+import http.server
 import logging
 import os
 import re
-import tempfile
 import shutil
 import sys
+import tempfile
+import threading
+import time
 import webbrowser
 from pathlib import Path
 
@@ -40,6 +43,9 @@ SOURCE_STATIC_DIR = SOURCE_DIR / STATIC_DIR_NAME
 HTML_BUILDER = "html"
 HTML_BUILD_DIR = BUILD_DIR / HTML_BUILDER
 HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
+
+SERVE_IP = "127.0.0.1"
+SERVE_PORT = 5000
 
 SOURCE_LANGUAGE = "en"
 TRANSLATION_LANGUAGES = ("es",)
@@ -80,6 +86,24 @@ def modify_asset(pattern, replacement, asset_path):
     source_content = Path(asset_path).read_text(encoding="UTF-8")
     modified_content = re.sub(pattern, replacement, source_content)
     Path(asset_path).write_text(modified_content, encoding="UTF-8")
+
+
+def start_server(
+    ip_address=SERVE_IP, port=SERVE_PORT, directory=HTML_BUILD_DIR
+):
+    """Start a HTTP server for serving built HTML content."""
+
+    class HTTPHandler(http.server.SimpleHTTPRequestHandler):
+        """HTTP handler with quiet logging serving a specified directory."""
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=directory, **kwargs)
+
+        def log_request(self, *args, **kwargs):
+            pass
+
+    httpd = http.server.HTTPServer((ip_address, port), HTTPHandler)
+    httpd.serve_forever()
 
 
 def split_sequence(seq, *, sep="--"):
@@ -482,13 +506,21 @@ def build_multilanguage(session):
 
 
 def _serve(session=None):
-    """Open the docs in a web browser."""
+    """Open the built content in a web browser."""
     _serve_docs(session)
 
 
 def _serve_docs(_session=None):
-    """Open the docs in a web browser."""
-    webbrowser.open(HTML_INDEX_PATH.as_uri())
+    """Start a web server for the built docs and open them in a web browser."""
+    threading.Thread(target=start_server).start()
+    url = f"http://{SERVE_IP}:{SERVE_PORT}"
+    webbrowser.open_new(url)
+
+    while True:
+        try:
+            time.sleep(0.1)
+        except KeyboardInterrupt:
+            sys.exit(0)
 
 
 @nox.session
