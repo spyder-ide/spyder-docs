@@ -39,19 +39,6 @@ Our `YouTube channel`_ contains helpful videos that will guide you through many 
 .. _YouTube channel: https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg
 
 
-.. rst-class:: fabb fa-gitlab
-
-.. _troubleshooting-help-spyder-gitter:
-
-Spyder Gitter
-~~~~~~~~~~~~~
-
-We have a public `Gitter room`_ where you can chat directly with the Spyder developers.
-If you've got a quick question to ask the team and are looking for a quick answer, this is a great place to go.
-
-.. _gitter room: https://gitter.im/spyder-ide/public
-
-
 .. rst-class:: fabb fa-google
 
 .. _troubleshooting-help-spyder-group:
@@ -87,19 +74,6 @@ Stack Overflow tag
 It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
-
-
-.. rst-class:: fabb openteams-icon
-
-.. _troubleshooting-help-spyder-openteams:
-
-OpenTeams support
-~~~~~~~~~~~~~~~~~
-
-On `OpenTeams`_, you can get help from expert Spyder consultants.
-OpenTeams offers services from Spyder experts ranging from a brief consultation to an experienced team to help you with a large scale implementation project.
-
-.. _OpenTeams: https://www.openteams.com/oss-spyder/
 
 
 .. rst-class:: fa-offset-h3

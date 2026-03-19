@@ -104,7 +104,7 @@ DataFrames, like Numpy arrays, display in a viewer where you can show or hide "h
 .. image:: /images/variable_explorer/variable-explorer-dataframe.png
    :alt: Dataframe editor showing data frame "heatmap"
 
-Additionally, starting in Spyder 4, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.
+Additionally, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.
 
 
 .. image:: /images/variable_explorer/variable-explorer-multi-index.png
