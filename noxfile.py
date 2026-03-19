@@ -47,6 +47,8 @@ HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 SERVE_IP = "127.0.0.1"
 SERVE_PORT = 5000
 
+LINT_INVOCATION = ("prek",)
+
 SOURCE_LANGUAGE = "en"
 TRANSLATION_LANGUAGES = ("es",)
 ALL_LANGUAGES = (SOURCE_LANGUAGE,) + TRANSLATION_LANGUAGES
@@ -584,9 +586,9 @@ def build_deployment(session):
 
 
 def _install_hooks(session):
-    """Run pre-commit install to install the project's hooks."""
+    """Install the project's pre-commit hooks."""
     session.run(
-        "pre-commit",
+        *LINT_INVOCATION,
         "install",
         "--hook-type",
         "pre-commit",
@@ -602,9 +604,9 @@ def install_hooks(session):
 
 
 def _uninstall_hooks(session):
-    """Run pre-commit uninstall to uninstall the project's hooks."""
+    """Uninstall the project's pre-commit hooks."""
     session.run(
-        "pre-commit",
+        *LINT_INVOCATION,
         "uninstall",
         "--hook-type",
         "pre-commit",
@@ -620,10 +622,14 @@ def uninstall_hooks(session):
 
 
 def _lint(session):
-    """Run linting on the project via pre-commit."""
+    """Run linting on the project."""
     extra_options = ["--show-diff-on-failure"] if CI else []
     session.run(
-        "pre-commit", "run", "--all", *extra_options, *session.posargs[1:]
+        *LINT_INVOCATION,
+        "run",
+        "--all-files",
+        *extra_options,
+        *session.posargs[1:],
     )
 
 
