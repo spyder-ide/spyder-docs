@@ -6,7 +6,7 @@
   /* Top-level variables */
 
   // Name of the dropdown class to check for
-  const dropdownClassName = "dropdown";
+  const dropdownClassName = "sd-dropdown";
 
   // Interactive tour driver options
   const quickstartDriverOptions = {
@@ -70,7 +70,7 @@
       popover: {
         title: "Editor",
         description:
-          'The <a href="editor.html">Editor</a> is the pane where you can create, open and edit files. It contains useful features like autocompletion, real-time analysis and syntax highlighting.',
+          'The <a href="panes/editor.html">Editor</a> is the pane where you can create, open and edit files. It contains useful features like autocompletion, real-time analysis and syntax highlighting.',
         position: "right",
       },
     },
@@ -79,7 +79,7 @@
       popover: {
         title: "IPython Console",
         description:
-          'The <a href="ipythonconsole.html">Console</a> allows you to run your code from the Editor or interactively. You can also use it to control Spyder’s debugger.',
+          'The <a href="panes/ipythonconsole.html">Console</a> allows you to run your code from the Editor or interactively. You can also use it to control Spyder’s debugger.',
         position: "left",
       },
     },
@@ -88,7 +88,7 @@
       popover: {
         title: "Help",
         description:
-          'The <a href="help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To trigger Help, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the Object field.',
+          'The <a href="panes/help.html">Help</a> pane displays documentation for the objects you are using in the Editor or the IPython Console. To trigger Help, press Ctrl-I (Cmd-I on macOS) with your cursor over an object, or type its name in the Object field.',
         position: "left",
       },
     },
@@ -97,7 +97,7 @@
       popover: {
         title: "Variable Explorer",
         description:
-          'The <a href="variableexplorer.html">Variable Explorer</a> allows you to browse and interact with the objects generated when running your code. Double-clicking a variable will open a specialized viewer, allowing you to inspect its contents.',
+          'The <a href="panes/variableexplorer.html">Variable Explorer</a> allows you to browse and interact with the objects generated when running your code. Double-clicking a variable will open a specialized viewer, allowing you to inspect its contents.',
         position: "left",
       },
     },
@@ -106,7 +106,7 @@
       popover: {
         title: "Plots",
         description:
-          'The <a href="plots.html">Plots</a> pane shows the figures and images created during your code execution. It allows you to browse, zoom, copy, and save the generated plots.',
+          'The <a href="panes/plots.html">Plots</a> pane shows the figures and images created during your code execution. It allows you to browse, zoom, copy, and save the generated plots.',
         position: "left",
       },
     },
@@ -115,7 +115,7 @@
       popover: {
         title: "Files",
         description:
-          'The <a href="fileexplorer.html">Files</a> pane lets you browse the directories on your computer, open files in the Editor, and perform a variety of other operations.',
+          'The <a href="panes/fileexplorer.html">Files</a> pane lets you browse the directories on your computer, open files in the Editor, and perform a variety of other operations.',
         position: "left",
       },
     },
@@ -124,7 +124,7 @@
       popover: {
         title: "Find",
         description:
-          'The <a href="findinfiles.html">Find</a> pane allows you to search for text in a given directory and navigate through all the found occurrences.',
+          'The <a href="panes/findinfiles.html">Find</a> pane allows you to search for text in a given directory and navigate through all the found occurrences.',
         position: "left",
       },
     },
@@ -133,7 +133,7 @@
       popover: {
         title: "Profiler",
         description:
-          'The <a href="profiler.html">Profiler</a> helps you optimize your code by determining the run time and number of calls for every function and method used in a file. It also allows you to save and compare your results between runs.',
+          'The <a href="panes/profiler.html">Profiler</a> helps you optimize your code by determining the run time and number of calls for every function and method used in a file. It also allows you to save and compare your results between runs.',
         position: "left",
       },
     },
@@ -142,7 +142,7 @@
       popover: {
         title: "Code Analysis",
         description:
-          'The <a href="pylint.html">Code Analysis</a> helps you improve the quality of your programs by detecting style issues, bad practices and potential bugs.',
+          'The <a href="panes/pylint.html">Code Analysis</a> helps you improve the quality of your programs by detecting style issues, bad practices and potential bugs.',
         position: "left",
       },
     },
@@ -251,16 +251,19 @@
       }
 
       const aTag = document.createElement("a");
+      const fasSpan = document.createElement("span");
+      aTag.appendChild(fasSpan);
+
       aTag.setAttribute("href", "#" + dropdowns[i].id);
-      aTag.classList.add("fas");
-      aTag.classList.add("fa-link");
       aTag.classList.add("dropdown-link");
+      fasSpan.classList.add("fas");
+      fasSpan.classList.add("fa-link");
 
       const summaryElement =
-        dropdowns[i].getElementsByClassName("summary-title")[0];
+        dropdowns[i].getElementsByClassName("sd-summary-title")[0];
       summaryElement.insertBefore(
         aTag,
-        summaryElement.getElementsByClassName("docutils")[0],
+        summaryElement.getElementsByClassName("sd-summary-state-marker")[0],
       );
     }
   }
