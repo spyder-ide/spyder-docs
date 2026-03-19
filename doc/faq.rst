@@ -42,7 +42,7 @@ Installing and updating
 
    It will run the kernel as a subprocess and create a file named :file:`remotemachine.json` in your WSL home folder.
 
-   Finally, under the options menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`connecting-external-kernel`.
+   Finally, under the options menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`panes-console-external`.
    Insert the absolute path of :file:`remotemachine.json` into the :guilabel:`Connection file` field.
    If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`.
    A new console will open in Spyder, running in the Linux environment.
@@ -351,14 +351,14 @@ Troubleshooting
    If nothing is displayed in the calltip, hover hint or :doc:`/panes/help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`/panes/ipythonconsole` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`troubleshooting-common-completion` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
    :name: troubleshooting-starting-kernel
 
    First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
-   See the table in the :ref:`spyder-kernels-version-ref` section of the troubleshooting guide to check.
+   See the table in the :ref:`troubleshooting-common-kernel-version` section of the troubleshooting guide to check.
 
    To install the right version, type the following on the command line (or Anaconda Prompt on Windows)
 
@@ -366,7 +366,7 @@ Troubleshooting
 
       conda install spyder-kernels=<VERSION>
 
-   For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`troubleshooting-common-kernel` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: Spyder doesn't launch or is slow on macOS Big Sur. How can I get it working?

@@ -6,7 +6,7 @@ Projects
 ########
 
 Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :doc:`editor` from the last time you opened that project.
-With the :ref:`Project <project-explorer>` pane, you can browse all your project's files, regardless of your current working directory or :doc:`fileexplorer` location.
+With the :guilabel:`Projects` pane, you can browse all your project's files, regardless of your current working directory or :doc:`fileexplorer` location.
 
 .. image:: /images/projects/projects-main.png
    :alt: Spyder showing Project Explorer and projects menu
@@ -40,7 +40,7 @@ Using the Projects Pane
 =======================
 
 Once a :guilabel:`Project` is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current :guilabel:`Project`'s files and directories.
-It allows you to perform all the same :ref:`operations<file-operations>` as Spyder's :doc:`fileexplorer` pane.
+It allows you to perform all the same :ref:`operations <panes-files-operations>` as Spyder's :doc:`fileexplorer` pane.
 
 .. image:: /images/projects/projects-standard.png
    :alt: Spyder Project Explorer, displaying a directory tree of project files
@@ -54,7 +54,7 @@ It allows you to perform all the same :ref:`operations<file-operations>` as Spyd
 Working with version control
 ============================
 
-The :guilabel:`Project` pane has basic integration with the `Git`_ distributed version control system, just like :ref:`in the Files pane<files-vcs-support>`.
+The :guilabel:`Project` pane has basic integration with the `Git`_ distributed version control system, just like :ref:`in the Files pane <panes-files-vcs>`.
 You can commit or browse a file, directory or the entire repository via the commands in the context menu.
 
 .. _Git: https://git-scm.com/

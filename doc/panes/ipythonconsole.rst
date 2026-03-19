@@ -28,7 +28,7 @@ As each console is executed in a separate process, this won't affect any others 
 Supported features
 ==================
 
-Any :guilabel:`IPython Console`, whether :ref:`external<connecting-external-kernel>` or started by Spyder, supports:
+Any :guilabel:`IPython Console`, whether :ref:`external <panes-console-external>` or started by Spyder, supports:
 
 * Automatic code completion
 * Real-time function calltips
@@ -92,7 +92,7 @@ Using external kernels
 ======================
 
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
-For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running.
+For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <troubleshooting-common-kernel-version>` in the environment or machine in which the external kernel is running.
 
 .. image:: /images/console/console-menu.png
    :alt: Connect to external kernel dialog of the Spyder IPython console

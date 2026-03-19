@@ -23,7 +23,7 @@ Common solutions
       :alt: Spyder showing Use a single instance setting
 
 #. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
-   If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-reinstalling-spyder-ref` to uninstall and reinstall Anaconda.
+   If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-basic-reinstalling` to uninstall and reinstall Spyder.
 
 #. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
    Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder or Python.

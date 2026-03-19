@@ -454,7 +454,7 @@ Additional help
 
 .. rst-class:: fasb fa-first-aid
 
-*Run in to a problem installing or running Spyder?* Read our :ref:`Troubleshooting Guide <troubleshooting-first-steps>`.
+*Run in to a problem installing or running Spyder?* Read our :ref:`Troubleshooting Guide <troubleshooting-guide>`.
 
 .. rst-class:: fasb fa-globe
 

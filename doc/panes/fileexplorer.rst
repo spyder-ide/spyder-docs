@@ -48,7 +48,7 @@ Version control support
 =======================
 
 The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like committing your changes and browsing the repository a given file or folder is part of.
-This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :doc:`projects`.
+This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :doc:`projects`.
 
 .. _Git: https://git-scm.com/
 

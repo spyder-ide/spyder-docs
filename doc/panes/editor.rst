@@ -25,7 +25,7 @@ The Editor pane consists of the following areas:
    :alt: Spyder's Editor pane, showing its different areas (described below)
 
 1. The left sidebar shows line numbers and displays any code analysis warnings that exist in the current file.
-   Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <debugging-breakpoints>`.
+   Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <panes-debugger-breakpoints>`.
 2. The scrollbars allow vertical and horizontal navigation in a file.
 3. The context (right-click) menu displays actions relevant to whatever was clicked.
 4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
@@ -281,7 +281,7 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 .. note::
 
    Many issues with completion and linting are outside of Spyder's control, and are either limitations with the LSP or the code that is being introspected, but some can be worked around.
-   See :ref:`code-completion-problems-ref` for troubleshooting steps.
+   See :ref:`troubleshooting-common-completion` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
@@ -335,7 +335,7 @@ If there's a function, class or variable for which you would like to check its d
 .. image:: /images/editor/editor-go-to-definition.gif
    :alt: Spyder's Editor pane, showing the go to definition feature
 
-You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
+You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <panes-help-hints>`.
 
 .. image:: /images/editor/editor-hoverhint.png
    :alt: Spyder's Editor pane, showing an example of a hover hint

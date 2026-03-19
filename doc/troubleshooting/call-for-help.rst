@@ -24,7 +24,7 @@ Spyder-related platforms
 Spyder's FAQ section
 ~~~~~~~~~~~~~~~~~~~~
 
-Spyder's documentation has a FAQ section, where you might find the answers that you are looking for.
+Spyder's documentation has a :ref:`FAQ section <faq>`, where you might find the answers that you are looking for.
 
 
 .. rst-class:: fabb fa-youtube
