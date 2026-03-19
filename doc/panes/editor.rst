@@ -104,7 +104,7 @@ Editing features
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
 
-To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the :doc:`ipythonconsole`.
+To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the :ref:`panes-console`.
 
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences.
@@ -122,7 +122,7 @@ The :guilabel:`Fonts` section lets you change the text font and size.
 Code cells
 ~~~~~~~~~~
 
-A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :ref:`panes-console`.
 This is similar to "cell" behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
@@ -134,14 +134,14 @@ You can separate cells by lines starting with either:
 * ``# %%`` (standard cell separator), or
 * ``# <codecell>`` (IPython notebook cell separator)
 
-Providing a description to the right of the separator will give that cell its own name in the :doc:`outline`.
+Providing a description to the right of the separator will give that cell its own name in the :ref:`panes-outline`.
 You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
-This displays multiple levels in the :doc:`outline` pane.
+This displays multiple levels in the :ref:`panes-outline` pane.
 
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline pane, showing an example of sub sections
 
-.. note:: This only affects how the cell is displayed in the :doc:`outline`, and doesn't affect running it in the Editor.
+.. note:: This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
@@ -176,9 +176,9 @@ The Editor lets you run an entire file as well as specific lines, selections or 
 
 As your code is running,
 
-* The :doc:`ipythonconsole` will display output and errors.
-* The :doc:`variableexplorer` allows you to browse and interact with the objects generated.
-* The :doc:`plots` pane renders the figures and images created.
+* The :ref:`panes-console` will display output and errors.
+* The :ref:`panes-variables` allows you to browse and interact with the objects generated.
+* The :ref:`panes-plots` pane renders the figures and images created.
 
 
 .. _panes-editor-run-file:
@@ -197,7 +197,7 @@ Run line/selection
 
 You can execute the current line—or multiple selected lines—using the :guilabel:`Run selection or current line` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key.
 After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
-Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
+Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-console`.
 
 
 .. _panes-editor-run-cell:
@@ -362,8 +362,8 @@ The full list can be browsed, searched and customized (on double-click) in :menu
 Related panes
 =============
 
-* :doc:`fileexplorer`
-* :doc:`findinfiles`
-* :doc:`ipythonconsole`
-* :doc:`projects`
-* :doc:`pylint`
+* :ref:`panes-files`
+* :ref:`panes-find`
+* :ref:`panes-console`
+* :ref:`panes-projects`
+* :ref:`panes-pylint`

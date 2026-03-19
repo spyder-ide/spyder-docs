@@ -15,9 +15,9 @@ The steps on this section should hopefully get it back up and running in no time
 Common solutions
 ================
 
-#. Try :doc:`basic-first-aid` first, which usually resolves most Spyder install-related issues.
+#. Try :ref:`troubleshooting-basic` first, which usually resolves most Spyder install-related issues.
 
-#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:`/panes/variableexplorer` dialogs) are left open, and check that the preference setting :menuselection:`Application --> Advanced Settings --> Use a single instance` isn't checked.
+#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :ref:`panes-variables` dialogs) are left open, and check that the preference setting :menuselection:`Application --> Advanced Settings --> Use a single instance` isn't checked.
 
    .. image:: /images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
@@ -84,4 +84,4 @@ Also run ``python mainwindow.py``, and record your results as well.
 
    Then, double click the batch file to run it, and you should see the error information you need.
 
-#. If reading the output (particularly the last line) doesn't help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the :doc:`submit-a-report` section.
+#. If reading the output (particularly the last line) doesn't help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the :ref:`troubleshooting-report` section.

@@ -9,7 +9,7 @@ The **Variable Explorer** allows you to interactively browse and manage the obje
 .. image:: /images/variable_explorer/variable-explorer-execution.gif
    :alt: Spyder Variable Explorer execution with a variable of type list
 
-It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected :doc:`ipythonconsole` session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.
+It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected :ref:`panes-console` session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.
 
 .. image:: /images/variable_explorer/variable-explorer-standard.png
    :alt: Spyder Variable Explorer, with a list of variables and their contents
@@ -215,5 +215,5 @@ Finally, we added a context-menu action to open any object using the new Object 
 Related panes
 =============
 
-* :doc:`debugging`
-* :doc:`ipythonconsole`
+* :ref:`panes-debugger`
+* :ref:`panes-console`

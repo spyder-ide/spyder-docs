@@ -72,5 +72,5 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`fileexplorer`
+* :ref:`panes-editor`
+* :ref:`panes-files`

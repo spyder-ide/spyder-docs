@@ -5,7 +5,7 @@ Files
 #####
 
 The **Files** pane is a filesystem and directory browser built right into Spyder.
-You can view and filter files according to their type and extension, open them with the :doc:`editor` or an external tool, and perform many common operations.
+You can view and filter files according to their type and extension, open them with the :ref:`panes-editor` or an external tool, and perform many common operations.
 
 .. image:: /images/files/files-standard.png
    :alt: Spyder Files pane, showing a tree view of files and metadata
@@ -48,7 +48,7 @@ Version control support
 =======================
 
 The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like committing your changes and browsing the repository a given file or folder is part of.
-This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :doc:`projects`.
+This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :ref:`panes-projects`.
 
 .. _Git: https://git-scm.com/
 
@@ -108,6 +108,6 @@ Additionally, when you right-click a file, you will find an :guilabel:`Open with
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`findinfiles`
-* :doc:`projects`
+* :ref:`panes-editor`
+* :ref:`panes-find`
+* :ref:`panes-projects`

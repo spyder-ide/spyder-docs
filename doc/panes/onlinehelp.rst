@@ -93,4 +93,4 @@ To cancel searching or page loading, click the stop button (red square), and to 
 Related panes
 =============
 
-* :doc:`help`
+* :ref:`panes-help`

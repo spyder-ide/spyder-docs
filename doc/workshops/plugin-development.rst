@@ -16,7 +16,7 @@ As a practical exercise, we will develop a simple plugin that incorporates a con
 Prerequisites
 =============
 
-You will need to have Spyder installed. Visit our :doc:`installation guide<../installation>` for more information.
+You will need to have Spyder installed. Visit our :ref:`install-guide` for more information.
 
 .. important::
 
@@ -1421,9 +1421,9 @@ With these skills we hope to ease the way for you to develop your own Spyder plu
 
 If you have ideas for plugin development feel free to contact us through the `Spyder-IDE`_ Github organization space.
 
-If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop :doc:`Scientific Computing and Visualization with Spyder <../workshops/scientific-computing>`.
+If you are interested in an introduction to scientific computing with Spyder, you can visit the workshop :ref:`workshops-scientific`.
 
-If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop :doc:`Financial Data Analysis with Spyder<../workshops/financial>`.
+If you are interested in an introduction to financial analysis with Spyder, you can visit the workshop :ref:`workshops-financial`.
 
 .. _Spyder-IDE: https://github.com/spyder-ide
 

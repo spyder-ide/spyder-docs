@@ -35,7 +35,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you are looking for a summary of its features and interface, check out the :doc:`quickstart`.
+         If you are looking for a summary of its features and interface, check out the :ref:`tour`.
 
 
    .. grid-item-card::
@@ -46,7 +46,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you don't have Spyder installed and want to get started, follow the :doc:`/installation`.
+         If you don't have Spyder installed and want to get started, follow the :ref:`install-guide`.
 
 
    .. grid-item-card::
@@ -57,7 +57,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you are completely new to Spyder, watch our basic tutorial series, :doc:`videos/first-steps-with-spyder`.
+         If you are completely new to Spyder, watch our basic tutorial series, :ref:`tutorials-beginner`.
 
 
    .. grid-item-card::
@@ -68,7 +68,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :doc:`panes/index`.
+         If you are familiar with Spyder and want to explore the functionality of its panes in more detail, go to :ref:`panes-index`.
 
 
    .. grid-item-card::
@@ -79,7 +79,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you've run into a Spyder problem and need help solving it, take a look at our :doc:`troubleshooting guide<troubleshooting/first-steps>`.
+         If you've run into a Spyder problem and need help solving it, take a look at our :ref:`troubleshooting guide <troubleshooting-guide>`.
 
 
    .. grid-item-card::
@@ -90,7 +90,7 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
       .. div:: align-center
 
-         If you have a question about Spyder, visit the :doc:`faq` section.
+         If you have a question about Spyder, visit the :ref:`faq` section.
 
 
 

@@ -32,9 +32,9 @@ Any :guilabel:`IPython Console`, whether :ref:`external <panes-console-external>
 
 * Automatic code completion
 * Real-time function calltips
-* Full GUI integration with the enhanced Spyder :doc:`Debugger<debugging>`.
-* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects.
-* Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
+* Full GUI integration with the enhanced Spyder :ref:`panes-debugger`.
+* The :ref:`panes-variables`, with GUI-based editors for many built-in and third-party Python objects.
+* Display of Matplotlib graphics in Spyder's :ref:`panes-plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
 
 .. image:: /images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
@@ -199,8 +199,8 @@ If desired, you can turn it on or off, and prevent specific modules from being r
 Related panes
 =============
 
-* :doc:`debugging`
-* :doc:`editor`
-* :doc:`help`
-* :doc:`historylog`
-* :doc:`variableexplorer`
+* :ref:`panes-debugger`
+* :ref:`panes-editor`
+* :ref:`panes-help`
+* :ref:`panes-history`
+* :ref:`panes-variables`

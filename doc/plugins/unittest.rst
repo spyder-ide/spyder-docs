@@ -125,7 +125,7 @@ The menu item :menuselection:`Collapse all` does the opposite.
 .. image:: /images/unittest/unittest-expand-collapse.gif
    :alt: Expanding and collapsing test results in the Unit Testing pane
 
-If you double click on a test result, then the :doc:`/panes/editor` pane will jump to the location where this test is defined.
+If you double click on a test result, then the :ref:`panes-editor` pane will jump to the location where this test is defined.
 Unfortunately, this functionality is only available if you use the ``pytest`` framework.
 The ``unittest`` module does not record the test location.
 
@@ -172,7 +172,7 @@ After running the tests, the coverage results will be displayed under all the te
    :alt: Unit testing pane showing test results and coverage
 
 Spyder saves the testing configuration sp that you do not have to specify it every time that you want to run the tests.
-If you use Spyder :doc:`/panes/projects`, then the testing configuration is associated to the currently open project and will be stored with the project configuration.
+If you use Spyder :ref:`panes-projects`, then the testing configuration is associated to the currently open project and will be stored with the project configuration.
 If no project is open, then the testing configuration is stored in the global Spyder configuration.
 
 The :menuselection:`Dependencies` item in the options menu of the Unit testing pane displays a window showing which testing frameworks are installed in the Python environment that Spyder uses to run tests.

@@ -21,11 +21,11 @@ Spyder's code analyzer is powered by the best-in-class `Pylint`_ back-end, which
 Using the code analyzer
 =======================
 
-You can select the desired file to analyze directly in the :doc:`editor` by clicking anywhere within it.
+You can select the desired file to analyze directly in the :ref:`panes-editor` by clicking anywhere within it.
 To run the analysis, press the configurable shortcut (:kbd:`F8` by default), select :menuselection:`Source --> Run code analysis` from the menu bar or click the :guilabel:`Analyze` button in the Code Analysis pane.
 If the Code Analysis pane is not visible, you can open it under :menuselection:`View --> Panes --> Code Analysis`.
 All standard checks are run by default.
-To go directly to a line in the :doc:`editor` highlighted by a failed check, just click its name.
+To go directly to a line in the :ref:`panes-editor` highlighted by a failed check, just click its name.
 
 .. image:: /images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
@@ -100,5 +100,5 @@ For more details on configuring Pylint, see the `Pylint documentation`_.
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`profiler`
+* :ref:`panes-editor`
+* :ref:`panes-profiler`

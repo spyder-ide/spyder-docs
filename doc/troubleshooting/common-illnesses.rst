@@ -15,7 +15,7 @@ Beyond the general troubleshooting steps, some frequently-reported problems requ
 Errors starting the kernel
 ==========================
 
-If you receive the message ``An error occurred while starting the kernel`` in the :doc:`/panes/ipythonconsole`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
+If you receive the message ``An error occurred while starting the kernel`` in the :ref:`panes-console`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
 There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.
 
 
@@ -146,7 +146,7 @@ Some objects, whether due to being written in C, Cython or another language; gen
    :alt: Object not found in help pane
    :width: 500px
 
-However, once you run your code in the :doc:`/panes/ipythonconsole`, you might be able to get help and completions on the object there.
+However, once you run your code in the :ref:`panes-console`, you might be able to get help and completions on the object there.
 
 
 .. _troubleshooting-common-completion-crashed:
@@ -168,7 +168,7 @@ Spyder bug/dependency issue
 
 Given the variety of dependencies involved in making LSP work, an incompatible or out of date version in your environment can result in error messages, incomplete results, or help/analysis not working at all.
 
-To address this, first try updating Anaconda and Spyder as described in :doc:`basic-first-aid`.
+To address this, first try updating Anaconda and Spyder as described in :ref:`troubleshooting-basic`.
 If the issue still isn't resolved, update the various relevant dependencies with:
 
 .. code-block:: bash

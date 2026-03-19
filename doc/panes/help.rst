@@ -24,7 +24,7 @@ You can also access Spyder's tutorial from here, which will guide you through so
 Getting help
 ============
 
-Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
+Help can be retrieved both by static analysis of open files in the :ref:`panes-editor`, or by dynamically inspecting an object in an :ref:`panes-console`.
 You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default).
 
 .. image:: /images/help/help-command.png
@@ -90,6 +90,6 @@ This can be disabled in the :guilabel:`Help` pane's top-right options menu so th
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`ipythonconsole`
-* :doc:`onlinehelp`
+* :ref:`panes-editor`
+* :ref:`panes-console`
+* :ref:`panes-onlinehelp`

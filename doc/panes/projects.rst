@@ -5,8 +5,8 @@
 Projects
 ########
 
-Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :doc:`editor` from the last time you opened that project.
-With the :guilabel:`Projects` pane, you can browse all your project's files, regardless of your current working directory or :doc:`fileexplorer` location.
+Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :ref:`panes-editor` from the last time you opened that project.
+With the :guilabel:`Projects` pane, you can browse all your project's files, regardless of your current working directory or :ref:`panes-files` location.
 
 .. image:: /images/projects/projects-main.png
    :alt: Spyder showing Project Explorer and projects menu
@@ -40,7 +40,7 @@ Using the Projects Pane
 =======================
 
 Once a :guilabel:`Project` is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current :guilabel:`Project`'s files and directories.
-It allows you to perform all the same :ref:`operations <panes-files-operations>` as Spyder's :doc:`fileexplorer` pane.
+It allows you to perform all the same :ref:`operations <panes-files-operations>` as Spyder's :ref:`panes-files` pane.
 
 .. image:: /images/projects/projects-standard.png
    :alt: Spyder Project Explorer, displaying a directory tree of project files
@@ -69,5 +69,5 @@ To use this functionality, the :guilabel:`Project` must be located in a ``git`` 
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`fileexplorer`
+* :ref:`panes-editor`
+* :ref:`panes-files`

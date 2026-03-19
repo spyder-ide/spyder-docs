@@ -74,7 +74,7 @@ The :guilabel:`Open recent` option displays a list of the recent notebooks you o
 Connecting an IPython Console
 =============================
 
-You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will allow you to view your variables in the :doc:`/panes/variableexplorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console.
+You can connect an :ref:`panes-console` to your notebook, which will allow you to view your variables in the :ref:`panes-variables`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console.
 
 .. image:: /images/notebook/notebook-console.gif
    :alt: Gif showing connecting console and displaying variables

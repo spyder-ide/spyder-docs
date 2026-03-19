@@ -4,7 +4,7 @@
 History
 #######
 
-With the **History** pane, you can view the recent code and commands you've entered into any :doc:`ipythonconsole`, along with their timestamp.
+With the **History** pane, you can view the recent code and commands you've entered into any :ref:`panes-console`, along with their timestamp.
 
 .. image:: /images/history/history-standard.png
    :alt: Spyder History Log, displaying a list of previously executed commands
@@ -60,4 +60,4 @@ While there is currently no built-in way to clear history from the Spyder interf
 Related panes
 =============
 
-* :doc:`ipythonconsole`
+* :ref:`panes-console`
