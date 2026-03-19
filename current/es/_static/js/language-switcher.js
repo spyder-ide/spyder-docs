@@ -9,8 +9,9 @@ const LANGUAGE_SWITCHER_JSON_URL = "_static/languages.json";
 const VERSION_URL = "/" + DOCUMENTATION_OPTIONS.VERSION + "/";
 
 function getLanguageSwitcherJSONURL() {
+  const href = window.location.href
   const language_switcher_json_url =
-    window.location.href.includes(VERSION_URL)
+    (href.includes(VERSION_URL) || href.includes("/current/"))
       ? VERSION_URL + LANGUAGE_SWITCHER_JSON_URL
       : "/" + LANGUAGE_SWITCHER_JSON_URL;
   return language_switcher_json_url;
