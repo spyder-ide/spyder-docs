@@ -1,3 +1,6 @@
+.. _project-explorer:
+.. _panes-projects:
+
 ########
 Projects
 ########
@@ -17,6 +20,8 @@ In addition, your project's root folder is used to set your working directory, a
 
 
 
+.. _panes-projects-creating:
+
 ==================
 Creating a Project
 ==================
@@ -28,7 +33,7 @@ To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the 
 
 
 
-.. _project-explorer:
+.. _panes-projects-using:
 
 =======================
 Using the Projects Pane
@@ -43,6 +48,7 @@ It allows you to perform all the same :ref:`operations<file-operations>` as Spyd
 
 
 .. _vcs-section:
+.. _panes-projects-vcs:
 
 ============================
 Working with version control
@@ -56,6 +62,8 @@ You can commit or browse a file, directory or the entire repository via the comm
 To use this functionality, the :guilabel:`Project` must be located in a ``git`` repository and the ``git`` and ``gitk`` commands must be on the system path.
 
 
+
+.. _panes-projects-related:
 
 =============
 Related panes

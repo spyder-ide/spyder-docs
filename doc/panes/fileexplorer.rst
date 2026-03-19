@@ -1,3 +1,5 @@
+.. _panes-files:
+
 #####
 Files
 #####
@@ -11,6 +13,7 @@ You can view and filter files according to their type and extension, open them w
 
 
 .. _file-operations:
+.. _panes-files-operations:
 
 ===============
 File operations
@@ -38,6 +41,7 @@ If copying the paths for multiple files, they will be automatically formatted so
 
 
 .. _files-vcs-support:
+.. _panes-files-vcs:
 
 =======================
 Version control support
@@ -52,6 +56,8 @@ This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :d
    :alt: Spyder Files pane showing committing change of file
 
 
+
+.. _panes-files-options:
 
 ============
 Options menu
@@ -76,6 +82,8 @@ The menu also gives you the option to open files and directories with a single i
 
 
 
+.. _panes-files-associations:
+
 =================
 File associations
 =================
@@ -93,6 +101,8 @@ Additionally, when you right-click a file, you will find an :guilabel:`Open with
    :alt: Spyder Files pane showing opening file with associated program
 
 
+
+.. _panes-files-related:
 
 =============
 Related panes

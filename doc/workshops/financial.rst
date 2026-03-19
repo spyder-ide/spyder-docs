@@ -1,3 +1,5 @@
+.. _workshops-financial:
+
 ###################################
 Financial Data Analysis with Spyder
 ###################################

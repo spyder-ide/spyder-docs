@@ -1,3 +1,5 @@
+.. _troubleshooting-help:
+
 ################
 Calling for Help
 ################
@@ -9,11 +11,15 @@ Even if we aren't able to help you, these places might.
 
 .. rst-class:: fa-offset-h3
 
+.. _troubleshooting-help-spyder:
+
 ========================
 Spyder-related platforms
 ========================
 
 .. rst-class:: fasb fa-question-circle
+
+.. _troubleshooting-help-spyder-faq:
 
 Spyder's FAQ section
 ~~~~~~~~~~~~~~~~~~~~
@@ -22,6 +28,8 @@ Spyder's documentation has a FAQ section, where you might find the answers that 
 
 
 .. rst-class:: fabb fa-youtube
+
+.. _troubleshooting-help-spyder-youtube:
 
 Spyder's YouTube channel
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,6 +40,8 @@ Our `YouTube channel`_ contains helpful videos that will guide you through many 
 
 
 .. rst-class:: fabb fa-gitlab
+
+.. _troubleshooting-help-spyder-gitter:
 
 Spyder Gitter
 ~~~~~~~~~~~~~
@@ -44,6 +54,8 @@ If you've got a quick question to ask the team and are looking for a quick answe
 
 .. rst-class:: fabb fa-google
 
+.. _troubleshooting-help-spyder-group:
+
 Spyder Google Group
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -54,6 +66,8 @@ Our `Google Group`_ is great for help-related questions, particularly those you 
 
 .. rst-class:: fasb fa-globe
 
+.. _troubleshooting-help-spyder-website:
+
 Spyder website
 ~~~~~~~~~~~~~~
 
@@ -63,6 +77,8 @@ The `Spyder site`_ contains basic information about the IDE and links to many ot
 
 
 .. rst-class:: fabb fa-stack-overflow
+
+.. _troubleshooting-help-spyder-stack-overflow:
 
 Stack Overflow tag
 ~~~~~~~~~~~~~~~~~~
@@ -75,6 +91,8 @@ It has an vibrant Spyder community as well, with new questions posted every day,
 
 .. rst-class:: fabb openteams-icon
 
+.. _troubleshooting-help-spyder-openteams:
+
 OpenTeams support
 ~~~~~~~~~~~~~~~~~
 
@@ -86,11 +104,15 @@ OpenTeams offers services from Spyder experts ranging from a brief consultation 
 
 .. rst-class:: fa-offset-h3
 
+.. _troubleshooting-help-python:
+
 ================
 Python resources
 ================
 
 .. rst-class:: fabb fa-python
+
+.. _troubleshooting-help-python-page:
 
 Official Python help page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,6 +124,8 @@ The `Python help page`_ is a great resource that lists a number of places you ca
 
 .. rst-class:: fasb fa-book-open
 
+.. _troubleshooting-help-python-docs:
+
 Python documentation
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -111,6 +135,8 @@ The `Python docs`_ can help you understand a number of issues that can be caused
 
 
 .. rst-class:: fabb fa-reddit
+
+.. _troubleshooting-help-python-reddit:
 
 Python subreddits
 ~~~~~~~~~~~~~~~~~
@@ -125,12 +151,16 @@ The former is aimed more at general Python usage, and the latter more specifical
 
 .. rst-class:: fa-offset-h3
 
-=============================
-Data science/SciPy resources:
-=============================
+.. _troubleshooting-help-pydata:
+
+==============================
+Data science/PyData resources:
+==============================
 
 
 .. rst-class:: fasb fa-circle-notch
+
+.. _troubleshooting-help-pydata-anaconda:
 
 Anaconda help
 ~~~~~~~~~~~~~~
@@ -139,7 +169,10 @@ The `Anaconda docs`_ site offers free community help and documentation for the A
 
 .. _Anaconda docs: https://anaconda.cloud/support-center
 
+
 .. rst-class:: fasb fa-flask
+
+.. _troubleshooting-help-pydata-scipy:
 
 SciPy.org website
 ~~~~~~~~~~~~~~~~~
@@ -151,6 +184,8 @@ The `Scipy website`_ is the the central home of the SciPy stack, with informatio
 
 .. rst-class:: fasb fa-sticky-note
 
+.. _troubleshooting-help-pydata-jupyter:
+
 Project Jupyter
 ~~~~~~~~~~~~~~~
 
@@ -161,6 +196,8 @@ Project Jupyter
 
 
 .. rst-class:: fabb fa-stack-exchange
+
+.. _troubleshooting-help-pydata-stack-exchange:
 
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

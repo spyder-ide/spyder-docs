@@ -1,3 +1,5 @@
+.. _panes-profiler:
+
 ########
 Profiler
 ########
@@ -9,6 +11,8 @@ This allows you to easily identify the bottlenecks in your code, points you towa
    :alt: Spyder Profiler pane, displaying a list of functions and their execution time
 
 
+
+.. _panes-profiler-using:
 
 ====================
 Running the Profiler
@@ -53,6 +57,8 @@ To remove the loaded data, click the :guilabel:`Clear comparison` button.
 
 
 
+.. _panes-profiler-results:
+
 ========================
 Interpreting the results
 ========================
@@ -70,6 +76,8 @@ Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time`
 Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.86 ms, but :guilabel:`Local Time` only 0.01 ms as the rest was spent inside the ``sleep()`` function it called.
 
 
+
+.. _panes-profiler-plugins:
 
 ================
 Profiler plugins
@@ -93,6 +101,8 @@ For more information, go to the `spyder-memory-profiler git repository`_.
    :alt: Spyder Profiler pane, displaying a list of functions and their execution time
 
 
+
+.. _panes-profiler-related:
 
 =============
 Related panes

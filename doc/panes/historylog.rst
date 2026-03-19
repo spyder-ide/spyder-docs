@@ -1,3 +1,5 @@
+.. _panes-history:
+
 #######
 History
 #######
@@ -8,6 +10,8 @@ With the **History** pane, you can view the recent code and commands you've ente
    :alt: Spyder History Log, displaying a list of previously executed commands
 
 
+
+.. _panes-history-using:
 
 ======================
 Using the History pane
@@ -21,6 +25,8 @@ The last ≈1000 lines entered are stored in the pane.
 
 
 
+.. _panes-history-options:
+
 ============
 Options Menu
 ============
@@ -31,6 +37,8 @@ The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle wra
    :alt: Spyder History Log, displaying wrapping lines and showing line number
 
 
+
+.. _panes-history-advanced:
 
 ==============
 Advanced usage
@@ -45,6 +53,8 @@ You might need to show invisible files in order to see it on a non-Windows opera
 While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and restarting Spyder again.
 
 
+
+.. _panes-history-related:
 
 =============
 Related panes

@@ -1,3 +1,5 @@
+.. _panes-variables:
+
 #################
 Variable Explorer
 #################
@@ -20,12 +22,16 @@ To modify a scalar variable, like an number, string or boolean, simply double cl
 
 
 
+.. _panes-variables-viewers:
+
 ==============
 Object viewers
 ==============
 
 Spyder's :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.
 
+
+.. _panes-variables-viewers-str:
 
 Strings
 ~~~~~~~
@@ -36,6 +42,8 @@ When a string variable is longer than forty characters, you can double click it 
    :width: 500
    :alt: Variable Explorer text editor, displaying a long string in a window
 
+
+.. _panes-variables-viewers-dict:
 
 Dictionaries
 ~~~~~~~~~~~~
@@ -48,6 +56,8 @@ You can double click any of the values to modify them, which will open a new vie
    :alt: Dictionary editor displaying keys and their types, sizes, and values
 
 
+.. _panes-variables-viewers-list:
+
 Lists
 ~~~~~
 
@@ -59,6 +69,8 @@ Just like dictionaries, you can double-click values to edit them.
    :width: 500
    :alt: List editor displaying a list, showing one being edited
 
+
+.. _panes-variables-viewers-array:
 
 Numpy arrays
 ~~~~~~~~~~~~
@@ -82,6 +94,8 @@ Clicking the :guilabel:`Resize` button will set it automatically.
    :alt: Array editor with a 2D int array, showing resizing of columns
 
 
+.. _panes-variables-viewers-dataframe:
+
 DataFrames
 ~~~~~~~~~~
 
@@ -97,6 +111,8 @@ Additionally, starting in Spyder 4, the Variable Explorer has MultiIndex support
    :alt: Dataframe editor showing multi-index support
 
 
+
+.. _panes-variables-options:
 
 ============
 Options menu
@@ -114,6 +130,8 @@ It also allows you to display the min and max of Numpy arrays instead of a previ
    :alt: Variable Explorer showing max and min values of numpy array
 
 
+
+.. _panes-variables-toolbar:
 
 ===============
 Toolbar buttons
@@ -141,6 +159,8 @@ There is also a button to remove all displayed variables, and a search box to fi
 Finally, there is a button to refresh the Variable Explorer's contents, which will update it to show the current state of the code running in the IPython console.
 
 
+
+.. _panes-variables-advanced:
 
 ======================
 Advanced functionality
@@ -188,6 +208,8 @@ Finally, we added a context-menu action to open any object using the new Object 
    :alt: Object explorer showing dataframe
 
 
+
+.. _panes-variables-related:
 
 =============
 Related panes

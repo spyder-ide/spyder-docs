@@ -1,3 +1,5 @@
+.. _panes-console:
+
 ###############
 IPython Console
 ###############
@@ -20,6 +22,7 @@ As each console is executed in a separate process, this won't affect any others 
 
 
 .. _console-features:
+.. _panes-console-features:
 
 ==================
 Supported features
@@ -42,6 +45,8 @@ For information on the features, commands and capabilities built into IPython it
 
 
 
+.. _panes-console-special:
+
 ================
 Special consoles
 ================
@@ -59,6 +64,8 @@ Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by defau
    :alt: Spyder showing opening a new special Console
 
 
+
+.. _panes-console-options:
 
 ============
 Options menu
@@ -78,6 +85,7 @@ You can also change the name of the current :guilabel:`IPython console` tab with
 
 
 .. _connecting-external-kernel:
+.. _panes-console-external:
 
 ======================
 Using external kernels
@@ -89,6 +97,8 @@ For this feature to work, a compatible version of the ``spyder-kernels`` package
 .. image:: /images/console/console-menu.png
    :alt: Connect to external kernel dialog of the Spyder IPython console
 
+
+.. _panes-console-external-local:
 
 Connect to a local kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,6 +122,8 @@ To connect to a local kernel that is already running (e.g. one started by Jupyte
    .. image:: /images/console/console-connect-local-step3.gif
       :alt: Connecting to the kernel and running basic commands.
 
+
+.. _panes-console-external-remote:
 
 Connect to a remote kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -159,6 +171,7 @@ For more technical details about connecting to remote kernels, see the `Connecti
 
 
 .. _umr-section:
+.. _panes-console-umr:
 
 ======================
 Reload changed modules
@@ -179,6 +192,8 @@ If desired, you can turn it on or off, and prevent specific modules from being r
    :alt: Spyder preferences showing option to use module reloader
 
 
+
+.. _panes-console-related:
 
 =============
 Related panes

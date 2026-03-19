@@ -1,3 +1,5 @@
+.. _panes-onlinehelp:
+
 ###########
 Online Help
 ###########
@@ -10,6 +12,8 @@ The **Online Help** pane provides a built-in web browser to explore dynamically 
    :alt: Spyder Online Help pane on the index page, a list of builtin modules
 
 
+
+.. _panes-onlinehelp-using:
 
 =====================
 Using the Online Help
@@ -50,6 +54,8 @@ Links above the search field provide an index of topics with general help and a 
 
 
 
+.. _panes-onlinehelp-toolbar:
+
 =============
 Toolbar items
 =============
@@ -80,6 +86,8 @@ To cancel searching or page loading, click the stop button (red square), and to 
    :alt: Spyder Online Help pane showing refreshing pane when updating docs
 
 
+
+.. _panes-onlinehelp-related:
 
 =============
 Related panes

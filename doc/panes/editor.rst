@@ -1,3 +1,5 @@
+.. _panes-editor:
+
 ######
 Editor
 ######
@@ -10,6 +12,8 @@ In addition, it integrates a number of powerful tools for an easy to use, effici
    :alt: Spyder's Editor pane, split horizontally and with style analysis
 
 
+
+.. _panes-editor-componets:
 
 ==============
 Key components
@@ -31,9 +35,13 @@ The Editor pane consists of the following areas:
 
 
 
+.. _panes-editor-interface:
+
 =========
 Interface
 =========
+
+.. _panes-editor-interface-tabs:
 
 Tabs
 ~~~~
@@ -49,6 +57,8 @@ Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetica
 .. image:: /images/editor/editor-tabs-sorting.gif
    :alt: Spyder's Editor pane, showing how to browse and sort open tabs alphabetically
 
+
+.. _panes-editor-interface-switcher:
 
 File switcher
 ~~~~~~~~~~~~~
@@ -66,6 +76,8 @@ You can type in any part of an open file's name and—if exists—it can be swit
    :alt: Spyder's Editor pane, showing searching and switching to an existing file
 
 
+.. _panes-editor-interface-split:
+
 Split panels
 ~~~~~~~~~~~~
 
@@ -81,9 +93,13 @@ Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and
 
 
 
+.. _panes-editor-features:
+
 ================
 Editing features
 ================
+
+.. _panes-editor-features-highlighting:
 
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
@@ -100,6 +116,8 @@ The :guilabel:`Fonts` section lets you change the text font and size.
 
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
 
+
+.. _panes-editor-features-cells:
 
 Code cells
 ~~~~~~~~~~
@@ -129,6 +147,8 @@ To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
 
 
+.. _panes-editor-features-formatting:
+
 Automatic formatting
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -146,6 +166,8 @@ To set this up, go to :menuselection:`Preferences --> Completion and linting -->
 
 
 
+.. _panes-editor-run:
+
 ============
 Running code
 ============
@@ -159,12 +181,16 @@ As your code is running,
 * The :doc:`plots` pane renders the figures and images created.
 
 
+.. _panes-editor-run-file:
+
 Run file
 ~~~~~~~~
 
 Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the :guilabel:`Run file` toolbar button or the :kbd:`F5` key.
 Use :menuselection:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
 
+
+.. _panes-editor-run-line:
 
 Run line/selection
 ~~~~~~~~~~~~~~~~~~
@@ -174,12 +200,16 @@ After running the current line, the cursor automatically advances to the next on
 Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
 
 
+.. _panes-editor-run-cell:
+
 Run cell
 ~~~~~~~~
 
 To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run current cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
 
+
+.. _panes-editor-run-configuration:
 
 Run configuration
 ~~~~~~~~~~~~~~~~~
@@ -193,9 +223,13 @@ To access it, click :menuselection:`Run --> Configuration per file...` or press 
 
 
 
+.. _panes-editor-navigation:
+
 ===============
 Code navigation
 ===============
+
+.. _panes-editor-navigation-find:
 
 Find and replace
 ~~~~~~~~~~~~~~~~
@@ -209,6 +243,8 @@ Use the :guilabel:`.*` button to process search text as a `regular expression <h
    :alt: Spyder's Editor pane, showing the find and replace panel
 
 
+.. _panes-editor-navigation-goto:
+
 Go to line
 ~~~~~~~~~~
 
@@ -221,6 +257,8 @@ Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd
 It also shows the current line number and total line count in the file.
 
 
+.. _panes-editor-navigation-selector:
+
 Class/function selector
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -231,6 +269,8 @@ Use its dropdowns to view and jump to the functions, methods and classes in the 
    :alt: Spyder's Editor pane, showing the class and function selector panel
 
 
+
+.. _panes-editor-lsp:
 
 =============================
 Code analysis and completions
@@ -246,6 +286,8 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
 
+.. _panes-editor-lsp-completion:
+
 Code completion
 ~~~~~~~~~~~~~~~
 
@@ -259,6 +301,8 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
 You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
 Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
 
+
+.. _panes-editor-lsp-linting:
 
 Linting and code style
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -281,6 +325,8 @@ It is not active by default, but you can enable it and customize the `Pycodestyl
    :alt: Spyder's preferences dialog, showing code style and formatting settings
 
 
+.. _panes-editor-lsp-introspection:
+
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -299,6 +345,8 @@ These features can be enabled and customized under :menuselection:`Preferences -
 
 
 
+.. _panes-editor-shortcuts:
+
 ==================
 Keyboard shortcuts
 ==================
@@ -307,6 +355,8 @@ To view the Editor's primary keyboard shortcuts, consult its section under :menu
 The full list can be browsed, searched and customized (on double-click) in :menuselection:`Preferences --> Keyboard shortcuts`.
 
 
+
+.. _panes-editor-related:
 
 =============
 Related panes

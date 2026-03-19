@@ -1,3 +1,5 @@
+.. _panes-plots:
+
 #####
 Plots
 #####
@@ -15,12 +17,16 @@ The figures shown in the Plots pane are those associated with the currently acti
 
 
 
+.. _panes-plots-options:
+
 ============
 Options menu
 ============
 
 The options menu in the top right of the :guilabel:`Plots` pane offers several ways to customize how your plots are displayed.
 
+
+.. _panes-plots-options-inline:
 
 Mute inline plotting
 ~~~~~~~~~~~~~~~~~~~~
@@ -32,6 +38,8 @@ If you deactivate this option, figures will display in both the Plots pane and t
    :alt: Spyder's plots pane and console showing plots in the console
 
 
+.. _panes-plots-options-outline:
+
 Show plot outline
 ~~~~~~~~~~~~~~~~~
 
@@ -40,6 +48,8 @@ The :guilabel:`Show plot outline` option, off by default, shows a thin stroke su
 .. image:: /images/plots/plots-outline.gif
    :alt: Spyder's plots pane showing a plot's outline
 
+
+.. _panes-plots-options-fit:
 
 Fit plots to window
 ~~~~~~~~~~~~~~~~~~~
@@ -51,6 +61,8 @@ Disabling it will display plots at their native size, and allow you use the zoom
    :alt: Spyder main window showing plots zoom
 
 
+
+.. _panes-plots-toolbar:
 
 ===============
 Toolbar options
@@ -79,6 +91,8 @@ Finally, you can use the "remove" and "remove all" buttons in the toolbar to cle
    :alt: Spyder plots pane showing pasting plot in LibreOffice.
 
 
+
+.. _panes-plots-related:
 
 =============
 Related panes

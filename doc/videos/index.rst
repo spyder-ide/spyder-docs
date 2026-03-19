@@ -1,3 +1,6 @@
+.. _tutorials:
+.. _tutorials-index:
+
 =========
 Tutorials
 =========

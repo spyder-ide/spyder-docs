@@ -1,3 +1,5 @@
+.. _troubleshooting-basic:
+
 ###############
 Basic First Aid
 ###############
@@ -5,6 +7,8 @@ Basic First Aid
 These suggestions, while more of a shotgun approach, tend to fix the majority of reported issues just on their own.
 
 
+
+.. _troubleshooting-basic-steps:
 
 =================================
 Recommended troubleshooting steps
@@ -69,6 +73,7 @@ If this fixes the issue, the problem was likely due to another package installed
 
 
 .. _troubleshooting-reinstalling-spyder-ref:
+.. _troubleshooting-basic-reinstalling:
 
 ===================
 Reinstalling Spyder
@@ -93,6 +98,8 @@ Then, do a clean install of the latest version of the `Anaconda distribution`_ w
 .. _Anaconda distribution: https://www.anaconda.com/products/distribution
 
 
+
+.. _troubleshooting-basic-isolating:
 
 ==================
 Isolating problems
@@ -132,6 +139,8 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
 See the :doc:`call-for-help` section for other places to look for information and assistance.
 
 
+
+.. _troubleshooting-basic-debugging:
 
 ======================
 Debugging and patching

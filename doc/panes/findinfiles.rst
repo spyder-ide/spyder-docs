@@ -1,3 +1,5 @@
+.. _panes-find:
+
 ####
 Find
 ####
@@ -8,6 +10,8 @@ The **Find** pane allows you to search the content of text files in a user-defin
    :alt: Spyder Find in Files panel, with search results shown per-file
 
 
+
+.. _panes-find-using:
 
 ===================
 Using the Find pane
@@ -29,6 +33,8 @@ To erase all of these saved directories, select the :guilabel:`Clear the list` o
    :alt: Spyder Find pane showing choosing new directory and directory stored in the list
 
 
+
+.. _panes-find-options:
 
 =======================
 Choosing search options
@@ -59,6 +65,8 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
    :alt: Spyder Find pane showing window with maximum results dialog open
 
 
+
+.. _panes-find-related:
 
 =============
 Related panes

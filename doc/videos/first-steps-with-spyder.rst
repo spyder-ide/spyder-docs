@@ -1,3 +1,5 @@
+.. _tutorials-beginner:
+
 #######################
 First Steps with Spyder
 #######################
@@ -6,6 +8,8 @@ The videos in this section provide a starting point for new users who have never
 You'll get familiar with opening Spyder in different ways, working with the four main panes and customizing the Spyder to your heart's content.
 
 
+
+.. _tutorials-beginner-getting-started:
 
 ===============
 Getting started
@@ -57,6 +61,8 @@ Discover the basics of using the Spyder interface and get an introduction to its
 
 
 
+.. _tutorials-beginner-basics:
+
 ===================
 Learning the basics
 ===================
@@ -96,6 +102,8 @@ Learn the basics of using Spyder’s four main panes.
       You should now be ready to start using Spyder's four main panes. Check out our next video to continue learning and as always, Happy Spydering!
 
 
+
+.. _tutorials-beginner-customization:
 
 =============
 Customization

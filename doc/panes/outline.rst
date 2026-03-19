@@ -1,3 +1,5 @@
+.. _panes-outline:
+
 #######
 Outline
 #######
@@ -10,6 +12,8 @@ Click an entry in the outline to jump to its source file location, and use the :
    :alt: Outline pane
 
 
+
+.. _panes-outline-options:
 
 ============
 Options menu
@@ -35,6 +39,8 @@ These customization settings include:
 
 
 
+.. _panes-outline-icons:
+
 =====
 Icons
 =====
@@ -48,6 +54,8 @@ The following icons are used for outline elements:
 * :guilabel:`#` for comments
 
 
+
+.. _panes-outline-related:
 
 =============
 Related panes

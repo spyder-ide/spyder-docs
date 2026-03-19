@@ -1,3 +1,5 @@
+.. _workshops-scientific:
+
 ##################################################
 Scientific Computing and Visualization with Spyder
 ##################################################

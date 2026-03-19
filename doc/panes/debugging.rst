@@ -1,3 +1,5 @@
+.. _panes-debugger:
+
 ########
 Debugger
 ########
@@ -9,6 +11,8 @@ This allows breakpoints and the execution flow to be viewed and controlled right
    :alt: A Spyder IPython console window, showing the ipdb debugger in action
 
 
+
+.. _panes-debugger-ipdb:
 
 ===================
 Debugging with ipdb
@@ -47,7 +51,9 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
    :alt: Debugger showing multiline debugger
 
 
+
 .. _debugging-breakpoints:
+.. _panes-debugger-breakpoints:
 
 ===========
 Breakpoints
@@ -77,6 +83,8 @@ You can access and edit local and global variables at each breakpoint through th
 
 
 
+.. _panes-debugger-advanced:
+
 =================
 Advanced features
 =================
@@ -102,6 +110,8 @@ To set this up, go to :menuselection:`Preferences --> IPython Console --> Debugg
 
 
 
+.. _panes-debugger-matplotlib:
+
 ==================
 Matplotlib support
 ==================
@@ -116,6 +126,8 @@ Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matpl
 To avoid showing plots while debugging, deactivate the :guilabel:`Process execute events while debugging` option in :menuselection:`Preferences --> IPython console --> Debugger`.
 
 
+
+.. _panes-debugger-related:
 
 =============
 Related panes

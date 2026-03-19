@@ -1,3 +1,5 @@
+.. _index:
+
 #################################
 Welcome to Spyder's Documentation
 #################################
@@ -12,6 +14,8 @@ It features a unique combination of the advanced editing, analysis, debugging, a
 
 
 .. rst-class:: blue-32px
+
+.. _index-where-now:
 
 ================
 Where to go now?
@@ -92,6 +96,8 @@ These include video tutorials, in-depth descriptions and how-to guides covering 
 
 .. rst-class:: fa-offset-h3
 
+.. _index-community:
+
 ==================
 Join our community
 ==================
@@ -101,6 +107,8 @@ We encourage everyone to become a part of our community and help develop Spyder!
 
 
 .. rst-class:: fasb fa-laptop-code
+
+.. _index-community-code:
 
 Looking to contribute your code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,6 +126,8 @@ The easiest way to get started is helping us resolve items on our `issue tracker
 
 .. rst-class:: fasb fa-book
 
+.. _index-community-docs:
+
 Want to help writing docs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -131,6 +141,8 @@ Check out the `docs contributing guide`_ to learn how to submit a PR with your c
 
 .. rst-class:: fasb fa-globe-americas
 
+.. _index-community-i18n:
+
 Interested in translating Spyder?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -142,6 +154,8 @@ For this purpose we use `Crowdin`_, which provides a simple web based interface 
 
 
 .. rst-class:: fasb fa-user-friends
+
+.. _index-community-social:
 
 Want to be part of our social media?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

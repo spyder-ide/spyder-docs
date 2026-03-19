@@ -1,3 +1,4 @@
+.. _install:
 .. _install-guide:
 
 #############

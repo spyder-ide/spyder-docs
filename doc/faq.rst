@@ -1,6 +1,10 @@
+.. _faq:
+
 ##########################
 Frequently Asked Questions
 ##########################
+
+.. _faq-installing:
 
 =======================
 Installing and updating
@@ -74,6 +78,8 @@ Installing and updating
       :alt: Navigator showing installing specific version of Spyder
 
 
+
+.. _faq-running:
 
 ==============
 Running Spyder
@@ -151,7 +157,7 @@ Running Spyder
 
 
 
-.. _using_spyder_faqs_ref:
+.. _faq-using:
 
 ============
 Using Spyder
@@ -315,6 +321,8 @@ Using Spyder
 
 
 
+.. _faq-troubleshooting:
+
 ===============
 Troubleshooting
 ===============
@@ -383,6 +391,8 @@ Troubleshooting
       spyder
 
 
+
+.. _faq-about:
 
 ============
 About Spyder

@@ -1,3 +1,5 @@
+.. _troubleshooting-common:
+
 ################
 Common Illnesses
 ################
@@ -7,6 +9,7 @@ Beyond the general troubleshooting steps, some frequently-reported problems requ
 
 
 .. _starting-kernel-problems-ref:
+.. _troubleshooting-common-kernel:
 
 ==========================
 Errors starting the kernel
@@ -17,6 +20,7 @@ There are a number of problems that can cause this, but most can be fixed fairly
 
 
 .. _spyder-kernels-version-ref:
+.. _troubleshooting-common-kernel-version:
 
 Spyder-Kernels not installed/incompatible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,6 +70,8 @@ Otherwise, activate your environment by whatever means you created it, and execu
 For both of the previous commands, replace ``<VERSION>`` with the corresponding version in the table.
 
 
+.. _troubleshooting-common-kernel-dependency:
+
 Issue with another dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -86,6 +92,8 @@ Otherwise, activate your environment by whatever means you created it, and run:
    pip install -U spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
 
+.. _troubleshooting-common-kernel-error:
+
 AttributeError/ImportError
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,6 +111,7 @@ To check the names of these modules, see the list in the `Python standard librar
 
 
 .. _code-completion-problems-ref:
+.. _troubleshooting-common-completion:
 
 ===========================
 Completion/help not working
@@ -111,6 +120,8 @@ Completion/help not working
 To provide code completions, help and real-time analysis in the Editor, Spyder uses the Python Language Server (PyLS), an implementation of the Language Server Protocol specification used by VSCode, Atom and other popular editors/IDEs.
 Most help and completion issues lie outside of Spyder's control, and are either limitations with PyLS or the code that is being introspected, but some can be worked around.
 
+
+.. _troubleshooting-common-completion-docstring:
 
 Object missing docstring
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,6 +135,8 @@ If nothing is displayed in the calltip, hover hint or help pane, the object you'
 In this case, the only solution is to add one in the source code of the original function, method or class.
 
 
+.. _troubleshooting-common-completion-missing:
+
 Object cannot be found
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -136,6 +149,8 @@ Some objects, whether due to being written in C, Cython or another language; gen
 However, once you run your code in the :doc:`/panes/ipythonconsole`, you might be able to get help and completions on the object there.
 
 
+.. _troubleshooting-common-completion-crashed:
+
 LSP has stopped working
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -145,6 +160,8 @@ If this is the case, you can check LSP status with the :guilabel:`LSP Python` it
 .. image:: /images/common-illnesses/common-illnesses-LSP-restart.png
    :alt: Spyder with LSP restart dialog
 
+
+.. _troubleshooting-common-completion-bug:
 
 Spyder bug/dependency issue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,9 +177,13 @@ If the issue still isn't resolved, update the various relevant dependencies with
 
 
 
+.. _troubleshooting-common-plugin:
+
 ===============
 Plugin Problems
 ===============
+
+.. _troubleshooting-common-plugin-missing:
 
 Plugin does not work at all
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -179,6 +200,8 @@ Test whether you can import the plug-in manually by opening a Python console in 
 
 If none of this helps you to resolve the problem, then continue to the next section.
 
+
+.. _troubleshooting-common-plugin-other:
 
 Other issues
 ~~~~~~~~~~~~

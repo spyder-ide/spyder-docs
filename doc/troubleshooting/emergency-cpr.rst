@@ -1,3 +1,5 @@
+.. _troubleshooting-cpr:
+
 #############
 Emergency CPR
 #############
@@ -6,6 +8,8 @@ Is Spyder not launching at all?
 The steps on this section should hopefully get it back up and running in no time.
 
 
+
+.. _troubleshooting-cpr-basic:
 
 ================
 Common solutions
@@ -30,9 +34,11 @@ Common solutions
 
 
 
-===============
-Advanced tricks
-===============
+.. _troubleshooting-cpr-advanced:
+
+=====================
+Advanced Life Support
+=====================
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide useful information to help debug the issue further.
 

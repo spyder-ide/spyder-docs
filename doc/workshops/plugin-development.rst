@@ -1,3 +1,5 @@
+.. _workshops-plugin:
+
 ##############################
 Plugin Development with Spyder
 ##############################

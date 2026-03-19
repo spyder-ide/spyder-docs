@@ -29,6 +29,8 @@ Often, that alone will tell you how to fix the problem on your own, but if not, 
 
 
 
+.. _troubleshooting-first-steps-where-now:
+
 =====================
 Where to go from here
 =====================

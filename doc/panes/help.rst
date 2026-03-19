@@ -1,3 +1,5 @@
+.. _panes-help:
+
 ####
 Help
 ####
@@ -15,6 +17,8 @@ You can also access Spyder's tutorial from here, which will guide you through so
    :alt: Spyder Help pane showing the link for the Spyder's tutorial
 
 
+
+.. _panes-help-using:
 
 ============
 Getting help
@@ -39,6 +43,8 @@ If enabled, simply typing a left parenthesis (``(``) after a function or method 
 
 
 
+.. _panes-help-modes:
+
 ========================
 Understanding help modes
 ========================
@@ -53,6 +59,7 @@ The latter can be useful when docstrings are not available or insufficient to do
 
 
 .. _help-hover-hints:
+.. _panes-help-hints:
 
 ========================
 Getting help by hovering
@@ -66,6 +73,8 @@ Clicking the hover popup will open the full documentation in the :guilabel:`Help
 
 
 
+.. _panes-help-autoimport:
+
 ========================
 Control automatic import
 ========================
@@ -74,6 +83,8 @@ When you get help in the :guilabel:`IPython Console` for an object that has not 
 This can be disabled in the :guilabel:`Help` pane's top-right options menu so that only documentation from imported objects is displayed.
 
 
+
+.. _panes-help-related:
 
 =============
 Related panes
