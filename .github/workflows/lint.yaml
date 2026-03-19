@@ -1,4 +1,4 @@
-# Run the project's linting suite via Pre-Commit
+# Run the project's linting suite via Prek
 name: Lint
 
 on:  # yamllint disable-line rule:truthy
@@ -23,10 +23,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
-        python-version: '3.11'
-    - name: Run pre-commit hooks
-      uses: pre-commit/action@v3.0.1
+        python-version: '3.13'
+    - name: Run pre-commit hooks with Prek
+      uses: j178/prek-action@v2

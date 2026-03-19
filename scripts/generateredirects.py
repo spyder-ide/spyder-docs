@@ -6,7 +6,6 @@ import argparse
 import os.path
 from pathlib import Path
 
-
 REDIRECT_TEXT = """<!DOCTYPE html>
 <html>
   <head>

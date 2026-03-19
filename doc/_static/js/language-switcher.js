@@ -4,6 +4,18 @@
 
 // import "../styles/pydata-sphinx-theme.scss";
 
+// URL to the theme language switcher configuration
+const LANGUAGE_SWITCHER_JSON_URL = "_static/languages.json";
+const VERSION_URL = "/" + DOCUMENTATION_OPTIONS.VERSION + "/";
+
+function getLanguageSwitcherJSONURL() {
+  const language_switcher_json_url =
+    window.location.href.includes(VERSION_URL)
+      ? VERSION_URL + LANGUAGE_SWITCHER_JSON_URL
+      : "/" + LANGUAGE_SWITCHER_JSON_URL;
+  return language_switcher_json_url;
+}
+
 /*******************************************************************************
  * Theme interaction
  */
@@ -406,23 +418,31 @@ async function checkPageExistsAndRedirect(event) {
  * @param {string} url The URL to load version switcher entries from.
  */
 async function fetchVersionSwitcherJSON(url) {
+  const currentPath = getCurrentUrlPath();
   // first check if it's a valid URL
   try {
     var result = new URL(url);
   } catch (err) {
     if (err instanceof TypeError) {
-      if (!window.location.origin) {
-        // window.location.origin is null for local static sites
-        // (ie. window.location.protocol == 'file:')
-        //
-        // TODO: Fix this to return the static version switcher by working out
-        // how to get the correct path to the switcher JSON file on local static builds
-        return null;
+      // Assume we got a relative path, and fix accordingly.
+      if (window.location.protocol == "file:") {
+        // Here instead of returning `null` we work out what the file path would be
+        // anyway (same code path as for served docs), as a convenience to folks who
+        // routinely disable CORS when they boot up their browser.
+        console.info(
+          "[PST] looks like you're viewing this site from a local filesystem, so " +
+            "the version switcher won't work unless you've disabled CORS. See " +
+            "https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/version-dropdown.html",
+        );
       }
-      // assume we got a relative path, and fix accordingly. But first, we need to
-      // use `fetch()` to follow redirects so we get the correct final base URL
-      const origin = await fetch(window.location.origin, { method: "HEAD" });
-      result = new URL(url, origin.url);
+      const cutoff = window.location.href.indexOf(currentPath);
+      // cutoff == -1 can happen e.g. on the homepage of locally served docs, where you
+      // get something like http://127.0.0.1:8000/ (no trailing `index.html`)
+      const origin =
+        cutoff == -1
+          ? window.location.href
+          : window.location.href.substring(0, cutoff);
+      result = new URL(url, origin);
     } else {
       // something unexpected happened
       throw err;
@@ -648,13 +668,13 @@ async function fetchAndUseVersions() {
   );
   const hasSwitcherMenu = versionSwitcherBtns.length > 0;
   const hasVersionsJSON = DOCUMENTATION_OPTIONS.hasOwnProperty(
-    "theme_switcher_json_url",
+    "language_switcher_json_url",
   );
   const wantsWarningBanner = DOCUMENTATION_OPTIONS.show_version_warning_banner;
 
   if (hasVersionsJSON && (hasSwitcherMenu || wantsWarningBanner)) {
     const data = await fetchVersionSwitcherJSON(
-      DOCUMENTATION_OPTIONS.theme_switcher_json_url,
+      DOCUMENTATION_OPTIONS.language_switcher_json_url,
     );
     // TODO: remove the `if(data)` once the `return null` is fixed within fetchVersionSwitcherJSON.
     // We don't really want the switcher and warning bar to silently not work.
@@ -992,24 +1012,10 @@ async function fetchAndUseLanguages() {
     ".language-switcher__button",
   );
   const hasSwitcherMenu = languageSwitcherBtns.length > 0;
-  const hasLanguagesJSON = DOCUMENTATION_OPTIONS.hasOwnProperty(
-    "language_switcher_json_url",
-  );
 
   if (hasSwitcherMenu) {
-    const data = [
-      {
-        "language": "en",
-        "name": "English",
-        "preferred": true,
-        "url": "https://docs.spyder-ide.org/5/en/"
-      },
-      {
-        "language": "es",
-        "name": "Español",
-        "url": "https://docs.spyder-ide.org/5/es/"
-      }
-    ]
+    const language_switcher_json_url = getLanguageSwitcherJSONURL();
+    const data = await fetchVersionSwitcherJSON(language_switcher_json_url);
 
     // TODO: remove the `if(data)` once the `return null` is fixed within fetchVersionSwitcherJSON.
     // We don't really want the switcher and warning bar to silently not work.

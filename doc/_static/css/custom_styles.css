@@ -1,36 +1,29 @@
-/* Fix bold styling for font */
-
-b,
-strong {
-  font-weight: bold;
+/* PyData Sphinx Theme variables */
+@property --color-primary {
+  inherits: true;
+  initial-value: #0000c0;
+  syntax: "<color>";
 }
 
-/* Center all images by default */
+:root {
+  /* stylelint-disable-next-line no-unknown-custom-properties -- PyData Sphinx Theme variable */
+  --color-primary: var(--pst-color-primary);
+}
+
+/* Increase bottom margin for images */
 
 section img {
   margin-bottom: 1rem;
-}
-
-.section img:not([class]) {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Custom bottom margin for the cards section */
-
-.section .sphinx-bs {
-  margin-bottom: 18px;
 }
 
 /* Style for Font Awesome that only styles the icons before elements */
 
 .fasb::before,
 .fabb::before {
-  color: #36557c;
+  color: var(--color-primary);
   display: inline-block;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 26px;
   font-style: normal;
   font-variant: normal;
@@ -44,7 +37,7 @@ section img {
 
 .fabb::before {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 /* Ensure FA icons applied to section divs display inline */
@@ -57,7 +50,7 @@ section.fabb h3 {
 /* Custom color and size for FA icons */
 
 .blue-32px .fasb::before {
-  color: #36557c;
+  color: var(--color-primary);
   width: 32px;
 }
 
@@ -114,21 +107,6 @@ section.openteams-icon::before {
   padding-bottom: 0;
 }
 
-/*** Changes to the FAQ page ***/
-
-.dropdown .card-header {
-  background-color: #cce5ff;
-  color: #004085;
-  font-size: 0.95rem;
-  padding-bottom: 0.7em;
-  padding-top: 0.7em;
-  text-transform: none;
-}
-
-.dropdown .card-header::first-letter {
-  font-weight: bold;
-}
-
 /*** Styling for quickstart interactive tour ***/
 
 .interactive-tour-container {
@@ -158,7 +136,7 @@ section.openteams-icon::before {
 .tour-overlay .highlight-rect {
   fill: none;
   opacity: 0;
-  stroke: #d50000;
+  stroke: var(--color-primary);
   stroke-linejoin: round;
   stroke-width: 5;
 }
@@ -199,16 +177,12 @@ div#driver-popover-item .tour-progress-indicator {
   font-weight: bold;
 }
 
-/*** Remove h3 titles from Join our community section on index page ***/
-
-a[href="#join-our-community"] + ul li.toc-h3 {
-  display: none;
-}
-
-/* Version selector using PyData Sphinx Theme features */
+/* Version and language selectors */
 
 /* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
-.version-switcher__button {
+.version-switcher__button,
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.language-switcher__button {
   margin-bottom: 0 !important;
 }
 
@@ -224,40 +198,25 @@ a[href="#join-our-community"] + ul li.toc-h3 {
   width: 100%;
 }
 
-.dropdown-videos .summary-content {
-  background-color: #ededed;
-}
-
-.dropdown-videos .card-header {
-  background-color: #4e4e4e;
+.dropdown-videos .sd-card-header {
   border-radius: unset;
-  color: #fff;
-  font-size: 0.8em;
-  padding-bottom: 0.1em;
-  padding-top: 0.1em;
+  padding-bottom: 0.1em !important;
+  padding-top: 0.1em !important;
 }
 
-.dropdown-videos .card-header::first-letter {
-  font-weight: unset;
-}
-
-.dropdown-videos .card-header:first-child {
-  border-radius: unset;
-}
-
-details.dropdown-videos .summary-up,
-details.dropdown-videos .summary-down {
-  top: 0.1em !important;
-}
-
-div.scroll {
-  color: #2c2e30;
+.dropdown-videos div.scroll {
   font-size: 0.8em;
   height: 250px;
   margin: 1px;
   overflow: hidden auto;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+}
+
+div.video-container-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
 }
 
 div.video-container {
@@ -269,12 +228,6 @@ div.video-container {
   padding-bottom: 56.25%;
   position: relative;
   width: 100%;
-}
-
-div.video-container-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 640px;
 }
 
 /* Add vertical whitespace after videos when followed by text */
@@ -305,7 +258,7 @@ table.installer-table td {
 
 table.installer-table tbody td p::before {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 table.installer-table tbody td:nth-child(1) p,
@@ -344,20 +297,20 @@ table.installer-table tbody td:nth-child(4) p::before {
 /* Style for links added to dropdowns */
 
 a.dropdown-link {
-  color: #36557c;
+  color: var(--color-primary);
   margin-left: 0.5em;
   padding: 0.25em;
   visibility: hidden;
 }
 
-details.dropdown:hover a.dropdown-link,
-details.dropdown:focus a.dropdown-link {
+details.sd-dropdown:hover a.dropdown-link,
+details.sd-dropdown:focus a.dropdown-link {
   visibility: visible;
 }
 
 a.dropdown-link:hover,
 a.dropdown-link:focus {
-  background-color: #36557c;
+  background-color: var(--color-primary);
   color: #fff;
   text-decoration: none;
 }

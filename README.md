@@ -10,7 +10,7 @@
 [![Check](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/check.yaml)
 [![Lint](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/spyder-ide/spyder-docs/actions/workflows/lint.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06f113a8-c699-4171-afc6-db3a3c77d93b/deploy-status)](https://app.netlify.com/sites/spyder-docs-preview/deploys)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![prek](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge-v0.json)](https://github.com/j178/prek)
 [![Nox](https://img.shields.io/badge/%F0%9F%A6%8A-Nox-D85E00.svg)](https://github.com/wntrblm/nox)
 [![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
 

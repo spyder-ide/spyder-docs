@@ -1,17 +1,14 @@
-# See https://pre-commit.com for more information
-# See https://pre-commit.com/hooks.html for more hooks
+# Baseline hooks and config updated 2026-03-16
+# Web hooks and config updated 2026-03-16
+# Docs hooks and config updated 2026-03-16
+# Python hooks and config updated 2026-03-16
 
-# Baseline hooks and config updated 2024-09-25
-# Web hooks and config updated 2024-09-25
-# Docs hooks and config updated 2024-09-25
-# Python hooks and config updated 2024-09-25
-
-minimum_pre_commit_version: '2.10.0'
+minimum_pre_commit_version: '3.2.0'
 
 default_language_version:
   python: python3
 
-default_stages: [commit]
+default_stages: [pre-commit]
 
 exclude: '\.(min\.(js|css)|pot?)$'
 
@@ -24,7 +21,7 @@ repos:
 
 # General fixers
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: trailing-whitespace
     name: Trim trailing whitespace
@@ -41,7 +38,7 @@ repos:
 
 # More general fixers
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.1  # Pinned for now to avoid requiring pre-commit >=3.2.0
+  rev: v1.5.6
   hooks:
   - id: remove-tabs
     name: Replace tabs with spaces
@@ -51,7 +48,7 @@ repos:
 
 # Check and fix spelling
 - repo: https://github.com/codespell-project/codespell
-  rev: v2.3.0
+  rev: v2.4.2
   hooks:
   # Define separate hooks for checking and correcting spelling errors
   # since codespell doesn't print verbose output when writing changes
@@ -65,27 +62,22 @@ repos:
 
 # Lint and fix CSS with stylelint
 - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-  rev: v16.9.0
+  rev: v16.26.1  # Pin to Stylelint 16.x until plugins all support ESM/17.x
   hooks:
   - id: stylelint
     name: Lint and fix CSS (stylelint)
-    args: [--fix, --color, --maxWarnings, '0']
+    args: [--color]
     additional_dependencies:
-    - 'stylelint@16.9.0'
-    - 'stylelint-config-standard@36.0.1'
-    - 'stylelint-declaration-block-no-ignored-properties@2.8.0'
-    - 'stylelint-no-unsupported-browser-features@8.0.1'
-    - 'stylelint-order@6.0.4'
-    # Use fork of csstree-validator that supports Stylelint 16 for now
-    - '@carlosjeurissen/stylelint-csstree-validator@3.1.0'
-    # Pin to avoid no-unsupported-browser-features error breaking stylelint
-    # Should be fixed soon; see
-    # https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues/299
-    - 'caniuse-lite@1.0.30001653'
+    - 'stylelint@16.26.1'
+    - 'stylelint-config-standard@40.0.0'
+    - 'stylelint-csstree-validator@4.0.0'
+    - 'stylelint-declaration-block-no-ignored-properties@3.0.0'
+    - 'stylelint-no-unsupported-browser-features@8.1.1'
+    - 'stylelint-order@8.1.1'
 
 # Format CSS with Prettier
 - repo: https://github.com/rbubley/mirrors-prettier
-  rev: v3.3.3
+  rev: v3.8.1
   hooks:
   - id: prettier
     name: Format CSS (Prettier)
@@ -93,7 +85,7 @@ repos:
 
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.14.0
+  rev: v2.16.0
   hooks:
   - id: pretty-format-ini
     name: Format INI
@@ -102,21 +94,22 @@ repos:
 
 # Lint and fix JavaScript
 - repo: https://github.com/eslint/eslint
-  rev: v9.9.0  # Pin to fix dep conflict on install; see eslint/eslint#18956
+  rev: v10.0.3
   hooks:
   - id: eslint
     name: Lint and fix JavaScript (ESLint)
     args: [--fix, --color, --max-warnings, '0']
     additional_dependencies:
-    - 'eslint-plugin-import@2.30.0'
-    - 'eslint-plugin-n@17.10.3'
-    - 'eslint-plugin-promise@7.1.0'
-    - 'neostandard@0.11.6'
+    - 'eslint@10.0.3'
+    - 'eslint-plugin-import@2.32.0'
+    - 'eslint-plugin-n@17.24.0'
+    - 'eslint-plugin-promise@7.2.1'
+    - 'neostandard@0.13.0'
     exclude: 'doc/_static/js/language-switcher.js'
 
 # Format JavaScript with Prettier
 - repo: https://github.com/rbubley/mirrors-prettier
-  rev: v3.3.3
+  rev: v3.8.1
   hooks:
   - id: prettier
     name: Format JavaScript (Prettier)
@@ -125,14 +118,14 @@ repos:
 
 # Check JSON
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: check-json
     name: Check JSON
 
 # Add doctoc to Markdown
 - repo: https://github.com/thlorenz/doctoc
-  rev: v2.2.0
+  rev: v2.3.0
   hooks:
   - id: doctoc
     name: Generate Markdown ToCs
@@ -140,7 +133,7 @@ repos:
 
 # Lint Markdown
 - repo: https://github.com/DavidAnson/markdownlint-cli2
-  rev: v0.14.0
+  rev: v0.21.0
   hooks:
   - id: markdownlint-cli2
     name: Lint Markdown
@@ -148,7 +141,7 @@ repos:
 
 # Format Python
 - repo: https://github.com/psf/black-pre-commit-mirror
-  rev: '24.8.0'
+  rev: '26.3.1'
   hooks:
   - id: black
     name: Format Python with Black
@@ -157,21 +150,21 @@ repos:
 
 # Check Python
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: check-ast
     name: Check Python AST
 
 # Lint Python
 - repo: https://github.com/pycqa/flake8
-  rev: '7.1.1'
+  rev: '7.3.0'
   hooks:
   - id: flake8
     name: Lint Python with Flake8
     exclude: '\bworkshops\b'
 
 - repo: https://github.com/pycqa/pylint
-  rev: v3.3.1
+  rev: v4.0.5
   hooks:
   - id: pylint
     name: Lint Python with Pylint
@@ -179,11 +172,11 @@ repos:
 
 # Check Python dependencies
 - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-  rev: v1.3.3
+  rev: v1.4.2
   hooks:
   - id: python-safety-dependencies-check
     name: Check Python dependencies (Safety)
-    args: [--disable-optional-telemetry]
+    args: [--disable-optional-telemetry-data]
     files: '.*requirements.*.txt'
     types: [text]
 
@@ -200,7 +193,7 @@ repos:
 
 # Lint RST
 - repo: https://github.com/sphinx-contrib/sphinx-lint
-  rev: v1.0.0
+  rev: v1.0.2
   hooks:
   - id: sphinx-lint
     name: Lint RST
@@ -208,7 +201,7 @@ repos:
 
 # Check TOML and XML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: check-toml
     name: Check TOML
@@ -217,7 +210,7 @@ repos:
 
 # Pretty-format YAML
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.14.0
+  rev: v2.16.0
   hooks:
   - id: pretty-format-yaml
     name: Format YAML
@@ -226,14 +219,14 @@ repos:
 
 # Check YAML
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: check-yaml
     name: Check YAML
 
 # Lint YAML
 - repo: https://github.com/adrienverge/yamllint.git
-  rev: v1.35.1
+  rev: v1.38.0
   hooks:
   - id: yamllint
     name: Lint YAML
@@ -242,7 +235,7 @@ repos:
 
 # Replace CRLF with LF post-prettify
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.1  # Pinned for now to avoid requiring pre-commit >=3.2.0
+  rev: v1.5.6
   hooks:
   - id: remove-crlf
     name: Replace CRLFs with LF
@@ -259,7 +252,7 @@ repos:
     name: Check for Unicode replacement chars
 
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v6.0.0
   hooks:
   - id: check-added-large-files
     name: Check for added large files
@@ -269,12 +262,13 @@ repos:
   - id: check-executables-have-shebangs
     name: Check that executables have shebangs
     exclude: 'pre\-commit\-config\.yaml'
+  - id: check-illegal-windows-names
+    name: Check for illegal Windows filenames
+  - id: check-merge-conflict
+    name: Check for merge conflicts
   - id: check-shebang-scripts-are-executable
     name: Check that shebangs are executable
     exclude: 'pre\-commit\-config\.yaml'
-  - id: check-merge-conflict
-    name: Check for merge conflicts
-
 
 # Commit message hooks #
 
@@ -287,7 +281,7 @@ repos:
 
 # Check commit message spelling
 - repo: https://github.com/codespell-project/codespell
-  rev: v2.3.0
+  rev: v2.4.2
   hooks:
   - id: codespell
     name: Check commit message spelling

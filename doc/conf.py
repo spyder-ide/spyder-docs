@@ -205,13 +205,12 @@ html_js_files = [
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
-# The default sidebars (for documents that don't match any pattern) are
-# defined by theme itself.  Builtin themes are using these templates by
-# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
-# 'searchbox.html']``.
-#
+# Hack to fix pydata/pydata-sphinx-theme#1662
+# https://github.com/pydata/pydata-sphinx-theme/issues/1662
 html_sidebars = {
-    "**": ["sidebar-nav-bs"],
+    "quickstart": [],
+    "installation": [],
+    "faq": [],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
@@ -311,9 +310,11 @@ linkcheck_ignore = [
     r"https://(www\.)?github\.com/.+/commit/.+",
     r"https://(www\.)?figshare\.com/?.*",
     # Blocks GitHub Actions
+    r"https://(www\.)?guru99\.com/?.*",
     r"https://(www\.)?(\w+\.)?reddit\.com/?.*",
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
     # Temporary until removed (flaky/no longer used)
+    r"https://(www\.)?opencollective\.org/?.*",
     r"https://(www\.)?openteams\.com/?.*",
 ]
 
@@ -380,7 +381,6 @@ class Youtube(IFrameVideo):
             '<iframe src="https://www.youtube.com/embed/%(video_id)s',
             '?start=%(start)s" ',
             'width="%(width)u" height="%(height)u" frameborder="0" ',
-            # pylint: disable = inconsistent-quotes
             "webkitAllowFullScreen mozallowfullscreen allowfullscreen ",
             'class="align-%(align)s"></iframe></div></div>',
         ]
