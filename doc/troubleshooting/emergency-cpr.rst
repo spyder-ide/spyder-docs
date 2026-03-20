@@ -1,3 +1,5 @@
+.. _troubleshooting-cpr:
+
 #############
 Emergency CPR
 #############
@@ -7,19 +9,21 @@ The steps on this section should hopefully get it back up and running in no time
 
 
 
+.. _troubleshooting-cpr-basic:
+
 ================
 Common solutions
 ================
 
-#. Try :doc:`basic-first-aid` first, which usually resolves most Spyder install-related issues.
+#. Try :ref:`troubleshooting-basic` first, which usually resolves most Spyder install-related issues.
 
-#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :doc:`/panes/variableexplorer` dialogs) are left open, and check that the preference setting :menuselection:`Application --> Advanced Settings --> Use a single instance` isn't checked.
+#. **Make sure Spyder isn't already running** and no Spyder related windows (*e.g.* :ref:`panes-variables` dialogs) are left open, and check that the preference setting :menuselection:`Application --> Advanced Settings --> Use a single instance` isn't checked.
 
    .. image:: /images/emergency-cpr/emergency-cpr-single-instance.png
       :alt: Spyder showing Use a single instance setting
 
 #. Try **starting Spyder via a different means**, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing ``spyder`` then :kbd:`Enter`/:kbd:`Return`, and see if any of those work.
-   If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-reinstalling-spyder-ref` to uninstall and reinstall Anaconda.
+   If so, then something's wrong with your install, not Spyder itself, and so we recommend following :ref:`troubleshooting-basic-reinstalling` to uninstall and reinstall Spyder.
 
 #. **Disable any security software** you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
    Make sure to re-enable it if it doesn't fix the problem, and if it does, add a rule or exception for Spyder or Python.
@@ -30,9 +34,11 @@ Common solutions
 
 
 
-===============
-Advanced tricks
-===============
+.. _troubleshooting-cpr-advanced:
+
+=====================
+Advanced Life Support
+=====================
 
 If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide useful information to help debug the issue further.
 
@@ -78,4 +84,4 @@ Also run ``python mainwindow.py``, and record your results as well.
 
    Then, double click the batch file to run it, and you should see the error information you need.
 
-#. If reading the output (particularly the last line) doesn't help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the :doc:`submit-a-report` section.
+#. If reading the output (particularly the last line) doesn't help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the :ref:`troubleshooting-report` section.

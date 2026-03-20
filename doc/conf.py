@@ -315,7 +315,6 @@ linkcheck_ignore = [
     r"https://(www\.)?(\w+\.)?(stackoverflow|stackexchange)\.com/?.*",
     # Temporary until removed (flaky/no longer used)
     r"https://(www\.)?opencollective\.org/?.*",
-    r"https://(www\.)?openteams\.com/?.*",
 ]
 
 
