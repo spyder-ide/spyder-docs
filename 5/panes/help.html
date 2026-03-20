@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -471,7 +471,7 @@
                 <article class="bd-article">
                   
   <section id="help">
-<h1>Help<a class="headerlink" href="#help" title="Link to this heading">#</a></h1>
+<span id="panes-help"></span><h1>Help<a class="headerlink" href="#help" title="Link to this heading">#</a></h1>
 <p>You can use the <strong>Help</strong> pane to find, render and display rich documentation for any object with a docstring, including modules, classes, functions and methods.
 This allows you to access documentation easily directly from Spyder, without having to interrupt your workflow.</p>
 <img alt="Spyder main window showing getting help for numpy arrays from editor" src="../_images/help-execution.gif" />
@@ -479,8 +479,8 @@ This allows you to access documentation easily directly from Spyder, without hav
 <a class="reference internal image-reference" href="../_images/help-tutorial.png"><img alt="Spyder Help pane showing the link for the Spyder's tutorial" src="../_images/help-tutorial.png" style="width: 500px;" />
 </a>
 <section id="getting-help">
-<h2>Getting help<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
-<p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a>.
+<span id="panes-help-using"></span><h2>Getting help<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
+<p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>.
 You can trigger help manually by pressing the configurable help shortcut (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> by default).</p>
 <img alt="Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former." src="../_images/help-command.png" />
 <p>You can also manually enter the object’s name into the <span class="guilabel">Object</span> textbox at the top of the pane, if <span class="guilabel">Console</span> is selected as the <span class="guilabel">Source</span>.</p>
@@ -490,29 +490,29 @@ If enabled, simply typing a left parenthesis (<code class="docutils literal notr
 <img alt="Spyder console and help pane showing automatic help with parenthesis" src="../_images/help-automatic-connections.gif" />
 </section>
 <section id="understanding-help-modes">
-<h2>Understanding help modes<a class="headerlink" href="#understanding-help-modes" title="Link to this heading">#</a></h2>
+<span id="panes-help-modes"></span><h2>Understanding help modes<a class="headerlink" href="#understanding-help-modes" title="Link to this heading">#</a></h2>
 <p>You can use the options menu (<span class="guilabel">Hamburger</span> icon) in the top right of the <span class="guilabel">Help</span> pane to toggle the help display mode.</p>
 <p><span class="guilabel">Rich Text</span> mode renders the object’s docstrings with <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>, <span class="guilabel">Plain Text</span> mode displays the docstring without formatting while <span class="guilabel">Show Source</span> displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python).
 The latter can be useful when docstrings are not available or insufficient to document the object.</p>
 <img alt="Spyder help pane showing different modes" src="../_images/help-modes.gif" />
 </section>
 <section id="getting-help-by-hovering">
-<span id="help-hover-hints"></span><h2>Getting help by hovering<a class="headerlink" href="#getting-help-by-hovering" title="Link to this heading">#</a></h2>
+<span id="panes-help-hints"></span><span id="help-hover-hints"></span><h2>Getting help by hovering<a class="headerlink" href="#getting-help-by-hovering" title="Link to this heading">#</a></h2>
 <p>You can also get summary help for objects by hovering over them in the <span class="guilabel">Editor</span>.
 Clicking the hover popup will open the full documentation in the <span class="guilabel">Help</span> pane.</p>
 <img alt="Editor pane showing help of an object from hover" src="../_images/help-hover.png" />
 </section>
 <section id="control-automatic-import">
-<h2>Control automatic import<a class="headerlink" href="#control-automatic-import" title="Link to this heading">#</a></h2>
+<span id="panes-help-autoimport"></span><h2>Control automatic import<a class="headerlink" href="#control-automatic-import" title="Link to this heading">#</a></h2>
 <p>When you get help in the <span class="guilabel">IPython Console</span> for an object that has not been previously imported, it is automatically loaded in Spyder’s own internal interpreter so that documentation can be shown when available.
 This can be disabled in the <span class="guilabel">Help</span> pane’s top-right options menu so that only documentation from imported objects is displayed.</p>
 </section>
 <section id="related-panes">
-<h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-help-related"></span><h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
-<li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Online Help</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a></p></li>
+<li><p><a class="reference internal" href="onlinehelp.html#panes-onlinehelp"><span class="std std-ref">Online Help</span></a></p></li>
 </ul>
 </section>
 </section>

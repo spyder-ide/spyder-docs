@@ -1,3 +1,6 @@
+.. _panes:
+.. _panes-index:
+
 =====
 Panes
 =====

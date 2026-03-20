@@ -1,14 +1,18 @@
+.. _panes-debugger:
+
 ########
 Debugger
 ########
 
-**Debugging** in Spyder is supported through integration with the enhanced ``ipdb`` debugger in the :doc:`ipythonconsole`.
+**Debugging** in Spyder is supported through integration with the enhanced ``ipdb`` debugger in the :ref:`panes-console`.
 This allows breakpoints and the execution flow to be viewed and controlled right from the Spyder GUI, as well as with all the familiar IPython console commands.
 
 .. image:: /images/debugging/debugging-console.png
    :alt: A Spyder IPython console window, showing the ipdb debugger in action
 
 
+
+.. _panes-debugger-ipdb:
 
 ===================
 Debugging with ipdb
@@ -19,7 +23,7 @@ You can fully control debugger execution from the :guilabel:`Debug` menu, :guila
 .. image:: /images/debugging/debugging-commands.gif
    :alt: A Spyder IPython console window, showing debugging from toolbar
 
-Additionally, the  :doc:`editor` shows the line of code the debugger is currently stopped on with an arrow.
+Additionally, the  :ref:`panes-editor` shows the line of code the debugger is currently stopped on with an arrow.
 
 .. _console commands: https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html
 
@@ -47,6 +51,8 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
    :alt: Debugger showing multiline debugger
 
 
+
+.. _panes-debugger-breakpoints:
 .. _debugging-breakpoints:
 
 ===========
@@ -70,12 +76,14 @@ There are several different ways to set and clear breakpoints:
 .. image:: /images/debugging/debugging-breakpoints.gif
    :alt: Spyder showing setting conditional breakpoint
 
-You can access and edit local and global variables at each breakpoint through the :doc:`variableexplorer`.
+You can access and edit local and global variables at each breakpoint through the :ref:`panes-variables`.
 
 .. image:: /images/debugging/debugging-variables.png
    :alt: Spyder's console and variable explorer showing local and global variables when debugging
 
 
+
+.. _panes-debugger-advanced:
 
 =================
 Advanced features
@@ -102,12 +110,14 @@ To set this up, go to :menuselection:`Preferences --> IPython Console --> Debugg
 
 
 
+.. _panes-debugger-matplotlib:
+
 ==================
 Matplotlib support
 ==================
 
 Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends.
-Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matplotlib qt5``) to pan, zoom and adjust your plots in a separate window, or switch back to the default ``inline`` (``%matplotlib inline``) to see them displayed right in the :doc:`plots` pane.
+Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matplotlib qt5``) to pan, zoom and adjust your plots in a separate window, or switch back to the default ``inline`` (``%matplotlib inline``) to see them displayed right in the :ref:`panes-plots` pane.
 
 .. image:: /images/debugging/debugging-matplotlib.gif
    :alt: Debugger showing matplotlib interactive backend
@@ -117,10 +127,12 @@ To avoid showing plots while debugging, deactivate the :guilabel:`Process execut
 
 
 
+.. _panes-debugger-related:
+
 =============
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`ipythonconsole`
-* :doc:`variableexplorer`
+* :ref:`panes-editor`
+* :ref:`panes-console`
+* :ref:`panes-variables`

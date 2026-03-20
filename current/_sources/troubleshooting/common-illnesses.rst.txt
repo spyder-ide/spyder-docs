@@ -1,3 +1,5 @@
+.. _troubleshooting-common:
+
 ################
 Common Illnesses
 ################
@@ -7,16 +9,18 @@ Beyond the general troubleshooting steps, some frequently-reported problems requ
 
 
 .. _starting-kernel-problems-ref:
+.. _troubleshooting-common-kernel:
 
 ==========================
 Errors starting the kernel
 ==========================
 
-If you receive the message ``An error occurred while starting the kernel`` in the :doc:`/panes/ipythonconsole`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
+If you receive the message ``An error occurred while starting the kernel`` in the :ref:`panes-console`, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
 There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.
 
 
 .. _spyder-kernels-version-ref:
+.. _troubleshooting-common-kernel-version:
 
 Spyder-Kernels not installed/incompatible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,6 +70,8 @@ Otherwise, activate your environment by whatever means you created it, and execu
 For both of the previous commands, replace ``<VERSION>`` with the corresponding version in the table.
 
 
+.. _troubleshooting-common-kernel-dependency:
+
 Issue with another dependency
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -86,6 +92,8 @@ Otherwise, activate your environment by whatever means you created it, and run:
    pip install -U spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
 
+.. _troubleshooting-common-kernel-error:
+
 AttributeError/ImportError
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,6 +111,7 @@ To check the names of these modules, see the list in the `Python standard librar
 
 
 .. _code-completion-problems-ref:
+.. _troubleshooting-common-completion:
 
 ===========================
 Completion/help not working
@@ -111,6 +120,8 @@ Completion/help not working
 To provide code completions, help and real-time analysis in the Editor, Spyder uses the Python Language Server (PyLS), an implementation of the Language Server Protocol specification used by VSCode, Atom and other popular editors/IDEs.
 Most help and completion issues lie outside of Spyder's control, and are either limitations with PyLS or the code that is being introspected, but some can be worked around.
 
+
+.. _troubleshooting-common-completion-docstring:
 
 Object missing docstring
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,6 +135,8 @@ If nothing is displayed in the calltip, hover hint or help pane, the object you'
 In this case, the only solution is to add one in the source code of the original function, method or class.
 
 
+.. _troubleshooting-common-completion-missing:
+
 Object cannot be found
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -133,8 +146,10 @@ Some objects, whether due to being written in C, Cython or another language; gen
    :alt: Object not found in help pane
    :width: 500px
 
-However, once you run your code in the :doc:`/panes/ipythonconsole`, you might be able to get help and completions on the object there.
+However, once you run your code in the :ref:`panes-console`, you might be able to get help and completions on the object there.
 
+
+.. _troubleshooting-common-completion-crashed:
 
 LSP has stopped working
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,12 +161,14 @@ If this is the case, you can check LSP status with the :guilabel:`LSP Python` it
    :alt: Spyder with LSP restart dialog
 
 
+.. _troubleshooting-common-completion-bug:
+
 Spyder bug/dependency issue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Given the variety of dependencies involved in making LSP work, an incompatible or out of date version in your environment can result in error messages, incomplete results, or help/analysis not working at all.
 
-To address this, first try updating Anaconda and Spyder as described in :doc:`basic-first-aid`.
+To address this, first try updating Anaconda and Spyder as described in :ref:`troubleshooting-basic`.
 If the issue still isn't resolved, update the various relevant dependencies with:
 
 .. code-block:: bash
@@ -160,9 +177,13 @@ If the issue still isn't resolved, update the various relevant dependencies with
 
 
 
+.. _troubleshooting-common-plugin:
+
 ===============
 Plugin Problems
 ===============
+
+.. _troubleshooting-common-plugin-missing:
 
 Plugin does not work at all
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -179,6 +200,8 @@ Test whether you can import the plug-in manually by opening a Python console in 
 
 If none of this helps you to resolve the problem, then continue to the next section.
 
+
+.. _troubleshooting-common-plugin-other:
 
 Other issues
 ~~~~~~~~~~~~

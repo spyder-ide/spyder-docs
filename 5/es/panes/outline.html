@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,11 +472,13 @@
                 <article class="bd-article">
                   
   <section id="outline">
-<h1>Explorador de código<a class="headerlink" href="#outline" title="Link to this heading">#</a></h1>
-<p>El panel <strong>Explorador de código</strong> te permite ver y navegar las funciones, clases, métodos, celdas y comentarios en archivos Python abiertos. Para mostrar u ocultar el panel de Explorador de código, usa <span class="menuselection">Ver ‣ Paneles ‣ Explorador de código</span> o <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd> / <kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd>. Haz clic en una entrada del esquema para saltar a la ubicación de su archivo de origen y utiliza el botón de la barra de herramientas <span class="guilabel">Ir a la posición del cursor</span> para resaltar el elemento correspondiente a la posición actual del <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>.</p>
+<span id="panes-outline"></span><h1>Explorador de código<a class="headerlink" href="#outline" title="Link to this heading">#</a></h1>
+<p>The <strong>Outline</strong> pane allows you to view and navigate the functions, classes, methods, cells and comments in open Python files.
+To show or hide the Outline pane, use <span class="menuselection">View ‣ Panes ‣ Outline</span> or <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd> / <kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd>.
+Click an entry in the outline to jump to its source file location, and use the <span class="guilabel">Go to cursor position</span> toolbar button to highlight the item corresponding to the current <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> position.</p>
 <img alt="Outline pane" src="../_images/outline-standard.png" />
 <section id="options-menu">
-<h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
+<span id="panes-outline-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>El menú de opciones en la parte superior derecha del panel te permite personalizar la forma en que se muestra el explorador de código.</p>
 <img alt="Outline options menu" src="../_images/outline-options-menu.png" />
 <p>Estas opciones de personalización incluyen:</p>
@@ -485,13 +487,13 @@
 <li><p><span class="guilabel">Mostrar todos los archivos</span>: lista cada archivo abierto en lugar de solo el actual. Esto permite usar el explorador de código como un selector de archivos.</p></li>
 <li><p><span class="guilabel">Agrupar celdas</span>: agrupa celdas de código anidadas en múltiples niveles en el explorador de código en lugar de mostrar todas las celdas en un solo nivel. Puedes crear subsecciones añadiendo más signos de <code class="docutils literal notranslate"><span class="pre">%</span></code> al separador de celdas.</p></li>
 <li><p><span class="guilabel">Mostrar variables y atributos</span>: muestra las definiciones de variable/constante de nivel superior y los atributos de clase en el explorador de código.</p></li>
-<li><p><span class="guilabel">Ir a la posición del cursor</span>: resalta y expande automáticamente la entrada correspondiente a la posición actual del cursor en el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>.</p></li>
+<li><p><span class="guilabel">Follow cursor position</span>: Automatically highlight and expand the entry corresponding to the current cursor position in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a>.</p></li>
 <li><p><span class="guilabel">Mostrar comentarios especiales</span>: lista los comentarios especiales en el explorador de código, los cuales comienzan con <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">----</span></code>.</p></li>
 <li><p><span class="guilabel">Organizar archivos alfabéticamente</span>: ordena la lista de archivos en orden alfabético. Cuando se deshabilita, todas las pestañas se ordenarán según el orden de las pestañas del panel Editor seleccionado actualmente.</p></li>
 </ul>
 </section>
 <section id="icons">
-<h2>Iconos<a class="headerlink" href="#icons" title="Link to this heading">#</a></h2>
+<span id="panes-outline-icons"></span><h2>Iconos<a class="headerlink" href="#icons" title="Link to this heading">#</a></h2>
 <p>Los siguientes iconos se utilizan para elementos del explorador de código:</p>
 <ul class="simple">
 <li><p><span class="guilabel">m</span> para métodos</p></li>
@@ -502,11 +504,11 @@
 </ul>
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-outline-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Archivos</span></a></p></li>
-<li><p><a class="reference internal" href="projects.html"><span class="doc">Proyectos</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="fileexplorer.html#panes-files"><span class="std std-ref">Archivos</span></a></p></li>
+<li><p><a class="reference internal" href="projects.html#panes-projects"><span class="std std-ref">Proyectos</span></a></p></li>
 </ul>
 </section>
 </section>

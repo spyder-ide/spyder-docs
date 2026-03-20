@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -471,18 +471,18 @@
                 <article class="bd-article">
                   
   <section id="code-analysis">
-<h1>Code Analysis<a class="headerlink" href="#code-analysis" title="Link to this heading">#</a></h1>
+<span id="panes-pylint"></span><h1>Code Analysis<a class="headerlink" href="#code-analysis" title="Link to this heading">#</a></h1>
 <p>The <strong>Code Analysis</strong> pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
 Based on these results, it also gives your code an overall quality score.
 Spyder’s code analyzer is powered by the best-in-class <a class="reference external" href="https://pylint.pycqa.org/">Pylint</a> back-end, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.</p>
 <img alt="Spyder Pylint pane, showing numerous issues discovered in a file" src="../_images/code-analysis-standard.png" />
 <section id="using-the-code-analyzer">
-<h2>Using the code analyzer<a class="headerlink" href="#using-the-code-analyzer" title="Link to this heading">#</a></h2>
-<p>You can select the desired file to analyze directly in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> by clicking anywhere within it.
+<span id="panes-pylint-using"></span><h2>Using the code analyzer<a class="headerlink" href="#using-the-code-analyzer" title="Link to this heading">#</a></h2>
+<p>You can select the desired file to analyze directly in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> by clicking anywhere within it.
 To run the analysis, press the configurable shortcut (<kbd class="kbd docutils literal notranslate">F8</kbd> by default), select <span class="menuselection">Source ‣ Run code analysis</span> from the menu bar or click the <span class="guilabel">Analyze</span> button in the Code Analysis pane.
 If the Code Analysis pane is not visible, you can open it under <span class="menuselection">View ‣ Panes ‣ Code Analysis</span>.
 All standard checks are run by default.
-To go directly to a line in the <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> highlighted by a failed check, just click its name.</p>
+To go directly to a line in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> highlighted by a failed check, just click its name.</p>
 <img alt="Spyder Pylint pane, showing running analysis and clicking failed check" src="../_images/code-analysis-editor.gif" />
 <p>You can also manually enter the path of a file you’d like it to check in the path entry box in the pane’s toolbar.
 The analyzer works with both individual scripts and whole Python packages (directories containing an <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file).</p>
@@ -494,14 +494,14 @@ If Pylint does succeed, the <span class="guilabel">Output</span> will show the r
 <img alt="Spyder Pylint pane, showing history" src="../_images/code-analysis-history.png" />
 </section>
 <section id="options-menu">
-<h2>Options menu<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
+<span id="panes-pylint-options"></span><h2>Options menu<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>The number of recent runs Spyder should remember can be customized in the <span class="guilabel">History</span> dialog, available from the Code Analysis options menu.</p>
 <img alt="Spyder Pylint pane, customizing history dialog" src="../_images/code-analysis-history-custom.gif" />
 <p>You can also expand or collapse one or all the sections in the pane by using the corresponding options in the options menu.</p>
 <img alt="Spyder Pylint pane, expanding and collapsing sections" src="../_images/code-analysis-expand-collapse.gif" />
 </section>
 <section id="advanced-options">
-<h2>Advanced options<a class="headerlink" href="#advanced-options" title="Link to this heading">#</a></h2>
+<span id="panes-pylint-advanced"></span><h2>Advanced options<a class="headerlink" href="#advanced-options" title="Link to this heading">#</a></h2>
 <p>You can turn certain messages off at the line, block or file/module level by adding a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=MESSAGE-NAMES</span></code> comment at the respective <a class="reference external" href="https://pylint.pycqa.org/en/stable/user_guide/message-control.html">scope</a>, where <code class="docutils literal notranslate"><span class="pre">MESSAGE_NAMES</span></code> should be replaced with a comma-separated list (or single value) of <a class="reference external" href="https://pylint.pycqa.org/en/latest/user_guide/checkers/features.html#pylint-checkers-options-and-switches">Pylint message names</a>.
 For example, a directive might look like <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=invalid-name</span></code>, or <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">pylint:</span> <span class="pre">disable=fixme,</span> <span class="pre">line-too-long</span></code>.</p>
 <img alt="Spyder Pylint pane, showing disabling a message locally" src="../_images/code-analysis-pylint-disable.gif" />
@@ -511,10 +511,10 @@ For more details on configuring Pylint, see the <a class="reference external" hr
 <img alt="Spyder Pylint pane, disabling a message globally in the .pylintrc" src="../_images/code-analysis-pylint-file.gif" />
 </section>
 <section id="related-panes">
-<h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-pylint-related"></span><h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="profiler.html"><span class="doc">Profiler</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="profiler.html#panes-profiler"><span class="std std-ref">Profiler</span></a></p></li>
 </ul>
 </section>
 </section>

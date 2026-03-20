@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,14 +472,15 @@
                 <article class="bd-article">
                   
   <section id="debugger">
-<h1>Depurador (Debugger)<a class="headerlink" href="#debugger" title="Link to this heading">#</a></h1>
-<p>La <strong>depuración</strong> en Spyder es compatible a través de la integración con el depurador mejorado de <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> en la consola <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>. Esto permite que los puntos de interrupción y el flujo de ejecución sean vistos y controlados directamente desde el Spyder GUI, así como con todos los comandos conocidos de la consola IPython.</p>
+<span id="panes-debugger"></span><h1>Depurador (Debugger)<a class="headerlink" href="#debugger" title="Link to this heading">#</a></h1>
+<p><strong>Debugging</strong> in Spyder is supported through integration with the enhanced <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> debugger in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>.
+This allows breakpoints and the execution flow to be viewed and controlled right from the Spyder GUI, as well as with all the familiar IPython console commands.</p>
 <img alt="A Spyder IPython console window, showing the ipdb debugger in action" src="../_images/debugging-console.png" />
 <section id="debugging-with-ipdb">
-<h2>Depurando con ipdb<a class="headerlink" href="#debugging-with-ipdb" title="Link to this heading">#</a></h2>
+<span id="panes-debugger-ipdb"></span><h2>Depurando con ipdb<a class="headerlink" href="#debugging-with-ipdb" title="Link to this heading">#</a></h2>
 <p>Puedes controlar completamente la ejecución del depurador desde el menú <span class="guilabel">Depurar</span> de la <span class="guilabel">Barra de herramientas de depuración</span> y a través de atajos de teclado configurables, junto con el estándar <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> <a class="reference external" href="https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html">comandos de consola</a>.</p>
 <img alt="A Spyder IPython console window, showing debugging from toolbar" src="../_images/debugging-commands.gif" />
-<p>Además, el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> muestra la línea de código en la que el depurador se detiene con una flecha.</p>
+<p>Additionally, the  <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> shows the line of code the debugger is currently stopped on with an arrow.</p>
 <img alt="Spyder Editor showing the debugging panel" src="../_images/debugging-arrow.png" />
 <p>El depurador de Spyder ofrece resaltado de sintaxis, terminación de código e historial de comandos, que funcionan exactamente como lo hacen en el intérprete interactivo normal.</p>
 <p>Usa las flechas arriba y abajo para recordar comandos anteriores, y pulsa <kbd class="kbd docutils literal notranslate">Tab</kbd> para activar sugerencias de autocompletado.</p>
@@ -490,7 +491,7 @@
 <img alt="Debugger showing multiline debugger" src="../_images/debugging-multiline.gif" />
 </section>
 <section id="breakpoints">
-<span id="debugging-breakpoints"></span><h2>Puntos de interrupción<a class="headerlink" href="#breakpoints" title="Link to this heading">#</a></h2>
+<span id="debugging-breakpoints"></span><span id="panes-debugger-breakpoints"></span><h2>Puntos de interrupción<a class="headerlink" href="#breakpoints" title="Link to this heading">#</a></h2>
 <p>El depurador de Spyder está integrado con el panel de <span class="guilabel">Breakpoints</span>, el cual muestra el archivo, la línea y la condición (si existe) de cada punto de interrupción definido. Para abrirlo, selecciona <span class="menuselection">Depurar ‣ Listar puntos de interrupción</span>, o pulsa <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd> en macOS).</p>
 <img alt="Spyder's Breakpoints panel, with a number of examples showing file, line number and an optional condition" src="../_images/breakpoints-standard.png" />
 <p>Hay varias maneras diferentes de establecer y limpiar los puntos de interrupción:</p>
@@ -502,11 +503,11 @@
 <li><p>Interactivamente, usando el comando <code class="docutils literal notranslate"><span class="pre">b</span></code> en una sesión de depuración.</p></li>
 </ul>
 <img alt="Spyder showing setting conditional breakpoint" src="../_images/debugging-breakpoints.gif" />
-<p>Puedes acceder y editar variables locales y globales en cada punto de interrupción a través del <a class="reference internal" href="variableexplorer.html"><span class="doc">Explorador de variables</span></a>.</p>
+<p>You can access and edit local and global variables at each breakpoint through the <a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a>.</p>
 <img alt="Spyder's console and variable explorer showing local and global variables when debugging" src="../_images/debugging-variables.png" />
 </section>
 <section id="advanced-features">
-<h2>Funcionalidades avanzadas<a class="headerlink" href="#advanced-features" title="Link to this heading">#</a></h2>
+<span id="panes-debugger-advanced"></span><h2>Funcionalidades avanzadas<a class="headerlink" href="#advanced-features" title="Link to this heading">#</a></h2>
 <p>Puedes evitar pasar por otros paquetes de Python mientras depuras activando <span class="guilabel">Ignorar las librerías de Python mientras se depura</span> en las preferencias de Spyder, bajo <span class="menuselection">Terminal de IPython ‣ Depurador ‣ Depurar</span>. Esto omitirá todos los módulos Python integrados y de terceros que haya instalado.</p>
 <img alt="Spyder's preferences showing Ignore Python libraries while debugging options" src="../_images/debugging-libraries.png" />
 <p>Si tu código tiene variables con los mismos nombres que los comandos Pdb (por ejemplo, <code class="docutils literal notranslate"><span class="pre">b</span></code> o <code class="docutils literal notranslate"><span class="pre">step</span></code>), todavía puedes referirte a ellos como normales mientras depuras. Para llamar al comando Pdb correspondiente, simplemente agrega un punto de exclamación antes de él (por ejemplo, <code class="docutils literal notranslate"><span class="pre">!b</span></code> o <code class="docutils literal notranslate"><span class="pre">!step</span></code>).</p>
@@ -515,17 +516,18 @@
 <img alt="Spyder's preferenes with debugging snippet" src="../_images/debugging-snippet.png" />
 </section>
 <section id="matplotlib-support">
-<h2>Soporte Matplotlib<a class="headerlink" href="#matplotlib-support" title="Link to this heading">#</a></h2>
-<p>La generación de figuras de Matplotlib está totalmente soportada mientras el depurador está activo, incluyendo todos los diferentes backends gráficos. Utilice la magia <code class="docutils literal notranslate"><span class="pre">%matplotlib</span></code> para cambiar a un backend interactivo (por ejemplo, <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">qt5</span></code>) para anclar, acercar y ajustar tus gráficas en una ventana separada, o vuelve al <code class="docutils literal notranslate"><span class="pre">inline</span></code> predeterminado (<code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>) para verlos mostrados directamente en el panel <a class="reference internal" href="plots.html"><span class="doc">Gráficos</span></a>.</p>
+<span id="panes-debugger-matplotlib"></span><h2>Soporte Matplotlib<a class="headerlink" href="#matplotlib-support" title="Link to this heading">#</a></h2>
+<p>Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends.
+Use the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span></code> magic to change to an interactive backend (e.g. <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">qt5</span></code>) to pan, zoom and adjust your plots in a separate window, or switch back to the default <code class="docutils literal notranslate"><span class="pre">inline</span></code> (<code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>) to see them displayed right in the <a class="reference internal" href="plots.html#panes-plots"><span class="std std-ref">Gráficos</span></a> pane.</p>
 <img alt="Debugger showing matplotlib interactive backend" src="../_images/debugging-matplotlib.gif" />
 <p>Para evitar mostrar gráficos mientras se depura, desactiva la opción <span class="guilabel">Procesar ejecución de eventos al depurar</span> en <span class="menuselection">Preferencias ‣ Terminal de IPython ‣ Depurador</span>.</p>
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-debugger-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a></p></li>
-<li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Explorador de variables</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a></p></li>
+<li><p><a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a></p></li>
 </ul>
 </section>
 </section>

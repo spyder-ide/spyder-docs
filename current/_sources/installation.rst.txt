@@ -1,3 +1,4 @@
+.. _install:
 .. _install-guide:
 
 #############
@@ -7,7 +8,7 @@ Install Guide
 Spyder is relatively easy to install on Windows, Linux and macOS.
 Just make sure to read and follow these instructions with care.
 
-If you run into problems, before posting a report, *please* consult our comprehensive :doc:`troubleshooting guide</troubleshooting/first-steps>` and search the `issue tracker`_ for your error message and problem description.
+If you run into problems, before posting a report, *please* consult our comprehensive :ref:`troubleshooting guide <troubleshooting-guide>` and search the `issue tracker`_ for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
@@ -87,7 +88,7 @@ On macOS, open the disk image and drag Spyder to your :guilabel:`Applications` f
 .. note::
 
    "Lite" versions of both installers are also available from the `releases page`_, which are somewhat smaller than the full installers.
-   These lack a number of optional but recommended dependencies, such as NumPy, SciPy and Pandas, meaning that a few :doc:`/panes/variableexplorer` features, including graphical data import wizards and support for rich display and editing of NumPy arrays and Pandas DataFrames, will not be available.
+   These lack a number of optional but recommended dependencies, such as NumPy, SciPy and Pandas, meaning that a few :ref:`panes-variables` features, including graphical data import wizards and support for rich display and editing of NumPy arrays and Pandas DataFrames, will not be available.
    Given this only saves a modest amount of space while missing out on significant features, we recommend using the full installers unless minimizing download/install size and memory usage is a priority.
 
 .. _releases page: https://github.com/spyder-ide/spyder/releases/latest
@@ -471,17 +472,7 @@ Additional help
 
 *Have a help request or discussion topic?* Subscribe to our `Google Group`_.
 
-.. rst-class:: fasb fa-comments
-
-*Asking a quick question or want to chat with the dev team?* Stop by our `Gitter chatroom`_.
-
-.. rst-class:: fabb openteams-icon
-
-*Seeking personalized help from expert Spyder consultants?* Visit `OpenTeams`_.
-
 .. _main website: https://www.spyder-ide.org/
 .. _Github repository: https://github.com/spyder-ide/spyder/
 .. _Github wiki: https://github.com/spyder-ide/spyder/wiki
 .. _Google Group: https://groups.google.com/g/spyderlib
-.. _Gitter chatroom: https://gitter.im/spyder-ide/public
-.. _OpenTeams: https://www.openteams.com/oss-spyder/

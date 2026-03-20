@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -443,15 +443,15 @@
                 <article class="bd-article">
                   
   <section id="frequently-asked-questions">
-<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h1>
+<span id="faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h1>
 <section id="installing-and-updating">
-<h2>Installing and updating<a class="headerlink" href="#installing-and-updating" title="Link to this heading">#</a></h2>
+<span id="faq-installing"></span><h2>Installing and updating<a class="headerlink" href="#installing-and-updating" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="install-spyder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: How do I install Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The easiest way to install Spyder is with the Anaconda Python distribution, which comes with everything you need to get started in an all-in-one package.
 Download it from its <a class="reference external" href="https://www.anaconda.com/products/distribution">webpage</a>.</p>
-<p class="sd-card-text">For more information, visit our <a class="reference internal" href="installation.html"><span class="doc">Install Guide</span></a>.</p>
+<p class="sd-card-text">For more information, visit our <a class="reference internal" href="installation.html#install-guide"><span class="std std-ref">Install Guide</span></a>.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="install-wsl2">
 <summary class="sd-summary-title sd-card-header">
@@ -469,7 +469,7 @@ You <strong>must</strong> map a network drive letter to your machine path, e.g. 
 </pre></div>
 </div>
 <p class="sd-card-text">It will run the kernel as a subprocess and create a file named <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> in your WSL home folder.</p>
-<p class="sd-card-text">Finally, under the options menu of Spyder’s <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>, select <span class="guilabel">Connect to an existing kernel</span> as described in <a class="reference internal" href="panes/ipythonconsole.html#connecting-external-kernel"><span class="std std-ref">Using external kernels</span></a>.
+<p class="sd-card-text">Finally, under the options menu of Spyder’s <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>, select <span class="guilabel">Connect to an existing kernel</span> as described in <a class="reference internal" href="panes/ipythonconsole.html#panes-console-external"><span class="std std-ref">Using external kernels</span></a>.
 Insert the absolute path of <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> into the <span class="guilabel">Connection file</span> field.
 If you mapped <code class="docutils literal notranslate"><span class="pre">W:</span></code> as mentioned in above note, the path should be <code class="file docutils literal notranslate"><span class="pre">W:/home/</span><em><span class="pre">username</span></em><span class="pre">/remotemachine.json</span></code>.
 A new console will open in Spyder, running in the Linux environment.
@@ -499,7 +499,7 @@ We strongly recommend the latest available, to benefit from new features, bug fi
 </div>
 </details></section>
 <section id="running-spyder">
-<h2>Running Spyder<a class="headerlink" href="#running-spyder" title="Link to this heading">#</a></h2>
+<span id="faq-running"></span><h2>Running Spyder<a class="headerlink" href="#running-spyder" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-spyder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: How do I run Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -567,7 +567,7 @@ Click <span class="guilabel">Launch</span> to start Spyder in your selected envi
 </div>
 </details></section>
 <section id="using-spyder">
-<span id="using-spyder-faqs-ref"></span><h2>Using Spyder<a class="headerlink" href="#using-spyder" title="Link to this heading">#</a></h2>
+<span id="faq-using"></span><h2>Using Spyder<a class="headerlink" href="#using-spyder" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-install-packages">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: How do I install Python packages to use within Spyder if I installed Spyder with conda?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -581,7 +581,7 @@ In your system terminal (or Anaconda Prompt on Windows), type:</p>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-existing-environment">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: How do I get Spyder to work with my existing Python packages/environment?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To work with an existing environment in Spyder, change the default Python interpreter for new <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a>s to point to this environment.</p>
+<p class="sd-card-text">To work with an existing environment in Spyder, change the default Python interpreter for new <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>s to point to this environment.</p>
 <p class="sd-card-text">To do so, open the <span class="guilabel">Python interpreter</span> section of Spyder’s preferences (<span class="menuselection">Tools ‣ Preferences</span>, or <span class="menuselection">Spyder ‣ Preferences</span> on macOS).
 Here, select the option <span class="guilabel">Use the following Python interpreter</span>, and use the dropdown below to select your preferred environment.
 If it’s not listed, see <a class="reference internal" href="#faq-env-not-listed"><span class="std std-ref">the note below</span></a>.</p>
@@ -596,7 +596,7 @@ You can find this path by activating the venv or Conda env you want to use in yo
 </div>
 </div>
 <p class="sd-card-text">Finally, click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.
-If <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> is not already installed, the <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> will display instructions on how to install the right version.
+If <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> is not already installed, the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> will display instructions on how to install the right version.
 Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-packages-installer">
@@ -627,7 +627,7 @@ For example, if you want to use <code class="docutils literal notranslate"><span
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-code-cells">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: How do I use code cells in Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To create a cell in Spyder’s <a class="reference internal" href="panes/editor.html"><span class="doc">Editor</span></a>, type <code class="docutils literal notranslate"><span class="pre">#%%</span></code> in your script.
+<p class="sd-card-text">To create a cell in Spyder’s <a class="reference internal" href="panes/editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, type <code class="docutils literal notranslate"><span class="pre">#%%</span></code> in your script.
 Each <code class="docutils literal notranslate"><span class="pre">#%%</span></code> will make a new cell.
 To run a cell, press <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd> (while your cursor is focused on it) or use the <span class="guilabel">Run current cell</span> button in Spyder’s toolbar.</p>
 <img alt="Spyder showing cell generation." src="_images/faq-cells.png" />
@@ -670,12 +670,12 @@ For more information on a specific plugin, go to the its repository:</p>
 </div>
 </details></section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<span id="faq-troubleshooting"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-spyder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: I’ve found a bug or issue with Spyder. What do I do?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">You should first follow the steps in our <a class="reference internal" href="troubleshooting/first-steps.html"><span class="doc">troubleshooting guide</span></a>.
-If you can’t solve your problem, open an issue by following the instructions in our <a class="reference internal" href="troubleshooting/submit-a-report.html"><span class="doc">Submit a Report</span></a> section.</p>
+<p class="sd-card-text">You should first follow the steps in our <a class="reference internal" href="troubleshooting/first-steps.html#troubleshooting-guide"><span class="std std-ref">troubleshooting guide</span></a>.
+If you can’t solve your problem, open an issue by following the instructions in our <a class="reference internal" href="troubleshooting/submit-a-report.html#troubleshooting-report"><span class="std std-ref">Submit a Report</span></a> section.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-running-code">
 <summary class="sd-summary-title sd-card-header">
@@ -683,25 +683,25 @@ If you can’t solve your problem, open an issue by following the instructions i
 <p class="sd-card-text">First, make sure the error you are seeing is not a bug in your code.
 To confirm this, try running it in any standard Python interpreter.
 If the error still occurs, the problem is likely with your code and a site like <a class="reference external" href="https://stackoverflow.com">Stack Overflow</a> might be the best place to start.
-Otherwise, start at the <a class="reference internal" href="troubleshooting/basic-first-aid.html"><span class="doc">Basic First Aid</span></a> section of our troubleshooting guide.</p>
+Otherwise, start at the <a class="reference internal" href="troubleshooting/basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Basic First Aid</span></a> section of our troubleshooting guide.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-completion">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: Code completion/help doesn’t work; what can I do?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If nothing is displayed in the calltip, hover hint or <a class="reference internal" href="panes/help.html"><span class="doc">Help</span></a> pane, make sure the object you are inspecting has a docstring, and try executing your code in the <a class="reference internal" href="panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> to get help and completions there.
+<p class="sd-card-text">If nothing is displayed in the calltip, hover hint or <a class="reference internal" href="panes/help.html#panes-help"><span class="std std-ref">Help</span></a> pane, make sure the object you are inspecting has a docstring, and try executing your code in the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> to get help and completions there.
 If this doesn’t work, try restarting PyLS by right-clicking the <span class="guilabel">LSP Python</span> label item in the statusbar at the bottom of Spyder’s main window, and selecting the <span class="guilabel">Restart Python Language Server</span> option.</p>
-<p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#code-completion-problems-ref"><span class="std std-ref">Completion/help not working</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html"><span class="doc">Common Illnesses</span></a> page of our troubleshooting guide.</p>
+<p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-completion"><span class="std std-ref">Completion/help not working</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common"><span class="std std-ref">Common Illnesses</span></a> page of our troubleshooting guide.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-starting-kernel">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: I get the message “An error occurred while starting the kernel”. How do I fix this?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
-See the table in the <a class="reference internal" href="troubleshooting/common-illnesses.html#spyder-kernels-version-ref"><span class="std std-ref">Spyder-Kernels not installed/incompatible</span></a> section of the troubleshooting guide to check.</p>
+See the table in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">Spyder-Kernels not installed/incompatible</span></a> section of the troubleshooting guide to check.</p>
 <p class="sd-card-text">To install the right version, type the following on the command line (or Anaconda Prompt on Windows)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
 </pre></div>
 </div>
-<p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">Errors starting the kernel</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html"><span class="doc">Common Illnesses</span></a> page of our troubleshooting guide.</p>
+<p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-kernel"><span class="std std-ref">Errors starting the kernel</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common"><span class="std std-ref">Common Illnesses</span></a> page of our troubleshooting guide.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-macos-bigsur">
 <summary class="sd-summary-title sd-card-header">
@@ -725,7 +725,7 @@ spyder
 </div>
 </details></section>
 <section id="about-spyder">
-<h2>About Spyder<a class="headerlink" href="#about-spyder" title="Link to this heading">#</a></h2>
+<span id="faq-about"></span><h2>About Spyder<a class="headerlink" href="#about-spyder" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="commercial-use">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Q: What’s Spyder’s licensing situation? Is commercial use allowed?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -742,7 +742,7 @@ However, these terms only apply to the package infrastructure (the full Anaconda
 Instead, you can simply download the similar <a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest">Miniforge distribution</a>, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
 Then, simply install the packages you need (including Spyder, if you aren’t using our recommended <a class="reference internal" href="installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>) with <code class="docutils literal notranslate"><span class="pre">conda</span></code> as you usually do.
 Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
-For more, see our <a class="reference internal" href="installation.html"><span class="doc">Install Guide</span></a>.</p>
+For more, see our <a class="reference internal" href="installation.html#install-guide"><span class="std std-ref">Install Guide</span></a>.</p>
 </div>
 </details></section>
 </section>

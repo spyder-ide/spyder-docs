@@ -1,6 +1,10 @@
+.. _faq:
+
 ##########################
 Frequently Asked Questions
 ##########################
+
+.. _faq-installing:
 
 =======================
 Installing and updating
@@ -14,7 +18,7 @@ Installing and updating
 
    .. _webpage: https://www.anaconda.com/products/distribution
 
-   For more information, visit our :doc:`/installation`.
+   For more information, visit our :ref:`install-guide`.
 
 
 .. dropdown:: Q: How do I install Spyder on Windows Subsystem for Linux 2 (WSL2)?
@@ -38,7 +42,7 @@ Installing and updating
 
    It will run the kernel as a subprocess and create a file named :file:`remotemachine.json` in your WSL home folder.
 
-   Finally, under the options menu of Spyder's :doc:`panes/ipythonconsole`, select :guilabel:`Connect to an existing kernel` as described in :ref:`connecting-external-kernel`.
+   Finally, under the options menu of Spyder's :ref:`panes-console`, select :guilabel:`Connect to an existing kernel` as described in :ref:`panes-console-external`.
    Insert the absolute path of :file:`remotemachine.json` into the :guilabel:`Connection file` field.
    If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`.
    A new console will open in Spyder, running in the Linux environment.
@@ -74,6 +78,8 @@ Installing and updating
       :alt: Navigator showing installing specific version of Spyder
 
 
+
+.. _faq-running:
 
 ==============
 Running Spyder
@@ -151,7 +157,7 @@ Running Spyder
 
 
 
-.. _using_spyder_faqs_ref:
+.. _faq-using:
 
 ============
 Using Spyder
@@ -179,7 +185,7 @@ Using Spyder
 .. dropdown:: Q: How do I get Spyder to work with my existing Python packages/environment?
    :name: using-existing-environment
 
-   To work with an existing environment in Spyder, change the default Python interpreter for new :doc:`/panes/ipythonconsole`\s to point to this environment.
+   To work with an existing environment in Spyder, change the default Python interpreter for new :ref:`panes-console`\s to point to this environment.
 
    To do so, open the :guilabel:`Python interpreter` section of Spyder's preferences (:menuselection:`Tools --> Preferences`, or :menuselection:`Spyder --> Preferences` on macOS).
    Here, select the option :guilabel:`Use the following Python interpreter`, and use the dropdown below to select your preferred environment.
@@ -202,7 +208,7 @@ Using Spyder
          python -c "import sys; print(sys.executable)"
 
    Finally, click :guilabel:`Restart kernel` in the :guilabel:`Consoles` menu for this change to take effect.
-   If ``spyder-kernels`` is not already installed, the :doc:`/panes/ipythonconsole` will display instructions on how to install the right version.
+   If ``spyder-kernels`` is not already installed, the :ref:`panes-console` will display instructions on how to install the right version.
    Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.
 
 
@@ -253,7 +259,7 @@ Using Spyder
 .. dropdown:: Q: How do I use code cells in Spyder?
    :name: using-code-cells
 
-   To create a cell in Spyder's :doc:`/panes/editor`, type ``#%%`` in your script.
+   To create a cell in Spyder's :ref:`panes-editor`, type ``#%%`` in your script.
    Each ``#%%`` will make a new cell.
    To run a cell, press :kbd:`Shift-Enter` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
@@ -315,6 +321,8 @@ Using Spyder
 
 
 
+.. _faq-troubleshooting:
+
 ===============
 Troubleshooting
 ===============
@@ -322,8 +330,8 @@ Troubleshooting
 .. dropdown:: Q: I've found a bug or issue with Spyder. What do I do?
    :name: troubleshooting-spyder
 
-   You should first follow the steps in our :doc:`troubleshooting guide</troubleshooting/first-steps>`.
-   If you can't solve your problem, open an issue by following the instructions in our :doc:`/troubleshooting/submit-a-report` section.
+   You should first follow the steps in our :ref:`troubleshooting guide <troubleshooting-guide>`.
+   If you can't solve your problem, open an issue by following the instructions in our :ref:`troubleshooting-report` section.
 
 
 .. dropdown:: Q: I get an error in the IPython console running my code! Help!
@@ -332,7 +340,7 @@ Troubleshooting
    First, make sure the error you are seeing is not a bug in your code.
    To confirm this, try running it in any standard Python interpreter.
    If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
-   Otherwise, start at the :doc:`/troubleshooting/basic-first-aid` section of our troubleshooting guide.
+   Otherwise, start at the :ref:`troubleshooting-basic` section of our troubleshooting guide.
 
    .. _Stack Overflow: https://stackoverflow.com
 
@@ -340,17 +348,17 @@ Troubleshooting
 .. dropdown:: Q: Code completion/help doesn't work; what can I do?
    :name: troubleshooting-completion
 
-   If nothing is displayed in the calltip, hover hint or :doc:`/panes/help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :doc:`/panes/ipythonconsole` to get help and completions there.
+   If nothing is displayed in the calltip, hover hint or :ref:`panes-help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :ref:`panes-console` to get help and completions there.
    If this doesn't work, try restarting PyLS by right-clicking the :guilabel:`LSP Python` label item in the statusbar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
-   For more information, go to the :ref:`code-completion-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`troubleshooting-common-completion` section in the :ref:`troubleshooting-common` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: I get the message "An error occurred while starting the kernel". How do I fix this?
    :name: troubleshooting-starting-kernel
 
    First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
-   See the table in the :ref:`spyder-kernels-version-ref` section of the troubleshooting guide to check.
+   See the table in the :ref:`troubleshooting-common-kernel-version` section of the troubleshooting guide to check.
 
    To install the right version, type the following on the command line (or Anaconda Prompt on Windows)
 
@@ -358,7 +366,7 @@ Troubleshooting
 
       conda install spyder-kernels=<VERSION>
 
-   For more information, go to the :ref:`starting-kernel-problems-ref` section in the :doc:`/troubleshooting/common-illnesses` page of our troubleshooting guide.
+   For more information, go to the :ref:`troubleshooting-common-kernel` section in the :ref:`troubleshooting-common` page of our troubleshooting guide.
 
 
 .. dropdown:: Q: Spyder doesn't launch or is slow on macOS Big Sur. How can I get it working?
@@ -383,6 +391,8 @@ Troubleshooting
       spyder
 
 
+
+.. _faq-about:
 
 ============
 About Spyder
@@ -410,7 +420,7 @@ About Spyder
    Instead, you can simply download the similar `Miniforge distribution`_, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
    Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`install-standalone`) with ``conda`` as you usually do.
    Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
-   For more, see our :doc:`/installation`.
+   For more, see our :ref:`install-guide`.
 
    .. _recently changed: https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community
    .. _Terms of Service: https://www.anaconda.com/terms-of-service

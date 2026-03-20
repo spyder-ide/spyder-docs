@@ -1,3 +1,5 @@
+.. _troubleshooting-report:
+
 ###############
 Submit a Report
 ###############
@@ -17,6 +19,8 @@ You'll need a `Github account`_ to do this, so make sure you have one before you
 .. _issue tracker: https://github.com/spyder-ide/spyder/issues
 
 
+
+.. _troubleshooting-report-submit:
 
 =======================
 Ways to submit an issue
@@ -49,6 +53,9 @@ In order of preference and difficulty:
 
 Once you submit your report, our team will try to get back to you as soon as possible, often within 24 hours or less, to try to help you fix it.
 
+
+
+.. _troubleshooting-report-include:
 
 ==============================
 What to include in your report

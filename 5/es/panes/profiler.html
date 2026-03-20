@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,18 +472,19 @@
                 <article class="bd-article">
                   
   <section id="profiler">
-<h1>Perfilador (Profiler)<a class="headerlink" href="#profiler" title="Link to this heading">#</a></h1>
+<span id="panes-profiler"></span><h1>Perfilador (Profiler)<a class="headerlink" href="#profiler" title="Link to this heading">#</a></h1>
 <p>El panel <strong>Perfilador (Profiler)</strong> determina recursivamente el tiempo de ejecución y el número de llamadas para cada función, y el método llamado en un archivo, dividiendo cada procedimiento en sus unidades individuales más pequeñas. Esto te permite identificar fácilmente los cuellos de botella en tu código, te indica las sentencias exactas más críticas para la optimización, y mide el delta del rendimiento después de los cambios de seguimiento.</p>
 <img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="../_images/profiler-standard.png" />
 <section id="running-the-profiler">
-<h2>Ejecutando el Perfilador (Profiler)<a class="headerlink" href="#running-the-profiler" title="Link to this heading">#</a></h2>
+<span id="panes-profiler-using"></span><h2>Ejecutando el Perfilador (Profiler)<a class="headerlink" href="#running-the-profiler" title="Link to this heading">#</a></h2>
 <p>Puedes buscar un archivo usando el botón «Seleccionar archivo de Python», ubicado a la derecha del cuadro de ruta del perfil (arriba a la izquierda del panel), que ejecutará automáticamente el perfilador sobre este archivo.</p>
 <img alt="Spyder Profiler pane, showing browsing a file and running profiler" src="../_images/profiler-execution-browse.gif" />
 <p>Puedes introducir manualmente la ruta en el cuadro de ruta del panel y luego ejecutar el análisis en el archivo pulsando <span class="guilabel">Ejecutar el perfilador</span> en el panel del Perfilador (Profiler).</p>
-<p>También puedes ejecutar perfiles para el archivo que está actualmente abierto en el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> haciendo clic en <span class="menuselection"><span class="accelerator">E</span>jecutar ‣ Ejecutar el perfilador</span> en la barra de menú, o usando un acceso directo configurable (<kbd class="kbd docutils literal notranslate">F10</kbd> por defecto).</p>
+<p>You can also run profiling for the file that is currently open in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> by
+clicking <span class="menuselection"><span class="accelerator">R</span>un ‣ Profile</span> in the menu bar, or by using a configurable shortcut (<kbd class="kbd docutils literal notranslate">F10</kbd> by default).</p>
 <img alt="Spyder Profiler pane, showing running profiler from menu bar" src="../_images/profiler-execution-menu.gif" />
 <p>Si quieres cancelar una ejecución en curso, haz clic en el botón <span class="guilabel">Detener el perfilador</span> en la parte superior derecha, y si el perfil falla por cualquier razón, se mostrará el diálogo <span class="guilabel">Salida del perfilador</span> indicando el error que ha ocurrido.</p>
-<p>Al hacer doble clic en un elemento del Perfilador, serás llevado al archivo y a la línea en el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> donde fue llamado.</p>
+<p>By double-clicking an item in the Profiler, you will be taken to the file and line in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> where it was called.</p>
 <img alt="Spyder Profiler pane, showing opening a file when clicking on its analysis" src="../_images/profiler-open-file.gif" />
 <p>Puedes aumentar el número de niveles mostrados para un objeto en particular haciendo clic en las flechas desplegables a la izquierda del nombre, y expandir/contraer todos los elementos con los botones de la parte superior izquierda.</p>
 <img alt="Spyder Profiler pane, showing dropdown arrows and buttons for expanding and collapsing" src="../_images/profiler-dropdown.gif" />
@@ -493,23 +494,23 @@
 <img alt="Spyder Profiler pane, showing running profiler from menu bar" src="../_images/profiler-save-load.gif" />
 </section>
 <section id="interpreting-the-results">
-<h2>Interpretar los resultados<a class="headerlink" href="#interpreting-the-results" title="Link to this heading">#</a></h2>
+<span id="panes-profiler-results"></span><h2>Interpretar los resultados<a class="headerlink" href="#interpreting-the-results" title="Link to this heading">#</a></h2>
 <p>Los resultados son desglosados por función/método/sentencia, con cada subelemento listado jerárquicamente bajo el elemento de nivel superior que los llama. <span class="guilabel">Tiempo total</span> es el tiempo que tarda el objeto especificado y todas las funciones «debajo» del objeto(es decir, las llamadas por el objeto), mientras que <span class="guilabel">Tiempo Local</span> solo cuenta el tiempo empleado en el ámbito propio del objeto en particular. La columna <span class="guilabel">Llamados</span> muestra el número total de veces que el objeto especificado fue llamado en ese nivel dentro de su función de llamada primaria o dentro del ámbito <code class="docutils literal notranslate"><span class="pre">__main__</span></code>, si se trata de un objeto de nivel superior. Finalmente, los números en la columna <span class="guilabel">Diff</span> para cada uno de los tres aparecen si se carga una comparación, e indican los deltas entre cada medición.</p>
 <img alt="Profiler with a comparison loaded, displaying the time deltas between two runs" src="../_images/profiler-comparison.png" />
 <p>Por ejemplo, supongamos que ejecutaste el <span class="guilabel">Perfilador (Profiler)</span> en un archivo que llama a una función <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code>, que a su vez llama a la función <code class="docutils literal notranslate"><span class="pre">sleep()</span></code>; y la función <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> tardó un total de 3.87 ms en ejecutarse, de los cuales 3,86 ms se dedicaron a ejecutar la función <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> dentro de ella. Por lo tanto, si <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> no llama a ninguna otra función, su <span class="guilabel">Tiempo total</span> y su <span class="guilabel">Tiempo local</span> serían idénticos a 3.87 ms. Mientras tanto, el <span class="guilabel">Tiempo total</span> para <code class="docutils literal notranslate"><span class="pre">sleep_wrapper()</span></code> sería de 3.86 ms, pero el <span class="guilabel">Tiempo local</span> sería solo de 0.01 ms , ya que el resto se gastó en la función <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> a la que llamó.</p>
 </section>
 <section id="profiler-plugins">
-<h2>Plugins del perfilador<a class="headerlink" href="#profiler-plugins" title="Link to this heading">#</a></h2>
+<span id="panes-profiler-plugins"></span><h2>Plugins del perfilador<a class="headerlink" href="#profiler-plugins" title="Link to this heading">#</a></h2>
 <p>Hay dos plugins adicionales que puedes instalar para habilitar otros tipos de perfiles en Spyder. En primer lugar, Spyder Line Profiler te permite analizar cada línea de tu código individualmente. Para obtener más información, visita el <a class="reference external" href="https://github.com/spyder-ide/spyder-line-profiler">spyder-line-profiler git repository</a>.</p>
 <img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="../_images/profiler-line-profiler.png" />
 <p>Segundo, el Spyder Memory Profiler mide el uso de memoria de tu código. Para más información, ve a <a class="reference external" href="https://github.com/spyder-ide/spyder-memory-profiler">spyder-memory-profiler git repository</a>.</p>
 <img alt="Spyder Profiler pane, displaying a list of functions and their execution time" src="../_images/profiler-memory-profiler.png" />
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-profiler-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a></p></li>
-<li><p><a class="reference internal" href="pylint.html"><span class="doc">Análisis del código</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a></p></li>
+<li><p><a class="reference internal" href="pylint.html#panes-pylint"><span class="std std-ref">Análisis del código</span></a></p></li>
 </ul>
 </section>
 </section>

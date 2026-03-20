@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,43 +472,44 @@
                 <article class="bd-article">
                   
   <section id="ipython-console">
-<h1>Terminal de IPython<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h1>
+<span id="panes-console"></span><h1>Terminal de IPython<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h1>
 <p>La <strong>Terminal IPython</strong> te permite ejecutar comandos e interactuar con datos dentro de los intérpretes <a class="reference external" href="https://ipython.org/">IPython</a>.</p>
 <img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="../_images/console-standard.png" />
 <p>Para lanzar una nueva instancia de IPython, vaya a <span class="guilabel">Nueva terminal (configuración por defecto)</span> en el menú <span class="guilabel">Terminales</span>, o usa el atajo de teclado <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> en macOS) cuando la consola está focalizada.</p>
 <img alt="Spyder showing opening a new Ipython Console" src="../_images/console-new.gif" />
 <p>Desde el mismo menú, puedes dejar de ejecutar código con el <span class="guilabel">Interrumpir el núcleo</span>, limpia el namespace de una consola con <span class="guilabel">Eliminar todas las variables</span>, o relanza una nueva con <span class="guilabel">Reiniciar el núcleo</span>. Como cada consola se ejecuta en un proceso separado, esto no afectará a ningún otro que hayas abierto, y podrás probar fácilmente tu código en un entorno limpio sin interrumpir tu sesión principal.</p>
 <section id="supported-features">
-<span id="console-features"></span><h2>Funciones disponibles<a class="headerlink" href="#supported-features" title="Link to this heading">#</a></h2>
-<p>Cualquier <span class="guilabel">Terminal de IPython</span>, ya sea <a class="reference internal" href="#connecting-external-kernel"><span class="std std-ref">externa</span></a> o iniciada por Spyder, soporta:</p>
+<span id="panes-console-features"></span><span id="console-features"></span><h2>Funciones disponibles<a class="headerlink" href="#supported-features" title="Link to this heading">#</a></h2>
+<p>Any <span class="guilabel">IPython Console</span>, whether <a class="reference internal" href="#panes-console-external"><span class="std std-ref">external</span></a> or started by Spyder, supports:</p>
 <ul class="simple">
 <li><p>Completado automático de código</p></li>
 <li><p>Información sobre la función en tiempo real</p></li>
-<li><p>Integración GUI completa con el <a class="reference internal" href="debugging.html"><span class="doc">depurador</span></a> mejorado de Spyder.</p></li>
-<li><p>El <a class="reference internal" href="variableexplorer.html"><span class="doc">Explorador de variables</span></a>, con editores gráficos para muchos objetos de Python incorporados y de terceros.</p></li>
-<li><p>Visualización de gráficos de Matplotlib en el panel de <a class="reference internal" href="plots.html"><span class="doc">Gráficos</span></a> de Spyder, si se selecciona el backend <span class="guilabel">En línea</span> en <span class="menuselection">Preferencias ‣ Terminal de IPython ‣ Gráficas ‣ Salida gráfica</span>, y en línea en la consola si la opción <span class="guilabel">Silenciar los gráficos en línea</span> no está marcada en el menú de opciones del panel de <span class="guilabel">Gráficos</span>.</p></li>
+<li><p>Full GUI integration with the enhanced Spyder <a class="reference internal" href="debugging.html#panes-debugger"><span class="std std-ref">Depurador (Debugger)</span></a>.</p></li>
+<li><p>The <a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a>, with GUI-based editors for many built-in and third-party Python objects.</p></li>
+<li><p>Display of Matplotlib graphics in Spyder’s <a class="reference internal" href="plots.html#panes-plots"><span class="std std-ref">Gráficos</span></a> pane, if the <span class="guilabel">Inline</span> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span>, and inline in the console if <span class="guilabel">Mute inline plotting</span> is unchecked under the <span class="guilabel">Plots</span> pane’s options menu.</p></li>
 </ul>
 <img alt="Spyder IPython Console, with a popup list of code completion guesses" src="../_images/console-completion.png" />
 <p>Para obtener información sobre las características, comandos y capacidades incorporadas en IPython mismo, vea la <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
 </section>
 <section id="special-consoles">
-<h2>Consolas especiales<a class="headerlink" href="#special-consoles" title="Link to this heading">#</a></h2>
+<span id="panes-console-special"></span><h2>Consolas especiales<a class="headerlink" href="#special-consoles" title="Link to this heading">#</a></h2>
 <p>Spyder también soporta varios tipos de consolas especializadas. Una <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> permite crear y mostrar expresiones matemáticas simbólicas dentro de Spyder. Una <a class="reference external" href="https://cython.org/#documentation">Cython console</a> te permite usar el lenguaje de Cython para acelerar tu código y llamar a funciones C directamente desde Python. Finalmente, una <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> carga las funciones comunes Numpy y Matplotlib por defecto; mientras que esto está obsoleto y fuertemente desaconsejado para el nuevo código, todavía puede ser usado si es necesario para scripts heredados que lo necesiten.</p>
 <img alt="Spyder showing opening a new special Console" src="../_images/console-special.gif" />
 </section>
 <section id="options-menu">
-<h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
+<span id="panes-console-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>El menú de opciones te permite inspeccionar tus variables de entorno actuales (<span class="guilabel">Mostrar las variables de entorno</span>), y los contenidos de su sistema <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Contenidos del sys.path</span>). Además, puedes tener que cada consola muestre cuánto tiempo ha estado funcionando con <span class="guilabel">Mostrar el tiempo transcurrido</span>.</p>
 <img alt="Spyder IPython Console with options menu" src="../_images/console-options-menu.png" />
 <p>También puedes cambiar el nombre de la pestaña <span class="guilabel">IPython console</span> con la opción <span class="guilabel">Renombrar la pestaña</span>, o simplemente haciendo doble clic en ella.</p>
 <img alt="Spyder IPython Console showing renaming console" src="../_images/console-rename.gif" />
 </section>
 <section id="using-external-kernels">
-<span id="connecting-external-kernel"></span><h2>Usar núcleos externos<a class="headerlink" href="#using-external-kernels" title="Link to this heading">#</a></h2>
-<p>Puedes conectarte a los núcleos externos locales y remotos (incluidos los administrados por Jupyter Notebook o QtConsole) a través del diálogo <span class="guilabel">Conectarse a un núcleo existente</span> bajo el menú de <span class="guilabel">Terminales</span>. Para que esta característica funcione, una versión compatible del paquete <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> <a class="reference internal" href="../troubleshooting/common-illnesses.html#starting-kernel-problems-ref"><span class="std std-ref">debe ser instalado</span></a> en el entorno o máquina en la que el núcleo externo está corriendo.</p>
+<span id="panes-console-external"></span><span id="connecting-external-kernel"></span><h2>Usar núcleos externos<a class="headerlink" href="#using-external-kernels" title="Link to this heading">#</a></h2>
+<p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
+For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
 <img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
 <section id="connect-to-a-local-kernel">
-<h3>Conectar a un núcleo local<a class="headerlink" href="#connect-to-a-local-kernel" title="Link to this heading">#</a></h3>
+<span id="panes-console-external-local"></span><h3>Conectar a un núcleo local<a class="headerlink" href="#connect-to-a-local-kernel" title="Link to this heading">#</a></h3>
 <p>Para conectarse a un núcleo local que ya se está ejecutando (por ejemplo, uno iniciado por Jupyter notebook):</p>
 <ol class="arabic">
 <li><p>Ejecuta <code class="docutils literal notranslate"><span class="pre">%connect_info</span></code> en el notebook o la consola a la que quieres conectarte, y copia el nombre de su archivo de conexión al núcleo, que se muestra después de <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--existing</span></code>.</p>
@@ -524,7 +525,7 @@
 </ol>
 </section>
 <section id="connect-to-a-remote-kernel">
-<h3>Conectar a un núcleo remoto<a class="headerlink" href="#connect-to-a-remote-kernel" title="Link to this heading">#</a></h3>
+<span id="panes-console-external-remote"></span><h3>Conectar a un núcleo remoto<a class="headerlink" href="#connect-to-a-remote-kernel" title="Link to this heading">#</a></h3>
 <p>Para conectarse a un núcleo en una máquina remota:</p>
 <ol class="arabic">
 <li><p>Inicia un núcleo Spyder en el host remoto, si aún no se está ejecutando, con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p>
@@ -550,7 +551,7 @@
 </section>
 </section>
 <section id="reload-changed-modules">
-<span id="umr-section"></span><h2>Recargar módulos modificados<a class="headerlink" href="#reload-changed-modules" title="Link to this heading">#</a></h2>
+<span id="panes-console-umr"></span><span id="umr-section"></span><h2>Recargar módulos modificados<a class="headerlink" href="#reload-changed-modules" title="Link to this heading">#</a></h2>
 <p>Al trabajar en una sesión interactiva, Python sólo carga un módulo desde su archivo fuente una vez, cuando se importa por primera vez.</p>
 <p>El <span class="guilabel">Recargador de Módulos de usuario</span> (RMU) de Spyder recarga automáticamente módulos en las consolas de IPython existentes siempre que sean modificadas y reimportadas. Con la RMU activada, puedes probar los cambios en tu código sin reiniciar el núcleo.</p>
 <img alt="Spyder showing reloading modules in console" src="../_images/console-reload-modules.png" />
@@ -558,13 +559,13 @@
 <img alt="Spyder preferences showing option to use module reloader" src="../_images/console-umr-preferences.png" />
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-console-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="debugging.html"><span class="doc">Depurador (Debugger)</span></a></p></li>
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="help.html"><span class="doc">Ayuda</span></a></p></li>
-<li><p><a class="reference internal" href="historylog.html"><span class="doc">Historial</span></a></p></li>
-<li><p><a class="reference internal" href="variableexplorer.html"><span class="doc">Explorador de variables</span></a></p></li>
+<li><p><a class="reference internal" href="debugging.html#panes-debugger"><span class="std std-ref">Depurador (Debugger)</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="help.html#panes-help"><span class="std std-ref">Ayuda</span></a></p></li>
+<li><p><a class="reference internal" href="historylog.html#panes-history"><span class="std std-ref">Historial</span></a></p></li>
+<li><p><a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a></p></li>
 </ul>
 </section>
 </section>

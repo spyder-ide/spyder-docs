@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -464,10 +464,10 @@
                 <article class="bd-article">
                   
   <section id="basic-first-aid">
-<h1>Primera ayuda básica<a class="headerlink" href="#basic-first-aid" title="Link to this heading">#</a></h1>
+<span id="troubleshooting-basic"></span><h1>Primera ayuda básica<a class="headerlink" href="#basic-first-aid" title="Link to this heading">#</a></h1>
 <p>Estas sugerencias, si bien son más un enfoque de shotgun, tienden a arreglar la mayoría de los problemas informados por sí solos.</p>
 <section id="recommended-troubleshooting-steps">
-<h2>Pasos recomendados para la solución de problemas<a class="headerlink" href="#recommended-troubleshooting-steps" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-steps"></span><h2>Pasos recomendados para la solución de problemas<a class="headerlink" href="#recommended-troubleshooting-steps" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p><strong>Reinicia Spyder</strong>, y prueba lo que estabas haciendo antes de nuevo.</p></li>
 <li><p><strong>Actualiza Spyder</strong> a la última versión, y puede que encuentres que tu problema está resuelto (junto con nuevas características, mejoras y otras correcciones de errores). Los lanzamientos menores salen cada par de meses, así que a menos que se haya actualizado recientemente, hay una buena posibilidad de que tu versión no sea la última. Puedes encontrar con el comando <span class="guilabel">Buscar actualizaciones</span> en el menú de <span class="guilabel">Ayuda</span>.</p>
@@ -508,24 +508,26 @@ spyder
 </ol>
 </section>
 <section id="reinstalling-spyder">
-<span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalar Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-reinstalling"></span><span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalar Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
 <p>Si ninguno de los pasos anteriores resuelve tu problema, deberías hacer una desinstalación completa de Spyder por el mismo medio que lo hayas instalado originalmente.</p>
 <p>Para Anaconda, sigue todos los pasos bajo la opción B en la <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">Anaconda uninstall guide</a>, borra el directorio de Anaconda dondequiera que fue instalado originalmente, y (en Windows) elimina el directorio <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> si existe.</p>
 <img alt="Deleting appdata/python directory" src="../_images/basic-first-aid-app-data.gif" />
 <p>Luego, haz una instalación limpia de la última versión de la <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda distribution</a> que es la forma en que te recomendamos instalar Spyder y mantenerlo actualizado.</p>
 <div class="admonition important">
 <p class="admonition-title">Importante</p>
-<p>Aunque eres bienvenido a hacer que Spyder trabaje por tu cuenta por uno de los muchos otros medios que ofrecemos, solo podemos proporcionar soporte individual para problemas relacionados con la instalación para los usuarios de la distribución Anaconda. En particular, la instalación de pip, aunque factible, es realmente para expertos ya que hay muchas dificultades involucradas y diferentes problemas específicos para su configuración, por eso recomendamos usar Conda siempre que sea posible. Para más información, por favor visite nuestro <a class="reference internal" href="../installation.html"><span class="doc">Guía de instalación</span></a>.</p>
+<p>While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
+In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
+For further information, please visit our <a class="reference internal" href="../installation.html#install-guide"><span class="std std-ref">Guía de instalación</span></a>.</p>
 </div>
 </section>
 <section id="isolating-problems">
-<h2>Aislar problemas<a class="headerlink" href="#isolating-problems" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-isolating"></span><h2>Aislar problemas<a class="headerlink" href="#isolating-problems" title="Link to this heading">#</a></h2>
 <p>Si obtienes un error al ejecutar una línea, bloque o programa específico, puede que no sea un problema con Spyder, sino más bien algo más bajo en los paquetes de los que depende. Intenta ejecutarlo de la siguiente manera en orden hasta que comience a funcionar como esperas. Si logras aislar el error, repórtarlo al último en el que <em>no</em> funciona.</p>
 <ol class="arabic">
 <li><p>¡<strong>Spyder</strong> mismo, por supuesto! Asegúrate de que puedas reproducir el error después de cerrarlo y reabrirlo, si es posible.</p></li>
 <li><p><strong>Una instancia de QtConsole</strong>, por ejemplo, lanzada desde el navegador Anaconda o desde Anaconda Prompt/Consola/línea de comando (Windows/Mac/Linux) con <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">qtconsole</span></code>.</p>
 <img alt="Anaconda navigator showing qtconsole" src="../_images/basic-first-aid-qtconsole.png" />
-<p>QtConsole es el backend de la consola GUI Spyder del que depende para ejecutar su código, así que la mayoría de los problemas involucrando <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">Terminal de IPython</span></a> son en realidad algo relacionado con QtConsole y pueden ser reportados a su <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
+<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> are actually something with QtConsole instead, and can be reported to their <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
 </li>
 <li><p><strong>Un intérprete de línea de comandos IPython</strong> lanzado con, por ejemplo, <code class="docutils literal notranslate"><span class="pre">ipython</span></code> desde Anaconda Prompt/Consola/línea de comandos (Windows/Mac/Linux). Los errores reproducibles pueden ser reportados a su <a class="reference external" href="https://github.com/ipython/ipython/issues">Github page</a>, aunque primero asegúrate de leer sus directrices y documentos.</p></li>
 <li><p><strong>Un intérprete estándar de Python</strong> que puedes ejecutar como un archivo de script con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">path/to/your/file.py</span></code> o interactivamente con <code class="docutils literal notranslate"><span class="pre">python</span></code> desde Anaconda Prompt/Consola/línea de comandos (Windows/Mac/Linux). Aunque no es imposible que hayas encontrado un error en Python, es mucho más probable que sea un problema con el código en sí mismo o con un paquete que estés usando, así que tus mejores fuentes son la <a class="reference external" href="https://www.python.org/doc/">Python docs</a> y los demás recursos listados anteriormente.</p></li>
@@ -534,10 +536,10 @@ spyder
 <p class="admonition-title">Truco</p>
 <p>Si el problema se reproduce de forma similar o idéntica con cualquiera de estos métodos (aparte de Spyder en sí), entonces casi con toda seguridad no es un problema con Spyder, y sería mejor manejarlo en otros lugares. Como normalmente no somos capaces de hacer mucho sobre problemas no relacionados con Spyder, un foro como <a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> o la documentación de paquetes relevantes son lugares mucho más apropiados para obtener ayuda o reportar el problema.</p>
 </div>
-<p>Vea la sección <a class="reference internal" href="call-for-help.html"><span class="doc">Pedir ayuda</span></a> para conocer otros lugares para buscar información y asistencia.</p>
+<p>See the <a class="reference internal" href="call-for-help.html#troubleshooting-help"><span class="std std-ref">Pedir ayuda</span></a> section for other places to look for information and assistance.</p>
 </section>
 <section id="debugging-and-patching">
-<h2>Depuración y ajuste del código de Spyder<a class="headerlink" href="#debugging-and-patching" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-debugging"></span><h2>Depuración y ajuste del código de Spyder<a class="headerlink" href="#debugging-and-patching" title="Link to this heading">#</a></h2>
 <p>Si conoces Python, a menudo puedes diagnosticar e incluso solucionar los problemas de Spyder tú mismo, ya que la IDE está escrita en el mismo idioma que utilizas en él. Puedes explorar los mensajes de error que estás recibiendo y el funcionamiento interno de Spyder con la <span class="guilabel">Terminal interna</span>, disponible bajo el menú <span class="menuselection">Ver ‣ Paneles ‣ Terminal interna</span>.</p>
 <img alt="Spyder showing Internal console" src="../_images/basic-first-aid-internal-console.png" />
 <p>Para obtener una salida de depuración más detallada, inicia Spyder desde la línea de comandos (Anaconda Prompt en Windows) con <code class="docutils literal notranslate"><span class="pre">spyder</span> <span class="pre">--debug-info</span> <span class="pre">verbose</span></code>.</p>

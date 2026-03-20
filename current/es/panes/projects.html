@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,8 +472,9 @@
                 <article class="bd-article">
                   
   <section id="projects">
-<h1>Proyectos<a class="headerlink" href="#projects" title="Link to this heading">#</a></h1>
-<p>Spyder te permite asociar un directorio determinado con un <strong>Proyecto</strong>, el cual automáticamente guarda y restaura los archivos que has abierto en el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a> desde la última vez que abriste ese proyecto. En el panel <a class="reference internal" href="#project-explorer"><span class="std std-ref">Proyecto</span></a> puedes navegar todos los archivos de tu proyecto, independientemente de tu directorio de trabajo actual o de la ubicación de <a class="reference internal" href="fileexplorer.html"><span class="doc">Archivos</span></a>.</p>
+<span id="panes-projects"></span><span id="project-explorer"></span><h1>Proyectos<a class="headerlink" href="#projects" title="Link to this heading">#</a></h1>
+<p>Spyder allows you to associate a given directory with a <strong>Project</strong>, which automatically saves and restores the files you have open in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> from the last time you opened that project.
+With the <span class="guilabel">Projects</span> pane, you can browse all your project’s files, regardless of your current working directory or <a class="reference internal" href="fileexplorer.html#panes-files"><span class="std std-ref">Archivos</span></a> location.</p>
 <img alt="Spyder showing Project Explorer and projects menu" src="../_images/projects-main.png" />
 <p>Además, la carpeta raíz del proyecto se utiliza para establecer tu directorio de trabajo, y se añade automáticamente al <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>, para que puedas <code class="docutils literal notranslate"><span class="pre">importar</span></code> fácilmente y trabajar con cualquier módulo y paquetes que crees dentro de él.</p>
 <div class="admonition note">
@@ -481,25 +482,27 @@
 <p>Los proyectos son completamente opcionales y no se imponen a los usuarios. Todas las funcionalidades de Spyder (finalización de código, guardado de sesión, Explorador de archivos, directorio de trabajo, etc) están disponibles sin crear un <span class="guilabel">Proyecto</span>.</p>
 </div>
 <section id="creating-a-project">
-<h2>Crear un proyecto<a class="headerlink" href="#creating-a-project" title="Link to this heading">#</a></h2>
+<span id="panes-projects-creating"></span><h2>Crear un proyecto<a class="headerlink" href="#creating-a-project" title="Link to this heading">#</a></h2>
 <p>Para crear un <span class="guilabel">Proyecto</span>, haz clic en la entrada <span class="guilabel">Nuevo Proyecto</span> en el menú <span class="guilabel">Proyectos</span>. Elige si quieres asociar un <span class="guilabel">Proyecto</span> con un directorio existente o crear uno nuevo, e introduce el nombre y la ruta del <span class="guilabel">Proyecto</span>.</p>
 <img alt="Spyder showing opening a new project" src="../_images/projects-new.gif" />
 </section>
 <section id="using-the-projects-pane">
-<span id="project-explorer"></span><h2>Usar el panel de Proyectos<a class="headerlink" href="#using-the-projects-pane" title="Link to this heading">#</a></h2>
-<p>Una vez que se abre un <span class="guilabel">Proyecto</span>, se muestra el panel <span class="guilabel">Project</span>, presentando una vista de árbol de los archivos y directorios del <span class="guilabel">Proyecto</span> actual. Esto te permite realizar las mismas <a class="reference internal" href="fileexplorer.html#file-operations"><span class="std std-ref">operaciones</span></a> que el panel <a class="reference internal" href="fileexplorer.html"><span class="doc">Archivos</span></a> de Spyder.</p>
+<span id="panes-projects-using"></span><h2>Usar el panel de Proyectos<a class="headerlink" href="#using-the-projects-pane" title="Link to this heading">#</a></h2>
+<p>Once a <span class="guilabel">Project</span> is opened, the <span class="guilabel">Project</span> pane is shown, presenting a tree view of the current <span class="guilabel">Project</span>’s files and directories.
+It allows you to perform all the same <a class="reference internal" href="fileexplorer.html#panes-files-operations"><span class="std std-ref">operations</span></a> as Spyder’s <a class="reference internal" href="fileexplorer.html#panes-files"><span class="std std-ref">Archivos</span></a> pane.</p>
 <img alt="Spyder Project Explorer, displaying a directory tree of project files" src="../_images/projects-standard.png" />
 </section>
 <section id="working-with-version-control">
-<span id="vcs-section"></span><h2>Trabajar con control de versiones<a class="headerlink" href="#working-with-version-control" title="Link to this heading">#</a></h2>
-<p>El panel <span class="guilabel">Proyectos</span> tiene integración básica con el sistema de control de versiones distribuidas <a class="reference external" href="https://git-scm.com/">Git</a> al igual que <a class="reference internal" href="fileexplorer.html#files-vcs-support"><span class="std std-ref">en el panel de Archivos</span></a>. Puedes hacer un commit o navegar por un archivo, directorio o el repositorio completo mediante los comandos en el menú contextual.</p>
+<span id="panes-projects-vcs"></span><span id="vcs-section"></span><h2>Trabajar con control de versiones<a class="headerlink" href="#working-with-version-control" title="Link to this heading">#</a></h2>
+<p>The <span class="guilabel">Project</span> pane has basic integration with the <a class="reference external" href="https://git-scm.com/">Git</a> distributed version control system, just like <a class="reference internal" href="fileexplorer.html#panes-files-vcs"><span class="std std-ref">in the Files pane</span></a>.
+You can commit or browse a file, directory or the entire repository via the commands in the context menu.</p>
 <p>Para utilizar esta funcionalidad, el <span class="guilabel">Proyecto</span> debe estar ubicado en un repositorio <code class="docutils literal notranslate"><span class="pre">git</span></code> y los comandos <code class="docutils literal notranslate"><span class="pre">git</span></code> y <code class="docutils literal notranslate"><span class="pre">gitk</span></code> deben estar en la ruta del sistema.</p>
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-projects-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="fileexplorer.html"><span class="doc">Archivos</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="fileexplorer.html#panes-files"><span class="std std-ref">Archivos</span></a></p></li>
 </ul>
 </section>
 </section>

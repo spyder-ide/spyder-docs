@@ -1,3 +1,5 @@
+.. _troubleshooting-basic:
+
 ###############
 Basic First Aid
 ###############
@@ -5,6 +7,8 @@ Basic First Aid
 These suggestions, while more of a shotgun approach, tend to fix the majority of reported issues just on their own.
 
 
+
+.. _troubleshooting-basic-steps:
 
 =================================
 Recommended troubleshooting steps
@@ -69,6 +73,7 @@ If this fixes the issue, the problem was likely due to another package installed
 
 
 .. _troubleshooting-reinstalling-spyder-ref:
+.. _troubleshooting-basic-reinstalling:
 
 ===================
 Reinstalling Spyder
@@ -87,12 +92,14 @@ Then, do a clean install of the latest version of the `Anaconda distribution`_ w
 
    While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
    In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
-   For further information, please visit our :doc:`/installation`.
+   For further information, please visit our :ref:`install-guide`.
 
 .. _Anaconda uninstall guide: https://docs.anaconda.com/anaconda/install/uninstall/
 .. _Anaconda distribution: https://www.anaconda.com/products/distribution
 
 
+
+.. _troubleshooting-basic-isolating:
 
 ==================
 Isolating problems
@@ -110,7 +117,7 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
    .. image:: /images/basic-first-aid/basic-first-aid-qtconsole.png
       :alt: Anaconda navigator showing qtconsole
 
-   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :doc:`/panes/ipythonconsole` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
+   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
 
 #. **An IPython command line shell**, launched with e.g. ``ipython`` from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
    Reproducible bugs can be reported to their `Github page`_, though make sure to read their guidelines and docs first.
@@ -129,9 +136,11 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
 
 .. _Stack Overflow: https://stackoverflow.com/
 
-See the :doc:`call-for-help` section for other places to look for information and assistance.
+See the :ref:`troubleshooting-help` section for other places to look for information and assistance.
 
 
+
+.. _troubleshooting-basic-debugging:
 
 ======================
 Debugging and patching

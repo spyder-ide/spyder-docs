@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -472,15 +472,16 @@
                 <article class="bd-article">
                   
   <section id="help">
-<h1>Ayuda<a class="headerlink" href="#help" title="Link to this heading">#</a></h1>
+<span id="panes-help"></span><h1>Ayuda<a class="headerlink" href="#help" title="Link to this heading">#</a></h1>
 <p>Puedes usar el panel de <strong>Ayuda</strong> para encontrar, renderizar y mostrar la documentación enriquecida para cualquier objeto con una cadena de documentación, incluyendo módulos, clases, funciones y métodos. Esto te permite acceder fácilmente a la documentación directamente desde Spyder, sin tener que interrumpir tu flujo de trabajo.</p>
 <img alt="Spyder main window showing getting help for numpy arrays from editor" src="../_images/help-execution.gif" />
 <p>También puedes acceder al tutorial de Spyder desde aquí, que te guiará a través de algunos pasos básicos para usar sus características clave.</p>
 <a class="reference internal image-reference" href="../_images/help-tutorial.png"><img alt="Spyder Help pane showing the link for the Spyder's tutorial" src="../_images/help-tutorial.png" style="width: 500px;" />
 </a>
 <section id="getting-help">
-<h2>Obtener ayuda<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
-<p>La ayuda se puede recuperar tanto mediante el análisis estático de los archivos abiertos en el <a class="reference internal" href="editor.html"><span class="doc">Editor</span></a>, o inspeccionando dinámicamente un objeto en una <a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>. Puedes activar la ayuda manualmente pulsando el atajo de ayuda configurable (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> por defecto).</p>
+<span id="panes-help-using"></span><h2>Obtener ayuda<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
+<p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>.
+You can trigger help manually by pressing the configurable help shortcut (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> by default).</p>
 <img alt="Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former." src="../_images/help-command.png" />
 <p>También puedes introducir manualmente el nombre del objeto en el cuadro de texto <span class="guilabel">Objeto</span> en la parte superior del panel, si <span class="guilabel">Terminal</span> es seleccionado como el <span class="guilabel">Origen</span>.</p>
 <img alt="Spyder Help pane, displaying documentation for an object whose name was written in the object text box" src="../_images/help-console.gif" />
@@ -488,26 +489,26 @@
 <img alt="Spyder console and help pane showing automatic help with parenthesis" src="../_images/help-automatic-connections.gif" />
 </section>
 <section id="understanding-help-modes">
-<h2>Entender los modos de ayuda<a class="headerlink" href="#understanding-help-modes" title="Link to this heading">#</a></h2>
+<span id="panes-help-modes"></span><h2>Entender los modos de ayuda<a class="headerlink" href="#understanding-help-modes" title="Link to this heading">#</a></h2>
 <p>Puedes usar el menú de opciones ( icono <span class="guilabel">Hamburguesa</span>) en la parte superior derecha del panel <span class="guilabel">Ayuda</span> para cambiar el modo de visualización de ayuda.</p>
 <p>El modo <span class="guilabel">Texto enriquecido</span> renderiza las cadenas de documentación del objeto con <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>, El modo <span class="guilabel">Texto plano</span> muestra la docstring sin formatear, mientras que <span class="guilabel">Mostrar código fuente</span> muestra la docstring en línea con el código para el objeto seleccionado, o cualquier porción de Python (si el objeto no es Python puro). Esto último puede ser útil cuando los docstrings no están disponibles o son insuficientes para documentar el objeto.</p>
 <img alt="Spyder help pane showing different modes" src="../_images/help-modes.gif" />
 </section>
 <section id="getting-help-by-hovering">
-<span id="help-hover-hints"></span><h2>Obtener ayuda al pasar el cursor<a class="headerlink" href="#getting-help-by-hovering" title="Link to this heading">#</a></h2>
+<span id="panes-help-hints"></span><span id="help-hover-hints"></span><h2>Obtener ayuda al pasar el cursor<a class="headerlink" href="#getting-help-by-hovering" title="Link to this heading">#</a></h2>
 <p>También puedes obtener ayuda resumida para objetos pasando el cursor sobre ellos en el <span class="guilabel">Editor</span>. Al hacer clic en la ventana emergente se abrirá la documentación completa en el panel de <span class="guilabel">Ayuda</span>.</p>
 <img alt="Editor pane showing help of an object from hover" src="../_images/help-hover.png" />
 </section>
 <section id="control-automatic-import">
-<h2>Controlar importación automática<a class="headerlink" href="#control-automatic-import" title="Link to this heading">#</a></h2>
+<span id="panes-help-autoimport"></span><h2>Controlar importación automática<a class="headerlink" href="#control-automatic-import" title="Link to this heading">#</a></h2>
 <p>Cuando obtienes ayuda en la <span class="guilabel">IPython Console</span> para un objeto que no ha sido importado previamente, se carga automáticamente en el intérprete interno de Spyder para que la documentación pueda mostrarse cuando esté disponible. Esto puede deshabilitarse en el menú de opciones de <span class="guilabel">Ayuda</span> en la parte superior derecha del panel para que sólo se muestre la documentación de objetos importados.</p>
 </section>
 <section id="related-panes">
-<h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-help-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="editor.html"><span class="doc">Editor</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">Terminal de IPython</span></a></p></li>
-<li><p><a class="reference internal" href="onlinehelp.html"><span class="doc">Ayuda en línea</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a></p></li>
+<li><p><a class="reference internal" href="onlinehelp.html#panes-onlinehelp"><span class="std std-ref">Ayuda en línea</span></a></p></li>
 </ul>
 </section>
 </section>

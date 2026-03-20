@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -471,32 +471,32 @@
                 <article class="bd-article">
                   
   <section id="variable-explorer">
-<h1>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h1>
+<span id="panes-variables"></span><h1>Variable Explorer<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h1>
 <p>The <strong>Variable Explorer</strong> allows you to interactively browse and manage the objects generated running your code.</p>
 <img alt="Spyder Variable Explorer execution with a variable of type list" src="../_images/variable-explorer-execution.gif" />
-<p>It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected <a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a> session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.</p>
+<p>It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.</p>
 <img alt="Spyder Variable Explorer, with a list of variables and their contents" src="../_images/variable-explorer-standard.png" />
 <p>The Variable Explorer gives you information on the name, size, type and value of each object.
 To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.</p>
 <img alt="Spyder Variable Explorer modifying value of a variable" src="../_images/variable-explorer-modifying.gif" />
 <section id="object-viewers">
-<h2>Object viewers<a class="headerlink" href="#object-viewers" title="Link to this heading">#</a></h2>
+<span id="panes-variables-viewers"></span><h2>Object viewers<a class="headerlink" href="#object-viewers" title="Link to this heading">#</a></h2>
 <p>Spyder’s <span class="guilabel">Variable Explorer</span> offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.</p>
 <section id="strings">
-<h3>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h3>
+<span id="panes-variables-viewers-str"></span><h3>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h3>
 <p>When a string variable is longer than forty characters, you can double click it to see its value in a text editor to more easily modify it.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-text-long.png"><img alt="Variable Explorer text editor, displaying a long string in a window" src="../_images/variable-explorer-text-long.png" style="width: 500px;" />
 </a>
 </section>
 <section id="dictionaries">
-<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h3>
+<span id="panes-variables-viewers-dict"></span><h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h3>
 <p>Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value.
 You can double click any of the values to modify them, which will open a new viewer if the value is itself an object.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-dictionary.png"><img alt="Dictionary editor displaying keys and their types, sizes, and values" src="../_images/variable-explorer-dictionary.png" style="width: 500px;" />
 </a>
 </section>
 <section id="lists">
-<h3>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
+<span id="panes-variables-viewers-list"></span><h3>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
 <p>For lists, the main Variable Explorer displays a preview of the first ten values.
 To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
 Just like dictionaries, you can double-click values to edit them.</p>
@@ -504,7 +504,7 @@ Just like dictionaries, you can double-click values to edit them.</p>
 </a>
 </section>
 <section id="numpy-arrays">
-<h3>Numpy arrays<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h3>
+<span id="panes-variables-viewers-array"></span><h3>Numpy arrays<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h3>
 <p>Like lists, for Numpy arrays the Variable Explorer shows a preview of their values.
 Double-clicking them will open a viewer displaying the array values in a “heat map”, with each value in a grid cell colored based on its numeric quantity.
 You can deactivate the background color by unchecking the appropriate option in the viewer, which will happen automatically if the array is too large to improve performance.</p>
@@ -516,15 +516,15 @@ Clicking the <span class="guilabel">Resize</span> button will set it automatical
 <img alt="Array editor with a 2D int array, showing resizing of columns" src="../_images/variable-explorer-resize.gif" />
 </section>
 <section id="dataframes">
-<h3>DataFrames<a class="headerlink" href="#dataframes" title="Link to this heading">#</a></h3>
+<span id="panes-variables-viewers-dataframe"></span><h3>DataFrames<a class="headerlink" href="#dataframes" title="Link to this heading">#</a></h3>
 <p>DataFrames, like Numpy arrays, display in a viewer where you can show or hide “heatmap” colors, change the format and resize the rows and columns either manually or automatically.</p>
 <img alt="Dataframe editor showing data frame &quot;heatmap&quot;" src="../_images/variable-explorer-dataframe.png" />
-<p>Additionally, starting in Spyder 4, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
+<p>Additionally, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
 <img alt="Dataframe editor showing multi-index support" src="../_images/variable-explorer-multi-index.png" />
 </section>
 </section>
 <section id="options-menu">
-<h2>Options menu<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
+<span id="panes-variables-options"></span><h2>Options menu<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>The options menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria.</p>
 <img alt="Spyder Variable Explorer, with options menu" src="../_images/variable-explorer-menu.png" />
 <p>It also allows you to display the min and max of Numpy arrays instead of a preview of their values.</p>
@@ -532,7 +532,7 @@ Clicking the <span class="guilabel">Resize</span> button will set it automatical
 </a>
 </section>
 <section id="toolbar-buttons">
-<h2>Toolbar buttons<a class="headerlink" href="#toolbar-buttons" title="Link to this heading">#</a></h2>
+<span id="panes-variables-toolbar"></span><h2>Toolbar buttons<a class="headerlink" href="#toolbar-buttons" title="Link to this heading">#</a></h2>
 <p>The Variable Explorer’s toolbar includes several useful features that affect the entire namespace.
 For example, you can save the current session’s data as a <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file, which can be loaded later to recover all the variables stored.</p>
 <img alt="Variable Explorer showing how to save and import data" src="../_images/variable-explorer-import-data.gif" />
@@ -547,7 +547,7 @@ Additionally, it is not guaranteed to work reliably across all Python environmen
 <p>Finally, there is a button to refresh the Variable Explorer’s contents, which will update it to show the current state of the code running in the IPython console.</p>
 </section>
 <section id="advanced-functionality">
-<h2>Advanced functionality<a class="headerlink" href="#advanced-functionality" title="Link to this heading">#</a></h2>
+<span id="panes-variables-advanced"></span><h2>Advanced functionality<a class="headerlink" href="#advanced-functionality" title="Link to this heading">#</a></h2>
 <p>The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.
 These include renaming, removing or editing existing variables, as well as the <span class="guilabel">duplicate</span> option to create a new copy of one of them under a new name you enter in the resulting dialog box.</p>
 <img alt="Variable Explorer showing duplicating a variable" src="../_images/variable-explorer-duplicate.gif" />
@@ -568,10 +568,10 @@ In addition to adding a new top-level variable, this feature also allows you to 
 <img alt="Object explorer showing dataframe" src="../_images/variable-explorer-object-explorer.png" />
 </section>
 <section id="related-panes">
-<h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<span id="panes-variables-related"></span><h2>Related panes<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="debugging.html"><span class="doc">Debugger</span></a></p></li>
-<li><p><a class="reference internal" href="ipythonconsole.html"><span class="doc">IPython Console</span></a></p></li>
+<li><p><a class="reference internal" href="debugging.html#panes-debugger"><span class="std std-ref">Debugger</span></a></p></li>
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a></p></li>
 </ul>
 </section>
 </section>

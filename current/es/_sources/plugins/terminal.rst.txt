@@ -1,3 +1,5 @@
+.. _plugins-terminal:
+
 ###############
 Spyder Terminal
 ###############
@@ -9,6 +11,10 @@ Spyder Terminal
 
 Spyder-terminal allows you to use any system shell installed in your system (e.g. Bash, Zsh or Powershell) rather than just the IPython console. You can use it to issue commands, interact
 with version control or to run programs.
+
+
+
+.. _plugins-terminal-installing:
 
 =======================
 Installing the Terminal
@@ -25,6 +31,10 @@ If you installed Spyder using conda, the best way to install Spyder-terminal is 
    At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future.
 
 Restart Spyder in order to be able to use the plugin.
+
+
+
+.. _plugins-terminal-using:
 
 ==================
 Using the Terminal
@@ -49,6 +59,10 @@ If you right click the terminal area, it's possible to issue commands such as :g
 
 .. image:: /images/terminal/terminal-right-click.gif
    :alt: Spyder showing the terminal context menu
+
+
+
+.. _plugins-terminal-preferences:
 
 ====================
 Terminal Preferences

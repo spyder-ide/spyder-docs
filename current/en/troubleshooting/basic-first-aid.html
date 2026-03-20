@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -463,10 +463,10 @@
                 <article class="bd-article">
                   
   <section id="basic-first-aid">
-<h1>Basic First Aid<a class="headerlink" href="#basic-first-aid" title="Link to this heading">#</a></h1>
+<span id="troubleshooting-basic"></span><h1>Basic First Aid<a class="headerlink" href="#basic-first-aid" title="Link to this heading">#</a></h1>
 <p>These suggestions, while more of a shotgun approach, tend to fix the majority of reported issues just on their own.</p>
 <section id="recommended-troubleshooting-steps">
-<h2>Recommended troubleshooting steps<a class="headerlink" href="#recommended-troubleshooting-steps" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-steps"></span><h2>Recommended troubleshooting steps<a class="headerlink" href="#recommended-troubleshooting-steps" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p><strong>Restart Spyder</strong>, and try what you were doing before again.</p></li>
 <li><p><strong>Upgrade Spyder</strong> to the latest release, and you might find your issue is resolved (along with new features, enhancements, and other bug fixes).
@@ -512,7 +512,7 @@ spyder
 </ol>
 </section>
 <section id="reinstalling-spyder">
-<span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalling Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-reinstalling"></span><span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalling Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
 <p>If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.</p>
 <p>For Anaconda, follow all the steps under Option B in the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">Anaconda uninstall guide</a>, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> directory if it exists.</p>
 <img alt="Deleting appdata/python directory" src="../_images/basic-first-aid-app-data.gif" />
@@ -521,11 +521,11 @@ spyder
 <p class="admonition-title">Important</p>
 <p>While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
 In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
-For further information, please visit our <a class="reference internal" href="../installation.html"><span class="doc">Install Guide</span></a>.</p>
+For further information, please visit our <a class="reference internal" href="../installation.html#install-guide"><span class="std std-ref">Install Guide</span></a>.</p>
 </div>
 </section>
 <section id="isolating-problems">
-<h2>Isolating problems<a class="headerlink" href="#isolating-problems" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-isolating"></span><h2>Isolating problems<a class="headerlink" href="#isolating-problems" title="Link to this heading">#</a></h2>
 <p>If you get an error while running a specific line, block, or script/program, it may not be an issue with Spyder, but rather something lower down in the packages it depends on.
 Try running it in the following in order if and until it starts working as you expect.
 If you manage to isolate the bug, report it to the last one it <em>doesn’t</em> work in.</p>
@@ -534,7 +534,7 @@ If you manage to isolate the bug, report it to the last one it <em>doesn’t</em
 Make sure you can reproduce the error after closing and reopening it, if possible.</p></li>
 <li><p><strong>A bare QtConsole instance</strong>, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">qtconsole</span></code>.</p>
 <img alt="Anaconda navigator showing qtconsole" src="../_images/basic-first-aid-qtconsole.png" />
-<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">IPython Console</span></a> are actually something with QtConsole instead, and can be reported to their <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
+<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> are actually something with QtConsole instead, and can be reported to their <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
 </li>
 <li><p><strong>An IPython command line shell</strong>, launched with e.g. <code class="docutils literal notranslate"><span class="pre">ipython</span></code> from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
 Reproducible bugs can be reported to their <a class="reference external" href="https://github.com/ipython/ipython/issues">Github page</a>, though make sure to read their guidelines and docs first.</p></li>
@@ -546,10 +546,10 @@ While it is not impossible that you’ve found Python bug, it is much more likel
 <p>If the problem reoccurs in a similar or identical way with any of these methods (other than only Spyder itself), then it is almost certainly not an issue with Spyder, and would be best handled elsewhere.
 As we usually aren’t able to do much about issues not related to Spyder, a forum like <a class="reference external" href="https://stackoverflow.com/">Stack Overflow</a> or the relevant package’s docs is a much better place to get help or report the issue.</p>
 </div>
-<p>See the <a class="reference internal" href="call-for-help.html"><span class="doc">Calling for Help</span></a> section for other places to look for information and assistance.</p>
+<p>See the <a class="reference internal" href="call-for-help.html#troubleshooting-help"><span class="std std-ref">Calling for Help</span></a> section for other places to look for information and assistance.</p>
 </section>
 <section id="debugging-and-patching">
-<h2>Debugging and patching<a class="headerlink" href="#debugging-and-patching" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-basic-debugging"></span><h2>Debugging and patching<a class="headerlink" href="#debugging-and-patching" title="Link to this heading">#</a></h2>
 <p>If you know your way around Python, you can often diagnose and even fix Spyder issues yourself, since the IDE is written in the same language you use in it.
 You can explore the error messages you’re receiving and Spyder’s inner workings with the <span class="guilabel">Internal Console</span>, available under the menu item <span class="menuselection">View ‣ Panes ‣ Internal Console</span>.</p>
 <img alt="Spyder showing Internal console" src="../_images/basic-first-aid-internal-console.png" />

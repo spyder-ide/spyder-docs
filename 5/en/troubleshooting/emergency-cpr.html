@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -463,26 +463,26 @@
                 <article class="bd-article">
                   
   <section id="emergency-cpr">
-<h1>Emergency CPR<a class="headerlink" href="#emergency-cpr" title="Link to this heading">#</a></h1>
+<span id="troubleshooting-cpr"></span><h1>Emergency CPR<a class="headerlink" href="#emergency-cpr" title="Link to this heading">#</a></h1>
 <p>Is Spyder not launching at all?
 The steps on this section should hopefully get it back up and running in no time.</p>
 <section id="common-solutions">
-<h2>Common solutions<a class="headerlink" href="#common-solutions" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-cpr-basic"></span><h2>Common solutions<a class="headerlink" href="#common-solutions" title="Link to this heading">#</a></h2>
 <ol class="arabic">
-<li><p>Try <a class="reference internal" href="basic-first-aid.html"><span class="doc">Basic First Aid</span></a> first, which usually resolves most Spyder install-related issues.</p></li>
-<li><p><strong>Make sure Spyder isn’t already running</strong> and no Spyder related windows (<em>e.g.</em> <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Variable Explorer</span></a> dialogs) are left open, and check that the preference setting <span class="menuselection">Application ‣ Advanced Settings ‣ Use a single instance</span> isn’t checked.</p>
+<li><p>Try <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Basic First Aid</span></a> first, which usually resolves most Spyder install-related issues.</p></li>
+<li><p><strong>Make sure Spyder isn’t already running</strong> and no Spyder related windows (<em>e.g.</em> <a class="reference internal" href="../panes/variableexplorer.html#panes-variables"><span class="std std-ref">Variable Explorer</span></a> dialogs) are left open, and check that the preference setting <span class="menuselection">Application ‣ Advanced Settings ‣ Use a single instance</span> isn’t checked.</p>
 <img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.png" />
 </li>
 <li><p>Try <strong>starting Spyder via a different means</strong>, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing <code class="docutils literal notranslate"><span class="pre">spyder</span></code> then <kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Return</kbd>, and see if any of those work.
-If so, then something’s wrong with your install, not Spyder itself, and so we recommend following <a class="reference internal" href="basic-first-aid.html#troubleshooting-reinstalling-spyder-ref"><span class="std std-ref">Reinstalling Spyder</span></a> to uninstall and reinstall Anaconda.</p></li>
+If so, then something’s wrong with your install, not Spyder itself, and so we recommend following <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic-reinstalling"><span class="std std-ref">Reinstalling Spyder</span></a> to uninstall and reinstall Spyder.</p></li>
 <li><p><strong>Disable any security software</strong> you may be using, such as a firewall or antivirus, as these products can occasionally interfere with Spyder or its related packages.
 Make sure to re-enable it if it doesn’t fix the problem, and if it does, add a rule or exception for Spyder or Python.</p></li>
 <li><p>If it is currently installed “for just you”, <strong>try uninstalling and reinstalling Anaconda “for all users” instead</strong>, and vice versa, as some systems can have issues with one or the other installation method.</p></li>
 <li><p><strong>Check and repair/reset permissions</strong>, your disk, and OS if all else fails.</p></li>
 </ol>
 </section>
-<section id="advanced-tricks">
-<h2>Advanced tricks<a class="headerlink" href="#advanced-tricks" title="Link to this heading">#</a></h2>
+<section id="advanced-life-support">
+<span id="troubleshooting-cpr-advanced"></span><h2>Advanced Life Support<a class="headerlink" href="#advanced-life-support" title="Link to this heading">#</a></h2>
 <p>If none of the above solves the problem, you can try starting Spyder directly from its Python source files which may either get it running, or at least provide useful information to help debug the issue further.</p>
 <p>This technique consists of starting Spyder from your terminal (or Anaconda Prompt on Windows) by manually running the Spyder startup routine ( <span class="guilabel">start.py</span> ) with a known good Python interpreter, and observing the results.</p>
 <p>To do so, you’ll need to:</p>
@@ -517,7 +517,7 @@ pause
 </div>
 <p>Then, double click the batch file to run it, and you should see the error information you need.</p>
 </li>
-<li><p>If reading the output (particularly the last line) doesn’t help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the <a class="reference internal" href="submit-a-report.html"><span class="doc">Submit a Report</span></a> section.</p></li>
+<li><p>If reading the output (particularly the last line) doesn’t help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the <a class="reference internal" href="submit-a-report.html#troubleshooting-report"><span class="std std-ref">Submit a Report</span></a> section.</p></li>
 </ol>
 </section>
 </section>
@@ -570,7 +570,7 @@ pause
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-solutions">Common solutions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tricks">Advanced tricks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-life-support">Advanced Life Support</a></li>
 </ul>
   </nav></div>
 

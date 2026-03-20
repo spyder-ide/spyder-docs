@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -464,23 +464,24 @@
                 <article class="bd-article">
                   
   <section id="emergency-cpr">
-<h1>Kit de emergencia<a class="headerlink" href="#emergency-cpr" title="Link to this heading">#</a></h1>
+<span id="troubleshooting-cpr"></span><h1>Kit de emergencia<a class="headerlink" href="#emergency-cpr" title="Link to this heading">#</a></h1>
 <p>¿Spyder no se está lanzando en lo absoluto? Esperemos que los pasos en esta sección lo vuelvan a poner en marcha en poco tiempo.</p>
 <section id="common-solutions">
-<h2>Soluciones comunes<a class="headerlink" href="#common-solutions" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-cpr-basic"></span><h2>Soluciones comunes<a class="headerlink" href="#common-solutions" title="Link to this heading">#</a></h2>
 <ol class="arabic">
-<li><p>Prueba primero <a class="reference internal" href="basic-first-aid.html"><span class="doc">Primera ayuda básica</span></a>, que normalmente resuelve la mayoría de los problemas relacionados con la instalación de Spyder.</p></li>
-<li><p><strong>Asegúrate de que Spyder no se esté ejecutando</strong> y de que no haya ventanas relacionadas con Spyder abiertas (por ejemplo los diálogos <a class="reference internal" href="../panes/variableexplorer.html"><span class="doc">Explorador de variables</span></a>) y comprueba que la configuración de preferencias <span class="menuselection">Aplicación ‣ Opciones avanzadas ‣ Utilizar una única instancia</span> no está seleccionada.</p>
+<li><p>Try <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Primera ayuda básica</span></a> first, which usually resolves most Spyder install-related issues.</p></li>
+<li><p><strong>Make sure Spyder isn’t already running</strong> and no Spyder related windows (<em>e.g.</em> <a class="reference internal" href="../panes/variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a> dialogs) are left open, and check that the preference setting <span class="menuselection">Application ‣ Advanced Settings ‣ Use a single instance</span> isn’t checked.</p>
 <img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.png" />
 </li>
-<li><p>Intenta <strong>iniciar Spyder por medios diferentes</strong>, como por ejemplo desde un acceso directo, Anaconda navigator o tu línea de comandos (o Anaconda Prompt en Windows) simplemente escribiendo <code class="docutils literal notranslate"><span class="pre">spyder</span></code> luego <kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Return</kbd>, y observa si alguno de esos medios funciona. De ser así, entonces algo está mal con tu instalación, no con Spyder en sí, por lo que recomendamos seguir <a class="reference internal" href="basic-first-aid.html#troubleshooting-reinstalling-spyder-ref"><span class="std std-ref">Reinstalar Spyder</span></a> para desinstalar y reinstalar Anaconda.</p></li>
+<li><p>Try <strong>starting Spyder via a different means</strong>, such as from a shortcut, Anaconda navigator, or your command line (or Anaconda Prompt on Windows) by simply typing <code class="docutils literal notranslate"><span class="pre">spyder</span></code> then <kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Return</kbd>, and see if any of those work.
+If so, then something’s wrong with your install, not Spyder itself, and so we recommend following <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic-reinstalling"><span class="std std-ref">Reinstalar Spyder</span></a> to uninstall and reinstall Spyder.</p></li>
 <li><p><strong>Desactiva cualquier software de seguridad</strong> que estés usando, como un firewall o antivirus, ya que estos productos pueden interferir ocasionalmente con Spyder o sus paquetes relacionados. Asegúrate de volver a activarlo si esto no soluciona el problema, y si lo hace, agrega una regla o excepción para Spyder o Python.</p></li>
 <li><p>Si actualmente está instalado «solo para ti», <strong>intenta desinstalar y reinstalar Anaconda «para todos los usuarios»</strong>, y viceversa, ya que algunos sistemas pueden tener problemas con uno u otro método de instalación.</p></li>
 <li><p><strong>Comprueba y repara o reestablece tus permisos</strong>, tu disco y tu sistema operativo si todo lo demás falla.</p></li>
 </ol>
 </section>
-<section id="advanced-tricks">
-<h2>Trucos avanzados<a class="headerlink" href="#advanced-tricks" title="Link to this heading">#</a></h2>
+<section id="advanced-life-support">
+<span id="troubleshooting-cpr-advanced"></span><h2>Advanced Life Support<a class="headerlink" href="#advanced-life-support" title="Link to this heading">#</a></h2>
 <p>Si nada de lo anterior resuelve el problema, puedes intentar iniciar Spyder directamente desde sus archivos fuente de Python, lo que puede hacer que se ejecute, o al menos proporcionar información útil para ayudar a depurar aún más el problema.</p>
 <p>Esta técnica consiste en iniciar Spyder desde tu terminal (o Anaconda Prompt en Windows) ejecutando manualmente la rutina de inicio de Spyder ( <span class="guilabel">start. y</span> ) con un buen intérprete de Python conocido, y observando los resultados.</p>
 <p>Para hacerlo, necesitarás:</p>
@@ -513,7 +514,7 @@ pause
 </div>
 <p>Luego, haz doble clic en el archivo por lotes para ejecutarlo, y deberías ver la información de error que necesitas.</p>
 </li>
-<li><p>Si leer el resultado (particularmente la última línea) no te ayuda a resolver el problema, regístralo todo cuidadosamente y publícalo como parte de tu informe de error como se describe en la sección <a class="reference internal" href="submit-a-report.html"><span class="doc">Enviar un reporte</span></a> .</p></li>
+<li><p>If reading the output (particularly the last line) doesn’t help you solve the problem, then record all of it carefully, and post it as part of your bug report as described under the <a class="reference internal" href="submit-a-report.html#troubleshooting-report"><span class="std std-ref">Enviar un reporte</span></a> section.</p></li>
 </ol>
 </section>
 </section>
@@ -566,7 +567,7 @@ pause
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-solutions">Soluciones comunes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tricks">Trucos avanzados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-life-support">Advanced Life Support</a></li>
 </ul>
   </nav></div>
 

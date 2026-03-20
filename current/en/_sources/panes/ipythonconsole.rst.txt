@@ -1,3 +1,5 @@
+.. _panes-console:
+
 ###############
 IPython Console
 ###############
@@ -20,18 +22,19 @@ As each console is executed in a separate process, this won't affect any others 
 
 
 .. _console-features:
+.. _panes-console-features:
 
 ==================
 Supported features
 ==================
 
-Any :guilabel:`IPython Console`, whether :ref:`external<connecting-external-kernel>` or started by Spyder, supports:
+Any :guilabel:`IPython Console`, whether :ref:`external <panes-console-external>` or started by Spyder, supports:
 
 * Automatic code completion
 * Real-time function calltips
-* Full GUI integration with the enhanced Spyder :doc:`Debugger<debugging>`.
-* The :doc:`variableexplorer`, with GUI-based editors for many built-in and third-party Python objects.
-* Display of Matplotlib graphics in Spyder's :doc:`plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
+* Full GUI integration with the enhanced Spyder :ref:`panes-debugger`.
+* The :ref:`panes-variables`, with GUI-based editors for many built-in and third-party Python objects.
+* Display of Matplotlib graphics in Spyder's :ref:`panes-plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
 
 .. image:: /images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
@@ -41,6 +44,8 @@ For information on the features, commands and capabilities built into IPython it
 .. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
 
 
+
+.. _panes-console-special:
 
 ================
 Special consoles
@@ -60,6 +65,8 @@ Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by defau
 
 
 
+.. _panes-console-options:
+
 ============
 Options menu
 ============
@@ -78,17 +85,20 @@ You can also change the name of the current :guilabel:`IPython console` tab with
 
 
 .. _connecting-external-kernel:
+.. _panes-console-external:
 
 ======================
 Using external kernels
 ======================
 
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
-For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <starting-kernel-problems-ref>` in the environment or machine in which the external kernel is running.
+For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <troubleshooting-common-kernel-version>` in the environment or machine in which the external kernel is running.
 
 .. image:: /images/console/console-menu.png
    :alt: Connect to external kernel dialog of the Spyder IPython console
 
+
+.. _panes-console-external-local:
 
 Connect to a local kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,6 +122,8 @@ To connect to a local kernel that is already running (e.g. one started by Jupyte
    .. image:: /images/console/console-connect-local-step3.gif
       :alt: Connecting to the kernel and running basic commands.
 
+
+.. _panes-console-external-remote:
 
 Connect to a remote kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -159,6 +171,7 @@ For more technical details about connecting to remote kernels, see the `Connecti
 
 
 .. _umr-section:
+.. _panes-console-umr:
 
 ======================
 Reload changed modules
@@ -180,12 +193,14 @@ If desired, you can turn it on or off, and prevent specific modules from being r
 
 
 
+.. _panes-console-related:
+
 =============
 Related panes
 =============
 
-* :doc:`debugging`
-* :doc:`editor`
-* :doc:`help`
-* :doc:`historylog`
-* :doc:`variableexplorer`
+* :ref:`panes-debugger`
+* :ref:`panes-editor`
+* :ref:`panes-help`
+* :ref:`panes-history`
+* :ref:`panes-variables`

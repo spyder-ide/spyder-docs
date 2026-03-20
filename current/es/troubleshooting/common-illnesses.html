@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -464,13 +464,14 @@
                 <article class="bd-article">
                   
   <section id="common-illnesses">
-<h1>Problemas comunes<a class="headerlink" href="#common-illnesses" title="Link to this heading">#</a></h1>
+<span id="troubleshooting-common"></span><h1>Problemas comunes<a class="headerlink" href="#common-illnesses" title="Link to this heading">#</a></h1>
 <p>Más allá de los pasos generales de la solución de problemas, algunos problemas reportados con frecuencia requieren soluciones más especializadas.</p>
 <section id="errors-starting-the-kernel">
-<span id="starting-kernel-problems-ref"></span><h2>Errores al iniciar el núcleo<a class="headerlink" href="#errors-starting-the-kernel" title="Link to this heading">#</a></h2>
-<p>Si recibes el mensaje <code class="docutils literal notranslate"><span class="pre">Ocurrió</span> <span class="pre">un</span> <span class="pre">error</span> <span class="pre">mientras</span> <span class="pre">iniciaba</span> <span class="pre">el</span> <span class="pre">núcleo</span></code> en el <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>, Spyder no pudo lanzar un nuevo intérprete de Python en el entorno de trabajo actual para ejecutar su código. Hay una serie de problemas que pueden causarlo, pero la mayoría se puede solucionar con bastante rapidez con unos pocos pasos fáciles.</p>
+<span id="troubleshooting-common-kernel"></span><span id="starting-kernel-problems-ref"></span><h2>Errores al iniciar el núcleo<a class="headerlink" href="#errors-starting-the-kernel" title="Link to this heading">#</a></h2>
+<p>If you receive the message <code class="docutils literal notranslate"><span class="pre">An</span> <span class="pre">error</span> <span class="pre">occurred</span> <span class="pre">while</span> <span class="pre">starting</span> <span class="pre">the</span> <span class="pre">kernel</span></code> in the <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>, Spyder was unable to launch a new Python interpreter in the current working environment to run your code.
+There are a number of problems that can cause this, but most can be fixed fairly quickly with a few easy steps.</p>
 <section id="spyder-kernels-not-installed-incompatible">
-<span id="spyder-kernels-version-ref"></span><h3>Spyder-Kernels no está instalado o es incompatible<a class="headerlink" href="#spyder-kernels-not-installed-incompatible" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-kernel-version"></span><span id="spyder-kernels-version-ref"></span><h3>Spyder-Kernels no está instalado o es incompatible<a class="headerlink" href="#spyder-kernels-not-installed-incompatible" title="Link to this heading">#</a></h3>
 <p>Spyder requiere que una versión compatible del paquete <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> esté presente en el entorno de trabajo en el que deseas ejecutar tu consola.</p>
 <img alt="Kernel version error dialog" src="../_images/common-illnesses-kernel-version.png" />
 <p>Se incluye por defecto con Anaconda, pero si quieres ejecutar tu código en otro entorno Python o instalación, necesitarás asegurarte de que esté instalado y actualizado a la última versión.</p>
@@ -534,7 +535,7 @@ conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span 
 <p>Para los dos comandos anteriores, reemplaza <code class="docutils literal notranslate"><span class="pre">&lt;VERSION&gt;</span></code> con la versión correspondiente en la tabla.</p>
 </section>
 <section id="issue-with-another-dependency">
-<h3>Problemas con otra dependencia<a class="headerlink" href="#issue-with-another-dependency" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-kernel-dependency"></span><h3>Problemas con otra dependencia<a class="headerlink" href="#issue-with-another-dependency" title="Link to this heading">#</a></h3>
 <p>Si el núcleo muestra un seguimiento de errores largo que menciona otros paquetes como <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter_client</span></code>, <code class="docutils literal notranslate"><span class="pre">traitlets</span></code> o <code class="docutils literal notranslate"><span class="pre">pyzmq</span></code>, el problema puede ser una versión desactualizada o incompatible de un paquete de dependencias. Para arreglar esto, activa el entorno y actualiza las dependencias clave.</p>
 <p>En un ambiente de Anaconda:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONMENT-NAME
@@ -547,54 +548,55 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder-kernels<span c
 </div>
 </section>
 <section id="attributeerror-importerror">
-<h3>AttributeError/ImportError<a class="headerlink" href="#attributeerror-importerror" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-kernel-error"></span><h3>AttributeError/ImportError<a class="headerlink" href="#attributeerror-importerror" title="Link to this heading">#</a></h3>
 <p>Comprueba las últimas líneas del mensaje de error y revisa si es un <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> o <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, o si se refiere a un archivo que creaste en tu directorio de trabajo actual o en tu carpeta de inicio (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> en Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> en Linux).</p>
 <img alt="Spyder's AtributeError dialog" src="../_images/common-illnesses-atribute-error.png" />
 <p>Si es así, el error probablemente se deba a que tu archivo recibe el mismo nombre que un módulo de librería estándar de Python, como <code class="docutils literal notranslate"><span class="pre">string.py</span></code> o <code class="docutils literal notranslate"><span class="pre">time.py</span></code>, que anula el módulo integrado que Spyder-Kernels está intentando cargar. Para arreglar esto, simplemente renombra tu archivo con un nombre distinto e intenta reiniciar el núcleo. Para comprobar los nombres de estos módulos, revisa la lista en la <a class="reference external" href="https://docs.python.org/3/library/">Python standard library documentation</a>.</p>
 </section>
 </section>
 <section id="completion-help-not-working">
-<span id="code-completion-problems-ref"></span><h2>El autocompletado o la ayuda no funcionan<a class="headerlink" href="#completion-help-not-working" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-common-completion"></span><span id="code-completion-problems-ref"></span><h2>El autocompletado o la ayuda no funcionan<a class="headerlink" href="#completion-help-not-working" title="Link to this heading">#</a></h2>
 <p>Para proporcionar completado, ayuda y análisis de código en tiempo real en el Editor, Spyder utiliza el Python Language Server (PyLS), una implementación de la especificación del Language Server Protocol utilizado por VSCode, Atom y otros editores e IDEs populares. La mayoría de los errores de ayuda y completado están fuera del control de Spyder y son limitaciones de PyLS o del código que se está programando, pero algunos pueden ser solucionados por los usuarios.</p>
 <section id="object-missing-docstring">
-<h3>Docstring faltante de un objeto<a class="headerlink" href="#object-missing-docstring" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-completion-docstring"></span><h3>Docstring faltante de un objeto<a class="headerlink" href="#object-missing-docstring" title="Link to this heading">#</a></h3>
 <p>Si no se muestra nada en el calltip, las sugerencias al pasar el cursor o en el panel de ayuda, es posible que el objeto al que estás intentando realizar una introspección no tenga un docstring.</p>
 <a class="reference internal image-reference" href="../_images/common-illnesses-missing-docstring.png"><img alt="Docstring not found in help pane" src="../_images/common-illnesses-missing-docstring.png" style="width: 500px;" />
 </a>
 <p>En este caso, la única solución es añadir uno en el código fuente de la función original, método o clase.</p>
 </section>
 <section id="object-cannot-be-found">
-<h3>El objeto no puede ser encontrado<a class="headerlink" href="#object-cannot-be-found" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-completion-missing"></span><h3>El objeto no puede ser encontrado<a class="headerlink" href="#object-cannot-be-found" title="Link to this heading">#</a></h3>
 <p>Algunos objetos, ya sea por estar escritos en C, Cython u otro idioma; por ser generados dinámicamente en tiempo de ejecución; o por ser un método de un objeto que creaste, no se pueden encontrar fácilmente sin ejecutar el código.</p>
 <a class="reference internal image-reference" href="../_images/common-illnesses-not-found.png"><img alt="Object not found in help pane" src="../_images/common-illnesses-not-found.png" style="width: 500px;" />
 </a>
-<p>Sin embargo, una vez que ejecutes tu código en la <a class="reference internal" href="../panes/ipythonconsole.html"><span class="doc">Terminal de IPython</span></a>, es posible que puedas obtener la ayuda y el completado del objeto allí.</p>
+<p>However, once you run your code in the <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>, you might be able to get help and completions on the object there.</p>
 </section>
 <section id="lsp-has-stopped-working">
-<h3>El LSP ha dejado de funcionar<a class="headerlink" href="#lsp-has-stopped-working" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-completion-crashed"></span><h3>El LSP ha dejado de funcionar<a class="headerlink" href="#lsp-has-stopped-working" title="Link to this heading">#</a></h3>
 <p>Ocasionalmente, especialmente después de usar Spyder por un tiempo, el completado, la ayuda y el análisis de código pueden dejar de funcionar. Si este es el caso, puedes comprobar el estado LSP con el elemento <span class="guilabel">LSP Python</span> en la barra de estado de Spyder en la parte inferior de la pantalla, y reiniciarlo haciendo clic con el botón derecho y seleccionando el elemento <span class="guilabel">Reiniciar el servidor de lenguaje de Python</span>.</p>
 <img alt="Spyder with LSP restart dialog" src="../_images/common-illnesses-LSP-restart.png" />
 </section>
 <section id="spyder-bug-dependency-issue">
-<h3>Error de Spyder debido a problemas con sus dependencias<a class="headerlink" href="#spyder-bug-dependency-issue" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-completion-bug"></span><h3>Error de Spyder debido a problemas con sus dependencias<a class="headerlink" href="#spyder-bug-dependency-issue" title="Link to this heading">#</a></h3>
 <p>Dada la variedad de dependencias involucradas en hacer que el LSP funcione, una versión incompatible o desactualizada de tu entorno puede resultar en mensajes de error, resultados incompletos o ayuda/análisis que no funcionen en absoluto.</p>
-<p>Para solucionar esto, primero intenta actualizar Anaconda y Spyder como se describe en <a class="reference internal" href="basic-first-aid.html"><span class="doc">Primera ayuda básica</span></a>. Si el problema todavía no está resuelto, actualiza las distintas dependencias relevantes con:</p>
+<p>To address this, first try updating Anaconda and Spyder as described in <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Primera ayuda básica</span></a>.
+If the issue still isn’t resolved, update the various relevant dependencies with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>python-language-server
 </pre></div>
 </div>
 </section>
 </section>
 <section id="plugin-problems">
-<h2>Problemas de plugin<a class="headerlink" href="#plugin-problems" title="Link to this heading">#</a></h2>
+<span id="troubleshooting-common-plugin"></span><h2>Problemas de plugin<a class="headerlink" href="#plugin-problems" title="Link to this heading">#</a></h2>
 <section id="plugin-does-not-work-at-all">
-<h3>El plugin no funciona en absoluto<a class="headerlink" href="#plugin-does-not-work-at-all" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-plugin-missing"></span><h3>El plugin no funciona en absoluto<a class="headerlink" href="#plugin-does-not-work-at-all" title="Link to this heading">#</a></h3>
 <p>Si tienes instalado un plugin de Spyder, pero no puedes verlo, ve al submenú <span class="guilabel">Paneles</span> del menú <span class="guilabel">Ver</span> y selecciona el nombre del plugin, que debería hacer que su panel sea visible. Si no ves el plugin allí, selecciona el elemento <span class="guilabel">Dependencias</span> en el menú <span class="guilabel">Ayuda</span> y mira si el plugin aparece en la parte inferior.</p>
 <img alt="Dependencies dialog showing Unittest plugin" src="../_images/common-illnesses-plugins.png" />
 <p>Si el plugin con el problema no aparece en el diálogo de dependencias, comprueba que lo instalaste en el mismo entorno que Spyder. Si lo tienes, el problema puede deberse a un problema de dependencia. Comprueba si puedes importar el plugin manualmente abriendo una consola Python en el mismo entorno que Spyder y escribiendo, por ejemplo, <code class="docutils literal notranslate"><span class="pre">importar</span> <span class="pre">spyder_unittest</span></code> para probar el plugin de Spyder-Unittest; este comando debe ejecutarse sin errores.</p>
 <p>Si nada de esto te ayuda a resolver el problema, entonces continúa a la siguiente sección.</p>
 </section>
 <section id="other-issues">
-<h3>Otros problemas<a class="headerlink" href="#other-issues" title="Link to this heading">#</a></h3>
+<span id="troubleshooting-common-plugin-other"></span><h3>Otros problemas<a class="headerlink" href="#other-issues" title="Link to this heading">#</a></h3>
 <p>Si obtienes un error que mencione o involucra un plugin de Spyder, como <code class="docutils literal notranslate"><span class="pre">spyder-unittest</span></code>, <code class="docutils literal notranslate"><span class="pre">spyder-terminal</span></code> o <code class="docutils literal notranslate"><span class="pre">spyder-notebook</span></code>, o si encuentras cualquier otro problema con un plugin de Spyder, entonces el primer enfoque debe ser actualizar Spyder y el plugin a sus últimas versiones.</p>
 <p>Si esto no soluciona el problema, deberías comprobar el sitio web o repositorio del plugin para ver si es compatible con tu versión de Spyder.</p>
 <p>Finalmente, si la compatibilidad no parece ser el problema, por favor, comprueba esos repositorios para ver si ya se ha abierto un problema e infórmalo allí si no es así.</p>

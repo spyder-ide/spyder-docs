@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=d6cf6def" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ae3177d5" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -462,12 +462,12 @@
                 <article class="bd-article">
                   
   <section id="spyder-unittest">
-<h1>Spyder Unittest<a class="headerlink" href="#spyder-unittest" title="Link to this heading">#</a></h1>
+<span id="plugins-unittest"></span><h1>Spyder Unittest<a class="headerlink" href="#spyder-unittest" title="Link to this heading">#</a></h1>
 <p><strong>Spyder-unittest</strong> is a plugin that allows you to run automatic tests within Spyder and view the results.</p>
 <img alt="Spyder Unittest plugin in Spyder" src="../_images/unittest-standard.png" />
 <p>Spyder-unittest can run tests written using the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module in the Python library or the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> library.</p>
 <section id="installing-the-plugin">
-<h2>Installing the plugin<a class="headerlink" href="#installing-the-plugin" title="Link to this heading">#</a></h2>
+<span id="plugins-unittest-installing"></span><h2>Installing the plugin<a class="headerlink" href="#installing-the-plugin" title="Link to this heading">#</a></h2>
 <p>If you installed Spyder using conda, the best way to install Spyder-unittest is to run the following command in your Terminal or Anaconda prompt on Windows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>spyder-unittest<span class="w"> </span>-c<span class="w"> </span>spyder-ide
 </pre></div>
@@ -487,7 +487,7 @@ The <code class="docutils literal notranslate"><span class="pre">pyzeromq</span>
 However, this is likely already the case, because you need the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> to be installed in order for Spyder to use the environment and <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> depends on <code class="docutils literal notranslate"><span class="pre">pyzeromq</span></code>.</p>
 </section>
 <section id="running-tests">
-<h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
+<span id="plugins-unittest-running"></span><h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading">#</a></h2>
 <p>The first step is to write the automatic tests.
 Follow the usual instructions for the framework that you are using:</p>
 <ul class="simple">
@@ -507,7 +507,7 @@ If no tests are found, then the summary will read «No results to show».</p>
 <img alt="Unit Testing pane with test results coming in slowly" src="../_images/unittest-slow-run.gif" />
 </section>
 <section id="viewing-test-results">
-<h2>Viewing test results<a class="headerlink" href="#viewing-test-results" title="Link to this heading">#</a></h2>
+<span id="plugins-unittest-results"></span><h2>Viewing test results<a class="headerlink" href="#viewing-test-results" title="Link to this heading">#</a></h2>
 <p>The Unit Testing pane shows the results after running the tests.
 The top shows a summary of test results in the form «xxx tests passed, xxx failed, xxx other».
 The results of the individual tests are displayed in a table occupying most of the pane.</p>
@@ -537,7 +537,7 @@ To expand a row and show the extra information of a particular test, click on th
 The options menu of the Unit testing pane («Hamburger» icon at top right) also contains the item <span class="menuselection">Expand all</span>, which expands all the rows in the table.
 The menu item <span class="menuselection">Collapse all</span> does the opposite.</p>
 <img alt="Expanding and collapsing test results in the Unit Testing pane" src="../_images/unittest-expand-collapse.gif" />
-<p>If you double click on a test result, then the <a class="reference internal" href="../panes/editor.html"><span class="doc">Editor</span></a> pane will jump to the location where this test is defined.
+<p>If you double click on a test result, then the <a class="reference internal" href="../panes/editor.html#panes-editor"><span class="std std-ref">Editor</span></a> pane will jump to the location where this test is defined.
 Unfortunately, this functionality is only available if you use the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> framework.
 The <code class="docutils literal notranslate"><span class="pre">unittest</span></code> module does not record the test location.</p>
 <img alt="Spyder's editor displaying the source code of a test after doubling clicking on it in the Unit testing pane" src="../_images/unittest-goto.gif" />
@@ -546,7 +546,7 @@ This is a good troubleshooting tool if the results are not what you expect, for 
 <img alt="Spyder shows the output of the test run after clicking on the &quot;Show output&quot; menu item" src="../_images/unittest-show-output.gif" />
 </section>
 <section id="configuration">
-<span id="unittest-configuration"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
+<span id="plugins-unittest-configuration"></span><span id="unittest-configuration"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
 <p>You can change the configuration of the spyder-unittest plugin by clicking on the <span class="menuselection">Configure</span> item in the options menu of the Unit testing pane.
 This will show the configuration window, shown below.
 The configuration window will also appear whenever there is no valid configuration for the plugin, for instance on the first time that you run tests.</p>
@@ -564,7 +564,7 @@ There is an option in the configuration window to turn on coverage testing.
 After running the tests, the coverage results will be displayed under all the test results.</p>
 <img alt="Unit testing pane showing test results and coverage" src="../_images/unittest-coverage.png" />
 <p>Spyder saves the testing configuration sp that you do not have to specify it every time that you want to run the tests.
-If you use Spyder <a class="reference internal" href="../panes/projects.html"><span class="doc">Proyectos</span></a>, then the testing configuration is associated to the currently open project and will be stored with the project configuration.
+If you use Spyder <a class="reference internal" href="../panes/projects.html#panes-projects"><span class="std std-ref">Proyectos</span></a>, then the testing configuration is associated to the currently open project and will be stored with the project configuration.
 If no project is open, then the testing configuration is stored in the global Spyder configuration.</p>
 <p>The <span class="menuselection">Dependencies</span> item in the options menu of the Unit testing pane displays a window showing which testing frameworks are installed in the Python environment that Spyder uses to run tests.
 The window also shows any plugins that come with the testing framework and the versions of the testing frameworks and the plugins.
