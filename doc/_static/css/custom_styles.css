@@ -307,3 +307,20 @@ a.dropdown-link:focus {
 html[data-theme="dark"] img {
   filter: none !important;
 }
+
+/* Reduce width of left sidebar */
+
+.bd-sidebar-primary {
+  width: 18%;
+}
+
+/* Hide ugly h3 in right sidebar and remove bullets in it's ul */
+
+.sidebar-secondary-item h3 {
+  color: transparent;
+}
+
+.sidebar-secondary-item ul {
+  list-style-type: none;
+  padding: 0;
+}
