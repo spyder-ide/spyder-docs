@@ -1,3 +1,5 @@
+.. _plugins-notebook:
+
 ###############
 Spyder Notebook
 ###############
@@ -8,6 +10,10 @@ Spyder Notebook
    :alt: Spyder Notebook in Spyder
 
 Using notebooks inside Spyder allows you to take advantage of their web interface alongside Spyder’s powerful features such as the Variable explorer, console and debugger.
+
+
+
+.. _plugins-notebook-installing:
 
 =======================
 Installing the Notebook
@@ -24,6 +30,10 @@ If you installed Spyder using conda, the best way to install Spyder-notebook is 
    At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future.
 
 Restart Spyder in order to be able to use the plugin.
+
+
+
+.. _plugins-notebook-using:
 
 ==================
 Using the Notebook
@@ -56,11 +66,15 @@ You can also open any Jupyter Notebook inside Spyder. For this go to the options
 
 The :guilabel:`Open recent` option displays a list of the recent notebooks you opened in Spyder, from which you can select them and open them again in Spyder.
 
+
+
+.. _plugins-notebook-console:
+
 =============================
 Connecting an IPython Console
 =============================
 
-You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will allow you to view your variables in the :doc:`/panes/variableexplorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console.
+You can connect an :ref:`panes-console` to your notebook, which will allow you to view your variables in the :ref:`panes-variables`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console.
 
 .. image:: /images/notebook/notebook-console.gif
    :alt: Gif showing connecting console and displaying variables
@@ -68,6 +82,10 @@ You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will all
 You can view, modify and create new ones in the console too.
 
 Since the Variable Explorer is associated to each console, closing the notebook's console will immediately hide the variables from the Variable Explorer.
+
+
+
+.. _plugins-notebook-options:
 
 ==================
 Additional Options
