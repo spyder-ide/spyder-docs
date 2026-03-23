@@ -10,6 +10,22 @@
   --color-primary: var(--pst-color-primary);
 }
 
+/* Increase page width */
+.bd-main .bd-content .bd-article-container {
+  /* Center the article container */
+  margin: 0 auto;
+  /* Alternatively, set the width to 100%. I this is set, disable the margin auto above. */
+  /* width: 100%; */
+}
+
+.bd-page-width {
+  max-width: 100%; /* default is 88rem */
+}
+
+.bd-sidebar-primary {
+  max-width: 15%; /* default is 25% */
+}
+
 /* Increase bottom margin for images */
 
 section img {
