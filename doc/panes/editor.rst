@@ -1,3 +1,5 @@
+.. _panes-editor:
+
 ######
 Editor
 ######
@@ -11,6 +13,8 @@ In addition, it integrates a number of powerful tools for an easy to use, effici
 
 
 
+.. _panes-editor-componets:
+
 ==============
 Key components
 ==============
@@ -21,7 +25,7 @@ The Editor pane consists of the following areas:
    :alt: Spyder's Editor pane, showing its different areas (described below)
 
 1. The left sidebar shows line numbers and displays any code analysis warnings that exist in the current file.
-   Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <debugging-breakpoints>`.
+   Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <panes-debugger-breakpoints>`.
 2. The scrollbars allow vertical and horizontal navigation in a file.
 3. The context (right-click) menu displays actions relevant to whatever was clicked.
 4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
@@ -31,9 +35,13 @@ The Editor pane consists of the following areas:
 
 
 
+.. _panes-editor-interface:
+
 =========
 Interface
 =========
+
+.. _panes-editor-interface-tabs:
 
 Tabs
 ~~~~
@@ -49,6 +57,8 @@ Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetica
 .. image:: /images/editor/editor-tabs-sorting.gif
    :alt: Spyder's Editor pane, showing how to browse and sort open tabs alphabetically
 
+
+.. _panes-editor-interface-switcher:
 
 File switcher
 ~~~~~~~~~~~~~
@@ -66,6 +76,8 @@ You can type in any part of an open file's name and—if exists—it can be swit
    :alt: Spyder's Editor pane, showing searching and switching to an existing file
 
 
+.. _panes-editor-interface-split:
+
 Split panels
 ~~~~~~~~~~~~
 
@@ -81,14 +93,18 @@ Split the Editor with the :guilabel:`Split vertically` (:kbd:`Ctrl-Shift-{`) and
 
 
 
+.. _panes-editor-features:
+
 ================
 Editing features
 ================
 
+.. _panes-editor-features-highlighting:
+
 Syntax highlighting
 ~~~~~~~~~~~~~~~~~~~
 
-To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the :doc:`ipythonconsole`.
+To improve the readability of your code, Spyder has a syntax highlighting feature that determines the color and style of text in the Editor, as well as in the :ref:`panes-console`.
 
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences.
@@ -101,10 +117,12 @@ The :guilabel:`Fonts` section lets you change the text font and size.
 .. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
 
 
+.. _panes-editor-features-cells:
+
 Code cells
 ~~~~~~~~~~
 
-A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :doc:`ipythonconsole`.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :ref:`panes-console`.
 This is similar to "cell" behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
@@ -116,18 +134,20 @@ You can separate cells by lines starting with either:
 * ``# %%`` (standard cell separator), or
 * ``# <codecell>`` (IPython notebook cell separator)
 
-Providing a description to the right of the separator will give that cell its own name in the :doc:`outline`.
+Providing a description to the right of the separator will give that cell its own name in the :ref:`panes-outline`.
 You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
-This displays multiple levels in the :doc:`outline` pane.
+This displays multiple levels in the :ref:`panes-outline` pane.
 
 .. image:: /images/editor/editor-subsections.png
    :alt: Spyder outline pane, showing an example of sub sections
 
-.. note:: This only affects how the cell is displayed in the :doc:`outline`, and doesn't affect running it in the Editor.
+.. note:: This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
 You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
 
+
+.. _panes-editor-features-formatting:
 
 Automatic formatting
 ~~~~~~~~~~~~~~~~~~~~
@@ -146,6 +166,8 @@ To set this up, go to :menuselection:`Preferences --> Completion and linting -->
 
 
 
+.. _panes-editor-run:
+
 ============
 Running code
 ============
@@ -154,10 +176,12 @@ The Editor lets you run an entire file as well as specific lines, selections or 
 
 As your code is running,
 
-* The :doc:`ipythonconsole` will display output and errors.
-* The :doc:`variableexplorer` allows you to browse and interact with the objects generated.
-* The :doc:`plots` pane renders the figures and images created.
+* The :ref:`panes-console` will display output and errors.
+* The :ref:`panes-variables` allows you to browse and interact with the objects generated.
+* The :ref:`panes-plots` pane renders the figures and images created.
 
+
+.. _panes-editor-run-file:
 
 Run file
 ~~~~~~~~
@@ -166,13 +190,17 @@ Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the 
 Use :menuselection:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
 
 
+.. _panes-editor-run-line:
+
 Run line/selection
 ~~~~~~~~~~~~~~~~~~
 
 You can execute the current line—or multiple selected lines—using the :guilabel:`Run selection or current line` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key.
 After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
-Unlike :guilabel:`Run file`, the executed lines are shown in the :doc:`ipythonconsole`.
+Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-console`.
 
+
+.. _panes-editor-run-cell:
 
 Run cell
 ~~~~~~~~
@@ -180,6 +208,8 @@ Run cell
 To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run current cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
 
+
+.. _panes-editor-run-configuration:
 
 Run configuration
 ~~~~~~~~~~~~~~~~~
@@ -193,9 +223,13 @@ To access it, click :menuselection:`Run --> Configuration per file...` or press 
 
 
 
+.. _panes-editor-navigation:
+
 ===============
 Code navigation
 ===============
+
+.. _panes-editor-navigation-find:
 
 Find and replace
 ~~~~~~~~~~~~~~~~
@@ -209,6 +243,8 @@ Use the :guilabel:`.*` button to process search text as a `regular expression <h
    :alt: Spyder's Editor pane, showing the find and replace panel
 
 
+.. _panes-editor-navigation-goto:
+
 Go to line
 ~~~~~~~~~~
 
@@ -221,6 +257,8 @@ Open it with :menuselection:`Search --> Go to line` or :kbd:`Ctrl-L` / :kbd:`Cmd
 It also shows the current line number and total line count in the file.
 
 
+.. _panes-editor-navigation-selector:
+
 Class/function selector
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -232,6 +270,8 @@ Use its dropdowns to view and jump to the functions, methods and classes in the 
 
 
 
+.. _panes-editor-lsp:
+
 =============================
 Code analysis and completions
 =============================
@@ -241,10 +281,12 @@ Spyder uses the `Language Server Protocol <https://microsoft.github.io/language-
 .. note::
 
    Many issues with completion and linting are outside of Spyder's control, and are either limitations with the LSP or the code that is being introspected, but some can be worked around.
-   See :ref:`code-completion-problems-ref` for troubleshooting steps.
+   See :ref:`troubleshooting-common-completion` for troubleshooting steps.
 
 Python is supported out of the box, and advanced users can add completion and linting support for other languages by setting up LSP servers for them under :menuselection:`Preferences --> Completion and Linting --> Other languages`.
 
+
+.. _panes-editor-lsp-completion:
 
 Code completion
 ~~~~~~~~~~~~~~~
@@ -259,6 +301,8 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
 You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
 Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
 
+
+.. _panes-editor-lsp-linting:
 
 Linting and code style
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -281,6 +325,8 @@ It is not active by default, but you can enable it and customize the `Pycodestyl
    :alt: Spyder's preferences dialog, showing code style and formatting settings
 
 
+.. _panes-editor-lsp-introspection:
+
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -289,7 +335,7 @@ If there's a function, class or variable for which you would like to check its d
 .. image:: /images/editor/editor-go-to-definition.gif
    :alt: Spyder's Editor pane, showing the go to definition feature
 
-You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <help-hover-hints>`.
+You can hover over the name of an object for pop-up help, as :ref:`described in the Help pane docs <panes-help-hints>`.
 
 .. image:: /images/editor/editor-hoverhint.png
    :alt: Spyder's Editor pane, showing an example of a hover hint
@@ -298,6 +344,8 @@ Finally, if you type the name of a function, method or class constructor and the
 These features can be enabled and customized under :menuselection:`Preferences --> Completion and Linting --> Introspection`.
 
 
+
+.. _panes-editor-shortcuts:
 
 ==================
 Keyboard shortcuts
@@ -308,12 +356,14 @@ The full list can be browsed, searched and customized (on double-click) in :menu
 
 
 
+.. _panes-editor-related:
+
 =============
 Related panes
 =============
 
-* :doc:`fileexplorer`
-* :doc:`findinfiles`
-* :doc:`ipythonconsole`
-* :doc:`projects`
-* :doc:`pylint`
+* :ref:`panes-files`
+* :ref:`panes-find`
+* :ref:`panes-console`
+* :ref:`panes-projects`
+* :ref:`panes-pylint`

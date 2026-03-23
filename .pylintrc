@@ -68,10 +68,6 @@ load-plugins = pylint.extensions.bad_builtin,
 # Pickle collected data for later comparisons.
 persistent = yes
 
-# When enabled, pylint would attempt to guess common misconfiguration and emit
-# user-friendly hints instead of false-positive error messages.
-suggestion-mode = yes
-
 # Allow loading of arbitrary C extensions. Extensions are imported into the
 # active Python interpreter and may run arbitrary code.
 unsafe-load-any-extension = no
@@ -518,7 +514,7 @@ allow-wildcard-with-all = no
 analyse-fallback-blocks = no
 
 # Deprecated modules which should not be used, separated by a comma.
-deprecated-modules =
+deprecated-modules = getopt, optparse
 
 # Output a graph (.gv or any supported image format) of external dependencies
 # to the given file (report RP0402 must not be disabled).

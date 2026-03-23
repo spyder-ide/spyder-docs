@@ -187,22 +187,22 @@ git remote add upstream https://github.com/spyder-ide/spyder-docs.git
 
 ## Installing and Using the Pre-Commit Hooks
 
-This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
+This repository uses [Prek](https://prek.j178.dev/) (a backwards-compatible Rust reimplementation of [Pre-Commit](https://pre-commit.com/)) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
 You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide.
 They are also run on all pull requests, and will need to pass before your changes can be merged.
 
-If you've [using Nox](#setting-up-a-development-environment-with-nox-recommended), it installs Pre-Commit and its hooks for you when running ``nox -s setup`` (as above).
+If you've [using Nox](#setting-up-a-development-environment-with-nox-recommended), it installs Prek and its hooks for you when running ``nox -s setup`` (as above).
 You can also install them with
 
 ```shell
 nox -s install-hooks
 ```
 
-If you've followed the [manual install approach](#install-dependencies), Pre-Commit will be installed directly in your local environment.
+If you've followed the [manual install approach](#install-dependencies), Prek will be installed directly in your local environment.
 To install the hooks, run the following from the root of this repo:
 
 ```shell
-pre-commit install --hook-type pre-commit --hook-type commit-msg
+prek install --hook-type pre-commit --hook-type commit-msg
 ```
 
 The hooks will be automatically run against any new/changed files every time you commit.
@@ -216,7 +216,7 @@ nox -s lint
 or
 
 ```shell
-pre-commit run --all-files
+prek run --all-files
 ```
 
 **Note**: Many of the hooks fix the problems they detect automatically (the hook output will say ``Files were modified by this hook``, and no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.

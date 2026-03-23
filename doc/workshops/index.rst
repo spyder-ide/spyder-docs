@@ -1,3 +1,6 @@
+.. _workshops:
+.. _workshops-index:
+
 =========
 Workshops
 =========

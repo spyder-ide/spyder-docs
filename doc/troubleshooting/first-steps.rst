@@ -29,6 +29,8 @@ Often, that alone will tell you how to fix the problem on your own, but if not, 
 
 
 
+.. _troubleshooting-first-steps-where-now:
+
 =====================
 Where to go from here
 =====================
@@ -37,20 +39,20 @@ If you check out our list of issue categories and problem descriptions and see a
 
 .. rst-class:: fasb fa-first-aid
 
-As a first step to solving your issue, you can try some :doc:`basic-first-aid`.
+As a first step to solving your issue, you can try some :ref:`troubleshooting-basic`.
 
 .. rst-class:: fasb fa-heartbeat
 
-If Spyder won't launch, check the :doc:`emergency-cpr` section and see if that clears it up.
+If Spyder won't launch, check the :ref:`troubleshooting-cpr` section and see if that clears it up.
 
 .. rst-class:: fasb fa-user-md
 
-If your problem is related to the kernel not starting, autocompletion or a plugin go to :doc:`common-illnesses` section.
+If your problem is related to the kernel not starting, autocompletion or a plugin go to :ref:`troubleshooting-common` section.
 
 .. rst-class:: fasb fa-phone
 
-If you still can't get it to work, and the problem is indeed Spyder-related, you should consult the the :doc:`call-for-help` section for other resources to explore.
+If you still can't get it to work, and the problem is indeed Spyder-related, you should consult the the :ref:`troubleshooting-help` section for other resources to explore.
 
 .. rst-class:: fasb fa-bug
 
-Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the bug can hopefully be fixed for everyone, :doc:`submit-a-report`.
+Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the bug can hopefully be fixed for everyone, :ref:`troubleshooting-report`.

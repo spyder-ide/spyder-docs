@@ -1,3 +1,6 @@
+.. _troubleshooting:
+.. _troubleshooting-index:
+
 ===============
 Troubleshooting
 ===============

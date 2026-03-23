@@ -1,3 +1,5 @@
+.. _plugins-lineprofiler:
+
 ####################
 Spyder Line Profiler
 ####################
@@ -11,6 +13,8 @@ This package profiles the time that individual lines of code take to execute.
    :alt: Spyder with the Line Profiler pane open
 
 
+
+.. _plugins-lineprofiler-installing:
 
 ============================
 Installing the Line Profiler
@@ -30,6 +34,8 @@ If you installed Spyder using conda, the best way to obtain Spyder-Line-Profiler
 Restart Spyder in order to be able to use the plugin.
 
 
+
+.. _plugins-lineprofiler-using:
 
 =======================
 Using the Line Profiler

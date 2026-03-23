@@ -1,3 +1,5 @@
+.. _panes-help:
+
 ####
 Help
 ####
@@ -16,11 +18,13 @@ You can also access Spyder's tutorial from here, which will guide you through so
 
 
 
+.. _panes-help-using:
+
 ============
 Getting help
 ============
 
-Help can be retrieved both by static analysis of open files in the :doc:`editor`, or by dynamically inspecting an object in an :doc:`ipythonconsole`.
+Help can be retrieved both by static analysis of open files in the :ref:`panes-editor`, or by dynamically inspecting an object in an :ref:`panes-console`.
 You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default).
 
 .. image:: /images/help/help-command.png
@@ -39,6 +43,8 @@ If enabled, simply typing a left parenthesis (``(``) after a function or method 
 
 
 
+.. _panes-help-modes:
+
 ========================
 Understanding help modes
 ========================
@@ -53,6 +59,7 @@ The latter can be useful when docstrings are not available or insufficient to do
 
 
 .. _help-hover-hints:
+.. _panes-help-hints:
 
 ========================
 Getting help by hovering
@@ -66,6 +73,8 @@ Clicking the hover popup will open the full documentation in the :guilabel:`Help
 
 
 
+.. _panes-help-autoimport:
+
 ========================
 Control automatic import
 ========================
@@ -75,10 +84,12 @@ This can be disabled in the :guilabel:`Help` pane's top-right options menu so th
 
 
 
+.. _panes-help-related:
+
 =============
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`ipythonconsole`
-* :doc:`onlinehelp`
+* :ref:`panes-editor`
+* :ref:`panes-console`
+* :ref:`panes-onlinehelp`

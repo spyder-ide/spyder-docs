@@ -1,3 +1,5 @@
+.. _panes-profiler:
+
 ########
 Profiler
 ########
@@ -10,6 +12,8 @@ This allows you to easily identify the bottlenecks in your code, points you towa
 
 
 
+.. _panes-profiler-using:
+
 ====================
 Running the Profiler
 ====================
@@ -21,7 +25,7 @@ You can browse for a file using the open button to the right of the Profiler's p
 
 You can manually enter the path in the pane's path box and then run the analysis on the file by pressing :guilabel:`Profile` in the Profiler pane.
 
-You can also run profiling for the file that is currently open in the :doc:`editor` by
+You can also run profiling for the file that is currently open in the :ref:`panes-editor` by
 clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a configurable shortcut (:kbd:`F10` by default).
 
 .. image:: /images/profiler/profiler-execution-menu.gif
@@ -29,7 +33,7 @@ clicking :menuselection:`&Run --> Profile` in the menu bar, or by using a config
 
 If you'd like to cancel an in-progress run, click the :guilabel:`Stop` button in the top right, and if profiling fails for any reason, the :guilabel:`Output` dialog will be displayed, indicating the error that occurred.
 
-By double-clicking an item in the Profiler, you will be taken to the file and line in the :doc:`editor` where it was called.
+By double-clicking an item in the Profiler, you will be taken to the file and line in the :ref:`panes-editor` where it was called.
 
 .. image:: /images/profiler/profiler-open-file.gif
    :alt: Spyder Profiler pane, showing opening a file when clicking on its analysis
@@ -53,6 +57,8 @@ To remove the loaded data, click the :guilabel:`Clear comparison` button.
 
 
 
+.. _panes-profiler-results:
+
 ========================
 Interpreting the results
 ========================
@@ -70,6 +76,8 @@ Therefore, if ``sleep()`` called nothing else itself, its :guilabel:`Total Time`
 Meanwhile, :guilabel:`Total Time` for ``sleep_wrapper()`` would be 3.86 ms, but :guilabel:`Local Time` only 0.01 ms as the rest was spent inside the ``sleep()`` function it called.
 
 
+
+.. _panes-profiler-plugins:
 
 ================
 Profiler plugins
@@ -94,9 +102,11 @@ For more information, go to the `spyder-memory-profiler git repository`_.
 
 
 
+.. _panes-profiler-related:
+
 =============
 Related panes
 =============
 
-* :doc:`ipythonconsole`
-* :doc:`pylint`
+* :ref:`panes-console`
+* :ref:`panes-pylint`

@@ -1,9 +1,11 @@
+.. _panes-files:
+
 #####
 Files
 #####
 
 The **Files** pane is a filesystem and directory browser built right into Spyder.
-You can view and filter files according to their type and extension, open them with the :doc:`editor` or an external tool, and perform many common operations.
+You can view and filter files according to their type and extension, open them with the :ref:`panes-editor` or an external tool, and perform many common operations.
 
 .. image:: /images/files/files-standard.png
    :alt: Spyder Files pane, showing a tree view of files and metadata
@@ -11,6 +13,7 @@ You can view and filter files according to their type and extension, open them w
 
 
 .. _file-operations:
+.. _panes-files-operations:
 
 ===============
 File operations
@@ -38,13 +41,14 @@ If copying the paths for multiple files, they will be automatically formatted so
 
 
 .. _files-vcs-support:
+.. _panes-files-vcs:
 
 =======================
 Version control support
 =======================
 
 The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system, like committing your changes and browsing the repository a given file or folder is part of.
-This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :doc:`projects`.
+This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :ref:`panes-projects`.
 
 .. _Git: https://git-scm.com/
 
@@ -52,6 +56,8 @@ This is :ref:`particularly useful<vcs-section>` when you're working in Spyder :d
    :alt: Spyder Files pane showing committing change of file
 
 
+
+.. _panes-files-options:
 
 ============
 Options menu
@@ -76,6 +82,8 @@ The menu also gives you the option to open files and directories with a single i
 
 
 
+.. _panes-files-associations:
+
 =================
 File associations
 =================
@@ -94,10 +102,12 @@ Additionally, when you right-click a file, you will find an :guilabel:`Open with
 
 
 
+.. _panes-files-related:
+
 =============
 Related panes
 =============
 
-* :doc:`editor`
-* :doc:`findinfiles`
-* :doc:`projects`
+* :ref:`panes-editor`
+* :ref:`panes-find`
+* :ref:`panes-projects`

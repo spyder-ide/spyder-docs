@@ -1,3 +1,5 @@
+.. _tutorials-intermediate:
+
 ###################
 Working with Spyder
 ###################
@@ -5,6 +7,8 @@ Working with Spyder
 In this section, you will learn about Spyder's more advanced functionality, and explore most of the panes.
 
 
+
+.. _tutorials-intermediate-more-panes:
 
 =====================
 Beyond the main panes
@@ -51,6 +55,8 @@ Explore how to take advantage of Spyder’s functionality beyond just the four c
       Now that you're familiar with a wider array of Spyder's panes and features, you can accomplish a variety of common programming tasks with ease. Stay tuned for our our next videos to further add to your scientific toolbox, and as always, Happy Spydering!
 
 
+
+.. _tutorials-intermediate-code-analysis:
 
 ===========================
 Improving your code quality
@@ -118,6 +124,8 @@ Learn how to improve the quality of your programs using code analysis.
       Now that we've learned how to improve the quality of our code, you are ready to write cleaner and more correct programs using Spyder. Stay tuned for our next videos and as always, Happy Spydering!
 
 
+
+.. _tutorials-intermediate-profiler:
 
 ====================
 Optimizing your code
