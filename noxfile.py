@@ -46,6 +46,9 @@ HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 
 SERVE_IP = "127.0.0.1"
 SERVE_PORT = 5000
+AUTOBUILD_PORT = 8000
+AUTOBUILD_PORT_ENV_VAR = "SPYDER_DOCS_AUTOBUILD_PORT"
+AUTOBUILD_OPEN_BROWSER_ENV_VAR = "SPYDER_DOCS_AUTOBUILD_OPEN_BROWSER"
 
 LINT_INVOCATION = ("prek",)
 
@@ -128,6 +131,14 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
         for filename in filenames
     ]
     return filenames
+
+
+def env_var_to_bool(var_name, *, default):
+    """Convert an environment variable to bool with common false values."""
+    value = os.environ.get(var_name)
+    if value is None:
+        return default
+    return value.strip().lower() not in {"0", "false", "no", "off"}
 
 
 def extract_option_values(options, option_names, *, split_csv=False):
@@ -431,17 +442,26 @@ def _autodocs(session):
     """Use Sphinx-Autobuild to rebuild the project and open in browser."""
     session.install("sphinx-autobuild")
 
+    autobuild_port = os.environ.get(
+        AUTOBUILD_PORT_ENV_VAR, str(AUTOBUILD_PORT)
+    )
+    open_browser = env_var_to_bool(
+        AUTOBUILD_OPEN_BROWSER_ENV_VAR, default=True
+    )
+    autobuild_invocation = [
+        "sphinx-autobuild",
+        f"--port={autobuild_port}",
+        f"--watch={SOURCE_DIR}",
+    ]
+    if open_browser:
+        autobuild_invocation.append("--open-browser")
+
     with tempfile.TemporaryDirectory() as destination:
         sphinx_invocation = construct_sphinx_invocation(
             posargs=session.posargs[1:],
             build_dir=destination,
             extra_options=["-a"],
-            build_invocation=[
-                "sphinx-autobuild",
-                "--port=0",
-                f"--watch={SOURCE_DIR}",
-                "--open-browser",
-            ],
+            build_invocation=autobuild_invocation,
         )
         session.run(*sphinx_invocation)
 

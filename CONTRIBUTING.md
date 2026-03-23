@@ -249,6 +249,14 @@ Alternatively, to automatically rebuild the docs when changes occur, you can inv
 nox -s autobuild
 ```
 
+By default, this serves docs on port ``8000`` and opens your default browser.
+You can customize this behavior with environment variables:
+
+```shell
+SPYDER_DOCS_AUTOBUILD_PORT=8765 nox -s autobuild
+SPYDER_DOCS_AUTOBUILD_OPEN_BROWSER=0 nox -s autobuild
+```
+
 You can also pass your own custom [Sphinx build options](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) after a ``--`` separator which are added to the default set.
 For example, to rebuild just the install guide and FAQ in verbose mode with the ``dirhtml`` builder (our noxfile automatically prepends the source directory for you, so typing the full relative path is optional):
 
