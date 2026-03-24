@@ -10,6 +10,43 @@
   --color-primary: var(--pst-color-primary);
 }
 
+/* Increase content width and decrease left sidebar width */
+
+.bd-main .bd-content .bd-article-container {
+  /* Center the article container */
+  margin: 0 auto;
+}
+
+.bd-page-width {
+  max-width: 100%; /* default is 88rem */
+}
+
+.bd-sidebar-primary {
+  max-width: 18%; /* default is 25% */
+}
+
+/* Temporarily fix page source styling due to to pydata/pydata-sphinx-theme#2088 */
+/* https://github.com/pydata/pydata-sphinx-theme/issues/2088 */
+
+.sidebar-secondary-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-secondary-item h3 {
+  display: none;
+}
+
+.sidebar-secondary-item:nth-child(2) ul li:nth-child(1) a::before {
+  content: "\f15c";
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
 /* Increase bottom margin for images */
 
 section img {
