@@ -51,11 +51,11 @@
 
 /* Center navbar nav items */
 @media (min-width: 960px) {
-  .col-lg-3 {
+  .bd-header .col-lg-3 {
     width: auto !important;
   }
 }
-.me-auto {
+.bd-header .me-auto {
   margin-left: auto !important;
 }
 
