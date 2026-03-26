@@ -50,6 +50,7 @@
 }
 
 /* Center navbar nav items */
+
 @media (min-width: 960px) {
   .bd-header .col-lg-3 {
     width: auto !important;
@@ -57,6 +58,15 @@
 }
 .bd-header .me-auto {
   margin-left: auto !important;
+}
+
+/* Fix search icon margin on mobile */
+
+@media (max-width: 959.98px) {
+  /* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+  .navbar-persistent--mobile {
+    margin-left: 1em !important;
+  }
 }
 
 /* Increase bottom margin for images */
