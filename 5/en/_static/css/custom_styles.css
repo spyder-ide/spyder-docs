@@ -39,7 +39,7 @@
   display: none;
 }
 
-.sidebar-secondary-item:nth-child(2) ul li:nth-child(1) a::before {
+.sidebar-secondary-item .this-page-menu a::before {
   content: "\f15c";
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
   font-family: "Font Awesome 6 Free";
