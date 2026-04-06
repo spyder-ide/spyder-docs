@@ -1,7 +1,11 @@
 [
     {
-        "version": "5",
+        "version": "6",
         "preferred": true,
+        "url": "https://docs.spyder-ide.org/6/"
+    },
+    {
+        "version": "5",
         "url": "https://docs.spyder-ide.org/5/"
     },
     {

@@ -43,7 +43,7 @@ For more information about Spyder itself, please see our [website](https://www.s
 
 The docs are built with [Sphinx](https://www.sphinx-doc.org/) and deployed with GitHub Actions to the [docs.spyder-ide.org](https://docs.spyder-ide.org/) domain.
 [Nox](https://nox.thea.codes/) is used to automate setup, building and numerous other project tasks.
-The ``master`` branch contains the in-development docs for Spyder 5, while the frozen ``4.x`` and ``3.x`` branches retain the docs for Spyder 4 and Spyder 3.
+The ``master`` branch contains the actively developed docs for Spyder 6, while the frozen ``Y.x`` branches retain the docs Spyder 3 through Spyder 5.
 
 
 ## Contributing

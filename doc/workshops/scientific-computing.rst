@@ -171,7 +171,7 @@ To install Spyder's optional dependencies as well for full functionality, use th
 
 .. code-block:: bash
 
-   $ conda create -n scientific-computing spyder=5 numpy scipy pandas matplotlib sympy cython seaborn spyder-kernels pyarrow
+   $ conda create -n scientific-computing spyder=6 numpy scipy pandas matplotlib sympy cython seaborn spyder-kernels pyarrow
 
 .. warning::
 
