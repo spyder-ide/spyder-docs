@@ -130,15 +130,7 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
         )
         for filename in filenames
     ]
-    return filenames
-
-
-def env_var_to_bool(var_name, *, default):
-    """Convert an environment variable to bool with common false values."""
-    value = os.environ.get(var_name)
-    if value is None:
-        return default
-    return value.strip().lower() not in {"0", "false", "no", "off"}
+return filenames
 
 
 def extract_option_values(options, option_names, *, split_csv=False):
