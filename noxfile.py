@@ -434,12 +434,9 @@ def _autodocs(session):
     """Use Sphinx-Autobuild to rebuild the project and open in browser."""
     session.install("sphinx-autobuild")
 
-    autobuild_port = os.environ.get(
-        AUTOBUILD_PORT_ENV_VAR, str(AUTOBUILD_PORT)
-    )
-    open_browser = env_var_to_bool(
-        AUTOBUILD_OPEN_BROWSER_ENV_VAR, default=True
-    )
+    ports = extract_option_values(posargs, "--port")[0]
+    autobuild_port = port[-1] if ports else SERVE_PORT
+    open_browser = "--no-browser" not in posargs
     autobuild_invocation = [
         "sphinx-autobuild",
         f"--port={autobuild_port}",
