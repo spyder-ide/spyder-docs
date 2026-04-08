@@ -524,7 +524,6 @@ def _serve(session):
 
 def _serve_docs(session):
     """Start a web server for the built docs and open them in a web browser."""
-    print(f"session.posargs: {session.posargs}")
     posargs = session.posargs
     ports = extract_option_values(posargs, "--port")[0]
     port = int(ports[-1]) if ports else SERVE_PORT

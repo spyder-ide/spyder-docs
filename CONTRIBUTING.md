@@ -249,7 +249,7 @@ Alternatively, to automatically rebuild the docs when changes occur, you can inv
 nox -s autobuild
 ```
 
-By default, this serves docs on port ``8000`` and opens your default browser.
+By default, this serves docs on port ``5000`` and opens your default browser.
 You can customize this behavior with environment variables:
 
 ```shell
