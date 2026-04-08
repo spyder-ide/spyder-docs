@@ -253,8 +253,8 @@ By default, this serves docs on port ``8000`` and opens your default browser.
 You can customize this behavior with environment variables:
 
 ```shell
-SPYDER_DOCS_AUTOBUILD_PORT=8765 nox -s autobuild
-SPYDER_DOCS_AUTOBUILD_OPEN_BROWSER=0 nox -s autobuild
+nox -s autobuild -- --port 8765
+nox -s autobuild -- --no-browser
 ```
 
 You can also pass your own custom [Sphinx build options](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) after a ``--`` separator which are added to the default set.
