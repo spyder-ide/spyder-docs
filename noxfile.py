@@ -2,6 +2,7 @@
 
 # Standard library imports
 import contextlib
+import functools
 import http.server
 import logging
 import os
@@ -46,9 +47,6 @@ HTML_INDEX_PATH = HTML_BUILD_DIR / "index.html"
 
 SERVE_IP = "127.0.0.1"
 SERVE_PORT = 5000
-AUTOBUILD_PORT = 8000
-AUTOBUILD_PORT_ENV_VAR = "SPYDER_DOCS_AUTOBUILD_PORT"
-AUTOBUILD_OPEN_BROWSER_ENV_VAR = "SPYDER_DOCS_AUTOBUILD_OPEN_BROWSER"
 
 LINT_INVOCATION = ("prek",)
 
@@ -130,7 +128,7 @@ def process_filenames(filenames, source_dir=SOURCE_DIR):
         )
         for filename in filenames
     ]
-return filenames
+    return filenames
 
 
 def extract_option_values(options, option_names, *, split_csv=False):
@@ -434,20 +432,23 @@ def _autodocs(session):
     """Use Sphinx-Autobuild to rebuild the project and open in browser."""
     session.install("sphinx-autobuild")
 
-    ports = extract_option_values(posargs, "--port")[0]
-    autobuild_port = port[-1] if ports else SERVE_PORT
+    posargs = session.posargs[1:]
+    ports, posargs = extract_option_values(posargs, "--port")
+    port = int(ports[-1]) if ports else SERVE_PORT
     open_browser = "--no-browser" not in posargs
     autobuild_invocation = [
         "sphinx-autobuild",
-        f"--port={autobuild_port}",
+        f"--port={port}",
         f"--watch={SOURCE_DIR}",
     ]
     if open_browser:
         autobuild_invocation.append("--open-browser")
+    else:
+        posargs.remove("--no-browser")
 
     with tempfile.TemporaryDirectory() as destination:
         sphinx_invocation = construct_sphinx_invocation(
-            posargs=session.posargs[1:],
+            posargs=posargs,
             build_dir=destination,
             extra_options=["-a"],
             build_invocation=autobuild_invocation,
@@ -516,16 +517,25 @@ def build_multilanguage(session):
 # ---- Deploy ---- #
 
 
-def _serve(session=None):
+def _serve(session):
     """Open the built content in a web browser."""
     _serve_docs(session)
 
 
-def _serve_docs(_session=None):
+def _serve_docs(session):
     """Start a web server for the built docs and open them in a web browser."""
-    threading.Thread(target=start_server).start()
-    url = f"http://{SERVE_IP}:{SERVE_PORT}"
-    webbrowser.open_new(url)
+    print(f"session.posargs: {session.posargs}")
+    posargs = session.posargs
+    ports = extract_option_values(posargs, "--port")[0]
+    port = int(ports[-1]) if ports else SERVE_PORT
+    open_browser = "--no-browser" not in posargs
+
+    start_server_port = functools.partial(start_server, port=port)
+    threading.Thread(target=start_server_port).start()
+
+    if open_browser:
+        url = f"http://{SERVE_IP}:{port}"
+        webbrowser.open_new(url)
 
     while True:
         try:
@@ -535,15 +545,15 @@ def _serve_docs(_session=None):
 
 
 @nox.session
-def serve(_session):
+def serve(session):
     """Display the built project."""
-    _serve()
+    _serve(session)
 
 
 @nox.session(name="serve-docs")
-def serve_docs(_session):
+def serve_docs(session):
     """Display the rendered documentation."""
-    _serve_docs()
+    _serve_docs(session)
 
 
 def _prepare_multiversion(_session=None):
