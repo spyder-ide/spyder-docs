@@ -286,3 +286,4 @@ repos:
   - id: codespell
     name: Check commit message spelling
     stages: [commit-msg]
+    args: ['--ignore-regex', '^# .*']
