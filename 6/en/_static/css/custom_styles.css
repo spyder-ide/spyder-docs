@@ -1,0 +1,368 @@
+/* PyData Sphinx Theme variables */
+@property --color-primary {
+  inherits: true;
+  initial-value: #0000c0;
+  syntax: "<color>";
+}
+
+:root {
+  /* stylelint-disable-next-line no-unknown-custom-properties -- PyData Sphinx Theme variable */
+  --color-primary: var(--pst-color-primary);
+}
+
+/* Increase content width and decrease left sidebar width */
+
+.bd-main .bd-content .bd-article-container {
+  /* Center the article container */
+  margin: 0 auto;
+}
+
+.bd-page-width {
+  max-width: 100%; /* default is 88rem */
+}
+
+@media (min-width: 960px) {
+  .bd-sidebar-primary {
+    max-width: 18%; /* default is 25% */
+  }
+}
+
+/* Temporarily fix page source styling due to to pydata/pydata-sphinx-theme#2088 */
+/* https://github.com/pydata/pydata-sphinx-theme/issues/2088 */
+
+.sidebar-secondary-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-secondary-item h3 {
+  display: none;
+}
+
+.sidebar-secondary-item .this-page-menu a::before {
+  content: "\f15c";
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
+/* Center navbar nav items */
+
+@media (min-width: 960px) {
+  .bd-header .col-lg-3 {
+    width: auto !important;
+  }
+}
+.bd-header .me-auto {
+  margin-left: auto !important;
+}
+
+/* Fix search icon margin on mobile */
+
+@media (max-width: 959.98px) {
+  /* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+  .navbar-persistent--mobile {
+    margin-left: 1em !important;
+  }
+}
+
+/* Increase bottom margin for images */
+
+section img {
+  margin-bottom: 1rem;
+}
+
+/* Style for Font Awesome that only styles the icons before elements */
+
+.fasb::before,
+.fabb::before {
+  color: var(--color-primary);
+  display: inline-block;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 6 Free";
+  font-size: 26px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Style for Font Awesome brands */
+
+.fabb::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 6 Brands";
+}
+
+/* Ensure FA icons applied to section divs display inline */
+
+section.fasb h3,
+section.fabb h3 {
+  display: inline-block;
+}
+
+/* Custom color and size for FA icons */
+
+.blue-32px .fasb::before {
+  color: var(--color-primary);
+  width: 32px;
+}
+
+/* Adjust vertical positioning of FA icons to be centered */
+
+.fa-offset-h3 .fasb::before,
+.fa-offset-h3 .fabb::before {
+  padding-bottom: 0.3em;
+}
+
+/* Center iframes and adjust their bottom margins */
+
+iframe {
+  display: block;
+  height: 100%;
+  left: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*** Custom colors for specific FA icons in the index page ***/
+
+section.fa-laptop-code::before {
+  color: #4e4e4e;
+}
+
+section.fa-book::before {
+  color: #6a3514;
+}
+
+section.fa-globe-americas::before {
+  color: #1c4489;
+}
+
+section.fa-user-friends::before {
+  color: #f6951f;
+}
+
+/*** Styling for quickstart interactive tour ***/
+
+.interactive-tour-container {
+  display: inline-block;
+  margin-top: 0.7rem;
+  position: relative;
+  transition: transform 500ms ease-in-out;
+}
+
+.interactive-tour-container .tour-screenshot {
+  display: none;
+  height: auto;
+  margin-bottom: 0.4rem;
+  max-width: 100%;
+}
+
+.interactive-tour-container img.tour-screenshot-active {
+  display: block !important;
+}
+
+.interactive-tour-container .tour-overlay {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.tour-overlay .highlight-rect {
+  fill: none;
+  opacity: 0;
+  stroke: var(--color-primary);
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+@media (max-width: 767px) {
+  .tour-overlay .highlight-rect {
+    stroke-width: 10;
+  }
+}
+
+div#driver-highlighted-element-stage {
+  opacity: 0;
+}
+
+rect.driver-highlighted-element {
+  opacity: 1 !important;
+}
+
+/*** Fix tour navigation buttons' margins, arrows and alignment ***/
+
+div#driver-popover-item .driver-popover-footer {
+  margin-top: 1em;
+}
+
+div#driver-popover-item .driver-popover-footer button {
+  min-width: 4.3rem;
+}
+
+div#driver-popover-item .driver-navigation-btns {
+  line-height: 1rem;
+}
+
+/* Style tour progress indicator */
+
+div#driver-popover-item .tour-progress-indicator {
+  float: right;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+/* Version and language selectors */
+
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.version-switcher__button,
+/* stylelint-disable-next-line selector-class-pattern -- Third party class using BEM */
+.language-switcher__button {
+  margin-bottom: 0 !important;
+}
+
+/*** Styles for video transcript dropdown elements ***/
+
+.dropdown-videos {
+  border: 0;
+  border-radius: unset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.dropdown-videos .sd-card-header {
+  border-radius: unset;
+  padding-bottom: 0.1em !important;
+  padding-top: 0.1em !important;
+}
+
+.dropdown-videos div.scroll {
+  font-size: 0.8em;
+  height: 250px;
+  margin: 1px;
+  overflow: hidden auto;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+div.video-container-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+}
+
+div.video-container {
+  background-color: #000;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+/* Add vertical whitespace after videos when followed by text */
+
+div.video-container-container + p {
+  margin-top: 1em;
+}
+
+/* Style for video tags */
+
+video {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+/* Style for adding icons to the installers table */
+
+table.installer-table td {
+  border-top: 0;
+  font-size: 1.4em;
+}
+
+table.installer-table tbody td p::before {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
+  font-family: "Font Awesome 6 Brands";
+}
+
+table.installer-table tbody td:nth-child(1) p,
+table.installer-table tbody td:nth-child(4) p {
+  padding-top: 0.62em;
+}
+
+table.installer-table tbody td:nth-child(1) p::before {
+  content: "\f17a";
+  font-size: 1.6em;
+  padding-right: 0.7em;
+  vertical-align: middle;
+}
+
+table.installer-table tbody td:nth-child(2) p::before,
+table.installer-table tbody td:nth-child(3) p::before {
+  content: "\f179";
+  font-size: 2em;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
+table.installer-table tbody td:nth-child(4) p::before {
+  content: "\f17c";
+  font-size: 1.6em;
+  padding-right: 0.5em;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 991px) {
+  table.installer-table td {
+    display: block;
+  }
+}
+
+/* Style for links added to dropdowns */
+
+a.dropdown-link {
+  color: var(--color-primary);
+  margin-left: 0.5em;
+  padding: 0.25em;
+  visibility: hidden;
+}
+
+details.sd-dropdown:hover a.dropdown-link,
+details.sd-dropdown:focus a.dropdown-link {
+  visibility: visible;
+}
+
+a.dropdown-link:hover,
+a.dropdown-link:focus {
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Override image filters */
+
+html[data-theme="dark"] img {
+  filter: none !important;
+}

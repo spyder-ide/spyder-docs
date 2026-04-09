@@ -64,7 +64,7 @@ Installing and updating
 
    .. code-block:: bash
 
-      conda install spyder=5
+      conda install spyder=6
 
 
 .. dropdown:: Q: How do update I Spyder using Anaconda Navigator?
