@@ -249,6 +249,14 @@ Alternatively, to automatically rebuild the docs when changes occur, you can inv
 nox -s autobuild
 ```
 
+By default, this serves docs on port ``5000`` and opens your default browser.
+You can customize this behavior with environment variables:
+
+```shell
+nox -s autobuild -- --port 8765
+nox -s autobuild -- --no-browser
+```
+
 You can also pass your own custom [Sphinx build options](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) after a ``--`` separator which are added to the default set.
 For example, to rebuild just the install guide and FAQ in verbose mode with the ``dirhtml`` builder (our noxfile automatically prepends the source directory for you, so typing the full relative path is optional):
 
@@ -276,9 +284,8 @@ When you start to work on a new pull request (PR), you need to be sure that your
 To guide you, issues on GitHub are marked with a milestone that indicates the correct branch to use.
 If not, follow these guidelines:
 
-* The ``master`` branch contains the in-development documentation for Spyder 6; changes specific to that version should be made against this branch.
-* The ``5.x`` branch contains the docs for Spyder 4 and is still maintained; general changes and those applicable to only this version should be made to this branch.
-* The ``4.x`` and ``3.x`` branch is frozen, containing the docs for the legacy Spyder 4 and Spyder 3 versions; no further PRs will be accepted
+* The ``master`` branch contains the actively developed documentation for Spyder 6; changes should be made against this branch.
+* The ``Y.x`` branches are frozen, containing the docs for the legacy Spyder 3-5 versions; no further PRs will be accepted.
 
 Of course, if an issue is only present in a specific branch, please base your PR on that branch.
 If you are at all unsure which branch to use, we'll be happy to guide you.
