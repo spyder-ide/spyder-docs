@@ -449,44 +449,41 @@
                   
   <section id="install-guide">
 <span id="install"></span><span id="id1"></span><h1>Install Guide<a class="headerlink" href="#install-guide" title="Link to this heading">#</a></h1>
-<p>Spyder is relatively easy to install on Windows, Linux and macOS.
+<p>Spyder is relatively easy to install on any Windows, Linux or macOS system meeting our basic <a class="reference internal" href="faq.html#run-system-reqs"><span class="std std-ref">system requirements</span></a>.
 Just make sure to read and follow these instructions with care.</p>
-<p>If you run into problems, before posting a report, <em>please</em> consult our comprehensive <a class="reference internal" href="troubleshooting/first-steps.html#troubleshooting-guide"><span class="std std-ref">troubleshooting guide</span></a> and search the <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issue tracker</a> for your error message and problem description.
+<p>If you have questions or run into problems, <em>please</em> check our <a class="reference internal" href="faq.html#faq-installing"><span class="std std-ref">FAQ</span></a>, consult our <a class="reference internal" href="troubleshooting/first-steps.html#troubleshooting-guide"><span class="std std-ref">troubleshooting guide</span></a> and search the <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issue tracker</a> for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For most users on Windows and macOS, we recommend our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> as the most straightforward and robust option to obtain Spyder.
-For users needing Linux support, third-party Spyder plugins or Variable Explorer compatibility with custom-installed packages—all capabilities which the standalone installers currently do not yet provide—we advise using a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a>.
-Linux, plugin and package/environment management support in the standalone installers are currently under active development for future Spyder versions.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For most users, our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> are the most straightforward and robust option to obtain Spyder, and support extended functionality over other installation methods.
+Easy installation of third-party Spyder plugins and full Variable Explorer support for custom-installed packages are both currently under active development; if you require these capabilities now, <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a> are the currently recommended alternative.</p>
 </div>
 <section id="try-spyder-online">
 <span id="install-binder"></span><h2>Try Spyder online<a class="headerlink" href="#try-spyder-online" title="Link to this heading">#</a></h2>
-<p>Want to try out Spyder without installing it?
-With <a class="reference external" href="https://mybinder.org/">Binder</a> you can work with a fully functional copy of Spyder online that runs right in your web browser, no installation needed.
-Visit the <a class="reference external" href="https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster">Spyder Binder</a> to get started using Spyder.</p>
+<p>Want to try out Spyder before installing it?
+With <a class="reference external" href="https://mybinder.org/">Binder</a>, you can open a functional copy of Spyder online that runs right in your web browser, with no installation needed.
+Visit the <a class="reference external" href="https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster">Spyder Binder</a> page to get started using Spyder.</p>
 <img alt="Spyder running on Binder" src="_images/installation-spyder-binder.png" />
 </section>
 <section id="standalone-installers">
 <span id="install-standalone"></span><h2>Standalone installers<a class="headerlink" href="#standalone-installers" title="Link to this heading">#</a></h2>
-<p>The standalone installers are our recommended method for most users on Windows and macOS, with experimental Linux support under active development.
+<p>The standalone installers are recommended for most users on Windows, macOS and Linux.
 They work like any other IDE, where Spyder can be installed and updated independently of the Python environments you use to run your code.
-This avoids the problems with incompatible packages and broken installations users often face when mixing Spyder with the (Conda, etc) environments they use to run their code.</p>
-<p>The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
-However, to manage your own packages and environments, you’ll currently need to connect an external Python distribution (such as <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a>, <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge/Mambaforge</a>, <a class="reference external" href="https://winpython.github.io/">WinPython</a> or <a class="reference external" href="https://www.python.org/">Python.org</a>) to your standalone copy of Spyder.
+This avoids the problems with incompatible packages and broken installations users can face when managing Spyder’s installation themselves, mixed with their own working environments.</p>
+<p>The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, SciPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
+To use additional packages, we currently recommend connecting an external Python distribution (such as <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a>, <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a> or <a class="reference external" href="https://www.python.org/">Python.org</a>) to your standalone copy of Spyder.
 For more information on this, see our <a class="reference internal" href="faq.html#using-packages-installer"><span class="std std-ref">FAQ entry on the subject</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The standalone installers do not yet support installing third-party Spyder plugins not already bundled with them, though this feature is currently under development.
-For now, if you need this capability, we recommend a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a>.</p>
+<p>A built-in plugin manager allowing you to easily install Spyder plugins not already bundled with the installers is being developed for Spyder 6.2.
+For now, if you require third-party plugins, we recommend installing Spyder via <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a>.</p>
 </div>
 <section id="downloading-and-installing">
 <span id="install-standalone-installing"></span><h3>Downloading and installing<a class="headerlink" href="#downloading-and-installing" title="Link to this heading">#</a></h3>
-<p>To download the supported Spyder installer for your platform, simply click the appropriate link below (for Linux, see the <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a> section).
-Then, double-click the downloaded file to open the installer.
-If a security warning pops up, you may need to click <span class="guilabel">Yes</span>, <span class="guilabel">OK</span>, <span class="guilabel">Open</span>, <span class="guilabel">Allow</span> or similar.</p>
-<p>On Windows, if a “SmartScreen” dialog appears, click <span class="guilabel">More info</span> followed by <span class="guilabel">Run anyway</span>, and then proceed through the steps in the installer.</p>
-<p>On macOS, open the disk image and drag Spyder to your <span class="guilabel">Applications</span> folder.</p>
+<p>To download the supported Spyder installer for your platform, simply click the appropriate link below; you can also browse all installer versions from the <a class="reference external" href="https://www.spyder-ide.org/download">downloads page</a>.
+Then, double-click the downloaded file to open the installer on Windows and macOS, or run it with <code class="docutils literal notranslate"><span class="pre">bash</span></code> in a terminal on Linux (<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">path/to/downloaded/Spyder-Linux-x86_64.sh</span></code>).
+If a security warning pops up, you may need to click <span class="guilabel">Yes</span>, <span class="guilabel">OK</span>, <span class="guilabel">Open</span>, <span class="guilabel">Allow</span> or similar; or on Windows, <span class="guilabel">More info</span> followed by <span class="guilabel">Run anyway</span>.</p>
 <div class="pst-scrollable-table-container"><table class="installer-table table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Windows-x86_64.exe">Windows</a></p></td>
@@ -497,35 +494,30 @@ If a security warning pops up, you may need to click <span class="guilabel">Yes<
 </tbody>
 </table>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>“Lite” versions of both installers are also available from the <a class="reference external" href="https://github.com/spyder-ide/spyder/releases/latest">releases page</a>, which are somewhat smaller than the full installers.
-These lack a number of optional but recommended dependencies, such as NumPy, SciPy and Pandas, meaning that a few <a class="reference internal" href="panes/variableexplorer.html#panes-variables"><span class="std std-ref">Variable Explorer</span></a> features, including graphical data import wizards and support for rich display and editing of NumPy arrays and Pandas DataFrames, will not be available.
-Given this only saves a modest amount of space while missing out on significant features, we recommend using the full installers unless minimizing download/install size and memory usage is a priority.</p>
-</div>
 </section>
 <section id="running-from-a-standalone-install">
 <span id="install-standalone-running"></span><h3>Running from a standalone install<a class="headerlink" href="#running-from-a-standalone-install" title="Link to this heading">#</a></h3>
-<p>To run Spyder when installed standalone, you can simply use your operating system’s typical method of launching applications, such as opening it from the <span class="guilabel">Start</span> menu on Windows (or the Taskbar, if you’ve pinned it there), or from Launchpad, Spotlight or the <span class="guilabel">Applications</span> folder on macOS (or the Dock, if you’ve added it there).</p>
+<p>To run Spyder when installed standalone, you can simply use your operating system’s typical method of launching applications, such as opening it from the <span class="guilabel">Start</span> menu on Windows (or the Taskbar, if you’ve pinned it there), from Launchpad, Spotlight or the <span class="guilabel">Applications</span> folder on macOS (or the Dock, if you’ve added it there), or your preferred application launcher on Linux.</p>
 </section>
 <section id="updating-a-standalone-install">
 <span id="install-standalone-update"></span><h3>Updating a standalone install<a class="headerlink" href="#updating-a-standalone-install" title="Link to this heading">#</a></h3>
 <p>By default, Spyder checks for updates automatically on startup, and you can also check manually with <span class="menuselection">Help ‣ Check for updates</span>.
-The standalone installers for Spyder 5.4.0+ include update functionality built right into Spyder, which after checking for updates will display a prompt to automatically download and install the current version.
+Standalone installers for Spyder 6+ include update functionality built right into the application, which after checking for updates will display a prompt to automatically download and install the latest version.
 On earlier versions, you’ll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).</p>
 </section>
 </section>
 <section id="conda-based-distributions">
 <span id="install-conda"></span><h2>Conda-based distributions<a class="headerlink" href="#conda-based-distributions" title="Link to this heading">#</a></h2>
 <p>Spyder is included by default in the <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a> Python distribution, which comes with everything you need to get started in an all-in-one package.
-It can also be easily installed in the much lighter-weight <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a> and <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge/Mambaforge</a>, which include just Python and the Conda/Mamba package and environment manager by default (with Miniforge defaulting to the Conda-Forge channel, and Mambaforge using Mamba, a much faster alternative to Conda).
-This is our recommended installation method on Linux and for users with third-party Spyder plugins, as support for both of these in our standalone installers is still under active development.</p>
+It can also be easily installed in the much lighter-weight <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a> and (recommended) <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>, which include just the Conda/Mamba package and environment manager.
+They allow you to create your own environments with any packages you need, with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel.
+This is our recommended installation method if you require third-party Spyder plugins or Variable Explorer compatibility with inspecting objects from specialized libraries (e.g. PyTorch or Scikit-Learn), as support for both of these in our standalone installers is still under active development.</p>
 <section id="conda-environment">
 <span id="install-conda-environment"></span><h3>Conda environment<a class="headerlink" href="#conda-environment" title="Link to this heading">#</a></h3>
-<p>With Miniconda/Miniforge/Mambaforge, or to get a more reliable and up-to-date Spyder version with Anaconda, we strongly recommend installing Spyder into its own dedicated Conda environment.</p>
+<p>To ensure you get the most reliable and up-to-date Spyder version and avoid any conflicts with other packages, we strongly recommend installing Spyder into its own dedicated Conda environment.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If using Mamba/Mambaforge, substitute <code class="docutils literal notranslate"><span class="pre">mamba</span></code> for <code class="docutils literal notranslate"><span class="pre">conda</span></code> in the following commands.</p>
+<p>If using Mamba, substitute <code class="docutils literal notranslate"><span class="pre">mamba</span></code> for <code class="docutils literal notranslate"><span class="pre">conda</span></code> in the following commands.</p>
 </div>
 <section id="installing-with-conda">
 <span id="install-conda-installing"></span><h4>Installing with Conda<a class="headerlink" href="#installing-with-conda" title="Link to this heading">#</a></h4>
@@ -537,8 +529,8 @@ This is our recommended installation method on Linux and for users with third-pa
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder
 </pre></div>
 </div>
-<p>This installs Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code>, using the more up-to-date, community-run Conda-Forge channel.
-To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment’s default channel with strict channel priority enabled, if this isn’t the case already (as it is with Miniforge/Mambaforge or if you’ve manually configured it):</p>
+<p>This installs Spyder into a new environment called <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code>, using the more up-to-date, non-restricted Conda-Forge channel.
+To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment’s default channel with strict channel priority enabled, if this isn’t the case already (as it is with Miniforge or if you’ve manually configured it):</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
 conda<span class="w"> </span>config<span class="w"> </span>--env<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
 conda<span class="w"> </span>config<span class="w"> </span>--env<span class="w"> </span>--set<span class="w"> </span>channel_priority<span class="w"> </span>strict
@@ -549,16 +541,15 @@ conda<span class="w"> </span>config<span class="w"> </span>--env<span class="w">
 </section>
 <section id="running-with-conda">
 <span id="install-conda-running"></span><h4>Running with Conda<a class="headerlink" href="#running-with-conda" title="Link to this heading">#</a></h4>
-<p>You can then run Spyder by the same methods <a class="reference internal" href="#install-anaconda-running"><span class="std std-ref">as with Anaconda</span></a>, except that you need to make sure to launch the Start menu shortcut with <code class="docutils literal notranslate"><span class="pre">(spyder-env)</span></code> in the name, select the <code class="docutils literal notranslate"><span class="pre">spyder-env</span></code> environment on the left before launching it with Navigator, or type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">spyder-env</span></code> before launching it on the command line.</p>
+<p>After installing, you can run Spyder by the same normal operating system methods <a class="reference internal" href="#install-standalone-running"><span class="std std-ref">as with the standalone installers</span></a>; just make sure to launch the shortcut with <code class="docutils literal notranslate"><span class="pre">(spyder-env)</span></code> in its name.
+You can also launch it directly from the Terminal (the Anaconda Prompt, on Windows) by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">spyder-env</span></code> to active its environment and then <code class="docutils literal notranslate"><span class="pre">spyder</span></code> to launch it.</p>
 <p>See <a class="reference internal" href="faq.html#using-existing-environment"><span class="std std-ref">our FAQ question</span></a> for more information about how to use Spyder with your existing Conda environments.</p>
 </section>
 <section id="updating-with-conda">
 <span id="install-conda-update"></span><h4>Updating with Conda<a class="headerlink" href="#updating-with-conda" title="Link to this heading">#</a></h4>
-<p>With any Conda-based distribution and Spyder installed in its own environment (recommended), update Conda itself, active the environment, and finally update Spyder.
-In your system terminal (or Anaconda Prompt if on Windows), run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda
-conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
-conda<span class="w"> </span>update<span class="w"> </span>spyder
+<p>With any Conda-based distribution and Spyder installed in its own environment (as we strongly recommend), run the following in your system terminal (or Anaconda Prompt if on Windows) to activate the environment and update Spyder:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
+conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p>In case you get an error trying to update, just remove the existing environment (if using one other than <code class="docutils literal notranslate"><span class="pre">base</span></code>):</p>
@@ -578,14 +569,14 @@ Therefore, we recommend <a class="reference internal" href="#install-conda-insta
 </div>
 <section id="running-with-anaconda">
 <span id="install-anaconda-running"></span><h4>Running with Anaconda<a class="headerlink" href="#running-with-anaconda" title="Link to this heading">#</a></h4>
-<p>To run the bundled version of Spyder after installing it with Anaconda, the recommended method on Windows is to launch it via the Start menu shortcut.
-On other platforms, open Anaconda Navigator, scroll to Spyder under <span class="guilabel">Home</span> and click <span class="guilabel">Launch</span>.</p>
+<p>To run the bundled version of Spyder after installing Anaconda, simply launch it like with any other application from your operating system’s application launcher (e.g. the Start Menu on Windows, or Spotlight/Launchpad on macOS).</p>
+<p>While not recommended, it can also be started from Anaconda Navigator by scrolling to Spyder under <span class="guilabel">Home</span> and clicking <span class="guilabel">Launch</span>.</p>
 <img alt="Anaconda Navigator showing Spyder" src="_images/installation-anaconda-navigator.png" />
-<p>If Spyder does not start via this method or you prefer to use the command line, open Anaconda Prompt (Windows) or your terminal (other platforms), type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> then <code class="docutils literal notranslate"><span class="pre">spyder</span></code>.</p>
+<p>If Spyder does not start via this method or you prefer to use the command line, open your system terminal (Anaconda Prompt on Windows), and type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">base</span></code> then <code class="docutils literal notranslate"><span class="pre">spyder</span></code>.</p>
 </section>
 <section id="updating-with-anaconda">
 <span id="install-anaconda-update"></span><h4>Updating with Anaconda<a class="headerlink" href="#updating-with-anaconda" title="Link to this heading">#</a></h4>
-<p>With Spyder installed in Anaconda’s <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, first update the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> meta-package, and then Spyder itself (in case there is a newer version than that pinned to the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> metapackage).
+<p>With Spyder installed in Anaconda’s <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, first update the <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> meta-package, and then Spyder itself.
 In your system terminal (or Anaconda Prompt if on Windows), run:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
 conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span>X.Y.Z<span class="w">  </span><span class="c1"># Replace w/latest Spyder version, e.g. 6.1.4</span>
@@ -593,7 +584,7 @@ conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spy
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These commands also update all your other packages, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on other installed packages.</p>
+<p>These commands also update all your other packages, which is one reason we strongly recommend you use an isolated conda environment to avoid any potential unintended effects on your environment.</p>
 </div>
 <p>In case you get an error resolving dependencies, try uninstalling Spyder and re-installing it:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>spyder
@@ -607,27 +598,26 @@ conda<span class="w"> </span>install<span class="w"> </span>spyder
 <span id="install-pip"></span><h2>Using pip<a class="headerlink" href="#using-pip" title="Link to this heading">#</a></h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>While this installation method is a viable option for experienced users, installing Spyder (and other PyData-stack packages) with pip can sometimes lead to tricky issues, particularly on Windows and macOS.
-While you are welcome to try it on your own, we are typically not able to provide individual support for installation problems with pip, except to recommend our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> (Windows and macOS) or a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a>.</p>
+<p>While this installation method works fine in most cases, installing Spyder (and other PyData-stack packages) with pip can occasionally lead to tricky issues, particularly if mixed with a Conda install of Python.
+Therefore, we generally recommend our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> or installing via <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda</span></a> instead.</p>
 </div>
 <p>You can install Spyder with the pip package manager, which is included by default with most Python installations.
-Before installing Spyder itself by this method, you need to download the <a class="reference external" href="https://www.python.org/">Python</a> programming language.</p>
+Before installing Spyder itself by this method, you need to download a recent version of the <a class="reference external" href="https://www.python.org/">Python</a> programming language if it isn’t already installed in your system.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Due to a known issue with some DEB-based Linux distributions (Debian, Ubuntu, Mint), you might also need to install the <code class="docutils literal notranslate"><span class="pre">pyqt5-dev-tools</span></code> package first, with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">pyqt5-dev-tools</span></code>.</p>
 </div>
-<p>You’ll first want to create and activate a virtual environment in which to install Spyder, via one of the following methods.</p>
-<p>With <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkvirtualenv<span class="w"> </span>spyder-env
-workon<span class="w"> </span>spyder-env
-</pre></div>
+<p>You’ll first want to create and activate a virtual environment in which to install Spyder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are many environment management tools available; the following examples will use Python’s built-in <code class="docutils literal notranslate"><span class="pre">venv</span></code>.</p>
 </div>
-<p>Otherwise, on macOS/Linux/Unix:</p>
+<p>On macOS/Linux/Unix, run the following in your system terminal:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>spyder-env
 <span class="nb">source</span><span class="w"> </span>spyder-env/bin/activate
 </pre></div>
 </div>
-<p>or on Windows:</p>
+<p>Or on Windows, execute:</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>python -m venv spyder-env
 spyder-env\Scripts\activate.bat
 </pre></div>
@@ -651,9 +641,9 @@ spyder-env\Scripts\activate.bat
 <span id="install-alternatives"></span><h2>Alternative methods<a class="headerlink" href="#alternative-methods" title="Link to this heading">#</a></h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>While we describe alternative Spyder installation options for users who prefer them, as these are third-party distributions that we have no direct involvement in, we are usually not able to offer useful individual assistance for problems specific to installing via these alternative methods.</p>
-<p>Also, the Spyder versions they install may be out of date relative to the current release, and thus be missing the latest features and bug fixes.</p>
-<p>Therefore, we recommend you switch to our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> (Windows and macOS) or a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a> if you encounter installation issues you are unable to solve on your own.</p>
+<p>While we describe alternative Spyder installation options for users who prefer them, as these are third-party distributions that we have no direct involvement in, we are usually not able to offer useful individual assistance for problems when installing via these alternative methods.</p>
+<p>Furthermore, the Spyder versions they install may be out of date relative to the current release, and thus be missing the latest features and bug fixes.</p>
+<p>Therefore, we recommend you switch to our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> if you encounter installation issues you are unable to solve on your own.</p>
 </div>
 <section id="install-windows">
 <span id="id2"></span><h3>Windows<a class="headerlink" href="#install-windows" title="Link to this heading">#</a></h3>
@@ -669,20 +659,21 @@ You can use Spyder immediately after installing, similar to Anaconda.</p>
 </div>
 <p>It is also available as a <a class="reference external" href="https://ports.macports.org/port/py-spyder/">a port</a> through <a class="reference external" href="https://www.macports.org/">MacPorts</a>.</p>
 <p>To install it using the <code class="docutils literal notranslate"><span class="pre">port</span></code> package manager, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>port<span class="w"> </span>install<span class="w"> </span>py39-spyder
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>port<span class="w"> </span>install<span class="w"> </span>py313-spyder
 </pre></div>
 </div>
 </section>
 <section id="install-linux">
 <span id="id3"></span><h3>Linux<a class="headerlink" href="#install-linux" title="Link to this heading">#</a></h3>
 <p>Spyder can be installed via third-party distro packages on most common Linux distributions.</p>
-<p>Running Spyder installed this way will generally be the same as any other distro-installed application.
+<p>Launching Spyder installed this way will generally be the same as any other distro-installed application.
 Alternatively, it can be launched from the terminal with <code class="docutils literal notranslate"><span class="pre">spyder</span></code> (or <code class="docutils literal notranslate"><span class="pre">spyder3</span></code>, on older versions of some distros).</p>
 <section id="ubuntu-debian">
 <span id="install-debian"></span><h4>Ubuntu/Debian<a class="headerlink" href="#ubuntu-debian" title="Link to this heading">#</a></h4>
 <p>Spyder is available as <a class="reference external" href="https://packages.ubuntu.com/search?keywords=spyder">a Ubuntu package</a> and <a class="reference external" href="https://packages.debian.org/search?searchon=names&amp;keywords=spyder">a Debian package</a>.</p>
-<p>To install it using the <code class="docutils literal notranslate"><span class="pre">apt</span></code> package manager, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>spyder
+<p>It can be installed from your distribution’s graphical package manager, or via <code class="docutils literal notranslate"><span class="pre">apt</span></code> on the command line:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>spyder
 </pre></div>
 </div>
 </section>
@@ -703,14 +694,14 @@ Alternatively, it can be launched from the terminal with <code class="docutils l
 <span id="install-dev"></span><h2>Development builds<a class="headerlink" href="#development-builds" title="Link to this heading">#</a></h2>
 <p>If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
-For more information, please see the <a class="reference external" href="https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md">Contributing Guide</a> included with the Spyder source or on Github, and for further detail consult the <a class="reference external" href="https://github.com/spyder-ide/spyder/wiki">Spyder development wiki</a>.</p>
+For more information, please see our <a class="reference external" href="https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md">Contributing Guide</a>, and for further detail consult the <a class="reference external" href="https://spyder-ide.github.io/spyder-api-docs/">Spyder developer documentation</a>.</p>
 </section>
 <section class="blue-32px" id="additional-help">
 <span id="install-help"></span><h2>Additional help<a class="headerlink" href="#additional-help" title="Link to this heading">#</a></h2>
 <p class="fasb fa-first-aid"><em>Run in to a problem installing or running Spyder?</em> Read our <a class="reference internal" href="troubleshooting/first-steps.html#troubleshooting-first-steps"><span class="std std-ref">Troubleshooting Guide</span></a>.</p>
 <p class="fasb fa-globe"><em>Looking for general information about Spyder and its ecosystem?</em> See our <a class="reference external" href="https://www.spyder-ide.org/">main website</a>.</p>
-<p class="fasb fa-bug"><em>Need to submit a bug report or feature request?</em> Check out our <a class="reference external" href="https://github.com/spyder-ide/spyder/">Github repository</a>.</p>
-<p class="fasb fa-code"><em>Want development-oriented help and information?</em> Consult our <a class="reference external" href="https://github.com/spyder-ide/spyder/wiki">Github wiki</a>.</p>
+<p class="fasb fa-bug"><em>Need to submit a bug report or feature request?</em> Check out our <a class="reference external" href="https://github.com/spyder-ide/spyder/">GitHub repository</a>.</p>
+<p class="fasb fa-code"><em>Want development-oriented help and information?</em> Consult our <a class="reference external" href="https://spyder-ide.github.io/spyder-api-docs/">developer docs</a>.</p>
 <p class="fasb fa-mail-bulk"><em>Have a help request or discussion topic?</em> Subscribe to our <a class="reference external" href="https://groups.google.com/g/spyderlib">Google Group</a>.</p>
 </section>
 </section>
