@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
@@ -36,10 +36,10 @@
     <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=ad26ed16" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=7f76b32a3354e82990f2"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=59bdcf62"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -48,7 +48,7 @@
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'faq';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.17.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.17.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '6';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -83,7 +83,9 @@
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -455,14 +457,15 @@
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="install-spyder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo instalar Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">La forma más fácil de instalar Spyder es con la distribución de Anaconda Python, que viene con todo lo que necesitas para empezar con un paquete todo en uno. Descárgalo de su <a class="reference external" href="https://www.anaconda.com/products/distribution">página web</a>.</p>
+<p class="sd-card-text">The easiest way to use Spyder is with our standalone installer, which comes with everything you need to get started in an all-in-one package.
+Download it from the <a class="reference external" href="https://www.spyder-ide.org/download">Spyder Download Page</a>.</p>
 <p class="sd-card-text">For more information, visit our <a class="reference internal" href="installation.html#install-guide"><span class="std std-ref">Guía de instalación</span></a>.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="install-wsl2">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo instalar Spyder en el Windows Subsystem for Linux 2 (WSL2)?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Si ya has instalado Spyder en tu equipo Windows, no necesitas reinstalarlo en un entorno Linux basado en WSL2 si el código debe ejecutarse allí.</p>
-<p class="sd-card-text">En su lugar, simplemente instala <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> dentro de WSL2 y crea un nuevo entorno conda o también puedes usar un conda o virtualenv existente. Luego instala Spyder-Kernels en ese entorno con, por ejemplo, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>. Debes instalar manualmente <code class="docutils literal notranslate"><span class="pre">ipython_genutils</span></code> con, por ejemplo, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">ipython_genutils</span></code>.</p>
+<p class="sd-card-text">If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment to run your code there.</p>
+<p class="sd-card-text">Instead, just create a new Conda or venv/virtualenv environment (using system Python without a venv is <strong>not</strong> recommended), then install Spyder-Kernels into that environment with e.g. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">spyder-kernels</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p class="sd-card-text">Windows crea una ruta de red ubicada en <code class="docutils literal notranslate"><span class="pre">\\wsl$</span></code> que apunta a las particiones de sus máquinas WSL2, por ejemplo, <code class="docutils literal notranslate"><span class="pre">\\wsl$\Ubuntu-20.</span> <span class="pre">4</span></code>. <strong>Debes</strong> mapear una letra de unidad de red a la ruta de su máquina, por ejemplo <code class="docutils literal notranslate"><span class="pre">W:</span></code>, para que Spyder vea correctamente sus archivos y carpetas.</p>
@@ -472,23 +475,30 @@
 </pre></div>
 </div>
 <p class="sd-card-text">Esto ejecutará el kernel como un subproceso y creará un archivo llamado <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> en su carpeta de inicio WSL.</p>
-<p class="sd-card-text">Finally, under the options menu of Spyder’s <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>, select <span class="guilabel">Connect to an existing kernel</span> as described in <a class="reference internal" href="panes/ipythonconsole.html#panes-console-external"><span class="std std-ref">Usar núcleos externos</span></a>.
+<p class="sd-card-text">Finally, under the options menu of Spyder’s <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>, select <span class="guilabel">Connect to existing kernel</span> as described in <a class="reference internal" href="panes/ipythonconsole.html#panes-console-external"><span class="std std-ref">Usar núcleos externos</span></a>.
 Insert the absolute path of <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> into the <span class="guilabel">Connection file</span> field.
 If you mapped <code class="docutils literal notranslate"><span class="pre">W:</span></code> as mentioned in above note, the path should be <code class="file docutils literal notranslate"><span class="pre">W:/home/</span><em><span class="pre">username</span></em><span class="pre">/remotemachine.json</span></code>.
 A new console will open in Spyder, running in the Linux environment.
-Try running <code class="docutils literal notranslate"><span class="pre">os.system('ls</span> <span class="pre">-la')</span></code> and see if it lists your WSL home folder.
+Try running <code class="docutils literal notranslate"><span class="pre">!ls</span> <span class="pre">-la</span></code> and see if it lists your WSL home folder.
 If you run <code class="docutils literal notranslate"><span class="pre">exit()</span></code> from Spyder, the kernel running on Linux will be stopped.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="update-standalone">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Q: How do I update Spyder using the standalone installer?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">An updater is built right into the standalone-installed Spyder, and will check for updates when starting the application and prompt you when one is available.
+You can also trigger an on-demand check for updates via <span class="menuselection">Help ‣ Check for updates</span>.
+Simply click through the prompts to confirm and install the update.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="update-conda">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo actualizar Spyder utilizando conda?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Desde la línea de comandos (o el prompt de Anaconda en Windows), ejecuta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
+<p class="sd-card-text">From the command line (or Anaconda Prompt on Windows), run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda<span class="w">  </span><span class="c1"># ONLY IF USING THE ANACONDA BASE ENVIRONMENT</span>
 conda<span class="w"> </span>update<span class="w"> </span>spyder
 </pre></div>
 </div>
 <p class="sd-card-text">Si esto da como resultado un error o no actualiza Spyder a la última versión, intenta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">6</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">spyder</span><span class="o">=</span><span class="m">6</span>
 </pre></div>
 </div>
 </div>
@@ -504,26 +514,32 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-spyder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo ejecutar Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Puedes lanzarlo de cualquiera de las siguientes formas:</p>
-<ul>
-<li><p class="sd-card-text"><strong>Desde la línea de comandos</strong>: Escribe <code class="docutils literal notranslate"><span class="pre">spyder</span></code> en tu terminal (o en el Anaconda prompt en Windows).</p></li>
-<li><p class="sd-card-text"><strong>Desde Anaconda Navigator</strong>: desplázete hasta <span class="guilabel">Spyder</span> en <span class="guilabel">Home</span>, y haz clic en <span class="guilabel">Launch</span>.</p>
-<img alt="Navigator mostrando la ejecución de una versión específica de Spyder" src="_images/faq-launch-anaconda.png" />
-</li>
-<li><p class="sd-card-text"><strong>*Solo para Windows*</strong>: Lánzalo a través del acceso directo al menú Inicio.</p>
-<img alt="Acceso directo a Spyder en el menú Inicio de Windows" src="_images/faq-windows-launch.png" />
-</li>
-</ul>
+<p class="sd-card-text">With Spyder installed standalone (recommended) or via a Conda-based method, a shortcut is created so you can run it right from your normal operating system application launcher (the Start menu on Windows, Spotlight/the Applications folder on macOS, or your distro’s launcher on Linux).
+Your operating system will typically allow you to pin this shortcut for even quicker access (to the Taskbar on Windows, the Dock on macOS or your distro’s quick launcher on Linux).
+If installed via Conda in its own environment, the shortcut will have the environment name in its title, and multiple shortcuts for different Spyder environments may be available.</p>
+<blockquote>
+<div><img alt="Acceso directo a Spyder en el menú Inicio de Windows" src="_images/faq-windows-launch.png" />
+</div></blockquote>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-binder">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Puedo ensayar Spyder sin instalarlo?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">¡Sí! Con <a class="reference external" href="https://mybinder.org/">Binder</a> puedes trabajar con una copia totalmente funcional de Spyder que se ejecuta en tu navegador web. Pruébalo <a class="reference external" href="https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster">aquí</a>.</p>
+<p class="sd-card-text">Yes!
+With <a class="reference external" href="https://mybinder.org/">Binder</a>, you can work with a fully functional copy of Spyder that runs right in your web browser.
+Visit the <a class="reference external" href="https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster">Spyder Binder</a> page to get started.</p>
+<div class="admonition caution">
+<p class="admonition-title">Prudencia</p>
+<p class="sd-card-text">This is a temporary environment, and any code or data you create will be lost once you close your browser tab or navigate away from the page.</p>
+</div>
+<img alt="Spyder running on Binder" src="_images/installation-spyder-binder.png" />
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-system-reqs">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cuáles son los requisitos del sistema para Spyder? ¿Qué tan intensivo es su uso de recursos?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Spyder funciona con versiones modernas de Windows, macOS y Linux (ver la tabla de abajo para ver las versiones recomendadas) mediante Anaconda, así como con otros métodos. Normalmente usa una CPU relativamente mínima cuando está inactiva, y 0.5 GB - 1 GB de RAM, dependiendo del tiempo que lo has estado usando y cuántos archivos, proyectos, paneles y consolas que has abierto. Debería funcionar en cualquier sistema con un procesador de núcleo dual o mejor con x64, y al menos 4 GB de RAM, aunque 8 GB es <em>altamente</em> recomendado para un mejor rendimiento al ejecutar otras aplicaciones. Sin embargo, el código que ejecutas, como la computación científica y los modelos de aprendizaje profundo, puede requerir recursos adicionales más allá de esta línea base para Spyder mismo.</p>
+<p class="sd-card-text">Spyder works on modern versions of Windows, macOS and Linux (see the table below for recommended versions).
+It typically uses relatively minimal CPU when idle, and 0.5 GB - 1 GB of RAM, depending on how long you’ve been using it and how many files, projects, panes and consoles you have open.
+It should work on any system with a dual-core or better x64 processor and at least 4 GB of RAM, although 8 GB is <em>strongly</em> recommended for best performance when running other applications.
+The code you run, such as scientific computations and deep learning models, may require additional resources beyond this baseline for Spyder itself.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p class="sd-card-text">Sistema operativo</p></th>
@@ -532,39 +548,46 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder
 </thead>
 <tbody>
 <tr class="row-even"><td><p class="sd-card-text">Windows</p></td>
-<td><p class="sd-card-text">Windows 8.1</p></td>
+<td><p class="sd-card-text">Windows 10</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">macOS</p></td>
-<td><p class="sd-card-text">High Sierra (10.13)</p></td>
+<tr class="row-odd"><td><p class="sd-card-text">macOS (Intel)</p></td>
+<td><p class="sd-card-text">Ventura (13)</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">Linux</p></td>
-<td><p class="sd-card-text">Ubuntu 16.04</p></td>
+<tr class="row-even"><td><p class="sd-card-text">macOS (M1+)</p></td>
+<td><p class="sd-card-text">Sonoma (14)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Linux</p></td>
+<td><p class="sd-card-text">Ubuntu 22.04</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-navigator">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Cómo puedo ejecutar Spyder en un entorno de conda usando Anaconda Navigator?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Selecciona el entorno en el que quieres lanzar Spyder desde <span class="guilabel">Applications on. Si Spyder está instalado en este entorno, lo verás en la ventana :guilabel:`Home</span> del Navigator. Haz clic en <span class="guilabel">Launch</span> para iniciar Spyder en el entorno seleccionado.</p>
-<img alt="Navigator mostrando cómo se ejecuta Spyder en un entorno específico" src="_images/faq-run-environment.png" />
-</div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-terminal">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Cómo puedo ejecutar Spyder en un entorno de conda usando la línea de comandos?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Activa tu entorno conda escribiendo lo siguiente en tu terminal (o en el Anaconda Prompt en Windows):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>&lt;ENVIRONMENT-NAME&gt;
+<span class="sd-summary-text">Q: How do I run Spyder installed in an environment using the command line?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If necessary, activate the environment Spyder was installed in by typing the appropriate command in your terminal (or Anaconda Prompt on Windows); for example, with Conda:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONMENT-NAME
 </pre></div>
 </div>
 <p class="sd-card-text">Luego, escribe <code class="docutils literal notranslate"><span class="pre">spyder</span></code> para lanzar la versión instalada en ese entorno.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="run-navigator">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Q: How do I run Spyder using Anaconda Navigator?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">While not recommended, if you’ve installed Spyder via Anaconda it can also be launched from Anaconda Navigator by scrolling to <span class="guilabel">Spyder</span> under <span class="guilabel">Home</span> and clicking <span class="guilabel">Launch</span>.</p>
+<img alt="Navigator mostrando la ejecución de una versión específica de Spyder" src="_images/faq-launch-anaconda.png" />
+<p class="sd-card-text">To run the copy of Spyder installed in a specific environment, select the environment you want to launch Spyder from under <span class="guilabel">Applications on</span>.
+If Spyder is installed in this environment, you will see it in Navigator’s <span class="guilabel">Home</span> window.
+Click <span class="guilabel">Launch</span> to start Spyder in your selected environment.</p>
+<img alt="Navigator mostrando cómo se ejecuta Spyder en un entorno específico" src="_images/faq-run-environment.png" />
 </div>
 </details></section>
 <section id="using-spyder">
 <span id="faq-using"></span><h2>Usar Spyder<a class="headerlink" href="#using-spyder" title="Link to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-install-packages">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Cómo puedo instalar paquetes de Python para usar en Spyder si fue instalado con conda?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Q: How do I install Python packages to use within Spyder if I installed Spyder with Conda?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">El primer método para instalar un paquete debería ser usar conda. En tu terminal del sistema (o en el Anaconda Prompt en Windows), escribe:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>&lt;PACKAGE-NAME&gt;
 </pre></div>
@@ -574,37 +597,69 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-existing-environment">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo hago que Spyder funcione con mi entorno o paquetes de Python existentes?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To work with an existing environment in Spyder, change the default Python interpreter for new <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>s to point to this environment.</p>
-<p class="sd-card-text">Para hacerlo, abre la sección <span class="guilabel">intérprete de Python</span> de las preferencias de Spyder (<span class="menuselection">Herramientas ‣ Preferencias</span>, o <span class="menuselection">Spyder ‣ Preferences</span> en macOS). Aquí, selecciona la opción <span class="guilabel">Usar el siguiente intérprete</span>, y utiliza el menú desplegable de abajo para seleccionar tu entorno preferido. Si no está listado, consulta <a class="reference internal" href="#faq-env-not-listed"><span class="std std-ref">la nota debajo de</span></a>.</p>
+<p class="sd-card-text">You can open a new console in an existing Conda or Pyenv environment using the <span class="guilabel">New console in environment</span> submenu of the <span class="guilabel">Consoles</span> menu or the tab context menu of the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> pane.</p>
+<p class="sd-card-text">You can manually add other virtual environments not located at standard paths, as well as change the default environment for new <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>s, in the <span class="guilabel">Python interpreter</span> section of Spyder’s Preferences.
+This can be quickly accessed by clicking the current environment name in Spyder’s status bar, then <span class="guilabel">Change default environment in Preferences…</span>.
+Here, click the option <span class="guilabel">Select interpreter</span> and use the dropdown below to select your preferred environment.
+If it’s not listed, see <a class="reference internal" href="#faq-env-not-listed"><span class="std std-ref">the note below</span></a>.</p>
 <img alt="Preferencias mostrando cómo se cambia de intérprete de Python" src="_images/faq-python-interpreter.png" />
 <div class="admonition note" id="faq-env-not-listed">
 <p class="admonition-title">Nota</p>
-<p class="sd-card-text">Si instalaste Miniconda (u otra distribución basada en Conda) en una ruta no predeterminada, o estás usando un entorno virtual administrado por una herramienta que no sea <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>, es probable que los entornos no aparezcan en la lista.</p>
-<p class="sd-card-text">En su lugar, utiliza el cuadro de texto o el botón <span class="guilabel">Seleccionar archivo</span> para ingresar la ruta al intérprete de Python que deseas utilizar. Puedes encontrar esta ruta activando el env o la env de Conda que deseas usar en tu terminal (Anaconda Prompt en Windows), y ejecutando el comando:</p>
+<p class="sd-card-text">If you installed a <a class="reference internal" href="installation.html#install-conda"><span class="std std-ref">Conda-based distribution</span></a> to a non-standard path, or are using a virtual environment managed by a tool other than <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>, your environments likely won’t be listed by default.
+For the former, you can specify the path to the Conda/Mamba executable under <span class="menuselection">Conda executable ‣ Use a custom Conda/Mamba/Micromamba executable</span> in the <span class="guilabel">Python interpreter</span> section of Spyder’s Preferences.
+It is located at <code class="file docutils literal notranslate"><em><span class="pre">BASE</span> <span class="pre">INSTALL</span> <span class="pre">DIRECTORY</span></em><span class="pre">/Scripts/conda.exe</span></code> on Windows, and <code class="file docutils literal notranslate"><em><span class="pre">BASE</span> <span class="pre">INSTALL</span> <span class="pre">DIRECTORY</span></em><span class="pre">/bin/conda</span></code> on other platforms.</p>
+<p class="sd-card-text">Otherwise, use the text box or the <span class="guilabel">Select file</span> button to manually add the path to the Python interpreter you want to use.
+You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys; print(sys.executable)&quot;</span>
 </pre></div>
 </div>
 </div>
 <p class="sd-card-text">Finally, click <span class="guilabel">Restart kernel</span> in the <span class="guilabel">Consoles</span> menu for this change to take effect.
-If <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> is not already installed, the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> will display instructions on how to install the right version.
+If <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> is not already installed or outdated, the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> will display instructions on how to install the right version (or offer to install it automatically, on Spyder 6.2+).
 Execute the given command in your terminal (the Anaconda Prompt on Windows) with the environment activated, and finally restart the kernel once more.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-packages-installer">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo instalar paquetes de Python para usarlos en Spyder si descargué los instaladores independientes?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Ve nuestro vídeo sobre el uso de paquetes adicionales o sigue las instrucciones que aparecen a continuación.</p>
-<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/i7Njb3xO4Fw?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><p class="sd-card-text">Si quieres usar otros paquetes en Spyder que no vienen con nuestro instalador, necesitas tener tu propia distribución de Python instalada; recomendamos <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> u otra opción basada en Conda. Para que Spyder lo reconozca automáticamente, debes utilizar una distribución basada en Conda con su ruta de instalación predeterminada.</p>
-<p class="sd-card-text">Crea un nuevo entorno conda que contenga <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> y los paquetes que quieres usar. Por ejemplo, si deseas usar <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, abre tu terminal (o Anaconda Prompt en Windows) y ejecuta el siguiente comando:</p>
+<div class="video-container-container"><div class="video-container"><iframe src="https://www.youtube.com/embed/i7Njb3xO4Fw?start=306" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen class="align-left"></iframe></div></div><p class="sd-card-text">If you want to use other packages in Spyder that don’t come with our installer, you need to have your own Python distribution installed; we recommend <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> or another Conda-based option.
+For Spyder to recognize your environments automatically without manual configuration, you should use a Conda-based distribution with its default install path.</p>
+<p class="sd-card-text">Create a new Conda environment containing <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> and the packages that you want to use.
+For example, if you want to use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, open your terminal (or Anaconda Prompt on Windows) and run the following command:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>my-env<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>spyder-kernels<span class="w"> </span>scikit-learn
 </pre></div>
 </div>
-<p class="sd-card-text">Finalmente, conecta Spyder al entorno <code class="docutils literal notranslate"><span class="pre">my-env</span></code> cambiando el intérprete predeterminado de Python de Spyder, siguiendo las instrucciones en <a class="reference internal" href="#using-existing-environment"><span class="std std-ref">la respuesta anterior</span></a>.</p>
+<p class="sd-card-text">Finally, you can open a console in the <code class="docutils literal notranslate"><span class="pre">my-env</span></code> environment by selecting it in the <span class="guilabel">New console in environment</span> submenu of the <span class="guilabel">Consoles</span> menu or the tab context menu of the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> pane.
+You can also change Spyder’s default Python interpreter for new consoles following the instructions in <a class="reference internal" href="#using-existing-environment"><span class="std std-ref">the above answer</span></a>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-plugins">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">P: ¿Cómo puedo usar plugins en Spyder (por ejemplo, Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, you currently need to have Spyder installed in your own Conda or virtual environment, not via our standalone installer (this limitation will be removed in Spyder 6.2, which will feature a built-in graphical plugin manager).
+A Conda-based install is strongly recommended; Spyder plugins are available in the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> conda channel.
+To install one, activate the environment in which you installed Spyder, and type the following on in your system terminal (or Anaconda Prompt on Windows):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>PLUGIN
+</pre></div>
+</div>
+<p class="sd-card-text">Replace <code class="samp docutils literal notranslate"><em><span class="pre">PLUGIN</span></em></code> with the name of the plugin you want to use.
+For more information on a specific plugin, go to the its repository:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-line-profiler">spyder-line-profiler</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-notebook">spyder-notebook</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-terminal">spyder-terminal</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-unittest">spyder-unittest</a></p></li>
+</ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-reset-prefs">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo restauro las preferencias de Spyder a sus valores por defecto?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Puedes usar el <span class="guilabel">Restablecer Spyder a su configuración por defecto</span> bajo <span class="guilabel">Herramientas</span> en la barra de menú de Spyder; el acceso directo del menú de inicio <span class="guilabel">Reset Spyder settings</span> (Windows), o ejecuta <code class="docutils literal notranslate"><span class="pre">spyder</span> <span class="pre">--reset</span></code> en tu terminal del sistema (Anaconda Prompt en Windows).</p>
-<img alt="Botón de reseteo de Spyder en herramientas" src="_images/faq-reset-spyder.png" />
+<p class="sd-card-text">Do one of the following:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Select <span class="guilabel">Reset all preferences to defaults</span> under <span class="guilabel">Tools</span> in Spyder’s menu bar</p></li>
+<li><p class="sd-card-text">Open <span class="guilabel">Reset Spyder 6 to default settings</span> operating system shortcut if available (e.g. in the Start menu on Windows)</p></li>
+<li><p class="sd-card-text">Run <code class="docutils literal notranslate"><span class="pre">spyder</span> <span class="pre">--reset</span></code> in your system terminal (Anaconda Prompt on Windows) after activating the environment Spyder is installed in.</p></li>
+</ul>
+<img alt="Spyder reset button in Tools" src="_images/faq-reset-spyder.png" />
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-change-language">
 <summary class="sd-summary-title sd-card-header">
@@ -615,44 +670,36 @@ Execute the given command in your terminal (the Anaconda Prompt on Windows) with
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-code-cells">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo usar las celdas de código en Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To create a cell in Spyder’s <a class="reference internal" href="panes/editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, type <code class="docutils literal notranslate"><span class="pre">#%%</span></code> in your script.
-Each <code class="docutils literal notranslate"><span class="pre">#%%</span></code> will make a new cell.
+<p class="sd-card-text">To create a cell in Spyder’s <a class="reference internal" href="panes/editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, type <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">%%</span></code> (or <code class="docutils literal notranslate"><span class="pre">#%%`)</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">script.</span>
+<span class="pre">Each</span> <span class="pre">``#</span> <span class="pre">%%</span></code> will make a new cell.
 To run a cell, press <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd> (while your cursor is focused on it) or use the <span class="guilabel">Run current cell</span> button in Spyder’s toolbar.</p>
-<img alt="Spyder mostrando la generación de celdas." src="_images/faq-cells.png" />
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-plugins">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Cómo puedo usar plugins en Spyder (por ejemplo, Spyder-Notebook, Spyder-Terminal, Spyder-Unittest)?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Los plugins de Spyder están disponibles en el canal conda <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. Para instalar uno, escribe en la línea de comandos (o en el Anaconda Prompt en Windows):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>&lt;PLUGIN&gt;
-</pre></div>
-</div>
-<p class="sd-card-text">Reemplaza <code class="docutils literal notranslate"><span class="pre">&lt;PLUGIN&gt;</span></code> con el nombre del plugin que quieres usar. Para más información sobre un plugin específico, ve a su repositorio:</p>
-<ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-unittest">spyder-unittest</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-terminal">spyder-terminal</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-notebook">spyder-notebook</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-memory-profiler">spyder-memory-profiler</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/spyder-ide/spyder-line-profiler">spyder-line-profiler</a></p></li>
-</ul>
+<img alt="Spyder showing code cells" src="_images/faq-cells.png" />
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-clear-variables">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo eliminar todas las variables antes de ejecutar mi código?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Revisa la opción <span class="guilabel">Eliminar todas las variables antes de la ejecución</span> en el diálogo <span class="guilabel">Configuración por archivo…</span> bajo el menú <span class="guilabel">Ejecutar</span>.</p>
-<img alt="Spyder mostrando la generación de celdas." src="_images/faq-remove-variables.png" />
+<p class="sd-card-text">Check the option <span class="guilabel">Remove all variables before execution</span> of the <span class="guilabel">Configuration per file</span> dialog under the <span class="guilabel">Run</span> menu.</p>
+<img alt="Spyder's remove all variables run configuration" src="_images/faq-remove-variables.png" />
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-dedicated-console">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Cómo puedo ejecutar mi código en una terminal dedicada o en una consola del sistema externa?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Seleccione la opción apropiada en el diálogo <span class="guilabel">Configuración por archivo…</span> bajo el menú <span class="guilabel">Ejecutar</span>.</p>
-<img alt="Spyder mostrando la generación de celdas." src="_images/faq-run-options.png" />
+<span class="sd-summary-text">Q: How do I run my code in a dedicated console or control other run settings?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Select the appropriate option in the <span class="guilabel">Custom configuration</span> section of the <span class="guilabel">Configuration per file</span> dialog under the <span class="guilabel">Run</span> menu, or configure global defaults for all files in the <span class="guilabel">Run</span> pane of Spyder’s <span class="guilabel">Preferences</span>.</p>
+<p class="sd-card-text">If you want to quickly switch between multiple groups of settings, you can save them to separate presets by setting a different <span class="guilabel">Name</span> under <span class="guilabel">Configuration properties</span>.</p>
+<img alt="Spyder showing run configuration options" src="_images/faq-run-options.png" />
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-external-terminal">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Q: How do I run my code in an external terminal?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">As of Spyder 6, there is now a dedicated <span class="guilabel">Run in external terminal</span> item in the <span class="guilabel">Run</span> menu to do just that.
+You can also now set separate external terminal-specific run configuration options for the current file by selecting the corresponding <span class="guilabel">Runner</span> in the <span class="guilabel">Run configuration per file</span> dialog, and for all files in the <span class="guilabel">Run</span> entry in Spyder’s <span class="guilabel">Preferences</span>.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="using-syntax-theme">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cómo puedo cambiar el tema de coloreado de sintaxis en el Editor?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Ve a <span class="guilabel">Preferencias</span> y selecciona el tema que quieras bajo el tema <span class="guilabel">Tema de coloreado de sintaxis</span> en la sección <span class="guilabel">Apariencia</span>.</p>
-<img alt="Spyder mostrando la generación de celdas." src="_images/faq-highlighting-theme.png" />
+<p class="sd-card-text">Go to <span class="guilabel">Preferences</span> and select the theme you want under <span class="guilabel">Syntax highlighting theme</span> in the <span class="guilabel">Appearance</span> section.
+You can also change Spyder’s global interface theme (light or dark) under <span class="guilabel">Interface theme</span> in that same preferences pane.</p>
+<img alt="Spyder showing theme selection" src="_images/faq-highlighting-theme.png" />
 </div>
 </details></section>
 <section id="troubleshooting">
@@ -661,7 +708,7 @@ To run a cell, press <kbd class="kbd docutils literal notranslate">Shift</kbd>-<
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: He encontrado un error o problema en Spyder. ¿Qué puedo hacer?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">You should first follow the steps in our <a class="reference internal" href="troubleshooting/first-steps.html#troubleshooting-guide"><span class="std std-ref">troubleshooting guide</span></a>.
-If you can’t solve your problem, open an issue by following the instructions in our <a class="reference internal" href="troubleshooting/submit-a-report.html#troubleshooting-report"><span class="std std-ref">Enviar un reporte</span></a> section.</p>
+If you can’t solve your problem, open an issue by following the instructions in the <a class="reference internal" href="troubleshooting/submit-a-report.html#troubleshooting-report"><span class="std std-ref">Enviar un reporte</span></a> section.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-running-code">
 <summary class="sd-summary-title sd-card-header">
@@ -675,7 +722,7 @@ Otherwise, start at the <a class="reference internal" href="troubleshooting/basi
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: El completado de código o la ayuda no funcionan; ¿qué puedo hacer?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">If nothing is displayed in the calltip, hover hint or <a class="reference internal" href="panes/help.html#panes-help"><span class="std std-ref">Ayuda</span></a> pane, make sure the object you are inspecting has a docstring, and try executing your code in the <a class="reference internal" href="panes/ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> to get help and completions there.
-If this doesn’t work, try restarting PyLS by right-clicking the <span class="guilabel">LSP Python</span> label item in the statusbar at the bottom of Spyder’s main window, and selecting the <span class="guilabel">Restart Python Language Server</span> option.</p>
+If this doesn’t work, try restarting the LSP server by clicking the <span class="guilabel">LSP: Python</span> item in the status bar at the bottom of Spyder’s main window, and selecting the <span class="guilabel">Restart Python Language Server</span> option.</p>
 <p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-completion"><span class="std std-ref">El autocompletado o la ayuda no funcionan</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common"><span class="std std-ref">Problemas comunes</span></a> page of our troubleshooting guide.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-starting-kernel">
@@ -683,29 +730,8 @@ If this doesn’t work, try restarting PyLS by right-clicking the <span class="g
 <span class="sd-summary-text">P: Recibí el mensaje «Ocurrió un error mientras iniciaba el núcleo». ¿Cómo puedo arreglarlo?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">First, make sure your version of Spyder-Kernels is compatible with that of Spyder.
 See the table in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">Spyder-Kernels no está instalado o es incompatible</span></a> section of the troubleshooting guide to check.</p>
-<p class="sd-card-text">Para instalar la versión correcta, escribe lo siguiente en la línea de comandos (o Anaconda Prompt en Windows)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
-</pre></div>
-</div>
+<p class="sd-card-text">To install the correct version, copy the suggested command Spyder displays for you in the error message and run it in a system terminal (Anaconda Prompt on Windows if using Conda) with the Python environment you want to use activated.</p>
 <p class="sd-card-text">For more information, go to the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common-kernel"><span class="std std-ref">Errores al iniciar el núcleo</span></a> section in the <a class="reference internal" href="troubleshooting/common-illnesses.html#troubleshooting-common"><span class="std std-ref">Problemas comunes</span></a> page of our troubleshooting guide.</p>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="troubleshooting-macos-bigsur">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: Spyder no arranca o es lento en macOS Big Sur. ¿Cómo puedo hacer que funcione bien?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Spyder está en las etapas finales de ser actualizado para total compatibilidad con macOS 11 Big Sur, que se publicará a finales de 2020 como parte de la versión 4.2.1. Sin embargo, puedes ponerlo en marcha ahora mismo con la solución a continuación. Asegúrate de tener la distribución Anaconda o Miniconda instalada, y ejecutar los siguientes comandos en la Terminal para instalar Spyder desde Conda-Forge en un entorno limpio:</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-dev<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
-conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>spyder
-</pre></div>
-</div>
-</div></blockquote>
-<p class="sd-card-text">Entonces, cada vez que quieras iniciar Spyder, ejecuta lo siguiente desde la Terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>spyder-dev
-<span class="nb">export</span><span class="w"> </span><span class="nv">QT_MAC_WANTS_LAYER</span><span class="o">=</span><span class="m">1</span>
-spyder
-</pre></div>
-</div>
 </div>
 </details></section>
 <section id="about-spyder">
@@ -713,14 +739,18 @@ spyder
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="commercial-use">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">P: ¿Cuál es la situación de licenciamiento de Spyder? ¿Está permitido su uso comercial?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Spyder es 100% gratuito y de código abierto; no hay ninguna versión de pago ni prohibición sobre el uso comercial. Es desarrollado por su comunidad internacional de usuarios, y soportado por sus usuarios a través de <a class="reference external" href="https://opencollective.com/spyder">OpenCollective</a> y por sus generosas organizaciones patrocinadoras, incluyendo <a class="reference external" href="https://www.quansight.com/">Quansight</a> y <a class="reference external" href="https://numfocus.org/">NumFOCUS</a>. Nuestro código fuente, instaladores independientes y la mayoría de nuestros métodos de distribución (Pip/PyPI, distribuciones Linux, MacPorts, WinPython, etc) pueden ser libremente redistribuidos, utilizados y modificados por cualquier persona, para cualquier propósito, incluyendo uso comercial. Para más detalles sobre la situación con Anaconda, vea <a class="reference external" href="#anaconda-license">esa pregunta</a>.</p>
+<p class="sd-card-text">Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
+It is developed by its international user community, and supported by its users through <a class="reference external" href="https://opencollective.com/spyder">OpenCollective</a> and by its generous sponsoring organizations, including <a class="reference external" href="https://www.quansight.com/">Quansight</a> and <a class="reference external" href="https://numfocus.org/">NumFOCUS</a>.
+Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use.
+For more details about the situation with Anaconda, see <a class="reference internal" href="#anaconda-license"><span class="std std-ref">Q: What does Anaconda’s commercial licensing restrictions mean for Spyder?</span></a>.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="anaconda-license">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">P: ¿Qué significan los cambios de licenciamiento de Anaconda para Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If you use Spyder with the Anaconda distribution, they <a class="reference external" href="https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community">recently changed</a> their <a class="reference external" href="https://www.anaconda.com/terms-of-service">Terms of Service</a> to add restrictions on large (&gt; 200 employee) for-profit companies using Anaconda on a large scale.
+<span class="sd-summary-text">Q: What does Anaconda’s commercial licensing restrictions mean for Spyder?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you installed Spyder via any method other than the Anaconda or Miniconda distributions, or install it from the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel with those two distributions, you are not affected by any restrictions.</p>
+<p class="sd-card-text">If you use a copy of Spyder installed by default with the Anaconda distribution, or installed from the <code class="docutils literal notranslate"><span class="pre">defaults</span></code>/<code class="docutils literal notranslate"><span class="pre">anaconda</span></code> channel, Anaconda’s <a class="reference external" href="https://www.anaconda.com/terms-of-service">Terms of Service</a> have restrictions on larger (&gt;200 employee) for-profit enterprises on a large scale.
 However, these terms only apply to the package infrastructure (the full Anaconda distribution and the <code class="docutils literal notranslate"><span class="pre">defaults</span></code> conda channel).
-Instead, you can simply download the similar <a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest">Miniforge distribution</a>, which is 100% open source and identical to full Anaconda (aside from not bundling the Python packages installed by default in the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, which we recommend you avoid using anyway given any problems here can break your whole installation).
+Instead, you can simply download the similar <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> distribution, which is 100% open source and nearly identical to Miniconda (and only different from Anaconda in that it does not bundle the Python packages installed by default in the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> environment, which we recommend you avoid using anyway given any problems in it can break your whole installation).
 Then, simply install the packages you need (including Spyder, if you aren’t using our recommended <a class="reference internal" href="installation.html#install-standalone"><span class="std std-ref">Instaladores independientes</span></a>) with <code class="docutils literal notranslate"><span class="pre">conda</span></code> as you usually do.
 Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
 For more, see our <a class="reference internal" href="installation.html#install-guide"><span class="std std-ref">Guía de instalación</span></a>.</p>
@@ -805,8 +835,8 @@ For more, see our <a class="reference internal" href="installation.html#install-
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -840,7 +870,7 @@ For more, see our <a class="reference internal" href="installation.html#install-
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.17.0.
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.17.1.
 </p></div>
       
     </div>

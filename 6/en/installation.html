@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
@@ -36,10 +36,10 @@
     <link rel="stylesheet" type="text/css" href="_static/css/custom_styles.css?v=ad26ed16" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=7f76b32a3354e82990f2"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=e22f532e"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -47,7 +47,7 @@
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'installation';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.17.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.17.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '6';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -82,7 +82,9 @@
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -457,7 +459,7 @@ Thanks!</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>For most users, our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> are the most straightforward and robust option to obtain Spyder, and support extended functionality over other installation methods.
-Easy installation of third-party Spyder plugins and full Variable Explorer support for custom-installed packages are both currently under active development; if you require these capabilities now, <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a> are the currently recommended alternative.</p>
+Easy installation of third-party Spyder plugins and full Variable Explorer support for custom-installed packages are both currently under active development; if you require these capabilities now, using a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distribution</span></a> is the currently recommended alternative.</p>
 </div>
 <section id="try-spyder-online">
 <span id="install-binder"></span><h2>Try Spyder online<a class="headerlink" href="#try-spyder-online" title="Link to this heading">#</a></h2>
@@ -472,12 +474,12 @@ Visit the <a class="reference external" href="https://mybinder.org/v2/gh/spyder-
 They work like any other IDE, where Spyder can be installed and updated independently of the Python environments you use to run your code.
 This avoids the problems with incompatible packages and broken installations users can face when managing Spyder’s installation themselves, mixed with their own working environments.</p>
 <p>The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, SciPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
-To use additional packages, we currently recommend connecting an external Python distribution (such as <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a>, <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a> or <a class="reference external" href="https://www.python.org/">Python.org</a>) to your standalone copy of Spyder.
+To use additional packages, we currently recommend connecting an external Python distribution (such as <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> (recommended), <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a>, <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, or <a class="reference external" href="https://www.python.org/">Python.org</a>) to your standalone copy of Spyder.
 For more information on this, see our <a class="reference internal" href="faq.html#using-packages-installer"><span class="std std-ref">FAQ entry on the subject</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A built-in plugin manager allowing you to easily install Spyder plugins not already bundled with the installers is being developed for Spyder 6.2.
-For now, if you require third-party plugins, we recommend installing Spyder via <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distributions</span></a>.</p>
+For now, if you require third-party plugins, we recommend installing Spyder via a <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda-based distribution</span></a>.</p>
 </div>
 <section id="downloading-and-installing">
 <span id="install-standalone-installing"></span><h3>Downloading and installing<a class="headerlink" href="#downloading-and-installing" title="Link to this heading">#</a></h3>
@@ -506,10 +508,10 @@ Standalone installers for Spyder 6+ include update functionality built right int
 On earlier versions, you’ll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).</p>
 </section>
 </section>
-<section id="conda-based-distributions">
-<span id="install-conda"></span><h2>Conda-based distributions<a class="headerlink" href="#conda-based-distributions" title="Link to this heading">#</a></h2>
+<section id="conda-based-distribution">
+<span id="install-conda"></span><h2>Conda-based distribution<a class="headerlink" href="#conda-based-distribution" title="Link to this heading">#</a></h2>
 <p>Spyder is included by default in the <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda</a> Python distribution, which comes with everything you need to get started in an all-in-one package.
-It can also be easily installed in the much lighter-weight <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a> and (recommended) <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>, which include just the Conda/Mamba package and environment manager.
+It can also be easily installed in the much lighter-weight <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> (recommended) or <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, which include just the Conda/Mamba package and environment manager.
 They allow you to create your own environments with any packages you need, with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel.
 This is our recommended installation method if you require third-party Spyder plugins or Variable Explorer compatibility with inspecting objects from specialized libraries (e.g. PyTorch or Scikit-Learn), as support for both of these in our standalone installers is still under active development.</p>
 <section id="conda-environment">
@@ -599,7 +601,7 @@ conda<span class="w"> </span>install<span class="w"> </span>spyder
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>While this installation method works fine in most cases, installing Spyder (and other PyData-stack packages) with pip can occasionally lead to tricky issues, particularly if mixed with a Conda install of Python.
-Therefore, we generally recommend our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> or installing via <a class="reference internal" href="#install-conda"><span class="std std-ref">Conda</span></a> instead.</p>
+Therefore, we generally recommend our <a class="reference internal" href="#install-standalone"><span class="std std-ref">Standalone installers</span></a> or <a class="reference internal" href="#install-conda"><span class="std std-ref">installing via Conda</span></a> instead.</p>
 </div>
 <p>You can install Spyder with the pip package manager, which is included by default with most Python installations.
 Before installing Spyder itself by this method, you need to download a recent version of the <a class="reference external" href="https://www.python.org/">Python</a> programming language if it isn’t already installed in your system.</p>
@@ -760,7 +762,7 @@ For more information, please see our <a class="reference external" href="https:/
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-a-standalone-install">Updating a standalone install</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-based-distributions">Conda-based distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-based-distribution">Conda-based distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-environment">Conda environment</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-with-conda">Installing with Conda</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-with-conda">Running with Conda</a></li>
@@ -812,8 +814,8 @@ For more information, please see our <a class="reference external" href="https:/
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -847,7 +849,7 @@ For more information, please see our <a class="reference external" href="https:/
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.17.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.17.1.
 </p></div>
       
     </div>

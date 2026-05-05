@@ -17,7 +17,7 @@ Thanks!
 .. important::
 
    For most users, our :ref:`install-standalone` are the most straightforward and robust option to obtain Spyder, and support extended functionality over other installation methods.
-   Easy installation of third-party Spyder plugins and full Variable Explorer support for custom-installed packages are both currently under active development; if you require these capabilities now, :ref:`install-conda` are the currently recommended alternative.
+   Easy installation of third-party Spyder plugins and full Variable Explorer support for custom-installed packages are both currently under active development; if you require these capabilities now, using a :ref:`install-conda` is the currently recommended alternative.
 
 
 .. _install-binder:
@@ -49,13 +49,13 @@ They work like any other IDE, where Spyder can be installed and updated independ
 This avoids the problems with incompatible packages and broken installations users can face when managing Spyder's installation themselves, mixed with their own working environments.
 
 The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, SciPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
-To use additional packages, we currently recommend connecting an external Python distribution (such as `Anaconda`_, `Miniconda`_, `Miniforge`_ or `Python.org <Python_>`__) to your standalone copy of Spyder.
+To use additional packages, we currently recommend connecting an external Python distribution (such as `Miniforge`_ (recommended), `Anaconda`_, `Miniconda`_, or `Python.org <Python_>`__) to your standalone copy of Spyder.
 For more information on this, see our :ref:`FAQ entry on the subject <using-packages-installer>`.
 
 .. note::
 
    A built-in plugin manager allowing you to easily install Spyder plugins not already bundled with the installers is being developed for Spyder 6.2.
-   For now, if you require third-party plugins, we recommend installing Spyder via :ref:`install-conda`.
+   For now, if you require third-party plugins, we recommend installing Spyder via a :ref:`install-conda`.
 
 
 .. _install-standalone-installing:
@@ -103,18 +103,18 @@ On earlier versions, you'll need to manually download and install the latest rel
 
 .. _install-conda:
 
-=========================
-Conda-based distributions
-=========================
+========================
+Conda-based distribution
+========================
 
 Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
-It can also be easily installed in the much lighter-weight `Miniconda`_ and (recommended) `Miniforge`_, which include just the Conda/Mamba package and environment manager.
+It can also be easily installed in the much lighter-weight `Miniforge`_ (recommended) or `Miniconda`_, which include just the Conda/Mamba package and environment manager.
 They allow you to create your own environments with any packages you need, with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel.
 This is our recommended installation method if you require third-party Spyder plugins or Variable Explorer compatibility with inspecting objects from specialized libraries (e.g. PyTorch or Scikit-Learn), as support for both of these in our standalone installers is still under active development.
 
 .. _Anaconda: https://www.anaconda.com/products/distribution
 .. _Miniconda: https://conda.io/miniconda.html
-.. _Miniforge: https://github.com/conda-forge/miniforge
+.. _Miniforge: https://conda-forge.org/download/
 
 
 .. _install-conda-environment:
@@ -256,7 +256,7 @@ Using pip
 .. caution::
 
    While this installation method works fine in most cases, installing Spyder (and other PyData-stack packages) with pip can occasionally lead to tricky issues, particularly if mixed with a Conda install of Python.
-   Therefore, we generally recommend our :ref:`install-standalone` or installing via :ref:`Conda <install-conda>` instead.
+   Therefore, we generally recommend our :ref:`install-standalone` or :ref:`installing via Conda <install-conda>` instead.
 
 You can install Spyder with the pip package manager, which is included by default with most Python installations.
 Before installing Spyder itself by this method, you need to download a recent version of the `Python`_ programming language if it isn't already installed in your system.
