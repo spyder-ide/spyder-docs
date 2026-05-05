@@ -484,18 +484,19 @@
 <ol class="arabic">
 <li><p><strong>Restart Spyder</strong>, and try what you were doing before again.</p></li>
 <li><p><strong>Upgrade Spyder</strong> to the latest release, and you might find your issue is resolved (along with new features, enhancements, and other bug fixes).
-Minor releases come out every couple months, so unless you’ve updated recently, there is a good chance your version isn’t the latest.
+Bugfix releases come out every month or two, so unless you’ve updated recently, there is a good chance your version isn’t the latest.
 You can find out with the <span class="guilabel">Check for updates</span> command under the <span class="guilabel">Help</span> menu.</p>
 <img alt="Spyder showing view internal console option" src="../_images/basic-first-aid-updates.png" />
-<p>To perform the update with Conda (strongly recommended), from your terminal (or Anaconda Prompt on Windows) run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>anaconda
-conda<span class="w"> </span>update<span class="w"> </span>spyder
+<p>Recent versions of Spyder using our recommended <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> will offer to automatically update themselves for you.
+If using an older version of Spyder or a non-standalone build (e.g. installed with Pip or Conda), we recommend downloading and running our latest <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>.</p>
+<p>To perform the update with Conda, see the FAQ <a class="reference internal" href="../faq.html#update-conda"><span class="std std-ref">Q: How do I update Spyder using conda?</span></a>; to update with Pip use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--ugprade</span> <span class="pre">spyder</span></code>.
+If that still doesn’t work, we recommend updating Spyder’s dependencies and environment, either by installing the latest version of Anaconda/Miniconda/Miniforge, or with the relevant “update all” command in your terminal (or Anaconda Prompt on Windows).</p>
+<p>To get the latest stable version of everything using Conda, you can run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>spyder<span class="w"> </span>qt<span class="w"> </span>pyqt<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq
 </pre></div>
 </div>
-</li>
-<li><p><strong>Update Spyder’s dependencies and environment</strong>, either by installing the latest version of your distribution (e.g. the recommended Anaconda), or with the relevant “update all” command in your terminal (or Anaconda Prompt on Windows).
-To get the latest stable version of everything using Conda, you can run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>qt<span class="w"> </span>pyqt<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq
+<p>Or with Pip:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--upgrade-strategy<span class="w"> </span><span class="s2">&quot;eager&quot;</span><span class="w"> </span>spyder<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
 </li>
@@ -511,10 +512,10 @@ From your terminal (or Anaconda Prompt on Windows), run:</p>
 If you particularly care about any of those, you should make a copy of the <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> folder in your user home directory (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> on Linux), and restore it afterwards if this doesn’t solve the problem.</p>
 </div>
 </li>
-<li><p><strong>Try installing Spyder into a new Conda environment</strong> (recommended) or <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">venv</span></code>, and see if the issue reoccurs.</p></li>
+<li><p><strong>Try reinstalling Spyder</strong> via our <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a> (recommended), or in a fresh Conda/virtual environment, and see if the issue reoccurs.</p></li>
 </ol>
-<p>In your system terminal (or Anaconda Prompt on Windows), run the following commands to create an a fresh, clean environment and start Spyder in it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder<span class="w"> </span>-y
+<p>If using Conda to install Spyder (only recommended for advanced users needing plugin support), in your system terminal (or Anaconda Prompt on Windows), run the following commands to create a clean environment and start Spyder in it:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-y<span class="w"> </span>-n<span class="w"> </span>spyder-env<span class="w"> </span>spyder<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>cython<span class="w"> </span>sympy
 conda<span class="w"> </span>activate<span class="w"> </span>spyder-env
 spyder
 </pre></div>
@@ -528,13 +529,17 @@ spyder
 <section id="reinstalling-spyder">
 <span id="troubleshooting-basic-reinstalling"></span><span id="troubleshooting-reinstalling-spyder-ref"></span><h2>Reinstalling Spyder<a class="headerlink" href="#reinstalling-spyder" title="Link to this heading">#</a></h2>
 <p>If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.</p>
-<p>For Anaconda, follow all the steps under Option B in the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">Anaconda uninstall guide</a>, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> directory if it exists.</p>
-<img alt="Deleting appdata/python directory" src="../_images/basic-first-aid-app-data.gif" />
-<p>Then, do a clean install of the latest version of the <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda distribution</a> which is how we recommend you install Spyder and keep it up to date.</p>
+<p>For Spyder’s standalone installers, the uninstall mechanism varies depending on your operating system.
+On Windows, it can be removed via the entry under <span class="guilabel">Add or remove programs</span>.</p>
+<p>For Anaconda/Miniconda, follow all the steps under <a class="reference external" href="https://www.anaconda.com/docs/getting-started/anaconda/uninstall">Anaconda uninstall guide</a>/<a class="reference external" href="https://www.anaconda.com/docs/getting-started/miniconda/uninstall">Miniconda uninstall guide</a>.
+For Miniforge, follow the <a class="reference external" href="https://github.com/conda-forge/miniforge/blob/main/README.md#uninstall">Miniforge uninstall instructions</a> on macOS/Linux or remove it from <span class="guilabel">Add or remove programs</span> on Windows.
+Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the <code class="file docutils literal notranslate"><span class="pre">%appdata%/python</span></code> directory if it exists.</p>
+<img alt="Deleting AppData/python directory" src="../_images/basic-first-aid-app-data.gif" />
+<p>Finally, do a clean install of the latest version of our <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>, which is how we recommend you install Spyder and keep it up to date.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
-In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
+<p>While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only normally able to provide individual support for user-specific install issues related to our <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>.
+In particular, managing your own installation via Conda or Pip can be easy to break, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using our standalone installers whenever possible.
 For further information, please visit our <a class="reference internal" href="../installation.html#install-guide"><span class="std std-ref">Install Guide</span></a>.</p>
 </div>
 </section>
@@ -546,14 +551,14 @@ If you manage to isolate the bug, report it to the last one it <em>doesn’t</em
 <ol class="arabic">
 <li><p><strong>Spyder</strong> itself, of course!
 Make sure you can reproduce the error after closing and reopening it, if possible.</p></li>
-<li><p><strong>A bare QtConsole instance</strong>, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">qtconsole</span></code>.</p>
+<li><p><strong>A bare QtConsole instance</strong>, e.g. launched from the system terminal (Anaconda Prompt, on Windows) with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">qtconsole</span></code>.</p>
 <img alt="Anaconda navigator showing qtconsole" src="../_images/basic-first-aid-qtconsole.png" />
-<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> are actually something with QtConsole instead, and can be reported to their <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">issue tracker</a>.</p>
+<p>QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder’s <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> usually have something to do with QtConsole instead, and can be reported to the <a class="reference external" href="https://github.com/jupyter/qtconsole/issues/">QtConsole issue tracker</a>.</p>
 </li>
-<li><p><strong>An IPython command line shell</strong>, launched with e.g. <code class="docutils literal notranslate"><span class="pre">ipython</span></code> from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
-Reproducible bugs can be reported to their <a class="reference external" href="https://github.com/ipython/ipython/issues">Github page</a>, though make sure to read their guidelines and docs first.</p></li>
-<li><p><strong>A standard Python interpreter</strong>, either run as a script file with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">path/to/your/file.py</span></code> or launched interactively with <code class="docutils literal notranslate"><span class="pre">python</span></code> from your Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
-While it is not impossible that you’ve found Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the <a class="reference external" href="https://www.python.org/doc/">Python docs</a> and the other resources listed above.</p></li>
+<li><p><strong>An IPython command line shell</strong>, launched with e.g. <code class="docutils literal notranslate"><span class="pre">ipython</span></code> from system terminal (Anaconda Prompt, on Windows).
+Reproducible bugs can be reported to the <a class="reference external" href="https://github.com/ipython/ipython/issues">IPython issue tracker</a>, though make sure to read their guidelines and docs first.</p></li>
+<li><p><strong>A standard Python interpreter</strong>, either run as a script file with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">path/to/your/file.py</span></code> or launched interactively with <code class="docutils literal notranslate"><span class="pre">python</span></code> from your system terminal (Anaconda Prompt, on Windows).
+While it is not impossible that you’ve found a Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the <a class="reference external" href="https://www.python.org/doc/">Python docs</a> and the other resources listed above.</p></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

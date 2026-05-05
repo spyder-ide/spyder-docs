@@ -488,89 +488,34 @@ There are a number of problems that can cause this, but most can be fixed fairly
 <span id="troubleshooting-common-kernel-version"></span><span id="spyder-kernels-version-ref"></span><h3>Spyder-Kernels no está instalado o es incompatible<a class="headerlink" href="#spyder-kernels-not-installed-incompatible" title="Link to this heading">#</a></h3>
 <p>Spyder requiere que una versión compatible del paquete <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> esté presente en el entorno de trabajo en el que deseas ejecutar tu consola.</p>
 <img alt="Kernel version error dialog" src="../_images/common-illnesses-kernel-version.png" />
-<p>Se incluye por defecto con Anaconda, pero si quieres ejecutar tu código en otro entorno Python o instalación, necesitarás asegurarte de que esté instalado y actualizado a la última versión.</p>
-<p>Revisa la versión requerida de los spyder-kernels para tu versión de Spyder en la siguiente tabla:</p>
-<div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-text">Compatibilidad de versiones de Spyder y Spyder-Kernels</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head"><p>Spyder</p></th>
-<th class="head"><p>Spyder-Kernels</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>4.0.0-4.0.1</p></td>
-<td><p>1.8.1</p></td>
-</tr>
-<tr class="row-odd"><td><p>4.1.0-4.1.2</p></td>
-<td><p>1.9.0</p></td>
-</tr>
-<tr class="row-even"><td><p>4.1.3</p></td>
-<td><p>1.9.1</p></td>
-</tr>
-<tr class="row-odd"><td><p>4.1.4</p></td>
-<td><p>1.9.3</p></td>
-</tr>
-<tr class="row-even"><td><p>4.1.5-4.1.6</p></td>
-<td><p>1.9.4</p></td>
-</tr>
-<tr class="row-odd"><td><p>4.2.0</p></td>
-<td><p>1.10.0</p></td>
-</tr>
-<tr class="row-even"><td><p>5.0.0-5.0.5</p></td>
-<td><p>2.0.5</p></td>
-</tr>
-<tr class="row-odd"><td><p>5.1.0-5.1.5</p></td>
-<td><p>2.1.3</p></td>
-</tr>
-<tr class="row-even"><td><p>5.2.0-5.2.1</p></td>
-<td><p>2.2.0</p></td>
-</tr>
-<tr class="row-odd"><td><p>5.2.2</p></td>
-<td><p>2.2.1</p></td>
-</tr>
-<tr class="row-even"><td><p>5.3.0-5.3.3</p></td>
-<td><p>2.3.3</p></td>
-</tr>
-<tr class="row-odd"><td><p>5.4.0-5.4.3</p></td>
-<td><p>2.4.3</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Para ello, activa el entorno, a continuación, instala <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code>. Si utilizas Anaconda, abre una consola (Anaconda Prompt en Windows) y ejecuta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONEMENT-NAME
-conda<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">=</span>&lt;VERSION&gt;
-</pre></div>
-</div>
-<p>De lo contrario, activa tu entorno por el medio que lo hayas creado, y ejecuta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>spyder-kernels<span class="o">==</span>&lt;VERSION&gt;
-</pre></div>
-</div>
-<p>Para los dos comandos anteriores, reemplaza <code class="docutils literal notranslate"><span class="pre">&lt;VERSION&gt;</span></code> con la versión correspondiente en la tabla.</p>
+<p>It is included by default in Spyder’s own runtime environment, but if you want to run your code in your own Python environment or installation, you’ll need to make sure it’s installed and updated to the latest version.</p>
+<p>To do so, open a system terminal, activate the Conda or virtual environment you want to use Spyder with, and then copy and paste the command Spyder generates for you (the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command if in a Conda environment, or <code class="docutils literal notranslate"><span class="pre">pip</span></code> otherwise).</p>
+<p>Spyder 6.2+ will offer to update your Spyder-Kernels version automatically, if using Spyder through our recommended <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Instaladores independientes</span></a>.</p>
 </section>
 <section id="issue-with-another-dependency">
 <span id="troubleshooting-common-kernel-dependency"></span><h3>Problemas con otra dependencia<a class="headerlink" href="#issue-with-another-dependency" title="Link to this heading">#</a></h3>
 <p>Si el núcleo muestra un seguimiento de errores largo que menciona otros paquetes como <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter_client</span></code>, <code class="docutils literal notranslate"><span class="pre">traitlets</span></code> o <code class="docutils literal notranslate"><span class="pre">pyzmq</span></code>, el problema puede ser una versión desactualizada o incompatible de un paquete de dependencias. Para arreglar esto, activa el entorno y actualiza las dependencias clave.</p>
-<p>En un ambiente de Anaconda:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONMENT-NAME
+<p>In a Conda environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ENVIRONMENT-NAME<span class="w">  </span><span class="c1"># Replace with the name of your desired environment</span>
 conda<span class="w"> </span>update<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
 <p>De lo contrario, activa tu entorno por el medio que lo hayas creado, y ejecuta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--upgrade-strategy<span class="w"> </span><span class="s2">&quot;eager&quot;</span><span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
 </section>
 <section id="attributeerror-importerror">
 <span id="troubleshooting-common-kernel-error"></span><h3>AttributeError/ImportError<a class="headerlink" href="#attributeerror-importerror" title="Link to this heading">#</a></h3>
-<p>Comprueba las últimas líneas del mensaje de error y revisa si es un <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> o <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, o si se refiere a un archivo que creaste en tu directorio de trabajo actual o en tu carpeta de inicio (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> en Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> en Linux).</p>
+<p>Check the last few lines of the error message, and see if it’s an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> or <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, or refers to a file you created in your current working directory or your home folder (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> on Linux).</p>
 <img alt="Spyder's AtributeError dialog" src="../_images/common-illnesses-atribute-error.png" />
 <p>Si es así, el error probablemente se deba a que tu archivo recibe el mismo nombre que un módulo de librería estándar de Python, como <code class="docutils literal notranslate"><span class="pre">string.py</span></code> o <code class="docutils literal notranslate"><span class="pre">time.py</span></code>, que anula el módulo integrado que Spyder-Kernels está intentando cargar. Para arreglar esto, simplemente renombra tu archivo con un nombre distinto e intenta reiniciar el núcleo. Para comprobar los nombres de estos módulos, revisa la lista en la <a class="reference external" href="https://docs.python.org/3/library/">Python standard library documentation</a>.</p>
 </section>
 </section>
 <section id="completion-help-not-working">
 <span id="troubleshooting-common-completion"></span><span id="code-completion-problems-ref"></span><h2>El autocompletado o la ayuda no funcionan<a class="headerlink" href="#completion-help-not-working" title="Link to this heading">#</a></h2>
-<p>Para proporcionar completado, ayuda y análisis de código en tiempo real en el Editor, Spyder utiliza el Python Language Server (PyLS), una implementación de la especificación del Language Server Protocol utilizado por VSCode, Atom y otros editores e IDEs populares. La mayoría de los errores de ayuda y completado están fuera del control de Spyder y son limitaciones de PyLS o del código que se está programando, pero algunos pueden ser solucionados por los usuarios.</p>
+<p>To provide code completions, help and real-time analysis in the Editor, Spyder uses the Python LSP Server (PyLSP), an implementation of the same Language Server Protocol specification supported by VSCode, Neovim and other popular editors/IDEs.
+Most help and completion issues lie outside of Spyder’s control, and are either limitations with PyLSP or the code that is being introspected, but some can be worked around.</p>
 <section id="object-missing-docstring">
 <span id="troubleshooting-common-completion-docstring"></span><h3>Docstring faltante de un objeto<a class="headerlink" href="#object-missing-docstring" title="Link to this heading">#</a></h3>
 <p>Si no se muestra nada en el calltip, las sugerencias al pasar el cursor o en el panel de ayuda, es posible que el objeto al que estás intentando realizar una introspección no tenga un docstring.</p>
@@ -587,26 +532,26 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder-kernels<span c
 </section>
 <section id="lsp-has-stopped-working">
 <span id="troubleshooting-common-completion-crashed"></span><h3>El LSP ha dejado de funcionar<a class="headerlink" href="#lsp-has-stopped-working" title="Link to this heading">#</a></h3>
-<p>Ocasionalmente, especialmente después de usar Spyder por un tiempo, el completado, la ayuda y el análisis de código pueden dejar de funcionar. Si este es el caso, puedes comprobar el estado LSP con el elemento <span class="guilabel">LSP Python</span> en la barra de estado de Spyder en la parte inferior de la pantalla, y reiniciarlo haciendo clic con el botón derecho y seleccionando el elemento <span class="guilabel">Reiniciar el servidor de lenguaje de Python</span>.</p>
+<p>Occasionally, especially after using Spyder for a while, code completion, help and analysis may stop working.
+If this is the case, you can check LSP status with the <span class="guilabel">LSP: Python</span> item in Spyder’s status bar at the bottom of the screen, and restart it by right-clicking it and selecting the <span class="guilabel">Restart Python Language Server</span> item.</p>
 <img alt="Spyder with LSP restart dialog" src="../_images/common-illnesses-LSP-restart.png" />
 </section>
 <section id="spyder-bug-dependency-issue">
 <span id="troubleshooting-common-completion-bug"></span><h3>Error de Spyder debido a problemas con sus dependencias<a class="headerlink" href="#spyder-bug-dependency-issue" title="Link to this heading">#</a></h3>
 <p>Dada la variedad de dependencias involucradas en hacer que el LSP funcione, una versión incompatible o desactualizada de tu entorno puede resultar en mensajes de error, resultados incompletos o ayuda/análisis que no funcionen en absoluto.</p>
-<p>To address this, first try updating Anaconda and Spyder as described in <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Primera ayuda básica</span></a>.
-If the issue still isn’t resolved, update the various relevant dependencies with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>python-language-server
-</pre></div>
-</div>
+<p>To address this, try updating Spyder as described in <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Primera ayuda básica</span></a>.</p>
 </section>
 </section>
 <section id="plugin-problems">
 <span id="troubleshooting-common-plugin"></span><h2>Problemas de plugin<a class="headerlink" href="#plugin-problems" title="Link to this heading">#</a></h2>
 <section id="plugin-does-not-work-at-all">
 <span id="troubleshooting-common-plugin-missing"></span><h3>El plugin no funciona en absoluto<a class="headerlink" href="#plugin-does-not-work-at-all" title="Link to this heading">#</a></h3>
-<p>Si tienes instalado un plugin de Spyder, pero no puedes verlo, ve al submenú <span class="guilabel">Paneles</span> del menú <span class="guilabel">Ver</span> y selecciona el nombre del plugin, que debería hacer que su panel sea visible. Si no ves el plugin allí, selecciona el elemento <span class="guilabel">Dependencias</span> en el menú <span class="guilabel">Ayuda</span> y mira si el plugin aparece en la parte inferior.</p>
+<p>If you have installed a Spyder plugin, but you can’t see it, go to the <span class="guilabel">Panes</span> submenu of the <span class="guilabel">Window</span> menu and select the plugin’s name, which should make it visible if it contains a standalone pane.
+If you don’t see the plugin there, select the <span class="guilabel">Plugins</span> section under Spyder’s <span class="guilabel">Preferences</span> and see if it is listed there.</p>
 <img alt="Dependencies dialog showing Unittest plugin" src="../_images/common-illnesses-plugins.png" />
-<p>Si el plugin con el problema no aparece en el diálogo de dependencias, comprueba que lo instalaste en el mismo entorno que Spyder. Si lo tienes, el problema puede deberse a un problema de dependencia. Comprueba si puedes importar el plugin manualmente abriendo una consola Python en el mismo entorno que Spyder y escribiendo, por ejemplo, <code class="docutils literal notranslate"><span class="pre">importar</span> <span class="pre">spyder_unittest</span></code> para probar el plugin de Spyder-Unittest; este comando debe ejecutarse sin errores.</p>
+<p>If the plugin with the problem is not listed in the <span class="guilabel">Plugins</span> Preferences section, check that you installed it in the same environment as Spyder.
+If you have, then the problem may well be caused by a dependency issue.
+Test whether you can import the plug-in manually by opening a Python console in the same environment as Spyder and typing, for instance, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spyder_unittest</span></code> to test the Spyder-Unittest plug-in; this command should run without errors.</p>
 <p>Si nada de esto te ayuda a resolver el problema, entonces continúa a la siguiente sección.</p>
 </section>
 <section id="other-issues">

@@ -478,8 +478,9 @@
                   
   <section id="submit-a-report">
 <span id="troubleshooting-report"></span><h1>Enviar un reporte<a class="headerlink" href="#submit-a-report" title="Link to this heading">#</a></h1>
-<p>Si no puedes solucionar tu problema con ninguno de los pasos de solución de problemas, entonces querrás enviarlo a nuestro gestor de issues de GitHub para que nuestro equipo pueda echarle un vistazo por usted. Para hacer esto necesitarás una <a class="reference external" href="https://github.com/">Github account</a>, así que asegúrate de tener una antes de comenzar (una buena idea de todos modos).</p>
-<img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-issue-tracker.png" />
+<p>If you can’t fix your issue with any of the troubleshooting steps, then you’ll want to submit it to our issue tracker so our team can take a look at it for you.
+You’ll need a <a class="reference external" href="https://github.com/">GitHub account</a> to do this, so make sure you have one before you begin (a good idea anyway).</p>
+<img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-issue-tracker.png" />
 <div class="admonition important">
 <p class="admonition-title">Importante</p>
 <p>Antes de enviar un issue, asegúrate de haber buscado una descripción del problema y una parte relevante del seguimiento de errores, tanto en Google como en el <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issue tracker</a> de Spyder para asegurarte de que no ha sido enviado antes. Si ese es el caso, tu problema se cerrará como un duplicado.</p>
@@ -488,15 +489,19 @@
 <span id="troubleshooting-report-submit"></span><h2>Formas de enviar un issue<a class="headerlink" href="#ways-to-submit-an-issue" title="Link to this heading">#</a></h2>
 <p>Hay varias maneras de enviar un issue, ya sea desde Spyder o GitHub directamente. Por orden de preferencia y dificultad:</p>
 <ol class="arabic">
-<li><p><strong>Si Spyder presenta un reporte de problemas</strong> puedes enviar un issue directamente desde él. Tendrás que llenar un título para tu petición, especificar los pasos que llevan a este problema y hacer clic en <span class="guilabel">Enviar a Github</span>. Esto prellenará un reporte de error con los detalles de tu entorno, las versiones claves y las dependencias, e insertará automáticamente el error o traceback por ti.</p>
-<a class="reference internal image-reference" href="../_images/submit-a-report-error-dialog.png"><img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-error-dialog.png" style="width: 500px;" />
+<li><p><strong>If Spyder presents an error dialog</strong> you can submit an issue directly from it.
+You will have to fill out a title for your issue, specify the steps that lead to this problem and click <span class="guilabel">submit to GitHub</span>.
+This will prefill an error report with your environment details, key versions and dependencies and automatically insert the error/traceback for you.</p>
+<a class="reference internal image-reference" href="../_images/submit-a-report-error-dialog.png"><img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-error-dialog.png" style="width: 500px;" />
 </a>
 </li>
-<li><p><strong>Si Spyder se abre y tu problema no implica un diálogo de error</strong>, la mejor manera de hacerlo es simplemente seleccionar <span class="guilabel">Reporte de error</span> en el menú <span class="guilabel">Ayuda</span>, que muestra manualmente el formulario de informe del problema y rellena la información clave sobre tu instalación de Spyder. Describe el problema que estás experimentando (incluyendo cualquier información de error/seguimiento) junto con un título descriptivo, y haz clic en <span class="guilabel">Enviar a Github</span>.</p>
-<img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-issue.png" />
+<li><p><strong>If Spyder opens and your issue does not involve an error dialog</strong>, the best way to do so is to simply select <span class="guilabel">Report issue</span> from the <span class="guilabel">Help</span> menu, which manually brings up the issue report form and fills in the key information about your Spyder installation.
+Describe the issue you’re experiencing (including any error/traceback information) along with a descriptive title, and click <span class="guilabel">Submit to GitHub</span>.</p>
+<img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-issue.png" />
 </li>
-<li><p><strong>Si Spyder no se lanza</strong>, puedes enviar un informe manualmente en nuestra página de issues en <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">Github</a>. A diferencia de lo anterior, necesitarás proporcionar manualmente las versiones de todo (Spyder, Python, OS, Qt/PyQt, Anaconda y las dependencias de Spyder) como se muestra en la plantilla de informe de errores; ver abajo para más información sobre eso.</p>
-<img alt="Github page on Spyder's issue template" src="../_images/submit-a-report-issue-template.png" />
+<li><p><strong>If Spyder won’t launch</strong>, you can submit a report manually at our <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issues page on GitHub</a>.
+Unlike the above, you’ll need to manually provide the versions of everything (Spyder, Python, OS, Qt/PyQt, Anaconda, and Spyder’s dependencies) as listed in the error report template; see below for more on that.</p>
+<img alt="GitHub page on Spyder's issue template" src="../_images/submit-a-report-issue-template.png" />
 </li>
 </ol>
 <p>Una vez que envíes tu informe, nuestro equipo intentará responderte lo antes posible, a menudo dentro de 24 horas o menos, para tratar de ayudarte a arreglarlo.</p>
@@ -519,13 +524,13 @@
 </div>
 </li>
 <li><p>Una <strong>descripción detallada y paso a paso de exactamente lo que hiciste</strong> antes de que ocurriera el error, incluyendo código de ejemplo que lo provoque, si es aplicable.</p></li>
-<li><p><strong>Información sobre Spyder y su entorno</strong> tal y como se indica en la plantilla de reporte de errores, que puedes encontrar bajo <span class="guilabel">Acerca de Spyder</span> en el menú <span class="guilabel">Ayuda</span>; junto con sus dependencias clave, mostradas en el diálogo <span class="menuselection">Ayuda ‣ Dependencias</span> (hay un botón para copiarlas).</p>
+<li><p><strong>Information about Spyder and its environment</strong> as listed in the error report template, which you can find under <span class="guilabel">About Spyder</span> in the <span class="guilabel">Help</span> menu; along with its key dependencies, shown in the dialog under <span class="menuselection">Help ‣ Dependency status</span> (click the <span class="guilabel">Copy to clipboard</span> button to copy them).</p>
 <img alt="Spyder showing Spyder's info and dependencies" src="../_images/submit-a-report-spyder-info.png" />
 <p>Si Spyder no se lanza, pega la salida de <code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">conda</span></code> desde tu línea de comandos (o Anaconda Prompt en Windows) en la sección <span class="guilabel">Dependencias</span> de la plantilla de incidencias.</p>
 <a class="reference internal image-reference" href="../_images/submit-a-report-conda-list.png"><img alt="Command line showing output of conda list" src="../_images/submit-a-report-conda-list.png" style="width: 500px;" />
 </a>
 </li>
-<li><p><strong>Cómo instalaste Spyder</strong> y cualquier otro paquete relevante, <em>por ejemplo</em> Anaconda, MacPorts o pip y <strong>si Spyder ha funcionado antes</strong> desde que lo instalaste.</p></li>
+<li><p><strong>How you installed Spyder</strong> and any other relevant packages, <em>e.g.</em> standalone installers, Miniforge/Miniconda/Anaconda, WinPython, Brew, MacPorts, pip, etc. and <strong>whether Spyder has worked before</strong> since you installed it.</p></li>
 <li><p><strong>Qué más intentaste para solucionarlo</strong>, <em>por ejemplo</em>, siguiendo esta guía o buscando en otros sitios web, y si <strong>has intentado reproducir el problema en una QtConsole independiente, IPython, y/o el intérprete de Python simple</strong>.</p></li>
 <li><p><strong>Si el problema ha ocurrido de manera consistente</strong> en situaciones similares o si es la primera vez que lo observas.</p></li>
 <li><p><strong>Cualquier otra cosa especial o inusual</strong> sobre tu sistema, entorno, paquetes o uso específico que pueda tener algo que ver con el problema</p></li>

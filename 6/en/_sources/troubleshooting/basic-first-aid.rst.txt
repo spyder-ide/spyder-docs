@@ -17,25 +17,29 @@ Recommended troubleshooting steps
 #. **Restart Spyder**, and try what you were doing before again.
 
 #. **Upgrade Spyder** to the latest release, and you might find your issue is resolved (along with new features, enhancements, and other bug fixes).
-   Minor releases come out every couple months, so unless you've updated recently, there is a good chance your version isn't the latest.
+   Bugfix releases come out every month or two, so unless you've updated recently, there is a good chance your version isn't the latest.
    You can find out with the :guilabel:`Check for updates` command under the :guilabel:`Help` menu.
 
    .. image:: /images/basic-first-aid/basic-first-aid-updates.png
       :alt: Spyder showing view internal console option
 
-   To perform the update with Conda (strongly recommended), from your terminal (or Anaconda Prompt on Windows) run:
+   Recent versions of Spyder using our recommended :ref:`install-standalone` will offer to automatically update themselves for you.
+   If using an older version of Spyder or a non-standalone build (e.g. installed with Pip or Conda), we recommend downloading and running our latest :ref:`install-standalone`.
 
-   .. code-block:: bash
+   To perform the update with Conda, see the FAQ :ref:`update-conda`; to update with Pip use ``pip install --ugprade spyder``.
+   If that still doesn't work, we recommend updating Spyder's dependencies and environment, either by installing the latest version of Anaconda/Miniconda/Miniforge, or with the relevant "update all" command in your terminal (or Anaconda Prompt on Windows).
 
-      conda update anaconda
-      conda update spyder
-
-#. **Update Spyder's dependencies and environment**, either by installing the latest version of your distribution (e.g. the recommended Anaconda), or with the relevant "update all" command in your terminal (or Anaconda Prompt on Windows).
    To get the latest stable version of everything using Conda, you can run:
 
-   .. code-block:: bash
+   .. code-block:: shell
 
-      conda update qt pyqt spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq
+      conda update spyder qt pyqt spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq
+
+   Or with Pip:
+
+   .. code-block:: shell
+
+      pip install --upgrade --upgrade-strategy "eager" spyder spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
 #. **Restart your machine**, in case the problem lies with a lingering process or another such issue.
 
@@ -51,13 +55,13 @@ Recommended troubleshooting steps
       This will reset your preferences, as well as any custom keyboard shortcuts or syntax highlighting schemes.
       If you particularly care about any of those, you should make a copy of the :file:`.spyder-py3` folder in your user home directory (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux), and restore it afterwards if this doesn't solve the problem.
 
-#. **Try installing Spyder into a new Conda environment** (recommended) or ``virtualenv``/``venv``, and see if the issue reoccurs.
+#. **Try reinstalling Spyder** via our :ref:`install-standalone` (recommended), or in a fresh Conda/virtual environment, and see if the issue reoccurs.
 
-In your system terminal (or Anaconda Prompt on Windows), run the following commands to create an a fresh, clean environment and start Spyder in it:
+If using Conda to install Spyder (only recommended for advanced users needing plugin support), in your system terminal (or Anaconda Prompt on Windows), run the following commands to create a clean environment and start Spyder in it:
 
-.. code-block:: bash
+.. code-block:: shell
 
-   conda create -n spyder-env spyder -y
+   conda create -y -n spyder-env spyder numpy scipy pandas matplotlib cython sympy
    conda activate spyder-env
    spyder
 
@@ -81,20 +85,27 @@ Reinstalling Spyder
 
 If none of the previous steps solve your issue, you should do a full uninstall of Spyder by whatever means you originally installed it.
 
-For Anaconda, follow all the steps under Option B in the `Anaconda uninstall guide`_, delete the Anaconda directory wherever it was originally installed, and (on Windows) remove the :file:`%appdata%/python` directory if it exists.
+For Spyder's standalone installers, the uninstall mechanism varies depending on your operating system.
+On Windows, it can be removed via the entry under :guilabel:`Add or remove programs`.
+
+For Anaconda/Miniconda, follow all the steps under `Anaconda uninstall guide`_/`Miniconda uninstall guide`_.
+For Miniforge, follow the `Miniforge uninstall instructions`_ on macOS/Linux or remove it from :guilabel:`Add or remove programs` on Windows.
+Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the :file:`%appdata%/python` directory if it exists.
 
 .. image:: /images/basic-first-aid/basic-first-aid-app-data.gif
-   :alt: Deleting appdata/python directory
+   :alt: Deleting AppData/python directory
 
-Then, do a clean install of the latest version of the `Anaconda distribution`_ which is how we recommend you install Spyder and keep it up to date.
+Finally, do a clean install of the latest version of our :ref:`install-standalone`, which is how we recommend you install Spyder and keep it up to date.
 
 .. important::
 
-   While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only able to provide individual support for install-related issues for users of the Anaconda distribution.
-   In particular, pip installation, while doable, is only really for experts, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using Conda whenever possible.
+   While you are welcome to get Spyder working on your own by one of the many other means we offer, we are only normally able to provide individual support for user-specific install issues related to our :ref:`install-standalone`.
+   In particular, managing your own installation via Conda or Pip can be easy to break, as there are many pitfalls involved and different issues specific to your setup, which is why we recommend using our standalone installers whenever possible.
    For further information, please visit our :ref:`install-guide`.
 
-.. _Anaconda uninstall guide: https://docs.anaconda.com/anaconda/install/uninstall/
+.. _Anaconda uninstall guide: https://www.anaconda.com/docs/getting-started/anaconda/uninstall
+.. _Miniconda uninstall guide: https://www.anaconda.com/docs/getting-started/miniconda/uninstall
+.. _Miniforge uninstall instructions: https://github.com/conda-forge/miniforge/blob/main/README.md#uninstall
 .. _Anaconda distribution: https://www.anaconda.com/products/distribution
 
 
@@ -112,21 +123,21 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
 #. **Spyder** itself, of course!
    Make sure you can reproduce the error after closing and reopening it, if possible.
 
-#. **A bare QtConsole instance**, e.g. launched from Anaconda navigator or from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux) with ``jupyter qtconsole``.
+#. **A bare QtConsole instance**, e.g. launched from the system terminal (Anaconda Prompt, on Windows) with ``jupyter qtconsole``.
 
    .. image:: /images/basic-first-aid/basic-first-aid-qtconsole.png
       :alt: Anaconda navigator showing qtconsole
 
-   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` are actually something with QtConsole instead, and can be reported to their `issue tracker`_.
+   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` usually have something to do with QtConsole instead, and can be reported to the `QtConsole issue tracker`_.
 
-#. **An IPython command line shell**, launched with e.g. ``ipython`` from the Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
-   Reproducible bugs can be reported to their `Github page`_, though make sure to read their guidelines and docs first.
+#. **An IPython command line shell**, launched with e.g. ``ipython`` from system terminal (Anaconda Prompt, on Windows).
+   Reproducible bugs can be reported to the `IPython issue tracker`_, though make sure to read their guidelines and docs first.
 
-#. **A standard Python interpreter**, either run as a script file with ``python path/to/your/file.py`` or launched interactively with ``python`` from your Anaconda Prompt/Terminal/command line (Windows/Mac/Linux).
-   While it is not impossible that you've found Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs`_ and the other resources listed above.
+#. **A standard Python interpreter**, either run as a script file with ``python path/to/your/file.py`` or launched interactively with ``python`` from your system terminal (Anaconda Prompt, on Windows).
+   While it is not impossible that you've found a Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs`_ and the other resources listed above.
 
-.. _issue tracker: https://github.com/jupyter/qtconsole/issues/
-.. _Github page: https://github.com/ipython/ipython/issues
+.. _QtConsole issue tracker: https://github.com/jupyter/qtconsole/issues/
+.. _IPython issue tracker: https://github.com/ipython/ipython/issues
 .. _Python docs: https://www.python.org/doc/
 
 .. tip::

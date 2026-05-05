@@ -13,19 +13,18 @@ There's a good chance that someone else has already experienced the same problem
 
    * If the problem appears to be a result of *your own code*, `Stack Overflow`_ is a better place to start.
    * If the bug also occurs in the *standard Python, IPython, or QtConsole* environments, or only with *a specific package*, it is unlikely to be something in Spyder, and you should report it to those sources instead.
-   * If the problem lies with *your specific install*, uninstalling and clean-reinstalling the `Anaconda`_ distribution is strongly recommended.
-     As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for install issues.
+   * If the problem lies with *your specific install*, uninstalling and reinstalling with Spyder's :ref:`install-standalone` will likely fix it.
+     As the other methods of installing Spyder can result in tricky user-specific problems, we generally aren't able to give individual support for most install issues related to those.
 
 .. _Stack Overflow: https://stackoverflow.com
-.. _Anaconda: https://www.anaconda.com/products/distribution
 
 Just like the programs you code in it, Spyder is written in Python, so you can often figure out many problems just by reading the last line of the traceback or error message.
-To view it, simply click :guilabel:`Show details` in the Spyder error dialog.
+To view it, click :guilabel:`Show details` in the Spyder error dialog.
 
 .. image:: /images/first-steps/first-steps-show-details.png
    :alt: Spyder showing view internal console option
 
-Often, that alone will tell you how to fix the problem on your own, but if not, we're here to help.
+Often, that alone will tell you how to fix the problem on your own--but if not, we're here to help.
 
 
 
@@ -55,4 +54,4 @@ If you still can't get it to work, and the problem is indeed Spyder-related, you
 
 .. rst-class:: fasb fa-bug
 
-Finally, if you couldn't solve your problem and want to submit an issue to our Github issue tracker, so the bug can hopefully be fixed for everyone, :ref:`troubleshooting-report`.
+Finally, if you couldn't solve your problem and want to submit an issue to our GitHub issue tracker, so the bug can hopefully be fixed for everyone, :ref:`troubleshooting-report`.

@@ -478,8 +478,8 @@
   <section id="submit-a-report">
 <span id="troubleshooting-report"></span><h1>Submit a Report<a class="headerlink" href="#submit-a-report" title="Link to this heading">#</a></h1>
 <p>If you can’t fix your issue with any of the troubleshooting steps, then you’ll want to submit it to our issue tracker so our team can take a look at it for you.
-You’ll need a <a class="reference external" href="https://github.com/">Github account</a> to do this, so make sure you have one before you begin (a good idea anyway).</p>
-<img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-issue-tracker.png" />
+You’ll need a <a class="reference external" href="https://github.com/">GitHub account</a> to do this, so make sure you have one before you begin (a good idea anyway).</p>
+<img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-issue-tracker.png" />
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Before you submit an issue, make sure you’ve searched a description of the problem and a relevant portion of the error traceback, on both Google and Spyder’s <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issue tracker</a> to make sure it hasn’t been submitted before.
@@ -491,18 +491,18 @@ If that’s the case, your issue will be closed as a duplicate.</p>
 In order of preference and difficulty:</p>
 <ol class="arabic">
 <li><p><strong>If Spyder presents an error dialog</strong> you can submit an issue directly from it.
-You will have to fill out a title for your issue, specify the steps that lead to this problem and click <span class="guilabel">submit to Github</span>.
+You will have to fill out a title for your issue, specify the steps that lead to this problem and click <span class="guilabel">submit to GitHub</span>.
 This will prefill an error report with your environment details, key versions and dependencies and automatically insert the error/traceback for you.</p>
-<a class="reference internal image-reference" href="../_images/submit-a-report-error-dialog.png"><img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-error-dialog.png" style="width: 500px;" />
+<a class="reference internal image-reference" href="../_images/submit-a-report-error-dialog.png"><img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-error-dialog.png" style="width: 500px;" />
 </a>
 </li>
 <li><p><strong>If Spyder opens and your issue does not involve an error dialog</strong>, the best way to do so is to simply select <span class="guilabel">Report issue</span> from the <span class="guilabel">Help</span> menu, which manually brings up the issue report form and fills in the key information about your Spyder installation.
-Describe the issue you’re experiencing (including any error/traceback information) along with a descriptive title, and click <span class="guilabel">Submit to Github</span>.</p>
-<img alt="Github page on Spyder's issue tracker" src="../_images/submit-a-report-issue.png" />
+Describe the issue you’re experiencing (including any error/traceback information) along with a descriptive title, and click <span class="guilabel">Submit to GitHub</span>.</p>
+<img alt="GitHub page on Spyder's issue tracker" src="../_images/submit-a-report-issue.png" />
 </li>
-<li><p><strong>If Spyder won’t launch</strong>, you can submit a report manually at our issues page on <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">Github</a>.
+<li><p><strong>If Spyder won’t launch</strong>, you can submit a report manually at our <a class="reference external" href="https://github.com/spyder-ide/spyder/issues">issues page on GitHub</a>.
 Unlike the above, you’ll need to manually provide the versions of everything (Spyder, Python, OS, Qt/PyQt, Anaconda, and Spyder’s dependencies) as listed in the error report template; see below for more on that.</p>
-<img alt="Github page on Spyder's issue template" src="../_images/submit-a-report-issue-template.png" />
+<img alt="GitHub page on Spyder's issue template" src="../_images/submit-a-report-issue-template.png" />
 </li>
 </ol>
 <p>Once you submit your report, our team will try to get back to you as soon as possible, often within 24 hours or less, to try to help you fix it.</p>
@@ -525,13 +525,13 @@ Unlike the above, you’ll need to manually provide the versions of everything (
 </div>
 </li>
 <li><p>A <strong>detailed, step by step description of exactly what you did</strong> leading up to the error occurring, complete with sample code that triggers it, if applicable.</p></li>
-<li><p><strong>Information about Spyder and its environment</strong> as listed in the error report template, which you can find under <span class="guilabel">About Spyder</span> in the <span class="guilabel">Help</span> menu; along with its key dependencies, shown in the dialog under <span class="menuselection">Help ‣ Dependencies</span> (there’s a button to copy-paste them).</p>
+<li><p><strong>Information about Spyder and its environment</strong> as listed in the error report template, which you can find under <span class="guilabel">About Spyder</span> in the <span class="guilabel">Help</span> menu; along with its key dependencies, shown in the dialog under <span class="menuselection">Help ‣ Dependency status</span> (click the <span class="guilabel">Copy to clipboard</span> button to copy them).</p>
 <img alt="Spyder showing Spyder's info and dependencies" src="../_images/submit-a-report-spyder-info.png" />
 <p>If Spyder won’t launch, paste the output of <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> from your command line (or Anaconda prompt on Windows) in the <span class="guilabel">Dependencies</span> section of the issue template.</p>
 <a class="reference internal image-reference" href="../_images/submit-a-report-conda-list.png"><img alt="Command line showing output of conda list" src="../_images/submit-a-report-conda-list.png" style="width: 500px;" />
 </a>
 </li>
-<li><p><strong>How you installed Spyder</strong> and any other relevant packages, <em>e.g.</em> Anaconda, MacPorts or pip and <strong>whether Spyder has worked before</strong> since you installed it.</p></li>
+<li><p><strong>How you installed Spyder</strong> and any other relevant packages, <em>e.g.</em> standalone installers, Miniforge/Miniconda/Anaconda, WinPython, Brew, MacPorts, pip, etc. and <strong>whether Spyder has worked before</strong> since you installed it.</p></li>
 <li><p><strong>What else you’ve tried to fix it</strong>, <em>e.g.</em> from this guide or elsewhere on the web, and if you’ve <strong>tried to reproduce it in standalone QtConsole, IPython, and/or the plain Python</strong> interpreter.</p></li>
 <li><p><strong>Whether the problem occurred consistently before</strong> in similar situations or if this is the first time you’ve observed it.</p></li>
 <li><p><strong>Anything else special or unusual</strong> about your system, environment, packages, or specific usage that might have anything to do with the problem</p></li>

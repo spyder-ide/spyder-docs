@@ -58,9 +58,9 @@ Our `Google Group`_ is great for help-related questions, particularly those you 
 Spyder website
 ~~~~~~~~~~~~~~
 
-The `Spyder site`_ contains basic information about the IDE and links to many other helpful resources.
+The `Spyder website`_ contains basic information about the IDE and links to other helpful resources.
 
-.. _Spyder site: https://www.spyder-ide.org/
+.. _Spyder website: https://www.spyder-ide.org/
 
 
 .. rst-class:: fabb fa-stack-overflow
@@ -141,7 +141,7 @@ Anaconda help
 
 The `Anaconda docs`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
 
-.. _Anaconda docs: https://anaconda.cloud/support-center
+.. _Anaconda docs: https://www.anaconda.com/docs/
 
 
 .. rst-class:: fasb fa-flask
@@ -176,6 +176,6 @@ Project Jupyter
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Data Science`_ site in Stack Exchange can be very useful for questions that relate more to data science than programming specifically.
+The `Data Science Stack Exchange site`_ can be very useful for questions that relate more to data science than programming specifically.
 
-.. _Data Science: https://datascience.stackexchange.com/
+.. _Data Science Stack Exchange site: https://datascience.stackexchange.com/
