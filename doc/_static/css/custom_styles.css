@@ -72,7 +72,8 @@
 /* Increase bottom margin for images */
 
 section img {
-  margin-bottom: 1rem;
+  display: block;
+  margin: 1rem auto;
 }
 
 /* Style for Font Awesome that only styles the icons before elements */
