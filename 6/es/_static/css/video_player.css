@@ -1,0 +1,33 @@
+/* Layout tweaks for sphinxcontrib-video + Video.js (do not override vjs-tech positioning) */
+
+.bd-article .sphinx-contrib-video-container {
+  clear: both;
+  display: block;
+  float: none;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.bd-article .sphinx-contrib-video-container.align-left,
+.bd-article .sphinx-contrib-video-container.align-right {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bd-article .sphinx-contrib-video-container .video-js {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Keep controls visible (paired with inactivityTimeout: 0 in video_player.js) */
+.bd-article .sphinx-contrib-video-container .video-js.vjs-user-inactive .vjs-control-bar {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bd-article .sphinx-contrib-video-container + p,
+.bd-article .sphinx-contrib-video-container + img {
+  margin-top: 1rem;
+}

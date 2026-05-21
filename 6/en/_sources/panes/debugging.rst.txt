@@ -22,6 +22,7 @@ You can fully control debugger execution from the :guilabel:`Debug` menu, :guila
 
 .. video:: /images/debugging/debugging-commands.webm
    :loop:
+   :nocontrols:
    :alt: A Spyder IPython console window, showing debugging from toolbar
 
 Additionally, the  :ref:`panes-editor` shows the line of code the debugger is currently stopped on with an arrow.
@@ -37,6 +38,7 @@ Use the up and down arrows to recall previous commands, and press :kbd:`Tab` to 
 
 .. video:: /images/debugging/debugging-autocompletion.webm
    :loop:
+   :nocontrols:
    :alt: A Spyder IPython console window, showing autocompletion when debugging
 
 Furthermore, IPython's `magic functions`_ are available in debugging mode.
@@ -51,6 +53,7 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
 
 .. video:: /images/debugging/debugging-multiline.webm
    :loop:
+   :nocontrols:
    :alt: Debugger showing multiline debugger
 
 
@@ -78,6 +81,7 @@ There are several different ways to set and clear breakpoints:
 
 .. video:: /images/debugging/debugging-breakpoints.webm
    :loop:
+   :nocontrols:
    :alt: Spyder showing setting conditional breakpoint
 
 You can access and edit local and global variables at each breakpoint through the :ref:`panes-variables`.
@@ -125,6 +129,7 @@ Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matpl
 
 .. video:: /images/debugging/debugging-matplotlib.webm
    :loop:
+   :nocontrols:
    :alt: Debugger showing matplotlib interactive backend
 
 

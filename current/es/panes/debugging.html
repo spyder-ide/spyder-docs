@@ -27,19 +27,21 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=ad26ed16" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/video-js.min.css?v=02c491e9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/video_player.css?v=2eef5790" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=fdae0ad6" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script defer src="../_static/scripts/fontawesome.js?digest=0790524f97105ba85085"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=0790524f97105ba85085" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085" />
 
     <script src="../_static/documentation_options.js?v=59bdcf62"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
@@ -48,7 +50,7 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'panes/debugging';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.17.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '6';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -56,6 +58,8 @@
         </script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/video.min.js?v=437fd2a8"></script>
+    <script src="../_static/js/video_player.js?v=6b0febb4"></script>
     <script src="../_static/js/custom_scripts.js?v=641fc891"></script>
     <script src="../_static/js/language-switcher.js?v=d926bef7"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
@@ -269,11 +273,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
       
     </div>
     
@@ -388,11 +399,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
         
       </div>
     
@@ -493,14 +511,14 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 <section id="debugging-with-ipdb">
 <span id="panes-debugger-ipdb"></span><h2>Depurando con ipdb<a class="headerlink" href="#debugging-with-ipdb" title="Link to this heading">#</a></h2>
 <p>Puedes controlar completamente la ejecución del depurador desde el menú <span class="guilabel">Depurar</span> de la <span class="guilabel">Barra de herramientas de depuración</span> y a través de atajos de teclado configurables, junto con el estándar <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> <a class="reference external" href="https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html">comandos de consola</a>.</p>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/debugging-commands.webm" type="video/webm">A Spyder IPython console window, showing debugging from toolbar</video></div><p>Additionally, the  <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> shows the line of code the debugger is currently stopped on with an arrow.</p>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/debugging-commands.webm" type="video/webm">A Spyder IPython console window, showing debugging from toolbar</video></div><p>Additionally, the  <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> shows the line of code the debugger is currently stopped on with an arrow.</p>
 <img alt="Spyder Editor showing the debugging panel" src="../_images/debugging-arrow.webp" />
 <p>El depurador de Spyder ofrece resaltado de sintaxis, terminación de código e historial de comandos, que funcionan exactamente como lo hacen en el intérprete interactivo normal.</p>
 <p>Usa las flechas arriba y abajo para recordar comandos anteriores, y pulsa <kbd class="kbd docutils literal notranslate">Tab</kbd> para activar sugerencias de autocompletado.</p>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/debugging-autocompletion.webm" type="video/webm">A Spyder IPython console window, showing autocompletion when debugging</video></div><p>Además, las <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">funciones mágicas</a> de IPython están disponibles en modo de depuración. Puedes, por ejemplo, ejecutar <code class="docutils literal notranslate"><span class="pre">%ls</span></code> para listar los contenidos de tu directorio de trabajo actual o <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> para comprobar cuán rápido es un fragmento de código dado.</p>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/debugging-autocompletion.webm" type="video/webm">A Spyder IPython console window, showing autocompletion when debugging</video></div><p>Además, las <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">funciones mágicas</a> de IPython están disponibles en modo de depuración. Puedes, por ejemplo, ejecutar <code class="docutils literal notranslate"><span class="pre">%ls</span></code> para listar los contenidos de tu directorio de trabajo actual o <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> para comprobar cuán rápido es un fragmento de código dado.</p>
 <img alt="Ipython console in debug mode showing timeit magic" src="../_images/debugging-timeit.webp" />
 <p>Por último, puedes introducir y ejecutar sentencias multilíneas en el depurador de Spyder de la misma forma que con la petición IPython habitual, para ejecutar fácilmente código complejo.</p>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/debugging-multiline.webm" type="video/webm">Debugger showing multiline debugger</video></div></section>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/debugging-multiline.webm" type="video/webm">Debugger showing multiline debugger</video></div></section>
 <section id="breakpoints">
 <span id="debugging-breakpoints"></span><span id="panes-debugger-breakpoints"></span><h2>Puntos de interrupción<a class="headerlink" href="#breakpoints" title="Link to this heading">#</a></h2>
 <p>El depurador de Spyder está integrado con el panel de <span class="guilabel">Breakpoints</span>, el cual muestra el archivo, la línea y la condición (si existe) de cada punto de interrupción definido. Para abrirlo, selecciona <span class="menuselection">Depurar ‣ Listar puntos de interrupción</span>, o pulsa <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd> en macOS).</p>
@@ -513,7 +531,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 <li><p>Con la función incorporada <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> en tu código.</p></li>
 <li><p>Interactivamente, usando el comando <code class="docutils literal notranslate"><span class="pre">b</span></code> en una sesión de depuración.</p></li>
 </ul>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/debugging-breakpoints.webm" type="video/webm">Spyder showing setting conditional breakpoint</video></div><p>You can access and edit local and global variables at each breakpoint through the <a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a>.</p>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/debugging-breakpoints.webm" type="video/webm">Spyder showing setting conditional breakpoint</video></div><p>You can access and edit local and global variables at each breakpoint through the <a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a>.</p>
 <img alt="Spyder's console and variable explorer showing local and global variables when debugging" src="../_images/debugging-variables.webp" />
 </section>
 <section id="advanced-features">
@@ -529,7 +547,7 @@ This allows breakpoints and the execution flow to be viewed and controlled right
 <span id="panes-debugger-matplotlib"></span><h2>Soporte Matplotlib<a class="headerlink" href="#matplotlib-support" title="Link to this heading">#</a></h2>
 <p>Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends.
 Use the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span></code> magic to change to an interactive backend (e.g. <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">qt5</span></code>) to pan, zoom and adjust your plots in a separate window, or switch back to the default <code class="docutils literal notranslate"><span class="pre">inline</span></code> (<code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>) to see them displayed right in the <a class="reference internal" href="plots.html#panes-plots"><span class="std std-ref">Gráficos</span></a> pane.</p>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/debugging-matplotlib.webm" type="video/webm">Debugger showing matplotlib interactive backend</video></div><p>Para evitar mostrar gráficos mientras se depura, desactiva la opción <span class="guilabel">Procesar ejecución de eventos al depurar</span> en <span class="menuselection">Preferencias ‣ Terminal de IPython ‣ Depurador</span>.</p>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/debugging-matplotlib.webm" type="video/webm">Debugger showing matplotlib interactive backend</video></div><p>Para evitar mostrar gráficos mientras se depura, desactiva la opción <span class="guilabel">Procesar ejecución de eventos al depurar</span> en <span class="menuselection">Preferencias ‣ Terminal de IPython ‣ Depurador</span>.</p>
 </section>
 <section id="related-panes">
 <span id="panes-debugger-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
@@ -618,8 +636,8 @@ Use the <code class="docutils literal notranslate"><span class="pre">%matplotlib
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=0790524f97105ba85085"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -653,7 +671,7 @@ Use the <code class="docutils literal notranslate"><span class="pre">%matplotlib
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.17.1.
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.18.0.
 </p></div>
       
     </div>
