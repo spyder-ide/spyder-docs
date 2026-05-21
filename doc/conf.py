@@ -184,12 +184,16 @@ html_static_path = ["_static"]
 # Custom CSS for the site
 html_css_files = [
     "css/driver.min.css",
+    "css/video-js.min.css",
+    "css/video_player.css",
     "css/custom_styles.css",
 ]
 
 # Custom Javascript for the site
 html_js_files = [
     "js/driver.min.js",
+    "js/video.min.js",
+    "js/video_player.js",
     "js/custom_scripts.js",
     "js/language-switcher.js",
 ]
