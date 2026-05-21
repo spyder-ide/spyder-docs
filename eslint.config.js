@@ -15,6 +15,7 @@ module.exports = [
       globals: {
         browser: true,
         jquery: true,
+        videojs: "readonly",
       },
     },
     linterOptions: {
