@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -38,10 +38,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=fdae0ad6" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../_static/scripts/fontawesome.js?digest=0790524f97105ba85085"></script>
+  <script defer src="../_static/scripts/fontawesome.js?digest=a95f357e85573c9b56d5"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=0790524f97105ba85085" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5" />
 
     <script src="../_static/documentation_options.js?v=59bdcf62"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
@@ -50,7 +50,7 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'panes/fileexplorer';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.19.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = '6';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -507,39 +507,33 @@
 <span id="panes-files"></span><h1>Archivos<a class="headerlink" href="#files" title="Link to this heading">#</a></h1>
 <p>The <strong>Files</strong> pane is a filesystem and directory browser built right into Spyder.
 You can view and filter files according to their type and extension, open them with the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a> or an external tool, and perform many common operations.</p>
-<img alt="Spyder Files pane, showing a tree view of files and metadata" src="../_images/files-standard.png" />
+<img alt="Spyder Files pane, showing a tree view of files and metadata" src="../_images/files-standard.webp" />
 <section id="panes-files-operations">
 <span id="file-operations"></span><span id="id1"></span><h2>Operaciones de archivo<a class="headerlink" href="#panes-files-operations" title="Link to this heading">#</a></h2>
 <p>Para navegar por los archivos de tu sistema, usa las flechas en la parte superior del panel. Puedes expandir/contraer las carpetas en el panel para mostrar los archivos y subdirectorios jerárquicamente. Al hacer doble clic en una carpeta se abrirá, mostrando los archivos dentro y haciéndolos tu directorio de trabajo.</p>
-<img alt="Spyder Files pane showing browsing directories" src="../_images/files-browse.gif" />
-<p>Para abrir un archivo en el <span class="guilabel">Editor</span> desde el panel <span class="guilabel">Archivos</span>, haz doble clic en su nombre. Si haces clic con el botón derecho sobre él, verás un menú contextual que te permite acceder a una serie de funciones, incluyendo ejecutar scripts; crear, renombrar, mover, eliminar archivos; y abrirlos en el gestor de archivos de su computadora.</p>
-<img alt="Spyder Files pane showing context menu" src="../_images/files-context-menu.png" />
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-browse.webm" type="video/webm">Spyder Files pane showing browsing directories</video></div><p>Para abrir un archivo en el <span class="guilabel">Editor</span> desde el panel <span class="guilabel">Archivos</span>, haz doble clic en su nombre. Si haces clic con el botón derecho sobre él, verás un menú contextual que te permite acceder a una serie de funciones, incluyendo ejecutar scripts; crear, renombrar, mover, eliminar archivos; y abrirlos en el gestor de archivos de su computadora.</p>
+<img alt="Spyder Files pane showing context menu" src="../_images/files-context-menu.webp" />
 <p>Puedes copiar y pegar uno o varios archivos desde y hacia el panel, y copiar sus rutas absolutas o relativas al portapapeles como texto. Si se copian las rutas para múltiples archivos, se formatearán automáticamente para que se puedan pegar directamente en una lista de Python.</p>
-<img alt="Spyder Files pane showing copying absolute path to Editor" src="../_images/files-copy-path.gif" />
-</section>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-copy-path.webm" type="video/webm">Spyder Files pane showing copying absolute path to Editor</video></div></section>
 <section id="version-control-support">
 <span id="panes-files-vcs"></span><span id="files-vcs-support"></span><h2>Soporte de control de versiones<a class="headerlink" href="#version-control-support" title="Link to this heading">#</a></h2>
 <p>The <span class="guilabel">Files</span> pane allows you to perform basic operations with the <a class="reference external" href="https://git-scm.com/">Git</a> distributed version control system, like committing your changes and browsing the repository a given file or folder is part of.
 This is <a class="reference internal" href="projects.html#panes-projects-vcs"><span class="std std-ref">particularly useful</span></a> when you’re working in Spyder <a class="reference internal" href="projects.html#panes-projects"><span class="std std-ref">Proyectos</span></a>.</p>
-<img alt="Spyder Files pane showing committing change of file" src="../_images/files-commit.gif" />
-</section>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-commit.webm" type="video/webm">Spyder Files pane showing committing change of file</video></div></section>
 <section id="options-menu">
 <span id="panes-files-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>El menú de opciones en la parte superior derecha del panel <span class="guilabel">Archivos</span> ofrece varias maneras de personalizar cómo se muestran tus archivos.</p>
 <p>Por defecto, el panel muestra el contenido de su directorio de trabajo sin filtrar. Sin embargo, puedes filtrar la lista para mostrar sólo archivos que coincidan con los patrones establecidos bajo <span class="guilabel">Mostrar nombres de archivo con estas extensiones…</span>, si activa el botón <span class="guilabel">Filtrar nombre de archivo</span> en la barra de herramientas del panel.</p>
-<img alt="Spyder Files pane showing filtering files" src="../_images/files-filters.gif" />
-<p>También puedes activar la opción <span class="guilabel">Mostrar archivos ocultos</span>, que mostrará archivos que son invisibles por defecto en su sistema operativo.</p>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-filters.webm" type="video/webm">Spyder Files pane showing filtering files</video></div><p>También puedes activar la opción <span class="guilabel">Mostrar archivos ocultos</span>, que mostrará archivos que son invisibles por defecto en su sistema operativo.</p>
 <p>Además, puedes cambiar qué atributos de archivo deseas ver ocultando o mostrando las columnas <span class="guilabel">Tipo</span>, <span class="guilabel">Tamaño</span> y <span class="guilabel">Fecha de modificación</span> usando las opciones de menú correspondientes.</p>
-<img alt="Spyder Files pane showing columns checked and shown" src="../_images/files-columns-display.png" />
+<img alt="Spyder Files pane showing columns checked and shown" src="../_images/files-columns-display.webp" />
 <p>El menú también te da la opción de abrir archivos y directorios con un solo clic en lugar de un doble clic, para que se adapte a tus preferencias.</p>
 </section>
 <section id="file-associations">
 <span id="panes-files-associations"></span><h2>Asociaciones de archivos<a class="headerlink" href="#file-associations" title="Link to this heading">#</a></h2>
 <p><span class="guilabel">Archivos</span> te permite asociar diferentes aplicaciones externas con extensiones específicas de archivo que pueden abrir. Bajo la pestaña <span class="guilabel">Asociaciones de archivos</span> del panel de preferencias <span class="guilabel">Archivos</span>, puedes añadir tipos de archivo y establecer el programa externo usado para abrir cada uno de ellos por defecto.</p>
-<img alt="Spyder Files pane showing files associations" src="../_images/files-associations.gif" />
-<p>Una vez que lo hayas configurado, los archivos se ejecutarán automáticamente en la aplicación asociada cuando se abran desde el panel <span class="guilabel">Archivos</span> de Spyder. Además, cuando haces clic derecho en un archivo, encontrarás un <span class="guilabel">Abrir con…</span> que te permitirá seleccionar entre las aplicaciones asociadas a esta extensión.</p>
-<img alt="Spyder Files pane showing opening file with associated program" src="../_images/files-associations-open.gif" />
-</section>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-associations.webm" type="video/webm">Spyder Files pane showing files associations</video></div><p>Una vez que lo hayas configurado, los archivos se ejecutarán automáticamente en la aplicación asociada cuando se abran desde el panel <span class="guilabel">Archivos</span> de Spyder. Además, cuando haces clic derecho en un archivo, encontrarás un <span class="guilabel">Abrir con…</span> que te permitirá seleccionar entre las aplicaciones asociadas a esta extensión.</p>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/files-associations-open.webm" type="video/webm">Spyder Files pane showing opening file with associated program</video></div></section>
 <section id="related-panes">
 <span id="panes-files-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -627,8 +621,8 @@ This is <a class="reference internal" href="projects.html#panes-projects-vcs"><s
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=0790524f97105ba85085"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -662,7 +656,7 @@ This is <a class="reference internal" href="projects.html#panes-projects-vcs"><s
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.18.0.
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.19.0.
 </p></div>
       
     </div>
