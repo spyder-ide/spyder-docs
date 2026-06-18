@@ -4,7 +4,7 @@
 Welcome to Spyder's Documentation
 #################################
 
-.. image:: /images/mainwindow/mainwindow_default_1610.png
+.. image:: /images/mainwindow/mainwindow_default.webp
    :align: center
    :alt: Screenshot of the Spyder main window, with the default panel layout
 
