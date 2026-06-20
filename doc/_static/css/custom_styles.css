@@ -1,3 +1,18 @@
+/* Fonts */
+@font-face {
+  font-family: "Silka";
+  src: url("../fonts/silka-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silka";
+  src: url("../fonts/silka-regularitalic-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
 /* PyData Sphinx Theme variables */
 @property --color-primary {
   inherits: true;
@@ -8,6 +23,8 @@
 :root {
   /* stylelint-disable-next-line no-unknown-custom-properties -- PyData Sphinx Theme variable */
   --color-primary: var(--pst-color-primary);
+  --pst-font-family-base: "Silka", Futura, Trebuchet MS, Arial, sans-serif;
+  --pst-font-family-heading: "Silka", Futura, Trebuchet MS, Arial, sans-serif;
 }
 
 /* Increase content width and decrease left sidebar width */
