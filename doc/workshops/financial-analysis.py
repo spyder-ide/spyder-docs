@@ -87,7 +87,7 @@ print(monthly_data_1.std())
 
 
 # %% Returns per day
-rets_1 = np.log(close_data_1/close_data_1.shift(1)).dropna()
+rets_1 = (close_data_1/close_data_1.shift(1)).dropna()
 weights_1 = [0.2, 0.2, 0.2, 0.2, 0.2]
 
 
@@ -224,7 +224,7 @@ print(monthly_data_2.std())
 
 
 # %% Plot daily timeline
-rets_2 = np.log(close_data_2[SYMBOLS_2] /
+rets_2 = (close_data_2[SYMBOLS_2] /
                 close_data_2[SYMBOLS_2].shift(1)).dropna()
 
 (close_data_2[SYMBOLS_2] /
@@ -342,7 +342,7 @@ monthly_data_3 = crypto_hist.resample("M").ffill().pct_change()
 
 
 # %% Returns per day
-rets_3 = np.log(crypto_hist[SYMBOLS_3] /
+rets_3 = (crypto_hist[SYMBOLS_3] /
                 crypto_hist[SYMBOLS_3].shift(1)).dropna()
 
 
