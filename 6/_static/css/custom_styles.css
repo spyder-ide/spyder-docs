@@ -8,6 +8,9 @@
 :root {
   /* stylelint-disable-next-line no-unknown-custom-properties -- PyData Sphinx Theme variable */
   --color-primary: var(--pst-color-primary);
+  --fa-family-free: "Font Awesome 7 Free";
+  --fa-family-brands: "Font Awesome 7 Brands";
+  --fa-style: 900;
 }
 
 /* Increase content width and decrease left sidebar width */
@@ -27,28 +30,6 @@
   }
 }
 
-/* Temporarily fix page source styling due to to pydata/pydata-sphinx-theme#2088 */
-/* https://github.com/pydata/pydata-sphinx-theme/issues/2088 */
-
-.sidebar-secondary-item ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-secondary-item h3 {
-  display: none;
-}
-
-.sidebar-secondary-item .this-page-menu a::before {
-  content: "\f15c";
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 6 Free";
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-right: 0.5em;
-  vertical-align: sub;
-}
-
 /* Center navbar nav items */
 
 @media (min-width: 960px) {
@@ -58,6 +39,14 @@
 }
 .bd-header .me-auto {
   margin-left: auto !important;
+}
+
+/* Make guilabel and menuselection style consistent and don't line-break */
+
+span.guilabel,
+span.menuselection {
+  font-size: 80%; /* Default for guilabel, not menuselection in PDST 0.20 */
+  white-space: nowrap;
 }
 
 /* Fix search icon margin on mobile */
@@ -81,23 +70,26 @@ section img {
 .fasb::before,
 .fabb::before {
   color: var(--color-primary);
+  /* stylelint-disable-next-line no-unknown-custom-properties -- Font Awesome variable */
+  content: var(--fa) / "";
   display: inline-block;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 6 Free";
+  font-family: var(--fa-family-free);
+  font-feature-settings: normal;
   font-size: 26px;
   font-style: normal;
+  font-synthesis: none;
   font-variant: normal;
-  font-weight: 900;
+  font-weight: var(--fa-style, 900);
   line-height: 1;
   margin-right: 5px;
+  text-rendering: auto;
   vertical-align: middle;
 }
 
 /* Style for Font Awesome brands */
 
 .fabb::before {
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 6 Brands";
+  font-family: var(--fa-family-brands);
 }
 
 /* Ensure FA icons applied to section divs display inline */
@@ -291,8 +283,7 @@ table.installer-table td {
 }
 
 table.installer-table tbody td p::before {
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 6 Brands";
+  font-family: var(--fa-family-brands);
 }
 
 table.installer-table tbody td:nth-child(1) p,
