@@ -27,28 +27,6 @@
   }
 }
 
-/* Temporarily fix page source styling due to to pydata/pydata-sphinx-theme#2088 */
-/* https://github.com/pydata/pydata-sphinx-theme/issues/2088 */
-
-.sidebar-secondary-item ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-secondary-item h3 {
-  display: none;
-}
-
-.sidebar-secondary-item .this-page-menu a::before {
-  content: "\f15c";
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- We want this exact font family */
-  font-family: "Font Awesome 6 Free";
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-right: 0.5em;
-  vertical-align: sub;
-}
-
 /* Center navbar nav items */
 
 @media (min-width: 960px) {
