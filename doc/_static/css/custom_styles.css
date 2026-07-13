@@ -41,6 +41,14 @@
   margin-left: auto !important;
 }
 
+/* Make guilabel and menuselection style consistent and don't line-break */
+
+span.guilabel,
+span.menuselection {
+  font-size: 80%; /* Default for guilabel, not menuselection in PDST 0.20 */
+  white-space: nowrap;
+}
+
 /* Fix search icon margin on mobile */
 
 @media (max-width: 959.98px) {
