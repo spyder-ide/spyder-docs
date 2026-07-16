@@ -27,16 +27,16 @@ Finally, you'll get to walk through some of Spyder's key panes and functionality
         <rect id="toolbar-rect" class="highlight-rect tour-default-layout-main" x="2" y="2" width="1276" height="40" />
         <rect id="statusbar-rect" class="highlight-rect tour-default-layout-main" x="2" y="745" width="1276" height="23" />
         <rect id="options-menu-rect" class="highlight-rect tour-options-menu" x="617" y="70" width="245" height="553" />
-        <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="52" y="160" width="244" height="519" />
+        <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="85" y="160" width="320" height="520" />
         <rect id="editor-rect" class="highlight-rect tour-default-layout-main" x="2" y="45" width="650" height="700" />
-        <rect id="console-rect" class="highlight-rect tour-default-layout-main" x="660" y="450" width="618" height="294" />
-        <rect id="help-rect" class="highlight-rect tour-default-layout-main" x="660" y="46" width="618" height="398" />
-        <rect id="variable-explorer-rect" class="highlight-rect tour-variable-explorer" x="660" y="46" width="618" height="398" />
-        <rect id="plots-rect" class="highlight-rect tour-plots" x="660" y="46" width="618" height="398" />
-        <rect id="files-rect" class="highlight-rect tour-files" x="660" y="46" width="618" height="398" />
-        <rect id="find-rect" class="highlight-rect tour-find" x="660" y="46" width="618" height="398" />
-        <rect id="profiler-rect" class="highlight-rect tour-profiler" x="660" y="46" width="618" height="398" />
-        <rect id="code-analysis-rect" class="highlight-rect tour-code-analysis" x="660" y="46" width="618" height="398" />
+        <rect id="console-rect" class="highlight-rect tour-default-layout-main" x="660" y="460" width="618" height="290" />
+        <rect id="help-rect" class="highlight-rect tour-default-layout-main" x="660" y="46" width="618" height="413" />
+        <rect id="variable-explorer-rect" class="highlight-rect tour-variable-explorer" x="660" y="46" width="618" height="360" />
+        <rect id="plots-rect" class="highlight-rect tour-plots" x="660" y="46" width="618" height="370" />
+        <rect id="files-rect" class="highlight-rect tour-files" x="660" y="46" width="618" height="413" />
+        <rect id="find-rect" class="highlight-rect tour-find" x="660" y="46" width="618" height="413" />
+        <rect id="profiler-rect" class="highlight-rect tour-profiler" x="660" y="46" width="618" height="428" />
+        <rect id="code-analysis-rect" class="highlight-rect tour-code-analysis" x="660" y="46" width="618" height="360" />
       </svg>
    </div>
    <input id="quickstart-tour-start" type="button" value="Restart Tour" />
