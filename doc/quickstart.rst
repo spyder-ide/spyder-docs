@@ -27,7 +27,7 @@ Finally, you'll get to walk through some of Spyder's key panes and functionality
         <rect id="toolbar-rect" class="highlight-rect tour-default-layout-main" x="2" y="2" width="1276" height="40" />
         <rect id="statusbar-rect" class="highlight-rect tour-default-layout-main" x="2" y="745" width="1276" height="23" />
         <rect id="options-menu-rect" class="highlight-rect tour-options-menu" x="617" y="70" width="245" height="553" />
-        <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="85" y="160" width="320" height="520" />
+        <rect id="context-menu-rect" class="highlight-rect tour-context-menu" x="90" y="132" width="320" height="520" />
         <rect id="editor-rect" class="highlight-rect tour-default-layout-main" x="2" y="45" width="650" height="700" />
         <rect id="console-rect" class="highlight-rect tour-default-layout-main" x="660" y="460" width="618" height="290" />
         <rect id="help-rect" class="highlight-rect tour-default-layout-main" x="660" y="46" width="618" height="413" />
