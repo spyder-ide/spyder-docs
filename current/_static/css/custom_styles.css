@@ -60,7 +60,7 @@ span.menuselection {
 
 /* Increase bottom margin for images */
 
-section img {
+section img:not(.tour-screenshot) {
   display: block;
   margin: 1rem auto;
 }
