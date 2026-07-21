@@ -296,7 +296,7 @@ Let's build our first stock investment portfolio! Say we are interested in inves
 
 To measure the performance of our first portfolio we are going to use a classic theory in the world of finance: `mean-variance portfolio (MVP) theory`_. This model assumes that investors only care about expected returns and the variance of such returns. The analysis is based entirely on statistical measures based on a time series of share prices, such as periodic mean returns and the variances of those returns with the same periodicity.
 
-.. _`mean-variance portfolio (MVP) theory`: https://analystprep.com/study-notes/actuarial-exams/soa/ifm-investment-and-financial-markets/mean-variance-portfolio-theory/
+.. _`mean-variance portfolio (MVP) theory`: https://en.wikipedia.org/wiki/Modern_portfolio_theory
 
 
 Prepare portfolio data
