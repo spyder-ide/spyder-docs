@@ -131,6 +131,12 @@ pygments_style = "sphinx"
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
 
+# Sphinx warnings to suppress
+suppress_warnings = [
+    # Temporary until spyder-ide/spyder-docs#386 is fixed
+    "i18n.inconsistent_references",
+]
+
 
 # -- Options for HTML output -------------------------------------------------
 
