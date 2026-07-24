@@ -33,7 +33,7 @@ Visit the `Spyder Binder`_ page to get started using Spyder.
 .. _Binder: https://mybinder.org/
 .. _Spyder Binder: https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster
 
-.. image:: /images/installation/installation-spyder-binder.png
+.. image:: /images/installation/installation-spyder-binder.webp
    :alt: Spyder running on Binder
 
 
@@ -157,7 +157,8 @@ To make sure future installs/updates in this environment also use Conda-Forge an
 
 Here's a summary of the main steps.
 
-.. image:: /images/installation/installation-conda-install.gif
+.. video:: /images/installation/installation-conda-install.webm
+   :loop:
    :alt: Running Spyder installation with conda
 
 
@@ -215,7 +216,7 @@ To run the bundled version of Spyder after installing Anaconda, simply launch it
 
 While not recommended, it can also be started from Anaconda Navigator by scrolling to Spyder under :guilabel:`Home` and clicking :guilabel:`Launch`.
 
-.. image:: /images/installation/installation-anaconda-navigator.png
+.. image:: /images/installation/installation-anaconda-navigator.webp
    :alt: Anaconda Navigator showing Spyder
 
 If Spyder does not start via this method or you prefer to use the command line, open your system terminal (Anaconda Prompt on Windows), and type ``conda activate base`` then ``spyder``.
@@ -299,7 +300,8 @@ Or for a minimal installation, run:
 
    pip install spyder
 
-.. image:: /images/installation/installation-pip-install.gif
+.. video:: /images/installation/installation-pip-install.webm
+   :loop:
    :alt: Running Spyder installation with pip
 
 To launch Spyder after installing it, ensure your environment is activated and run the ``spyder`` or ``spyder3`` command.
