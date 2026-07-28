@@ -99,6 +99,25 @@ Stack frame browser
 
 New in Spyder 6, the Spyder :guilabel:`Debugger` pane now features a stack frame browser, allowing you to easily view and explore the execution stack while debugging.
 
+.. note::
+
+   Each time your code calls into a function, it is added to the stack and execution continues inside that function, with further levels being added if that function calls another function.
+   When a function finishes executing and returns, it is popped from the stack and execution continues with the function that called it, on the previous level of the stack.
+   Each level of the stack has its own namespace, i.e. its own local variables, and normally cannot directly access those defined within other levels, so that local variables in someone else's function don't conflict with your own.
+   You can think of it like a "stack" of papers, which each paper being a function that forms one level of execution, the values of local variables being written only on that one sheet of paper and papers being added or removed only from the top of the stack.
+
+The highest-level code where execution started is shown at the top, while the lowest-level function, the one currently executing, is shown at the bottom, just like in an error traceback.
+From left to right, you can see the filename, line number in the file and the line of code that was last executed at that level.
+Clicking any line will jump to that level in the execution stack, allowing you to run code there in the :guilabel:`IPython Console`.
+Furthermore, it will display that file in the :guilabel:`Editor`, with the arrow icon pointing to the line that was run there, and the :guilabel:`Variable Explorer` will switch to show the values of the local variables visible in that stack frame's namespace.
+
+.. _panes-debugger-postmortem:
+
+The stack frame browser also allows you to explore the levels of an exception traceback when an error occurs in your code.
+When an exception is raised, it is automatically displayed in the browser, in the same format as the debugger stack, and you can click each level of the traceback to jump to that file and line.
+To jump into the live debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
+You can then use the stack frame browser as before to view and interact with the code and variables at different levels of the execution stack, by simply clicking them.
+The Debugger pane remembers the last error that occurred even if you run further code or make changes to your files, up until you either jump into the Debugger or another error is raised.
 
 
 
