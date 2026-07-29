@@ -81,6 +81,9 @@ If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:
 .. _macOS Intel: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-x86_64.pkg
 .. _Linux: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Linux-x86_64.sh
 
+.. image:: /images/installation/installation-standalone-installer.webp
+   :alt: Spyder standalone installer running on Windows
+
 
 .. _install-standalone-running:
 
@@ -98,6 +101,9 @@ Updating a standalone install
 By default, Spyder checks for updates automatically on startup, and you can also check manually with :menuselection:`Help --> Check for updates`.
 Standalone installers for Spyder 6+ include update functionality built right into the application, which after checking for updates will display a prompt to automatically download and install the latest version.
 On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
+
+.. image:: /images/installation/installation-standalone-update.webp
+   :alt: Spyder standalone updater running on Windows
 
 
 
