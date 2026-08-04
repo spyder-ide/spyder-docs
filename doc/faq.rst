@@ -81,7 +81,7 @@ Installing and updating
    Go to :guilabel:`Install specific version` and select the version of Spyder you want to use.
    We strongly recommend the latest available, to benefit from new features, bug fixes, performance improvements and usability enhancements.
 
-   .. image:: /images/faq/faq-navigator-install.png
+   .. image:: /images/faq/faq-navigator-install.webp
       :alt: Navigator showing installing specific version of Spyder
 
 
@@ -99,7 +99,7 @@ Running Spyder
    Your operating system will typically allow you to pin this shortcut for even quicker access (to the Taskbar on Windows, the Dock on macOS or your distro's quick launcher on Linux).
    If installed via Conda in its own environment, the shortcut will have the environment name in its title, and multiple shortcuts for different Spyder environments may be available.
 
-     .. image:: /images/faq/faq-windows-launch.png
+     .. image:: /images/faq/faq-windows-launch.webp
         :alt: Spyder shortcut in the Windows Start menu
 
 
@@ -158,14 +158,14 @@ Running Spyder
 
    While not recommended, if you've installed Spyder via Anaconda it can also be launched from Anaconda Navigator by scrolling to :guilabel:`Spyder` under :guilabel:`Home` and clicking :guilabel:`Launch`.
 
-   .. image:: /images/faq/faq-launch-anaconda.png
+   .. image:: /images/faq/faq-launch-anaconda.webp
       :alt: Navigator showing running a specific version of Spyder
 
    To run the copy of Spyder installed in a specific environment, select the environment you want to launch Spyder from under :guilabel:`Applications on`.
    If Spyder is installed in this environment, you will see it in Navigator's :guilabel:`Home` window.
    Click :guilabel:`Launch` to start Spyder in your selected environment.
 
-   .. image:: /images/faq/faq-run-environment.png
+   .. image:: /images/faq/faq-run-environment.webp
       :alt: Navigator showing running Spyder in a specific environment
 
 
@@ -205,7 +205,7 @@ Using Spyder
    Here, click the option :guilabel:`Select interpreter` and use the dropdown below to select your preferred environment.
    If it's not listed, see :ref:`the note below <faq-env-not-listed>`.
 
-   .. image:: /images/faq/faq-python-interpreter.png
+   .. image:: /images/faq/faq-python-interpreter.webp
       :alt: Preferences showing changing Python interpreter
 
    .. _faq-env-not-listed:
@@ -289,7 +289,7 @@ Using Spyder
    * Open :guilabel:`Reset Spyder 6 to default settings` operating system shortcut if available (e.g. in the Start menu on Windows)
    * Run ``spyder --reset`` in your system terminal (Anaconda Prompt on Windows) after activating the environment Spyder is installed in.
 
-   .. image:: /images/faq/faq-reset-spyder.png
+   .. image:: /images/faq/faq-reset-spyder.webp
       :alt: Spyder reset button in Tools
 
 
@@ -298,7 +298,7 @@ Using Spyder
 
    Under :guilabel:`Application` in Spyder's :guilabel:`Preferences`, go to the :guilabel:`Advanced settings` tab and select your language from the options displayed under :guilabel:`Language`.
 
-   .. image:: /images/faq/faq-change-language.png
+   .. image:: /images/faq/faq-change-language.webp
       :alt: Spyder change language in preferences.
 
 
@@ -309,7 +309,7 @@ Using Spyder
    Each ``# %%`` will make a new cell.
    To run a cell, press :kbd:`Shift-Enter` (while your cursor is focused on it) or use the :guilabel:`Run current cell` button in Spyder's toolbar.
 
-   .. image:: /images/faq/faq-cells.png
+   .. image:: /images/faq/faq-cells.webp
       :alt: Spyder showing code cells
 
 
@@ -318,7 +318,7 @@ Using Spyder
 
    Check the option :guilabel:`Remove all variables before execution` of the :guilabel:`Configuration per file` dialog under the :guilabel:`Run` menu.
 
-   .. image:: /images/faq/faq-remove-variables.png
+   .. image:: /images/faq/faq-remove-variables.webp
       :alt: Spyder's remove all variables run configuration
 
 
@@ -329,7 +329,7 @@ Using Spyder
 
    If you want to quickly switch between multiple groups of settings, you can save them to separate presets by setting a different :guilabel:`Name` under :guilabel:`Configuration properties`.
 
-   .. image:: /images/faq/faq-run-options.png
+   .. image:: /images/faq/faq-run-options.webp
       :alt: Spyder showing run configuration options
 
 
@@ -346,7 +346,7 @@ Using Spyder
    Go to :guilabel:`Preferences` and select the theme you want under :guilabel:`Syntax highlighting theme` in the :guilabel:`Appearance` section.
    You can also change Spyder's global interface theme (light or dark) under :guilabel:`Interface theme` in that same preferences pane.
 
-   .. image:: /images/faq/faq-highlighting-theme.png
+   .. image:: /images/faq/faq-highlighting-theme.webp
       :alt: Spyder showing theme selection
 
 
