@@ -4,8 +4,8 @@
 Debugger
 ########
 
-The new **Debugger** pane added in Spyder 6 allows you to control the debugging process, browse and navigate the current execution stack, and view and manage active breakpoints throughout your open files.
-This uses the enhanced IPDB debugger, which can also be controlled via the familiar commands in the toolbar and the :ref:`panes-console`.
+The new **Debugger** pane added in Spyder 6 allows you to control the debugging process, browse and navigate the current execution stack, and view and manage active breakpoints throughout your files.
+This uses the enhanced IPdb debugger, which can be controlled via the buttons in Spyder's main toolbar and the :ref:`panes-console`.
 
 .. image:: /images/debugging/debugging-console.webp
    :alt: The Spyder interface, showing an Editor file with breakpoints and debug status, the Debugger pane with the execution stack and breakpoints, and the IPython Console with debug commands
@@ -19,7 +19,7 @@ This uses the enhanced IPDB debugger, which can also be controlled via the famil
 Debugging with Spyder
 =====================
 
-You can control debugger execution via the buttons in the :guilabel:`Debugger` pane, as well as from the :guilabel:`Debug` menu, the buttons in the main toolbar and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands`_.
+You can control debugger execution via the buttons in the main toolbar and :guilabel:`Debugger` pane, as well as from the :guilabel:`Debug` menu and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands`_.
 
 .. _console commands: https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html
 
@@ -97,19 +97,19 @@ You can access and edit local and global variables at each breakpoint through th
 Stack frame browser
 ===================
 
-New in Spyder 6, the Spyder :guilabel:`Debugger` pane now features a stack frame browser, allowing you to easily view and explore the execution stack while debugging.
+New in Spyder 6, the :guilabel:`Debugger` pane now features a stack frame browser, allowing you to easily view and explore the execution stack while debugging.
 
 .. note::
 
-   Each time your code calls into a function, it is added to the stack and execution continues inside that function, with further levels being added if that function calls another function.
+   Each time your code calls a function, it is added to the stack and execution continues inside that function, with further levels being added if that function itself calls further functions.
    When a function finishes executing and returns, it is popped from the stack and execution continues with the function that called it, on the previous level of the stack.
-   Each level of the stack has its own namespace, i.e. its own local variables, and normally cannot directly access those defined within other levels, so that local variables in someone else's function don't conflict with your own.
+   Each level of the stack has its own namespace, i.e. its own local variables, and normally cannot directly access those defined within other levels, so that variables in different functions don't conflict.
    You can think of it like a "stack" of papers, which each paper being a function that forms one level of execution, the values of local variables being written only on that one sheet of paper and papers being added or removed only from the top of the stack.
 
 The highest-level code where execution started is shown at the top, while the lowest-level function, the one currently executing, is shown at the bottom, just like in an error traceback.
 From left to right, you can see the filename, line number in the file and the line of code that was last executed at that level.
-Clicking any line will jump to that level in the execution stack, allowing you to run code there in the :guilabel:`IPython Console`.
-Furthermore, it will display that file in the :guilabel:`Editor`, with the arrow icon pointing to the line that was run there, and the :guilabel:`Variable Explorer` will switch to show the values of the local variables visible in that stack frame's namespace.
+Clicking any line will jump to that level in the execution stack, allowing you to run code in that context in the :guilabel:`IPython Console`.
+Furthermore, it will also display that file in the :guilabel:`Editor`, with the arrow icon pointing to the line that was run there, and the :guilabel:`Variable Explorer` will switch to show the values of the local variables visible in that stack frame's namespace.
 
 .. _panes-debugger-postmortem:
 
@@ -117,7 +117,7 @@ The stack frame browser also allows you to explore the levels of an exception tr
 When an exception is raised, it is automatically displayed in the browser, in the same format as the debugger stack, and you can click each level of the traceback to jump to that file and line.
 To jump into the live debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
 You can then use the stack frame browser as before to view and interact with the code and variables at different levels of the execution stack, by simply clicking them.
-The Debugger pane remembers the last error that occurred even if you run further code or make changes to your files, up until you either jump into the Debugger or another error is raised.
+The Debugger pane remembers the last error that occurred even if you run further code or make changes to your files, up until you either start a debugging session or another error is raised.
 
 
 
@@ -133,11 +133,11 @@ This will skip stopping on any line of code inside the built-in and third-party 
 .. image:: /images/debugging/debugging-libraries.webp
    :alt: Spyder's preferences, showing the Ignore Python libraries while debugging option
 
-If your code has variables with the same names as IPDB commands (e.g. ``b`` or ``step``), you can still refer to those variables as normal while debugging.
-To call the respective IPDB command, just add an exclamation point before it (e.g. ``!b`` or ``!step``).
+If your code has variables with the same names as IPdb commands (e.g. ``b`` or ``step``), you can still refer to those variables as normal while debugging.
+To call the respective IPdb command, just add an exclamation point before it (e.g. ``!b`` or ``!step``).
 
 .. image:: /images/debugging/debugging-commands.webp
-   :alt: Spyder's IPython Console, showing how to type IPDB commands with an exclamation mark
+   :alt: Spyder's IPython Console, showing how to type IPdb commands with an exclamation mark
 
 You can have Spyder automatically execute a custom snippet of code every time the debugger stops.
 For example, you can use this to set specific variables, or import commonly-used modules so they are always available while debugging.
