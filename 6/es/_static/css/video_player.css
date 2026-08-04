@@ -27,6 +27,14 @@
   visibility: visible;
 }
 
+.bd-article .sphinx-contrib-video-container .vjs-controls-enabled.vjs-has-started {
+  margin-bottom: 3em;
+}
+
+.bd-article .sphinx-contrib-video-container .video-js .vjs-control-bar {
+  bottom: -3em;
+}
+
 .bd-article .sphinx-contrib-video-container + p,
 .bd-article .sphinx-contrib-video-container + img {
   margin-top: 1rem;
