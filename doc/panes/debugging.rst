@@ -56,6 +56,12 @@ Finally, you can enter and execute multiline statements in Spyder's debugger jus
    :nocontrols:
    :alt: Demonstration of multiline execution in the IPython Console when debugging
 
+If your code has variables with the same names as IPdb commands (e.g. ``b`` or ``step``), you can still refer to those variables as normal while debugging.
+To call the respective IPdb command, add an exclamation point before it (e.g. ``!b`` or ``!step``).
+
+.. image:: /images/debugging/debugging-commands.webp
+   :alt: Spyder's IPython Console, showing how to type IPdb commands with an exclamation mark
+
 
 
 .. _panes-debugger-breakpoints:
@@ -111,13 +117,8 @@ From left to right, you can see the filename, line number in the file and the li
 Clicking any line will jump to that level in the execution stack, allowing you to run code in that context in the :guilabel:`IPython Console`.
 Furthermore, it will also display that file in the :guilabel:`Editor`, with the arrow icon pointing to the line that was run there, and the :guilabel:`Variable Explorer` will switch to show the values of the local variables visible in that stack frame's namespace.
 
-.. _panes-debugger-postmortem:
-
-The stack frame browser also allows you to explore the levels of an exception traceback when an error occurs in your code.
-When an exception is raised, it is automatically displayed in the browser, in the same format as the debugger stack, and you can click each level of the traceback to jump to that file and line.
-To jump into the live debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
-You can then use the stack frame browser as before to view and interact with the code and variables at different levels of the execution stack, by simply clicking them.
-The Debugger pane remembers the last error that occurred even if you run further code or make changes to your files, up until you either start a debugging session or another error is raised.
+The stack frame browser also allows you to explore the levels of an error traceback after an exception occurs, as well as inspect the execution stack of code currently running in the :ref:`panes-console`, without having to start a debugging session.
+When clicking the :guilabel:`Inspect execution` toolbar button or an exception is raised, the relevant stack frames are displayed in the browser, in the same format as when debugging, and you can click each level of the traceback to jump to that file and line.
 
 
 
@@ -127,17 +128,28 @@ The Debugger pane remembers the last error that occurred even if you run further
 Advanced features
 =================
 
+If your code is taking a long time to run, or you want to see what it is doing at any given point, you can use the :guilabel:`Inspect execution` button in the :guilabel:`Debugger` pane toolbar.
+This retrieves the current stack frame from the kernel and displays it in the :ref:`panes-debugger-stack`, without interrupting execution or launching a new debugging session.
+
+To actually stop executing your code and launch the debugger inside the current execution, use the :guilabel:`Interrupt execution and start the debugger` button in the :guilabel:`Debugger` pane toolbar.
+This starts a live debugging session, in which you can run code and inspect variables as well as browse the stack.
+
+The :guilabel:`Debugger` pane also automatically displays the full traceback of the last exception raised by your code in the :ref:`panes-debugger-stack`, including the full error traceback, which it remembers even if you run something else or make changes to your files, until you either start a debugging session or another exception occurs.
+To jump into the debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
+
+
+
+.. _panes-debugger-options:
+
+================
+Debugger options
+================
+
 You can avoid stepping through other Python packages while debugging by enabling the :guilabel:`Ignore Python libraries while debugging` option in Spyder's Preferences, under :menuselection:`Debugger --> Interaction`.
 This will skip stopping on any line of code inside the built-in and third-party Python modules you have installed, to focus on debugging your own code.
 
 .. image:: /images/debugging/debugging-libraries.webp
    :alt: Spyder's preferences, showing the Ignore Python libraries while debugging option
-
-If your code has variables with the same names as IPdb commands (e.g. ``b`` or ``step``), you can still refer to those variables as normal while debugging.
-To call the respective IPdb command, just add an exclamation point before it (e.g. ``!b`` or ``!step``).
-
-.. image:: /images/debugging/debugging-commands.webp
-   :alt: Spyder's IPython Console, showing how to type IPdb commands with an exclamation mark
 
 You can have Spyder automatically execute a custom snippet of code every time the debugger stops.
 For example, you can use this to set specific variables, or import commonly-used modules so they are always available while debugging.
@@ -146,22 +158,14 @@ To set this up, go to :menuselection:`Preferences --> Debugger --> Run code whil
 .. image:: /images/debugging/debugging-snippet.webp
    :alt: The Debugger pane of Spyder's Preferences, showing how to add a snippet of code to run while debugging
 
-
-
 .. _panes-debugger-matplotlib:
 
-==================
-Matplotlib support
-==================
-
-Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends.
-Use the ``%matplotlib`` magic to change to an interactive backend (e.g. ``%matplotlib qt5``) to pan, zoom and adjust your plots in a separate window, or switch back to the default ``inline`` (``%matplotlib inline``) to see them displayed right in the :ref:`panes-plots` pane.
+Generating Matplotlib figures is fully supported while the debugger is active, including all the different graphics backends described in the :ref:`panes-plots`.
 
 .. video:: /images/debugging/debugging-matplotlib.webm
    :loop:
    :nocontrols:
    :alt: Debugger showing matplotlib interactive backend
-
 
 To avoid showing plots while debugging, deactivate the :guilabel:`Process execute events while debugging` option in :menuselection:`Preferences --> Debugger --> Interaction`.
 
