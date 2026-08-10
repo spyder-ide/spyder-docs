@@ -99,8 +99,8 @@ Running Spyder
    Your operating system will typically allow you to pin this shortcut for even quicker access (to the Taskbar on Windows, the Dock on macOS or your distro's quick launcher on Linux).
    If installed via Conda in its own environment, the shortcut will have the environment name in its title, and multiple shortcuts for different Spyder environments may be available.
 
-     .. image:: /images/faq/faq-windows-launch.webp
-        :alt: Spyder shortcut in the Windows Start menu
+   .. image:: /images/faq/faq-windows-launch.webp
+      :alt: Spyder shortcut in the Windows Start menu
 
 
 .. dropdown:: Q: Can I try Spyder without installing it?
@@ -200,8 +200,15 @@ Using Spyder
 
    You can open a new console in an existing Conda or Pyenv environment using the :guilabel:`New console in environment` submenu of the :guilabel:`Consoles` menu or the tab context menu of the :ref:`panes-console` pane.
 
+   .. image:: /images/faq/faq-change-environment-console.webp
+      :alt: Spyder IPython Console context menu showing list of environments to open a new console in
+
    You can manually add other virtual environments not located at standard paths, as well as change the default environment for new :ref:`panes-console`\s, in the :guilabel:`Python interpreter` section of Spyder's Preferences.
    This can be quickly accessed by clicking the current environment name in Spyder's status bar, then :guilabel:`Change default environment in Preferences...`.
+
+   .. image:: /images/faq/faq-change-environment.webp
+      :alt: Spyder status bar showing current environment widget, with menu selected containing a quick link to the Python Interpreter preferences pane
+
    Here, click the option :guilabel:`Select interpreter` and use the dropdown below to select your preferred environment.
    If it's not listed, see :ref:`the note below <faq-env-not-listed>`.
 
@@ -339,6 +346,9 @@ Using Spyder
    As of Spyder 6, there is now a dedicated :guilabel:`Run in external terminal` item in the :guilabel:`Run` menu to do just that.
    You can also now set separate external terminal-specific run configuration options for the current file by selecting the corresponding :guilabel:`Runner` in the :guilabel:`Run configuration per file` dialog, and for all files in the :guilabel:`Run` entry in Spyder's :guilabel:`Preferences`.
 
+   .. image:: /images/faq/faq-run-external.webp
+      :alt: Spyder showing option to run code in an external terminal
+
 
 .. dropdown:: Q: How do I change the syntax highlighting theme in the Editor?
    :name: using-syntax-theme
@@ -381,6 +391,9 @@ Troubleshooting
    If nothing is displayed in the calltip, hover hint or :ref:`panes-help` pane, make sure the object you are inspecting has a docstring, and try executing your code in the :ref:`panes-console` to get help and completions there.
    If this doesn't work, try restarting the LSP server by clicking the :guilabel:`LSP: Python` item in the status bar at the bottom of Spyder's main window, and selecting the :guilabel:`Restart Python Language Server` option.
 
+   .. image:: /images/faq/faq-code-completion.webp
+      :alt: Spyder showing code completion status bar item with option to restart
+
    For more information, go to the :ref:`troubleshooting-common-completion` section in the :ref:`troubleshooting-common` page of our troubleshooting guide.
 
 
@@ -391,6 +404,9 @@ Troubleshooting
    See the table in the :ref:`troubleshooting-common-kernel-version` section of the troubleshooting guide to check.
 
    To install the correct version, copy the suggested command Spyder displays for you in the error message and run it in a system terminal (Anaconda Prompt on Windows if using Conda) with the Python environment you want to use activated.
+
+   .. image:: /images/faq/faq-kernel-error.webp
+      :alt: Spyder showing IPython Console with error staring the kernel due to an unsupported Spyder-Kernels version
 
    For more information, go to the :ref:`troubleshooting-common-kernel` section in the :ref:`troubleshooting-common` page of our troubleshooting guide.
 
