@@ -345,3 +345,9 @@ a.dropdown-link:focus {
 html[data-theme="dark"] img {
   filter: none !important;
 }
+
+/* Override image background color to avoid corner artifact */
+
+html[data-theme="dark"] .bd-content img:not(.only-dark, .dark-light) {
+  background-color: transparent;
+}
