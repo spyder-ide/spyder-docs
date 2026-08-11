@@ -26,7 +26,12 @@ Installing and updating
 
    If you already installed Spyder on your Windows machine, you do not need to reinstall it on a WSL2-based Linux environment to run your code there.
 
-   Instead, just create a new Conda or venv/virtualenv environment (using system Python without a venv is **not** recommended), then install Spyder-Kernels into that environment with e.g. ``conda install -c conda-forge spyder-kernels``.
+
+   Instead, create a new Conda environment (with ``conda create -n my-env -c conda-forge python``) or venv/virtualenv (with e.g. ``python -m venv .my-env``), activate it (``conda activate my-env`` or ``source .my-env/bin/activate``) and then install Spyder-Kernels into that environment (with ``conda install -c conda-forge spyder-kernels`` or ``pip install spyder-kernels``, respectively).
+
+   .. caution::
+
+      Using system Python without a virtual environment is **not** recommended.
 
    .. note::
 
@@ -60,7 +65,7 @@ Installing and updating
 .. dropdown:: Q: How do I update Spyder using conda?
    :name: update-conda
 
-   From the command line (Anaconda Prompt on Windows), run the following if you've installed Spyder as we recommend, in a separate environment or using the Miniforge (recommended) or Miniconda distributions:
+   From the command line (Anaconda Prompt on Windows), run the following if you've installed Spyder as we suggest, in a separate environment or using the Miniforge (recommended) or Miniconda distributions:
 
    .. code-block:: shell
 
@@ -77,7 +82,7 @@ Installing and updating
 
    .. code-block:: shell
 
-      conda install -c conda-forge spyder=6
+      conda install spyder=6
 
 
 .. dropdown:: Q: How do update I Spyder using Anaconda Navigator?
@@ -186,12 +191,15 @@ Using Spyder
    :name: using-install-packages
 
    The first approach for installing a package should be using Conda.
-   In your system terminal (Anaconda Prompt on Windows), activate the Conda environment you want to use with Spyder (you should **not** install packages into the Anaconda ``base`` environment, as you may break Anaconda and force a reinstall).
-   Then, type:
+   In your system terminal (Anaconda Prompt on Windows), run the following command (making sure to activate the Conda environment you want to use with Spyder, if you've created one):
 
    .. code-block:: bash
 
-      conda install -c conda-forge <PACKAGE-NAME>
+      conda install <PACKAGE-NAME>
+
+   .. caution::
+
+      You should avoid installing packages into the Anaconda ``base`` environment, as you may break Anaconda and force a reinstall.
 
    If your installation is not successful, follow steps 3 through 5 of Part 2 in our video on solving and avoiding problems with pip, Conda and Conda-Forge.
 
