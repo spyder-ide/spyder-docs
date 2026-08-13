@@ -131,10 +131,10 @@ Advanced features
 If your code is taking a long time to run, or you want to see what it is doing at any given point, you can use the :guilabel:`Inspect execution` button in the :guilabel:`Debugger` pane toolbar.
 This retrieves the current stack frame from the kernel and displays it in the :ref:`panes-debugger-stack`, without interrupting execution or launching a new debugging session.
 
-To actually stop executing your code and launch the debugger inside the current execution, use the :guilabel:`Interrupt execution and start the debugger` button in the :guilabel:`Debugger` pane toolbar.
-This starts a live debugging session, in which you can run code and inspect variables as well as browse the stack.
+To actually stop executing your code and launch the debugger inside the current execution, use the :guilabel:`Interrupt execution and start the debugger` button in the pane's toolbar.
+This starts a live debugging session, in which you can run code and inspect variables to try to understand why the execution is taking too long to finish.
 
-The :guilabel:`Debugger` pane also automatically displays the full traceback of the last exception raised by your code in the :ref:`panes-debugger-stack`, including the full error traceback, which it remembers even if you run something else or make changes to your files, until you either start a debugging session or another exception occurs.
+The :guilabel:`Debugger` pane also automatically displays the full traceback of the last exception raised by your code in the :ref:`panes-debugger-stack`, which it remembers even if you run something else or make changes to your files, until you either start a debugging session or another exception occurs.
 To jump into the debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
 
 
