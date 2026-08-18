@@ -20,7 +20,7 @@ Recommended troubleshooting steps
    Bugfix releases come out every month or two, so unless you've updated recently, there is a good chance your version isn't the latest.
    You can find out with the :guilabel:`Check for updates` command under the :guilabel:`Help` menu.
 
-   .. image:: /images/basic-first-aid/basic-first-aid-updates.png
+   .. image:: /images/basic-first-aid/basic-first-aid-updates.webp
       :alt: Spyder showing view internal console option
 
    Recent versions of Spyder using our recommended :ref:`install-standalone` will offer to automatically update themselves for you.
@@ -92,7 +92,9 @@ For Anaconda/Miniconda, follow all the steps under `Anaconda uninstall guide`_/`
 For Miniforge, follow the `Miniforge uninstall instructions`_ on macOS/Linux or remove it from :guilabel:`Add or remove programs` on Windows.
 Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the :file:`%appdata%/python` directory if it exists.
 
-.. image:: /images/basic-first-aid/basic-first-aid-app-data.gif
+.. video:: /images/basic-first-aid/basic-first-aid-app-data.webm
+   :loop:
+   :nocontrols:
    :alt: Deleting AppData/python directory
 
 Finally, do a clean install of the latest version of our :ref:`install-standalone`, which is how we recommend you install Spyder and keep it up to date.
@@ -124,9 +126,6 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
    Make sure you can reproduce the error after closing and reopening it, if possible.
 
 #. **A bare QtConsole instance**, e.g. launched from the system terminal (Anaconda Prompt, on Windows) with ``jupyter qtconsole``.
-
-   .. image:: /images/basic-first-aid/basic-first-aid-qtconsole.png
-      :alt: Anaconda navigator showing qtconsole
 
    QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` usually have something to do with QtConsole instead, and can be reported to the `QtConsole issue tracker`_.
 
@@ -160,7 +159,7 @@ Debugging and patching
 If you know your way around Python, you can often diagnose and even fix Spyder issues yourself, since the IDE is written in the same language you use in it.
 You can explore the error messages you're receiving and Spyder's inner workings with the :guilabel:`Internal Console`, available under the menu item :menuselection:`View --> Panes --> Internal Console`.
 
-.. image:: /images/basic-first-aid/basic-first-aid-internal-console.png
+.. image:: /images/basic-first-aid/basic-first-aid-internal-console.webp
    :alt: Spyder showing Internal console
 
 For more detailed debug output, start Spyder from the command line (Anaconda Prompt on Windows) with ``spyder --debug-info verbose``.
