@@ -90,7 +90,7 @@ On Windows, it can be removed via the entry under :guilabel:`Add or remove progr
 
 For Anaconda/Miniconda, follow all the steps under `Anaconda uninstall guide`_/`Miniconda uninstall guide`_.
 For Miniforge, follow the `Miniforge uninstall instructions`_ on macOS/Linux or remove it from :guilabel:`Add or remove programs` on Windows.
-Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the :file:`%appdata%/python` directory if it exists.
+Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the :file:`%AppData%/Python` directory if it exists.
 
 .. video:: /images/basic-first-aid/basic-first-aid-app-data.webm
    :loop:
