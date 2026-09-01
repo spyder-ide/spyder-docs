@@ -30,7 +30,7 @@ There are several ways to submit an issue, either from Spyder or GitHub directly
 In order of preference and difficulty:
 
 #. **If Spyder presents an error dialog** you can submit an issue directly from it.
-   You will have to fill out a title for your issue, specify the steps that lead to this problem and click :guilabel:`submit to GitHub`.
+   You will have to fill out a title for your issue, specify the steps that lead to this problem and click :guilabel:`Submit to GitHub`.
    This will prefill an error report with your environment details, key versions and dependencies and automatically insert the error/traceback for you.
 
    .. image:: /images/submit-a-report/submit-a-report-error-dialog.webp
