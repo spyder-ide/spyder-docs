@@ -46,7 +46,7 @@ Installing and updating
 
    It will run the kernel as a subprocess and create a file named :file:`remotemachine.json` in your WSL home folder.
 
-   Finally, under the options menu of Spyder's :ref:`panes-console`, select :guilabel:`Connect to existing kernel` as described in :ref:`panes-console-external`.
+   Finally, under the options menu of Spyder's :ref:`panes-console`, select :guilabel:`Connect to existing kernel` as described in :ref:`panes-remote-existing`.
    Insert the absolute path of :file:`remotemachine.json` into the :guilabel:`Connection file` field.
    If you mapped ``W:`` as mentioned in above note, the path should be :file:`W:/home/{username}/remotemachine.json`.
    A new console will open in Spyder, running in the Linux environment.
