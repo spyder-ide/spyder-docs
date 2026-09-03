@@ -27,7 +27,7 @@ Spyder-Kernels not installed/incompatible
 
 Spyder requires a supported version of the ``spyder-kernels`` package to be present in the working environment you want to run your console in.
 
-.. image:: /images/common-illnesses/common-illnesses-kernel-version.png
+.. image:: /images/common-illnesses/common-illnesses-kernel-version.webp
    :alt: Kernel version error dialog
 
 It is included by default in Spyder's own runtime environment, but if you want to run your code in your own Python environment or installation, you'll need to make sure it's installed and updated to the latest version.
@@ -59,23 +59,6 @@ Otherwise, activate your environment by whatever means you created it, and run:
    pip install --upgrade --upgrade-strategy "eager" spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
 
-.. _troubleshooting-common-kernel-error:
-
-AttributeError/ImportError
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Check the last few lines of the error message, and see if it's an ``AttributeError`` or ``ImportError``, or refers to a file you created in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
-
-.. image:: /images/common-illnesses/common-illnesses-atribute-error.png
-   :alt: Spyder's AtributeError dialog
-
-If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string.py`` or ``time.py``, which overrides the built-in module that Spyder-Kernels is trying to load.
-To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
-To check the names of these modules, see the list in the `Python standard library documentation`_.
-
-.. _Python standard library documentation: https://docs.python.org/3/library/
-
-
 
 .. _code-completion-problems-ref:
 .. _troubleshooting-common-completion:
@@ -95,9 +78,8 @@ Object missing docstring
 
 If nothing is displayed in the calltip, hover hint or help pane, the object you're trying to introspect may not have a docstring.
 
-.. image:: /images/common-illnesses/common-illnesses-missing-docstring.png
+.. image:: /images/common-illnesses/common-illnesses-missing-docstring.webp
    :alt: Docstring not found in help pane
-   :width: 500px
 
 In this case, the only solution is to add one in the source code of the original function, method or class.
 
@@ -109,9 +91,8 @@ Object cannot be found
 
 Some objects, whether due to being written in C, Cython or another language; generated dynamically at runtime; or being a method of an object you create, cannot be easily found without executing the code.
 
-.. image:: /images/common-illnesses/common-illnesses-not-found.png
+.. image:: /images/common-illnesses/common-illnesses-not-found.webp
    :alt: Object not found in help pane
-   :width: 500px
 
 However, once you run your code in the :ref:`panes-console`, you might be able to get help and completions on the object there.
 
@@ -124,7 +105,7 @@ LSP has stopped working
 Occasionally, especially after using Spyder for a while, code completion, help and analysis may stop working.
 If this is the case, you can check LSP status with the :guilabel:`LSP: Python` item in Spyder's status bar at the bottom of the screen, and restart it by right-clicking it and selecting the :guilabel:`Restart Python Language Server` item.
 
-.. image:: /images/common-illnesses/common-illnesses-LSP-restart.png
+.. image:: /images/common-illnesses/common-illnesses-LSP-restart.webp
    :alt: Spyder with LSP restart dialog
 
 
@@ -153,7 +134,7 @@ Plugin does not work at all
 If you have installed a Spyder plugin, but you can't see it, go to the :guilabel:`Panes` submenu of the :guilabel:`Window` menu and select the plugin's name, which should make it visible if it contains a standalone pane.
 If you don't see the plugin there, select the :guilabel:`Plugins` section under Spyder's :guilabel:`Preferences` and see if it is listed there.
 
-.. image:: /images/common-illnesses/common-illnesses-plugins.png
+.. image:: /images/common-illnesses/common-illnesses-plugins.webp
    :alt: Dependencies dialog showing Unittest plugin
 
 If the plugin with the problem is not listed in the :guilabel:`Plugins` Preferences section, check that you installed it in the same environment as Spyder.

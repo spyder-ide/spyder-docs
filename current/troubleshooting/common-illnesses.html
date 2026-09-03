@@ -505,7 +505,7 @@ There are a number of problems that can cause this, but most can be fixed fairly
 <section id="spyder-kernels-not-installed-incompatible">
 <span id="troubleshooting-common-kernel-version"></span><span id="spyder-kernels-version-ref"></span><h3>Spyder-Kernels not installed/incompatible<a class="headerlink" href="#spyder-kernels-not-installed-incompatible" title="Link to this heading">#</a></h3>
 <p>Spyder requires a supported version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package to be present in the working environment you want to run your console in.</p>
-<img alt="Kernel version error dialog" src="../_images/common-illnesses-kernel-version.png" />
+<img alt="Kernel version error dialog" src="../_images/common-illnesses-kernel-version.webp" />
 <p>It is included by default in Spyder’s own runtime environment, but if you want to run your code in your own Python environment or installation, you’ll need to make sure it’s installed and updated to the latest version.</p>
 <p>To do so, open a system terminal, activate the Conda or virtual environment you want to use Spyder with, and then copy and paste the command Spyder generates for you (the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command if in a Conda environment, or <code class="docutils literal notranslate"><span class="pre">pip</span></code> otherwise).</p>
 <p>Spyder 6.2+ will offer to update your Spyder-Kernels version automatically, if using Spyder through our recommended <a class="reference internal" href="../installation.html#install-standalone"><span class="std std-ref">Standalone installers</span></a>.</p>
@@ -520,17 +520,9 @@ conda<span class="w"> </span>update<span class="w"> </span>spyder-kernels<span c
 </pre></div>
 </div>
 <p>Otherwise, activate your environment by whatever means you created it, and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--upgrade-strategy<span class="w"> </span><span class="s2">&quot;eager&quot;</span><span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--upgrade-strategy<span class="w"> </span><span class="s2">"eager"</span><span class="w"> </span>spyder-kernels<span class="w"> </span>ipython<span class="w"> </span>ipykernel<span class="w"> </span>jupyter_client<span class="w"> </span>jupyter_core<span class="w"> </span>pyzmq<span class="w"> </span>traitlets
 </pre></div>
 </div>
-</section>
-<section id="attributeerror-importerror">
-<span id="troubleshooting-common-kernel-error"></span><h3>AttributeError/ImportError<a class="headerlink" href="#attributeerror-importerror" title="Link to this heading">#</a></h3>
-<p>Check the last few lines of the error message, and see if it’s an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> or <code class="docutils literal notranslate"><span class="pre">ImportError</span></code>, or refers to a file you created in your current working directory or your home folder (<code class="file docutils literal notranslate"><span class="pre">C:/Users/YOUR_USERNAME</span></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/YOUR_USERNAME</span></code> on macOS, or <code class="file docutils literal notranslate"><span class="pre">/home/YOUR_USERNAME</span></code> on Linux).</p>
-<img alt="Spyder's AtributeError dialog" src="../_images/common-illnesses-atribute-error.png" />
-<p>If so, the the error is likely due to your file being named the same as a Python standard library module, such as <code class="docutils literal notranslate"><span class="pre">string.py</span></code> or <code class="docutils literal notranslate"><span class="pre">time.py</span></code>, which overrides the built-in module that Spyder-Kernels is trying to load.
-To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
-To check the names of these modules, see the list in the <a class="reference external" href="https://docs.python.org/3/library/">Python standard library documentation</a>.</p>
 </section>
 </section>
 <section id="completion-help-not-working">
@@ -540,22 +532,20 @@ Most help and completion issues lie outside of Spyder’s control, and are eithe
 <section id="object-missing-docstring">
 <span id="troubleshooting-common-completion-docstring"></span><h3>Object missing docstring<a class="headerlink" href="#object-missing-docstring" title="Link to this heading">#</a></h3>
 <p>If nothing is displayed in the calltip, hover hint or help pane, the object you’re trying to introspect may not have a docstring.</p>
-<a class="reference internal image-reference" href="../_images/common-illnesses-missing-docstring.png"><img alt="Docstring not found in help pane" src="../_images/common-illnesses-missing-docstring.png" style="width: 500px;" />
-</a>
+<img alt="Docstring not found in help pane" src="../_images/common-illnesses-missing-docstring.webp" />
 <p>In this case, the only solution is to add one in the source code of the original function, method or class.</p>
 </section>
 <section id="object-cannot-be-found">
 <span id="troubleshooting-common-completion-missing"></span><h3>Object cannot be found<a class="headerlink" href="#object-cannot-be-found" title="Link to this heading">#</a></h3>
 <p>Some objects, whether due to being written in C, Cython or another language; generated dynamically at runtime; or being a method of an object you create, cannot be easily found without executing the code.</p>
-<a class="reference internal image-reference" href="../_images/common-illnesses-not-found.png"><img alt="Object not found in help pane" src="../_images/common-illnesses-not-found.png" style="width: 500px;" />
-</a>
+<img alt="Object not found in help pane" src="../_images/common-illnesses-not-found.webp" />
 <p>However, once you run your code in the <a class="reference internal" href="../panes/ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>, you might be able to get help and completions on the object there.</p>
 </section>
 <section id="lsp-has-stopped-working">
 <span id="troubleshooting-common-completion-crashed"></span><h3>LSP has stopped working<a class="headerlink" href="#lsp-has-stopped-working" title="Link to this heading">#</a></h3>
 <p>Occasionally, especially after using Spyder for a while, code completion, help and analysis may stop working.
 If this is the case, you can check LSP status with the <span class="guilabel">LSP: Python</span> item in Spyder’s status bar at the bottom of the screen, and restart it by right-clicking it and selecting the <span class="guilabel">Restart Python Language Server</span> item.</p>
-<img alt="Spyder with LSP restart dialog" src="../_images/common-illnesses-LSP-restart.png" />
+<img alt="Spyder with LSP restart dialog" src="../_images/common-illnesses-LSP-restart.webp" />
 </section>
 <section id="spyder-bug-dependency-issue">
 <span id="troubleshooting-common-completion-bug"></span><h3>Spyder bug/dependency issue<a class="headerlink" href="#spyder-bug-dependency-issue" title="Link to this heading">#</a></h3>
@@ -569,7 +559,7 @@ If this is the case, you can check LSP status with the <span class="guilabel">LS
 <span id="troubleshooting-common-plugin-missing"></span><h3>Plugin does not work at all<a class="headerlink" href="#plugin-does-not-work-at-all" title="Link to this heading">#</a></h3>
 <p>If you have installed a Spyder plugin, but you can’t see it, go to the <span class="guilabel">Panes</span> submenu of the <span class="guilabel">Window</span> menu and select the plugin’s name, which should make it visible if it contains a standalone pane.
 If you don’t see the plugin there, select the <span class="guilabel">Plugins</span> section under Spyder’s <span class="guilabel">Preferences</span> and see if it is listed there.</p>
-<img alt="Dependencies dialog showing Unittest plugin" src="../_images/common-illnesses-plugins.png" />
+<img alt="Dependencies dialog showing Unittest plugin" src="../_images/common-illnesses-plugins.webp" />
 <p>If the plugin with the problem is not listed in the <span class="guilabel">Plugins</span> Preferences section, check that you installed it in the same environment as Spyder.
 If you have, then the problem may well be caused by a dependency issue.
 Test whether you can import the plug-in manually by opening a Python console in the same environment as Spyder and typing, for instance, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spyder_unittest</span></code> to test the Spyder-Unittest plug-in; this command should run without errors.</p>
@@ -634,7 +624,6 @@ Test whether you can import the plug-in manually by opening a Python console in 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors-starting-the-kernel">Errors starting the kernel</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spyder-kernels-not-installed-incompatible">Spyder-Kernels not installed/incompatible</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-with-another-dependency">Issue with another dependency</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributeerror-importerror">AttributeError/ImportError</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#completion-help-not-working">Completion/help not working</a><ul class="nav section-nav flex-column">

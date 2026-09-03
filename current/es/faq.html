@@ -493,7 +493,7 @@ Download it from the <a class="reference external" href="https://www.spyder-ide.
 <p class="sd-card-text">Windows crea una ruta de red ubicada en <code class="docutils literal notranslate"><span class="pre">\\wsl$</span></code> que apunta a las particiones de sus máquinas WSL2, por ejemplo, <code class="docutils literal notranslate"><span class="pre">\\wsl$\Ubuntu-20.</span> <span class="pre">4</span></code>. <strong>Debes</strong> mapear una letra de unidad de red a la ruta de su máquina, por ejemplo <code class="docutils literal notranslate"><span class="pre">W:</span></code>, para que Spyder vea correctamente sus archivos y carpetas.</p>
 </div>
 <p class="sd-card-text">Para iniciar un kernel de Spyder, desde tu terminal Linux ejecuta</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spyder_kernels.console<span class="w"> </span>--matplotlib<span class="o">=</span><span class="s2">&quot;inline&quot;</span><span class="w"> </span>--ip<span class="o">=</span><span class="m">127</span>.0.0.1<span class="w"> </span>-f<span class="o">=</span>~/remotemachine.json<span class="w"> </span><span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spyder_kernels.console<span class="w"> </span>--matplotlib<span class="o">=</span><span class="s2">"inline"</span><span class="w"> </span>--ip<span class="o">=</span><span class="m">127</span>.0.0.1<span class="w"> </span>-f<span class="o">=</span>~/remotemachine.json<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <p class="sd-card-text">Esto ejecutará el kernel como un subproceso y creará un archivo llamado <code class="file docutils literal notranslate"><span class="pre">remotemachine.json</span></code> en su carpeta de inicio WSL.</p>
@@ -641,7 +641,7 @@ For the former, you can specify the path to the Conda/Mamba executable under <sp
 It is located at <code class="file docutils literal notranslate"><em><span class="pre">BASE</span> <span class="pre">INSTALL</span> <span class="pre">DIRECTORY</span></em><span class="pre">/Scripts/conda.exe</span></code> on Windows, and <code class="file docutils literal notranslate"><em><span class="pre">BASE</span> <span class="pre">INSTALL</span> <span class="pre">DIRECTORY</span></em><span class="pre">/bin/conda</span></code> on other platforms.</p>
 <p class="sd-card-text">Otherwise, use the text box or the <span class="guilabel">Select file</span> button to manually add the path to the Python interpreter you want to use.
 You can find this path by activating the venv or Conda env you want to use in your terminal (Anaconda Prompt on Windows), and running the command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sys; print(sys.executable)&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import sys; print(sys.executable)"</span>
 </pre></div>
 </div>
 </div>

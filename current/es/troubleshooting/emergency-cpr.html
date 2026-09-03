@@ -504,7 +504,7 @@
 <ol class="arabic">
 <li><p>Try <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Primera ayuda básica</span></a> first, which usually resolves most Spyder install-related issues.</p></li>
 <li><p><strong>Make sure Spyder isn’t already running</strong> and no Spyder related windows (<em>e.g.</em> <a class="reference internal" href="../panes/variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a> dialogs) are left open, and check that the preference setting <span class="menuselection">Application ‣ Advanced Settings ‣ Use a single instance</span> isn’t checked.</p>
-<img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.png" />
+<img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.webp" />
 </li>
 <li><p>Try <strong>starting Spyder via a different means</strong>, such as from a shortcut, Anaconda navigator, or your system terminal (Anaconda Prompt on Windows) by simply typing <code class="docutils literal notranslate"><span class="pre">spyder</span></code> then <kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Return</kbd>, and see if any of those work.
 If so, then something’s wrong with your install, not Spyder itself, and so we recommend following <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic-reinstalling"><span class="std std-ref">Reinstalar Spyder</span></a> to uninstall and reinstall Spyder.</p></li>
@@ -520,7 +520,7 @@ If so, then something’s wrong with your install, not Spyder itself, and so we 
 <p>Para hacerlo, necesitarás:</p>
 <ol class="arabic">
 <li><p>Encuentra la ruta al directorio <code class="file docutils literal notranslate"><span class="pre">app</span></code> de Spyder desde la línea de comandos. Para esto, ejecuta:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sysconfig; print(sysconfig.get_paths()[&quot;purelib&quot;])&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import sysconfig; print(sysconfig.get_paths()["purelib"])'</span>
 </pre></div>
 </div>
 </li>
@@ -530,8 +530,7 @@ If so, then something’s wrong with your install, not Spyder itself, and so we 
 </div>
 </li>
 <li><p>Una vez dentro del directorio <code class="file docutils literal notranslate"><span class="pre">app</span></code>, ejecuta <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">start.py</span></code> para iniciar Spyder.</p>
-<img alt="Command line showing python start to launch Spyder" src="../_images/emergency-cpr-python-start.gif" />
-</li>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/emergency-cpr-python-start.webm" type="video/webm">Command line showing python start to launch Spyder</video></div></li>
 </ol>
 <p>Si no se inicia con éxito, deberías ver un seguimiento de errores impreso; cópialo cuidadosamente para futuras referencias. También ejecuta <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">mainwindow.py</span></code>, y registra sus resultados también.</p>
 <ol class="arabic">
@@ -542,7 +541,7 @@ pause
 </pre></div>
 </div>
 <p>Reemplaza <code class="docutils literal notranslate"><span class="pre">&lt;PYTHON-PATH&gt;</span></code> con la salida de:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sys; print(sys.executable)&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import sys; print(sys.executable)'</span>
 </pre></div>
 </div>
 <p>Luego, haz doble clic en el archivo por lotes para ejecutarlo, y deberías ver la información de error que necesitas.</p>

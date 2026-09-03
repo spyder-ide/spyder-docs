@@ -7,7 +7,7 @@ Submit a Report
 If you can't fix your issue with any of the troubleshooting steps, then you'll want to submit it to our issue tracker so our team can take a look at it for you.
 You'll need a `GitHub account`_ to do this, so make sure you have one before you begin (a good idea anyway).
 
-.. image:: /images/submit-a-report/submit-a-report-issue-tracker.png
+.. image:: /images/submit-a-report/submit-a-report-issue-tracker.webp
    :alt: GitHub page on Spyder's issue tracker
 
 .. important::
@@ -30,23 +30,22 @@ There are several ways to submit an issue, either from Spyder or GitHub directly
 In order of preference and difficulty:
 
 #. **If Spyder presents an error dialog** you can submit an issue directly from it.
-   You will have to fill out a title for your issue, specify the steps that lead to this problem and click :guilabel:`submit to GitHub`.
+   You will have to fill out a title for your issue, specify the steps that lead to this problem and click :guilabel:`Submit to GitHub`.
    This will prefill an error report with your environment details, key versions and dependencies and automatically insert the error/traceback for you.
 
-   .. image:: /images/submit-a-report/submit-a-report-error-dialog.png
+   .. image:: /images/submit-a-report/submit-a-report-error-dialog.webp
       :alt: GitHub page on Spyder's issue tracker
-      :width: 500px
 
 #. **If Spyder opens and your issue does not involve an error dialog**, the best way to do so is to simply select :guilabel:`Report issue` from the :guilabel:`Help` menu, which manually brings up the issue report form and fills in the key information about your Spyder installation.
    Describe the issue you're experiencing (including any error/traceback information) along with a descriptive title, and click :guilabel:`Submit to GitHub`.
 
-   .. image:: /images/submit-a-report/submit-a-report-issue.png
+   .. image:: /images/submit-a-report/submit-a-report-issue.webp
       :alt: GitHub page on Spyder's issue tracker
 
 #. **If Spyder won't launch**, you can submit a report manually at our `issues page on GitHub`_.
    Unlike the above, you'll need to manually provide the versions of everything (Spyder, Python, OS, Qt/PyQt, Anaconda, and Spyder's dependencies) as listed in the error report template; see below for more on that.
 
-   .. image:: /images/submit-a-report/submit-a-report-issue-template.png
+   .. image:: /images/submit-a-report/submit-a-report-issue-template.webp
       :alt: GitHub page on Spyder's issue template
 
 .. _issues page on GitHub: https://github.com/spyder-ide/spyder/issues
@@ -80,14 +79,13 @@ The key items, in order of priority:
 
 * **Information about Spyder and its environment** as listed in the error report template, which you can find under :guilabel:`About Spyder` in the :guilabel:`Help` menu; along with its key dependencies, shown in the dialog under :menuselection:`Help --> Dependency status` (click the :guilabel:`Copy to clipboard` button to copy them).
 
-  .. image:: /images/submit-a-report/submit-a-report-spyder-info.png
+  .. image:: /images/submit-a-report/submit-a-report-spyder-info.webp
      :alt: Spyder showing Spyder's info and dependencies
 
   If Spyder won't launch, paste the output of ``conda list`` from your command line (or Anaconda prompt on Windows) in the :guilabel:`Dependencies` section of the issue template.
 
-  .. image:: /images/submit-a-report/submit-a-report-conda-list.png
+  .. image:: /images/submit-a-report/submit-a-report-conda-list.webp
      :alt: Command line showing output of conda list
-     :width: 500px
 
 * **How you installed Spyder** and any other relevant packages, *e.g.* standalone installers, Miniforge/Miniconda/Anaconda, WinPython, Brew, MacPorts, pip, etc. and **whether Spyder has worked before** since you installed it.
 

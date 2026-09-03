@@ -504,7 +504,7 @@ The steps on this section should hopefully get it back up and running in no time
 <ol class="arabic">
 <li><p>Try <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic"><span class="std std-ref">Basic First Aid</span></a> first, which usually resolves most Spyder install-related issues.</p></li>
 <li><p><strong>Make sure Spyder isn’t already running</strong> and no Spyder related windows (<em>e.g.</em> <a class="reference internal" href="../panes/variableexplorer.html#panes-variables"><span class="std std-ref">Variable Explorer</span></a> dialogs) are left open, and check that the preference setting <span class="menuselection">Application ‣ Advanced Settings ‣ Use a single instance</span> isn’t checked.</p>
-<img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.png" />
+<img alt="Spyder showing Use a single instance setting" src="../_images/emergency-cpr-single-instance.webp" />
 </li>
 <li><p>Try <strong>starting Spyder via a different means</strong>, such as from a shortcut, Anaconda navigator, or your system terminal (Anaconda Prompt on Windows) by simply typing <code class="docutils literal notranslate"><span class="pre">spyder</span></code> then <kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Return</kbd>, and see if any of those work.
 If so, then something’s wrong with your install, not Spyder itself, and so we recommend following <a class="reference internal" href="basic-first-aid.html#troubleshooting-basic-reinstalling"><span class="std std-ref">Reinstalling Spyder</span></a> to uninstall and reinstall Spyder.</p></li>
@@ -522,7 +522,7 @@ Make sure to re-enable it if it doesn’t fix the problem, and if it does, add a
 <ol class="arabic">
 <li><p>Find the path to the Spyder <code class="file docutils literal notranslate"><span class="pre">app</span></code> directory from the command line.
 For this, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sysconfig; print(sysconfig.get_paths()[&quot;purelib&quot;])&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import sysconfig; print(sysconfig.get_paths()["purelib"])'</span>
 </pre></div>
 </div>
 </li>
@@ -532,8 +532,7 @@ For this, run:</p>
 </div>
 </li>
 <li><p>Once inside the <code class="file docutils literal notranslate"><span class="pre">app</span></code> directory, run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">start.py</span></code> to launch Spyder.</p>
-<img alt="Command line showing python start to launch Spyder" src="../_images/emergency-cpr-python-start.gif" />
-</li>
+<div  class="sphinx-contrib-video-container align-left"><video loop="True" preload="auto"><source src="../_images/emergency-cpr-python-start.webm" type="video/webm">Command line showing python start to launch Spyder</video></div></li>
 </ol>
 <p>#. If it doesn’t start successfully, then you should see an error traceback printed; carefully copy that for future reference.
 Also run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">mainwindow.py</span></code>, and record your results as well.</p>
@@ -545,7 +544,7 @@ pause
 </pre></div>
 </div>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;PYTHON-PATH&gt;</span></code> with the output of:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sys; print(sys.executable)&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import sys; print(sys.executable)'</span>
 </pre></div>
 </div>
 <p>Then, double click the batch file to run it, and you should see the error information you need.</p>
