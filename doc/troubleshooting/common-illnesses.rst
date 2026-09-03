@@ -59,23 +59,6 @@ Otherwise, activate your environment by whatever means you created it, and run:
    pip install --upgrade --upgrade-strategy "eager" spyder-kernels ipython ipykernel jupyter_client jupyter_core pyzmq traitlets
 
 
-.. _troubleshooting-common-kernel-error:
-
-AttributeError/ImportError
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Check the last few lines of the error message, and see if it's an ``AttributeError`` or ``ImportError``, or refers to a file you created in your current working directory or your home folder (:file:`C:/Users/YOUR_USERNAME` on Windows, :file:`/Users/YOUR_USERNAME` on macOS, or :file:`/home/YOUR_USERNAME` on Linux).
-
-.. image:: /images/common-illnesses/common-illnesses-atribute-error.png
-   :alt: Spyder's AtributeError dialog
-
-If so, the the error is likely due to your file being named the same as a Python standard library module, such as ``string.py`` or ``time.py``, which overrides the built-in module that Spyder-Kernels is trying to load.
-To fix this, simply rename your file to something other than one of these names, and try restarting the kernel.
-To check the names of these modules, see the list in the `Python standard library documentation`_.
-
-.. _Python standard library documentation: https://docs.python.org/3/library/
-
-
 
 .. _code-completion-problems-ref:
 .. _troubleshooting-common-completion:
