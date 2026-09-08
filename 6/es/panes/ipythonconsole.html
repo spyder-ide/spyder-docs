@@ -443,6 +443,7 @@
 <li class="toctree-l1"><a class="reference internal" href="profiler.html">Perfilador (Profiler)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Proyectos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylint.html">Análisis del código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remoteconnection.html">Remote Connection Manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Explorador de variables</a></li>
 </ul>
 </div>
@@ -529,59 +530,19 @@
 <p>Spyder también soporta varios tipos de consolas especializadas. Una <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> permite crear y mostrar expresiones matemáticas simbólicas dentro de Spyder. Una <a class="reference external" href="https://cython.org/#documentation">Cython console</a> te permite usar el lenguaje de Cython para acelerar tu código y llamar a funciones C directamente desde Python. Finalmente, una <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> carga las funciones comunes Numpy y Matplotlib por defecto; mientras que esto está obsoleto y fuertemente desaconsejado para el nuevo código, todavía puede ser usado si es necesario para scripts heredados que lo necesiten.</p>
 <img alt="Spyder showing opening a new special Console" src="../_images/console-special.gif" />
 </section>
+<section id="external-and-remote-consoles">
+<span id="panes-console-remote"></span><span id="panes-console-external"></span><h2>External and remote consoles<a class="headerlink" href="#external-and-remote-consoles" title="Link to this heading">#</a></h2>
+<p>You can open a new console in a remote environment you’ve set up using the <a class="reference internal" href="remoteconnection.html#panes-remote"><span class="std std-ref">Remote Connection Manager</span></a> by selecting it under <span class="menuselection">Consoles ‣ New console in remote server</span>, or the equivalent item in the context menu.
+For more details about creating and managing remote connections, see the <a class="reference internal" href="remoteconnection.html#panes-remote"><span class="std std-ref">Remote Connection Manager</span></a> documentation.</p>
+<p>You can also open a new console tab connected to an existing running kernel, either local or remote, by using the advanced option <span class="menuselection">Consoles ‣ Connect to existing kernel…</span>.
+See <a class="reference internal" href="remoteconnection.html#panes-remote-existing"><span class="std std-ref">Connecting to existing kernels (advanced)</span></a> for more information.</p>
+</section>
 <section id="options-menu">
 <span id="panes-console-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
 <p>El menú de opciones te permite inspeccionar tus variables de entorno actuales (<span class="guilabel">Mostrar las variables de entorno</span>), y los contenidos de su sistema <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Contenidos del sys.path</span>). Además, puedes tener que cada consola muestre cuánto tiempo ha estado funcionando con <span class="guilabel">Mostrar el tiempo transcurrido</span>.</p>
 <img alt="Spyder IPython Console with options menu" src="../_images/console-options-menu.png" />
 <p>También puedes cambiar el nombre de la pestaña <span class="guilabel">IPython console</span> con la opción <span class="guilabel">Renombrar la pestaña</span>, o simplemente haciendo doble clic en ella.</p>
 <img alt="Spyder IPython Console showing renaming console" src="../_images/console-rename.gif" />
-</section>
-<section id="using-external-kernels">
-<span id="panes-console-external"></span><span id="connecting-external-kernel"></span><h2>Usar núcleos externos<a class="headerlink" href="#using-external-kernels" title="Link to this heading">#</a></h2>
-<p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
-For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
-<img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
-<section id="connect-to-a-local-kernel">
-<span id="panes-console-external-local"></span><h3>Conectar a un núcleo local<a class="headerlink" href="#connect-to-a-local-kernel" title="Link to this heading">#</a></h3>
-<p>Para conectarse a un núcleo local que ya se está ejecutando (por ejemplo, uno iniciado por Jupyter notebook):</p>
-<ol class="arabic">
-<li><p>Ejecuta <code class="docutils literal notranslate"><span class="pre">%connect_info</span></code> en el notebook o la consola a la que quieres conectarte, y copia el nombre de su archivo de conexión al núcleo, que se muestra después de <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--existing</span></code>.</p>
-<img alt="Running connect_info in a Jupyter notebook" src="../_images/console-connect-local-step1.gif" />
-</li>
-<li><p>En Spyder, haz clic en <span class="guilabel">Conectarse a un núcleo existente</span> desde el menú <span class="guilabel">Terminales</span>, y pega el nombre del <span class="guilabel">Archivo de conexión</span> del paso anterior.</p>
-<p>Por conveniencia, los números de ID del núcleo (por ejemplo <code class="docutils literal notranslate"><span class="pre">1234</span></code>) ingresados en el campo de ruta del archivo de conexión se ampliarán a la ruta completa del archivo, por ejemplo <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code>.</p>
-<img alt="Copying the connection filename into Spyder's dialog" src="../_images/console-connect-local-step2.gif" />
-</li>
-<li><p>Haz clic en <span class="guilabel">OK</span> para conectarte al núcleo.</p>
-<img alt="Connecting to the kernel and running basic commands." src="../_images/console-connect-local-step3.gif" />
-</li>
-</ol>
-</section>
-<section id="connect-to-a-remote-kernel">
-<span id="panes-console-external-remote"></span><h3>Conectar a un núcleo remoto<a class="headerlink" href="#connect-to-a-remote-kernel" title="Link to this heading">#</a></h3>
-<p>Para conectarse a un núcleo en una máquina remota:</p>
-<ol class="arabic">
-<li><p>Inicia un núcleo Spyder en el host remoto, si aún no se está ejecutando, con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p>
-<img alt="Staring a Spyder kernel on a remote machine" src="../_images/console-connect-remote-step1.gif" />
-</li>
-<li><p>Copia el archivo de conexión del núcleo (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) a la máquina en la que estás ejecutando Spyder.</p>
-<p>Puedes obtener <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> ejecutando <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> en el mismo entorno de Python que el kernel. Generalmente, el archivo de conexión que estás buscando será uno de los más recientes en este directorio, correspondiente a la hora en que inició el núcleo externo.</p>
-<img alt="Using SCP to copy the connection file to the local machine" src="../_images/console-connect-remote-step2.gif" />
-</li>
-<li><p>Haz clic en <span class="guilabel">Conectarse a un núcleo existente</span> desde el menú <span class="guilabel">Terminales</span>, y busca o ingresa la ruta al archivo de conexión desde el paso anterior.</p>
-<p>Por conveniencia, los números de ID del núcleo (por ejemplo, <code class="docutils literal notranslate"><span class="pre">1234</span></code>) introducidos en el campo de ruta del archivo de conexión se expandirán a <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> en tu máquina local, si has copiado el archivo de conexión allí.</p>
-<img alt="Opening the connect to kernel dialog and browsing for the path" src="../_images/console-connect-remote-step3.gif" />
-</li>
-<li><p>Marca la casilla <span class="guilabel">Este es un núcleo remoto (via SSH)</span> e ingresa el <span class="guilabel">Servidor</span> o dirección IP, nombre de usuario y puerto al cual conectarse en la máquina remota. Luego, ingresa la contraseña de <code class="file docutils literal notranslate"><em><span class="pre">nombre</span> <span class="pre">de</span> <span class="pre">usuario</span></em></code> en la máquina remota, <strong>o</strong> selecciona un archivo de clave SSH registrado en la máquina remota, normalmente ubicado en el directorio <code class="file docutils literal notranslate"><span class="pre">.ssh</span></code> en tu carpeta de inicio en la máquina local y llamado a menudo <code class="file docutils literal notranslate"><span class="pre">id_rsa</span></code>. Si marcas <span class="guilabel">Guardar ajustes de conexión</span>, estos detalles serán recordados y rellenados automáticamente la próxima vez que abras el diálogo.</p>
-<p>Ten en cuenta que <span class="guilabel">Puerto</span> es el número de puerto en tu máquina remota en el que el daemon SSH (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) está escuchando, típicamente 22 a menos que tú o tu administrador lo hayan configurado de otra manera.</p>
-<img alt="Entering pre-filled SSH details into the connection dialog" src="../_images/console-connect-remote-step4.gif" />
-</li>
-<li><p>Haz clic en <span class="guilabel">OK</span> para conectarte al núcleo</p>
-<img alt="Connecting to the remote kernel and running basic commands" src="../_images/console-connect-remote-step5.gif" />
-</li>
-</ol>
-<p>Para obtener más detalles técnicos sobre la conexión a los núcleos remotos, consulta la página <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> en el libro de Cookbook IPython.</p>
-</section>
 </section>
 <section id="reload-changed-modules">
 <span id="panes-console-umr"></span><span id="umr-section"></span><h2>Recargar módulos modificados<a class="headerlink" href="#reload-changed-modules" title="Link to this heading">#</a></h2>
@@ -652,12 +613,8 @@ For this feature to work, a compatible version of the <code class="docutils lite
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-features">Funciones disponibles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-consoles">Consolas especiales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-and-remote-consoles">External and remote consoles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#options-menu">Menú de opciones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-external-kernels">Usar núcleos externos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-a-local-kernel">Conectar a un núcleo local</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-a-remote-kernel">Conectar a un núcleo remoto</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reload-changed-modules">Recargar módulos modificados</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-panes">Paneles relacionados</a></li>
 </ul>

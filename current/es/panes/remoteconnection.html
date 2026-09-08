@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Remote Connection Manager &#8212; documentación de Spyder - 6</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/driver.min.css?v=79f36a06" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/video-js.min.css?v=02c491e9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/video_player.css?v=f85f8383" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom_styles.css?v=73a33b4b" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../_static/documentation_options.js?v=59bdcf62"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=f85f4cfb"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'panes/remoteconnection';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.spyder-ide.org/current/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '6';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/js/driver.min.js?v=7561d2c9"></script>
+    <script src="../_static/js/video.min.js?v=437fd2a8"></script>
+    <script src="../_static/js/video_player.js?v=6b0febb4"></script>
+    <script src="../_static/js/custom_scripts.js?v=641fc891"></script>
+    <script src="../_static/js/language-switcher.js?v=d926bef7"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Explorador de variables" href="variableexplorer.html" />
+    <link rel="prev" title="Análisis del código" href="pylint.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="6" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/spyder_logo.svg" class="logo__image only-light" alt="documentación de Spyder - 6 - Home"/>
+    <img src="../_static/spyder_logo.svg" class="logo__image only-dark pst-js-only" alt="documentación de Spyder - 6 - Home"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+      <div class="navbar-item">
+<div class="language-switcher__container dropdown pst-js-only">
+  <button id="pst-language-switcher-button-2"
+    type="button"
+    class="language-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-language-switcher-list-2"
+    aria-label="Language switcher list"
+  >
+    Choose language  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-language-switcher-list-2"
+    class="language-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-language-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Guía de instalación
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    Preguntas Frecuentes (FAQ)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quickstart.html">
+    Tour
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../installation.html">
+    Guía de instalación
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    Preguntas Frecuentes (FAQ)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../videos/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Panes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../plugins/index.html">
+    Plugins
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../workshops/index.html">
+    Workshops
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../troubleshooting/index.html">
+    Solución de problemas
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Colapsar barra lateral</span>
+  <span class="pst-expand-sidebar-label">Expandir barra lateral</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Navegación del sección">
+  <p class="bd-links__title" role="heading" aria-level="1">Navegación del sección</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Depurador (Debugger)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileexplorer.html">Archivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="findinfiles.html">Buscar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Ayuda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historylog.html">Historial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipythonconsole.html">Terminal de IPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onlinehelp.html">Ayuda en línea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Explorador de código</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">Gráficos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiler.html">Perfilador (Profiler)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Proyectos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint.html">Análisis del código</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Remote Connection Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variableexplorer.html">Explorador de variables</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Miga de pan" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Inicio">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Panes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Remote Connection Manager</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="remote-connection-manager">
+<span id="panes-remote"></span><h1>Remote Connection Manager<a class="headerlink" href="#remote-connection-manager" title="Link to this heading">#</a></h1>
+<p>The <strong>Remote Connections Manager</strong> allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
+Connecting to a remote host and opening a new <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> on it allows running code, browsing files and using other Spyder features just as if you were working on your local machine.</p>
+<p>It uses the standard, widely-used <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_Shell">SSH protocol</a>, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
+Additionally, it supports connecting to <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
+No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.</p>
+<p>The remote connections manager can be accessed under <span class="menuselection">Tools ‣ Manage remote connections</span>, and you can use <span class="menuselection">Consoles ‣ New console in remote server</span> to open new consoles on remote servers you’ve already configured.</p>
+<section id="creating-a-new-connection">
+<span id="panes-remote-create"></span><h2>Creating a new connection<a class="headerlink" href="#creating-a-new-connection" title="Link to this heading">#</a></h2>
+<p>To set up a connection to a new remote server, open the remote connections manager and click <span class="guilabel">New connection</span>.
+You can then configure the settings appropriate to the connection method.</p>
+<p>If your institution already has a <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> server you’d like to connect to, select the <span class="guilabel">JupyterHub</span> tab.
+Otherwise, if you want to connect to most other types of hosts, you’ll want to use the default <span class="guilabel">SSH</span>.
+Either way, you’ll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.</p>
+<section id="ssh-connection">
+<span id="panes-remote-create-ssh"></span><h3>SSH connection<a class="headerlink" href="#ssh-connection" title="Link to this heading">#</a></h3>
+<p>To create a new SSH connection, you need to enter several key details:</p>
+<ol class="arabic">
+<li><p>Select your authentication method, <span class="guilabel">Password</span> or <span class="guilabel">Key file</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span class="guilabel">Password</span> uses your normal username and password that you would enter when logging in to your account on the machine, while <span class="guilabel">Key file</span> uses a SSH private key you’ve generated with <a class="reference external" href="https://www.ssh.com/academy/ssh/keygen">ssh-keygen</a> and already registered with the remote machine.
+If you’re unsure, try <span class="guilabel">Password</span> to start, or ask the person who set up the host you are trying to connect to.</p>
+</div>
+</li>
+<li><p>Type a <span class="guilabel">Name</span> for the connection, which is just used to identify it in within the Spyder interface.</p></li>
+<li><p>Enter the IP address or hostname of the device to connect to in <span class="guilabel">Remote address or host</span></p></li>
+<li><p>If you or your administrator has configured different SSH port than the default <code class="docutils literal notranslate"><span class="pre">22</span></code> on the remote machine (the port the SSH daemon, <code class="docutils literal notranslate"><span class="pre">sshd</span></code>, is listening on), enter it in the <span class="guilabel">Port</span> field.</p></li>
+<li><p>Type the <span class="guilabel">Username</span> of the account you want to connect to.</p></li>
+<li><p>If using a <span class="guilabel">Password</span>, enter it in the corresponding field. If using a <span class="guilabel">Key file</span>, navigate to where it is located (often under <code class="file docutils literal notranslate"><em><span class="pre">YOUR_HOME_DIR</span></em><span class="pre">/.ssh/</span></code> and called <code class="file docutils literal notranslate"><span class="pre">id_rsa</span></code> or similar) and enter its passphrase, if you’ve set one.</p></li>
+<li><p>Finally, you can optionally set the path to a <a class="reference external" href="https://www.ssh.com/academy/ssh/config">SSH configuration file</a>, which can contain additional advanced options for the host you set above as well as filling in default values for the previous fields.</p></li>
+</ol>
+<p>Finally, click <span class="guilabel">Connect</span> to initiate the connection to the host, which will automatically validate and securely save all the provided details and autonomously set up the server Spyder needs to connect to on the remote host, so everything is ready for you to launch your first console.</p>
+<p>Alternatively, you can click <span class="guilabel">Save</span> to store the details you’ve entered in a new connection without actually trying to connect.</p>
+</section>
+<section id="jupyterhub-connection">
+<span id="panes-remote-create-jupyterhub"></span><h3>JupyterHub connection<a class="headerlink" href="#jupyterhub-connection" title="Link to this heading">#</a></h3>
+<p>If connecting to a existing JupyterHub server, the process is much simpler than SSH.
+Just enter what you would like to <span class="guilabel">Name</span> the connection in the Spyder interface, the <span class="guilabel">Server URL</span> to the JupyterHub server to connect to, and the access <span class="guilabel">Token</span> you were provided.
+Then, click <span class="guilabel">Connect</span> to connect to the server and save the provided details for future use.
+If you have questions about how to obtain a token, ask the person who set up the JupyterHub server or your system administrator.</p>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p>To enable all of Spyder’s features when working with an existing JupyterHub deployment, ask the person who set up the server to install the <a class="reference external" href="https://github.com/spyder-ide/spyder-remote-services">Spyder-Remote-Services</a> Jupyter Server extension.</p>
+</div>
+</section>
+</section>
+<section id="manage-an-existing-connection">
+<span id="panes-remote-manage"></span><h2>Manage an existing connection<a class="headerlink" href="#manage-an-existing-connection" title="Link to this heading">#</a></h2>
+<p>You can view the remote connections you’ve already created by browsing and selecting them from the left panel of the remote connections manager.
+The <span class="guilabel">Connection status</span> tab shows basic details of the connection, its current state, a log of connection events and any errors to help troubleshoot problems.
+Under the <span class="guilabel">Connection info</span> tab, you can update any of the details you entered when <a class="reference internal" href="#panes-remote-create"><span class="std std-ref">Creating a new connection</span></a>, using the <span class="guilabel">Save</span> button at the bottom to save your changes.
+Use the <span class="guilabel">Connect</span> button to initiate the selected connection, or the <span class="guilabel">Remove</span> button to delete it.</p>
+</section>
+<section id="connecting-to-existing-kernels-advanced">
+<span id="panes-remote-existing"></span><span id="connecting-external-kernel"></span><h2>Connecting to existing kernels (advanced)<a class="headerlink" href="#connecting-to-existing-kernels-advanced" title="Link to this heading">#</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Prudencia</p>
+<p>This is an advanced feature for connecting to existing running kernels, which is substantially more complicated and less capable than creating and managing a connection with Spyder using the Remote Connections Manager.
+If possible, we recommend using the latter instead unless your use case requires it.</p>
+</div>
+<p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
+For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
+<img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
+<section id="connect-to-a-local-kernel">
+<span id="panes-remote-existing-local"></span><span id="panes-console-external-local"></span><h3>Conectar a un núcleo local<a class="headerlink" href="#connect-to-a-local-kernel" title="Link to this heading">#</a></h3>
+<p>Para conectarse a un núcleo local que ya se está ejecutando (por ejemplo, uno iniciado por Jupyter notebook):</p>
+<ol class="arabic">
+<li><p>Ejecuta <code class="docutils literal notranslate"><span class="pre">%connect_info</span></code> en el notebook o la consola a la que quieres conectarte, y copia el nombre de su archivo de conexión al núcleo, que se muestra después de <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--existing</span></code>.</p>
+<img alt="Running connect_info in a Jupyter notebook" src="../_images/console-connect-local-step1.gif" />
+</li>
+<li><p>En Spyder, haz clic en <span class="guilabel">Conectarse a un núcleo existente</span> desde el menú <span class="guilabel">Terminales</span>, y pega el nombre del <span class="guilabel">Archivo de conexión</span> del paso anterior.</p>
+<p>Por conveniencia, los números de ID del núcleo (por ejemplo <code class="docutils literal notranslate"><span class="pre">1234</span></code>) ingresados en el campo de ruta del archivo de conexión se ampliarán a la ruta completa del archivo, por ejemplo <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code>.</p>
+<img alt="Copying the connection filename into Spyder's dialog" src="../_images/console-connect-local-step2.gif" />
+</li>
+<li><p>Haz clic en <span class="guilabel">OK</span> para conectarte al núcleo.</p>
+<img alt="Connecting to the kernel and running basic commands." src="../_images/console-connect-local-step3.gif" />
+</li>
+</ol>
+</section>
+<section id="connect-to-a-remote-kernel">
+<span id="panes-remote-existing-remote"></span><span id="panes-console-external-remote"></span><h3>Conectar a un núcleo remoto<a class="headerlink" href="#connect-to-a-remote-kernel" title="Link to this heading">#</a></h3>
+<p>Para conectarse a un núcleo en una máquina remota:</p>
+<ol class="arabic">
+<li><p>Inicia un núcleo Spyder en el host remoto, si aún no se está ejecutando, con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p>
+<img alt="Staring a Spyder kernel on a remote machine" src="../_images/console-connect-remote-step1.gif" />
+</li>
+<li><p>Copia el archivo de conexión del núcleo (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) a la máquina en la que estás ejecutando Spyder.</p>
+<p>Puedes obtener <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> ejecutando <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> en el mismo entorno de Python que el kernel. Generalmente, el archivo de conexión que estás buscando será uno de los más recientes en este directorio, correspondiente a la hora en que inició el núcleo externo.</p>
+<img alt="Using SCP to copy the connection file to the local machine" src="../_images/console-connect-remote-step2.gif" />
+</li>
+<li><p>Haz clic en <span class="guilabel">Conectarse a un núcleo existente</span> desde el menú <span class="guilabel">Terminales</span>, y busca o ingresa la ruta al archivo de conexión desde el paso anterior.</p>
+<p>Por conveniencia, los números de ID del núcleo (por ejemplo, <code class="docutils literal notranslate"><span class="pre">1234</span></code>) introducidos en el campo de ruta del archivo de conexión se expandirán a <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> en tu máquina local, si has copiado el archivo de conexión allí.</p>
+<img alt="Opening the connect to kernel dialog and browsing for the path" src="../_images/console-connect-remote-step3.gif" />
+</li>
+<li><p>Marca la casilla <span class="guilabel">Este es un núcleo remoto (via SSH)</span> e ingresa el <span class="guilabel">Servidor</span> o dirección IP, nombre de usuario y puerto al cual conectarse en la máquina remota. Luego, ingresa la contraseña de <code class="file docutils literal notranslate"><em><span class="pre">nombre</span> <span class="pre">de</span> <span class="pre">usuario</span></em></code> en la máquina remota, <strong>o</strong> selecciona un archivo de clave SSH registrado en la máquina remota, normalmente ubicado en el directorio <code class="file docutils literal notranslate"><span class="pre">.ssh</span></code> en tu carpeta de inicio en la máquina local y llamado a menudo <code class="file docutils literal notranslate"><span class="pre">id_rsa</span></code>. Si marcas <span class="guilabel">Guardar ajustes de conexión</span>, estos detalles serán recordados y rellenados automáticamente la próxima vez que abras el diálogo.</p>
+<p>Note that <span class="guilabel">Port</span> is the port number on your remote machine that the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is listening on, typically <code class="docutils literal notranslate"><span class="pre">22</span></code> unless you or your administrator has configured it otherwise.</p>
+<img alt="Entering pre-filled SSH details into the connection dialog" src="../_images/console-connect-remote-step4.gif" />
+</li>
+<li><p>Haz clic en <span class="guilabel">OK</span> para conectarte al núcleo</p>
+<img alt="Connecting to the remote kernel and running basic commands" src="../_images/console-connect-remote-step5.gif" />
+</li>
+</ol>
+<p>Para obtener más detalles técnicos sobre la conexión a los núcleos remotos, consulta la página <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> en el libro de Cookbook IPython.</p>
+</section>
+</section>
+<section id="related-panes">
+<span id="panes-remote-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a></p></li>
+<li><p><a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pylint.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Análisis del código</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="variableexplorer.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Explorador de variables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-connection">Creating a new connection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-connection">SSH connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub-connection">JupyterHub connection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-an-existing-connection">Manage an existing connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-existing-kernels-advanced">Connecting to existing kernels (advanced)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-a-local-kernel">Conectar a un núcleo local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-a-remote-kernel">Conectar a un núcleo remoto</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-panes">Paneles relacionados</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/panes/remoteconnection.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Mostrar el código
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright  2009-2026 Spyder Doc Contributors; MIT License.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.20.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
