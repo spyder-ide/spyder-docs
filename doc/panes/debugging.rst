@@ -105,6 +105,9 @@ Stack frame browser
 
 New in Spyder 6, the :guilabel:`Debugger` pane now features a stack frame browser, allowing you to easily view and explore the execution stack while debugging.
 
+.. image:: /images/debugging/debugging-frame-browser.webp
+   :alt: Spyder's Debugger pane, showing the stack frame browser several levels in the stack showing a file, line number and the current line content
+
 .. note::
 
    Each time your code calls a function, it is added to the stack and execution continues inside that function, with further levels being added if that function itself calls further functions.
@@ -116,6 +119,11 @@ The highest-level code where execution started is shown at the top, while the lo
 From left to right, you can see the filename, line number in the file and the line of code that was last executed at that level.
 Clicking any line will jump to that level in the execution stack, allowing you to run code in that context in the :guilabel:`IPython Console`.
 Furthermore, it will also display that file in the :guilabel:`Editor`, with the arrow icon pointing to the line that was run there, and the :guilabel:`Variable Explorer` will switch to show the values of the local variables visible in that stack frame's namespace.
+
+.. video:: /images/debugging/debugging-stack-frame-browser.webm
+   :loop:
+   :nocontrols:
+   :alt: Spyder showing browsing the execution stack in the stack frame browser
 
 The stack frame browser also allows you to explore the levels of an error traceback after an exception occurs, as well as inspect the execution stack of code currently running in the :ref:`panes-console`, without having to start a debugging session.
 When clicking the :guilabel:`Inspect execution` toolbar button or an exception is raised, the relevant stack frames are displayed in the browser, in the same format as when debugging, and you can click each level of the traceback to jump to that file and line.
@@ -131,8 +139,18 @@ Advanced features
 If your code is taking a long time to run, or you want to see what it is doing at any given point, you can use the :guilabel:`Inspect execution` button in the :guilabel:`Debugger` pane toolbar.
 This retrieves the current stack frame from the kernel and displays it in the :ref:`panes-debugger-stack`, without interrupting execution or launching a new debugging session.
 
+.. video:: /images/debugging/debugging-inspect-execution.webm
+   :loop:
+   :nocontrols:
+   :alt: Spyder Debugger pane showing inspecting and then interrupting execution
+
 To actually stop executing your code and launch the debugger inside the current execution, use the :guilabel:`Interrupt execution and start the debugger` button in the pane's toolbar.
 This starts a live debugging session, in which you can run code and inspect variables to try to understand why the execution is taking too long to finish.
+
+.. video:: /images/debugging/debugging-code-error.webm
+   :loop:
+   :nocontrols:
+   :alt: Spyder Debugger pane showing inspecting an error traceback and then jumping into post-mortem debugging
 
 The :guilabel:`Debugger` pane also automatically displays the full traceback of the last exception raised by your code in the :ref:`panes-debugger-stack`, which it remembers even if you run something else or make changes to your files, until you either start a debugging session or another exception occurs.
 To jump into the debugger at the point the error occurred, press the :guilabel:`Start debugging after last error` button in the :guilabel:`Debugger` pane toolbar.
