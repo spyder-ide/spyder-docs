@@ -25,7 +25,7 @@ Getting help
 ============
 
 Help can be retrieved both by static analysis of open files in the :ref:`panes-editor`, or by dynamically inspecting an object in an :ref:`panes-console`.
-You can trigger help manually by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default).
+You can trigger help on demand by pressing the configurable help shortcut (:kbd:`Ctrl-I` by default).
 
 .. image:: /images/help/help-command.png
    :alt: Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former.
@@ -35,8 +35,9 @@ You can also manually enter the object's name into the :guilabel:`Object` textbo
 .. image:: /images/help/help-console.gif
    :alt: Spyder Help pane, displaying documentation for an object whose name was written in the object text box
 
-Automatic help can be individually enabled for both the :guilabel:`Editor` and the :guilabel:`Console` under :menuselection:`Preferences --> Help --> Automatic Connections`, and turned on and off dynamically via the lock icon in the top right corner of the :guilabel:`Help` pane.
+Automatic help can be individually enabled for both the :guilabel:`Editor` and the :guilabel:`Console` under :menuselection:`Preferences --> Help --> Automatic Connections`.
 If enabled, simply typing a left parenthesis (``(``) after a function or method name will show its associated help.
+When automatic help is enabled, toggling the lock button on in the top right corner of the :guilabel:`Help` pane will keep displaying documentation for the present object even if you type the name of another one, until the lock is toggled off again.
 
 .. image:: /images/help/help-automatic-connections.gif
    :alt: Spyder console and help pane showing automatic help with parenthesis
@@ -49,10 +50,11 @@ If enabled, simply typing a left parenthesis (``(``) after a function or method 
 Understanding help modes
 ========================
 
-You can use the options menu (:guilabel:`Hamburger` icon) in the top right of the :guilabel:`Help` pane to toggle the help display mode.
+You can use the options menu ("hamburger" icon) in the top right of the :guilabel:`Help` pane to toggle the help display mode:
 
-:guilabel:`Rich Text` mode renders the object's docstrings with ``Sphinx``, :guilabel:`Plain Text` mode displays the docstring without formatting while :guilabel:`Show Source` displays the docstring inline with the code for the selected object, or any Python portion of it (if the object is not pure Python).
-The latter can be useful when docstrings are not available or insufficient to document the object.
+* :guilabel:`Rich Text` mode renders the object's docstrings with Sphinx, as a nicely-formatted page.
+* :guilabel:`Plain Text` mode displays the docstring without formatting.
+* :guilabel:`Show Source` displays the docstring inline with the source code for the selected object (or the Python portion of it if any, for objects that aren't pure Python). This can be useful when docstrings are not available or insufficient to document the object.
 
 .. image:: /images/help/help-modes.gif
    :alt: Spyder help pane showing different modes
@@ -80,7 +82,7 @@ Control automatic import
 ========================
 
 When you get help in the :guilabel:`IPython Console` for an object that has not been previously imported, it is automatically loaded in Spyder's own internal interpreter so that documentation can be shown when available.
-This can be disabled in the :guilabel:`Help` pane's top-right options menu so that only documentation from imported objects is displayed.
+This can be disabled in the :guilabel:`Help` pane's top-right options menu (when a :guilabel:`Source` of :guilabel:`Console` is selected) so that only documentation from imported objects is displayed.
 
 
 

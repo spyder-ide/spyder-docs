@@ -515,17 +515,23 @@
 <section id="getting-help">
 <span id="panes-help-using"></span><h2>Obtener ayuda<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
 <p>Help can be retrieved both by static analysis of open files in the <a class="reference internal" href="editor.html#panes-editor"><span class="std std-ref">Editor</span></a>, or by dynamically inspecting an object in an <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>.
-You can trigger help manually by pressing the configurable help shortcut (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> by default).</p>
+You can trigger help on demand by pressing the configurable help shortcut (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd> by default).</p>
 <img alt="Spyder Editor and Help panes, with the latter displaying documentation for an object selected in the former." src="../_images/help-command.png" />
 <p>También puedes introducir manualmente el nombre del objeto en el cuadro de texto <span class="guilabel">Objeto</span> en la parte superior del panel, si <span class="guilabel">Terminal</span> es seleccionado como el <span class="guilabel">Origen</span>.</p>
 <img alt="Spyder Help pane, displaying documentation for an object whose name was written in the object text box" src="../_images/help-console.gif" />
-<p>La ayuda automática puede ser habilitada individualmente tanto para el <span class="guilabel">Editor</span> como para la <span class="guilabel">Terminal</span> bajo <span class="menuselection">Preferencias ‣ Ayuda ‣ Conexiones automáticas</span>, y se activa y desactiva dinámicamente mediante el icono de bloqueo en la esquina superior derecha del panel <span class="guilabel">Ayuda</span>. Si está habilitado, simplemente tecleando un paréntesis izquierdo (<code class="docutils literal notranslate"><span class="pre">(</span></code>) después de una función o nombre del método te mostrará su ayuda asociada.</p>
+<p>Automatic help can be individually enabled for both the <span class="guilabel">Editor</span> and the <span class="guilabel">Console</span> under <span class="menuselection">Preferences ‣ Help ‣ Automatic Connections</span>.
+If enabled, simply typing a left parenthesis (<code class="docutils literal notranslate"><span class="pre">(</span></code>) after a function or method name will show its associated help.
+When automatic help is enabled, toggling the lock button on in the top right corner of the <span class="guilabel">Help</span> pane will keep displaying documentation for the present object even if you type the name of another one, until the lock is toggled off again.</p>
 <img alt="Spyder console and help pane showing automatic help with parenthesis" src="../_images/help-automatic-connections.gif" />
 </section>
 <section id="understanding-help-modes">
 <span id="panes-help-modes"></span><h2>Entender los modos de ayuda<a class="headerlink" href="#understanding-help-modes" title="Link to this heading">#</a></h2>
-<p>Puedes usar el menú de opciones ( icono <span class="guilabel">Hamburguesa</span>) en la parte superior derecha del panel <span class="guilabel">Ayuda</span> para cambiar el modo de visualización de ayuda.</p>
-<p>El modo <span class="guilabel">Texto enriquecido</span> renderiza las cadenas de documentación del objeto con <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>, El modo <span class="guilabel">Texto plano</span> muestra la docstring sin formatear, mientras que <span class="guilabel">Mostrar código fuente</span> muestra la docstring en línea con el código para el objeto seleccionado, o cualquier porción de Python (si el objeto no es Python puro). Esto último puede ser útil cuando los docstrings no están disponibles o son insuficientes para documentar el objeto.</p>
+<p>You can use the options menu («hamburger» icon) in the top right of the <span class="guilabel">Help</span> pane to toggle the help display mode:</p>
+<ul class="simple">
+<li><p><span class="guilabel">Rich Text</span> mode renders the object’s docstrings with Sphinx, as a nicely-formatted page.</p></li>
+<li><p><span class="guilabel">Plain Text</span> mode displays the docstring without formatting.</p></li>
+<li><p><span class="guilabel">Show Source</span> displays the docstring inline with the source code for the selected object (or the Python portion of it if any, for objects that aren’t pure Python). This can be useful when docstrings are not available or insufficient to document the object.</p></li>
+</ul>
 <img alt="Spyder help pane showing different modes" src="../_images/help-modes.gif" />
 </section>
 <section id="getting-help-by-hovering">
@@ -535,7 +541,8 @@ You can trigger help manually by pressing the configurable help shortcut (<kbd c
 </section>
 <section id="control-automatic-import">
 <span id="panes-help-autoimport"></span><h2>Controlar importación automática<a class="headerlink" href="#control-automatic-import" title="Link to this heading">#</a></h2>
-<p>Cuando obtienes ayuda en la <span class="guilabel">IPython Console</span> para un objeto que no ha sido importado previamente, se carga automáticamente en el intérprete interno de Spyder para que la documentación pueda mostrarse cuando esté disponible. Esto puede deshabilitarse en el menú de opciones de <span class="guilabel">Ayuda</span> en la parte superior derecha del panel para que sólo se muestre la documentación de objetos importados.</p>
+<p>When you get help in the <span class="guilabel">IPython Console</span> for an object that has not been previously imported, it is automatically loaded in Spyder’s own internal interpreter so that documentation can be shown when available.
+This can be disabled in the <span class="guilabel">Help</span> pane’s top-right options menu (when a <span class="guilabel">Source</span> of <span class="guilabel">Console</span> is selected) so that only documentation from imported objects is displayed.</p>
 </section>
 <section id="related-panes">
 <span id="panes-help-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
