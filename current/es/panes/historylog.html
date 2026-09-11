@@ -511,18 +511,23 @@
 <img alt="Spyder History Log, displaying a list of previously executed commands" src="../_images/history-standard.png" />
 <section id="using-the-history-pane">
 <span id="panes-history-using"></span><h2>Usar el panel Historial<a class="headerlink" href="#using-the-history-pane" title="Link to this heading">#</a></h2>
-<p>Navegar por el panel <span class="guilabel">Historial</span> es muy sencillo. Cada sesión de Spyder está marcada por una fecha y una marca de tiempo, haciendo que sea fácil recordar cuando ejecutaste un determinado comando. Las sentencias pueden ser seleccionadas y copiadas desde el menú contextual o con los atajos normales del sistema. Al igual que en el Editor, seleccionar una palabra o frase muestra todas las demás incidencias, y también se admite el resaltado completo de sintaxis. En el panel se almacenan las últimas ≈1000 líneas.</p>
+<p>Navigating the <span class="guilabel">History</span> pane is very straightforward.
+Each Spyder session is marked by a date and timestamp, making it easy to remember when you executed a certain command.
+Statements can be selected and copied from the context menu or with the normal system copy/paste shortcuts (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd>/<kbd class="kbd docutils literal notranslate">V</kbd>).
+Just like in the Editor, selecting a word or phrase displays all other occurrences, and full syntax highlighting is also supported.
+The last ≈1000 lines entered are stored in the pane.</p>
 </section>
 <section id="options-menu">
 <span id="panes-history-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
-<p>El menú de opciones de arriba a la derecha (icono <span class="guilabel">Hamburguesa</span>) te permite cambiar el ajuste de líneas largas (<span class="guilabel">Ajuste de línea automático</span>), y también si el número de línea se muestra a la izquierda del texto (<span class="guilabel">Mostrar números de línea</span>).</p>
+<p>The top-right options menu (<span class="guilabel">Hamburger</span> icon) allows you to toggle soft wrapping of long lines (<span class="guilabel">Wrap lines</span>), and whether the line number is displayed to the left of the text (<span class="guilabel">Show line numbers</span>).</p>
 <img alt="Spyder History Log, displaying wrapping lines and showing line number" src="../_images/history-wrap.gif" />
 </section>
 <section id="advanced-usage">
 <span id="panes-history-advanced"></span><h2>Uso avanzado<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h2>
-<p>La lista de comandos mostrados en el panel <span class="guilabel">Historial</span> se almacenan en <code class="file docutils literal notranslate"><span class="pre">history.py</span></code> en el directorio <code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code> en tu carpeta de inicio del usuario (por defecto, <code class="file docutils literal notranslate"><span class="pre">C:/Users/</span><em><span class="pre">username</span></em></code> en Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/</span><em><span class="pre">username</span></em></code> para macOS, y normalmente <code class="file docutils literal notranslate"><span class="pre">/home/</span><em><span class="pre">username</span></em></code> en GNU/Linux). Puede que necesites mostrar archivos invisibles para poder verlos en un sistema operativo no Windows.</p>
+<p>The list of commands shown in the <span class="guilabel">History</span> pane is stored in the file <code class="file docutils literal notranslate"><span class="pre">history.py</span></code> inside the Spyder configuration directory (<code class="file docutils literal notranslate"><span class="pre">.spyder-py3</span></code>) in your user home folder (by default, <code class="file docutils literal notranslate"><span class="pre">C:/Users/</span><em><span class="pre">username</span></em></code> on Windows, <code class="file docutils literal notranslate"><span class="pre">/Users/</span><em><span class="pre">username</span></em></code> for macOS, and typically <code class="file docutils literal notranslate"><span class="pre">/home/</span><em><span class="pre">username</span></em><span class="pre">/.config</span></code> on GNU/Linux).
+You might need to show invisible files in order to see it on a non-Windows operating system.</p>
 <img alt="Spyder History Log file" src="../_images/history-log-file.png" />
-<p>Aunque actualmente no hay ninguna forma integrada de borrar el historial de la interfaz Spyder aparte de restablecer las preferencias, puedes hacerlo cerrando Spyder, eliminando este archivo y reiniciando Spyder de nuevo.</p>
+<p>While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and starting Spyder again.</p>
 </section>
 <section id="related-panes">
 <span id="panes-history-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
