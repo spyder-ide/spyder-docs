@@ -25,9 +25,9 @@ Clicking on a match will automatically open the file and highlight the line wher
 .. image:: /images/find_in_files/find-in-files-search.gif
    :alt: Spyder Find pane showing search and going to a file
 
-If you want to change the scope of your search, select another directory, project or file in the :guilabel:`Search in` menu.
+If you want to change the scope of your search, select another directory, project or file in the :guilabel:`Search in` dropdown.
 The locations that you select for your search will be stored in the list so you can access them easily in the future.
-To erase all of these saved directories, select the :guilabel:`Clear the list` option from the dropdown menu in the :guilabel:`Search in` field.
+To erase all of these saved directories, select the :guilabel:`Clear the list of other directories` option from the :guilabel:`Search in` dropdown.
 
 .. image:: /images/find_in_files/find-in-files-directory.gif
    :alt: Spyder Find pane showing choosing new directory and directory stored in the list
@@ -54,12 +54,12 @@ To parse your search string as a `regular expression`_, enable the :guilabel:`.*
 .. image:: /images/find_in_files/find-in-files-regex.gif
    :alt: Spyder Find pane showing regular expression search
 
-To exclude certain filenames, extensions or directories from your search, click the :guilabel:`Plus` button to display the advanced options for the pane, and then enter them in the :guilabel:`Exclude` text box.
+To exclude certain filenames, extensions or directories from your search, click the :guilabel:`+` button to display the advanced options for the pane, and then enter them in the :guilabel:`Exclude` text box.
 
 .. image:: /images/find_in_files/find-in-files-extensions.gif
    :alt: Spyder Find pane showing search excluding several file-types
 
-Finally, to change the number of matches displayed, select the :guilabel:`Set maximum number of results` option under the pane's Options menu in the top right.
+Finally, to change the number of matches displayed, select the :guilabel:`Set maximum number of results` option under the pane's options ("hamburger") menu in the top right.
 
 .. image:: /images/find_in_files/find-in-files-max-results.png
    :alt: Spyder Find pane showing window with maximum results dialog open
@@ -72,5 +72,5 @@ Finally, to change the number of matches displayed, select the :guilabel:`Set ma
 Related panes
 =============
 
-* :ref:`panes-editor`
 * :ref:`panes-files`
+* :ref:`panes-projects`
