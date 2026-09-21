@@ -509,7 +509,7 @@
 <span id="panes-console"></span><h1>Terminal de IPython<a class="headerlink" href="#ipython-console" title="Link to this heading">#</a></h1>
 <p>La <strong>Terminal IPython</strong> te permite ejecutar comandos e interactuar con datos dentro de los intérpretes <a class="reference external" href="https://ipython.org/">IPython</a>.</p>
 <img alt="Spyder IPython Console with code, inline plots, and the In prompt" src="../_images/console-standard.png" />
-<p>Para lanzar una nueva instancia de IPython, vaya a <span class="guilabel">Nueva terminal (configuración por defecto)</span> en el menú <span class="guilabel">Terminales</span>, o usa el atajo de teclado <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> en macOS) cuando la consola está focalizada.</p>
+<p>To launch a new IPython console, go to <span class="guilabel">New console (default settings)</span> under the <span class="guilabel">Consoles</span> menu, or use the keyboard shortcut <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">T</kbd> on macOS) when the console is focused.</p>
 <img alt="Spyder showing opening a new Ipython Console" src="../_images/console-new.gif" />
 <p>Desde el mismo menú, puedes dejar de ejecutar código con el <span class="guilabel">Interrumpir el núcleo</span>, limpia el namespace de una consola con <span class="guilabel">Eliminar todas las variables</span>, o relanza una nueva con <span class="guilabel">Reiniciar el núcleo</span>. Como cada consola se ejecuta en un proceso separado, esto no afectará a ningún otro que hayas abierto, y podrás probar fácilmente tu código en un entorno limpio sin interrumpir tu sesión principal.</p>
 <section id="supported-features">
@@ -518,16 +518,19 @@
 <ul class="simple">
 <li><p>Completado automático de código</p></li>
 <li><p>Información sobre la función en tiempo real</p></li>
-<li><p>Full GUI integration with the enhanced Spyder <a class="reference internal" href="debugging.html#panes-debugger"><span class="std std-ref">Depurador (Debugger)</span></a>.</p></li>
+<li><p>Full GUI integration with the Spyder <a class="reference internal" href="debugging.html#panes-debugger"><span class="std std-ref">Depurador (Debugger)</span></a>.</p></li>
 <li><p>The <a class="reference internal" href="variableexplorer.html#panes-variables"><span class="std std-ref">Explorador de variables</span></a>, with GUI-based editors for many built-in and third-party Python objects.</p></li>
-<li><p>Display of Matplotlib graphics in Spyder’s <a class="reference internal" href="plots.html#panes-plots"><span class="std std-ref">Gráficos</span></a> pane, if the <span class="guilabel">Inline</span> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span>, and inline in the console if <span class="guilabel">Mute inline plotting</span> is unchecked under the <span class="guilabel">Plots</span> pane’s options menu.</p></li>
+<li><p>Integration with Spyder’s <a class="reference internal" href="plots.html#panes-plots"><span class="std std-ref">Gráficos</span></a> pane to display Matplotlib graphics, if the <span class="guilabel">Inline</span> backend is selected under <span class="menuselection">Preferences ‣ IPython console ‣ Graphics ‣ Graphics backend</span>, and inline in the console if <span class="guilabel">Mute inline plotting</span> is unchecked under the <span class="guilabel">Plots</span> pane’s options menu.</p></li>
 </ul>
 <img alt="Spyder IPython Console, with a popup list of code completion guesses" src="../_images/console-completion.png" />
 <p>Para obtener información sobre las características, comandos y capacidades incorporadas en IPython mismo, vea la <a class="reference external" href="https://ipython.readthedocs.io/en/stable/overview.html">IPython documentation</a>.</p>
 </section>
 <section id="special-consoles">
 <span id="panes-console-special"></span><h2>Consolas especiales<a class="headerlink" href="#special-consoles" title="Link to this heading">#</a></h2>
-<p>Spyder también soporta varios tipos de consolas especializadas. Una <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> permite crear y mostrar expresiones matemáticas simbólicas dentro de Spyder. Una <a class="reference external" href="https://cython.org/#documentation">Cython console</a> te permite usar el lenguaje de Cython para acelerar tu código y llamar a funciones C directamente desde Python. Finalmente, una <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> carga las funciones comunes Numpy y Matplotlib por defecto; mientras que esto está obsoleto y fuertemente desaconsejado para el nuevo código, todavía puede ser usado si es necesario para scripts heredados que lo necesiten.</p>
+<p>Spyder also supports several types of specialized consoles.
+A <a class="reference external" href="https://docs.sympy.org/latest/index.html">Sympy console</a> enables creating and displaying symbolic math expressions right inside Spyder.
+A <a class="reference external" href="https://cython.org/#documentation">Cython console</a> allows you to use the Cython language to speed up your code and call C functions directly from Python.
+Finally, a <a class="reference external" href="https://matplotlib.org/stable/api/index.html">Pylab console</a> loads common NumPy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code over just importing the modules directly, it can still be used if necessary for legacy scripts that need it.</p>
 <img alt="Spyder showing opening a new special Console" src="../_images/console-special.gif" />
 </section>
 <section id="external-and-remote-consoles">
@@ -539,17 +542,20 @@ See <a class="reference internal" href="remoteconnection.html#panes-remote-exist
 </section>
 <section id="options-menu">
 <span id="panes-console-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
-<p>El menú de opciones te permite inspeccionar tus variables de entorno actuales (<span class="guilabel">Mostrar las variables de entorno</span>), y los contenidos de su sistema <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Contenidos del sys.path</span>). Además, puedes tener que cada consola muestre cuánto tiempo ha estado funcionando con <span class="guilabel">Mostrar el tiempo transcurrido</span>.</p>
+<p>The options («hamburger») menu on the top right of the pane allows you to inspect your current environment variables (<span class="guilabel">Show environment variables</span>), and the contents of your system’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> (<span class="guilabel">Show sys.path contents</span>).
+In addition, you can have each console display how long it has been running with <span class="guilabel">Show elapsed time</span>.</p>
 <img alt="Spyder IPython Console with options menu" src="../_images/console-options-menu.png" />
-<p>También puedes cambiar el nombre de la pestaña <span class="guilabel">IPython console</span> con la opción <span class="guilabel">Renombrar la pestaña</span>, o simplemente haciendo doble clic en ella.</p>
+<p>You can change the name of the current <span class="guilabel">IPython console</span> tab with the <span class="guilabel">Rename tab</span> option, or by simply double-clicking it.</p>
 <img alt="Spyder IPython Console showing renaming console" src="../_images/console-rename.gif" />
 </section>
 <section id="reload-changed-modules">
 <span id="panes-console-umr"></span><span id="umr-section"></span><h2>Recargar módulos modificados<a class="headerlink" href="#reload-changed-modules" title="Link to this heading">#</a></h2>
-<p>Al trabajar en una sesión interactiva, Python sólo carga un módulo desde su archivo fuente una vez, cuando se importa por primera vez.</p>
+<p>When working with the normal interactive interpreter in the terminal, Python only loads a module from its source file once, the first time it is imported.
+This would require you to exit and relaunch the entire interpreter whenever you make changes to your code, losing any variables or functions you’ve defined in your session in the process.</p>
 <p>El <span class="guilabel">Recargador de Módulos de usuario</span> (RMU) de Spyder recarga automáticamente módulos en las consolas de IPython existentes siempre que sean modificadas y reimportadas. Con la RMU activada, puedes probar los cambios en tu código sin reiniciar el núcleo.</p>
 <img alt="Spyder showing reloading modules in console" src="../_images/console-reload-modules.png" />
-<p>RMU está activado por defecto, y te proporcionará un mensaje en rojo <code class="docutils literal notranslate"><span class="pre">Módulos</span> <span class="pre">recargados:</span></code> en la consola listando los archivos que se han actualizado cuando está activado. Si lo deseas, puedes activarlo o desactivarlo y evitar que se recargen módulos específicos, bajo <span class="menuselection">Preferencias ‣ intérprete de Python ‣ Recargador de Módulos de Usuario (RMU)</span>.</p>
+<p>UMR is enabled by default, and it will provide you with a red <code class="docutils literal notranslate"><span class="pre">Reloaded</span> <span class="pre">modules:</span></code> message in the console listing the files it has refreshed when it is activated.
+If desired, you can turn it on or off, and prevent specific modules from being reloaded, under <span class="menuselection">Preferences ‣ Python interpreter ‣ User Module Reloader (UMR) ‣ Enable UMR</span>.</p>
 <img alt="Spyder preferences showing option to use module reloader" src="../_images/console-umr-preferences.png" />
 </section>
 <section id="related-panes">
