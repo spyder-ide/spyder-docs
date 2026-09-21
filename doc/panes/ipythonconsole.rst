@@ -11,7 +11,7 @@ The **IPython Console** allows you to execute commands and interact with data in
 .. image:: /images/console/console-standard.png
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
-To launch a new IPython instance, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu, or use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused.
+To launch a new IPython console, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu, or use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused.
 
 .. image:: /images/console/console-new.gif
    :alt: Spyder showing opening a new Ipython Console
@@ -32,9 +32,9 @@ Any :guilabel:`IPython Console`, whether :ref:`external <panes-console-external>
 
 * Automatic code completion
 * Real-time function calltips
-* Full GUI integration with the enhanced Spyder :ref:`panes-debugger`.
+* Full GUI integration with the Spyder :ref:`panes-debugger`.
 * The :ref:`panes-variables`, with GUI-based editors for many built-in and third-party Python objects.
-* Display of Matplotlib graphics in Spyder's :ref:`panes-plots` pane, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
+* Integration with Spyder's :ref:`panes-plots` pane to display Matplotlib graphics, if the :guilabel:`Inline` backend is selected under :menuselection:`Preferences --> IPython console --> Graphics --> Graphics backend`, and inline in the console if :guilabel:`Mute inline plotting` is unchecked under the :guilabel:`Plots` pane's options menu.
 
 .. image:: /images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
@@ -54,7 +54,7 @@ Special consoles
 Spyder also supports several types of specialized consoles.
 A `Sympy console`_ enables creating and displaying symbolic math expressions right inside Spyder.
 A `Cython console`_ allows you to use the Cython language to speed up your code and call C functions directly from Python.
-Finally, a `Pylab console`_ loads common Numpy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code, it can still be used if necessary for legacy scripts that need it.
+Finally, a `Pylab console`_ loads common NumPy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code over just importing the modules directly, it can still be used if necessary for legacy scripts that need it.
 
 .. _Cython console: https://cython.org/#documentation
 .. _Sympy console: https://docs.sympy.org/latest/index.html
@@ -86,13 +86,13 @@ See :ref:`panes-remote-existing` for more information.
 Options menu
 ============
 
-The options menu allows you to inspect your current environment variables (:guilabel:`Show environment variables`), and the contents of your system's ``PATH`` (:guilabel:`Show sys.path contents`).
+The options ("hamburger") menu on the top right of the pane allows you to inspect your current environment variables (:guilabel:`Show environment variables`), and the contents of your system's ``PATH`` (:guilabel:`Show sys.path contents`).
 In addition, you can have each console display how long it has been running with :guilabel:`Show elapsed time`.
 
 .. image:: /images/console/console-options-menu.png
    :alt: Spyder IPython Console with options menu
 
-You can also change the name of the current :guilabel:`IPython console` tab with the :guilabel:`Rename tab` option, or by simply double-clicking it.
+You can change the name of the current :guilabel:`IPython console` tab with the :guilabel:`Rename tab` option, or by simply double-clicking it.
 
 .. image:: /images/console/console-rename.gif
    :alt: Spyder IPython Console showing renaming console
@@ -106,7 +106,7 @@ You can also change the name of the current :guilabel:`IPython console` tab with
 Reload changed modules
 ======================
 
-When working in an interactive session, Python only loads a module from its source file once, the first time it is imported.
+When working in an interactive session, Python normally only loads a module from its source file once, the first time it is imported, which would require you to exit and relaunch your entire interactive session whenever you made changes to your code.
 
 Spyder's :guilabel:`User Module Reloader` (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported.
 With the UMR enabled, you can test changes to your code without restarting the kernel.
@@ -115,7 +115,7 @@ With the UMR enabled, you can test changes to your code without restarting the k
    :alt: Spyder showing reloading modules in console
 
 UMR is enabled by default, and it will provide you with a red ``Reloaded modules:`` message in the console listing the files it has refreshed when it is activated.
-If desired, you can turn it on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR)`.
+If desired, you can turn it on or off, and prevent specific modules from being reloaded, under :menuselection:`Preferences --> Python interpreter --> User Module Reloader (UMR) --> Enable UMR`.
 
 .. image:: /images/console/console-umr-preferences.png
    :alt: Spyder preferences showing option to use module reloader
