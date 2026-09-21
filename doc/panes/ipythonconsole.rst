@@ -106,7 +106,8 @@ You can change the name of the current :guilabel:`IPython console` tab with the 
 Reload changed modules
 ======================
 
-When working in an interactive session, Python normally only loads a module from its source file once, the first time it is imported, which would require you to exit and relaunch your entire interactive session whenever you made changes to your code.
+When working with the normal interactive interpreter in the terminal, Python only loads a module from its source file once, the first time it is imported.
+This would require you to exit and relaunch the entire interpreter whenever you make changes to your code, losing any variables or functions you've defined in your session in the process.
 
 Spyder's :guilabel:`User Module Reloader` (UMR) automatically reloads modules right in your existing IPython consoles whenever they are modified and re-imported.
 With the UMR enabled, you can test changes to your code without restarting the kernel.
