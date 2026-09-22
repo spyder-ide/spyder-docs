@@ -6,7 +6,7 @@ Code Analysis
 
 The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
 Based on these results, it also gives your code an overall quality score.
-Spyder's code analyzer is powered by the `Pylint`_ back-end, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
+Spyder's code analyzer is powered by the `Pylint`_ backend, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
 
 .. _Pylint: https://pylint.pycqa.org/
 
@@ -25,7 +25,7 @@ To select the desired file to analyze, make sure it is focused in the :ref:`pane
 Then, the run the analysis, press the configurable shortcut (:kbd:`F8` by default), select :menuselection:`Source --> Run code analysis` from the menu bar or click the :guilabel:`Analyze` button in the Code Analysis pane.
 If the Code Analysis pane is not visible, you can open it under :menuselection:`View --> Panes --> Code Analysis`.
 All standard checks are run by default.
-Click any detected issue to go directly to the line in the :ref:`panes-editor`.
+Click any detected issue to go directly to the line with the failed check in the :ref:`panes-editor`.
 
 .. image:: /images/pylint/code-analysis-editor.gif
    :alt: Spyder Pylint pane, showing running analysis and clicking failed check
@@ -83,7 +83,7 @@ For example, a directive might look like ``# pylint: disable=invalid-name``, or 
    :alt: Spyder Pylint pane, showing disabling a message locally
 
 Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user home folder.
-If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user home folder, from Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
+If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user home folder, from the Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
 For more details on configuring Pylint, see the `Pylint configuration documentation`_.
 
 .. _Pylint configuration documentation:  https://pylint.pycqa.org/en/latest/user_guide/configuration/index.html
