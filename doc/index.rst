@@ -114,14 +114,8 @@ Looking to contribute your code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it.
-You can follow our `contributing guide`_ to set up a development environment, and you can get involved with the project through our `Github repository`_.
-The easiest way to get started is helping us resolve items on our `issue tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
-
-.. _contributing guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
-
-.. _Github repository: https://github.com/spyder-ide
-
-.. _issue tracker: https://github.com/spyder-ide/spyder/issues
+You can follow our `contributing guide <https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md>`_ to set up a development environment, and you can get involved with the project through our `Github repository <https://github.com/spyder-ide>`_.
+The easiest way to get started is helping us resolve items on our `issue tracker <https://github.com/spyder-ide/spyder/issues>`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
 
 
 .. rst-class:: fasb fa-book
@@ -132,11 +126,7 @@ Want to help writing docs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We welcome your contributions of corrections, additions and enhancements to these docs.
-Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_.
-
-.. _docs contributing guide: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
-
-.. _docs repo: https://github.com/spyder-ide/spyder-docs
+Check out the `docs contributing guide <https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md>`_ to learn how to submit a PR with your changes on our `docs repo <https://github.com/spyder-ide/spyder-docs>`_.
 
 
 .. rst-class:: fasb fa-globe-americas
@@ -148,9 +138,7 @@ Interested in translating Spyder?
 
 In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages.
 
-For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
-
-.. _Crowdin: https://crowdin.com/project/spyder
+For this purpose we use `Crowdin <https://crowdin.com/project/spyder>`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
 
 
 .. rst-class:: fasb fa-user-friends
