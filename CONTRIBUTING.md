@@ -19,6 +19,7 @@ Let us know if you have any further questions, and we look forward to your contr
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [AI Policy](#ai-policy)
 - [Reporting Issues](#reporting-issues)
 - [Cloning the Repository](#cloning-the-repository)
 - [Setting Up a Development Environment with Nox (Recommended)](#setting-up-a-development-environment-with-nox-recommended)
@@ -40,6 +41,14 @@ Let us know if you have any further questions, and we look forward to your contr
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- markdownlint-restore -->
+
+
+
+## AI Policy
+
+Spyder has adopted the [NumPy AI Policy](https://numpy.org/doc/stable/dev/ai_policy.html), and expects all contributors to adhere to it.
+The [AGENTS.md](./AGENTS.md) file in this repo describes this policy to your AI agents to attempt to induce them to follow it, but it is ultimately your responsibility for ensuring that they do.
+In short: you are responsible for and must understand and explain in your own words all code submitted to Spyder's repositories; you must disclose use of AI on your pull requests; and you must not use AI to autonomously create, write or interact with issue or pull requests and their descriptions or comments, nor in other project channels of human communication.
 
 
 
