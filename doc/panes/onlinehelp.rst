@@ -35,12 +35,12 @@ If you're not sure of the name of the object you want help on, or are looking fo
 .. image:: /images/online_help/online-help-search.gif
    :alt: Spyder Online Help pane showing search of a keyword
 
-Links above the search field provide an index of topics with general help and a list of Python keywords linked to their corresponding docs.
+Links above the search field provide an index of topics with general help and a list of Python keywords linked to their corresponding documentation.
 
 .. image:: /images/online_help/online-help-topics.png
    :alt: Spyder Online Help pane on the topics page
 
-In the rendered documentation, the module's file location is linked to the right of the doc's title, which you can click to view its source code.
+In the rendered documentation, the module's file location is linked to the right of the documentation's title, which you can click to view its source code.
 
 .. image:: /images/online_help/online-help-path.gif
    :alt: Spyder Online Help pane showing source code clicking module's path
@@ -66,7 +66,7 @@ Just like in a web browser, the forward and back buttons move through the pages 
 .. image:: /images/online_help/online-help-navigation.gif
    :alt: Spyder Online Help pane showing navigation with arrows
 
-Perform a realtime search within a page's content with the :guilabel:`Find` button (magnifying glass icon top left) or :kbd:`Ctrl-F` (:kbd:`Cmd-F` on macOS), navigate through matches with the :kbd:`Up` and :kbd:`Down` buttons, and make matching case sensitive with the :guilabel:`Aa` button.
+Perform a realtime search within a page's content with the :guilabel:`Find` button (magnifying glass icon in the top left) or :kbd:`Ctrl-F` (:kbd:`Cmd-F` on macOS), navigate through matches with the :kbd:`Up` and :kbd:`Down` buttons, and make matching case sensitive with the :guilabel:`Aa` button.
 
 .. image:: /images/online_help/online-help-find.gif
    :alt: Spyder Online Help pane showing finding a word on a module
