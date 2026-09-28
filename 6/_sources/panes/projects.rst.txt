@@ -11,12 +11,12 @@ With the :guilabel:`Projects` pane, you can browse all your project's files, reg
 .. image:: /images/projects/projects-main.png
    :alt: Spyder showing Project Explorer and projects menu
 
-In addition, your project's root folder is used to set your working directory, and automatically added to the ``PYTHONPATH``, so you can easily ``import`` and work with any modules and packages you create inside of it.
+In addition, your project's root folder is used to set your working directory, and automatically added to the ``PYTHONPATH``, so you can easily import and work with any modules and packages you create inside of it.
 
 .. note::
 
    Projects are completely optional and not imposed on users.
-   All of Spyder' functionality (code completion, session saving, File Explorer, working directory, etc) is available without creating a :guilabel:`Project`.
+   All of Spyder's functionality (code completion, session saving, File Explorer, working directory, etc) is available without creating a project.
 
 
 
@@ -26,7 +26,7 @@ In addition, your project's root folder is used to set your working directory, a
 Creating a Project
 ==================
 
-To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a :guilabel:`Project` with an existing directory or make a new one, and enter the :guilabel:`Project`'s name and path.
+To create a project, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a project with an existing directory or make a new one, and enter the project's directory name (if a new directory) and path.
 
 .. image:: /images/projects/projects-new.gif
    :alt: Spyder showing opening a new project
@@ -39,7 +39,7 @@ To create a :guilabel:`Project`, click the :guilabel:`New Project` entry in the 
 Using the Projects Pane
 =======================
 
-Once a :guilabel:`Project` is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current :guilabel:`Project`'s files and directories.
+Once a project is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current project's files and directories.
 It allows you to perform all the same :ref:`operations <panes-files-operations>` as Spyder's :ref:`panes-files` pane.
 
 .. image:: /images/projects/projects-standard.png
@@ -55,11 +55,11 @@ Working with version control
 ============================
 
 The :guilabel:`Project` pane has basic integration with the `Git`_ distributed version control system, just like :ref:`in the Files pane <panes-files-vcs>`.
-You can commit or browse a file, directory or the entire repository via the commands in the context menu.
+You can commit or browse a file, directory or the entire repository via the respective commands in the context menu.
 
 .. _Git: https://git-scm.com/
 
-To use this functionality, the :guilabel:`Project` must be located in a ``git`` repository and the ``git`` and ``gitk`` commands must be on the system path.
+To use this functionality, the project must be located in a Git repository and the ``git`` and ``gitk`` commands must be on the system path.
 
 
 
