@@ -507,7 +507,7 @@
                   
   <section id="variable-explorer">
 <span id="panes-variables"></span><h1>Explorador de variables<a class="headerlink" href="#variable-explorer" title="Link to this heading">#</a></h1>
-<p>El <strong>Explorador de variables</strong> te permite navegar y administrar de forma interactiva los objetos generados al ejecutar tu código.</p>
+<p>The <strong>Variable Explorer</strong> allows you to interactively browse and manage the data and objects created by your code.</p>
 <img alt="Spyder Variable Explorer execution with a variable of type list" src="../_images/variable-explorer-execution.gif" />
 <p>It shows the namespace contents (including all global objects, variables, class instances and more) of the currently selected <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a> session, and allows you to add, remove, and edit their values through a variety of GUI-based editors.</p>
 <img alt="Spyder Variable Explorer, with a list of variables and their contents" src="../_images/variable-explorer-standard.png" />
@@ -515,79 +515,93 @@
 <img alt="Spyder Variable Explorer modifying value of a variable" src="../_images/variable-explorer-modifying.gif" />
 <section id="object-viewers">
 <span id="panes-variables-viewers"></span><h2>Visor de objetos<a class="headerlink" href="#object-viewers" title="Link to this heading">#</a></h2>
-<p>El <span class="guilabel">Explorador de variables</span> de Spyder ofrece soporte integrado para editar listas, cadenas, diccionarios, matrices NumPy, Pandas DataFrames, Series y más; además de poder crear gráficos y visualizarlos con un solo clic.</p>
+<p>The <span class="guilabel">Variable Explorer</span> offers built in support for viewing and editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.</p>
+<p>Every viewer has a refresh button, which updates the displayed object to the current value of the variable in the Console if it has changed in the meantime.
+Click any column to sort the table by it in ascending or descending order, and if the object is editable you can double-click any cell to change its value, which will open a new viewer if that object isn’t a basic scalar data type (e.g. <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code>).</p>
 <section id="strings">
 <span id="panes-variables-viewers-str"></span><h3>Cadenas de texto<a class="headerlink" href="#strings" title="Link to this heading">#</a></h3>
-<p>Cuando una variable de cadena es más larga que cuarenta caracteres, puedes hacer doble clic en ella para ver su valor en un editor de texto para modificarla más fácilmente.</p>
+<p>When a string variable is longer than forty characters, you can double-click it to see its value in a text editor to modify it more easily.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-text-long.png"><img alt="Variable Explorer text editor, displaying a long string in a window" src="../_images/variable-explorer-text-long.png" width="500" />
 </a>
 </section>
 <section id="dictionaries">
 <span id="panes-variables-viewers-dict"></span><h3>Diccionarios<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h3>
-<p>Al hacer doble clic en los diccionarios se desplegará un visor que muestra cada una de sus llaves con su valor asociado. Puedes hacer doble clic en cualquiera de los valores para modificarlos, lo que abrirá un nuevo visor si el valor en sí mismo es un objeto.</p>
+<p>Double-clicking on dictionaries will show a viewer displaying each of its keys with its associated value.
+The Toolbar buttons allow you to insert, duplicate and remove individual key-value pairs and adjust the row and column width, as well as view the dictionary as a generic object.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-dictionary.png"><img alt="Dictionary editor displaying keys and their types, sizes, and values" src="../_images/variable-explorer-dictionary.png" width="500" />
 </a>
 </section>
 <section id="lists">
 <span id="panes-variables-viewers-list"></span><h3>Listas<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
-<p>En el caso de las listas, el Explorador de variables principal muestra una vista previa de los diez primeros valores. Para verlos todos, haz doble clic en la lista para abrir un visor que te mostrará el índice, tipo, tamaño y valor de cada elemento de la lista. Al igual que los diccionarios, puedes hacer doble clic en los valores para editarlos.</p>
+<p>For lists, the main Variable Explorer pane displays a preview of the first ten values.
+To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
+Just like dictionaries, you can double-click values to edit them, and use the toolbar to insert, duplicate or delete elements, along with options to resize and open in the object explorer.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-list.png"><img alt="List editor displaying a list, showing one being edited" src="../_images/variable-explorer-list.png" width="500" />
 </a>
 </section>
 <section id="numpy-arrays">
-<span id="panes-variables-viewers-array"></span><h3>Arreglos de NumPy<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h3>
-<p>Al igual que las listas, para las arreglos de Numpy el Explorador de variables muestra una vista previa de sus valores. Al hacer doble clic en ellos, se abrirá un visor que muestra los valores de la matriz en un «mapa de calor», con cada valor en una celda de cuadrícula coloreada en base a su cantidad numérica. Puedes desactivar el color de fondo desmarcando la opción apropiada en el visor, lo que sucederá automáticamente si la matriz es demasiado grande para mejorar el rendimiento.</p>
+<span id="panes-variables-viewers-array"></span><h3>NumPy arrays<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h3>
+<p>Like lists, for NumPy arrays the Variable Explorer shows a preview of their values.
+Double-clicking them will open a viewer displaying the array values in a «heat map», with each value in a grid cell colored based on its numeric quantity.
+You can deactivate this by selecting the <span class="guilabel">Use default background color</span> option in the <span class="guilabel">Display options</span> dialog under the viewer options («hamburger») menu in the top right.
+To improve performance, the background heatmap will be turned off automatically if the array is very large.</p>
 <img alt="Array editor array, displaying a &quot;heatmap&quot; of its values" src="../_images/variable-explorer-heat-map.png" />
-<p>If supported by the datatype, you can also change the format of the array’s values, choosing the number of decimals that you want the array to display.
-For this, click the <span class="guilabel">Format</span> button and and set the desired formatting in the dialog that appears, using the standard <a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">format specification mini-language</a>.</p>
-<p>Además, puedes ajustar el tamaño de las filas y columnas del arreglo expandiendo o contrayendo sus encabezados. Al hacer clic en el botón <span class="guilabel">Cambiar tamaño</span> se establecerá automáticamente.</p>
+<p>You can manually adjust the size of the rows and columns of the array by expanding or contracting their headers.
+Clicking the resize button on the right of the dialog toolbar will set the widths automatically.</p>
 <img alt="Array editor with a 2D int array, showing resizing of columns" src="../_images/variable-explorer-resize.gif" />
+<p>If supported by the datatype, you can also change the format of the array’s values, choosing the number of decimals that you want the array to display.
+For this, enter the desired format string (using Python’s standard <a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">format specification mini-language</a>) under <span class="guilabel">Formatting</span> in the <span class="guilabel">Display options</span> dialog under the viewer options («hamburger») menu in the top right.</p>
 </section>
 <section id="dataframes">
 <span id="panes-variables-viewers-dataframe"></span><h3>DataFrames<a class="headerlink" href="#dataframes" title="Link to this heading">#</a></h3>
-<p>Los DataFrames, al igual que los arreglos de Numpy, se muestran en un visor donde puedes mostrar u ocultar los colores del «mapa de calor», cambiar el formato y cambiar el tamaño de las filas y columnas, ya sea de forma manual o automática.</p>
+<p>DataFrames, like <a class="reference internal" href="#panes-variables-viewers-array"><span class="std std-ref">NumPy arrays</span></a>, display in a viewer where you can change the format, resize the rows and columns either manually or automatically and show or hide «heatmap» colors, with an added option for making the heatmap global or per-column.</p>
 <img alt="Dataframe editor showing data frame &quot;heatmap&quot;" src="../_images/variable-explorer-dataframe.png" />
-<p>Additionally, the Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
+<p>Additionally, toolbar buttons allow inserting, duplicating or deleting both rows and columns, and plotting a histogram of the selected columns.</p>
+<p>The Variable Explorer has MultiIndex support in its DataFrame inspector, including for multi-level and multi-dimensional indices.</p>
 <img alt="Dataframe editor showing multi-index support" src="../_images/variable-explorer-multi-index.png" />
 </section>
 </section>
 <section id="options-menu">
 <span id="panes-variables-options"></span><h2>Menú de opciones<a class="headerlink" href="#options-menu" title="Link to this heading">#</a></h2>
-<p>El menú de opciones en la parte superior derecha del panel de Explorador de variables te permite filtrar los objetos mostrados por una serie de criterios diferentes.</p>
+<p>The options («hamburger») menu in the top right of the Variable Explorer pane allows you filter the objects shown by a number of different criteria, which can be toggled on and off with the filter button to the right of the toolbar.</p>
 <img alt="Spyder Variable Explorer, with options menu" src="../_images/variable-explorer-menu.png" />
-<p>También te permite mostrar el mínimo y máximo de los arreglos de NumPy en lugar de una vista previa de sus valores.</p>
+<p>It also allows you to display the min and max of NumPy arrays instead of a preview of their values.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-array-min-max.png"><img alt="Variable Explorer showing max and min values of numpy array" src="../_images/variable-explorer-array-min-max.png" width="500" />
 </a>
 </section>
-<section id="toolbar-buttons">
-<span id="panes-variables-toolbar"></span><h2>Botones de la barra de herramientas<a class="headerlink" href="#toolbar-buttons" title="Link to this heading">#</a></h2>
-<p>La barra de herramientas del Explorador de variables incluye varias características útiles que afectan a todo el espacio de nombres. Por ejemplo, puedes guardar los datos de la sesión actual como un archivo <code class="docutils literal notranslate"><span class="pre">.spydata</span></code>, que se puede cargar más tarde para recuperar todas las variables almacenadas.</p>
+<section id="importing-and-exporting">
+<span id="panes-variables-import-export"></span><span id="panes-variables-toolbar"></span><h2>Importing and exporting<a class="headerlink" href="#importing-and-exporting" title="Link to this heading">#</a></h2>
+<p>The Variable Explorer’s toolbar includes several useful features to import, export and manage variables and data.
+The <span class="guilabel">Import data</span> button can be used to load a variety of types of data files, including JOSN, NumPy, Matlab, CSV, images, Python pickles and HDF5.
+The <span class="guilabel">Save data</span> and <span class="guilabel">Save data as</span> buttons allows saving the current session as a <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file, which can be loaded later with the <span class="guilabel">Import data</span> button to restore the saved variables to your active session.</p>
 <img alt="Variable Explorer showing how to save and import data" src="../_images/variable-explorer-import-data.gif" />
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
 <p><strong>No</strong> debes cargar ningún archivo <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> desde cualquier fuente en la que no confíes (idealmente, solo aquellos archivos que hayas guardado tu mismp). Al igual que con cualquier <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, no es inherentemente seguro contra código malicioso, ya que puede cargar cualquier objeto Python y puede ejecutar código arbitrario en tu máquina. Además, no se garantiza que funcione de forma fiable en todos los entornos de Python que no sean en aquel en el que se creó, por lo que sólo debería utilizarse como formato de persistencia local, y no para intercambio.</p>
 </div>
-<p>También hay un botón para eliminar todas las variables mostradas, y un cuadro de búsqueda para encontrar objetos por nombre o tipo.</p>
+<p>The trash button allows removing all displayed variables, and the search button allows finding objects by name or type.</p>
 <img alt="Variable Explorer showing how to search variables" src="../_images/variable-explorer-search.gif" />
-<p>Por último, hay un botón para actualizar el contenido del Explorador de variables, que lo actualizará para mostrar el estado actual del código que se ejecuta en la consola IPython.</p>
+<p>Finally, the refresh updates the Variable Explorer’s contents to show the current state of the code running in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>.</p>
 </section>
 <section id="advanced-functionality">
 <span id="panes-variables-advanced"></span><h2>Funcionalidad avanzada<a class="headerlink" href="#advanced-functionality" title="Link to this heading">#</a></h2>
-<p>El menú contextual, disponible haciendo clic derecho en cualquier variable, proporciona numerosas opciones adicionales para interactuar con objetos de varios tipos. Estas incluyen renombrar, eliminar o editar variables existentes, así como la opción <span class="guilabel">Duplicar</span> para crear una nueva copia de una de ellas bajo un nuevo nombre que puedes ingresar en el cuadro de diálogo resultante.</p>
+<p>The context menu, available by right-clicking any variable, provides numerous additional options to interact with objects of various types.
+These include renaming, removing or editing existing variables, as well as a <span class="guilabel">Duplicate</span> option to create a new copy of one of them under a new name.</p>
 <img alt="Variable Explorer showing duplicating a variable" src="../_images/variable-explorer-duplicate.gif" />
 <p>Además, puedes copiar y pegar el valor de una variable, guardándola en el Explorador de variables con el nombre que elijas. Esto te permite cambiar el tipo de variable que estás pegando, lo que puede ser muy útil. Por ejemplo, te permite copiar fácilmente los elementos de una lista en una matriz.</p>
 <img alt="Variable Explorer showing copying list into array" src="../_images/variable-explorer-copy-paste.gif" />
-<p>Adicionalmente, puedes crear un objeto desde cero directamente en el Explorador de variables con la opción <span class="guilabel">Insertar</span>, que te permite escribir la clave (que debería estar entre comillas) y el valor del elemento que deseas insertar. Además de añadir una nueva variable de nivel superior, esta característica también te permite crear una nueva llave en un diccionario, un nuevo elemento en una lista, y mucho más.</p>
+<p>Additionally, you can create an object from scratch directly in the Variable Explorer with the <span class="guilabel">Insert</span> option, which allows you to type the key and the value for the item that you want to insert.
+This feature also allows you to create a new key in a dictionary, a new element in a list, and much more.</p>
 <img alt="Variable Explorer showing insertion of a new variable" src="../_images/variable-explorer-insert.gif" />
-<p>Para listas y arreglos de NumPy, hay opciones avanzadas disponibles, incluyendo la generación de gráficos e histogramas de sus valores apropiados a su tipo y dimensiones.</p>
+<p>For lists and NumPy arrays, more advanced options are available, including generating plots and histograms of their values appropriate to their type and dimensions.</p>
 <img alt="Plot window showing a plot, generated via the previous options" src="../_images/variable-explorer-histogram-plot.gif" />
-<p>Incluso puedes guardar un arreglo en un archivo <code class="docutils literal notranslate"><span class="pre">.npy</span></code> simplemente haciendo clic en la opción apropiada, que luego puede ser cargada por Spyder o en tu código a través de <code class="docutils literal notranslate"><span class="pre">numpy.load()</span></code>.</p>
+<p>You can save an array to a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> file by clicking the appropriate option, which can later be loaded in the Variable Explorer via <span class="guilabel">Import data</span> or in your code via <code class="docutils literal notranslate"><span class="pre">numpy.load()</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-contextmenu-array.png"><img alt="Context menu for an int array, with the Show image option selected" src="../_images/variable-explorer-contextmenu-array.png" width="500" />
 </a>
 <p>En el caso de arreglos bidimensionales, también puedes mostrarlos como imágenes, tratando sus valores como colores RGB. Para esto, Spyder utiliza los mapas de colores de Matplotlib, que pueden ser <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">fácilmente cambiados para que coincidan con tus preferencias</a>.</p>
 <img alt="Interactive image based on the array's data" src="../_images/variable-explorer-show-image.gif" />
-<p>Finalmente, hemos añadido una acción de menú contextual para abrir cualquier objeto usando el nuevo Explorador de objetos incluso si ya tienen un visor incorporado (DataFrames, arreglos, etc) permitiendo una inspección más profunda del funcionamiento interno de estos tipos de datos.</p>
-<img alt="Object explorer showing dataframe" src="../_images/variable-explorer-object-explorer.png" />
+<p>Finally, there is a context-menu action to open any object using the Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these data types.</p>
+<img alt="Object explorer showing DataFrame" src="../_images/variable-explorer-object-explorer.png" />
 </section>
 <section id="related-panes">
 <span id="panes-variables-related"></span><h2>Paneles relacionados<a class="headerlink" href="#related-panes" title="Link to this heading">#</a></h2>
@@ -649,12 +663,12 @@ For this, click the <span class="guilabel">Format</span> button and and set the 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Cadenas de texto</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Diccionarios</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Listas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">Arreglos de NumPy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">NumPy arrays</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes">DataFrames</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#options-menu">Menú de opciones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbar-buttons">Botones de la barra de herramientas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-exporting">Importing and exporting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-functionality">Funcionalidad avanzada</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-panes">Paneles relacionados</a></li>
 </ul>
