@@ -28,10 +28,10 @@ To modify a scalar variable, like an number, string or boolean, simply double cl
 Object viewers
 ==============
 
-The :guilabel:`Variable Explorer` offers built in support for editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.
+The :guilabel:`Variable Explorer` offers built in support for viewing and editing lists, strings, dictionaries, NumPy arrays, Pandas DataFrames, Series and more; as well as being able to plot and visualize them with one click.
 
-Every viewer has a refresh button, which updates the displayed object to the current value of the variable if it has changed in the meantime.
-Click any column to sort by it, ascending or descending, and if the object is editable you can double-click any cell to change its value, which will open a new viewer if that object isn't a basic scalar data type (int, float, string).
+Every viewer has a refresh button, which updates the displayed object to the current value of the variable in the Console if it has changed in the meantime.
+Click any column to sort the table by it in ascending or descending order, and if the object is editable you can double-click any cell to change its value, which will open a new viewer if that object isn't a basic scalar data type (e.g. ``int``, ``float``, ``string``).
 
 
 .. _panes-variables-viewers-str:
@@ -66,7 +66,7 @@ Lists
 
 For lists, the main Variable Explorer pane displays a preview of the first ten values.
 To see them all, double click the list to open a viewer that will display the index, type, size and value of each element of the list.
-Just like dictionaries, you can double-click values to edit them, and use the toolbar to insert, duplicate or delete them, along with options to resize and open in the object explorer.
+Just like dictionaries, you can double-click values to edit them, and use the toolbar to insert, duplicate or delete elements, along with options to resize and open in the object explorer.
 
 .. image:: /images/variable_explorer/variable-explorer-list.png
    :width: 500
@@ -80,7 +80,7 @@ NumPy arrays
 
 Like lists, for NumPy arrays the Variable Explorer shows a preview of their values.
 Double-clicking them will open a viewer displaying the array values in a "heat map", with each value in a grid cell colored based on its numeric quantity.
-You can deactivate this by selecting the :guilabel:`Use default background color` option in the :guilabel:`Display options` dialog under the pane options ("hamburger") menu in the top right.
+You can deactivate this by selecting the :guilabel:`Use default background color` option in the :guilabel:`Display options` dialog under the viewer options ("hamburger") menu in the top right.
 To improve performance, the background heatmap will be turned off automatically if the array is very large.
 
 .. image:: /images/variable_explorer/variable-explorer-heat-map.png
@@ -93,7 +93,7 @@ Clicking the resize button on the right of the dialog toolbar will set the width
    :alt: Array editor with a 2D int array, showing resizing of columns
 
 If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display.
-For this, enter the desired format string (using Python's standard `format specification mini-language`_) under :guilabel:`Formatting` in the :guilabel:`Display options` dialog under the pane options ("hamburger") menu in the top right.
+For this, enter the desired format string (using Python's standard `format specification mini-language`_) under :guilabel:`Formatting` in the :guilabel:`Display options` dialog under the viewer options ("hamburger") menu in the top right.
 
 .. _format specification mini-language: https://docs.python.org/3/library/string.html#format-specification-mini-language
 
@@ -187,7 +187,7 @@ This allows you to change the type of the variable that you are pasting which ca
    :alt: Variable Explorer showing copying list into array
 
 Additionally, you can create an object from scratch directly in the Variable Explorer with the :guilabel:`Insert` option, which allows you to type the key and the value for the item that you want to insert.
-In addition to adding a new top-level variable, this feature also allows you to create a new key in a dictionary, a new element in a list, and much more.
+This feature also allows you to create a new key in a dictionary, a new element in a list, and much more.
 
 .. image:: /images/variable_explorer/variable-explorer-insert.gif
    :alt: Variable Explorer showing insertion of a new variable
@@ -210,7 +210,7 @@ For two-dimensional arrays, you can also display them as images, treating their 
 .. image:: /images/variable_explorer/variable-explorer-show-image.gif
    :alt: Interactive image based on the array's data
 
-Finally, there is a context-menu action to open any object using the new Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these data types.
+Finally, there is a context-menu action to open any object using the Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these data types.
 
 .. image:: /images/variable_explorer/variable-explorer-object-explorer.png
    :alt: Object explorer showing DataFrame
