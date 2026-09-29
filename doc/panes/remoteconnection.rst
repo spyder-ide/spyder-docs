@@ -114,7 +114,7 @@ Connecting to existing kernels (advanced)
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
 For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <troubleshooting-common-kernel-version>` in the environment or machine in which the external kernel is running.
 
-.. image:: /images/console/console-menu.png
+.. image:: /images/console/console-menu.webp
    :alt: Connect to external kernel dialog of the Spyder IPython console
 
 
@@ -128,19 +128,22 @@ To connect to a local kernel that is already running (e.g. one started by Jupyte
 
 #. Run ``%connect_info`` in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after ``jupyter <app> --existing``.
 
-   .. image:: /images/console/console-connect-local-step1.gif
+   .. video:: /images/console/console-connect-local-step1.webm
+      :loop:
       :alt: Running connect_info in a Jupyter notebook
 
 #. In Spyder, click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and paste the name of the :guilabel:`Connection file` from the previous step.
 
    As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path of the file, i.e. :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`.
 
-   .. image:: /images/console/console-connect-local-step2.gif
+   .. video:: /images/console/console-connect-local-step2.webm
+      :loop:
       :alt: Copying the connection filename into Spyder's dialog
 
 #. Click :guilabel:`OK` to connect to the kernel.
 
-   .. image:: /images/console/console-connect-local-step3.gif
+   .. video:: /images/console/console-connect-local-step3.webm
+      :loop:
       :alt: Connecting to the kernel and running basic commands.
 
 
