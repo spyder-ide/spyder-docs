@@ -25,7 +25,6 @@ Toolbar options
 
 The toolbar at the top of the :guilabel:`Plots` pane provides a number of useful features that allow you to interact with your figures.
 
-
 For example, you can cycle sequentially through the plot list with the forward and back arrows.
 
 .. image:: /images/plots/plots-arrows.gif
