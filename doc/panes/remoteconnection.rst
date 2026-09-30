@@ -157,13 +157,9 @@ To connect to a local kernel that is already running (e.g. one started by Jupyte
 
    As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path of the file, i.e. :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`.
 
-   .. video:: /images/console/console-connect-local-step2.webm
-      :loop:
-      :alt: Copying the connection filename into Spyder's dialog
-
 #. Click :guilabel:`OK` to connect to the kernel.
 
-   .. video:: /images/console/console-connect-local-step3.webm
+   .. video:: /images/console/console-connect-local-step2.webm
       :loop:
       :alt: Connecting to the kernel and running basic commands.
 
@@ -178,23 +174,18 @@ To connect to a kernel on a remote machine,
 
 #. Launch a Spyder kernel on the remote host if one is not already running, with ``python -m spyder_kernels.console``.
 
-   .. image:: /images/console/console-connect-remote-step1.gif
-      :alt: Staring a Spyder kernel on a remote machine
-
 #. Copy the kernel's connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on.
 
    You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
    Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.
 
-   .. image:: /images/console/console-connect-remote-step2.gif
-      :alt: Using SCP to copy the connection file to the local machine
+   .. video:: /images/console/console-connect-remote.webm
+      :loop:
+      :alt: Staring a Spyder kernel on a remote machine and using SCP to copy the connection file to the local machine
 
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and browse for or enter the path to the connection file from the previous step.
 
    As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine, if you've copied the connection file there.
-
-   .. image:: /images/console/console-connect-remote-step3.gif
-      :alt: Opening the connect to kernel dialog and browsing for the path
 
 #. Check the :guilabel:`This is a remote kernel (via SSH)` box and enter the :guilabel:`Hostname` or IP address, username and port to connect to on the remote machine.
    Then, enter *either* :file:`{username}`'s password on the remote machine, or browse to an SSH keyfile (typically in the :file:`.ssh` directory in your home folder on the local machine, often called :file:`id_rsa` or similar) registered on it; only one is needed to connect.
@@ -202,13 +193,11 @@ To connect to a kernel on a remote machine,
 
    Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically ``22`` unless you or your administrator has configured it otherwise.
 
-   .. image:: /images/console/console-connect-remote-step4.gif
-      :alt: Entering pre-filled SSH details into the connection dialog
-
 #. Click :guilabel:`OK` to connect to the remote kernel
 
-   .. image:: /images/console/console-connect-remote-step5.gif
-      :alt: Connecting to the remote kernel and running basic commands
+.. video:: /images/console/console-connect-remote-spyder.webm
+   :loop:
+   :alt: Connecting to a remote kernel and running basic commands
 
 For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
 
