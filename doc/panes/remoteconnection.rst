@@ -7,6 +7,9 @@ Remote Connection Manager
 The **Remote Connections Manager** allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
 Connecting to a remote host and opening a new :ref:`panes-console` on it allows running code, browsing files and using other Spyder features just as if you were working on your local machine.
 
+.. image:: /images/console/remote-connection-active.webp
+   :alt: Remote Connections Manager
+
 It uses the standard, widely-used `SSH protocol`_, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
 Additionally, it supports connecting to `JupyterHub`_ servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
 No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.
@@ -16,6 +19,8 @@ No configuration is required on the remote host, aside from ensuring an SSH or J
 
 The remote connections manager can be accessed under :menuselection:`Tools --> Manage remote connections`, and you can use :menuselection:`Consoles --> New console in remote server` to open new consoles on remote servers you've already configured.
 
+.. image:: /images/console/remote-connection-menu.webp
+   :alt: Manage Remote Connections menu
 
 
 .. _panes-remote-create:
@@ -31,6 +36,10 @@ If your institution already has a `JupyterHub`_ server you'd like to connect to,
 Otherwise, if you want to connect to most other types of hosts, you'll want to use the default :guilabel:`SSH`.
 Either way, you'll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.
 
+.. video:: /images/console/remote-connection-new-console.webm
+   :loop:
+   :alt: Creating a new console in a remote connection
+
 
 .. _panes-remote-create-ssh:
 
@@ -38,6 +47,9 @@ SSH connection
 ~~~~~~~~~~~~~~
 
 To create a new SSH connection, you need to enter several key details:
+
+.. image:: /images/console/remote-connection-new-ssh.webp
+   :alt: Creating a new SSH connection
 
 #. Select your authentication method, :guilabel:`Password` or :guilabel:`Key file`.
 
@@ -67,6 +79,10 @@ Finally, click :guilabel:`Connect` to initiate the connection to the host, which
 
 Alternatively, you can click :guilabel:`Save` to store the details you've entered in a new connection without actually trying to connect.
 
+.. video:: /images/console/remote-connection-new-ssh.webm
+   :loop:
+   :alt: Creating a new SSH connection
+
 
 .. _panes-remote-create-jupyterhub:
 
@@ -84,6 +100,8 @@ If you have questions about how to obtain a token, ask the person who set up the
 
 .. _Spyder-Remote-Services: https://github.com/spyder-ide/spyder-remote-services
 
+.. image:: /images/console/remote-connection-new-jupyterhub.webp
+   :alt: Creating a new JupyterHub connection
 
 
 .. _panes-remote-manage:
@@ -97,6 +115,9 @@ The :guilabel:`Connection status` tab shows basic details of the connection, its
 Under the :guilabel:`Connection info` tab, you can update any of the details you entered when :ref:`panes-remote-create`, using the :guilabel:`Save` button at the bottom to save your changes.
 Use the :guilabel:`Connect` button to initiate the selected connection, or the :guilabel:`Remove` button to delete it.
 
+.. video:: /images/console/remote-connection-connection-manage.webm
+   :loop:
+   :alt: Managing an existing connection
 
 
 .. _connecting-external-kernel:
@@ -114,8 +135,8 @@ Connecting to existing kernels (advanced)
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
 For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <troubleshooting-common-kernel-version>` in the environment or machine in which the external kernel is running.
 
-.. image:: /images/console/console-menu.webp
-   :alt: Connect to external kernel dialog of the Spyder IPython console
+.. image:: /images/console/remote-connection-existing-kernels.webp
+   :alt: Connect to existing kernels dialog
 
 
 .. _panes-console-external-local:
