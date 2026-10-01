@@ -159,7 +159,8 @@ The :guilabel:`Save data` and :guilabel:`Save data as` buttons allows saving the
 
 .. _Python pickle: https://docs.python.org/3/library/pickle.html
 
-The trash button allows removing all displayed variables, and the search button allows finding objects by name or type.
+The :guilabel:`Remove all variables` button clears the whole console namespace, including objects hidden by filters such as :guilabel:`Exclude callables and modules`.
+The search button allows finding objects by name or type.
 
 .. image:: /images/variable_explorer/variable-explorer-search.gif
    :alt: Variable Explorer showing how to search variables

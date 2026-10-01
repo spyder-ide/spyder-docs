@@ -579,7 +579,8 @@ The <span class="guilabel">Save data</span> and <span class="guilabel">Save data
 <p class="admonition-title">Advertencia</p>
 <p><strong>No</strong> debes cargar ningún archivo <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> desde cualquier fuente en la que no confíes (idealmente, solo aquellos archivos que hayas guardado tu mismp). Al igual que con cualquier <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, no es inherentemente seguro contra código malicioso, ya que puede cargar cualquier objeto Python y puede ejecutar código arbitrario en tu máquina. Además, no se garantiza que funcione de forma fiable en todos los entornos de Python que no sean en aquel en el que se creó, por lo que sólo debería utilizarse como formato de persistencia local, y no para intercambio.</p>
 </div>
-<p>The trash button allows removing all displayed variables, and the search button allows finding objects by name or type.</p>
+<p>The <span class="guilabel">Remove all variables</span> button clears the whole console namespace, including objects hidden by filters such as <span class="guilabel">Exclude callables and modules</span>.
+The search button allows finding objects by name or type.</p>
 <img alt="Variable Explorer showing how to search variables" src="../_images/variable-explorer-search.gif" />
 <p>Finally, the refresh updates the Variable Explorer’s contents to show the current state of the code running in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">Terminal de IPython</span></a>.</p>
 </section>

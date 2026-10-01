@@ -581,7 +581,8 @@ The <span class="guilabel">Save data</span> and <span class="guilabel">Save data
 Like with any <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
 Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange.</p>
 </div>
-<p>The trash button allows removing all displayed variables, and the search button allows finding objects by name or type.</p>
+<p>The <span class="guilabel">Remove all variables</span> button clears the whole console namespace, including objects hidden by filters such as <span class="guilabel">Exclude callables and modules</span>.
+The search button allows finding objects by name or type.</p>
 <img alt="Variable Explorer showing how to search variables" src="../_images/variable-explorer-search.gif" />
 <p>Finally, the refresh updates the Variable Explorer’s contents to show the current state of the code running in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>.</p>
 </section>
