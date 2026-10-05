@@ -10,6 +10,10 @@ You can view and filter files according to their type and extension, open them w
 .. image:: /images/files/files-standard.webp
    :alt: Spyder Files pane, showing a tree view of files and metadata
 
+.. note::
+
+   The Files pane is especially useful when connected to a remote machine via the :ref:`panes-remote`, as in addition to opening and managing files in a graphical interface, it allows you to upload and download files between your computer and the remote host.
+   Most, although not all quite features work similarly on a remote machine as they do locally.
 
 
 .. _file-operations:
