@@ -4,9 +4,9 @@
 Editor
 ######
 
-Spyder's multi-language **Editor** pane is the key element of the IDE, where you can create, open, and modify source files.
+Spyder's multi-language **Editor** pane is the core element of the IDE, where you can create, open, and modify source files.
 The Editor offers a variety of core features, such as autocompletion, real-time analysis, syntax highlighting, horizontal and vertical splitting, and much more.
-In addition, it integrates a number of powerful tools for an easy to use, efficient editing experience.
+In addition, it integrates a number of powerful tools for an easy to use, efficient programming experience.
 
 .. image:: /images/editor/editor-standard.webp
    :alt: Spyder's Editor pane, split horizontally and with style analysis
@@ -28,8 +28,8 @@ The Editor pane consists of the following areas:
    Clicking a line number selects the text on that line, and clicking to the right of it sets a :ref:`breakpoint <panes-debugger-breakpoints>`.
 2. The scrollbars allow vertical and horizontal navigation in a file.
 3. The context (right-click) menu displays actions relevant to whatever was clicked.
-4. The options menu ("Hamburger" icon at top right) includes useful settings and actions relevant to the Editor.
-5. The location bar at the top of the Editor pane shows the full path of the current file.
+4. The options ("hamburger") menu at the top right includes useful settings and actions for the Editor.
+5. The location bar at the top of the pane shows the full path of the current file.
 6. The tab bar displays the names of all opened files.
    It also has a :guilabel:`Browse tabs` button (at left) to show every open tab and switch between them—which comes in handy if many are open.
 
@@ -52,7 +52,7 @@ Click the :guilabel:`Browse tabs` button on the left of the tab bar to display a
 .. image:: /images/editor/editor-tabs-browser.webp
    :alt: Spyder's Editor pane, showing the tabs browser
 
-Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the right of, or all tabs but the active one.
+Reorder tabs by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the left, right or both of the active one.
 
 .. video:: /images/editor/editor-tabs-sorting.webm
    :loop:
@@ -64,14 +64,13 @@ Reorder files by dragging and dropping, or with :guilabel:`Sort tabs alphabetica
 File switcher
 ~~~~~~~~~~~~~
 
-The Editor features a file switcher, which enables you to navigate and switch between multiple open files.
-The file switcher is helpful for locating any file when there are several files opened.
+The Editor features a file switcher, accessed from the :menuselection:`File --> File Switcher` menu or via the :kbd:`Ctrl-P` shortcut.
+This allows browsing a list of files open in the Editor and present in your current project, if one is opened; click any file to jump to it.
 
 .. image:: /images/editor/editor-file-switcher.webp
    :alt: Spyder's Editor pane, showing the file switcher
 
-It can be accessed from the :menuselection:`File --> File Switcher` menu or :kbd:`Ctrl-P`, and includes a search function.
-You can type in any part of an open file's name and—if exists—it can be switched to by pressing :kbd:`Enter`.
+You can type any part of an open or project file's name and the list will be filtered accordingly; pressing :kbd:`Enter` opens the currently-selected file.
 
 .. video:: /images/editor/editor-file-switcher.webm
    :loop:
@@ -112,13 +111,16 @@ To improve the readability of your code, Spyder has a syntax highlighting featur
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences.
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
-The :guilabel:`Fonts` section lets you change the text font and size.
+The :guilabel:`Fonts` section lets you change the interface  and code font and size.
 
 .. video:: /images/editor/editor-syntax-highlighting.webm
    :loop:
    :alt: Spyder's Editor pane, showing how to switch between syntax highlighting themes
 
-.. note:: Changes made to the syntax highlighting theme and font settings are common to all source files, regardless of their language.
+.. note::
+
+   If :guilabel:`Automatic` is selected in the :guilabel:`Main interface` section, changing the syntax highlighting theme from dark to light will automatically change Spyder's overall interface theme to match.
+
 
 
 .. _panes-editor-features-cells:
@@ -126,7 +128,7 @@ The :guilabel:`Fonts` section lets you change the text font and size.
 Code cells
 ~~~~~~~~~~
 
-A "code cell" in Spyder is a block of lines, typically in a script, that can be easily executed all at once in the current :ref:`panes-console`.
+A "code cell" in Spyder is a block of lines, typically in a script, that can be executed all at once in the current :ref:`panes-console`.
 This is similar to "cell" behavior in Jupyter Notebook and MATLAB.
 You can divide your scripts into as many cells as needed, or none at all—the choice is yours.
 
@@ -140,15 +142,17 @@ You can separate cells by lines starting with either:
 
 Providing a description to the right of the separator will give that cell its own name in the :ref:`panes-outline`.
 You can also create "subsections" by adding more ``%`` signs to the cell separator, e.g. ``# %%%`` to create a level 2 subsection, ``# %%%%`` for level 3, etc.
-This displays multiple levels in the :ref:`panes-outline` pane.
+This displays as multiple hierarchical levels in the :ref:`panes-outline` pane.
 
 .. image:: /images/editor/editor-subsections.webp
    :alt: Spyder outline pane, showing an example of sub sections
 
-.. note:: This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
+.. note::
+
+   This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
-You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` (:kbd:`Shift-Enter` by default).
+You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` or the :guilabel:`Run cell and advance` toolbar button (:kbd:`Shift-Enter` by default).
 
 
 .. _panes-editor-features-formatting:
@@ -163,8 +167,8 @@ The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`S
    :loop:
    :alt: Spyder Editor pane, showing an example of code selection formatting
 
-You can have the Editor automatically autoformat a file every time you save your work.
-To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code style and formatting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
+You can have the Editor automatically format the file every time you save your work.
+To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
 
 .. image:: /images/editor/editor-autoformat-setting.webp
    :alt: Spyder's preferences dialog, showing checking the autoformat files on save setting
@@ -192,7 +196,7 @@ Run file
 ~~~~~~~~
 
 Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the :guilabel:`Run file` toolbar button or the :kbd:`F5` key.
-Use :menuselection:`Run --> Re-Run last script` to re-run the most recent file executed with the above.
+Use :menuselection:`Run --> Re-Run last file` to re-run the most recent script executed with the above.
 
 
 .. _panes-editor-run-line:
@@ -200,7 +204,7 @@ Use :menuselection:`Run --> Re-Run last script` to re-run the most recent file e
 Run line/selection
 ~~~~~~~~~~~~~~~~~~
 
-You can execute the current line—or multiple selected lines—using the :guilabel:`Run selection or current line` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key.
+You can execute the current line—or multiple selected lines—using the :guilabel:`Run current line/selection` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key (by default).
 After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
 Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-console`.
 
@@ -210,7 +214,7 @@ Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-con
 Run cell
 ~~~~~~~~
 
-To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run current cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
+To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut (by default).
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
 
 
@@ -219,12 +223,15 @@ Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd
 Run configuration
 ~~~~~~~~~~~~~~~~~
 
-You can use the :guilabel:`Run configuration per file` dialog to set each file's working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
+You can use the :guilabel:`Run configuration` dialog to set each file's working directory, console mode (current, dedicated or external), command line arguments, execution options (clear all variables, run in an existing/empty namespace, debug on error), and more.
 
 .. image:: /images/editor/editor-run-configuration.webp
    :alt: Spyder's Editor pane, showing the Run Configuration dialog
 
-To access it, click :menuselection:`Run --> Configuration per file...` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
+To access it, click :menuselection:`Run --> Configuration per file` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
+The :guilabel:`Runner` drop-down allows to configure settings for the different runners capable of executing your files, including the :ref:`panes-debugger`, :ref:`panes-profiler`, :ref:`panes-pylint`, as well as running in an external system terminal.
+To configure settings for running in the default :ref:`panes-console`, select :guilabel:`IPython Console`.
+The relevant options for each runner can be set under :guilabel:`Custom configuration`, and you can save them as presets by giving them a :guilabel:`Name` and clicking :guilabel:`OK`, and they can be switched between from the :guilabel:`Preset configuration` dropdown below the :guilabel:`Runner` selection.
 
 
 
@@ -241,8 +248,9 @@ Find and replace
 
 To search for text in the current file, use :menuselection:`Search --> Find text` or :kbd:`Ctrl-F` / :kbd:`Cmd-F`, and to replace it, use :menuselection:`Search --> Replace text` or :kbd:`Ctrl-R` / :kbd:`Cmd-R`.
 Typing your search string in the resulting panel below the Editor highlights each result and counts the total.
-Navigate between matches with the :guilabel:`Find Previous` and :guilabel:`Find Next` buttons in the find/replace panel, their corresponding entries in the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys.
-Use the :guilabel:`.*` button to process search text as a `regular expression <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` to treat it as case-sensitive and :guilabel:`[–]` to only match whole words (e.g. for ``data``, match ``data()`` but not ``dataframe``).
+Navigate between matches with the :guilabel:`Find previous` and :guilabel:`Find next` buttons in the find/replace panel (up and down arrows), their corresponding entries in the :guilabel:`Search` menu, or use the :kbd:`F2` and :kbd:`F3` keys.
+Use the :guilabel:`.*` button to process search text as a `regular expression <https://docs.python.org/3/library/re.html>`_, :guilabel:`Aa` to treat it as case-sensitive and :guilabel:`[A]` to only match whole words (e.g. for ``data``, match ``data()`` but not ``dataframe``).
+For replacing, there are also options to replace the next occurrence or all in the current selection or file.
 
 .. image:: /images/editor/editor-find-replace-panel.webp
    :alt: Spyder's Editor pane, showing the find and replace panel
@@ -268,7 +276,7 @@ It also shows the current line number and total line count in the file.
 Class/function selector
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This panel, activated under :menuselection:`Source --> Show selector for classes and functions`, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside.
+This panel, activated under :menuselection:`Source --> Show class/function selector`, displays (as applicable) the name of the cell, function/method and class the Editor cursor is located inside.
 Use its dropdowns to view and jump to the functions, methods and classes in the current file.
 
 .. video:: /images/editor/editor-class-function-selector.webm
@@ -306,7 +314,7 @@ Select the desired completion with the arrow keys and :kbd:`Enter`, or by double
    :alt: Spyder's Editor pane, showing a code completion example
 
 You can enable or disable on-the-fly code completion, as well as modify when it is triggered and what results are shown, under :menuselection:`Preferences --> Completion and Linting --> General --> Completions`.
-Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Advanced`.
+Spyder also allows you to define custom completion snippets to use, in addition to the ones offered by the LSP, under :menuselection:`Preferences --> Completion and Linting --> Snippets`.
 
 
 .. _panes-editor-lsp-linting:
@@ -319,14 +327,20 @@ Spyder can optionally highlight syntax errors, style issues, and other potential
 .. image:: /images/editor/editor-pane-code-error.webp
    :alt: Spyder's Editor pane, showing an example of a highlighted code error
 
-The Editor's basic linting, powered by `Pyflakes <https://github.com/PyCQA/pyflakes>`_, warns of syntax errors and likely bugs in your code.
+The Editor's real-time linting warns of syntax errors and likely bugs in your code.
 It is on by default, and can be disabled or customized under :menuselection:`Preferences --> Completion and Linting --> Linting`.
+The linting engines available include:
+
+* `Pyflakes <https://github.com/PyCQA/pyflakes>`_ (default), which detects basic errors
+* `Flake8 <https://flake8.pycqa.org/>`_, which incorporates error checks, code style linting and complexity analysis
+* `Ruff <https://docs.astral.sh/ruff/>`_, which includes a huge variety of configurable lint rules covering a wide gamut of possible issues in your code
 
 .. image:: /images/editor/editor-linting-setting.webp
    :alt: Spyder's preferences dialog, showing linting settings
 
-Code style analysis, powered by `Pycodestyle <https://pycodestyle.pycqa.org/en/stable/>`_, flags deviations from the style conventions in :pep:`8`.
-It is not active by default, but you can enable it and customize the `Pycodestyle error codes <https://pycodestyle.pycqa.org/en/stable/intro.html#error-codes>`_ shown with the options under :menuselection:`Preferences --> Completion and Linting --> Code style and formatting --> Code Style`.
+Flake8 and Ruff enable a default set of checks that aims to strike a balances between catching errors and issues and issuing too many warnings, with Spyder additionally disabling some style-related checks by default.
+You can override these defaults or enable or disable any specific categories or individual checks using the :guilabel:`Show/Ignore these errors or warnings` fields and the rule prefix/numbers listed in their respective documentation (they use the same set of codes for the same checks, aside from a few cases where two third-party Flake8 checks have conflicting codes).
+You can also ignore or only check specific files by name or regular expression using the :guilabel:`Only check these filenames` and :guilabel:`Exclude these files or directories` options.
 
 .. image:: /images/editor/editor-code-style-setting.webp
    :alt: Spyder's preferences dialog, showing code style and formatting settings
@@ -337,7 +351,7 @@ It is not active by default, but you can enable it and customize the `Pycodestyl
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If there's a function, class or variable for which you would like to check its definition, you need to :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is declared.
+If there's a function, class or variable for which you would like to check its definition, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is declared.
 
 .. video:: /images/editor/editor-go-to-definition.webm
    :loop:
@@ -370,8 +384,8 @@ The full list can be browsed, searched and customized (on double-click) in :menu
 Related panes
 =============
 
+* :ref:`panes-pylint`
 * :ref:`panes-files`
 * :ref:`panes-find`
 * :ref:`panes-console`
 * :ref:`panes-projects`
-* :ref:`panes-pylint`
