@@ -12,7 +12,7 @@ You can view and filter files according to their type and extension, open them w
 
 .. note::
 
-   The Files pane is especially useful when connected to a remote machine via the :ref:`panes-remote`, as in addition to opening and managing files in a graphical interface, it allows you to upload and download files between your computer and the remote host.
+   The Files pane is especially useful when connected to a remote machine via the :ref:`panes-remote`, as in addition to graphically browsing and managing remote files, it allows you to upload and download files between your computer and the remote host.
    Most, although not all quite features work similarly on a remote machine as they do locally.
 
 
@@ -55,7 +55,7 @@ If copying the paths for multiple files, they will be automatically formatted so
 Version control support
 =======================
 
-The :guilabel:`Files` pane allows you to perform basic operations with the `Git`_ distributed version control system via the context-menu on right-clicking a file, like committing your changes and browsing the repository a given file or folder belongs to.
+The :guilabel:`Files` pane context menu allows you to perform basic operations with the `Git`_ distributed version control system when right-clicking a file, like committing your changes and browsing the repository a given file or folder belongs to.
 This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :ref:`panes-projects`.
 
 .. _Git: https://git-scm.com/
@@ -88,7 +88,7 @@ Additionally, you can show or hide the :guilabel:`Type`, :guilabel:`Size` and :g
 .. image:: /images/files/files-columns-display.webp
    :alt: Spyder Files pane showing columns checked and shown
 
-Finally, the menu also gives you the option to open files and directories with a single- instead of a double-click, to suit your preference.
+Finally, the menu also gives you the option to open files and directories with a single-click (instead of a double-click) to suit your preference.
 
 
 
