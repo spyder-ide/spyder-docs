@@ -52,7 +52,7 @@ Click the :guilabel:`Browse tabs` button on the left of the tab bar to display a
 .. image:: /images/editor/editor-tabs-browser.webp
    :alt: Spyder's Editor pane, showing the tabs browser
 
-Reorder tabs by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the left, right or both of the active one.
+Reorder tabs by dragging and dropping, or with :guilabel:`Sort tabs alphabetically` in the options menu, which also allows closing all tabs to the left, right, or all but the active one.
 
 .. video:: /images/editor/editor-tabs-sorting.webm
    :loop:
@@ -64,13 +64,17 @@ Reorder tabs by dragging and dropping, or with :guilabel:`Sort tabs alphabetical
 File switcher
 ~~~~~~~~~~~~~
 
-The Editor features a file switcher, accessed from the :menuselection:`File --> File Switcher` menu or via the :kbd:`Ctrl-P` shortcut.
+The Editor features a file switcher, accessed from the :menuselection:`File --> File Switcher` menu or via the :kbd:`Ctrl-P` shortcut (:kbd:`Cmd-P` on macOS).
 This allows browsing a list of files open in the Editor and present in your current project, if one is opened; click any file to jump to it.
 
 .. image:: /images/editor/editor-file-switcher.webp
    :alt: Spyder's Editor pane, showing the file switcher
 
-You can type any part of an open or project file's name and the list will be filtered accordingly; pressing :kbd:`Enter` opens the currently-selected file.
+You can type any part of an open or project file's name and the list will be filtered accordingly; pressing :kbd:`Enter` will give focus to or open the currently-selected file, respectively.
+
+.. note::
+
+   Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or via Conda, but not via Pip.
 
 .. video:: /images/editor/editor-file-switcher.webm
    :loop:
@@ -111,7 +115,7 @@ To improve the readability of your code, Spyder has a syntax highlighting featur
 You can configure and preview syntax highlighting themes and fonts under :menuselection:`Preferences --> Appearance`.
 The :guilabel:`Syntax highlighting theme` section allows you to change the color and style of the syntax elements and background to match your preferences.
 You can switch between available themes in the drop-down menu, modify the selected theme, create a new theme, and more.
-The :guilabel:`Fonts` section lets you change the interface  and code font and size.
+The :guilabel:`Fonts` section lets you change the interface and code font and size.
 
 .. video:: /images/editor/editor-syntax-highlighting.webm
    :loop:
@@ -152,7 +156,7 @@ This displays as multiple hierarchical levels in the :ref:`panes-outline` pane.
    This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
-You can also run a cell and then jump to the next one, letting you quickly step through multiple cells, using :menuselection:`Run --> Run cell and advance` or the :guilabel:`Run cell and advance` toolbar button (:kbd:`Shift-Enter` by default).
+You can also run a cell and then jump to the next one---letting you quickly step through multiple cells---using :menuselection:`Run --> Run cell and advance`, its corresponding toolbar button or the :kbd:`Shift-Enter` keyboard shortcut.
 
 
 .. _panes-editor-features-formatting:
@@ -160,14 +164,14 @@ You can also run a cell and then jump to the next one, letting you quickly step 
 Automatic formatting
 ~~~~~~~~~~~~~~~~~~~~
 
-The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_ and `Black <https://black.readthedocs.io/en/stable/>`_.
+The Editor has built-in support for automatically formatting your code using several popular tools, including `Autopep8 <https://github.com/hhatto/autopep8>`_, `Black <https://black.readthedocs.io/en/stable/>`_ and `Ruff <https://docs.astral.sh/ruff/formatter/>`__.
 The :guilabel:`Format file or selection with {tool}` command in the :guilabel:`Source` or context menu will format either the selected fragment (if text is selected) or the entire active file.
 
 .. video:: /images/editor/editor-automatic-formatting.webm
    :loop:
    :alt: Spyder Editor pane, showing an example of code selection formatting
 
-You can have the Editor automatically format the file every time you save your work.
+You can have the Editor automatically format your files every time you save them.
 To set this up, go to :menuselection:`Preferences --> Completion and linting --> Code formatting` and check the :guilabel:`Autoformat files on save` option.
 
 .. image:: /images/editor/editor-autoformat-setting.webp
@@ -214,7 +218,7 @@ Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-con
 Run cell
 ~~~~~~~~
 
-To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, the :guilabel:`Run cell` toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut (by default).
+To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, its corresponding toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
 
 
@@ -231,7 +235,8 @@ You can use the :guilabel:`Run configuration` dialog to set each file's working 
 To access it, click :menuselection:`Run --> Configuration per file` or press :kbd:`Ctrl-F6` / :kbd:`Cmd-F6`.
 The :guilabel:`Runner` drop-down allows to configure settings for the different runners capable of executing your files, including the :ref:`panes-debugger`, :ref:`panes-profiler`, :ref:`panes-pylint`, as well as running in an external system terminal.
 To configure settings for running in the default :ref:`panes-console`, select :guilabel:`IPython Console`.
-The relevant options for each runner can be set under :guilabel:`Custom configuration`, and you can save them as presets by giving them a :guilabel:`Name` and clicking :guilabel:`OK`, and they can be switched between from the :guilabel:`Preset configuration` dropdown below the :guilabel:`Runner` selection.
+The relevant options for each runner can be set under :guilabel:`Custom configuration`, and you can save them as presets by giving them a :guilabel:`Name` and clicking :guilabel:`OK`.
+You can then switch between different presets from the :guilabel:`Preset configuration` dropdown below the :guilabel:`Runner` selection.
 
 
 
@@ -329,16 +334,16 @@ Spyder can optionally highlight syntax errors, style issues, and other potential
 
 The Editor's real-time linting warns of syntax errors and likely bugs in your code.
 It is on by default, and can be disabled or customized under :menuselection:`Preferences --> Completion and Linting --> Linting`.
-The linting engines available include:
+The linting providers available include:
 
-* `Pyflakes <https://github.com/PyCQA/pyflakes>`_ (default), which detects basic errors
-* `Flake8 <https://flake8.pycqa.org/>`_, which incorporates error checks, code style linting and complexity analysis
-* `Ruff <https://docs.astral.sh/ruff/>`_, which includes a huge variety of configurable lint rules covering a wide gamut of possible issues in your code
+* `Pyflakes <https://github.com/PyCQA/pyflakes>`_ (default), which detects basic errors.
+* `Flake8 <https://flake8.pycqa.org/>`_, which incorporates error checks, code style linting and complexity analysis.
+* `Ruff <https://docs.astral.sh/ruff/>`_, which includes a huge variety of configurable lint rules covering a wide gamut of possible issues in your code.
 
 .. image:: /images/editor/editor-linting-setting.webp
    :alt: Spyder's preferences dialog, showing linting settings
 
-Flake8 and Ruff enable a default set of checks that aims to strike a balances between catching errors and issues and issuing too many warnings, with Spyder additionally disabling some style-related checks by default.
+Flake8 and Ruff enable a default set of checks that aims to strike a balances between catching errors and potential problems, and issuing too many warnings, with Spyder additionally disabling some style-related checks by default.
 You can override these defaults or enable or disable any specific categories or individual checks using the :guilabel:`Show/Ignore these errors or warnings` fields and the rule prefix/numbers listed in their respective documentation (they use the same set of codes for the same checks, aside from a few cases where two third-party Flake8 checks have conflicting codes).
 You can also ignore or only check specific files by name or regular expression using the :guilabel:`Only check these filenames` and :guilabel:`Exclude these files or directories` options.
 
@@ -351,7 +356,7 @@ You can also ignore or only check specific files by name or regular expression u
 Introspection features
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If there's a function, class or variable for which you would like to check its definition, :kbd:`Ctrl`/:kbd:`Cmd`-click its name in the Editor (or click its name and press :kbd:`Ctrl-G` / :kbd:`Cmd-G` to jump to the file and line where it is declared.
+If there's a function, class or variable for which you would like to check its definition, hold :kbd:`Ctrl`/:kbd:`Cmd` and click its name in the Editor to jump to the file and line where it is declared.
 
 .. video:: /images/editor/editor-go-to-definition.webm
    :loop:
