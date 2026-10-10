@@ -7,6 +7,9 @@ Remote Connection Manager
 The **Remote Connections Manager** allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
 Connecting to a remote host and opening a new :ref:`panes-console` on it allows running code, browsing files and using other Spyder features just as if you were working on your local machine.
 
+.. image:: /images/console/remote-connection-active.webp
+   :alt: Remote Connections Manager
+
 It uses the standard, widely-used `SSH protocol`_, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
 Additionally, it supports connecting to `JupyterHub`_ servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
 No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.
@@ -16,6 +19,8 @@ No configuration is required on the remote host, aside from ensuring an SSH or J
 
 The remote connections manager can be accessed under :menuselection:`Tools --> Manage remote connections`, and you can use :menuselection:`Consoles --> New console in remote server` to open new consoles on remote servers you've already configured.
 
+.. image:: /images/console/remote-connection-menu.webp
+   :alt: Manage Remote Connections menu
 
 
 .. _panes-remote-create:
@@ -31,6 +36,10 @@ If your institution already has a `JupyterHub`_ server you'd like to connect to,
 Otherwise, if you want to connect to most other types of hosts, you'll want to use the default :guilabel:`SSH`.
 Either way, you'll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.
 
+.. video:: /images/console/remote-connection-new-console.webm
+   :loop:
+   :alt: Creating a new console in a remote connection
+
 
 .. _panes-remote-create-ssh:
 
@@ -38,6 +47,9 @@ SSH connection
 ~~~~~~~~~~~~~~
 
 To create a new SSH connection, you need to enter several key details:
+
+.. image:: /images/console/remote-connection-new-ssh.webp
+   :alt: Creating a new SSH connection
 
 #. Select your authentication method, :guilabel:`Password` or :guilabel:`Key file`.
 
@@ -67,6 +79,10 @@ Finally, click :guilabel:`Connect` to initiate the connection to the host, which
 
 Alternatively, you can click :guilabel:`Save` to store the details you've entered in a new connection without actually trying to connect.
 
+.. video:: /images/console/remote-connection-new-ssh.webm
+   :loop:
+   :alt: Creating a new SSH connection
+
 
 .. _panes-remote-create-jupyterhub:
 
@@ -84,6 +100,8 @@ If you have questions about how to obtain a token, ask the person who set up the
 
 .. _Spyder-Remote-Services: https://github.com/spyder-ide/spyder-remote-services
 
+.. image:: /images/console/remote-connection-new-jupyterhub.webp
+   :alt: Creating a new JupyterHub connection
 
 
 .. _panes-remote-manage:
@@ -97,6 +115,9 @@ The :guilabel:`Connection status` tab shows basic details of the connection, its
 Under the :guilabel:`Connection info` tab, you can update any of the details you entered when :ref:`panes-remote-create`, using the :guilabel:`Save` button at the bottom to save your changes.
 Use the :guilabel:`Connect` button to initiate the selected connection, or the :guilabel:`Remove` button to delete it.
 
+.. video:: /images/console/remote-connection-connection-manage.webm
+   :loop:
+   :alt: Managing an existing connection
 
 
 .. _connecting-external-kernel:
@@ -114,8 +135,8 @@ Connecting to existing kernels (advanced)
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
 For this feature to work, a compatible version of the ``spyder-kernels`` package :ref:`must be installed <troubleshooting-common-kernel-version>` in the environment or machine in which the external kernel is running.
 
-.. image:: /images/console/console-menu.png
-   :alt: Connect to external kernel dialog of the Spyder IPython console
+.. image:: /images/console/remote-connection-existing-kernels.webp
+   :alt: Connect to existing kernels dialog
 
 
 .. _panes-console-external-local:
@@ -128,19 +149,18 @@ To connect to a local kernel that is already running (e.g. one started by Jupyte
 
 #. Run ``%connect_info`` in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after ``jupyter <app> --existing``.
 
-   .. image:: /images/console/console-connect-local-step1.gif
+   .. video:: /images/console/console-connect-local-step1.webm
+      :loop:
       :alt: Running connect_info in a Jupyter notebook
 
 #. In Spyder, click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and paste the name of the :guilabel:`Connection file` from the previous step.
 
    As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to the full path of the file, i.e. :file:`{jupyter/runtime/dir/path}/kernal-{id}.json`.
 
-   .. image:: /images/console/console-connect-local-step2.gif
-      :alt: Copying the connection filename into Spyder's dialog
-
 #. Click :guilabel:`OK` to connect to the kernel.
 
-   .. image:: /images/console/console-connect-local-step3.gif
+   .. video:: /images/console/console-connect-local-step2.webm
+      :loop:
       :alt: Connecting to the kernel and running basic commands.
 
 
@@ -154,23 +174,18 @@ To connect to a kernel on a remote machine,
 
 #. Launch a Spyder kernel on the remote host if one is not already running, with ``python -m spyder_kernels.console``.
 
-   .. image:: /images/console/console-connect-remote-step1.gif
-      :alt: Staring a Spyder kernel on a remote machine
-
 #. Copy the kernel's connection file (:file:`{jupyter/runtime/dir/path}/kernel-{pid}.json`) to the machine you're running Spyder on.
 
    You can get :file:`{jupyter/runtime/dir/path}` by executing ``jupyter --runtime-dir`` in the same Python environment as the kernel.
    Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.
 
-   .. image:: /images/console/console-connect-remote-step2.gif
-      :alt: Using SCP to copy the connection file to the local machine
+   .. video:: /images/console/console-connect-remote.webm
+      :loop:
+      :alt: Staring a Spyder kernel on a remote machine and using SCP to copy the connection file to the local machine
 
 #. Click :guilabel:`Connect to an existing kernel` from the :guilabel:`Consoles` menu, and browse for or enter the path to the connection file from the previous step.
 
    As a convenience, kernel ID numbers (e.g. ``1234``) entered in the connection file path field will be expanded to :file:`{jupyter/runtime/dir/path}/kernal-{id}.json` on your local machine, if you've copied the connection file there.
-
-   .. image:: /images/console/console-connect-remote-step3.gif
-      :alt: Opening the connect to kernel dialog and browsing for the path
 
 #. Check the :guilabel:`This is a remote kernel (via SSH)` box and enter the :guilabel:`Hostname` or IP address, username and port to connect to on the remote machine.
    Then, enter *either* :file:`{username}`'s password on the remote machine, or browse to an SSH keyfile (typically in the :file:`.ssh` directory in your home folder on the local machine, often called :file:`id_rsa` or similar) registered on it; only one is needed to connect.
@@ -178,13 +193,11 @@ To connect to a kernel on a remote machine,
 
    Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically ``22`` unless you or your administrator has configured it otherwise.
 
-   .. image:: /images/console/console-connect-remote-step4.gif
-      :alt: Entering pre-filled SSH details into the connection dialog
-
 #. Click :guilabel:`OK` to connect to the remote kernel
 
-   .. image:: /images/console/console-connect-remote-step5.gif
-      :alt: Connecting to the remote kernel and running basic commands
+.. video:: /images/console/console-connect-remote-spyder.webm
+   :loop:
+   :alt: Connecting to a remote kernel and running basic commands
 
 For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
 
