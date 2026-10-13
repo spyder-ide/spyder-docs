@@ -16,6 +16,7 @@ It shows the namespace contents (including all global objects, variables, class 
 
 The Variable Explorer gives you information on the name, size, type and value of each object.
 To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.
+For other objects, like collections, arrays and DataFrames, double-click them to open one of the :ref:`panes-variables-viewers`.
 
 .. image:: /images/variable_explorer/variable-explorer-modifying.gif
    :alt: Spyder Variable Explorer modifying value of a variable
@@ -140,9 +141,9 @@ It also allows you to display the min and max of NumPy arrays instead of a previ
 .. _panes-variables-toolbar:
 .. _panes-variables-import-export:
 
-=======================
-Importing and exporting
-=======================
+===============
+Toolbar buttons
+===============
 
 The Variable Explorer's toolbar includes several useful features to import, export and manage variables and data.
 The :guilabel:`Import data` button can be used to load a variety of types of data files, including JOSN, NumPy, Matlab, CSV, images, Python pickles and HDF5.

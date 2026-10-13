@@ -540,11 +540,11 @@ Click the <span class="guilabel">Browse tabs</span> button on the left of the ta
 This allows browsing a list of files open in the Editor and present in your current project, if one is opened; click any file to jump to it.</p>
 <img alt="Spyder's Editor pane, showing the file switcher" src="../_images/editor-file-switcher.webp" />
 <p>You can type any part of an open or project file’s name and the list will be filtered accordingly; pressing <kbd class="kbd docutils literal notranslate">Enter</kbd> will give focus to or open the currently-selected file, respectively.</p>
-<div class="admonition note">
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/editor-file-switcher.webm" type="video/webm">Spyder's Editor pane, showing searching and switching to an existing file</video></div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or via Conda, but not via Pip.</p>
+<p>Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or Conda, but not Pip.</p>
 </div>
-<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/editor-file-switcher.webm" type="video/webm">Spyder's Editor pane, showing searching and switching to an existing file</video></div></section>
+</section>
 <section id="split-panels">
 <span id="panes-editor-interface-split"></span><h3>Split panels<a class="headerlink" href="#split-panels" title="Link to this heading">#</a></h3>
 <p>The Editor can be split horizontally and vertically into as many distinct panels as desired.
@@ -590,7 +590,7 @@ This displays as multiple hierarchical levels in the <a class="reference interna
 <p>This only affects how the cell is displayed in the <a class="reference internal" href="outline.html#panes-outline"><span class="std std-ref">Outline</span></a>, and doesn’t affect running it in the Editor.</p>
 </div>
 <p>To run the code in a cell, use <span class="menuselection">Run ‣ Run cell</span>, the <span class="guilabel">Run cell</span> button in the toolbar or the keyboard shortcut (<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd> by default).
-You can also run a cell and then jump to the next one—letting you quickly step through multiple cells—using <span class="menuselection">Run ‣ Run cell and advance</span>, its corresponding toolbar button or the <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd> keyboard shortcut.</p>
+For more about the different ways you can run code in cells, see <a class="reference internal" href="#panes-editor-run-cell"><span class="std std-ref">Run cell</span></a>.</p>
 </section>
 <section id="automatic-formatting">
 <span id="panes-editor-features-formatting"></span><h3>Automatic formatting<a class="headerlink" href="#automatic-formatting" title="Link to this heading">#</a></h3>
@@ -615,16 +615,16 @@ To set this up, go to <span class="menuselection">Preferences ‣ Completion and
 <p>Run an entire Editor file using the <span class="menuselection">Run ‣ Run</span> menu item, the <span class="guilabel">Run file</span> toolbar button or the <kbd class="kbd docutils literal notranslate">F5</kbd> key.
 Use <span class="menuselection">Run ‣ Re-Run last file</span> to re-run the most recent script executed with the above.</p>
 </section>
-<section id="run-line-selection">
-<span id="panes-editor-run-line"></span><h3>Run line/selection<a class="headerlink" href="#run-line-selection" title="Link to this heading">#</a></h3>
-<p>You can execute the current line—or multiple selected lines—using the <span class="guilabel">Run current line/selection</span> option from the toolbar or the <span class="menuselection">Run</span> menu, as well as with the <kbd class="kbd docutils literal notranslate">F9</kbd> key (by default).
-After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
-Unlike <span class="guilabel">Run file</span>, the executed lines are shown in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>.</p>
-</section>
 <section id="run-cell">
 <span id="panes-editor-run-cell"></span><h3>Run cell<a class="headerlink" href="#run-cell" title="Link to this heading">#</a></h3>
 <p>To run a cell, place your cursor inside it and use the <span class="menuselection">Run ‣ Run cell</span> menu item, its corresponding toolbar button or the <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd> / <kbd class="kbd docutils literal notranslate">Cmd</kbd>-<kbd class="kbd docutils literal notranslate">Return</kbd> keyboard shortcut.
 Use <span class="guilabel">Run cell and advance</span> in the <span class="guilabel">Run</span> menu/toolbar or <kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Enter</kbd> to jump to the next cell after running, useful for stepping through cells quickly.</p>
+</section>
+<section id="run-line-selection">
+<span id="panes-editor-run-line"></span><h3>Run line/selection<a class="headerlink" href="#run-line-selection" title="Link to this heading">#</a></h3>
+<p>You can execute the current line—or multiple selected lines—using the <span class="guilabel">Run current line/selection</span> option from the toolbar or the <span class="menuselection">Run</span> menu, as well as with the <kbd class="kbd docutils literal notranslate">F9</kbd> key (by default).
+After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
+Unlike <span class="guilabel">Run file</span> or <span class="guilabel">Run cell</span> (by default), the executed lines are shown in the <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a>.</p>
 </section>
 <section id="run-configuration">
 <span id="panes-editor-run-configuration"></span><h3>Run configuration<a class="headerlink" href="#run-configuration" title="Link to this heading">#</a></h3>
@@ -784,8 +784,8 @@ The full list can be browsed, searched and customized (on double-click) in <span
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-code">Running code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-file">Run file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-line-selection">Run line/selection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-cell">Run cell</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-line-selection">Run line/selection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-configuration">Run configuration</a></li>
 </ul>
 </li>

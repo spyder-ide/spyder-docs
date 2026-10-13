@@ -72,13 +72,13 @@ This allows browsing a list of files open in the Editor and present in your curr
 
 You can type any part of an open or project file's name and the list will be filtered accordingly; pressing :kbd:`Enter` will give focus to or open the currently-selected file, respectively.
 
-.. note::
-
-   Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or via Conda, but not via Pip.
-
 .. video:: /images/editor/editor-file-switcher.webm
    :loop:
    :alt: Spyder's Editor pane, showing searching and switching to an existing file
+
+.. note::
+
+   Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or Conda, but not Pip.
 
 
 .. _panes-editor-interface-split:
@@ -156,7 +156,7 @@ This displays as multiple hierarchical levels in the :ref:`panes-outline` pane.
    This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
-You can also run a cell and then jump to the next one---letting you quickly step through multiple cells---using :menuselection:`Run --> Run cell and advance`, its corresponding toolbar button or the :kbd:`Shift-Enter` keyboard shortcut.
+For more about the different ways you can run code in cells, see :ref:`panes-editor-run-cell`.
 
 
 .. _panes-editor-features-formatting:
@@ -203,16 +203,6 @@ Run an entire Editor file using the :menuselection:`Run --> Run` menu item, the 
 Use :menuselection:`Run --> Re-Run last file` to re-run the most recent script executed with the above.
 
 
-.. _panes-editor-run-line:
-
-Run line/selection
-~~~~~~~~~~~~~~~~~~
-
-You can execute the current line—or multiple selected lines—using the :guilabel:`Run current line/selection` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key (by default).
-After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
-Unlike :guilabel:`Run file`, the executed lines are shown in the :ref:`panes-console`.
-
-
 .. _panes-editor-run-cell:
 
 Run cell
@@ -220,6 +210,16 @@ Run cell
 
 To run a cell, place your cursor inside it and use the :menuselection:`Run --> Run cell` menu item, its corresponding toolbar button or the :kbd:`Ctrl-Enter` / :kbd:`Cmd-Return` keyboard shortcut.
 Use :guilabel:`Run cell and advance` in the :guilabel:`Run` menu/toolbar or :kbd:`Shift-Enter` to jump to the next cell after running, useful for stepping through cells quickly.
+
+
+.. _panes-editor-run-line:
+
+Run line/selection
+~~~~~~~~~~~~~~~~~~
+
+You can execute the current line—or multiple selected lines—using the :guilabel:`Run current line/selection` option from the toolbar or the :menuselection:`Run` menu, as well as with the :kbd:`F9` key (by default).
+After running the current line, the cursor automatically advances to the next one, so you can step through your code line by line.
+Unlike :guilabel:`Run file` or :guilabel:`Run cell` (by default), the executed lines are shown in the :ref:`panes-console`.
 
 
 .. _panes-editor-run-configuration:
