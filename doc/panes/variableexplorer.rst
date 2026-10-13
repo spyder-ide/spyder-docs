@@ -16,7 +16,7 @@ It shows the namespace contents (including all global objects, variables, class 
 
 The Variable Explorer gives you information on the name, size, type and value of each object.
 To modify a scalar variable, like an number, string or boolean, simply double click it in the pane and type its new value.
-For other objects, like collections, arrays and DataFrames, double-click it to open one of the :ref:`panes-variables-viewers`.
+For other objects, like collections, arrays and DataFrames, double-click them to open one of the :ref:`panes-variables-viewers`.
 
 .. image:: /images/variable_explorer/variable-explorer-modifying.gif
    :alt: Spyder Variable Explorer modifying value of a variable

@@ -78,7 +78,7 @@ You can type any part of an open or project file's name and the list will be fil
 
 .. note::
 
-   Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or via Conda, but not via Pip.
+   Including all files from the current project in the search is supported when Spyder is installed via our recommended standalone installers or Conda, but not Pip.
 
 
 .. _panes-editor-interface-split:
@@ -156,7 +156,7 @@ This displays as multiple hierarchical levels in the :ref:`panes-outline` pane.
    This only affects how the cell is displayed in the :ref:`panes-outline`, and doesn't affect running it in the Editor.
 
 To run the code in a cell, use :menuselection:`Run --> Run cell`, the :guilabel:`Run cell` button in the toolbar or the keyboard shortcut (:kbd:`Ctrl-Enter`/:kbd:`Cmd-Return` by default).
-You can also run a cell and then jump to the next one---letting you quickly step through multiple cells---using :menuselection:`Run --> Run cell and advance`, its corresponding toolbar button or the :kbd:`Shift-Enter` keyboard shortcut.
+For more about the different ways you can run code in cells, see :ref:`panes-editor-run-cell`.
 
 
 .. _panes-editor-features-formatting:
