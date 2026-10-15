@@ -77,11 +77,11 @@ To create a new SSH connection, you need to enter several key details:
 
 Finally, click :guilabel:`Connect` to initiate the connection to the host, which will automatically validate and securely save all the provided details and autonomously set up the server Spyder needs to connect to on the remote host, so everything is ready for you to launch your first console.
 
-Alternatively, you can click :guilabel:`Save` to store the details you've entered in a new connection without actually trying to connect.
-
 .. video:: /images/console/remote-connection-new-ssh.webm
    :loop:
    :alt: Creating a new SSH connection
+
+Alternatively, you can click :guilabel:`Save` to store the details you've entered in a new connection without actually trying to connect.
 
 
 .. _panes-remote-create-jupyterhub:
@@ -113,7 +113,7 @@ Manage an existing connection
 You can view the remote connections you've already created by browsing and selecting them from the left panel of the remote connections manager.
 The :guilabel:`Connection status` tab shows basic details of the connection, its current state, a log of connection events and any errors to help troubleshoot problems.
 Under the :guilabel:`Connection info` tab, you can update any of the details you entered when :ref:`panes-remote-create`, using the :guilabel:`Save` button at the bottom to save your changes.
-Use the :guilabel:`Connect` button to initiate the selected connection, or the :guilabel:`Remove` button to delete it.
+Use the :guilabel:`Remove` button to delete the selected connection.
 
 .. video:: /images/console/remote-connection-connection-manage.webm
    :loop:
