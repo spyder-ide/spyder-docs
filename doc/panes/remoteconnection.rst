@@ -36,10 +36,6 @@ If your institution already has a `JupyterHub`_ server you'd like to connect to,
 Otherwise, if you want to connect to most other types of hosts, you'll want to use the default :guilabel:`SSH`.
 Either way, you'll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.
 
-.. video:: /images/console/remote-connection-new-console.webm
-   :loop:
-   :alt: Creating a new console in a remote connection
-
 
 .. _panes-remote-create-ssh:
 
