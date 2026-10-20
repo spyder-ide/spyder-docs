@@ -508,10 +508,12 @@
 <span id="panes-remote"></span><h1>Remote Connection Manager<a class="headerlink" href="#remote-connection-manager" title="Link to this heading">#</a></h1>
 <p>The <strong>Remote Connections Manager</strong> allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
 Connecting to a remote host and opening a new <a class="reference internal" href="ipythonconsole.html#panes-console"><span class="std std-ref">IPython Console</span></a> on it allows running code, browsing files and using other Spyder features just as if you were working on your local machine.</p>
+<img alt="Remote Connections Manager" src="../_images/remote-connection-active.webp" />
 <p>It uses the standard, widely-used <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_Shell">SSH protocol</a>, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
 Additionally, it supports connecting to <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
 No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.</p>
 <p>The remote connections manager can be accessed under <span class="menuselection">Tools ‣ Manage remote connections</span>, and you can use <span class="menuselection">Consoles ‣ New console in remote server</span> to open new consoles on remote servers you’ve already configured.</p>
+<img alt="Manage Remote Connections menu" src="../_images/remote-connection-menu.webp" />
 <section id="creating-a-new-connection">
 <span id="panes-remote-create"></span><h2>Creating a new connection<a class="headerlink" href="#creating-a-new-connection" title="Link to this heading">#</a></h2>
 <p>To set up a connection to a new remote server, open the remote connections manager and click <span class="guilabel">New connection</span>.
@@ -522,6 +524,7 @@ Either way, you’ll just need to make sure JupyterHub or SSH is available on th
 <section id="ssh-connection">
 <span id="panes-remote-create-ssh"></span><h3>SSH connection<a class="headerlink" href="#ssh-connection" title="Link to this heading">#</a></h3>
 <p>To create a new SSH connection, you need to enter several key details:</p>
+<img alt="Creating a new SSH connection" src="../_images/remote-connection-new-ssh.webp" />
 <ol class="arabic">
 <li><p>Select your authentication method, <span class="guilabel">Password</span> or <span class="guilabel">Key file</span>.</p>
 <div class="admonition note">
@@ -538,7 +541,7 @@ If you’re unsure, try <span class="guilabel">Password</span> to start, or ask 
 <li><p>Finally, you can optionally set the path to a <a class="reference external" href="https://www.ssh.com/academy/ssh/config">SSH configuration file</a>, which can contain additional advanced options for the host you set above as well as filling in default values for the previous fields.</p></li>
 </ol>
 <p>Finally, click <span class="guilabel">Connect</span> to initiate the connection to the host, which will automatically validate and securely save all the provided details and autonomously set up the server Spyder needs to connect to on the remote host, so everything is ready for you to launch your first console.</p>
-<p>Alternatively, you can click <span class="guilabel">Save</span> to store the details you’ve entered in a new connection without actually trying to connect.</p>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/remote-connection-new-ssh.webm" type="video/webm">Creating a new SSH connection</video></div><p>Alternatively, you can click <span class="guilabel">Save</span> to store the details you’ve entered in a new connection without actually trying to connect.</p>
 </section>
 <section id="jupyterhub-connection">
 <span id="panes-remote-create-jupyterhub"></span><h3>JupyterHub connection<a class="headerlink" href="#jupyterhub-connection" title="Link to this heading">#</a></h3>
@@ -550,6 +553,7 @@ If you have questions about how to obtain a token, ask the person who set up the
 <p class="admonition-title">Tip</p>
 <p>To enable all of Spyder’s features when working with an existing JupyterHub deployment, ask the person who set up the server to install the <a class="reference external" href="https://github.com/spyder-ide/spyder-remote-services">Spyder-Remote-Services</a> Jupyter Server extension.</p>
 </div>
+<img alt="Creating a new JupyterHub connection" src="../_images/remote-connection-new-jupyterhub.webp" />
 </section>
 </section>
 <section id="manage-an-existing-connection">
@@ -557,8 +561,8 @@ If you have questions about how to obtain a token, ask the person who set up the
 <p>You can view the remote connections you’ve already created by browsing and selecting them from the left panel of the remote connections manager.
 The <span class="guilabel">Connection status</span> tab shows basic details of the connection, its current state, a log of connection events and any errors to help troubleshoot problems.
 Under the <span class="guilabel">Connection info</span> tab, you can update any of the details you entered when <a class="reference internal" href="#panes-remote-create"><span class="std std-ref">Creating a new connection</span></a>, using the <span class="guilabel">Save</span> button at the bottom to save your changes.
-Use the <span class="guilabel">Connect</span> button to initiate the selected connection, or the <span class="guilabel">Remove</span> button to delete it.</p>
-</section>
+Use the <span class="guilabel">Remove</span> button to delete the selected connection.</p>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/remote-connection-connection-manage.webm" type="video/webm">Managing an existing connection</video></div></section>
 <section id="connecting-to-existing-kernels-advanced">
 <span id="panes-remote-existing"></span><span id="connecting-external-kernel"></span><h2>Connecting to existing kernels (advanced)<a class="headerlink" href="#connecting-to-existing-kernels-advanced" title="Link to this heading">#</a></h2>
 <div class="admonition caution">
@@ -568,50 +572,40 @@ If possible, we recommend using the latter instead unless your use case requires
 </div>
 <p>You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the <span class="guilabel">Connect to an existing kernel</span> dialog under the <span class="guilabel">Consoles</span> menu.
 For this feature to work, a compatible version of the <code class="docutils literal notranslate"><span class="pre">spyder-kernels</span></code> package <a class="reference internal" href="../troubleshooting/common-illnesses.html#troubleshooting-common-kernel-version"><span class="std std-ref">must be installed</span></a> in the environment or machine in which the external kernel is running.</p>
-<img alt="Connect to external kernel dialog of the Spyder IPython console" src="../_images/console-menu.png" />
+<img alt="Connect to existing kernels dialog" src="../_images/remote-connection-existing-kernels.webp" />
 <section id="connect-to-a-local-kernel">
 <span id="panes-remote-existing-local"></span><span id="panes-console-external-local"></span><h3>Connect to a local kernel<a class="headerlink" href="#connect-to-a-local-kernel" title="Link to this heading">#</a></h3>
 <p>To connect to a local kernel that is already running (e.g. one started by Jupyter notebook),</p>
 <ol class="arabic">
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">%connect_info</span></code> in the notebook or console you want to connect to, and copy the name of its kernel connection file, shown after <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--existing</span></code>.</p>
-<img alt="Running connect_info in a Jupyter notebook" src="../_images/console-connect-local-step1.gif" />
-</li>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/console-connect-local-step1.webm" type="video/webm">Running connect_info in a Jupyter notebook</video></div></li>
 <li><p>In Spyder, click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Consoles</span> menu, and paste the name of the <span class="guilabel">Connection file</span> from the previous step.</p>
 <p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">1234</span></code>) entered in the connection file path field will be expanded to the full path of the file, i.e. <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code>.</p>
-<img alt="Copying the connection filename into Spyder's dialog" src="../_images/console-connect-local-step2.gif" />
 </li>
 <li><p>Click <span class="guilabel">OK</span> to connect to the kernel.</p>
-<img alt="Connecting to the kernel and running basic commands." src="../_images/console-connect-local-step3.gif" />
-</li>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/console-connect-local-step2.webm" type="video/webm">Connecting to the kernel and running basic commands.</video></div></li>
 </ol>
 </section>
 <section id="connect-to-a-remote-kernel">
 <span id="panes-remote-existing-remote"></span><span id="panes-console-external-remote"></span><h3>Connect to a remote kernel<a class="headerlink" href="#connect-to-a-remote-kernel" title="Link to this heading">#</a></h3>
 <p>To connect to a kernel on a remote machine,</p>
 <ol class="arabic">
-<li><p>Launch a Spyder kernel on the remote host if one is not already running, with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p>
-<img alt="Staring a Spyder kernel on a remote machine" src="../_images/console-connect-remote-step1.gif" />
-</li>
+<li><p>Launch a Spyder kernel on the remote host if one is not already running, with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">spyder_kernels.console</span></code>.</p></li>
 <li><p>Copy the kernel’s connection file (<code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernel-</span><em><span class="pre">pid</span></em><span class="pre">.json</span></code>) to the machine you’re running Spyder on.</p>
 <p>You can get <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em></code> by executing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--runtime-dir</span></code> in the same Python environment as the kernel.
 Usually, the connection file you are looking for will be one of the newest in this directory, corresponding to the time you started the external kernel.</p>
-<img alt="Using SCP to copy the connection file to the local machine" src="../_images/console-connect-remote-step2.gif" />
-</li>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/console-connect-remote.webm" type="video/webm">Staring a Spyder kernel on a remote machine and using SCP to copy the connection file to the local machine</video></div></li>
 <li><p>Click <span class="guilabel">Connect to an existing kernel</span> from the <span class="guilabel">Consoles</span> menu, and browse for or enter the path to the connection file from the previous step.</p>
 <p>As a convenience, kernel ID numbers (e.g. <code class="docutils literal notranslate"><span class="pre">1234</span></code>) entered in the connection file path field will be expanded to <code class="file docutils literal notranslate"><em><span class="pre">jupyter/runtime/dir/path</span></em><span class="pre">/kernal-</span><em><span class="pre">id</span></em><span class="pre">.json</span></code> on your local machine, if you’ve copied the connection file there.</p>
-<img alt="Opening the connect to kernel dialog and browsing for the path" src="../_images/console-connect-remote-step3.gif" />
 </li>
 <li><p>Check the <span class="guilabel">This is a remote kernel (via SSH)</span> box and enter the <span class="guilabel">Hostname</span> or IP address, username and port to connect to on the remote machine.
 Then, enter <em>either</em> <code class="file docutils literal notranslate"><em><span class="pre">username</span></em></code>’s password on the remote machine, or browse to an SSH keyfile (typically in the <code class="file docutils literal notranslate"><span class="pre">.ssh</span></code> directory in your home folder on the local machine, often called <code class="file docutils literal notranslate"><span class="pre">id_rsa</span></code> or similar) registered on it; only one is needed to connect.
 If you check <span class="guilabel">Save connection settings</span>, these details will be remembered and filled for you automatically next time you open the dialog.</p>
 <p>Note that <span class="guilabel">Port</span> is the port number on your remote machine that the SSH daemon (<code class="docutils literal notranslate"><span class="pre">sshd</span></code>) is listening on, typically <code class="docutils literal notranslate"><span class="pre">22</span></code> unless you or your administrator has configured it otherwise.</p>
-<img alt="Entering pre-filled SSH details into the connection dialog" src="../_images/console-connect-remote-step4.gif" />
 </li>
-<li><p>Click <span class="guilabel">OK</span> to connect to the remote kernel</p>
-<img alt="Connecting to the remote kernel and running basic commands" src="../_images/console-connect-remote-step5.gif" />
-</li>
+<li><p>Click <span class="guilabel">OK</span> to connect to the remote kernel</p></li>
 </ol>
-<p>For more technical details about connecting to remote kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.</p>
+<div  class="sphinx-contrib-video-container align-left"><video controls="True" loop="True" preload="auto"><source src="../_images/console-connect-remote-spyder.webm" type="video/webm">Connecting to a remote kernel and running basic commands</video></div><p>For more technical details about connecting to remote kernels, see the <a class="reference external" href="https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh">Connecting to a remote kernel</a> page in the IPython Cookbook.</p>
 </section>
 </section>
 <section id="related-panes">
@@ -728,7 +722,7 @@ If you check <span class="guilabel">Save connection settings</span>, these detai
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.1.
     <br/>
   </p>
 </div>
