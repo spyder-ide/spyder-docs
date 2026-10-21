@@ -34,7 +34,7 @@ Spyder's documentation has a :ref:`FAQ section <faq>`, where you might find the 
 Spyder's YouTube channel
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Our `YouTube channel`_ contains helpful videos that will guide you through many of Spyder's features, and provide a starting point for newer users.
+Our `YouTube channel <YouTube channel_>`__ contains helpful videos that will guide you through many of Spyder's features, and provide a starting point for newer users.
 
 .. _YouTube channel: https://www.youtube.com/channel/UCAOyvaOj7dMnavvGUkz9Djg
 
@@ -46,7 +46,7 @@ Our `YouTube channel`_ contains helpful videos that will guide you through many 
 Spyder Google Group
 ~~~~~~~~~~~~~~~~~~~~
 
-Our `Google Group`_ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
+Our `Google Group <Google Group_>`__ is great for help-related questions, particularly those you aren't sure are a full-on Spyder issue.
 
 .. _Google Group: https://groups.google.com/g/spyderlib
 
@@ -58,7 +58,7 @@ Our `Google Group`_ is great for help-related questions, particularly those you 
 Spyder website
 ~~~~~~~~~~~~~~
 
-The `Spyder website`_ contains basic information about the IDE and links to other helpful resources.
+The `Spyder website <Spyder website_>`__ contains basic information about the IDE and links to other helpful resources.
 
 .. _Spyder website: https://www.spyder-ide.org/
 
@@ -70,7 +70,7 @@ The `Spyder website`_ contains basic information about the IDE and links to othe
 Stack Overflow tag
 ~~~~~~~~~~~~~~~~~~
 
-`Stack Overflow`_ is a great place to start searching and posting, particularly if your question is more programming-related, or has to do with something specific to your own code.
+`Stack Overflow <Stack Overflow_>`__ is a great place to start searching and posting, particularly if your question is more programming-related, or has to do with something specific to your own code.
 It has an vibrant Spyder community as well, with new questions posted every day, and the developers (especially Carlos Cordoba, the lead maintainer) are active in answering them.
 
 .. _Stack Overflow: https://stackoverflow.com/questions/tagged/spyder
@@ -91,7 +91,7 @@ Python resources
 Official Python help page
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Python help page`_ is a great resource that lists a number of places you can get assistance, support and learning resources for the language and its packages.
+The `Python help page <Python help page_>`__ is a great resource that lists a number of places you can get assistance, support and learning resources for the language and its packages.
 
 .. _Python help page: https://www.python.org/about/help/
 
@@ -103,7 +103,7 @@ The `Python help page`_ is a great resource that lists a number of places you ca
 Python documentation
 ~~~~~~~~~~~~~~~~~~~~
 
-The `Python docs`_ can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.
+The `Python docs <Python docs_>`__ can help you understand a number of issues that can be caused by quirks in the language itself, or misunderstandings as to how it behaves.
 
 .. _Python docs: https://docs.python.org/
 
@@ -115,7 +115,7 @@ The `Python docs`_ can help you understand a number of issues that can be caused
 Python subreddits
 ~~~~~~~~~~~~~~~~~
 
-`r/python`_ and `r/learnpython`_ are resources you can use to ask about and discuss issues with Python and its packages.
+`r/python <r/python_>`__ and `r/learnpython <r/learnpython_>`__ are resources you can use to ask about and discuss issues with Python and its packages.
 The former is aimed more at general Python usage, and the latter more specifically at beginners.
 
 .. _r/python: https://www.reddit.com/r/Python/
@@ -139,7 +139,7 @@ Data science/PyData resources:
 Anaconda help
 ~~~~~~~~~~~~~~
 
-The `Anaconda docs`_ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
+The `Anaconda docs <Anaconda docs_>`__ site offers free community help and documentation for the Anaconda applications, installing the Anaconda distribution, and using the Conda package and environment manager; along with paid support options.
 
 .. _Anaconda docs: https://www.anaconda.com/docs/
 
@@ -151,7 +151,7 @@ The `Anaconda docs`_ site offers free community help and documentation for the A
 SciPy.org website
 ~~~~~~~~~~~~~~~~~
 
-The `Scipy website`_ is the the central home of the SciPy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy and IPython.
+The `Scipy website <Scipy website_>`__ is the the central home of the SciPy stack, with information, documentation, help, and bug tracking for many of the core packages used with Spyder, including NumPy, SciPy, Matplotlib, Pandas, Sympy and IPython.
 
 .. _Scipy website: https://scipy.org/
 
@@ -163,7 +163,7 @@ The `Scipy website`_ is the the central home of the SciPy stack, with informatio
 Project Jupyter
 ~~~~~~~~~~~~~~~
 
-`Jupyter`_ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the `Spyder-Notebook`_ plugin, and more.
+`Jupyter <Jupyter_>`__ is the development hub for IPython, Spyder's QtConsole, Jupyter notebooks used with the `Spyder-Notebook <Spyder-Notebook_>`__ plugin, and more.
 
 .. _Jupyter: https://jupyter.org/
 .. _Spyder-Notebook: https://github.com/spyder-ide/spyder-notebook
@@ -176,6 +176,6 @@ Project Jupyter
 Data Science Stack Exchange
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `Data Science Stack Exchange site`_ can be very useful for questions that relate more to data science than programming specifically.
+The `Data Science Stack Exchange site <Data Science Stack Exchange site_>`__ can be very useful for questions that relate more to data science than programming specifically.
 
 .. _Data Science Stack Exchange site: https://datascience.stackexchange.com/

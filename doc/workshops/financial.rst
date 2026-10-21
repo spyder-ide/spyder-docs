@@ -12,7 +12,7 @@ By the end of this workshop participants will be able to use Spyder effectively 
 Prerequisites
 =============
 
-To follow this workshop we recommend that you have a intermediate knowledge of Python. You can visit `The Python Tutorial`_ to learn the basics of this programming language or to refresh your knowledge of Python.
+To follow this workshop we recommend that you have a intermediate knowledge of Python. You can visit `The Python Tutorial <The Python Tutorial_>`__ to learn the basics of this programming language or to refresh your knowledge of Python.
 
 .. _The Python Tutorial: https://docs.python.org/3/tutorial/
 
@@ -53,7 +53,7 @@ This workshop is intended for people interested in finance who want to take thei
 Intro
 =====
 
-In this workshop we will obtain financial data in real-time from `Yahoo! Finance`_ API and explore financial portfolios using Econometrics and computational tools.
+In this workshop we will obtain financial data in real-time from `Yahoo! Finance <Yahoo! Finance_>`__ API and explore financial portfolios using Econometrics and computational tools.
 
 
 Why use Python for financial analysis?
@@ -130,7 +130,7 @@ You can set up your environment in two different ways.
 
 .. important::
 
-   We recommend creating the virtual environment with Anaconda (or Miniconda) as it integrates seamlessly with Spyder. You can find installation instructions in `Anaconda documentation`_.
+   We recommend creating the virtual environment with Anaconda (or Miniconda) as it integrates seamlessly with Spyder. You can find installation instructions in `Anaconda documentation <Anaconda documentation_>`__.
 
 .. _Anaconda documentation: https://docs.anaconda.com/anaconda/install/
 
@@ -191,7 +191,7 @@ Although the workshop is designed for you to write the code in the IPython Conso
 Obtain financial data
 =====================
 
-When it comes to finance, being up to date is very important. So we are going to use a Python library that allows us to get updated historical Stock Market records from `Yahoo! Finance`_ API. In this way, we will be able to download data in the period of time we are interested in analyzing.
+When it comes to finance, being up to date is very important. So we are going to use a Python library that allows us to get updated historical Stock Market records from `Yahoo! Finance <Yahoo! Finance_>`__ API. In this way, we will be able to download data in the period of time we are interested in analyzing.
 
 .. _`Yahoo! Finance`: https://finance.yahoo.com
 
@@ -294,7 +294,7 @@ First portfolio
 
 Let's build our first stock investment portfolio! Say we are interested in investing in technology, and we want to know what performance can be obtained by putting money into some of the "heavyweights" in this industry.
 
-To measure the performance of our first portfolio we are going to use a classic theory in the world of finance: `mean-variance portfolio (MVP) theory`_. This model assumes that investors only care about expected returns and the variance of such returns. The analysis is based entirely on statistical measures based on a time series of share prices, such as periodic mean returns and the variances of those returns with the same periodicity.
+To measure the performance of our first portfolio we are going to use a classic theory in the world of finance: `mean-variance portfolio (MVP) theory <mean-variance portfolio (MVP) theory_>`__. This model assumes that investors only care about expected returns and the variance of such returns. The analysis is based entirely on statistical measures based on a time series of share prices, such as periodic mean returns and the variances of those returns with the same periodicity.
 
 .. _`mean-variance portfolio (MVP) theory`: https://en.wikipedia.org/wiki/Modern_portfolio_theory
 
@@ -494,7 +494,7 @@ If high return is desirable, high volatility is undesirable. The risk of this po
 Sharpe ratio
 ~~~~~~~~~~~~
 
-The `Sharpe`_ ratio or index is a measure of portfolio performance. It relates the portfolio's return to its volatility, comparing the expected/realized return with the expected/realized risk. It is calculated as the difference between the actual investment returns and the expected return in a zero-risk situation, divided by the volatility of the investment. **It provides a model of the additional amount of returns received for each additional unit of risk**.
+The `Sharpe <Sharpe_>`__ ratio or index is a measure of portfolio performance. It relates the portfolio's return to its volatility, comparing the expected/realized return with the expected/realized risk. It is calculated as the difference between the actual investment returns and the expected return in a zero-risk situation, divided by the volatility of the investment. **It provides a model of the additional amount of returns received for each additional unit of risk**.
 
 .. _Sharpe: https://en.wikipedia.org/wiki/Sharpe_ratio
 
@@ -519,7 +519,7 @@ And let's apply this to our portfolio.
 
 We can also use a `Monte Carlo <https://en.wikipedia.org/wiki/Monte_Carlo_method>`_ simulation to randomize the weights of each stock in the portfolio so that we can see the range over which the Sharpe ratio can vary. In this way we can plot some scenarios that together will give us a good insight of the relationship between expected returns and expected volatility.
 
-We are going to do this with a function that we will explain step by step in the `monte_carlo_sharpe function explained`_ section.
+We are going to do this with a function that we will explain step by step in the `monte_carlo_sharpe function explained <monte_carlo_sharpe function explained_>`__ section.
 
 .. code-block:: python
 
@@ -897,7 +897,7 @@ Our third portfolio will consist of three cryptocurrencies: bitcoin (BTC), ether
 
 .. important::
 
-   If you want to make use of the data without the Historic-Crypto library, you can `download the dataset <https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215>`_ "crypto_hist.csv" in your working directory, and load it in memory with the instruction ``crypto_hist = pd.read_csv("crypto_hist.csv")``, and skip to section `Monthly data`_.
+   If you want to make use of the data without the Historic-Crypto library, you can `download the dataset <https://figshare.com/articles/dataset/Historical_financial_datasets_for_Financial_Analysis_with_Spyder_workshop/14995215>`_ "crypto_hist.csv" in your working directory, and load it in memory with the instruction ``crypto_hist = pd.read_csv("crypto_hist.csv")``, and skip to section `Monthly data <Monthly data_>`__.
 
 Import the libraries:
 

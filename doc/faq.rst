@@ -14,7 +14,7 @@ Installing and updating
    :name: install-spyder
 
    The easiest way to use Spyder is with our standalone installer, which comes with everything you need to get started in an all-in-one package.
-   Download it from the `Spyder Download Page`_.
+   Download it from the `Spyder Download Page <Spyder Download Page_>`__.
 
    .. _Spyder Download Page: https://www.spyder-ide.org/download
 
@@ -118,8 +118,8 @@ Running Spyder
    :name: run-binder
 
    Yes!
-   With `Binder`_, you can work with a fully functional copy of Spyder that runs right in your web browser.
-   Visit the `Spyder Binder`_ page to get started.
+   With `Binder <Binder_>`__, you can work with a fully functional copy of Spyder that runs right in your web browser.
+   Visit the `Spyder Binder <Spyder Binder_>`__ page to get started.
 
    .. caution::
 
@@ -261,7 +261,7 @@ Using Spyder
       :align: left
       :start: 306
 
-   If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniforge`_ or another Conda-based option.
+   If you want to use other packages in Spyder that don't come with our installer, you need to have your own Python distribution installed; we recommend `Miniforge <Miniforge_>`__ or another Conda-based option.
    For Spyder to recognize your environments automatically without manual configuration, you should use a Conda-based distribution with its default install path.
 
    .. _Miniforge: https://conda-forge.org/download/
@@ -291,10 +291,10 @@ Using Spyder
    Replace :samp:`{PLUGIN}` with the name of the plugin you want to use.
    For more information on a specific plugin, go to the its repository:
 
-   * `spyder-line-profiler`_
-   * `spyder-notebook`_
-   * `spyder-terminal`_
-   * `spyder-unittest`_
+   * `spyder-line-profiler <spyder-line-profiler_>`__
+   * `spyder-notebook <spyder-notebook_>`__
+   * `spyder-terminal <spyder-terminal_>`__
+   * `spyder-unittest <spyder-unittest_>`__
 
    .. _spyder-line-profiler: https://github.com/spyder-ide/spyder-line-profiler
    .. _spyder-notebook: https://github.com/spyder-ide/spyder-notebook
@@ -394,7 +394,7 @@ Troubleshooting
 
    First, make sure the error you are seeing is not a bug in your code.
    To confirm this, try running it in any standard Python interpreter.
-   If the error still occurs, the problem is likely with your code and a site like `Stack Overflow`_ might be the best place to start.
+   If the error still occurs, the problem is likely with your code and a site like `Stack Overflow <Stack Overflow_>`__ might be the best place to start.
    Otherwise, start at the :ref:`troubleshooting-basic` section of our troubleshooting guide.
 
    .. _Stack Overflow: https://stackoverflow.com
@@ -437,7 +437,7 @@ About Spyder
    :name: commercial-use
 
    Spyder is 100% free and open source; there is no paid version or prohibition on commercial use.
-   It is developed by its international user community, and supported by its users through `OpenCollective`_ and by its generous sponsoring organizations, including `Quansight`_ and `NumFOCUS`_.
+   It is developed by its international user community, and supported by its users through `OpenCollective <OpenCollective_>`__ and by its generous sponsoring organizations, including `Quansight <Quansight_>`__ and `NumFOCUS <NumFOCUS_>`__.
    Our source code, standalone installers and most of our distribution methods (Pip/PyPI, Linux distros, MacPorts, WinPython, etc) can be freely redistributed, used and modified by anyone, for any purpose, including commercial use.
    For more details about the situation with Anaconda, see :ref:`anaconda-license`.
 
@@ -451,9 +451,9 @@ About Spyder
 
    If you installed Spyder via any method other than the Anaconda or Miniconda distributions, or install it from the ``conda-forge`` channel with those two distributions, you are not affected by any restrictions.
 
-   If you use a copy of Spyder installed by default with the Anaconda distribution, or installed from the ``defaults``/``anaconda`` channel, Anaconda's `Terms of Service`_ have restrictions on larger (>200 employee) for-profit enterprises on a large scale.
+   If you use a copy of Spyder installed by default with the Anaconda distribution, or installed from the ``defaults``/``anaconda`` channel, Anaconda's `Terms of Service <Terms of Service_>`__ have restrictions on larger (>200 employee) for-profit enterprises on a large scale.
    However, these terms only apply to the package infrastructure (the full Anaconda distribution and the ``defaults`` conda channel).
-   Instead, you can simply download the similar `Miniforge`_ distribution, which is 100% open source and nearly identical to Miniconda (and only different from Anaconda in that it does not bundle the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems in it can break your whole installation).
+   Instead, you can simply download the similar `Miniforge <Miniforge_>`__ distribution, which is 100% open source and nearly identical to Miniconda (and only different from Anaconda in that it does not bundle the Python packages installed by default in the Anaconda ``base`` environment, which we recommend you avoid using anyway given any problems in it can break your whole installation).
    Then, simply install the packages you need (including Spyder, if you aren't using our recommended :ref:`install-standalone`) with ``conda`` as you usually do.
    Miniforge will automatically use the community-maintained Conda-Forge repository, which has a much wider variety of packages and is generally more up to date than the Anaconda equivalent, in addition to being free of any commercial restrictions.
    For more, see our :ref:`install-guide`.
