@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
+# Copyright (C)  2009-2026 Spyder Doc Contributors; MIT License
 # This file is distributed under the same license as the Spyder package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Spyder 5\n"
+"Project-Id-Version: Spyder 6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-06 20:38-0500\n"
+"POT-Creation-Date: 2026-10-20 23:36-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,301 +16,479 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../plugins/index.rst:3
+#: ../../plugins/index.rst:6
 msgid "Plugins"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:3
+#: ../../plugins/lineprofiler.rst:5
 msgid "Spyder Line Profiler"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:5
-msgid "**Spyder-Line-Profiler** is a plugin to run the Python `line profiler`_. This package profiles the time that individual lines of code take to execute."
+#: ../../plugins/lineprofiler.rst:7
+msgid "**Spyder-Line-Profiler** is a plugin to run the Python `line profiler <line profiler_>`__. This package profiles the time that individual lines of code take to execute."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:10
+#: ../../plugins/lineprofiler.rst:12
 msgid "Spyder with the Line Profiler pane open"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:17
+#: ../../plugins/lineprofiler.rst:21
 msgid "Installing the Line Profiler"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:19
+#: ../../plugins/lineprofiler.rst:23
 msgid "If you installed Spyder using conda, the best way to obtain Spyder-Line-Profiler is to run the following command in your terminal (or Anaconda prompt on Windows):"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:27
+#: ../../plugins/lineprofiler.rst:31
+#: ../../plugins/unittest.rst:30
 msgid "At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to add support for them in the future."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:30
-#: ../../plugins/notebook.rst:26
-#: ../../plugins/terminal.rst:27
+#: ../../plugins/lineprofiler.rst:34
+#: ../../plugins/notebook.rst:32
+#: ../../plugins/terminal.rst:33
+#: ../../plugins/unittest.rst:33
 msgid "Restart Spyder in order to be able to use the plugin."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:36
+#: ../../plugins/lineprofiler.rst:42
 msgid "Using the Line Profiler"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:38
+#: ../../plugins/lineprofiler.rst:44
 msgid "When the Line Profiler is installed, it will be available under the menu item :menuselection:`View --> Panes --> Line Profiler`."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:40
+#: ../../plugins/lineprofiler.rst:46
 msgid "Spyder showing View Panes Line Profiler"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:43
+#: ../../plugins/lineprofiler.rst:49
 msgid "You will see it then as a tab next to the :guilabel:`Files` tab. For the Line Profiler to work, you must place the ``@profile`` decorator on the line above any functions that you wish to profile."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:46
+#: ../../plugins/lineprofiler.rst:52
 msgid "Adding 'profile' decorators to script to profile it line by line."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:49
+#: ../../plugins/lineprofiler.rst:55
 msgid "Now that the decorators have been added, you can then either select a script with the button present in the pane or run the profiler from :menuselection:`Run --> Profile line by line`. Your file will then be profiled line by line."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:52
+#: ../../plugins/lineprofiler.rst:58
 msgid "Spyder showing the line profiler button in the Run menu"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:55
+#: ../../plugins/lineprofiler.rst:61
 msgid "After running the profiler, either from the button in the pane or the :menuselection:`Run` menu, the results are shown in the :guilabel:`Line Profiler` pane. The path displayed there is that of the file being profiled."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:58
+#: ../../plugins/lineprofiler.rst:64
 msgid "Running the line profiler and inspecting the results."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:61
+#: ../../plugins/lineprofiler.rst:67
 msgid "The Line Profiler pane shows six columns:"
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:63
+#: ../../plugins/lineprofiler.rst:69
 msgid "``Line #:`` the number of the line being profiled."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:64
+#: ../../plugins/lineprofiler.rst:70
 msgid "``Hits:`` how many times that line is hit in the scope."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:65
+#: ../../plugins/lineprofiler.rst:71
 msgid "``Time (ms):`` time spent running the line in total for all hits, in milliseconds."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:66
+#: ../../plugins/lineprofiler.rst:72
 msgid "``Per hit (ms):`` average time spent per hit, in milliseconds."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:67
+#: ../../plugins/lineprofiler.rst:73
 msgid "``% Time:`` percentage of time taken by that line of total scope time."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:68
+#: ../../plugins/lineprofiler.rst:74
 msgid "``Line contents:`` the source code in the line."
 msgstr ""
 
-#: ../../plugins/lineprofiler.rst:70
+#: ../../plugins/lineprofiler.rst:76
 msgid "Lines with a stronger color take more time to run."
 msgstr ""
 
-#: ../../plugins/notebook.rst:3
+#: ../../plugins/notebook.rst:5
 msgid "Spyder Notebook"
 msgstr ""
 
-#: ../../plugins/notebook.rst:5
+#: ../../plugins/notebook.rst:7
 msgid "**Spyder-notebook** is a plugin that allows you to open, edit and interact with Jupyter Notebooks right inside Spyder."
 msgstr ""
 
-#: ../../plugins/notebook.rst:7
+#: ../../plugins/notebook.rst:9
 msgid "Spyder Notebook in Spyder"
 msgstr ""
 
-#: ../../plugins/notebook.rst:10
+#: ../../plugins/notebook.rst:12
 msgid "Using notebooks inside Spyder allows you to take advantage of their web interface alongside Spyder’s powerful features such as the Variable explorer, console and debugger."
 msgstr ""
 
-#: ../../plugins/notebook.rst:14
+#: ../../plugins/notebook.rst:20
 msgid "Installing the Notebook"
 msgstr ""
 
-#: ../../plugins/notebook.rst:16
+#: ../../plugins/notebook.rst:22
 msgid "If you installed Spyder using conda, the best way to install Spyder-notebook is to run the following command in your terminal or Anaconda prompt on Windows:"
 msgstr ""
 
-#: ../../plugins/notebook.rst:24
-#: ../../plugins/terminal.rst:25
+#: ../../plugins/notebook.rst:30
+#: ../../plugins/terminal.rst:31
 msgid "At the moment it is not possible to use this plugin with the Spyder :ref:`install-standalone` for Windows and macOS. We're working to make that possible in the future."
 msgstr ""
 
-#: ../../plugins/notebook.rst:30
+#: ../../plugins/notebook.rst:40
 msgid "Using the Notebook"
 msgstr ""
 
-#: ../../plugins/notebook.rst:32
+#: ../../plugins/notebook.rst:42
 msgid "When the Notebook is installed, it will be available under the menu item :menuselection:`View --> Panes --> Notebook`."
 msgstr ""
 
-#: ../../plugins/notebook.rst:34
+#: ../../plugins/notebook.rst:44
 msgid "Spyder showing view panes Notebook"
 msgstr ""
 
-#: ../../plugins/notebook.rst:37
+#: ../../plugins/notebook.rst:47
 msgid "You will see it then as a tab in the bottom of the editor area. When switching to it, a welcome screen will be displayed, from where you can create a new notebook by right-clicking it and selecting :guilabel:`New notebook`."
 msgstr ""
 
-#: ../../plugins/notebook.rst:39
+#: ../../plugins/notebook.rst:49
 msgid "Spyder with context menu showing new notebook option"
 msgstr ""
 
-#: ../../plugins/notebook.rst:42
+#: ../../plugins/notebook.rst:52
 msgid "You can also click the :guilabel:`Plus` button at the top right of the pane. A new Jupyter Notebook will be opened as a tab, ready for user input in a temporary file. This can serve as a scratch pad where you can do quick calculations and plots."
 msgstr ""
 
-#: ../../plugins/notebook.rst:44
+#: ../../plugins/notebook.rst:54
 msgid "Spyder showing a new notebook"
 msgstr ""
 
-#: ../../plugins/notebook.rst:47
+#: ../../plugins/notebook.rst:57
 msgid "To save this notebook go to the options menu at the top right of the pane and click the :guilabel:`Save as...` option. This will store your notebook locally with the ``ipynb`` extension, which will allow you to open it then as a Jupyter Notebook outside of Spyder."
 msgstr ""
 
-#: ../../plugins/notebook.rst:49
+#: ../../plugins/notebook.rst:59
 msgid "Gif showing save as"
 msgstr ""
 
-#: ../../plugins/notebook.rst:52
+#: ../../plugins/notebook.rst:62
 msgid "You can also open any Jupyter Notebook inside Spyder. For this go to the options menu at the top right of the pane and click :guilabel:`Open`, which will allow you to look for ``ipynb`` files in your computer. Click any notebook that you want to open inside Spyder and you will be able to see it as a new tab in the Notebook pane."
 msgstr ""
 
-#: ../../plugins/notebook.rst:54
+#: ../../plugins/notebook.rst:64
 msgid "Gif showing opening a Jupyter notebook inside Spyder"
 msgstr ""
 
-#: ../../plugins/notebook.rst:57
+#: ../../plugins/notebook.rst:67
 msgid "The :guilabel:`Open recent` option displays a list of the recent notebooks you opened in Spyder, from which you can select them and open them again in Spyder."
 msgstr ""
 
-#: ../../plugins/notebook.rst:61
+#: ../../plugins/notebook.rst:75
 msgid "Connecting an IPython Console"
 msgstr ""
 
-#: ../../plugins/notebook.rst:63
-msgid "You can connect an :doc:`/panes/ipythonconsole` to your notebook, which will allow you to view your variables in the :doc:`/panes/variableexplorer`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console."
+#: ../../plugins/notebook.rst:77
+msgid "You can connect an :ref:`panes-console` to your notebook, which will allow you to view your variables in the :ref:`panes-variables`. To do so, go to the options menu and click the :guilabel:`Open console` option. This will open a new console with the same name of your notebook and display the variables of the cells that you have executed previously in your Notebook. If you don't see them, press :kbd:`Enter` in the console."
 msgstr ""
 
-#: ../../plugins/notebook.rst:65
+#: ../../plugins/notebook.rst:79
 msgid "Gif showing connecting console and displaying variables"
 msgstr ""
 
-#: ../../plugins/notebook.rst:68
+#: ../../plugins/notebook.rst:82
 msgid "You can view, modify and create new ones in the console too."
 msgstr ""
 
-#: ../../plugins/notebook.rst:70
+#: ../../plugins/notebook.rst:84
 msgid "Since the Variable Explorer is associated to each console, closing the notebook's console will immediately hide the variables from the Variable Explorer."
 msgstr ""
 
-#: ../../plugins/notebook.rst:74
+#: ../../plugins/notebook.rst:92
 msgid "Additional Options"
 msgstr ""
 
-#: ../../plugins/notebook.rst:76
+#: ../../plugins/notebook.rst:94
 msgid "The context menu, available by right-clicking the pane area outside the notebook, allows you to zoom your notebook in or out."
 msgstr ""
 
-#: ../../plugins/notebook.rst:78
+#: ../../plugins/notebook.rst:96
 msgid "Gif zooming in and out the notebook."
 msgstr ""
 
-#: ../../plugins/notebook.rst:81
+#: ../../plugins/notebook.rst:99
 msgid "You can also select the code from your Notebook and copy it on your clipboard to paste this code anywhere you want."
 msgstr ""
 
-#: ../../plugins/notebook.rst:83
+#: ../../plugins/notebook.rst:101
 msgid "Gif copying and pasting"
 msgstr ""
 
-#: ../../plugins/notebook.rst:86
+#: ../../plugins/notebook.rst:104
 msgid "Finally, you can see all the server information of your notebook by clicking the :guilabel:`Server info` option in the context menu."
 msgstr ""
 
-#: ../../plugins/notebook.rst:88
+#: ../../plugins/notebook.rst:106
 msgid "Server info for notebook in Spyder"
 msgstr ""
 
-#: ../../plugins/terminal.rst:3
+#: ../../plugins/terminal.rst:5
 msgid "Spyder Terminal"
 msgstr ""
 
-#: ../../plugins/terminal.rst:5
+#: ../../plugins/terminal.rst:7
 msgid "**Spyder-terminal** is a plugin that allows you to have integrated system terminals inside Spyder."
 msgstr ""
 
-#: ../../plugins/terminal.rst:7
+#: ../../plugins/terminal.rst:9
 msgid "Spyder Terminal in Spyder"
 msgstr ""
 
-#: ../../plugins/terminal.rst:10
+#: ../../plugins/terminal.rst:12
 msgid "Spyder-terminal allows you to use any system shell installed in your system (e.g. Bash, Zsh or Powershell) rather than just the IPython console. You can use it to issue commands, interact with version control or to run programs."
 msgstr ""
 
-#: ../../plugins/terminal.rst:15
+#: ../../plugins/terminal.rst:21
 msgid "Installing the Terminal"
 msgstr ""
 
-#: ../../plugins/terminal.rst:17
+#: ../../plugins/terminal.rst:23
 msgid "If you installed Spyder using conda, the best way to install Spyder-terminal is to run the following command in your Terminal or Anaconda prompt on Windows:"
 msgstr ""
 
-#: ../../plugins/terminal.rst:31
+#: ../../plugins/terminal.rst:41
 msgid "Using the Terminal"
 msgstr ""
 
-#: ../../plugins/terminal.rst:33
+#: ../../plugins/terminal.rst:43
 msgid "When the Terminal is installed, it will be available under the menu item :menuselection:`View --> Panes --> Terminal`."
 msgstr ""
 
-#: ../../plugins/terminal.rst:35
+#: ../../plugins/terminal.rst:45
 msgid "Spyder showing view panes Terminal"
 msgstr ""
 
-#: ../../plugins/terminal.rst:38
+#: ../../plugins/terminal.rst:48
 msgid "You will see it then as a tab at the bottom of the console area. When switching to it, a new terminal tab will be created. You can also create more terminals by clicking in the :guilabel:`+` button at the upper right corner of the terminal area."
 msgstr ""
 
-#: ../../plugins/terminal.rst:40
+#: ../../plugins/terminal.rst:50
 msgid "Spyder showing the new terminal button"
 msgstr ""
 
-#: ../../plugins/terminal.rst:43
+#: ../../plugins/terminal.rst:53
 msgid "Clicking the :guilabel:`Options` button next to the :guilabel:`+` button will allow you to rename terminals, undock the terminal, and open a terminal in the directory of the current Editor file."
 msgstr ""
 
-#: ../../plugins/terminal.rst:45
+#: ../../plugins/terminal.rst:55
 msgid "Spyder showing the terminal Options menu"
 msgstr ""
 
-#: ../../plugins/terminal.rst:48
+#: ../../plugins/terminal.rst:58
 msgid "If you right click the terminal area, it's possible to issue commands such as :guilabel:`Clear Terminal`, :guilabel:`Zoom In/Out` and :guilabel:`Copy/Paste Text`."
 msgstr ""
 
-#: ../../plugins/terminal.rst:50
+#: ../../plugins/terminal.rst:60
 msgid "Spyder showing the terminal context menu"
 msgstr ""
 
-#: ../../plugins/terminal.rst:55
+#: ../../plugins/terminal.rst:69
 msgid "Terminal Preferences"
 msgstr ""
 
-#: ../../plugins/terminal.rst:57
+#: ../../plugins/terminal.rst:71
 msgid "It's also possible to customize the Terminal by going to :menuselection:`python --> Preferences...` and then clicking on the Terminal tab on the menu to the left. You can select the shell interpreter, set the buffer limit and the type of cursor."
 msgstr ""
 
-#: ../../plugins/terminal.rst:60
+#: ../../plugins/terminal.rst:74
 msgid "Preferences of the Terminal plugin"
+msgstr ""
+
+#: ../../plugins/unittest.rst:5
+msgid "Spyder Unittest"
+msgstr ""
+
+#: ../../plugins/unittest.rst:7
+msgid "**Spyder-unittest** is a plugin that allows you to run automatic tests within Spyder and view the results."
+msgstr ""
+
+#: ../../plugins/unittest.rst:9
+msgid "Spyder Unittest plugin in Spyder"
+msgstr ""
+
+#: ../../plugins/unittest.rst:12
+msgid "Spyder-unittest can run tests written using the ``unittest`` module in the Python library or the ``pytest`` library."
+msgstr ""
+
+#: ../../plugins/unittest.rst:20
+msgid "Installing the plugin"
+msgstr ""
+
+#: ../../plugins/unittest.rst:22
+msgid "If you installed Spyder using conda, the best way to install Spyder-unittest is to run the following command in your Terminal or Anaconda prompt on Windows:"
+msgstr ""
+
+#: ../../plugins/unittest.rst:35
+msgid "When the Unittest plugin is installed, it will be available under the menu item :menuselection:`View --> Panes --> Unittest`."
+msgstr ""
+
+#: ../../plugins/unittest.rst:37
+msgid "Spyder showing View Panes Unittest"
+msgstr ""
+
+#: ../../plugins/unittest.rst:40
+msgid "You will see it then as a tab next to the :guilabel:`Files` tab."
+msgstr ""
+
+#: ../../plugins/unittest.rst:42
+msgid "If you plan to use the ``pytest`` library, then you also need to make sure that the ``pytest`` library is installed. This needs to be done in the Python environment that Spyder uses to run your code, which can be specified under :menuselection:`Preferences --> Python interpreter`. The ``pyzeromq`` library also needs to be installed in the same environment. However, this is likely already the case, because you need the ``spyder-kernels`` to be installed in order for Spyder to use the environment and ``spyder-kernels`` depends on ``pyzeromq``."
+msgstr ""
+
+#: ../../plugins/unittest.rst:53
+msgid "Running tests"
+msgstr ""
+
+#: ../../plugins/unittest.rst:55
+msgid "The first step is to write the automatic tests. Follow the usual instructions for the framework that you are using:"
+msgstr ""
+
+#: ../../plugins/unittest.rst:58
+msgid "If you use the ``unittest`` module in the standard Python library, see this `basic example <basic example_>`__."
+msgstr ""
+
+#: ../../plugins/unittest.rst:59
+msgid "If you use the ``pytest`` library, see this `quick example <quick example_>`__."
+msgstr ""
+
+#: ../../plugins/unittest.rst:65
+msgid "After the automatic tests are written, they can be executed. To run the tests, either use :menuselection:`Run --> Run unit tests` menu item or click on the \"Start\" button with the green triangle (▷) icon in the Unit testing pane. The first time that you run the tests, a configuration window will pop up where you need to specify the testing framework. All options in the configuration window are explained in the section :ref:`unittest-configuration` below."
+msgstr ""
+
+#: ../../plugins/unittest.rst:70
+msgid "Spyder running tests using the Run button and the Run menu item"
+msgstr ""
+
+#: ../../plugins/unittest.rst:73
+msgid "After running the tests, the results will appear in the Unit Testing pane. If you use the ``unittest`` module, then the results will only appear after all the tests have been run. If you use the ``pytest`` library, then the results will be continuously updated, as shown in the image below. A summary of the results is displayed at the top of the Unit Testing pane; in the image below, this is \"1 test failed, 3 passed, 1 other\". If no tests are found, then the summary will read \"No results to show\"."
+msgstr ""
+
+#: ../../plugins/unittest.rst:79
+msgid "Unit Testing pane with test results coming in slowly"
+msgstr ""
+
+#: ../../plugins/unittest.rst:88
+msgid "Viewing test results"
+msgstr ""
+
+#: ../../plugins/unittest.rst:90
+msgid "The Unit Testing pane shows the results after running the tests. The top shows a summary of test results in the form \"xxx tests passed, xxx failed, xxx other\". The results of the individual tests are displayed in a table occupying most of the pane."
+msgstr ""
+
+#: ../../plugins/unittest.rst:94
+msgid "Unit testing pane with test results"
+msgstr ""
+
+#: ../../plugins/unittest.rst:97
+msgid "Every row in the table corresponds to one test. The color indicates the result of that test: green for success, red for failure, and yellow for the rest. The table has four columns:"
+msgstr ""
+
+#: ../../plugins/unittest.rst:101
+msgid "The first column shows the outcome of the test. This is commonly \"passed\" or \"failed\", but there are more possibilities depending on the testing framework."
+msgstr ""
+
+#: ../../plugins/unittest.rst:103
+msgid "The second column shows the name of the test. To save space, components of the test name are abbreviated in a way that still makes the names unique. If you hoover over the abbreviated test name, then a tool tip with the full test name will appear."
+msgstr ""
+
+#: ../../plugins/unittest.rst:106
+msgid "The third column may show some extra information, for instance an error message if the test failed."
+msgstr ""
+
+#: ../../plugins/unittest.rst:107
+msgid "The fourth column shows the time (in milliseconds) that it took to run the test. The ``unittest`` module does not report the time, so if you use the ``unittest`` module as your testing framework then this column will be empty."
+msgstr ""
+
+#: ../../plugins/unittest.rst:110
+msgid "Initially, the test results are shown in the order in which the tests are run. You can sort the test results on one of the four columns by clicking on the column header. In particular, you can sort on the outcome of the test by clicking on the header of the first column, as shown in the picture below. This allows you to quickly locate failing tests if you have a big test suite with many tests."
+msgstr ""
+
+#: ../../plugins/unittest.rst:115
+msgid "Unit Testing pane with many test results; after sorting by outcome, the one test failure appears at the top"
+msgstr ""
+
+#: ../../plugins/unittest.rst:118
+msgid "Some tests, especially failing tests, have more than one line of information. To display all the output, This extra information is not shown by default. To expand a row and show the extra information of a particular test, click on the icon at the start of the line. The options menu of the Unit testing pane (\"Hamburger\" icon at top right) also contains the item :menuselection:`Expand all`, which expands all the rows in the table. The menu item :menuselection:`Collapse all` does the opposite."
+msgstr ""
+
+#: ../../plugins/unittest.rst:125
+msgid "Expanding and collapsing test results in the Unit Testing pane"
+msgstr ""
+
+#: ../../plugins/unittest.rst:128
+msgid "If you double click on a test result, then the :ref:`panes-editor` pane will jump to the location where this test is defined. Unfortunately, this functionality is only available if you use the ``pytest`` framework. The ``unittest`` module does not record the test location."
+msgstr ""
+
+#: ../../plugins/unittest.rst:132
+msgid "Spyder's editor displaying the source code of a test after doubling clicking on it in the Unit testing pane"
+msgstr ""
+
+#: ../../plugins/unittest.rst:135
+msgid "Finally, if you want to look at the raw output of the test run, then click on the :menuselection:`Show output` item in the options menu of the Unit testing pane. This is a good troubleshooting tool if the results are not what you expect, for instance if no tests are found while you are certain that you wrote some tests."
+msgstr ""
+
+#: ../../plugins/unittest.rst:138
+msgid "Spyder shows the output of the test run after clicking on the \"Show output\" menu item"
+msgstr ""
+
+#: ../../plugins/unittest.rst:148
+msgid "Configuration"
+msgstr ""
+
+#: ../../plugins/unittest.rst:150
+msgid "You can change the configuration of the spyder-unittest plugin by clicking on the :menuselection:`Configure` item in the options menu of the Unit testing pane. This will show the configuration window, shown below. The configuration window will also appear whenever there is no valid configuration for the plugin, for instance on the first time that you run tests."
+msgstr ""
+
+#: ../../plugins/unittest.rst:154
+msgid "The test configuration window"
+msgstr ""
+
+#: ../../plugins/unittest.rst:157
+msgid "There are two important configuration options that you need to set correctly. Firstly, you need to pick the testing framework. You can use either the ``unittest`` module in the standard Python library or the ``pytest`` library. Actually, there is a third possibility for the testing framework, the ``nose`` library, but this choice is deprecated and we plan to remove it in the next version of the plugin."
+msgstr ""
+
+#: ../../plugins/unittest.rst:162
+msgid "Secondly, you need to specify the directory in which the tests are stored. Spyder will find all the test in the specified directory and its subdirectories (at any level) according to the test discovery rules of the testing framework that you are using."
+msgstr ""
+
+#: ../../plugins/unittest.rst:165
+msgid "The plugin can also display testing coverage: which lines of your code are executed when the tests are run. This functionality is only available when using the ``pytest`` framework. You also need to install the ``pytest-cov`` library in the Python environment that Spyder uses to run your code before you can do coverage testing. There is an option in the configuration window to turn on coverage testing. After running the tests, the coverage results will be displayed under all the test results."
+msgstr ""
+
+#: ../../plugins/unittest.rst:171
+msgid "Unit testing pane showing test results and coverage"
+msgstr ""
+
+#: ../../plugins/unittest.rst:174
+msgid "Spyder saves the testing configuration sp that you do not have to specify it every time that you want to run the tests. If you use Spyder :ref:`panes-projects`, then the testing configuration is associated to the currently open project and will be stored with the project configuration. If no project is open, then the testing configuration is stored in the global Spyder configuration."
+msgstr ""
+
+#: ../../plugins/unittest.rst:178
+msgid "The :menuselection:`Dependencies` item in the options menu of the Unit testing pane displays a window showing which testing frameworks are installed in the Python environment that Spyder uses to run tests. The window also shows any plugins that come with the testing framework and the versions of the testing frameworks and the plugins. A side-effect of this command is that Spyder will pick up any testing frameworks that were installed since Spyder was started."
+msgstr ""
+
+#: ../../plugins/unittest.rst:182
+msgid "The Unittest dependencies window"
 msgstr ""

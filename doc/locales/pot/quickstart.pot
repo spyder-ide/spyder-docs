@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C)  2009-2024 Spyder Doc Contributors; MIT License
+# Copyright (C)  2009-2026 Spyder Doc Contributors; MIT License
 # This file is distributed under the same license as the Spyder package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Spyder 5\n"
+"Project-Id-Version: Spyder 6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-06 20:38-0500\n"
+"POT-Creation-Date: 2026-10-20 23:36-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../quickstart.rst:3
+#: ../../quickstart.rst:5
 msgid "Tour"
 msgstr ""
 
-#: ../../quickstart.rst:5
+#: ../../quickstart.rst:7
 msgid "Welcome to our Quickstart! Here you will find an interactive tour that will guide you through Spyder's interface. You'll get familiar with the most important parts of the IDE, especially those we'll be mentioning throughout our docs. Finally, you'll get to walk through some of Spyder's key panes and functionality."
 msgstr ""
