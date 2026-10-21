@@ -279,7 +279,7 @@ To get started, import the libraries.
    import scipy.stats as stats
    import seaborn as sns
 
-The data you downloaded earlier is in `parquet <https://arrow.apache.org/docs/python/parquet.html>`_ format. This format is very convenient because it is smaller and faster than CSV or JSON files.
+The data you downloaded earlier is in `parquet <https://arrow.apache.org/docs/python/parquet/>`_ format. This format is very convenient because it is smaller and faster than CSV or JSON files.
 
 Load data:
 
