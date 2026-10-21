@@ -6,7 +6,7 @@ Code Analysis
 
 The **Code Analysis** pane detects style issues, bad practices, potential bugs, and other quality problems in your code, all without having to actually execute it.
 Based on these results, it also gives your code an overall quality score.
-Spyder's code analyzer is powered by the `Pylint`_ backend, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
+Spyder's code analyzer is powered by the `Pylint <Pylint_>`__ backend, which can intelligently detect an enormous and customizable range of potential errors, bad practices, quality issues, style violations, and more.
 
 .. _Pylint: https://pylint.pycqa.org/
 
@@ -72,7 +72,7 @@ You can also expand or collapse one or all the sections in the pane by using the
 Advanced options
 ================
 
-You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope`_, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names`_.
+You can turn certain messages off at the line, block or file/module level by adding a ``# pylint: disable=MESSAGE-NAMES`` comment at the respective `scope <scope_>`__, where ``MESSAGE_NAMES`` should be replaced with a comma-separated list (or single value) of `Pylint message names <Pylint message names_>`__.
 For example, a directive might look like ``# pylint: disable=invalid-name``, or ``# pylint: disable=fixme, line-too-long``.
 
 .. _scope: https://pylint.pycqa.org/en/stable/user_guide/message-control.html
@@ -84,7 +84,7 @@ For example, a directive might look like ``# pylint: disable=invalid-name``, or 
 
 Or, you can globally suppress specific messages and adjust other Pylint settings by editing the :file:`.pylintrc` configuration file in your user home folder.
 If it doesn't exist, you can generate it by running ``pylint --generate-rcfile > .pylintrc`` in your user home folder, from the Anaconda Prompt (on Windows) or your terminal (macOS/Linux).
-For more details on configuring Pylint, see the `Pylint configuration documentation`_.
+For more details on configuring Pylint, see the `Pylint configuration documentation <Pylint configuration documentation_>`__.
 
 .. _Pylint configuration documentation:  https://pylint.pycqa.org/en/latest/user_guide/configuration/index.html
 

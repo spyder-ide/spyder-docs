@@ -19,7 +19,7 @@ This uses the enhanced IPdb debugger, which can be controlled via the buttons in
 Debugging with Spyder
 =====================
 
-You can control debugger execution via the buttons in the main toolbar and :guilabel:`Debugger` pane, as well as from the :guilabel:`Debug` menu and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands`_.
+You can control debugger execution via the buttons in the main toolbar and :guilabel:`Debugger` pane, as well as from the :guilabel:`Debug` menu and via configurable keyboard shortcuts, along with the standard ``ipdb`` `console commands <console commands_>`__.
 
 .. _console commands: https://wangchuan.github.io/coding/2017/07/12/ipdb-cheat-sheet.html
 
@@ -41,7 +41,7 @@ Use the up and down arrows to recall previous commands, and press :kbd:`Tab` to 
    :nocontrols:
    :alt: A Spyder IPython console window, showing autocompletion when debugging
 
-Furthermore, IPython's `magic functions`_ are available in debugging mode.
+Furthermore, IPython's `magic functions <magic functions_>`__ are available in debugging mode.
 You can, for example, run ``%ls`` to list the contents of your current working directory or ``%timeit`` to check how fast a given snippet of code is.
 
 .. _magic functions: https://ipython.readthedocs.io/en/stable/interactive/magics.html

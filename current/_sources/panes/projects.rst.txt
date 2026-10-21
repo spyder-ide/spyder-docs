@@ -54,7 +54,7 @@ It allows you to perform all the same :ref:`operations <panes-files-operations>`
 Working with version control
 ============================
 
-The :guilabel:`Project` pane has basic integration with the `Git`_ distributed version control system, just like :ref:`in the Files pane <panes-files-vcs>`.
+The :guilabel:`Project` pane has basic integration with the `Git <Git_>`__ distributed version control system, just like :ref:`in the Files pane <panes-files-vcs>`.
 You can commit or browse a file, directory or the entire repository via the respective commands in the context menu.
 
 .. _Git: https://git-scm.com/

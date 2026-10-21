@@ -55,8 +55,8 @@ Running tests
 The first step is to write the automatic tests.
 Follow the usual instructions for the framework that you are using:
 
-* If you use the ``unittest`` module in the standard Python library, see this `basic example`_.
-* If you use the ``pytest`` library, see this `quick example`_.
+* If you use the ``unittest`` module in the standard Python library, see this `basic example <basic example_>`__.
+* If you use the ``pytest`` library, see this `quick example <quick example_>`__.
 
 .. _basic example: https://docs.python.org/library/unittest.html#basic-example
 

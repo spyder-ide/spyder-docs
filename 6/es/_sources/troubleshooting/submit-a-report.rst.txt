@@ -5,14 +5,14 @@ Submit a Report
 ###############
 
 If you can't fix your issue with any of the troubleshooting steps, then you'll want to submit it to our issue tracker so our team can take a look at it for you.
-You'll need a `GitHub account`_ to do this, so make sure you have one before you begin (a good idea anyway).
+You'll need a `GitHub account <GitHub account_>`__ to do this, so make sure you have one before you begin (a good idea anyway).
 
 .. image:: /images/submit-a-report/submit-a-report-issue-tracker.webp
    :alt: GitHub page on Spyder's issue tracker
 
 .. important::
 
-   Before you submit an issue, make sure you've searched a description of the problem and a relevant portion of the error traceback, on both Google and Spyder's `issue tracker`_ to make sure it hasn't been submitted before.
+   Before you submit an issue, make sure you've searched a description of the problem and a relevant portion of the error traceback, on both Google and Spyder's `issue tracker <issue tracker_>`__ to make sure it hasn't been submitted before.
    If that's the case, your issue will be closed as a duplicate.
 
 .. _GitHub account: https://github.com/
@@ -42,7 +42,7 @@ In order of preference and difficulty:
    .. image:: /images/submit-a-report/submit-a-report-issue.webp
       :alt: GitHub page on Spyder's issue tracker
 
-#. **If Spyder won't launch**, you can submit a report manually at our `issues page on GitHub`_.
+#. **If Spyder won't launch**, you can submit a report manually at our `issues page on GitHub <issues page on GitHub_>`__.
    Unlike the above, you'll need to manually provide the versions of everything (Spyder, Python, OS, Qt/PyQt, Anaconda, and Spyder's dependencies) as listed in the error report template; see below for more on that.
 
    .. image:: /images/submit-a-report/submit-a-report-issue-template.webp

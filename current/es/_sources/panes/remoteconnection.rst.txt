@@ -10,8 +10,8 @@ Connecting to a remote host and opening a new :ref:`panes-console` on it allows 
 .. image:: /images/console/remote-connection-active.webp
    :alt: Remote Connections Manager
 
-It uses the standard, widely-used `SSH protocol`_, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
-Additionally, it supports connecting to `JupyterHub`_ servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
+It uses the standard, widely-used `SSH protocol <SSH protocol_>`__, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
+Additionally, it supports connecting to `JupyterHub <JupyterHub_>`__ servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
 No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.
 
 .. _SSH protocol: https://en.wikipedia.org/wiki/Secure_Shell
@@ -32,7 +32,7 @@ Creating a new connection
 To set up a connection to a new remote server, open the remote connections manager and click :guilabel:`New connection`.
 You can then configure the settings appropriate to the connection method.
 
-If your institution already has a `JupyterHub`_ server you'd like to connect to, select the :guilabel:`JupyterHub` tab.
+If your institution already has a `JupyterHub <JupyterHub_>`__ server you'd like to connect to, select the :guilabel:`JupyterHub` tab.
 Otherwise, if you want to connect to most other types of hosts, you'll want to use the default :guilabel:`SSH`.
 Either way, you'll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.
 
@@ -51,7 +51,7 @@ To create a new SSH connection, you need to enter several key details:
 
    .. note::
 
-      :guilabel:`Password` uses your normal username and password that you would enter when logging in to your account on the machine, while :guilabel:`Key file` uses a SSH private key you've generated with `ssh-keygen`_ and already registered with the remote machine.
+      :guilabel:`Password` uses your normal username and password that you would enter when logging in to your account on the machine, while :guilabel:`Key file` uses a SSH private key you've generated with `ssh-keygen <ssh-keygen_>`__ and already registered with the remote machine.
       If you're unsure, try :guilabel:`Password` to start, or ask the person who set up the host you are trying to connect to.
 
 #. Type a :guilabel:`Name` for the connection, which is just used to identify it in within the Spyder interface.
@@ -64,7 +64,7 @@ To create a new SSH connection, you need to enter several key details:
 
 #. If using a :guilabel:`Password`, enter it in the corresponding field. If using a :guilabel:`Key file`, navigate to where it is located (often under :file:`{YOUR_HOME_DIR}/.ssh/` and called :file:`id_rsa` or similar) and enter its passphrase, if you've set one.
 
-#. Finally, you can optionally set the path to a `SSH configuration file`_, which can contain additional advanced options for the host you set above as well as filling in default values for the previous fields.
+#. Finally, you can optionally set the path to a `SSH configuration file <SSH configuration file_>`__, which can contain additional advanced options for the host you set above as well as filling in default values for the previous fields.
 
 .. _ssh-keygen: https://www.ssh.com/academy/ssh/keygen
 
@@ -92,7 +92,7 @@ If you have questions about how to obtain a token, ask the person who set up the
 
 .. tip::
 
-    To enable all of Spyder's features when working with an existing JupyterHub deployment, ask the person who set up the server to install the `Spyder-Remote-Services`_ Jupyter Server extension.
+    To enable all of Spyder's features when working with an existing JupyterHub deployment, ask the person who set up the server to install the `Spyder-Remote-Services <Spyder-Remote-Services_>`__ Jupyter Server extension.
 
 .. _Spyder-Remote-Services: https://github.com/spyder-ide/spyder-remote-services
 
@@ -195,7 +195,7 @@ To connect to a kernel on a remote machine,
    :loop:
    :alt: Connecting to a remote kernel and running basic commands
 
-For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel`_ page in the IPython Cookbook.
+For more technical details about connecting to remote kernels, see the `Connecting to a remote kernel <Connecting to a remote kernel_>`__ page in the IPython Cookbook.
 
 .. _Connecting to a remote kernel: https://github.com/ipython/ipython/wiki/Cookbook:-Connecting-to-a-remote-kernel-via-ssh
 

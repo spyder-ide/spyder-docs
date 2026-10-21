@@ -4,7 +4,7 @@
 IPython Console
 ###############
 
-The **IPython Console** allows you to execute commands and interact with data inside `IPython`_ interpreters.
+The **IPython Console** allows you to execute commands and interact with data inside `IPython <IPython_>`__ interpreters.
 
 .. _IPython: https://ipython.org/
 
@@ -39,7 +39,7 @@ Any :guilabel:`IPython Console`, whether :ref:`external <panes-console-external>
 .. image:: /images/console/console-completion.png
    :alt: Spyder IPython Console, with a popup list of code completion guesses
 
-For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation`_.
+For information on the features, commands and capabilities built into IPython itself, see the `IPython documentation <IPython documentation_>`__.
 
 .. _IPython documentation: https://ipython.readthedocs.io/en/stable/overview.html
 
@@ -52,9 +52,9 @@ Special consoles
 ================
 
 Spyder also supports several types of specialized consoles.
-A `Sympy console`_ enables creating and displaying symbolic math expressions right inside Spyder.
-A `Cython console`_ allows you to use the Cython language to speed up your code and call C functions directly from Python.
-Finally, a `Pylab console`_ loads common NumPy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code over just importing the modules directly, it can still be used if necessary for legacy scripts that need it.
+A `Sympy console <Sympy console_>`__ enables creating and displaying symbolic math expressions right inside Spyder.
+A `Cython console <Cython console_>`__ allows you to use the Cython language to speed up your code and call C functions directly from Python.
+Finally, a `Pylab console <Pylab console_>`__ loads common NumPy and Matplotlib functions by default; while this is deprecated and strongly discouraged for new code over just importing the modules directly, it can still be used if necessary for legacy scripts that need it.
 
 .. _Cython console: https://cython.org/#documentation
 .. _Sympy console: https://docs.sympy.org/latest/index.html

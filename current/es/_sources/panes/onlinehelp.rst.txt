@@ -4,7 +4,7 @@
 Online Help
 ###########
 
-The **Online Help** pane provides a built-in web browser to explore dynamically generated Python documentation on installed modules—including your own—rendered by a `pydoc`_ server running in the background.
+The **Online Help** pane provides a built-in web browser to explore dynamically generated Python documentation on installed modules—including your own—rendered by a `pydoc <pydoc_>`__ server running in the background.
 
 .. _pydoc: https://docs.python.org/3/library/pydoc.html
 
@@ -45,7 +45,7 @@ In the rendered documentation, the module's file location is linked to the right
 .. image:: /images/online_help/online-help-path.gif
    :alt: Spyder Online Help pane showing source code clicking module's path
 
-Standard library modules also have a link to the corresponding `Python docs`_, which can be viewed right inside of the pane.
+Standard library modules also have a link to the corresponding `Python docs <Python docs_>`__, which can be viewed right inside of the pane.
 
 .. _Python docs: https://docs.python.org/
 

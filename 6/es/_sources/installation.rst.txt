@@ -8,7 +8,7 @@ Install Guide
 Spyder is relatively easy to install on any Windows, Linux or macOS system meeting our basic :ref:`system requirements <run-system-reqs>`.
 Just make sure to read and follow these instructions with care.
 
-If you have questions or run into problems, *please* check our :ref:`FAQ <faq-installing>`, consult our :ref:`troubleshooting guide <troubleshooting-guide>` and search the `issue tracker`_ for your error message and problem description.
+If you have questions or run into problems, *please* check our :ref:`FAQ <faq-installing>`, consult our :ref:`troubleshooting guide <troubleshooting-guide>` and search the `issue tracker <issue tracker_>`__ for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
@@ -27,8 +27,8 @@ Try Spyder online
 =================
 
 Want to try out Spyder before installing it?
-With `Binder`_, you can open a functional copy of Spyder online that runs right in your web browser, with no installation needed.
-Visit the `Spyder Binder`_ page to get started using Spyder.
+With `Binder <Binder_>`__, you can open a functional copy of Spyder online that runs right in your web browser, with no installation needed.
+Visit the `Spyder Binder <Spyder Binder_>`__ page to get started using Spyder.
 
 .. _Binder: https://mybinder.org/
 .. _Spyder Binder: https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster
@@ -49,7 +49,7 @@ They work like any other IDE, where Spyder can be installed and updated independ
 This avoids the problems with incompatible packages and broken installations users can face when managing Spyder's installation themselves, mixed with their own working environments.
 
 The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, SciPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
-To use additional packages, we currently recommend connecting an external Python distribution (such as `Miniforge`_ (recommended), `Anaconda`_, `Miniconda`_, or `Python.org <Python_>`__) to your standalone copy of Spyder.
+To use additional packages, we currently recommend connecting an external Python distribution (such as `Miniforge <Miniforge_>`__ (recommended), `Anaconda <Anaconda_>`__, `Miniconda <Miniconda_>`__, or `Python.org <Python_>`__) to your standalone copy of Spyder.
 For more information on this, see our :ref:`FAQ entry on the subject <using-packages-installer>`.
 
 .. note::
@@ -63,7 +63,7 @@ For more information on this, see our :ref:`FAQ entry on the subject <using-pack
 Downloading and installing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To download the supported Spyder installer for your platform, simply click the appropriate link below; you can also browse all installer versions from the `downloads page`_.
+To download the supported Spyder installer for your platform, simply click the appropriate link below; you can also browse all installer versions from the `downloads page <downloads page_>`__.
 Then, double-click the downloaded file to open the installer on Windows and macOS, or run it with ``bash`` in a terminal on Linux (``bash path/to/downloaded/Spyder-Linux-x86_64.sh``).
 If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:`OK`, :guilabel:`Open`, :guilabel:`Allow` or similar; or on Windows, :guilabel:`More info` followed by :guilabel:`Run anyway`.
 
@@ -71,15 +71,15 @@ If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:
 
 .. table::
 
-   ================ ================ ================ ================
-   `Windows`_       `macOS M1`_      `macOS Intel`_   `Linux`_
-   ================ ================ ================ ================
+   =================== =================== ========================= ===================
+   `Windows <win_>`__  `macOS M1 <m1_>`__  `macOS Intel <intel_>`__  `Linux <linux_>`__
+   =================== =================== ========================= ===================
 
 .. _downloads page: https://www.spyder-ide.org/download
-.. _Windows: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Windows-x86_64.exe
-.. _macOS M1: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-arm64.pkg
-.. _macOS Intel: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-x86_64.pkg
-.. _Linux: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Linux-x86_64.sh
+.. _win: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Windows-x86_64.exe
+.. _m1: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-arm64.pkg
+.. _intel: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-macOS-x86_64.pkg
+.. _linux: https://github.com/spyder-ide/spyder/releases/latest/download/Spyder-Linux-x86_64.sh
 
 .. image:: /images/installation/installation-standalone-installer.webp
    :alt: Spyder standalone installer running on Windows
@@ -113,8 +113,8 @@ On earlier versions, you'll need to manually download and install the latest rel
 Conda-based distribution
 ========================
 
-Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
-It can also be easily installed in the much lighter-weight `Miniforge`_ (recommended) or `Miniconda`_, which include just the Conda/Mamba package and environment manager.
+Spyder is included by default in the `Anaconda <Anaconda_>`__ Python distribution, which comes with everything you need to get started in an all-in-one package.
+It can also be easily installed in the much lighter-weight `Miniforge <Miniforge_>`__ (recommended) or `Miniconda <Miniconda_>`__, which include just the Conda/Mamba package and environment manager.
 They allow you to create your own environments with any packages you need, with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel.
 This is our recommended installation method if you require third-party Spyder plugins or Variable Explorer compatibility with inspecting objects from specialized libraries (e.g. PyTorch or Scikit-Learn), as support for both of these in our standalone installers is still under active development.
 
@@ -266,7 +266,7 @@ Using pip
    Therefore, we generally recommend our :ref:`install-standalone` or :ref:`installing via Conda <install-conda>` instead.
 
 You can install Spyder with the pip package manager, which is included by default with most Python installations.
-Before installing Spyder itself by this method, you need to download a recent version of the `Python`_ programming language if it isn't already installed in your system.
+Before installing Spyder itself by this method, you need to download a recent version of the `Python <Python_>`__ programming language if it isn't already installed in your system.
 
 .. _Python: https://www.python.org/
 
@@ -340,7 +340,7 @@ Alternative methods
 Windows
 ~~~~~~~
 
-Spyder is included in the `WinPython`_ scientific Python distribution, along with many other common numerical computing and data analysis packages.
+Spyder is included in the `WinPython <WinPython_>`__ scientific Python distribution, along with many other common numerical computing and data analysis packages.
 You can use Spyder immediately after installing, similar to Anaconda.
 
 .. _WinPython: https://winpython.github.io/
@@ -351,7 +351,7 @@ You can use Spyder immediately after installing, similar to Anaconda.
 macOS
 ~~~~~
 
-Spyder is available as `a cask`_ through `Homebrew`_.
+Spyder is available as `a cask <a cask_>`__ through `Homebrew <Homebrew_>`__.
 
 .. _a cask: https://formulae.brew.sh/cask/spyder
 .. _Homebrew: https://brew.sh/
@@ -362,7 +362,7 @@ To install it using the ``brew`` package manager, run:
 
    brew install --cask spyder
 
-It is also available as a `a port`_ through `MacPorts`_.
+It is also available as a `a port <a port_>`__ through `MacPorts <MacPorts_>`__.
 
 .. _a port: https://ports.macports.org/port/py-spyder/
 .. _MacPorts: https://www.macports.org/
@@ -390,7 +390,7 @@ Alternatively, it can be launched from the terminal with ``spyder`` (or ``spyder
 Ubuntu/Debian
 -------------
 
-Spyder is available as `a Ubuntu package`_ and `a Debian package`_.
+Spyder is available as `a Ubuntu package <a Ubuntu package_>`__ and `a Debian package <a Debian package_>`__.
 
 .. _a Ubuntu package: https://packages.ubuntu.com/search?keywords=spyder
 .. _a Debian package: https://packages.debian.org/search?searchon=names&keywords=spyder
@@ -410,10 +410,10 @@ Other distributions
 
 Spyder is also available in other GNU/Linux distributions, including:
 
-* `Arch Linux`_
-* `Fedora`_
-* `Gentoo`_
-* `openSUSE`_
+* `Arch Linux <Arch Linux_>`__
+* `Fedora <Fedora_>`__
+* `Gentoo <Gentoo_>`__
+* `openSUSE <openSUSE_>`__
 
 .. _Arch Linux: https://aur.archlinux.org/packages/spyder-git/
 .. _Fedora: https://fedoraproject.org/wiki/Spyder
@@ -432,7 +432,7 @@ Development builds
 
 If you want to try the next Spyder version before it is released, you can!
 You may want to do this for fixing bugs in Spyder, adding new features, learning how Spyder works or just getting a taste of what the IDE can do.
-For more information, please see our `Contributing Guide`_, and for further detail consult the `Spyder developer documentation`_.
+For more information, please see our `Contributing Guide <Contributing Guide_>`__, and for further detail consult the `Spyder developer documentation <Spyder developer documentation_>`__.
 
 .. _Contributing Guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
 .. _Spyder developer documentation: https://spyder-ide.github.io/spyder-api-docs/
@@ -453,19 +453,19 @@ Additional help
 
 .. rst-class:: fasb fa-globe
 
-*Looking for general information about Spyder and its ecosystem?* See our `main website`_.
+*Looking for general information about Spyder and its ecosystem?* See our `main website <main website_>`__.
 
 .. rst-class:: fasb fa-bug
 
-*Need to submit a bug report or feature request?* Check out our `GitHub repository`_.
+*Need to submit a bug report or feature request?* Check out our `GitHub repository <GitHub repository_>`__.
 
 .. rst-class:: fasb fa-code
 
-*Want development-oriented help and information?* Consult our `developer docs`_.
+*Want development-oriented help and information?* Consult our `developer docs <developer docs_>`__.
 
 .. rst-class:: fasb fa-mail-bulk
 
-*Have a help request or discussion topic?* Subscribe to our `Google Group`_.
+*Have a help request or discussion topic?* Subscribe to our `Google Group <Google Group_>`__.
 
 .. _main website: https://www.spyder-ide.org/
 .. _GitHub repository: https://github.com/spyder-ide/spyder/

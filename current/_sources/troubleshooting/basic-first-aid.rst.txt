@@ -88,8 +88,8 @@ If none of the previous steps solve your issue, you should do a full uninstall o
 For Spyder's standalone installers, the uninstall mechanism varies depending on your operating system.
 On Windows, it can be removed via the entry under :guilabel:`Add or remove programs`.
 
-For Anaconda/Miniconda, follow all the steps under `Anaconda uninstall guide`_/`Miniconda uninstall guide`_.
-For Miniforge, follow the `Miniforge uninstall instructions`_ on macOS/Linux or remove it from :guilabel:`Add or remove programs` on Windows.
+For Anaconda/Miniconda, follow all the steps under `Anaconda uninstall guide <Anaconda uninstall guide_>`__/`Miniconda uninstall guide <Miniconda uninstall guide_>`__.
+For Miniforge, follow the `Miniforge uninstall instructions <Miniforge uninstall instructions_>`__ on macOS/Linux or remove it from :guilabel:`Add or remove programs` on Windows.
 Then, delete the Anaconda/Miniconda/Miniforge directory wherever it was originally installed, and (on Windows) remove the :file:`%AppData%/Python` directory if it exists.
 
 .. video:: /images/basic-first-aid/basic-first-aid-app-data.webm
@@ -127,13 +127,13 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
 
 #. **A bare QtConsole instance**, e.g. launched from the system terminal (Anaconda Prompt, on Windows) with ``jupyter qtconsole``.
 
-   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` usually have something to do with QtConsole instead, and can be reported to the `QtConsole issue tracker`_.
+   QtConsole is the GUI console backend Spyder depends on to run its code, so most issues involving Spyder's :ref:`panes-console` usually have something to do with QtConsole instead, and can be reported to the `QtConsole issue tracker <QtConsole issue tracker_>`__.
 
 #. **An IPython command line shell**, launched with e.g. ``ipython`` from system terminal (Anaconda Prompt, on Windows).
-   Reproducible bugs can be reported to the `IPython issue tracker`_, though make sure to read their guidelines and docs first.
+   Reproducible bugs can be reported to the `IPython issue tracker <IPython issue tracker_>`__, though make sure to read their guidelines and docs first.
 
 #. **A standard Python interpreter**, either run as a script file with ``python path/to/your/file.py`` or launched interactively with ``python`` from your system terminal (Anaconda Prompt, on Windows).
-   While it is not impossible that you've found a Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs`_ and the other resources listed above.
+   While it is not impossible that you've found a Python bug, it is much more likely to be an issue with the code itself or a package you are using, so your best sources are the `Python docs <Python docs_>`__ and the other resources listed above.
 
 .. _QtConsole issue tracker: https://github.com/jupyter/qtconsole/issues/
 .. _IPython issue tracker: https://github.com/ipython/ipython/issues
@@ -142,7 +142,7 @@ If you manage to isolate the bug, report it to the last one it *doesn't* work in
 .. tip::
 
    If the problem reoccurs in a similar or identical way with any of these methods (other than only Spyder itself), then it is almost certainly not an issue with Spyder, and would be best handled elsewhere.
-   As we usually aren't able to do much about issues not related to Spyder, a forum like `Stack Overflow`_ or the relevant package's docs is a much better place to get help or report the issue.
+   As we usually aren't able to do much about issues not related to Spyder, a forum like `Stack Overflow <Stack Overflow_>`__ or the relevant package's docs is a much better place to get help or report the issue.
 
 .. _Stack Overflow: https://stackoverflow.com/
 

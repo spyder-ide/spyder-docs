@@ -47,7 +47,7 @@ To enable case sensitivity, which only returns matches with identical capitaliza
 .. image:: /images/find_in_files/find-in-files-case.gif
    :alt: Spyder Find pane showing search with case sensitive activated
 
-To parse your search string as a `regular expression`_, enable the :guilabel:`.*` button.
+To parse your search string as a `regular expression <regular expression_>`__, enable the :guilabel:`.*` button.
 
 .. _regular expression: https://docs.python.org/3/library/re.html
 

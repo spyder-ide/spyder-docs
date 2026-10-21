@@ -55,7 +55,7 @@ If copying the paths for multiple files, they will be automatically formatted so
 Version control support
 =======================
 
-The :guilabel:`Files` pane context menu allows you to perform basic operations with the `Git`_ distributed version control system when right-clicking a file, like committing your changes and browsing the repository a given file or folder belongs to.
+The :guilabel:`Files` pane context menu allows you to perform basic operations with the `Git <Git_>`__ distributed version control system when right-clicking a file, like committing your changes and browsing the repository a given file or folder belongs to.
 This is :ref:`particularly useful <panes-projects-vcs>` when you're working in Spyder :ref:`panes-projects`.
 
 .. _Git: https://git-scm.com/

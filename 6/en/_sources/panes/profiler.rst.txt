@@ -83,7 +83,7 @@ Line profiler plugin
 
 There is an additional plugin that you can install to enable other types of profiling in Spyder.
 Spyder Line Profiler allows you to benchmark each line of your code individually.
-To learn more, visit the `spyder-line-profiler git repository`_.
+To learn more, visit the `spyder-line-profiler git repository <spyder-line-profiler git repository_>`__.
 
 .. _spyder-line-profiler git repository: https://github.com/spyder-ide/spyder-line-profiler
 

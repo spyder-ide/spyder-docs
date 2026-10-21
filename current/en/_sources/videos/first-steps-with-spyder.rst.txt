@@ -34,7 +34,7 @@ Discover the basics of using the Spyder interface and get an introduction to its
 
    .. div:: scroll
 
-      Hello everyone! I'm Juanita, and in this video I'm going to show you how to open Spyder and go over the basics of Spyder's interface. We will learn about Spyder's four panes that you'll likely be using most often, as well as briefly explore the others that are open by default. If you don't have Spyder installed and would like to follow along, you can `download it here`_.
+      Hello everyone! I'm Juanita, and in this video I'm going to show you how to open Spyder and go over the basics of Spyder's interface. We will learn about Spyder's four panes that you'll likely be using most often, as well as briefly explore the others that are open by default. If you don't have Spyder installed and would like to follow along, you can `download it here <download it here_>`__.
 
       .. _download it here: https://www.spyder-ide.org/
 
@@ -87,7 +87,7 @@ Learn the basics of using Spyder’s four main panes.
 
    .. div:: scroll
 
-      Hello everyone! I'm Juanita, and in this video I will show you how to start working with Spyder's four main panes. First, let's take a look at the Editor, which you can use to open, edit and run files from your computer. I will open a short "Hello World" program for this demo, which you can `download here`_. Once you have it open in your Editor, you can execute it by pressing the green run button. We can see the output in the Python Console [Show IPython console] as well as the path of the file that we are running and the working directory where this code was run.
+      Hello everyone! I'm Juanita, and in this video I will show you how to start working with Spyder's four main panes. First, let's take a look at the Editor, which you can use to open, edit and run files from your computer. I will open a short "Hello World" program for this demo, which you can `download here <download here_>`__. Once you have it open in your Editor, you can execute it by pressing the green run button. We can see the output in the Python Console [Show IPython console] as well as the path of the file that we are running and the working directory where this code was run.
 
       .. _download here: https://drive.google.com/file/d/18Ai-XY9kIPm9x_7-0RBakV2a6dRVqh-L/view
 

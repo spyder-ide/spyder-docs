@@ -579,7 +579,9 @@ The <span class="guilabel">Save data</span> and <span class="guilabel">Save data
 <img alt="Variable Explorer showing how to save and import data" src="../_images/variable-explorer-import-data.gif" />
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
-<p><strong>No</strong> debes cargar ningún archivo <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> desde cualquier fuente en la que no confíes (idealmente, solo aquellos archivos que hayas guardado tu mismp). Al igual que con cualquier <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, no es inherentemente seguro contra código malicioso, ya que puede cargar cualquier objeto Python y puede ejecutar código arbitrario en tu máquina. Además, no se garantiza que funcione de forma fiable en todos los entornos de Python que no sean en aquel en el que se creó, por lo que sólo debería utilizarse como formato de persistencia local, y no para intercambio.</p>
+<p>You should <strong>not</strong> load any <code class="docutils literal notranslate"><span class="pre">.spydata</span></code> file from any source you don’t fully trust (ideally, only those files you’ve saved yourself).
+Like with any <a class="reference external" href="https://docs.python.org/3/library/pickle.html">Python pickle</a>, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
+Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange.</p>
 </div>
 <p>The <span class="guilabel">Remove all variables</span> button clears the whole console namespace, including objects hidden by filters such as <span class="guilabel">Exclude callables and modules</span>.
 The search button allows finding objects by name or type.</p>
@@ -601,7 +603,7 @@ This feature also allows you to create a new key in a dictionary, a new element 
 <p>You can save an array to a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> file by clicking the appropriate option, which can later be loaded in the Variable Explorer via <span class="guilabel">Import data</span> or in your code via <code class="docutils literal notranslate"><span class="pre">numpy.load()</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/variable-explorer-contextmenu-array.png"><img alt="Context menu for an int array, with the Show image option selected" src="../_images/variable-explorer-contextmenu-array.png" width="500" />
 </a>
-<p>En el caso de arreglos bidimensionales, también puedes mostrarlos como imágenes, tratando sus valores como colores RGB. Para esto, Spyder utiliza los mapas de colores de Matplotlib, que pueden ser <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">fácilmente cambiados para que coincidan con tus preferencias</a>.</p>
+<p>For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib’s colormaps, which can be <a class="reference external" href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">easily changed to match your preferences</a>.</p>
 <img alt="Interactive image based on the array's data" src="../_images/variable-explorer-show-image.gif" />
 <p>Finally, there is a context-menu action to open any object using the Object Explorer even if they already have a builtin viewer (DataFrames, arrays, etc), allowing for deeper inspection of the inner workings of these data types.</p>
 <img alt="Object explorer showing DataFrame" src="../_images/variable-explorer-object-explorer.png" />
@@ -720,7 +722,7 @@ This feature also allows you to create a new key in a dictionary, a new element 
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.1.
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     <br/>
   </p>
 </div>

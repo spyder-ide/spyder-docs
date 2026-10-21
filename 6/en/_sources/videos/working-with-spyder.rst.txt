@@ -93,7 +93,7 @@ Learn how to improve the quality of your programs using code analysis.
 
       Based on these results, the code analysis shows an overall score of 4.34/10, which allows us to track improvements in our code quality. We can also expand or collapse one or all the sections in the pane to be able to see the Pylint errors, warnings and messages identifying the issues with our code.
 
-      For example, the results tell us that there is a warning on line 20. To go directly to this line in the Editor, just click the message. Here, the code analysis says there is a ``bad-whitespace`` issue. To understand what this means, open the Pylint documentation. On the `Pylint docs page`_ , click on Pylint features and search for the code of the message.
+      For example, the results tell us that there is a warning on line 20. To go directly to this line in the Editor, just click the message. Here, the code analysis says there is a ``bad-whitespace`` issue. To understand what this means, open the Pylint documentation. On the `Pylint docs page <Pylint docs page_>`__ , click on Pylint features and search for the code of the message.
 
       .. _Pylint docs page: https://pylint.pycqa.org/en/stable/index.html
 
@@ -170,7 +170,7 @@ Learn how to optimize your code using the Profiler.
 
       Now that we know how to interpret the results of our profiling, let's optimize our code by finding the functions that take the longest time and making them faster. In this case, ``to_datetime`` takes 39 seconds to run. The reason for this is Pandas has to parse the non-standard timestamp format and is not told to try to use a faster parser than the default.
 
-      We can reduce the time this function takes and compare it with the one before. For this, first we have to save the data as a ``.Result`` file with the save button in the pane. Now we have to figure out how to optimize the function, so let's search for it. We see that we can speed up this function by `manually specifying a datetime format`_. So, we add the appropriate argument, ``format="%Y-%m-%d %H:%M:%S.%f %z"``, to our function call.
+      We can reduce the time this function takes and compare it with the one before. For this, first we have to save the data as a ``.Result`` file with the save button in the pane. Now we have to figure out how to optimize the function, so let's search for it. We see that we can speed up this function by `manually specifying a datetime format <manually specifying a datetime format_>`__. So, we add the appropriate argument, ``format="%Y-%m-%d %H:%M:%S.%f %z"``, to our function call.
 
       .. _manually specifying a datetime format: https://stackoverflow.com/questions/32034689/why-is-pandas-to-datetime-slow-for-non-standard-time-format-such-as-2014-12-31
 
