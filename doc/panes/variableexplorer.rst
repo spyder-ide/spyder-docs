@@ -94,7 +94,7 @@ Clicking the resize button on the right of the dialog toolbar will set the width
    :alt: Array editor with a 2D int array, showing resizing of columns
 
 If supported by the datatype, you can also change the format of the array's values, choosing the number of decimals that you want the array to display.
-For this, enter the desired format string (using Python's standard `format specification mini-language`_) under :guilabel:`Formatting` in the :guilabel:`Display options` dialog under the viewer options ("hamburger") menu in the top right.
+For this, enter the desired format string (using Python's standard `format specification mini-language <format specification mini-language_>`__) under :guilabel:`Formatting` in the :guilabel:`Display options` dialog under the viewer options ("hamburger") menu in the top right.
 
 .. _format specification mini-language: https://docs.python.org/3/library/string.html#format-specification-mini-language
 
@@ -155,7 +155,7 @@ The :guilabel:`Save data` and :guilabel:`Save data as` buttons allows saving the
 .. warning::
 
    You should **not** load any ``.spydata`` file from any source you don't fully trust (ideally, only those files you've saved yourself).
-   Like with any `Python pickle`_, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
+   Like with any `Python pickle <Python pickle_>`__, it is inherently not secure against malicious code, as it can load any Python object and can execute arbitrary code on your machine.
    Additionally, it is not guaranteed to work reliably across all Python environments other than the one it was created in, so it should be only used as a local persistence format, not for interchange.
 
 .. _Python pickle: https://docs.python.org/3/library/pickle.html
@@ -205,7 +205,7 @@ You can save an array to a ``.npy`` file by clicking the appropriate option, whi
    :width: 500
    :alt: Context menu for an int array, with the Show image option selected
 
-For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib's colormaps, which can be `easily changed to match your preferences`_.
+For two-dimensional arrays, you can also display them as images, treating their values as RGB colors. For this, Spyder uses Matplotlib's colormaps, which can be `easily changed to match your preferences <easily changed to match your preferences_>`__.
 
 .. _easily changed to match your preferences: https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 

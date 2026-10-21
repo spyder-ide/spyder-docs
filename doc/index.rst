@@ -114,8 +114,8 @@ Looking to contribute your code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Spyder is written in the same Python language that you use it to develop, so its easy to get started contributing to it.
-You can follow our `contributing guide`_ to set up a development environment, and you can get involved with the project through our `Github repository`_.
-The easiest way to get started is helping us resolve items on our `issue tracker`_, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
+You can follow our `contributing guide <contributing guide_>`__ to set up a development environment, and you can get involved with the project through our `Github repository <Github repository_>`__.
+The easiest way to get started is helping us resolve items on our `issue tracker <issue tracker_>`__, either by fixing bugs in Spyder, or helping users troubleshoot their problems (which doesn't require writing any code).
 
 .. _contributing guide: https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md
 
@@ -132,7 +132,7 @@ Want to help writing docs?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We welcome your contributions of corrections, additions and enhancements to these docs.
-Check out the `docs contributing guide`_ to learn how to submit a PR with your changes on our `docs repo`_.
+Check out the `docs contributing guide <docs contributing guide_>`__ to learn how to submit a PR with your changes on our `docs repo <docs repo_>`__.
 
 .. _docs contributing guide: https://github.com/spyder-ide/spyder-docs/blob/master/CONTRIBUTING.md
 
@@ -148,7 +148,7 @@ Interested in translating Spyder?
 
 In order to reach more users around the world in need of a powerful scientific Python environment, we welcome your help translating the documentation and the interface into different languages.
 
-For this purpose we use `Crowdin`_, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
+For this purpose we use `Crowdin <Crowdin_>`__, which provides a simple web based interface for translators, proofreaders and managers, so everyone can help us translate Spyder into any language.
 
 .. _Crowdin: https://crowdin.com/project/spyder
 

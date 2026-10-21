@@ -21,8 +21,8 @@ You will need to have Spyder installed. Visit our :ref:`install-guide` for more 
 
 It is also desirable to have the following prior knowledge:
 
-* Basic level of Python. You can visit `The Python Tutorial`_ to learn the basics of this programming language.
-* Some knowledge of Statistics (`hypothesis testing`_ , `ANOVA`_, `p-value`_)
+* Basic level of Python. You can visit `The Python Tutorial <The Python Tutorial_>`__ to learn the basics of this programming language.
+* Some knowledge of Statistics (`hypothesis testing <hypothesis testing_>`__ , `ANOVA <ANOVA_>`__, `p-value <p-value_>`__)
 
 .. _The Python Tutorial: https://docs.python.org/3/tutorial/
 .. _hypothesis testing: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
@@ -99,7 +99,7 @@ If you're not familiar with Spyder, we recommend you start with our :ref:`tour`.
 
 .. note::
 
-   If you already have experience with Spyder, you can skip to `Preparation work`_ section.
+   If you already have experience with Spyder, you can skip to `Preparation work <Preparation work_>`__ section.
 
 
 Editor
@@ -153,7 +153,7 @@ You can set up your environment in two different ways.
 
 .. important::
 
-   We recommend creating the virtual environment with `Anaconda <https://www.anaconda.com/products/individual>`_ (or `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_) as it integrates seamlessly with Spyder. You can find installation instructions in `Anaconda documentation`_.
+   We recommend creating the virtual environment with `Anaconda <https://www.anaconda.com/products/individual>`_ (or `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_) as it integrates seamlessly with Spyder. You can find installation instructions in `Anaconda documentation <Anaconda documentation_>`__.
 
    .. _Anaconda documentation: https://docs.anaconda.com/anaconda/install/
 
@@ -203,7 +203,7 @@ Downloading the dataset
 
 We are going to work with a public dataset called OKCupid, collected by Kirkegaard and Bjerrekaer. The dataset is composed of 68,371 records and 2,626 variables.
 
-Download the `OKCupid dataset`_ to a directory of your choice.
+Download the `OKCupid dataset <OKCupid dataset_>`__ to a directory of your choice.
 
 .. _OKCupid dataset: https://figshare.com/articles/dataset/OKCupid_Datasets/14987388
 
@@ -256,7 +256,7 @@ OKCupid is a dataset that gathers information obtained from the online dating si
 
 The dataset contains demographic data (e.g., gender, sexual orientation and age). It also includes answers to general questions used by the website's algorithm to calculate some personality indicators to help find compatible matches.
 
-If you want more information about how this dataset was collected and what kind of information it contains you can get it in this paper: `The OKCupid dataset`_.
+If you want more information about how this dataset was collected and what kind of information it contains you can get it in this paper: `The OKCupid dataset <The OKCupid dataset_>`__.
 
 .. _The OKCupid dataset: https://doi.org/10.26775/ODP.2016.11.03
 
@@ -359,7 +359,7 @@ Another way to generate a simple histogram in Spyder is to use a context menu on
 .. image:: images/workshop-2/histogram-from-variable-explorer-plotted.png
    :alt: Age histogram from Variable Explorer
 
-Frequency distributions come in different sizes and shapes. The shape of a histogram reveals very interesting things about the data. A symmetrical, bell-shaped histogram might indicate that the distribution is normal (most of the scores are close to the center of the distribution). In the age histogram, you can see that it has a "tail" to the right (towards the older ages). Technically this is called "positively `skewed`_". It is also noticeable that it is somewhat pointy (positive `kurtosis`_ or leptokurtic). These two things could suggest that age is not a random variable.
+Frequency distributions come in different sizes and shapes. The shape of a histogram reveals very interesting things about the data. A symmetrical, bell-shaped histogram might indicate that the distribution is normal (most of the scores are close to the center of the distribution). In the age histogram, you can see that it has a "tail" to the right (towards the older ages). Technically this is called "positively `skewed <skewed_>`__". It is also noticeable that it is somewhat pointy (positive `kurtosis <kurtosis_>`__ or leptokurtic). These two things could suggest that age is not a random variable.
 
 .. _kurtosis: https://en.wikipedia.org/wiki/Kurtosis
 .. _skewed: https://en.wikipedia.org/wiki/Skewness
@@ -431,7 +431,7 @@ You can then see a list of all relevant methods and attributes of the class. Rig
    # and very serious about it         3290
    # Name: d_religion_seriosity, dtype: int64
 
-In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix "q" followed by an integer. The text of the questions is stored in a file called :file:`question_data.csv` (which you can download as part of the `OKCupid dataset`_).
+In addition to demographic and profile variables, the dataset includes responses to questions on a variety of topics. These questions are coded with a prefix "q" followed by an integer. The text of the questions is stored in a file called :file:`question_data.csv` (which you can download as part of the `OKCupid dataset <OKCupid dataset_>`__).
 
 We can examine this file in the Variable Explorer:
 
@@ -455,7 +455,7 @@ A hypothesis is a statement that can be tested employing the scientific method. 
 
 Concerning the above theory of a person's pet preferences, to explore it we should find two variables to relate. The first variable would be related to a **self-identification as a cat person or dog person**. The second variable would be related to a person's **ability to solve problems and situations**.
 
-The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question **q997** (*Are you a cat person or a dog person?* ) provides information about a person's pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file :file:`test_items.csv` in the `OKCupid dataset`_.
+The OKCupid dataset has useful variables that we can use to investigate this theory. For example, question **q997** (*Are you a cat person or a dog person?* ) provides information about a person's pet preferences. The second variable is slightly more difficult to come up with, as it is somewhat more complex. Fortunately, the researchers who collected the dataset have also selected 14 questions that can serve as a proxy for a cognitive ability test. This selection of questions can be found in the file :file:`test_items.csv` in the `OKCupid dataset <OKCupid dataset_>`__.
 
 .. code-block:: python
 
