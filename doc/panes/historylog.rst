@@ -6,7 +6,7 @@ History
 
 With the **History** pane, you can view the recent code and commands you've entered into any :ref:`panes-console`, along with their timestamp.
 
-.. image:: /images/history/history-standard.png
+.. image:: /images/history/history-standard.webp
    :alt: Spyder History Log, displaying a list of previously executed commands
 
 
@@ -33,7 +33,8 @@ Options Menu
 
 The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle soft wrapping of long lines (:guilabel:`Wrap lines`), and whether the line number is displayed to the left of the text (:guilabel:`Show line numbers`).
 
-.. image:: /images/history/history-wrap.gif
+.. video:: /images/history/history-wrap.webm
+   :loop:
    :alt: Spyder History Log, displaying wrapping lines and showing line number
 
 
@@ -47,7 +48,7 @@ Advanced usage
 The list of commands shown in the :guilabel:`History` pane is stored in the file :file:`history.py` inside the Spyder configuration directory (:file:`.spyder-py3`) in your user home folder (by default, :file:`C:/Users/{username}` on Windows, :file:`/Users/{username}` for macOS, and typically :file:`/home/{username}/.config` on GNU/Linux).
 You might need to show invisible files in order to see it on a non-Windows operating system.
 
-.. image:: /images/history/history-log-file.png
+.. image:: /images/history/history-log-file.webp
    :alt: Spyder History Log file
 
 While there is currently no built-in way to clear history from the Spyder interface aside from resetting preferences, you can do so by closing Spyder, deleting this file and starting Spyder again.
