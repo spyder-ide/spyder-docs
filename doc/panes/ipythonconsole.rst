@@ -11,7 +11,8 @@ The **IPython Console** allows you to execute commands and interact with data in
 .. image:: /images/console/console-standard.webp
    :alt: Spyder IPython Console with code, inline plots, and the In prompt
 
-To launch a new IPython console, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu, or use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused.
+To launch a new IPython console, go to :guilabel:`New console (default settings)` under the :guilabel:`Consoles` menu or from the Console context menu (right-clicking the pane tab bar).
+You can also use the keyboard shortcut :kbd:`Ctrl-T` (:kbd:`Cmd-T` on macOS) when the console is focused.
 
 .. video:: /images/console/console-new.webm
    :loop:
