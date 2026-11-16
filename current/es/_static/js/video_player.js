@@ -11,7 +11,6 @@
     controlBar: {
       children: [
         "playToggle",
-        "volumePanel",
         "currentTimeDisplay",
         "timeDivider",
         "durationDisplay",
