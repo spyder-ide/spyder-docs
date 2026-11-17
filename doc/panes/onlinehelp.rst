@@ -8,7 +8,7 @@ The **Online Help** pane provides a built-in web browser to explore dynamically 
 
 .. _pydoc: https://docs.python.org/3/library/pydoc.html
 
-.. image:: /images/online_help/online-help-standard.png
+.. image:: /images/online_help/online-help-standard.webp
    :alt: Spyder Online Help pane on the index page, a list of builtin modules
 
 
@@ -22,34 +22,39 @@ Using the Online Help
 The Online Help's home shows an index where you can browse the documentation of standard library modules, third party packages installed in your Python environment, and your own local code.
 Click on the name of any module to open its documentation.
 
-.. image:: /images/online_help/online-help-browse.gif
+.. video:: /images/online_help/online-help-browse.webm
+   :loop:
    :alt: Spyder Online Help pane showing module browsing
 
 Or, enter the name of the item you'd like help on in the :guilabel:`Package` field to load its documentation directly.
 
-.. image:: /images/online_help/online-help-name.gif
+.. video:: /images/online_help/online-help-name.webm
+   :loop:
    :alt: Spyder Online Help pane showing module browsing by name
 
 If you're not sure of the name of the object you want help on, or are looking for a specific keyword, use the :guilabel:`Search` field to get a list of results.
 
-.. image:: /images/online_help/online-help-search.gif
+.. video:: /images/online_help/online-help-search.webm
+   :loop:
    :alt: Spyder Online Help pane showing search of a keyword
 
 Links above the search field provide an index of topics with general help and a list of Python keywords linked to their corresponding documentation.
 
-.. image:: /images/online_help/online-help-topics.png
+.. image:: /images/online_help/online-help-topics.webp
    :alt: Spyder Online Help pane on the topics page
 
 In the rendered documentation, the module's file location is linked to the right of the documentation's title, which you can click to view its source code.
 
-.. image:: /images/online_help/online-help-path.gif
+.. video:: /images/online_help/online-help-path.webm
+   :loop:
    :alt: Spyder Online Help pane showing source code clicking module's path
 
 Standard library modules also have a link to the corresponding `Python docs <Python docs_>`__, which can be viewed right inside of the pane.
 
 .. _Python docs: https://docs.python.org/
 
-.. image:: /images/online_help/online-help-python-docs.gif
+.. video:: /images/online_help/online-help-python-docs.webm
+   :loop:
    :alt: Spyder Online Help pane showing python docs embedded in pane
 
 
@@ -63,27 +68,31 @@ Toolbar items
 
 Just like in a web browser, the forward and back buttons move through the pages you have visited, and the home button (house icon) returns you to the module index.
 
-.. image:: /images/online_help/online-help-navigation.gif
+.. video:: /images/online_help/online-help-navigation.webm
+   :loop:
    :alt: Spyder Online Help pane showing navigation with arrows
 
 Perform a realtime search within a page's content with the :guilabel:`Find` button (magnifying glass icon in the top left) or :kbd:`Ctrl-F` (:kbd:`Cmd-F` on macOS), navigate through matches with the :kbd:`Up` and :kbd:`Down` buttons, and make matching case sensitive with the :guilabel:`Aa` button.
 
-.. image:: /images/online_help/online-help-find.gif
+.. video:: /images/online_help/online-help-find.webm
+   :loop:
    :alt: Spyder Online Help pane showing finding a word on a module
 
 You can view and re-run previous searches from the drop-down menu in the :guilabel:`Package` field.
 
-.. image:: /images/online_help/online-help-history.png
+.. image:: /images/online_help/online-help-history.webp
    :alt: Spyder Online Help pane showing previous searches
 
 You can also use the zoom in/out buttons (:guilabel:`+` and :guilabel:`-`, top right) to change the font size to suit your preferences.
 
-.. image:: /images/online_help/online-help-zoom.gif
+.. video:: /images/online_help/online-help-zoom.webm
+   :loop:
    :alt: Spyder Online Help pane showing changing the font
 
 To cancel searching or page loading, click the stop button (red square), and to reload the page (such as when you change your own package's documentation), press the refresh button (circular arrow).
 
-.. image:: /images/online_help/online-help-refresh.gif
+.. video:: /images/online_help/online-help-refresh.webm
+   :loop:
    :alt: Spyder Online Help pane showing refreshing pane when updating docs
 
 
