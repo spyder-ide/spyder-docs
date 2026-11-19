@@ -315,28 +315,6 @@ Using Spyder
       :alt: Spyder reset button in Tools
 
 
-.. dropdown:: Q: How do I reset Spyder's scale factor if its interface is too big or too small to use?
-   :name: using-reset-hdpi
-
-   If a wrong scale factor makes Spyder's interface unusable, you might not be able to change it back in :menuselection:`Preferences --> Application --> Interface --> Screen resolution`.
-   On Spyder 6.2 and later, you can instead reset only these settings from the command line, keeping the rest of your preferences.
-   If you installed Spyder with Conda or pip, run the following in your system terminal (Anaconda Prompt on Windows) after activating the environment Spyder is installed in:
-
-   .. code-block:: shell
-
-      spyder --reset-hdpi-settings
-
-   Our :ref:`standalone installers <install-standalone>` only add the ``spyder`` command to the terminal on Linux.
-   On Windows and macOS, run the ``spyder`` executable in your Spyder installation folder with ``--reset-hdpi-settings`` instead.
-   It is in :file:`envs/spyder-runtime/Scripts` on Windows (by default under :file:`%LOCALAPPDATA%/spyder-6`), and in :file:`envs/spyder-runtime/bin` on macOS (by default under :file:`~/Library/spyder-6`).
-
-   This resets the :guilabel:`Screen resolution` options, including any custom scale factor, to their defaults, shows a confirmation message, and exits without starting Spyder.
-   If Spyder is still open, close all its windows before starting it again, as otherwise it can restore the old scale factor when it closes.
-   If that happens, close all its windows and run the command again.
-
-   On Spyder versions before 6.2, you can :ref:`reset all of Spyder's preferences <using-reset-prefs>` instead.
-
-
 .. dropdown:: Q: How do I change Spyder's language?
    :name: using-change-language
 
@@ -446,6 +424,29 @@ Troubleshooting
       :alt: Spyder showing IPython Console with error staring the kernel due to an unsupported Spyder-Kernels version
 
    For more information, go to the :ref:`troubleshooting-common-kernel` section in the :ref:`troubleshooting-common` page of our troubleshooting guide.
+
+
+.. dropdown:: Q: How do I reset Spyder's scale factor if its interface is too big or too small to use?
+   :name: troubleshooting-reset-hdpi
+
+   If a wrong scale factor makes Spyder unusable, you might not be able to change it in :menuselection:`Preferences --> Application --> Interface --> Screen resolution`.
+   On Spyder versions before 6.2, :ref:`reset all of Spyder's preferences <using-reset-prefs>` to fix this.
+
+   On Spyder 6.2 and later, you can instead reset only the :guilabel:`Screen resolution` options from the command line, keeping the rest of your preferences.
+   If you installed Spyder with Conda or pip, run the following in your system terminal (Anaconda Prompt on Windows) after activating the environment Spyder is installed in:
+
+   .. code-block:: shell
+
+      spyder --reset-hdpi-settings
+
+   Our :ref:`standalone installers <install-standalone>` only add the ``spyder`` command to the terminal on Linux.
+   On Windows and macOS, run the ``spyder`` executable in your Spyder installation folder with ``--reset-hdpi-settings`` instead.
+   On Windows, it is in :file:`envs/spyder-runtime/Scripts`, by default under :file:`%LOCALAPPDATA%/spyder-6`.
+   On macOS, it is in :file:`envs/spyder-runtime/bin`, by default under :file:`~/Library/spyder-6`.
+
+   This resets those options, including any custom scale factor, to their defaults, shows a confirmation message, and exits without starting Spyder.
+   If Spyder is still open, close all its windows before starting it again, as otherwise it can restore the old scale factor when it closes.
+   If that happens, close all its windows and run the command again.
 
 
 
