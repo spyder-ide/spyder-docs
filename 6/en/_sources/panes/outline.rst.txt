@@ -9,7 +9,7 @@ To show or hide the Outline pane, use :menuselection:`View --> Panes --> Outline
 Click an entry in the outline to jump to its source file location, and use the :guilabel:`Go to cursor position` toolbar button to highlight the item corresponding to the current :ref:`panes-editor` position.
 You can expand and collapse all or the current section, as well as restore the default tree layout, using the other toolbar buttons, which may be collapsed behind a :guilabel:`...` dropdown at narrower pane widths.
 
-.. image:: /images/outline/outline-standard.png
+.. image:: /images/outline/outline-standard.webp
    :alt: Outline pane
 
 
@@ -22,7 +22,7 @@ Options menu
 
 The options menu in the top-right of the pane allows customizing how the outline is displayed.
 
-.. image:: /images/outline/outline-options-menu.png
+.. image:: /images/outline/outline-options-menu.webp
    :alt: Outline options menu
 
 These customization settings include:
