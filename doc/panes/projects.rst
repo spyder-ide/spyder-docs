@@ -8,7 +8,7 @@ Projects
 Spyder allows you to associate a given directory with a **Project**, which automatically saves and restores the files you have open in the :ref:`panes-editor` from the last time you opened that project.
 With the :guilabel:`Projects` pane, you can browse all your project's files, regardless of your current working directory or :ref:`panes-files` location.
 
-.. image:: /images/projects/projects-main.png
+.. image:: /images/projects/projects-main.webp
    :alt: Spyder showing Project Explorer and projects menu
 
 In addition, your project's root folder is used to set your working directory, and automatically added to the ``PYTHONPATH``, so you can easily import and work with any modules and packages you create inside of it.
@@ -28,7 +28,8 @@ Creating a Project
 
 To create a project, click the :guilabel:`New Project` entry in the :guilabel:`Projects` menu, choose whether you'd like to associate a project with an existing directory or make a new one, and enter the project's directory name (if a new directory) and path.
 
-.. image:: /images/projects/projects-new.gif
+.. video:: /images/projects/projects-new.webm
+   :loop:
    :alt: Spyder showing opening a new project
 
 
@@ -42,7 +43,7 @@ Using the Projects Pane
 Once a project is opened, the :guilabel:`Project` pane is shown, presenting a tree view of the current project's files and directories.
 It allows you to perform all the same :ref:`operations <panes-files-operations>` as Spyder's :ref:`panes-files` pane.
 
-.. image:: /images/projects/projects-standard.png
+.. image:: /images/projects/projects-standard.webp
    :alt: Spyder Project Explorer, displaying a directory tree of project files
 
 
